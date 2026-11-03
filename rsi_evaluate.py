@@ -25,6 +25,8 @@ def main():
     args=p.parse_args()
     state=json.loads((ROOT/'rsi/status.json').read_text())
     if state['rounds_completed']<3:raise ValueError('Finish the three development rounds before held-out evaluation.')
+    if state['status'] not in ['frozen_for_evaluation','pilot_complete']:
+        raise ValueError('The assistant controller must freeze the selected recipe before held-out evaluation.')
     tok=tokenizer()
     if args.variant=='original':
         recipe=None;model=load_teacher()
