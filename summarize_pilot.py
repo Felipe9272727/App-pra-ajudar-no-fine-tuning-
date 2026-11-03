@@ -3,6 +3,9 @@ from pathlib import Path
 import json
 import statistics
 from rsi_cycle import atomic_json
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent/'v2_adaptation'))
+from experiment import grade
 
 ROOT=Path(__file__).resolve().parent
 
@@ -18,6 +21,19 @@ def main():
              for name in ['original','incumbent','liquid']}
     assert all(r['status']=='complete' for r in results.values())
     assert len({r['data_sha256'] for r in results.values()})==1
+    # Apply the same case-aware scorer uniformly to saved raw generations.
+    # No inference or weight selection is repeated.
+    for name,result in results.items():
+        corrections=0
+        for row in result['rows']:
+            corrected=grade(row['output'],row)
+            if corrected!=row['correct']:
+                row['pre_case_check_correct']=row['correct'];corrections+=1
+            row['correct']=corrected
+        result['correct']=sum(r['correct'] for r in result['rows'])
+        result['grading_version']='v2_case_aware_numeric_only_semantic_json'
+        result['grading_corrections']=corrections
+        atomic_json(ROOT/'evaluation'/f'{name}.json',result)
     audit=[]
     for row in rounds:
         raw=row['student_raw_suggestion']
@@ -43,8 +59,10 @@ def main():
             'liquid':'Loop + convoluções calibradas e janela LFM3 (experimental)'}
     for name,r in results.items():
         lines.append(f'| {labels[name]} | {r["correct"]}/{r["total"]} | {statistics.mean(x["seconds"] for x in r["rows"]):.3f} s | {r["peak_rss_mib"]:.1f} MiB |')
-    lines+=['','O teste foi congelado antes de calibrar e não escolheu a receita. Usamos geração greedy, thinking desativado, no máximo 12 tokens novos por resposta, CPU com oito threads e backbone BF16. Roteadores e controles permanecem FP32. Respostas numéricas aceitam somente um número; JSON é comparado semanticamente; texto é normalizado e comparado sem distinguir caixa. São questões autorais básicas, não benchmarks padronizados de inteligência.',
+    lines+=['','O teste foi congelado antes de calibrar e não escolheu a receita. Usamos geração greedy, thinking desativado, no máximo 12 tokens novos por resposta, CPU com oito threads e backbone BF16. Roteadores e controles permanecem FP32. Respostas numéricas aceitam somente um número; JSON é comparado semanticamente; texto é normalizado respeitando exigências explícitas de caixa. São questões autorais básicas, não benchmarks padronizados de inteligência.',
+        '', 'O tempo é de uma única execução por variante e depende do comprimento das respostas, aquecimento e carga do host. Não usamos esses tempos para atribuir um ganho de velocidade à atenção local da Liquid; os prompts deste teste são curtos.',
         '', 'As 24 perguntas diferem do antigo teste de 48 itens. Não compare diretamente os escores antigos com estes. Não houve reajuste dos pesos depois que os resultados reservados foram observados.',
+        '', 'A comparação de caixa é estrita quando o pedido exige maiúsculas/minúsculas ou um símbolo químico. Nos demais itens textuais, ignoramos caixa e ponto final. A regra foi conferida uniformemente sobre as respostas brutas salvas.',
         '', '## Seis ciclos registrados','',
         '| Rodada | gain | beta | liquid_mix | NLL da candidata | NLL do checkpoint medido | Decisão |',
         '|---|---:|---:|---:|---:|---:|---|']

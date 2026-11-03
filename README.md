@@ -1,5 +1,18 @@
 # Qwen + SenseNova loop/mHC + motivos LFM3 — RSI assistido
 
+## Primeiro piloto concluído
+
+Código, estado retomável, patch de calibração e seis rodadas reais salvos. Nenhuma das seis candidatas de RSI venceu o critério de desenvolvimento; o checkpoint foi preservado.
+
+| Teste novo, 24 perguntas | Acertos |
+|---|---:|
+| Qwen original | 17/24 |
+| Loop adaptado preservado | 18/24 |
+| Loop + componentes inspirados no LFM3, experimental | 19/24 |
+
+A vantagem de duas perguntas é limitada e não prova melhora geral. A variante experimental permanece registrada, sem promoção com base no teste. Consulte [PILOT_REPORT.md](PILOT_REPORT.md) para todas as respostas e decisões. Estado atual: piloto concluído e pausado no checkpoint.
+
+
 Experimento de Felipe. O assistente ChatGPT Work controla os ciclos: propõe
 uma alteração, escreve valores diretamente nos pesos, mede o resultado e
 aceita ou rejeita a candidata. A IA pequena também produz sugestões reais,

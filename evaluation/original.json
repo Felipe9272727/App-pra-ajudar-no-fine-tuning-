@@ -311,5 +311,7 @@
   "rounds_before_evaluation": 6,
   "correct": 17,
   "total": 24,
-  "peak_rss_mib": 2076.25390625
+  "peak_rss_mib": 2076.25390625,
+  "grading_version": "v2_case_aware_numeric_only_semantic_json",
+  "grading_corrections": 0
 }

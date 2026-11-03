@@ -226,6 +226,9 @@ def grade(text,row):
     if row['scoring']=='json':
         try:return json.loads(text)==json.loads(row['answer'])
         except (ValueError,TypeError):return False
+    if row['id'] in ['instruction_01','instruction_02','knowledge_04']:
+        # Case is part of the requested operation/symbol, not cosmetic here.
+        return text.rstrip('.')==row['answer'].rstrip('.')
     return text.casefold().rstrip('.')==row['answer'].casefold().rstrip('.')
 
 

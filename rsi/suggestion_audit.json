@@ -1,0 +1,44 @@
+[
+  {
+    "round": 1,
+    "valid_json_recipe": false,
+    "changed_recipe_vs_incumbent": false,
+    "selected_by": "assistant controller",
+    "raw": "{\n  \"gain\": 0.05,\n  \"beta\": 0.0,\n  \"liquid_mix\": 0.0"
+  },
+  {
+    "round": 2,
+    "valid_json_recipe": false,
+    "changed_recipe_vs_incumbent": false,
+    "selected_by": "assistant controller",
+    "raw": "{\n  \"gain\": 0.05,\n  \"beta\": 0.0,\n  \"liquid_mix\": 0.0"
+  },
+  {
+    "round": 3,
+    "valid_json_recipe": false,
+    "changed_recipe_vs_incumbent": false,
+    "selected_by": "assistant controller",
+    "raw": "{\n  \"gain\": 0.05,\n  \"beta\": 0.0,\n  \"liquid_mix\": 0.0"
+  },
+  {
+    "round": 4,
+    "valid_json_recipe": false,
+    "changed_recipe_vs_incumbent": false,
+    "selected_by": "assistant controller",
+    "raw": "{\n  \"gain\": 0.05,\n  \"beta\": 0.0,\n  \"liquid_mix\": 0.0"
+  },
+  {
+    "round": 5,
+    "valid_json_recipe": true,
+    "changed_recipe_vs_incumbent": false,
+    "selected_by": "assistant controller",
+    "raw": "{\n  \"gain\": 0.05,\n  \"beta\": 0.0,\n  \"liquid_mix\": 0.0\n}\n"
+  },
+  {
+    "round": 6,
+    "valid_json_recipe": true,
+    "changed_recipe_vs_incumbent": false,
+    "selected_by": "assistant controller",
+    "raw": "{\n  \"gain\": 0.05,\n  \"beta\": 0.0,\n  \"liquid_mix\": 0.0\n}\n"
+  }
+]

@@ -1,5 +1,5 @@
 {
-  "status": "frozen_for_evaluation",
+  "status": "pilot_complete",
   "rounds_completed": 6,
   "branch": "codex/qwen-sensenova-liquid-rsi-20261103",
   "base": "Qwen/Qwen3.5-0.8B",
@@ -19,11 +19,27 @@
   "last_round_accepted": false,
   "last_round_file": "rsi/round_006.json",
   "pilot_budget": 6,
-  "heldout_evaluated": false,
+  "heldout_evaluated": true,
   "promoted_rounds": 0,
   "incumbent_architecture_effects": {
     "loop_second_visit_active": true,
     "inserted_layers_active": false,
     "learned_liquid_convolutions_and_window_active": false
+  },
+  "next_round": 7,
+  "next_evaluation_requires_fresh_test": true,
+  "final_scores": {
+    "original": {
+      "correct": 17,
+      "total": 24
+    },
+    "incumbent": {
+      "correct": 18,
+      "total": 24
+    },
+    "liquid": {
+      "correct": 19,
+      "total": 24
+    }
   }
 }
