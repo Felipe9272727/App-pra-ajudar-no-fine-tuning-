@@ -1,0 +1,19 @@
+{
+  "status": "preparing_data",
+  "model_display_name": "liquid sense 0.8 b LOOP",
+  "branch": "codex/liquid-sense-loop-lab-pilot-20261103",
+  "parent_commit": "cbdead4d6e07b17232361d3550bf2b263fdd4cd1",
+  "constraints": {
+    "direct_weight_updates": true,
+    "backward_passes": 0,
+    "sensenova_active": true,
+    "liquid_active": true,
+    "heldout_selection_forbidden": true
+  },
+  "baseline_recipe": {
+    "gain": 0.05,
+    "beta": 0.0,
+    "liquid_mix": 1.0
+  },
+  "architecture_can_be_disabled": false
+}

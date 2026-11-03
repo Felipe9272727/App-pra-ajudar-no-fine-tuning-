@@ -1,0 +1,21 @@
+{
+  "display_name": "liquid sense 0.8 b LOOP",
+  "slug": "liquid-sense-0.8b-loop",
+  "name_source": "User instruction, 2026-11-03",
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "nominal_base_parameters": "0.8B",
+  "loaded_hybrid_parameters": 1020252592,
+  "parameter_count_note": "0.8 b names the original base scale. The expanded hybrid is approximately 1.02B loaded parameters; renaming does not reduce its size.",
+  "architecture_required": {
+    "sensenova_physical_layers": 32,
+    "sensenova_layer_executions": 56,
+    "mhc_streams": 2,
+    "loop_second_visit_must_be_active": true,
+    "convolution_kernel": 7,
+    "learned_history_taps_must_be_nonzero": true,
+    "sliding_window": 256,
+    "window_layers": [7, 15, 27],
+    "liquid_components_must_remain_active": true
+  },
+  "affiliation": "Independent experimental hybrid, not an official SenseNova or Liquid AI release"
+}

@@ -1,4 +1,8 @@
-# Qwen + SenseNova loop/mHC + motivos LFM3 — RSI assistido
+# liquid sense 0.8 b LOOP
+
+Nome nominal da base: 0,8B. Híbrido ampliado: aproximadamente 1,02B parâmetros carregados.
+
+Novo piloto baseado em referências públicas de pesquisa automatizada: [LAB_METHODS.md](LAB_METHODS.md). SenseNova e componentes inspirados na Liquid devem permanecer ativos nas novas candidatas.
 
 ## Primeiro piloto concluído
 

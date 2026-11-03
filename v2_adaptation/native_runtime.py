@@ -155,4 +155,12 @@ def load_port(root,liquid=False):
     cfg=SenseNovaLoopConfig.from_dict(json.loads((folder/'config.json').read_text()))
     model=SenseNovaLoopForConditionalGeneration.from_pretrained(folder,config=cfg,
         local_files_only=True,dtype=torch.bfloat16,attn_implementation='eager').eval()
-    return make_native(model,Path(root)/'upstream/model.safetensors-00001-of-00001.safetensors',liquid)
+    model=make_native(model,Path(root)/'upstream/model.safetensors-00001-of-00001.safetensors',liquid)
+    identity=Path(root)/'model_identity.json'
+    if identity.exists():
+        info=json.loads(identity.read_text())
+        model.config.model_name=info['display_name']
+        model.config.model_display_name=info['display_name']
+        model.config._name_or_path=info['slug']
+        model.config.actual_loaded_parameter_count=sum(p.numel() for p in model.parameters())
+    return model
