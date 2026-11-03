@@ -79,6 +79,17 @@ Um eventual resultado favorável exige confirmação em benchmarks externos.
 
 ## Retomar
 
+A base ativa deste piloto foi escolhida pelo requisito do usuário de manter
+as duas famílias arquiteturais. Isso não promove retroativamente a variante
+Liquid por causa dos 19/24 observados no teste antigo.
+
+A triagem de NLL pode reutilizar entradas MLP e resíduos da última camada,
+pois somente sua projeção de saída muda. Preservamos os tensores BF16 com a
+forma completa do GEMM e verificamos igualdade bit a bit com os logits da
+execução integral, incluindo a primeira candidata já medida integralmente.
+A validação e o teste final geram respostas com todas as camadas do modelo.
+As ativações temporárias são reconstruíveis e não são pesos do checkpoint.
+
 Após preparar a base com os comandos do README:
 
 ```bash

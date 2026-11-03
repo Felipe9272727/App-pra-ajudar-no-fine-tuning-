@@ -1,0 +1,6 @@
+{
+  "baseline_max_logit_delta": 0.0,
+  "baseline_nll_delta": 0.0,
+  "completed_candidate_nll_matches": true,
+  "final_generation_uses_full_model": true
+}

@@ -79,6 +79,9 @@ def apply_recipe(model,recipe):
 
 @torch.inference_mode()
 def main():
+    if (ROOT/'model_identity.json').exists():
+        raise RuntimeError('This historical scalar-search pilot is frozen. Use lab_rsi/fit.py and '
+            'lab_rsi/evaluate.py; the current model requires both SenseNova and Liquid active.')
     p=argparse.ArgumentParser()
     p.add_argument('--round',type=int,required=True)
     p.add_argument('--gain',type=float,required=True)
