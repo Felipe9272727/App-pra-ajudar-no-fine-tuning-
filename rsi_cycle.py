@@ -137,7 +137,8 @@ def main():
                  last_round_accepted=accept,last_round_file=f'rsi/round_{args.round:03d}.json')
     atomic_json(state_path,state)
     checkpoint={'base':state['base'],'revision':state['revision'],
-        'recipe':state['incumbent'],
+        'recipe':{k:state['incumbent'][k] for k in ['gain','beta','liquid_mix']},
+        'development_nll':state['incumbent']['development_nll'],
         'calibration_patch':'checkpoints/liquid_patch.pt',
         'patch_sha256':hashlib.sha256((ROOT/'checkpoints/liquid_patch.pt').read_bytes()).hexdigest(),
         'reconstruction':'download pinned Qwen, build 32-layer port, load_port(liquid=True), apply_recipe',
