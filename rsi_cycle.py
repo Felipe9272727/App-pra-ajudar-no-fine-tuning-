@@ -110,11 +110,15 @@ def main():
        '. Current development NLL: '+str(before['development_nll'])+
        '. Suggest one cautious change. Return a brief JSON object with gain, beta, liquid_mix.')
     suggestion_ids=prompt_ids(tok,q)
-    suggestion=model.generate(input_ids=suggestion_ids,max_new_tokens=32,do_sample=False,
+    suggestion=model.generate(input_ids=suggestion_ids,max_new_tokens=64,do_sample=False,
         use_cache=True,pad_token_id=tok.eos_token_id)
     raw=tok.decode(suggestion[0,suggestion_ids.shape[1]:],skip_special_tokens=True)
     pending.update(phase='proposal_recorded',student_raw_suggestion=raw)
     atomic_json(ROOT/'rsi/pending.json',pending)
+    # A no-op control detects state/cache effects from asking the model to propose.
+    after_suggestion_baseline=development_score(model,tok)
+    no_op_delta=after_suggestion_baseline['mean_answer_nll']-before['development_nll']
+    before['development_nll']=after_suggestion_baseline['mean_answer_nll']
     apply_recipe(model,candidate)
     after_logits=model(input_ids=ids,use_cache=False,logits_to_keep=1).logits[0,-1].float()
     score=development_score(model,tok)
@@ -124,6 +128,9 @@ def main():
             'incumbent_development_nll':before['development_nll'],
             'stored_previous_nll':stored_previous_nll,
             'remeasured_incumbent_development':measured_baseline,
+            'after_suggestion_incumbent_development':after_suggestion_baseline,
+            'no_op_control_nll_delta':no_op_delta,
+            'student_max_new_tokens':64,
             'improvement':improvement,'accepted':accept,
             'actual_probe_logit_change':(after_logits-before_logits).abs().max().item(),
             'backward_passes':0,'heldout_used':False,
