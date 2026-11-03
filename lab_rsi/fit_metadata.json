@@ -1,0 +1,512 @@
+{
+  "training_examples": 96,
+  "training_token_positions": 335,
+  "anchor_positions": 96,
+  "wrong_token_positions": 81,
+  "train_rows": [
+    {
+      "id": "train_addition_07",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_python_10",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_03",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 3
+    },
+    {
+      "id": "train_subtraction_02",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_subtraction_12",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_18",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_addition_18",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_python_07",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_addition_16",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_subtraction_13",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_01",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_11",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_14",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 3
+    },
+    {
+      "id": "train_addition_17",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_python_11",
+      "tokens": 2,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_09",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_python_15",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_python_05",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_subtraction_06",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_01",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_subtraction_03",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_python_17",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_python_21",
+      "tokens": 2,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_13",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_11",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_08",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_python_00",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_multiplication_16",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_19",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_18",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_multiplication_03",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_subtraction_09",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_subtraction_23",
+      "tokens": 2,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_23",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_multiplication_12",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_multiplication_19",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_subtraction_20",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_python_13",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_addition_03",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_06",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_python_20",
+      "tokens": 2,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_multiplication_07",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_15",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_04",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_14",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_addition_08",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_python_22",
+      "tokens": 2,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_subtraction_21",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_02",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_05",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_06",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_subtraction_10",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_00",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_11",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_19",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_09",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_addition_12",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_addition_20",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_18",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_20",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_addition_04",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_python_19",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_multiplication_21",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_multiplication_14",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_python_02",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_multiplication_13",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_multiplication_23",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_subtraction_04",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_addition_22",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_08",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_addition_21",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_05",
+      "tokens": 2,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_05",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_00",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_15",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_python_01",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_addition_10",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_07",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_09",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_22",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_17",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_multiplication_02",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_22",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_16",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 3
+    },
+    {
+      "id": "train_multiplication_08",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_10",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_16",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_04",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 2
+    },
+    {
+      "id": "train_addition_14",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_multiplication_17",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_multiplication_06",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_addition_00",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 0
+    },
+    {
+      "id": "train_subtraction_01",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_python_12",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_subtraction_15",
+      "tokens": 3,
+      "wrong_teacher_forced_tokens": 1
+    },
+    {
+      "id": "train_addition_23",
+      "tokens": 4,
+      "wrong_teacher_forced_tokens": 1
+    }
+  ],
+  "backward_passes": 0,
+  "method": "RMSNorm linearized logit-margin residual + regularized closed-form least squares",
+  "layer": "model.language_model.layers.31.mlp.down_proj.weight",
+  "residual_cap_fraction_of_hidden_norm": 0.05,
+  "architecture": {
+    "physical_layers": 32,
+    "layer_executions": 56,
+    "mhc_streams": 2,
+    "second_visit_gain": 0.05000000074505806,
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "sliding_window": 256,
+    "window_layers": [
+      7,
+      15,
+      27
+    ],
+    "parameters": 1020252592,
+    "backward_passes": 0
+  },
+  "data_sha256": "e0c6a198a8150ecf5e531e2fb33d8316db7dadc57ff23ead257a52440265425b",
+  "feature_sha256": "c527980bebe01a640bfa98f5b1752e9e86e52cb50c10ec301fd12f6d4a7b065d",
+  "wrong_digit_positions": 79,
+  "wrong_stop_positions": 2
+}

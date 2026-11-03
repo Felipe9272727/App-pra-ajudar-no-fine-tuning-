@@ -83,6 +83,11 @@ def fit():
     features=torch.load(HERE/'features.pt',weights_only=True)
     assert features['data_sha256']==DATA_HASH and features['recipe']==RECIPE
     x=features['x'].T.contiguous();y=features['y'].T.contiguous()
+    meta=json.loads((HERE/'fit_metadata.json').read_text())
+    changed_targets=y.norm(dim=0)>0
+    meta['wrong_digit_positions']=int((changed_targets & ~features['is_stop']).sum())
+    meta['wrong_stop_positions']=int((changed_targets & features['is_stop']).sum())
+    atomic_json(HERE/'fit_metadata.json',meta)
     scale=x.norm(dim=0).clamp_min(1e-5)
     xn=x/scale;yn=y/scale
     # Columns with zero desired residual are preservation anchors, not discarded.

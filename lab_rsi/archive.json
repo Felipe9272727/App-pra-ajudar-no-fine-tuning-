@@ -1,0 +1,75 @@
+{
+  "data_sha256": "e0c6a198a8150ecf5e531e2fb33d8316db7dadc57ff23ead257a52440265425b",
+  "candidates": [
+    {
+      "family": "joint",
+      "ridge": 0.1,
+      "strength": 0.5,
+      "id": "candidate_01",
+      "patch": "lab_rsi/candidate_01.pt",
+      "patch_sha256": "204ab026924db26a80189845bcfd992411b38519e365f03310bcccc4b469f899",
+      "rank": 32,
+      "norm_cap_scale": 1.0,
+      "compression_relative_error": 0.0014354633167386055,
+      "status": "awaiting_development",
+      "selected_by": "assistant preregistered candidate program",
+      "hypothesis": "Improve answer-token and stop margins inside active hybrid"
+    },
+    {
+      "family": "joint",
+      "ridge": 0.1,
+      "strength": 1.0,
+      "id": "candidate_02",
+      "patch": "lab_rsi/candidate_02.pt",
+      "patch_sha256": "ae66c39f7f22d7c5f9e83db306501fddcf1f77cfee8564cc5a6c46faea286663",
+      "rank": 32,
+      "norm_cap_scale": 1.0,
+      "compression_relative_error": 0.0014354633167386055,
+      "status": "awaiting_development",
+      "selected_by": "assistant preregistered candidate program",
+      "hypothesis": "Improve answer-token and stop margins inside active hybrid"
+    },
+    {
+      "family": "digits",
+      "ridge": 0.1,
+      "strength": 0.5,
+      "id": "candidate_03",
+      "patch": "lab_rsi/candidate_03.pt",
+      "patch_sha256": "16aa031ebc29991a5b1735aa994849d5bef9d3548d8b71ac34ec924d42bd8b71",
+      "rank": 32,
+      "norm_cap_scale": 1.0,
+      "compression_relative_error": 0.0014408946735784411,
+      "status": "awaiting_development",
+      "selected_by": "assistant preregistered candidate program",
+      "hypothesis": "Improve answer content while preserving stop behavior"
+    },
+    {
+      "family": "digits",
+      "ridge": 1.0,
+      "strength": 1.0,
+      "id": "candidate_04",
+      "patch": "lab_rsi/candidate_04.pt",
+      "patch_sha256": "9bca3c1857b8f67c54a1181b43c03f72f364f8bdad10399a5de8c2aff7b7ce4a",
+      "rank": 32,
+      "norm_cap_scale": 1.0,
+      "compression_relative_error": 0.000832247082144022,
+      "status": "awaiting_development",
+      "selected_by": "assistant preregistered candidate program",
+      "hypothesis": "Improve answer content while preserving stop behavior"
+    },
+    {
+      "family": "stop_only",
+      "ridge": 0.1,
+      "strength": 0.5,
+      "id": "candidate_05",
+      "patch": "lab_rsi/candidate_05.pt",
+      "patch_sha256": "6c4bf83974586c910b844c487c49c58d4a3d49f8226cf981d10c9faf3d5e7f53",
+      "rank": 32,
+      "norm_cap_scale": 1.0,
+      "compression_relative_error": 4.7525048785246327e-07,
+      "status": "awaiting_development",
+      "selected_by": "assistant preregistered candidate program",
+      "hypothesis": "Negative control: test whether gains are only response formatting"
+    }
+  ]
+}

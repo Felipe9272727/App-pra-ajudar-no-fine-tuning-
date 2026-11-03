@@ -151,6 +151,8 @@ def grade(text,row):
 def generate_rows(model,tok,rows,path,metadata):
     previous=json.loads(path.read_text()) if path.exists() else None
     report={**metadata,'status':'running','data_sha256':DATA_HASH,'rows':[],
+        'inference_code_sha256':{str(p.relative_to(ROOT)):file_hash(p) for p in [
+            HERE/'common.py',ROOT/'v2_adaptation/native_runtime.py',ROOT/'modeling_sensenova_loop.py',ROOT/'rsi_cycle.py']},
         'protocol':{'max_new_tokens':12,'greedy':True,'thinking':False,'use_cache':True,
                     'cpu_threads':8,'backbone':'BF16','routers':'FP32','inference_tools':False,
                     'batching':'at most 4 prompts with exactly the same token length; no padding'}}
@@ -158,6 +160,7 @@ def generate_rows(model,tok,rows,path,metadata):
         assert previous['data_sha256']==DATA_HASH
         assert previous['variant']==metadata['variant']
         assert previous.get('patch_sha256')==metadata.get('patch_sha256')
+        assert previous['inference_code_sha256']==report['inference_code_sha256']
         assert {r['id'] for r in previous['rows']} <= {r['id'] for r in rows}
         if previous['status']=='complete':return previous
         report['rows']=previous['rows']

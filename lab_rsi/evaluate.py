@@ -74,6 +74,7 @@ def heldout(variant):
             metadata['weight_write']=apply_edit(model,path)
             metadata['patch_sha256']=file_hash(path)
         metadata['architecture']=architecture_check(model)
+    metadata['loaded_parameters']=sum(p.numel() for p in model.parameters())
     ids=prompt_ids(tok,'Calculate 37 + 42. Reply only with the integer.')
     full=model(input_ids=ids,use_cache=False,logits_to_keep=1).logits[:,-1].float()
     pre=model(input_ids=ids[:,:-1],use_cache=True,logits_to_keep=1)
