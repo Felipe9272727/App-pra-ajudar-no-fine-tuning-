@@ -10,6 +10,6 @@
   "calibration_patch": "checkpoints/liquid_patch.pt",
   "patch_sha256": "6f679573fd8f3a02a31ce45543c1308f0a69dd7874e01c7ad57752c11d94f055",
   "reconstruction": "download pinned Qwen, build 32-layer port, load_port(liquid=True), apply_recipe",
-  "rounds_completed": 5,
+  "rounds_completed": 6,
   "heldout_used_for_selection": false
 }

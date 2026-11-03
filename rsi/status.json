@@ -1,6 +1,6 @@
 {
-  "status": "checkpointed_between_rounds",
-  "rounds_completed": 5,
+  "status": "frozen_for_evaluation",
+  "rounds_completed": 6,
   "branch": "codex/qwen-sensenova-liquid-rsi-20261103",
   "base": "Qwen/Qwen3.5-0.8B",
   "revision": "2fc06364715b967f1860aea9cf38778875588b17",
@@ -17,5 +17,13 @@
   "heldout_used_for_selection": false,
   "calibration_checkpoint": "checkpoints/liquid_patch.pt",
   "last_round_accepted": false,
-  "last_round_file": "rsi/round_005.json"
+  "last_round_file": "rsi/round_006.json",
+  "pilot_budget": 6,
+  "heldout_evaluated": false,
+  "promoted_rounds": 0,
+  "incumbent_architecture_effects": {
+    "loop_second_visit_active": true,
+    "inserted_layers_active": false,
+    "learned_liquid_convolutions_and_window_active": false
+  }
 }
