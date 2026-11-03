@@ -5,3 +5,5 @@ sensenova_port/
 **/*.tmp
 *.log
 .venv/
+lab_rsi/features.pt
+lab_rsi/last_mlp_prior.pt

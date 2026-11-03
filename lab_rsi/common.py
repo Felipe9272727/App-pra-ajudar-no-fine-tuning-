@@ -1,5 +1,6 @@
 """Shared protocol and strict active-architecture checks for the new pilot."""
 import hashlib
+import collections
 import json
 from pathlib import Path
 import re
@@ -16,7 +17,7 @@ ROOT=HERE.parent
 sys.path.insert(0,str(ROOT))
 sys.path.insert(0,str(ROOT/'v2_adaptation'))
 from experiment import tokenizer,prompt_ids,load_teacher
-from native_runtime import load_port
+from native_runtime import load_port,SOURCE_LAYERS
 from rsi_cycle import atomic_json,apply_recipe
 from modeling_sensenova_loop import execution_plan
 
@@ -63,13 +64,20 @@ def load_hybrid():
     return model
 
 
+def prior_mlp_weight():
+    # Reconstructible from the pinned base; the large local cache is optional.
+    from safetensors import safe_open
+    with safe_open(ROOT/'upstream/model.safetensors-00001-of-00001.safetensors',framework='pt',device='cpu') as f:
+        return f.get_tensor(f'model.language_model.layers.{SOURCE_LAYERS[31]}.mlp.down_proj.weight')
+
+
 @torch.inference_mode()
 def apply_edit(model,patch,strength=None):
     if isinstance(patch,(str,Path)):patch=torch.load(patch,weights_only=True)
     assert patch['data_sha256']==DATA_HASH and patch['recipe']==RECIPE
     layer=model.model.language_model.layers[31].mlp.down_proj
     # Restore the SAME existing dense parameter, then write the reconstructed edit.
-    base=torch.load(HERE/'last_mlp_prior.pt',weights_only=True)['weight']
+    base=prior_mlp_weight()
     strength=patch['strength'] if strength is None else strength
     delta=(patch['left']@patch['right'])*strength
     written=(base.float()+delta).to(base.dtype)
@@ -84,31 +92,39 @@ def apply_edit(model,patch,strength=None):
 @torch.inference_mode()
 def restore_mlp(model):
     model.model.language_model.layers[31].mlp.down_proj.weight.copy_(
-        torch.load(HERE/'last_mlp_prior.pt',weights_only=True)['weight'])
+        prior_mlp_weight())
 
 
 @torch.inference_mode()
 def likelihood(model,tok,rows,anchors=False):
-    out=[]
-    for row in rows:
+    # Batch only identical input lengths: no padding or changed position rules.
+    buckets=collections.defaultdict(list);out=[None]*len(rows)
+    for index,row in enumerate(rows):
         if anchors:
             ids=tok(row,return_tensors='pt',add_special_tokens=False)['input_ids']
             n=min(8,ids.shape[1]-1)
-            logits=model(input_ids=ids,use_cache=False,logits_to_keep=n+1).logits[0,:-1].float()
             targets=ids[0,-n:]
         else:
             ids=prompt_ids(tok,row['question'])
             target=tok.encode(row['answer'],add_special_tokens=False)
-            whole=torch.cat([ids,torch.tensor([target])],1)
-            logits=model(input_ids=whole,use_cache=False,logits_to_keep=len(target)+1).logits[0].float()
+            ids=torch.cat([ids,torch.tensor([target])],1)
             targets=torch.tensor(target+[tok.eos_token_id])
-        losses=F.cross_entropy(logits,targets,reduction='none')
-        if anchors:
-            out.append({'nll':float(losses.mean()),'tokens':n})
-        else:
-            out.append({'id':row['id'],'answer_nll':float(losses[:-1].mean()),
-                'eos_nll':float(losses[-1]),
-                'teacher_forced_answer_token_accuracy':float((logits[:-1].argmax(-1)==targets[:-1]).float().mean())})
+        buckets[ids.shape[1]].append((index,row,ids,targets))
+    for bucket in buckets.values():
+        for offset in range(0,len(bucket),4):
+            batch=bucket[offset:offset+4]
+            keep=max(len(item[3])+(1 if anchors else 0) for item in batch)
+            all_logits=model(input_ids=torch.cat([item[2] for item in batch]),
+                use_cache=False,logits_to_keep=keep).logits.float()
+            for b,(index,row,ids,targets) in enumerate(batch):
+                logits=all_logits[b,-len(targets)-1:-1] if anchors else all_logits[b,-len(targets):]
+                losses=F.cross_entropy(logits,targets,reduction='none')
+                if anchors:
+                    out[index]={'nll':float(losses.mean()),'tokens':len(targets)}
+                else:
+                    out[index]={'id':row['id'],'answer_nll':float(losses[:-1].mean()),
+                        'eos_nll':float(losses[-1]),
+                        'teacher_forced_answer_token_accuracy':float((logits[:-1].argmax(-1)==targets[:-1]).float().mean())}
     if anchors:return {'mean_nll':statistics.mean(x['nll'] for x in out),'rows':out}
     return {'mean_answer_nll':statistics.mean(x['answer_nll'] for x in out),
         'mean_eos_nll':statistics.mean(x['eos_nll'] for x in out),
@@ -126,7 +142,7 @@ def grade(text,row):
         # Separate mathematical content from compliance with "integer only".
         # Expressions with several numbers are not blindly granted correctness.
         numbers=re.findall(r'(?<![\w.])-?\d+(?![\w.])',text)
-        content=len(numbers)==1 and int(numbers[0])==int(row['answer'])
+        content=exact or (len(numbers)==1 and int(numbers[0])==int(row['answer']))
     else:content=exact
     return bool(exact),bool(content)
 
@@ -136,24 +152,41 @@ def generate_rows(model,tok,rows,path,metadata):
     previous=json.loads(path.read_text()) if path.exists() else None
     report={**metadata,'status':'running','data_sha256':DATA_HASH,'rows':[],
         'protocol':{'max_new_tokens':12,'greedy':True,'thinking':False,'use_cache':True,
-                    'cpu_threads':8,'backbone':'BF16','routers':'FP32','inference_tools':False}}
+                    'cpu_threads':8,'backbone':'BF16','routers':'FP32','inference_tools':False,
+                    'batching':'at most 4 prompts with exactly the same token length; no padding'}}
     if previous:
         assert previous['data_sha256']==DATA_HASH
         assert previous['variant']==metadata['variant']
         assert previous.get('patch_sha256')==metadata.get('patch_sha256')
-        assert [r['id'] for r in previous['rows']]==[r['id'] for r in rows[:len(previous['rows'])]]
+        assert {r['id'] for r in previous['rows']} <= {r['id'] for r in rows}
         if previous['status']=='complete':return previous
         report['rows']=previous['rows']
-    for row in rows[len(report['rows']):]:
-        ids=prompt_ids(tok,row['question']);start=time.monotonic()
-        tokens=model.generate(input_ids=ids,max_new_tokens=12,do_sample=False,
-            use_cache=True,pad_token_id=tok.eos_token_id)[0,ids.shape[1]:]
-        text=tok.decode(tokens,skip_special_tokens=True)
-        exact,content=grade(text,row)
-        report['rows'].append({**row,'output':text,'exact_correct':exact,'content_correct':content,
-            'new_tokens':len(tokens),'hit_limit':len(tokens)==12,'seconds':round(time.monotonic()-start,4)})
-        atomic_json(path,report)
-        print('GEN',metadata['variant'],row['id'],repr(text),exact,content,flush=True)
+    completed={r['id'] for r in report['rows']}
+    order={r['id']:i for i,r in enumerate(rows)}
+    buckets=collections.defaultdict(list)
+    for row in rows:
+        if row['id'] in completed:continue
+        ids=prompt_ids(tok,row['question']);buckets[ids.shape[1]].append((row,ids))
+    for bucket in buckets.values():
+        for offset in range(0,len(bucket),4):
+            batch=bucket[offset:offset+4];start=time.monotonic()
+            ids=torch.cat([item[1] for item in batch])
+            output=model.generate(input_ids=ids,max_new_tokens=12,do_sample=False,
+                use_cache=True,pad_token_id=tok.eos_token_id)[:,ids.shape[1]:]
+            seconds=time.monotonic()-start
+            for b,(row,_) in enumerate(batch):
+                tokens=output[b]
+                eos=(tokens==tok.eos_token_id).nonzero()
+                if len(eos):tokens=tokens[:int(eos[0])+1]
+                text=tok.decode(tokens,skip_special_tokens=True)
+                exact,content=grade(text,row)
+                report['rows'].append({**row,'output':text,'exact_correct':exact,'content_correct':content,
+                    'new_tokens':len(tokens),'hit_limit':len(tokens)==12,
+                    'batch_size':len(batch),'batch_seconds':round(seconds,4),
+                    'amortized_seconds':round(seconds/len(batch),4)})
+                print('GEN',metadata['variant'],row['id'],repr(text),exact,content,flush=True)
+            report['rows'].sort(key=lambda r:order[r['id']])
+            atomic_json(path,report)
     report.update(status='complete',exact_correct=sum(r['exact_correct'] for r in report['rows']),
                   content_correct=sum(r['content_correct'] for r in report['rows']),total=len(rows))
     atomic_json(path,report)
