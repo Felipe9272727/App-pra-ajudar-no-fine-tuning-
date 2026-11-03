@@ -1,0 +1,222 @@
+{
+  "answer": {
+    "mean_answer_nll": 1.1809079081285745,
+    "mean_eos_nll": 0.10899860156193124,
+    "mean_answer_token_accuracy": 0.6805555572112402,
+    "rows": [
+      {
+        "id": "development_subtraction_01",
+        "answer_nll": 0.2617592513561249,
+        "eos_nll": 0.0053600408136844635,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_addition_01",
+        "answer_nll": 1.262453556060791,
+        "eos_nll": 0.00941160973161459,
+        "teacher_forced_answer_token_accuracy": 0.5
+      },
+      {
+        "id": "development_multiplication_00",
+        "answer_nll": 0.03355811908841133,
+        "eos_nll": 0.0036814315244555473,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_multiplication_04",
+        "answer_nll": 0.12061776220798492,
+        "eos_nll": 0.0017525089206174016,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_python_04",
+        "answer_nll": 2.9452075958251953,
+        "eos_nll": 0.05560942739248276,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_subtraction_04",
+        "answer_nll": 1.0573855638504028,
+        "eos_nll": 0.006337189581245184,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_multiplication_05",
+        "answer_nll": 1.9137245416641235,
+        "eos_nll": 0.024167582392692566,
+        "teacher_forced_answer_token_accuracy": 0.5
+      },
+      {
+        "id": "development_python_01",
+        "answer_nll": 4.570409774780273,
+        "eos_nll": 0.0484003983438015,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_multiplication_03",
+        "answer_nll": 0.08906122297048569,
+        "eos_nll": 0.010766984894871712,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_subtraction_03",
+        "answer_nll": 0.9101811647415161,
+        "eos_nll": 0.006801311857998371,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_subtraction_02",
+        "answer_nll": 0.4602397382259369,
+        "eos_nll": 0.0011629253858700395,
+        "teacher_forced_answer_token_accuracy": 0.5
+      },
+      {
+        "id": "development_addition_00",
+        "answer_nll": 0.0174762774258852,
+        "eos_nll": 0.000179036331246607,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_multiplication_01",
+        "answer_nll": 0.8061699271202087,
+        "eos_nll": 0.005435568280518055,
+        "teacher_forced_answer_token_accuracy": 0.5
+      },
+      {
+        "id": "development_addition_03",
+        "answer_nll": 0.7198435664176941,
+        "eos_nll": 0.0028757192194461823,
+        "teacher_forced_answer_token_accuracy": 0.6666666865348816
+      },
+      {
+        "id": "development_python_02",
+        "answer_nll": 3.4354989528656006,
+        "eos_nll": 0.24377374351024628,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_multiplication_02",
+        "answer_nll": 0.05590338259935379,
+        "eos_nll": 0.002664945786818862,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_python_05",
+        "answer_nll": 1.033422827720642,
+        "eos_nll": 2.0368638038635254,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_subtraction_05",
+        "answer_nll": 1.7888836860656738,
+        "eos_nll": 0.013898025266826153,
+        "teacher_forced_answer_token_accuracy": 0.5
+      },
+      {
+        "id": "development_python_03",
+        "answer_nll": 2.8566906452178955,
+        "eos_nll": 0.040324244648218155,
+        "teacher_forced_answer_token_accuracy": 0.3333333432674408
+      },
+      {
+        "id": "development_addition_05",
+        "answer_nll": 0.08898846060037613,
+        "eos_nll": 0.0010545651894062757,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_addition_04",
+        "answer_nll": 1.0815510749816895,
+        "eos_nll": 0.0019396792631596327,
+        "teacher_forced_answer_token_accuracy": 0.5
+      },
+      {
+        "id": "development_python_00",
+        "answer_nll": 2.695013999938965,
+        "eos_nll": 0.0927748754620552,
+        "teacher_forced_answer_token_accuracy": 0.3333333432674408
+      },
+      {
+        "id": "development_subtraction_00",
+        "answer_nll": 0.036610931158065796,
+        "eos_nll": 0.0001705739414319396,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_addition_02",
+        "answer_nll": 0.10113777220249176,
+        "eos_nll": 0.000560245884116739,
+        "teacher_forced_answer_token_accuracy": 1.0
+      }
+    ]
+  },
+  "anchors": {
+    "mean_nll": 3.1762080589930215,
+    "rows": [
+      {
+        "nll": 2.1616604328155518,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7330477237701416,
+        "tokens": 8
+      },
+      {
+        "nll": 2.4868290424346924,
+        "tokens": 8
+      },
+      {
+        "nll": 4.08910608291626,
+        "tokens": 8
+      },
+      {
+        "nll": 3.768434762954712,
+        "tokens": 8
+      },
+      {
+        "nll": 2.3258299827575684,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6629300117492676,
+        "tokens": 8
+      },
+      {
+        "nll": 3.642409324645996,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6408870220184326,
+        "tokens": 8
+      },
+      {
+        "nll": 3.715669870376587,
+        "tokens": 8
+      },
+      {
+        "nll": 2.77565860748291,
+        "tokens": 8
+      },
+      {
+        "nll": 4.112033843994141,
+        "tokens": 8
+      }
+    ]
+  },
+  "architecture": {
+    "physical_layers": 32,
+    "layer_executions": 56,
+    "mhc_streams": 2,
+    "second_visit_gain": 0.05000000074505806,
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "sliding_window": 256,
+    "window_layers": [
+      7,
+      15,
+      27
+    ],
+    "parameters": 1020252592,
+    "backward_passes": 0
+  }
+}

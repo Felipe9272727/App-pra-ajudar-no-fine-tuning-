@@ -46,6 +46,14 @@ def main():
         '|---|---:|---:|---:|---:|']
     for key,s in summary.items():
         lines.append(f"| {names[key]} | {s['exact']}/64 | {s['content']}/64 | {s['numeric_content']}/48 | {s['general_exact']}/16 |")
+    lines+=['','| Família | '+' | '.join(names[v] for v in variants)+' |',
+        '|---|'+'---:|'*len(variants)]
+    for family in ['addition','subtraction','multiplication','python','general_control']:
+        entries=[]
+        for v in variants:
+            family_rows=[r for r in reports[v]['rows'] if r['family']==family]
+            entries.append(f"{sum(r['content_correct'] for r in family_rows)}/{len(family_rows)}")
+        lines.append('| '+family+' | '+' | '.join(entries)+' |')
     lines+=['',f'Comparação pareada de conteúdo, original → checkpoint final: {wins} melhora(s), {losses} regressão(ões). '
         f'Teste binomial exato nos pares discordantes: p={p:.4f}. As perguntas compartilham templates; '
         'esse número é descritivo e não estabelece significância em capacidades gerais.','',

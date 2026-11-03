@@ -131,20 +131,37 @@ def fit():
 
 @torch.inference_mode()
 def develop():
+    from likelihood_cache import build_cache,score_cache
     archive=json.loads((HERE/'archive.json').read_text())
     model=load_hybrid();tok=tokenizer()
+    update_status(status='preparing_exact_screening_cache')
+    devcache=build_cache(model,tok,DATA['development'],HERE/'development_cache.pt')
+    anchorcache=build_cache(model,tok,DATA['anchors'],HERE/'anchor_cache.pt',True)
+    replaybase={'answer':score_cache(model,devcache),'anchors':score_cache(model,anchorcache),
+                'architecture':architecture_check(model)}
     basepath=HERE/'development_baseline.json'
-    if basepath.exists():base=json.loads(basepath.read_text())
+    if basepath.exists():
+        base=json.loads(basepath.read_text())
+        assert abs(base['answer']['mean_answer_nll']-replaybase['answer']['mean_answer_nll'])<1e-7
+        assert abs(base['anchors']['mean_nll']-replaybase['anchors']['mean_nll'])<1e-7
     else:
-        base={'answer':likelihood(model,tok,DATA['development']),
-              'anchors':likelihood(model,tok,DATA['anchors'],True),'architecture':architecture_check(model)}
+        base=replaybase
         atomic_json(basepath,base)
+    for completed in archive['candidates']:
+        if completed['status']!='development_complete':continue
+        apply_edit(model,ROOT/completed['patch'])
+        check=score_cache(model,devcache)
+        assert abs(check['mean_answer_nll']-completed['development']['mean_answer_nll'])<1e-7
+    atomic_json(HERE/'screening_cache_check.json',{'baseline_max_logit_delta':max(
+        devcache['max_replay_logit_delta'],anchorcache['max_replay_logit_delta']),
+        'baseline_nll_delta':replaybase['answer']['mean_answer_nll']-base['answer']['mean_answer_nll'],
+        'completed_candidate_nll_matches':True,'final_generation_uses_full_model':True})
     for candidate in archive['candidates']:
         if candidate['status']!='awaiting_development':continue
         update_status(status='development_evaluation',evaluating_candidate=candidate['id'])
         written=apply_edit(model,ROOT/candidate['patch'])
-        scored=likelihood(model,tok,DATA['development'])
-        anchors=likelihood(model,tok,DATA['anchors'],True)
+        scored=score_cache(model,devcache)
+        anchors=score_cache(model,anchorcache)
         passes=scored['mean_answer_nll']<base['answer']['mean_answer_nll']-1e-4
         preserves=anchors['mean_nll']<=base['anchors']['mean_nll']*1.1
         candidate.update(status='development_complete',development=scored,anchor=anchors,

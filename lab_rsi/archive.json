@@ -11,9 +11,239 @@
       "rank": 32,
       "norm_cap_scale": 1.0,
       "compression_relative_error": 0.0014354633167386055,
-      "status": "awaiting_development",
+      "status": "development_complete",
       "selected_by": "assistant preregistered candidate program",
-      "hypothesis": "Improve answer-token and stop margins inside active hybrid"
+      "hypothesis": "Improve answer-token and stop margins inside active hybrid",
+      "development": {
+        "mean_answer_nll": 1.1200479527469724,
+        "mean_eos_nll": 0.12831482856987955,
+        "mean_answer_token_accuracy": 0.6666666691501936,
+        "rows": [
+          {
+            "id": "development_subtraction_01",
+            "answer_nll": 0.34040459990501404,
+            "eos_nll": 0.005355653818696737,
+            "teacher_forced_answer_token_accuracy": 0.6666666865348816
+          },
+          {
+            "id": "development_addition_01",
+            "answer_nll": 1.2869760990142822,
+            "eos_nll": 0.00940169021487236,
+            "teacher_forced_answer_token_accuracy": 0.5
+          },
+          {
+            "id": "development_multiplication_00",
+            "answer_nll": 0.034059248864650726,
+            "eos_nll": 0.003947325050830841,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_multiplication_04",
+            "answer_nll": 0.11208589375019073,
+            "eos_nll": 0.0016962201334536076,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_python_04",
+            "answer_nll": 2.733468770980835,
+            "eos_nll": 0.06685566157102585,
+            "teacher_forced_answer_token_accuracy": 0.0
+          },
+          {
+            "id": "development_subtraction_04",
+            "answer_nll": 1.0070674419403076,
+            "eos_nll": 0.006265639793127775,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_multiplication_05",
+            "answer_nll": 1.8639041185379028,
+            "eos_nll": 0.01944854110479355,
+            "teacher_forced_answer_token_accuracy": 0.5
+          },
+          {
+            "id": "development_python_01",
+            "answer_nll": 4.071098804473877,
+            "eos_nll": 0.07094691693782806,
+            "teacher_forced_answer_token_accuracy": 0.0
+          },
+          {
+            "id": "development_multiplication_03",
+            "answer_nll": 0.09805131703615189,
+            "eos_nll": 0.010762974619865417,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_subtraction_03",
+            "answer_nll": 0.908940851688385,
+            "eos_nll": 0.006883834023028612,
+            "teacher_forced_answer_token_accuracy": 0.5
+          },
+          {
+            "id": "development_subtraction_02",
+            "answer_nll": 0.4156459867954254,
+            "eos_nll": 0.0013242532731965184,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_addition_00",
+            "answer_nll": 0.018744153901934624,
+            "eos_nll": 0.0001720042055239901,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_multiplication_01",
+            "answer_nll": 0.8395634889602661,
+            "eos_nll": 0.0054420894011855125,
+            "teacher_forced_answer_token_accuracy": 0.5
+          },
+          {
+            "id": "development_addition_03",
+            "answer_nll": 0.5697378516197205,
+            "eos_nll": 0.0028704889118671417,
+            "teacher_forced_answer_token_accuracy": 0.6666666865348816
+          },
+          {
+            "id": "development_python_02",
+            "answer_nll": 3.103938341140747,
+            "eos_nll": 0.29695650935173035,
+            "teacher_forced_answer_token_accuracy": 0.0
+          },
+          {
+            "id": "development_multiplication_02",
+            "answer_nll": 0.056072525680065155,
+            "eos_nll": 0.002667442662641406,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_python_05",
+            "answer_nll": 1.263316035270691,
+            "eos_nll": 2.3481240272521973,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_subtraction_05",
+            "answer_nll": 1.62760329246521,
+            "eos_nll": 0.013899553567171097,
+            "teacher_forced_answer_token_accuracy": 0.5
+          },
+          {
+            "id": "development_python_03",
+            "answer_nll": 2.5843706130981445,
+            "eos_nll": 0.06180928274989128,
+            "teacher_forced_answer_token_accuracy": 0.3333333432674408
+          },
+          {
+            "id": "development_addition_05",
+            "answer_nll": 0.11179336905479431,
+            "eos_nll": 0.0010544460965320468,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_addition_04",
+            "answer_nll": 1.1055344343185425,
+            "eos_nll": 0.001957882894203067,
+            "teacher_forced_answer_token_accuracy": 0.5
+          },
+          {
+            "id": "development_python_00",
+            "answer_nll": 2.5867080688476562,
+            "eos_nll": 0.1409832239151001,
+            "teacher_forced_answer_token_accuracy": 0.3333333432674408
+          },
+          {
+            "id": "development_subtraction_00",
+            "answer_nll": 0.039096686989068985,
+            "eos_nll": 0.0001705739414319396,
+            "teacher_forced_answer_token_accuracy": 1.0
+          },
+          {
+            "id": "development_addition_02",
+            "answer_nll": 0.10296887159347534,
+            "eos_nll": 0.0005596501869149506,
+            "teacher_forced_answer_token_accuracy": 1.0
+          }
+        ]
+      },
+      "anchor": {
+        "mean_nll": 3.174338936805725,
+        "rows": [
+          {
+            "nll": 2.1599020957946777,
+            "tokens": 8
+          },
+          {
+            "nll": 3.7145564556121826,
+            "tokens": 8
+          },
+          {
+            "nll": 2.4888551235198975,
+            "tokens": 8
+          },
+          {
+            "nll": 4.083425045013428,
+            "tokens": 8
+          },
+          {
+            "nll": 3.765744209289551,
+            "tokens": 8
+          },
+          {
+            "nll": 2.320741891860962,
+            "tokens": 8
+          },
+          {
+            "nll": 2.669841766357422,
+            "tokens": 8
+          },
+          {
+            "nll": 3.6432628631591797,
+            "tokens": 8
+          },
+          {
+            "nll": 2.64166259765625,
+            "tokens": 8
+          },
+          {
+            "nll": 3.719651460647583,
+            "tokens": 8
+          },
+          {
+            "nll": 2.772139072418213,
+            "tokens": 8
+          },
+          {
+            "nll": 4.1122846603393555,
+            "tokens": 8
+          }
+        ]
+      },
+      "passes_answer_nll": true,
+      "passes_anchor": true,
+      "weight_write": {
+        "changed_bf16_values": 1854801,
+        "delta_frobenius": 0.07756650447845459,
+        "base_frobenius": 16.417512893676758,
+        "dense_weight_sha256": "c7eb7f5e6e0cc475f81728b48ec83c0939bd405d25656fe09b0a8ff48642ebdf",
+        "runtime_adapter": false,
+        "architecture": {
+          "physical_layers": 32,
+          "layer_executions": 56,
+          "mhc_streams": 2,
+          "second_visit_gain": 0.05000000074505806,
+          "conv_kernel": 7,
+          "learned_history_nonzero": 221184,
+          "sliding_window": 256,
+          "window_layers": [
+            7,
+            15,
+            27
+          ],
+          "parameters": 1020252592,
+          "backward_passes": 0
+        }
+      },
+      "validation_eligible": true
     },
     {
       "family": "joint",
