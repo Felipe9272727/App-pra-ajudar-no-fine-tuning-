@@ -27,6 +27,14 @@ def main():
     if state['rounds_completed']<3:raise ValueError('Finish the three development rounds before held-out evaluation.')
     if state['status'] not in ['frozen_for_evaluation','pilot_complete']:
         raise ValueError('The assistant controller must freeze the selected recipe before held-out evaluation.')
+    output=ROOT/'evaluation'/f'{args.variant}.json'
+    previous=None
+    if output.exists():
+        previous=json.loads(output.read_text())
+        if previous['data_sha256']!=DATA_HASH:raise ValueError('Existing results use another test set.')
+        if previous['status']=='complete':
+            print('ALREADY_COMPLETE',args.variant,previous['correct'],previous['total'],flush=True)
+            return
     tok=tokenizer()
     if args.variant=='original':
         recipe=None;model=load_teacher()
@@ -45,13 +53,16 @@ def main():
     diagnostic={'max_abs_delta':(full-step).abs().max().item(),
                 'same_top_token':full.argmax().item()==step.argmax().item()}
     assert diagnostic['same_top_token'] and diagnostic['max_abs_delta']<=0.5,diagnostic
-    output=ROOT/'evaluation'/f'{args.variant}.json'
     report={'variant':args.variant,'recipe':recipe,'data_sha256':DATA_HASH,
             'protocol':{'mode':'non-thinking','decoding':'greedy','max_new_tokens':12,
                 'device':'cpu','threads':8,'backbone':'BF16','routers':'FP32','use_cache':True},
             'cache_check':diagnostic,'rows':[],'status':'running',
             'selection_used_test':False,'rounds_before_evaluation':state['rounds_completed']}
-    for item in DATA['heldout']:
+    if previous is not None:
+        if previous['recipe']!=recipe:raise ValueError('Cannot mix results from different weight recipes.')
+        report['rows']=previous['rows']
+        assert [r['id'] for r in report['rows']]==[r['id'] for r in DATA['heldout'][:len(report['rows'])]]
+    for item in DATA['heldout'][len(report['rows']):]:
         ids=prompt_ids(tok,item['question']);started=time.monotonic()
         result=model.generate(input_ids=ids,max_new_tokens=12,do_sample=False,
             use_cache=True,pad_token_id=tok.eos_token_id)
