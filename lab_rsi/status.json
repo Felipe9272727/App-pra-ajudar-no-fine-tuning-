@@ -1,5 +1,5 @@
 {
-  "status": "preparing_data",
+  "status": "collecting_train_features",
   "model_display_name": "liquid sense 0.8 b LOOP",
   "branch": "codex/liquid-sense-loop-lab-pilot-20261103",
   "parent_commit": "cbdead4d6e07b17232361d3550bf2b263fdd4cd1",
@@ -15,5 +15,8 @@
     "beta": 0.0,
     "liquid_mix": 1.0
   },
-  "architecture_can_be_disabled": false
+  "architecture_can_be_disabled": false,
+  "phase": "closed_form_learning",
+  "updated_unix": 1793744848.3310893,
+  "train_examples_done": 8
 }

@@ -1,0 +1,160 @@
+"""Shared protocol and strict active-architecture checks for the new pilot."""
+import hashlib
+import json
+from pathlib import Path
+import re
+import statistics
+import sys
+import time
+import unicodedata
+
+import torch
+import torch.nn.functional as F
+
+HERE=Path(__file__).resolve().parent
+ROOT=HERE.parent
+sys.path.insert(0,str(ROOT))
+sys.path.insert(0,str(ROOT/'v2_adaptation'))
+from experiment import tokenizer,prompt_ids,load_teacher
+from native_runtime import load_port
+from rsi_cycle import atomic_json,apply_recipe
+from modeling_sensenova_loop import execution_plan
+
+DATA=json.loads((HERE/'data.json').read_text())
+DATA_HASH=hashlib.sha256((HERE/'data.json').read_bytes()).hexdigest()
+RECIPE={'gain':0.05,'beta':0.,'liquid_mix':1.}
+torch.set_num_threads(8)
+torch.set_grad_enabled(False)
+
+
+def file_hash(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def update_status(**kwargs):
+    path=HERE/'status.json'
+    state=json.loads(path.read_text());state.update(kwargs)
+    state['updated_unix']=time.time();atomic_json(path,state)
+
+
+def architecture_check(model):
+    text=model.model.language_model
+    layers=text.layers
+    cfg=model.config.to_dict()
+    plan=execution_plan(cfg)
+    assert len(layers)==32 and len(plan)==56
+    assert cfg['mhc']['streams']==2
+    assert all(float(layer.native_visit_gain[1])>0 for layer in layers[4:28])
+    assert all(layer._native_window==256 for i,layer in enumerate(layers) if i in [7,15,27])
+    convs=[layer.linear_attn.conv1d.weight for layer in layers if hasattr(layer,'linear_attn')]
+    assert all(w.shape[-1]==7 for w in convs)
+    nonzero=sum(int(w[:,:,:3].count_nonzero()) for w in convs)
+    assert nonzero>0
+    assert not any(p.requires_grad for p in model.parameters())
+    return {'physical_layers':len(layers),'layer_executions':len(plan),'mhc_streams':2,
+        'second_visit_gain':float(layers[4].native_visit_gain[1]),
+        'conv_kernel':7,'learned_history_nonzero':nonzero,
+        'sliding_window':256,'window_layers':[7,15,27],
+        'parameters':sum(p.numel() for p in model.parameters()),'backward_passes':0}
+
+
+def load_hybrid():
+    model=load_port(ROOT,True);apply_recipe(model,RECIPE)
+    architecture_check(model)
+    return model
+
+
+@torch.inference_mode()
+def apply_edit(model,patch,strength=None):
+    if isinstance(patch,(str,Path)):patch=torch.load(patch,weights_only=True)
+    assert patch['data_sha256']==DATA_HASH and patch['recipe']==RECIPE
+    layer=model.model.language_model.layers[31].mlp.down_proj
+    # Restore the SAME existing dense parameter, then write the reconstructed edit.
+    base=torch.load(HERE/'last_mlp_prior.pt',weights_only=True)['weight']
+    strength=patch['strength'] if strength is None else strength
+    delta=(patch['left']@patch['right'])*strength
+    written=(base.float()+delta).to(base.dtype)
+    layer.weight.copy_(written)
+    assert torch.isfinite(layer.weight).all()
+    return {'changed_bf16_values':int((written.view(torch.int16)!=base.view(torch.int16)).sum()),
+        'delta_frobenius':float(delta.norm()),'base_frobenius':float(base.float().norm()),
+        'dense_weight_sha256':hashlib.sha256(written.view(torch.uint8).numpy().tobytes()).hexdigest(),
+        'runtime_adapter':False,'architecture':architecture_check(model)}
+
+
+@torch.inference_mode()
+def restore_mlp(model):
+    model.model.language_model.layers[31].mlp.down_proj.weight.copy_(
+        torch.load(HERE/'last_mlp_prior.pt',weights_only=True)['weight'])
+
+
+@torch.inference_mode()
+def likelihood(model,tok,rows,anchors=False):
+    out=[]
+    for row in rows:
+        if anchors:
+            ids=tok(row,return_tensors='pt',add_special_tokens=False)['input_ids']
+            n=min(8,ids.shape[1]-1)
+            logits=model(input_ids=ids,use_cache=False,logits_to_keep=n+1).logits[0,:-1].float()
+            targets=ids[0,-n:]
+        else:
+            ids=prompt_ids(tok,row['question'])
+            target=tok.encode(row['answer'],add_special_tokens=False)
+            whole=torch.cat([ids,torch.tensor([target])],1)
+            logits=model(input_ids=whole,use_cache=False,logits_to_keep=len(target)+1).logits[0].float()
+            targets=torch.tensor(target+[tok.eos_token_id])
+        losses=F.cross_entropy(logits,targets,reduction='none')
+        if anchors:
+            out.append({'nll':float(losses.mean()),'tokens':n})
+        else:
+            out.append({'id':row['id'],'answer_nll':float(losses[:-1].mean()),
+                'eos_nll':float(losses[-1]),
+                'teacher_forced_answer_token_accuracy':float((logits[:-1].argmax(-1)==targets[:-1]).float().mean())})
+    if anchors:return {'mean_nll':statistics.mean(x['nll'] for x in out),'rows':out}
+    return {'mean_answer_nll':statistics.mean(x['answer_nll'] for x in out),
+        'mean_eos_nll':statistics.mean(x['eos_nll'] for x in out),
+        'mean_answer_token_accuracy':statistics.mean(x['teacher_forced_answer_token_accuracy'] for x in out),'rows':out}
+
+
+def normalized(text):
+    text=''.join(c for c in unicodedata.normalize('NFKD',text.casefold()) if not unicodedata.combining(c))
+    return re.sub(r'\s+',' ',text).strip().strip(' .!\n`"\'')
+
+
+def grade(text,row):
+    exact=normalized(text) in [normalized(x) for x in [row['answer']]+row.get('aliases',[])]
+    if row['numeric']:
+        # Separate mathematical content from compliance with "integer only".
+        # Expressions with several numbers are not blindly granted correctness.
+        numbers=re.findall(r'(?<![\w.])-?\d+(?![\w.])',text)
+        content=len(numbers)==1 and int(numbers[0])==int(row['answer'])
+    else:content=exact
+    return bool(exact),bool(content)
+
+
+@torch.inference_mode()
+def generate_rows(model,tok,rows,path,metadata):
+    previous=json.loads(path.read_text()) if path.exists() else None
+    report={**metadata,'status':'running','data_sha256':DATA_HASH,'rows':[],
+        'protocol':{'max_new_tokens':12,'greedy':True,'thinking':False,'use_cache':True,
+                    'cpu_threads':8,'backbone':'BF16','routers':'FP32','inference_tools':False}}
+    if previous:
+        assert previous['data_sha256']==DATA_HASH
+        assert previous['variant']==metadata['variant']
+        assert previous.get('patch_sha256')==metadata.get('patch_sha256')
+        assert [r['id'] for r in previous['rows']]==[r['id'] for r in rows[:len(previous['rows'])]]
+        if previous['status']=='complete':return previous
+        report['rows']=previous['rows']
+    for row in rows[len(report['rows']):]:
+        ids=prompt_ids(tok,row['question']);start=time.monotonic()
+        tokens=model.generate(input_ids=ids,max_new_tokens=12,do_sample=False,
+            use_cache=True,pad_token_id=tok.eos_token_id)[0,ids.shape[1]:]
+        text=tok.decode(tokens,skip_special_tokens=True)
+        exact,content=grade(text,row)
+        report['rows'].append({**row,'output':text,'exact_correct':exact,'content_correct':content,
+            'new_tokens':len(tokens),'hit_limit':len(tokens)==12,'seconds':round(time.monotonic()-start,4)})
+        atomic_json(path,report)
+        print('GEN',metadata['variant'],row['id'],repr(text),exact,content,flush=True)
+    report.update(status='complete',exact_correct=sum(r['exact_correct'] for r in report['rows']),
+                  content_correct=sum(r['content_correct'] for r in report['rows']),total=len(rows))
+    atomic_json(path,report)
+    return report

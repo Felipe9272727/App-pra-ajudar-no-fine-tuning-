@@ -1,5 +1,13 @@
 # Retomada do experimento
 
+- No novo piloto, leia primeiro `lab_rsi/status.json`, `lab_rsi/archive.json`
+  (quando existir) e `lab_rsi/frozen.json` (quando existir). O primeiro piloto
+  em `rsi/` é histórico e não autoriza desligar partes da arquitetura atual.
+- Requisito do usuário: manter SenseNova loop/mHC e os componentes Liquid
+  ativos em todas as novas candidatas. Use `lab_rsi/common.py:architecture_check`.
+- O nome atual é `liquid sense 0.8 b LOOP`; informe que a base nominal é 0,8B
+  e o híbrido ampliado tem aproximadamente 1,02B parâmetros carregados.
+
 - Leia `rsi/status.json`, `rsi/pending.json`, `checkpoints/incumbent.json` e a
   última rodada antes de rodar inferência. Não repita rodada finalizada.
 - O pedido atual é edição direta dos pesos com adaptação algébrica e feedback;
