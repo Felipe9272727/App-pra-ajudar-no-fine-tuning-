@@ -1,0 +1,9 @@
+{
+  "window": 256,
+  "full_context_tokens": 300,
+  "causal_rows_checked": 300,
+  "last_row_allowed_keys": 256,
+  "cached_last_row_matches_full": true,
+  "zero_padded_kernel7_max_delta": 0.0,
+  "note": "Operator contracts, not a long-context quality benchmark."
+}

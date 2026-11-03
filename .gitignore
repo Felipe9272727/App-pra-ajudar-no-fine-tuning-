@@ -1,0 +1,7 @@
+upstream/
+sensenova_port/
+**/__pycache__/
+**/teacher_features.pt
+**/*.tmp
+*.log
+.venv/

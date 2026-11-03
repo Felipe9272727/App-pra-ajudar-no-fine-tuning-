@@ -1,0 +1,37 @@
+{
+  "mean_answer_nll": 0.4129200209863484,
+  "rows": [
+    {
+      "question": "What is 19 + 26? Reply only with the integer.",
+      "answer_nll": 0.05127495527267456
+    },
+    {
+      "question": "What is 8 * 6? Reply only with the integer.",
+      "answer_nll": 0.01863255351781845
+    },
+    {
+      "question": "What is 72 - 39? Reply only with the integer.",
+      "answer_nll": 0.5817333459854126
+    },
+    {
+      "question": "Translate dog into Portuguese. Reply with one word.",
+      "answer_nll": 1.0282961130142212
+    },
+    {
+      "question": "What is the capital of Italy? Reply only with the city.",
+      "answer_nll": 0.12075421959161758
+    },
+    {
+      "question": "Complete 5, 10, 15, __. Reply only with the integer.",
+      "answer_nll": 1.3892972469329834
+    },
+    {
+      "question": "Write HELLO in lowercase. Reply only with the word.",
+      "answer_nll": 0.0746801495552063
+    },
+    {
+      "question": "In Python, what does print(3 * 5) output? Reply only with the integer.",
+      "answer_nll": 0.03869158402085304
+    }
+  ]
+}

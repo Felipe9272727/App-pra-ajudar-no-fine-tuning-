@@ -1,0 +1,12 @@
+[
+  {
+    "max_abs_logit_delta": 0.0,
+    "rms_logit_delta": 0.0,
+    "same_top_token": true
+  },
+  {
+    "max_abs_logit_delta": 0.0,
+    "rms_logit_delta": 0.0,
+    "same_top_token": true
+  }
+]

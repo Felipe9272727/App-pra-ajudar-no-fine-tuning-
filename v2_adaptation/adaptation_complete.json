@@ -1,0 +1,11 @@
+{
+  "data_sha256": "26279057c8ea82ba23cb8aad12025210390d485b1a69bfc392945bc7a6755deb",
+  "native": 0.05,
+  "liquid": 0.05,
+  "learned_conv_coefficients_changed": 440792,
+  "new_history_nonzero": 221184,
+  "autograd_enabled": false,
+  "backward_passes": 0,
+  "heldout_used": false,
+  "status": "frozen_before_heldout"
+}

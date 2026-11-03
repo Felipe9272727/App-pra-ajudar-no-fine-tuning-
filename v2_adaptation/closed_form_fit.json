@@ -1,0 +1,107 @@
+{
+  "method": "weighted ridge, analytic solve, prior regularization, 0.1 blend",
+  "calibration_texts": 8,
+  "first_pass_weight": 9,
+  "second_pass_weight": 1,
+  "backward_passes": 0,
+  "layers": [
+    {
+      "physical_layer": 4,
+      "donor": 4,
+      "changed_bf16_coefficients": 37793,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 308235.96875,
+      "weighted_fit_sse_after": 307083.65625
+    },
+    {
+      "physical_layer": 5,
+      "donor": 5,
+      "changed_bf16_coefficients": 37562,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 159584.53125,
+      "weighted_fit_sse_after": 158994.171875
+    },
+    {
+      "physical_layer": 6,
+      "donor": 6,
+      "changed_bf16_coefficients": 38089,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 92585.28125,
+      "weighted_fit_sse_after": 92231.90625
+    },
+    {
+      "physical_layer": 12,
+      "donor": 8,
+      "changed_bf16_coefficients": 38270,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 100911.953125,
+      "weighted_fit_sse_after": 100398.125
+    },
+    {
+      "physical_layer": 13,
+      "donor": 9,
+      "changed_bf16_coefficients": 39414,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 59433.5,
+      "weighted_fit_sse_after": 59145.85546875
+    },
+    {
+      "physical_layer": 14,
+      "donor": 10,
+      "changed_bf16_coefficients": 39053,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 58477.62109375,
+      "weighted_fit_sse_after": 58086.23046875
+    },
+    {
+      "physical_layer": 16,
+      "donor": 12,
+      "changed_bf16_coefficients": 38445,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 137631.84375,
+      "weighted_fit_sse_after": 136875.40625
+    },
+    {
+      "physical_layer": 17,
+      "donor": 13,
+      "changed_bf16_coefficients": 38325,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 64837.7890625,
+      "weighted_fit_sse_after": 64504.9296875
+    },
+    {
+      "physical_layer": 18,
+      "donor": 14,
+      "changed_bf16_coefficients": 36861,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 55640.35546875,
+      "weighted_fit_sse_after": 55341.2578125
+    },
+    {
+      "physical_layer": 24,
+      "donor": 16,
+      "changed_bf16_coefficients": 34613,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 122279.734375,
+      "weighted_fit_sse_after": 121821.75
+    },
+    {
+      "physical_layer": 25,
+      "donor": 17,
+      "changed_bf16_coefficients": 32044,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 124577.2109375,
+      "weighted_fit_sse_after": 124235.40625
+    },
+    {
+      "physical_layer": 26,
+      "donor": 18,
+      "changed_bf16_coefficients": 30323,
+      "nonzero_new_history_taps": 18432,
+      "weighted_fit_sse_before": 93965.4296875,
+      "weighted_fit_sse_after": 93773.0390625
+    }
+  ],
+  "changed_coefficients": 440792,
+  "new_history_nonzero": 221184
+}
