@@ -98,12 +98,16 @@ def main():
     atomic_json(ROOT/'rsi/pending.json',pending)
     model=load_port(ROOT,True);tok=tokenizer()
     apply_recipe(model,baseline)
+    stored_previous_nll=before['development_nll']
+    measured_baseline=development_score(model,tok)
+    before['development_nll']=measured_baseline['mean_answer_nll']
     probe='What is 16 + 23? Reply only with the integer.'
     ids=prompt_ids(tok,probe)
     before_logits=model(input_ids=ids,use_cache=False,logits_to_keep=1).logits[0,-1].float().clone()
     q=('You are a small experimental language model. Your controller can edit these numeric weights: '
        'gain splits computation across two loop visits; beta activates inserted layers; liquid_mix '
        'blends seven-tap convolution weights. Current recipe: '+json.dumps(baseline)+
+       '. Current development NLL: '+str(before['development_nll'])+
        '. Suggest one cautious change. Return a brief JSON object with gain, beta, liquid_mix.')
     suggestion_ids=prompt_ids(tok,q)
     suggestion=model.generate(input_ids=suggestion_ids,max_new_tokens=32,do_sample=False,
@@ -118,6 +122,8 @@ def main():
     accept=improvement>1e-4
     record={**pending,'phase':'complete','candidate_development':score,
             'incumbent_development_nll':before['development_nll'],
+            'stored_previous_nll':stored_previous_nll,
+            'remeasured_incumbent_development':measured_baseline,
             'improvement':improvement,'accepted':accept,
             'actual_probe_logit_change':(after_logits-before_logits).abs().max().item(),
             'backward_passes':0,'heldout_used':False,
@@ -125,6 +131,8 @@ def main():
     atomic_json(ROOT/f'rsi/round_{args.round:03d}.json',record)
     if accept:
         state['incumbent']={**candidate,'development_nll':score['mean_answer_nll']}
+    else:
+        state['incumbent']['development_nll']=before['development_nll']
     state.update(rounds_completed=args.round,status='checkpointed_between_rounds',
                  last_round_accepted=accept,last_round_file=f'rsi/round_{args.round:03d}.json')
     atomic_json(state_path,state)
