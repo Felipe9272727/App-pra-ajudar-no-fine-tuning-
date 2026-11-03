@@ -1,0 +1,100 @@
+{
+  "round": 3,
+  "phase": "complete",
+  "incumbent": {
+    "gain": 0.05,
+    "beta": 0.0,
+    "liquid_mix": 0.0
+  },
+  "candidate": {
+    "gain": 0.05,
+    "beta": 0.0,
+    "liquid_mix": 0.25
+  },
+  "reason": "Testar participação conservadora dos pesos de convolução ajustados por ridge e atenção local inspirada em LFM3, mantendo o melhor controle de loop",
+  "proposal_selected_by": "assistant controller",
+  "started_unix": 1793741272.3467286,
+  "student_raw_suggestion": "{\n  \"gain\": 0.05,\n  \"beta\": 0.0,\n  \"liquid_mix\": 0.0",
+  "candidate_development": {
+    "mean_answer_nll": 0.4088345761410892,
+    "rows": [
+      {
+        "question": "What is 19 + 26? Reply only with the integer.",
+        "answer_nll": 0.06744206696748734
+      },
+      {
+        "question": "What is 8 * 6? Reply only with the integer.",
+        "answer_nll": 0.022687096148729324
+      },
+      {
+        "question": "What is 72 - 39? Reply only with the integer.",
+        "answer_nll": 0.36734575033187866
+      },
+      {
+        "question": "Translate dog into Portuguese. Reply with one word.",
+        "answer_nll": 1.2070441246032715
+      },
+      {
+        "question": "What is the capital of Italy? Reply only with the city.",
+        "answer_nll": 0.10839426517486572
+      },
+      {
+        "question": "Complete 5, 10, 15, __. Reply only with the integer.",
+        "answer_nll": 1.3721086978912354
+      },
+      {
+        "question": "Write HELLO in lowercase. Reply only with the word.",
+        "answer_nll": 0.06961937993764877
+      },
+      {
+        "question": "In Python, what does print(3 * 5) output? Reply only with the integer.",
+        "answer_nll": 0.056035228073596954
+      }
+    ]
+  },
+  "incumbent_development_nll": 0.3853193211834878,
+  "stored_previous_nll": 0.3853193211834878,
+  "remeasured_incumbent_development": {
+    "mean_answer_nll": 0.3853193211834878,
+    "rows": [
+      {
+        "question": "What is 19 + 26? Reply only with the integer.",
+        "answer_nll": 0.05106664448976517
+      },
+      {
+        "question": "What is 8 * 6? Reply only with the integer.",
+        "answer_nll": 0.018610408529639244
+      },
+      {
+        "question": "What is 72 - 39? Reply only with the integer.",
+        "answer_nll": 0.2895773947238922
+      },
+      {
+        "question": "Translate dog into Portuguese. Reply with one word.",
+        "answer_nll": 1.1413047313690186
+      },
+      {
+        "question": "What is the capital of Italy? Reply only with the city.",
+        "answer_nll": 0.10812965780496597
+      },
+      {
+        "question": "Complete 5, 10, 15, __. Reply only with the integer.",
+        "answer_nll": 1.3543764352798462
+      },
+      {
+        "question": "Write HELLO in lowercase. Reply only with the word.",
+        "answer_nll": 0.06295425444841385
+      },
+      {
+        "question": "In Python, what does print(3 * 5) output? Reply only with the integer.",
+        "answer_nll": 0.05653504282236099
+      }
+    ]
+  },
+  "improvement": -0.023515254957601428,
+  "accepted": false,
+  "actual_probe_logit_change": 0.40625,
+  "backward_passes": 0,
+  "heldout_used": false,
+  "finished_unix": 1793741341.852793
+}
