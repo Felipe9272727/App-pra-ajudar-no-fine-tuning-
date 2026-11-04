@@ -68,3 +68,16 @@
   validação e teste não podem participar das 100 decisões de busca.
 - Workflow `.github/workflows/liquid-sense-rsi100.yml` aguarda o anterior para
   respeitar o limite de quatro máquinas. Não disparar outra cópia em paralelo.
+
+## Pedido atual: localizar grupos associados a programação
+
+- Branch `codex/liquid-sense-code-focus-20261104`; estado em `code_focus/status.json`.
+- A busca de 100 rodadas segue intacta em sua própria branch. O novo workflow
+  `.github/workflows/liquid-sense-code-focus.yml` aguarda seu sucesso e importa
+  apenas a seleção congelada por hash, sem usar seu teste final para escolher.
+- Leia `code_focus/PROTOCOL.md`, `parent_import.json`, `archive.json` e `frozen.json`
+  quando existirem. Erros de programas não identificam causas neurais por si.
+- Grupos selecionados por ativação são hipóteses. Comparar ablações-alvo e controles;
+  não alegar ter localizado um módulo exclusivo de programação.
+- Os patches escrevem 64 colunas existentes por camada; manter loops/mHC/Liquid
+  do pai. Sem gradientes, referências ou tokens-alvo nos prompts.

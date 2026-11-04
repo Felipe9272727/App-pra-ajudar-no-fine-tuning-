@@ -1,0 +1,16 @@
+{
+  "status": "prepared_waiting_for_rsi100",
+  "model_name": "liquid sense 0.8 b LOOP",
+  "model_process_active": false,
+  "final_test_evaluated": false,
+  "selected": null,
+  "backward_passes": 0,
+  "parent_search_run": 41875261527,
+  "layers": [
+    5,
+    13,
+    25,
+    31
+  ],
+  "channels_per_intervention": 64
+}

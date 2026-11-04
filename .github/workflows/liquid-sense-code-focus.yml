@@ -1,0 +1,321 @@
+name: liquid sense - localized coding neuron interventions
+'on':
+  workflow_dispatch: null
+  push:
+    branches:
+    - codex/liquid-sense-code-focus-20261104
+    paths:
+    - .github/workflows/liquid-sense-code-focus.yml
+    - code_focus/run_request.json
+permissions:
+  contents: read
+concurrency:
+  group: focus-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  LS_CPU_THREADS: '4'
+  OMP_NUM_THREADS: '4'
+  MKL_NUM_THREADS: '4'
+  PYTHONUNBUFFERED: '1'
+  HF_HUB_DISABLE_TELEMETRY: '1'
+  CODE_IMAGE: python@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30
+jobs:
+  wait_search:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 235
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - name: Wait for existing 100-round search without modifying it
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: python code_focus/wait_search.py
+  prepare:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - name: Check data, source syntax and protocol rules
+      run: |-
+        sha256sum --check code_focus/SHA256SUMS
+        python -m compileall -q code_focus
+        python -m unittest discover -s tests -v
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+        prepare-assets: 'true'
+    - name: Verify 2/3/4 visits and independent recurrent/KV caches on the actual tiny runtime
+      run: python code_rsi/smoke_loops.py
+    - name: Verify actual sparse parameter writes and rollback on a tiny tensor
+      run: python code_focus/smoke.py
+    - name: Verify original canonical weights
+      run: echo '04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696  upstream/model.safetensors-00001-of-00001.safetensors'
+        | sha256sum --check
+    - name: Check isolated execution with the pinned Python image
+      run: |-
+        docker pull "$CODE_IMAGE"
+        python - <<'SMOKE'
+        import sys
+        sys.path.insert(0,'code_rsi')
+        from sandbox import evaluate
+        r=evaluate('def solve(xs): return sum(xs)', {'cases':[{'args':[[2,3]],'expected':5}]})
+        assert r['all_passed'] and r['case_passed']==[True],r
+        print('RSI100_ISOLATED_EXECUTION_OK')
+        SMOKE
+    needs: wait_search
+  collect:
+    needs:
+    - prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: codex/liquid-sense-code-focus-20261104
+        fetch-depth: 0
+    - run: python code_focus/publish.py guard
+      name: Keep source immutable and preserve saved checkpoints
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+    - name: Import frozen parent and localize task-selective channels without reference answers
+      run: python code_focus/focus.py collect
+    - id: matrix
+      run: echo "variants=$(python code_focus/focus.py matrix)" >> "$GITHUB_OUTPUT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: focus-collection
+        path: focus_output/collection/
+        retention-days: 3
+        if-no-files-found: warn
+      if: always()
+    permissions:
+      contents: write
+    outputs:
+      variants: ${{ steps.matrix.outputs.variants }}
+  development:
+    needs:
+    - collect
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        name: focus-collection
+        path: .
+    - name: Measure targeted and control weight interventions
+      env:
+        VARIANT: ${{ matrix.variant }}
+      run: python code_focus/focus.py development --variant "$VARIANT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: focus-development-${{ matrix.variant }}
+        path: focus_output/development-${{ matrix.variant }}/
+        retention-days: 3
+        if-no-files-found: warn
+      if: always()
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        variant: ${{ fromJSON(needs.collect.outputs.variants) }}
+  shortlist:
+    needs:
+    - development
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: codex/liquid-sense-code-focus-20261104
+        fetch-depth: 0
+    - run: python code_focus/publish.py guard
+      name: Keep source immutable and preserve saved checkpoints
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'false'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        pattern: focus-*
+        merge-multiple: true
+        path: .
+    - name: Select only observed coding improvements with preservation gates
+      run: python code_focus/focus.py shortlist
+    - id: matrix
+      run: echo "variants=$(python code_focus/focus.py matrix)" >> "$GITHUB_OUTPUT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: focus-shortlist
+        path: focus_output/shortlist/
+        retention-days: 3
+        if-no-files-found: error
+    permissions:
+      contents: write
+    outputs:
+      variants: ${{ steps.matrix.outputs.variants }}
+  validation:
+    needs:
+    - shortlist
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        name: focus-shortlist
+        path: .
+    - name: Confirm transfer on distinct unseen function specifications
+      env:
+        VARIANT: ${{ matrix.variant }}
+      run: python code_focus/focus.py validation --variant "$VARIANT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: focus-validation-${{ matrix.variant }}
+        path: focus_output/validation-${{ matrix.variant }}/
+        retention-days: 3
+        if-no-files-found: warn
+      if: always()
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        variant: ${{ fromJSON(needs.shortlist.outputs.variants) }}
+  freeze:
+    needs:
+    - validation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: codex/liquid-sense-code-focus-20261104
+        fetch-depth: 0
+    - run: python code_focus/publish.py guard
+      name: Keep source immutable and preserve saved checkpoints
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'false'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        pattern: focus-*
+        merge-multiple: true
+        path: .
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        name: focus-shortlist
+        path: .
+    - name: Freeze coding edit before reading the final test
+      run: python code_focus/focus.py freeze
+    - id: matrix
+      run: echo "variants=$(python code_focus/focus.py matrix)" >> "$GITHUB_OUTPUT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: focus-frozen
+        path: focus_output/frozen/
+        retention-days: 3
+        if-no-files-found: error
+    permissions:
+      contents: write
+    outputs:
+      variants: ${{ steps.matrix.outputs.variants }}
+  final:
+    needs:
+    - freeze
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        name: focus-frozen
+        path: .
+    - name: Compare original, frozen parent and eligible edit under the same output budget
+      env:
+        VARIANT: ${{ matrix.variant }}
+        SHARD: ${{ matrix.shard }}
+      run: python code_focus/focus.py final --variant "$VARIANT" --shard "$SHARD"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: focus-final-${{ matrix.variant }}-${{ matrix.shard }}
+        path: focus_output/final-${{ matrix.variant }}_${{ matrix.shard }}/
+        retention-days: 3
+        if-no-files-found: warn
+      if: always()
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        variant: ${{ fromJSON(needs.freeze.outputs.variants) }}
+        shard:
+        - 0
+        - 1
+  report:
+    needs:
+    - final
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'false'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        pattern: focus-*
+        merge-multiple: true
+        path: .
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        name: focus-frozen
+        path: .
+    - name: Summarize intervention evidence and complete new final tasks
+      run: python code_focus/focus.py report
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: focus-report
+        path: focus_output/report/
+        retention-days: 3
+        if-no-files-found: error
+    - run: cat CODE_FOCUS_REPORT.md >> "$GITHUB_STEP_SUMMARY"
+  save:
+    needs:
+    - report
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: codex/liquid-sense-code-focus-20261104
+        fetch-depth: 0
+    - run: python code_focus/publish.py guard
+      name: Keep source immutable and preserve saved checkpoints
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        name: focus-report
+        path: .
+    - run: python code_focus/publish.py 'save coding intervention report and stop'
+    permissions:
+      contents: write

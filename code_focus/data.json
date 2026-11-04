@@ -1,0 +1,1937 @@
+{
+  "seed": 20261104201,
+  "layers": [
+    5,
+    13,
+    25,
+    31
+  ],
+  "channels": 64,
+  "code_prompts": [
+    "Write Python 3 function solve(xs). Return the sum of absolute values in the integer list xs; empty gives 0. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+    "Write Python 3 function solve(x, lo, hi). Return x restricted to the inclusive range lo through hi, where lo <= hi. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+    "Write Python 3 function solve(xs). Return how many integers in xs are even, including zero. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+    "Write Python 3 function solve(s). Return whether string s reads the same forwards and backwards, case sensitive. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+    "Write Python 3 function solve(xs). Return a list containing the running sums of xs. Empty gives an empty list. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+    "Write Python 3 function solve(xs). Return the elements of xs with duplicates removed, preserving first occurrence order. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+    "Write Python 3 function solve(s, sub). Return the number of overlapping occurrences of the nonempty substring sub in s. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+    "Write Python 3 function solve(s). Return a list of run lengths of consecutive identical characters in s. Empty gives an empty list. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports."
+  ],
+  "prose_prompts": [
+    "Describe a quiet library in three short sentences.",
+    "Explain why people keep calendars in three short sentences.",
+    "Describe a rainy afternoon in three short sentences.",
+    "Explain how a bicycle is useful in three short sentences.",
+    "Describe a friendly neighborhood in three short sentences.",
+    "Explain why plants need water in three short sentences.",
+    "Describe a mountain path in three short sentences.",
+    "Explain how a shared meal can bring people together in three short sentences."
+  ],
+  "development": [
+    {
+      "id": "sum_abs",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return the sum of absolute values in the integer list xs; empty gives 0. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              1,
+              -2,
+              3
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              -8,
+              -8
+            ]
+          ],
+          "expected": 16
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              4,
+              -4,
+              5,
+              -9
+            ]
+          ],
+          "expected": 22
+        }
+      ]
+    },
+    {
+      "id": "clamp",
+      "signature": "solve(x, lo, hi)",
+      "prompt": "Write Python 3 function solve(x, lo, hi). Return x restricted to the inclusive range lo through hi, where lo <= hi. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            2,
+            0,
+            5
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            -4,
+            0,
+            5
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            9,
+            0,
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            3,
+            3,
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            -9,
+            -6,
+            -2
+          ],
+          "expected": -6
+        }
+      ]
+    },
+    {
+      "id": "count_even",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return how many integers in xs are even, including zero. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              -2,
+              -3,
+              8
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              4,
+              4
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "palindrome",
+      "signature": "solve(s)",
+      "prompt": "Write Python 3 function solve(s). Return whether string s reads the same forwards and backwards, case sensitive. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            ""
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            "aba"
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            "ab"
+          ],
+          "expected": false
+        },
+        {
+          "args": [
+            "Aba"
+          ],
+          "expected": false
+        },
+        {
+          "args": [
+            "12321"
+          ],
+          "expected": true
+        },
+        {
+          "args": [
+            "aa"
+          ],
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": "prefix_sums",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return a list containing the running sums of xs. Empty gives an empty list. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              2,
+              3,
+              -1
+            ]
+          ],
+          "expected": [
+            2,
+            5,
+            4
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              5,
+              -5,
+              8
+            ]
+          ],
+          "expected": [
+            5,
+            0,
+            8
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dedup_stable",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return the elements of xs with duplicates removed, preserving first occurrence order. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              3,
+              1,
+              3,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              -1,
+              2,
+              -1
+            ]
+          ],
+          "expected": [
+            -1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            4,
+            3,
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "overlap_count",
+      "signature": "solve(s, sub)",
+      "prompt": "Write Python 3 function solve(s, sub). Return the number of overlapping occurrences of the nonempty substring sub in s. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            "aaaa",
+            "aa"
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            "banana",
+            "ana"
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            "abc",
+            "x"
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            "",
+            "a"
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            "ababa",
+            "aba"
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "run_lengths",
+      "signature": "solve(s)",
+      "prompt": "Write Python 3 function solve(s). Return a list of run lengths of consecutive identical characters in s. Empty gives an empty list. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            ""
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            "aaabbc"
+          ],
+          "expected": [
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "args": [
+            "abcd"
+          ],
+          "expected": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "args": [
+            "zzzz"
+          ],
+          "expected": [
+            4
+          ]
+        },
+        {
+          "args": [
+            "aabba"
+          ],
+          "expected": [
+            2,
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sum_positive",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return the sum of strictly positive numbers in xs. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              -3,
+              4,
+              0,
+              2
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            [
+              -1,
+              -2
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              7,
+              -7,
+              8
+            ]
+          ],
+          "expected": 15
+        }
+      ]
+    },
+    {
+      "id": "rotate_right",
+      "signature": "solve(xs, k)",
+      "prompt": "Write Python 3 function solve(xs, k). Return a new list rotating xs right by nonnegative k places; handle empty xs. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            [],
+            4
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            1
+          ],
+          "expected": [
+            3,
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            3
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              5
+            ],
+            8
+          ],
+          "expected": [
+            5
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            3,
+            4,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first_unique",
+      "signature": "solve(s)",
+      "prompt": "Write Python 3 function solve(s). Return the first character appearing exactly once in s, or the empty string if none exists. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            ""
+          ],
+          "expected": ""
+        },
+        {
+          "args": [
+            "swiss"
+          ],
+          "expected": "w"
+        },
+        {
+          "args": [
+            "aabb"
+          ],
+          "expected": ""
+        },
+        {
+          "args": [
+            "level"
+          ],
+          "expected": "v"
+        },
+        {
+          "args": [
+            "abc"
+          ],
+          "expected": "a"
+        }
+      ]
+    },
+    {
+      "id": "pair_count",
+      "signature": "solve(xs, target)",
+      "prompt": "Write Python 3 function solve(xs, target). Count index pairs i < j for which xs[i] + xs[j] equals target. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            [],
+            2
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              2,
+              3
+            ],
+            4
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              2,
+              2,
+              2
+            ],
+            4
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              -1,
+              0,
+              1
+            ],
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              4
+            ],
+            8
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "id": "char_counts",
+      "signature": "solve(s)",
+      "prompt": "Write Python 3 function solve(s). Return a dictionary mapping each character in s to its frequency. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            ""
+          ],
+          "expected": {}
+        },
+        {
+          "args": [
+            "banana"
+          ],
+          "expected": {
+            "b": 1,
+            "a": 3,
+            "n": 2
+          }
+        },
+        {
+          "args": [
+            "a a"
+          ],
+          "expected": {
+            "a": 2,
+            " ": 1
+          }
+        },
+        {
+          "args": [
+            "ABC"
+          ],
+          "expected": {
+            "A": 1,
+            "B": 1,
+            "C": 1
+          }
+        },
+        {
+          "args": [
+            "xxxy"
+          ],
+          "expected": {
+            "x": 3,
+            "y": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "longest_run",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return the maximum length of a run of equal consecutive elements in xs, or 0 if empty. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              2,
+              2,
+              2,
+              1
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              3
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "id": "binary_search",
+      "signature": "solve(xs, target)",
+      "prompt": "Write Python 3 function solve(xs, target). Given sorted distinct integers xs, return the index of target or -1 if absent. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            [],
+            2
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            [
+              1,
+              3,
+              5
+            ],
+            3
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              1,
+              3,
+              5
+            ],
+            4
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            [
+              -3,
+              0,
+              7
+            ],
+            -3
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              4
+            ],
+            4
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    {
+      "id": "flatten_once",
+      "signature": "solve(xss)",
+      "prompt": "Write Python 3 function solve(xss). Flatten a list of lists by one level, returning one list. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              [
+                1,
+                2
+              ],
+              [],
+              [
+                3
+              ]
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              [],
+              []
+            ]
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              [
+                "a"
+              ],
+              [
+                "b",
+                "c"
+              ]
+            ]
+          ],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "args": [
+            [
+              [
+                0
+              ]
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "development_controls": [
+    {
+      "id": "dev_0",
+      "question": "What is the chemical symbol for antimony? Reply only with the symbol.",
+      "answer": "Sb",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "dev_1",
+      "question": "What is the plural of child? Reply with one word.",
+      "answer": "children",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "dev_2",
+      "question": "What is the capital of Chile? Reply only with the city.",
+      "answer": "Santiago",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "dev_3",
+      "question": "What organ pumps blood? Reply with one word.",
+      "answer": "heart",
+      "aliases": [],
+      "numeric": false
+    }
+  ],
+  "validation": [
+    {
+      "id": "focus_suffix_sums",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return a list whose element i is the sum of xs from index i to the end. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            6,
+            5,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              -2,
+              4,
+              -1
+            ]
+          ],
+          "expected": [
+            1,
+            3,
+            -1
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              5,
+              -5
+            ]
+          ],
+          "expected": [
+            0,
+            -5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_overlap_positions",
+      "signature": "solve(s, sub)",
+      "prompt": "Write Python 3 function solve(s, sub). Return all starting indices of occurrences of nonempty sub in s, including overlapping occurrences. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            "aaaa",
+            "aa"
+          ],
+          "expected": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            "banana",
+            "ana"
+          ],
+          "expected": [
+            1,
+            3
+          ]
+        },
+        {
+          "args": [
+            "",
+            "x"
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            "abc",
+            "d"
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            "ababa",
+            "aba"
+          ],
+          "expected": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_run_values",
+      "signature": "solve(s)",
+      "prompt": "Write Python 3 function solve(s). Return a list containing the character of each consecutive run of equal characters in s. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            ""
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            "aaabbca"
+          ],
+          "expected": [
+            "a",
+            "b",
+            "c",
+            "a"
+          ]
+        },
+        {
+          "args": [
+            "abba"
+          ],
+          "expected": [
+            "a",
+            "b",
+            "a"
+          ]
+        },
+        {
+          "args": [
+            "zz"
+          ],
+          "expected": [
+            "z"
+          ]
+        },
+        {
+          "args": [
+            "abc"
+          ],
+          "expected": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_rotate_left",
+      "signature": "solve(xs, k)",
+      "prompt": "Write Python 3 function solve(xs, k). Rotate list xs left by nonnegative k places, wrapping around. Return a new list and handle empty xs. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            [],
+            4
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            1
+          ],
+          "expected": [
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            3
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              4
+            ],
+            9
+          ],
+          "expected": [
+            4
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            6
+          ],
+          "expected": [
+            3,
+            4,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_longest_increasing_run",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return the length of the longest contiguous strictly increasing run in xs; empty gives 0. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              3,
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            [
+              4,
+              3,
+              2
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              2
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "focus_parenthesis_prefix_balances",
+      "signature": "solve(s)",
+      "prompt": "Write Python 3 function solve(s). For a string containing only parentheses, return a list of prefix balances: opening adds one and closing subtracts one. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            ""
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            "()"
+          ],
+          "expected": [
+            1,
+            0
+          ]
+        },
+        {
+          "args": [
+            "(())"
+          ],
+          "expected": [
+            1,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "args": [
+            "))(("
+          ],
+          "expected": [
+            -1,
+            -2,
+            -1,
+            0
+          ]
+        },
+        {
+          "args": [
+            "((("
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_moving_sums",
+      "signature": "solve(xs, k)",
+      "prompt": "Write Python 3 function solve(xs, k). Return sums of all consecutive complete windows of positive length k in xs. If no complete window exists, return an empty list. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            [],
+            2
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            2
+          ],
+          "expected": [
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "args": [
+            [
+              2,
+              -2,
+              3
+            ],
+            1
+          ],
+          "expected": [
+            2,
+            -2,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              2
+            ],
+            3
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              4,
+              5
+            ],
+            2
+          ],
+          "expected": [
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_frequency_per_position",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return a list containing, at each position, how many times that value appears anywhere in xs. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              3,
+              3
+            ]
+          ],
+          "expected": [
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              0,
+              -1,
+              0,
+              2
+            ]
+          ],
+          "expected": [
+            2,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              5
+            ]
+          ],
+          "expected": [
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "heldout": [
+    {
+      "id": "focus_prefix_minima",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return the running minimum at every position of xs as a list. Empty gives an empty list. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              4,
+              2,
+              3,
+              1
+            ]
+          ],
+          "expected": [
+            4,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "args": [
+            [
+              -2,
+              0,
+              -3
+            ]
+          ],
+          "expected": [
+            -2,
+            -2,
+            -3
+          ]
+        },
+        {
+          "args": [
+            [
+              5
+            ]
+          ],
+          "expected": [
+            5
+          ]
+        },
+        {
+          "args": [
+            [
+              1,
+              1,
+              2
+            ]
+          ],
+          "expected": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_suffix_maxima",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return the maximum from each position through the end of xs as a list. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1,
+              4,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            4,
+            4,
+            3,
+            3
+          ]
+        },
+        {
+          "args": [
+            [
+              -5,
+              -2,
+              -8
+            ]
+          ],
+          "expected": [
+            -2,
+            -2,
+            -8
+          ]
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        },
+        {
+          "args": [
+            [
+              3,
+              3
+            ]
+          ],
+          "expected": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_longest_run_start",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return the starting index of the longest run of equal consecutive values in xs; choose the earliest on ties, or -1 if empty. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            [
+              1
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              2,
+              2
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            [
+              3,
+              3,
+              1,
+              1
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              3,
+              3,
+              3
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    {
+      "id": "focus_ordered_character_pairs",
+      "signature": "solve(s, a, b)",
+      "prompt": "Write Python 3 function solve(s, a, b). Count pairs of indices i < j where s[i] equals character a and s[j] equals character b. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            "",
+            "a",
+            "b"
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            "abab",
+            "a",
+            "b"
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            "aaa",
+            "a",
+            "a"
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            "ba",
+            "a",
+            "b"
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            "aabb",
+            "a",
+            "b"
+          ],
+          "expected": 4
+        }
+      ]
+    },
+    {
+      "id": "focus_longest_zero_run",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return the length of the longest contiguous run of zeroes in integer list xs. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              0,
+              0,
+              1,
+              0
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            [
+              2,
+              3
+            ]
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            [
+              1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": 1
+        }
+      ]
+    },
+    {
+      "id": "focus_rotate_text_right",
+      "signature": "solve(s, k)",
+      "prompt": "Write Python 3 function solve(s, k). Return string s rotated right by nonnegative k characters, wrapping around; handle an empty string. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            "",
+            5
+          ],
+          "expected": ""
+        },
+        {
+          "args": [
+            "abcd",
+            1
+          ],
+          "expected": "dabc"
+        },
+        {
+          "args": [
+            "abc",
+            3
+          ],
+          "expected": "abc"
+        },
+        {
+          "args": [
+            "x",
+            8
+          ],
+          "expected": "x"
+        },
+        {
+          "args": [
+            "abcde",
+            7
+          ],
+          "expected": "deabc"
+        }
+      ]
+    },
+    {
+      "id": "focus_last_unique_character",
+      "signature": "solve(s)",
+      "prompt": "Write Python 3 function solve(s). Return the last character of s occurring exactly once in s, or an empty string if none. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            ""
+          ],
+          "expected": ""
+        },
+        {
+          "args": [
+            "swiss"
+          ],
+          "expected": "i"
+        },
+        {
+          "args": [
+            "aabb"
+          ],
+          "expected": ""
+        },
+        {
+          "args": [
+            "abca"
+          ],
+          "expected": "c"
+        },
+        {
+          "args": [
+            "xyz"
+          ],
+          "expected": "z"
+        }
+      ]
+    },
+    {
+      "id": "focus_gap_indices",
+      "signature": "solve(xs)",
+      "prompt": "Write Python 3 function solve(xs). Return indices i greater than zero where xs[i] minus xs[i-1] is greater than one. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports.",
+      "cases": [
+        {
+          "args": [
+            []
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1
+            ]
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              1,
+              2,
+              5,
+              3,
+              8
+            ]
+          ],
+          "expected": [
+            2,
+            4
+          ]
+        },
+        {
+          "args": [
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "expected": []
+        },
+        {
+          "args": [
+            [
+              -4,
+              -1,
+              2
+            ]
+          ],
+          "expected": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  ],
+  "controls": {
+    "val": [
+      {
+        "id": "focus_val_0",
+        "question": "What is the capital of Lithuania? Reply only with the city.",
+        "answer": "Vilnius",
+        "numeric": false
+      },
+      {
+        "id": "focus_val_1",
+        "question": "What is the chemical symbol for xenon? Reply only with the symbol.",
+        "answer": "Xe",
+        "numeric": false
+      },
+      {
+        "id": "focus_val_2",
+        "question": "What is the plural of analysis? Reply with one word.",
+        "answer": "analyses",
+        "numeric": false
+      },
+      {
+        "id": "focus_val_3",
+        "question": "Give the opposite of opaque. Reply with one word.",
+        "answer": "transparent",
+        "numeric": false
+      }
+    ],
+    "test": [
+      {
+        "id": "focus_test_4",
+        "question": "What is the capital of Latvia? Reply only with the city.",
+        "answer": "Riga",
+        "numeric": false
+      },
+      {
+        "id": "focus_test_5",
+        "question": "What is the chemical symbol for manganese? Reply only with the symbol.",
+        "answer": "Mn",
+        "numeric": false
+      },
+      {
+        "id": "focus_test_6",
+        "question": "What is the past tense of forgive? Reply with one word.",
+        "answer": "forgave",
+        "numeric": false
+      },
+      {
+        "id": "focus_test_7",
+        "question": "Give the opposite of abundant. Reply with one word.",
+        "answer": "scarce",
+        "numeric": false
+      }
+    ]
+  },
+  "anchors": [
+    "A biblioteca guarda livros e documentos para leitores de todas as idades.",
+    "Software tests help programmers detect incorrect behavior before deployment.",
+    "Uma hipótese científica precisa de evidências e pode ser refutada por experimentos.",
+    "A neural network computes outputs using numerical parameters and nonlinear functions.",
+    "Água, luz e nutrientes permitem que muitas plantas cresçam.",
+    "The train arrived at the station before the rain began.",
+    "Em Python, listas podem conter elementos de diferentes tipos.",
+    "The Moon reflects sunlight and orbits the Earth.",
+    "Uma pergunta clara ajuda a obter uma resposta útil e verificável.",
+    "Always compare a proposed change against a reproducible baseline.",
+    "O jardim tinha flores amarelas e uma pequena árvore perto do portão.",
+    "Shared parameters can be applied repeatedly without storing separate copies."
+  ],
+  "protocol": {
+    "target": "task-selective MLP channels; selectivity is a hypothesis until interventions",
+    "top_k": 64,
+    "scales": {
+      "ablate_target": 0.0,
+      "ablate_control": 0.0,
+      "boost": 1.15,
+      "attenuate": 0.85
+    },
+    "gradients": false,
+    "reference_answers_in_prompts": false,
+    "promotion": "strict complete-task gain, no loss of previously passed tests or controls, no increase in anchor NLL; fresh validation confirms before final test"
+  }
+}

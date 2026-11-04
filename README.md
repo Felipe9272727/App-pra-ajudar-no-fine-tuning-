@@ -1,3 +1,23 @@
+# liquid sense 0.8 b LOOP — intervenção localizada para programação
+
+A busca de 100 rodadas permanece intacta. Este ensaio posterior vai comparar
+ativação em tarefas de código e prosa, identificar grupos candidatos em quatro
+camadas e testar edições diretas de 64 canais por vez. Grupos de controle medem
+se a influência é seletiva na bateria. Isso não pressupõe um módulo isolado de
+programação nem garante corrigir lógica por amplificar atividade.
+
+- [Protocolo e referências](code_focus/PROTOCOL.md)
+- [Auditoria dos erros concretos](code_focus/error_audit.json)
+- [Estado](code_focus/status.json)
+- [Workflow](.github/workflows/liquid-sense-code-focus.yml)
+- [Relatório ao concluir](CODE_FOCUS_REPORT.md)
+
+O workflow espera a busca RSI100 terminar e importa seu checkpoint congelado.
+SenseNova + Liquid permanecem ativos. Nenhuma solução pronta é enviada ao modelo.
+A qualidade é verificada por execução e controles, sem alegação prévia de ganho.
+
+---
+
 # liquid sense 0.8 b LOOP — 100 tentativas com descarte de pioras
 
 Pedido atual: 100 rodadas de busca direta em pesos, sem gradientes. Cada tentativa

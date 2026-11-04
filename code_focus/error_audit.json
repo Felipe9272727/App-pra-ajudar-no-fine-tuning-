@@ -1,0 +1,38 @@
+{
+  "source_commit": "1f6eaa7d42af04d53f748f0dbf50b3c4fecf624f",
+  "findings": [
+    {
+      "id": "prefix_sums",
+      "level": "generated-program logic",
+      "finding": "The returned comprehension repeats a full-list sum at every position; prefix boundaries are not used."
+    },
+    {
+      "id": "overlap_count",
+      "level": "generated-program logic",
+      "finding": "The scanning index jumps by the substring length after a match, skipping overlapping matches."
+    },
+    {
+      "id": "run_lengths",
+      "level": "generated-program logic",
+      "finding": "The code emits a result per character and measures one-character slices instead of run lengths."
+    },
+    {
+      "id": "rotate_right",
+      "level": "generated-program logic",
+      "finding": "The slices implement a left rotation and do not reduce k modulo the list length."
+    },
+    {
+      "id": "longest_run",
+      "level": "generated-program logic",
+      "finding": "A longest run ending at the final element is not included in the final maximum update."
+    },
+    {
+      "id": "prefix_sums_feedback_repair",
+      "level": "generation/instruction-following",
+      "finding": "One repair echoed feedback and prompt fragments into generated code, producing syntax errors."
+    }
+  ],
+  "interpretation": "These explain observed program failures; they do not identify the neural weights causing them.",
+  "sent_to_model": false,
+  "correct_reference_implementation_supplied": false
+}
