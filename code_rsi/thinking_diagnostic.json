@@ -1,0 +1,32 @@
+{
+  "rows": [
+    {
+      "id": "sum_abs",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "final_code": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **Task:** Write a Python 3 function `solve(xs)`.\n    *   **Logic:** Return the sum of absolute values of the integer list `xs`.\n    *   **Edge Case:** Empty list `[]` should return `0`.\n    *   **Output Constraints:** Return *only* the function, no explanations, no examples, no tests. Do not print. Do not use imports.\n    *   **Language:** Python 3.\n\n2.  **Determine the Implementation:**\n    *   Input: List `xs`.\n    *   Logic: Iterate through `xs` and calculate `abs(x)`.\n    *   Edge Case: Handle empty",
+      "evaluation": {
+        "passed": 0,
+        "total": 5,
+        "all_passed": false,
+        "category": "SyntaxError",
+        "line": 1
+      }
+    },
+    {
+      "id": "clamp",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "final_code": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   **Function Signature:** `solve(x, lo, hi)`\n    *   **Task:** Return `x` restricted to the inclusive range `lo` through `hi` (where `lo <= hi`).\n    *   **Constraint 1:** Return only the complete function code (no explanations, examples, tests).\n    *   **Constraint 2:** Do not print.\n    *   **Constraint 3:** Do not use imports.\n    *   **Language:** Python 3.\n    *   **Output Format:** Just the code.\n\n2.  **Determine the Logic:**\n    *   The user wants a function that takes a value `x` and bounds",
+      "evaluation": {
+        "passed": 0,
+        "total": 5,
+        "all_passed": false,
+        "category": "SyntaxError",
+        "line": 1
+      }
+    }
+  ],
+  "used_for_selection": false,
+  "note": "160-token thinking probe on training only; no claim that this budget measures reasoning capability"
+}

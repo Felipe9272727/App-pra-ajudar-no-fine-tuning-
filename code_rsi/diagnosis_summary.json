@@ -1,0 +1,12 @@
+{
+  "categories": {
+    "passed": 5,
+    "WrongReturnValue": 3
+  },
+  "informative_reward_variation": true,
+  "repairs_attempted": 2,
+  "repairs_passed": 0,
+  "causal_status": "Activation correlations are hypotheses. Development interventions isolate weight edits and extra loop passes. They do not identify a unique internal cause.",
+  "prior_limit": "Earlier 12-token tests did not evaluate full code generation. Old dense edits changed teacher-forced likelihood but did not improve development exact answers.",
+  "model_received_reference_answers": false
+}
