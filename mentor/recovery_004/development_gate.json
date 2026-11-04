@@ -1,0 +1,6 @@
+{
+  "eligible_for_fresh_validation": true,
+  "reason": "strict execution gain over paired and historical incumbent; no regression",
+  "checkpoint_promoted": false,
+  "backward_passes": 0
+}

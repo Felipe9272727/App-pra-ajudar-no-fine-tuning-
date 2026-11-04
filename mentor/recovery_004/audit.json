@@ -32,5 +32,8 @@
     "mentor/recover_004.py": "a70ded9f6165a7c3f71a9d8c851918d9d8e632bf02fb1b5112ef6e5afb82c9b3",
     "mentor/validation_004/evaluate.py": "b2e543e241e7a7d782c542cc8debbb2e4e8d538763394ed9afcf37d9f74e1daf"
   },
-  "created_unix": 1793835529.2809155
+  "created_unix": 1793835529.2809155,
+  "checkpoint_remote_readback_sha256": "8fd291019b20f7d327e775c05a30f5b991395718040e4ad2fe52ed986ff748ef",
+  "statistical_unit_tests": "2 additional tests passed",
+  "source_hash_note": "Snapshot hashes at audit time. Optional parent-drift replay audit was added after capture/parent started; model inference, capture formula, dose and kernels were unchanged."
 }

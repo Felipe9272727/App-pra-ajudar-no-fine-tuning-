@@ -1,13 +1,18 @@
 {
-  "status": "screen_passed_measuring_full_parent",
+  "status": "development_passed_independent_validation_running",
   "trial": 2,
   "controller": "assistant",
   "legacy_search_paused": true,
   "legacy_rounds_completed": 31,
-  "guided_trials_completed": 1,
+  "guided_trials_completed": 2,
   "model_process_active": true,
   "checkpoint_promoted": false,
   "backward_passes": 0,
   "final_test_evaluated": false,
-  "updated_unix": 1793832565.4723709
+  "updated_unix": 1793835638.6211715,
+  "checkpoint_saved": "mentor/checkpoints/negative_002_recovered.pt",
+  "checkpoint_sha256": "8fd291019b20f7d327e775c05a30f5b991395718040e4ad2fe52ed986ff748ef",
+  "development_gate": "mentor/recovery_004/development_gate.json",
+  "independent_validation": "mentor/validation_004/",
+  "process_continues_between_turns_guaranteed": false
 }
