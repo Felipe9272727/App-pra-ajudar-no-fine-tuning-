@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];BRANCH='codex/liquid-sense-rsi100-20261104'
 def git(*a):
  return subprocess.check_output(['git',*a],cwd=ROOT,text=True,timeout=60,env={**os.environ,'GIT_TERMINAL_PROMPT':'0'}).strip()
-def allowed(p):return bool(p=='RSI100_REPORT.md' or re.fullmatch(r'rsi100/(?:status|progress|best_metrics|baseline_metrics|frozen|summary|validation_[a-z0-9_]+|final_[a-z0-9_]+|round_\d{3})\.json',p) or re.fullmatch(r'rsi100/checkpoints/(?:baseline|best|accepted_\d{3})\.pt',p))
+def allowed(p):return bool(p=='RSI100_REPORT.md' or re.fullmatch(r'rsi100/(?:status|progress|calibration_\d{3}|best_metrics|baseline_metrics|frozen|summary|validation_[a-z0-9_]+|final_[a-z0-9_]+|round_\d{3})\.json',p) or re.fullmatch(r'rsi100/checkpoints/(?:baseline|best|accepted_\d{3})\.pt',p))
 def guard():
  git('merge-base','--is-ancestor',os.environ['GITHUB_SHA'],'HEAD')
  if any(not allowed(p) for p in git('diff','--name-only',os.environ['GITHUB_SHA'],'HEAD').splitlines()):raise RuntimeError('Concurrent source edit')

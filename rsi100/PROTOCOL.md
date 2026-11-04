@@ -28,9 +28,9 @@ anterior, não uma candidata rejeitada. Os arquivos anteriores são históricos.
   ou o histórico de auditoria e nunca fazer force push.
 
 Cem decisões sobre esse mesmo currículo podem causar sobreajuste. Uma pontuação
-melhor de busca não demonstra generalização. O checkpoint é recalibrado a cada
-novo runner; se os acertos mudarem só pela troca de máquina, a pesquisa para.
-As NLLs de comparação de cada rodada são medidas no mesmo runner.
+melhor de busca não demonstra generalização. O checkpoint é reavaliado a cada novo runner. A recuperação 002 abaixo exige
+uma comparação pareada e também preserva a referência histórica; ganhos apenas
+pela troca de máquina não podem promover uma candidata.
 
 ## Propostas fixadas antes dos resultados
 
@@ -90,3 +90,22 @@ concorrentes. Para retomar, verificar commits e estado antes de repetir trabalho
 ## Operational recovery 001
 
 Resume after saved round 30. No data, mutation or scoring changes. Per-generation limit 600s, execution 60s, model loading 300s, anchor scoring 600s; other instrumented operations 600s; total chunk 4500s. Limits were adjusted after released logs showed continued work with task gaps up to 315s, rather than a deadlock. External watchdog terminates stalled process groups and exports diagnostics. Timeout is an infrastructure failure, never a rejected candidate. Git commands have a 60s deadline; uncertain pushes are verified without blind retry. Previous checkpoint ownership is explicitly handed off in recovery_001.json; all saved rounds and weights remain intact.
+
+## Recuperação 002: comparação pareada e histórica
+
+A retomada 41891071593 parou antes da rodada 31: flatten_once passou de 5/5
+para 1/5 com o mesmo checkpoint. A causa numérica ou operacional exata não foi
+identificada; não tratar como perda causada por uma candidata. As 30 decisões
+antigas e todos os pesos foram preservados. Nenhum conjunto reservado foi visto.
+
+Salvar uma calibração completa, incluindo saídas reais, por novo runner. Repetir
+as tarefas/controles que divergirem; se a repetição na mesma máquina não produzir
+a mesma saída e acertos, parar com diagnóstico. Caso seja estável, comparar a
+candidata com o incumbente medido na mesma máquina E com a referência histórica
+salva. Exigir ganho estrito de casos contra AMBAS, nenhum acerto/controle perdido
+contra nenhuma delas, e NLL não maior que nenhuma referência (tolerância 1e-6).
+Não substituir best_metrics.json pela mera calibração. Apenas uma candidata que
+passe ambos os gates pode atualizar a referência e os pesos. Isso impede tanto
+creditar ganho da máquina quanto promover apenas a recuperação de perda da máquina.
+As novas regras são registradas antes de retomar a rodada 31 e não reclassificam
+rodadas antigas. O teste final permanece fechado e as arquiteturas/edições iguais.

@@ -15,3 +15,15 @@ def accept(candidate,prior):
  if any(a and not b for a,b in zip(prior['control_bits'],candidate['control_bits'])):return False,'general control regression'
  if not math.isfinite(candidate['anchor_nll']) or candidate['anchor_nll']>prior['anchor_nll']+1e-6:return False,'anchor NLL regression'
  return True,'more execution tests passed with no measured regression'
+
+def accept_paired(candidate,paired,historical):
+ """Require strict gain against both the same-runner and saved incumbent.
+
+ A machine-only gain or recovery of a machine-only loss earns no promotion.
+ Every historically correct case, control and NLL constraint still applies.
+ """
+ ok,reason=accept(candidate,paired)
+ if not ok:return False,'paired incumbent: '+reason
+ ok,reason=accept(candidate,historical)
+ if not ok:return False,'historical incumbent: '+reason
+ return True,'strict execution gain over paired and historical incumbent; no regression'

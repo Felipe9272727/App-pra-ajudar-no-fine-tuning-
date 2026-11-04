@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[1];HERE=ROOT/'rsi100'
 sys.path.insert(0,str(ROOT/'code_rsi'))
 import runtime as cr
 from checkpoint_io import tensor_checkpoint
-from policy import flatten,dominates,accept
+from policy import flatten,dominates,accept,accept_paired
 # Import this directory explicitly: code_rsi also has a publisher.
 import importlib.util
 spec=importlib.util.spec_from_file_location('r100_publish',HERE/'publish.py');pub=importlib.util.module_from_spec(spec);spec.loader.exec_module(pub)
@@ -91,13 +91,33 @@ def chunk(start,stop):
   state(status='initialized',model_process_active=False,best_round=0)
   call('publish',pub.publish,'save initial active hybrid and reward baseline')
  baseline=read_checkpoint('baseline.pt');best=read_checkpoint('best.pt');call('restore_incumbent',apply,model,best)
- # Recalibrate on this runner. Never credit hardware changes as improvements.
+ # Preserve the published reference; do not silently replace historical scores.
  print('BASELINE_REPLAY_START',done,flush=True)
  prior=measured if fresh else full_score(model,tok)
  print('BASELINE_REPLAY_END',done,flush=True)
- saved=json.loads((HERE/'best_metrics.json').read_text())
- assert flatten(prior['rows'])==flatten(saved['rows']) and prior['control_bits']==saved['control_bits'],'Incumbent changed outcomes across runners; stop'
- save('best_metrics.json',prior)
+ historical=json.loads((HERE/'best_metrics.json').read_text())
+ old_bits=flatten(historical['rows']);new_bits=flatten(prior['rows'])
+ assert set(old_bits)==set(new_bits),'Different replay cases'
+ drifted_ids=sorted({key[0] for key in old_bits if old_bits[key]!=new_bits[key]})
+ drifted_controls=[i for i,(a,b) in enumerate(zip(historical['control_bits'],prior['control_bits'])) if a!=b]
+ assert len(historical['control_bits'])==len(prior['control_bits']),'Different replay controls'
+ calibration={'historical':historical,'paired_incumbent':prior,'drifted_tasks':drifted_ids,
+  'drifted_controls':drifted_controls,'checkpoint_sha256':cr.file_hash(CK/'best.pt'),
+  'status':'checking_replay','rounds_completed':done,**provenance()}
+ calibration_name=f'calibration_{start:03d}.json';save(calibration_name,calibration)
+ # A drifted task must be stable on this runner before it can be compared
+ # with a candidate. Keep actual outputs; no reference answers enter prompts.
+ tasks_for_replay={r['id']:r for r in DATA['search']+DATA['guard']}
+ repeats=coding(model,tok,[tasks_for_replay[k] for k in drifted_ids])
+ repeat_controls=quality(model,tok,[DATA['search_controls'][i] for i in drifted_controls])
+ first_rows={r['id']:r for r in prior['rows']}
+ stable=all(r['case_passed']==first_rows[r['id']]['case_passed'] and r['output']==first_rows[r['id']]['output'] for r in repeats)
+ stable=stable and all(r['correct']==prior['control_bits'][i] and r['output']==prior['controls'][i]['output'] for i,r in zip(drifted_controls,repeat_controls))
+ calibration.update(repeated_rows=repeats,repeated_controls=repeat_controls,status='stable_paired_reference' if stable else 'unstable_same_runner')
+ save(calibration_name,calibration)
+ assert stable,'Same-runner replay unstable; stop without crediting a candidate'
+ state(status='paired_reference_saved',model_process_active=False,current_round=None)
+ call('publish',pub.publish,f'calibrate runner before round {done+1:03d}; keep historical reference')
  direction=torch.load(ROOT/'code_rsi/checkpoints/activation_summary.pt',weights_only=True)['direction']
  tasks={r['id']:r for r in DATA['search']+DATA['guard']}
  for number in range(done+1,stop+1):
@@ -112,15 +132,19 @@ def chunk(start,stop):
   previous_screen=[r for r in prior['rows'] if r['id'] in keys]
   promising=dominates(flatten(screened),flatten(previous_screen))
   record={'round':number,'parent_best_round':best['round'],'proposal':metadata,'architecture':arch,
+   'comparison_policy':'strict gain over both paired and historical incumbent',
+   'calibration_file':calibration_name,
+   'historical_incumbent_case_bits':{r['id']:r['case_passed'] for r in historical['rows']},
+   'historical_incumbent_control_bits':historical['control_bits'],'historical_incumbent_anchor_nll':historical['anchor_nll'],
    'incumbent_anchor_nll':prior['anchor_nll'],'incumbent_control_bits':prior['control_bits'],
    'incumbent_case_bits':{r['id']:r['case_passed'] for r in prior['rows']},
    'screen':screened,'accepted':False,'reason':'no monotone screen gain','heldout_used':False,**provenance()}
   if promising:
-   measured=full_score(model,tok);accepted,reason=accept(measured,prior)
+   measured=full_score(model,tok);accepted,reason=accept_paired(measured,prior,historical)
    record.update(full_evaluation=measured,accepted=accepted,reason=reason)
    if accepted:
     tensor_checkpoint(proposal,CK/f'accepted_{number:03d}.pt');tensor_checkpoint(proposal,CK/'best.pt')
-    best=proposal;prior=measured;save('best_metrics.json',measured)
+    best=proposal;prior=measured;historical=measured;save('best_metrics.json',measured)
   # Bad and tied proposals never enter the deployed checkpoint or Git weights.
   # Restore even after success, so the replay path is exercised every round.
   call('restore_incumbent',apply,model,best);del proposal

@@ -1,0 +1,11 @@
+{
+  "previous_run": 41891071593,
+  "previous_source": "f18fda5aa91a1aa6a3be5a8fc0dd64a7b98b31e4",
+  "rounds_completed": 30,
+  "accepted_rounds": 0,
+  "failure": "incumbent replay drift: flatten_once 5/5 to 1/5; no candidate was evaluated",
+  "root_cause": "not established; outputs of replay were not exported by previous engine",
+  "remedy": "export actual calibration; verify same-runner repeat on drifted tasks; require strict gain and no regression against BOTH paired and historical incumbent",
+  "weights_changed_by_recovery": false,
+  "heldout_observed": false
+}
