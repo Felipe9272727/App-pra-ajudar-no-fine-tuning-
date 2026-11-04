@@ -65,8 +65,8 @@ class VisitGatedMHC(MHCDecoderLayer):
         physical=self._mhc_physical
         visit=counts[physical]
         counts[physical]+=1
-        if visit>1:
-            raise ValueError('This experiment supports exactly two visits.')
+        if visit>=len(self.native_visit_gain):
+            raise ValueError('Loop visit exceeds saved per-visit weight gates.')
         self._last_native_visit=visit
         gain=self.native_visit_gain[visit]
         residual=enter(hidden_states,physical,self._mhc_settings)

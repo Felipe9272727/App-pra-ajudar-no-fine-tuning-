@@ -40,3 +40,18 @@
   dos resultados. Não reabrir seleção depois do teste final.
 - Não promover edição só porque baixou NLL. Exigir geração correta e
   preservação dos controles, conforme `protocol.validation_passes`.
+
+## Programação: ciclo atual separado
+
+- A branch `codex/liquid-sense-code-rsi-20261104` contém o pedido mais recente:
+  programação, edição literal dos pesos, feedback sem soluções prontas e
+  teste opcional de mais loops. Leia `code_rsi/status.json`, `archive.json`
+  e `frozen.json` quando existirem. Os diretórios anteriores são históricos.
+- Protocolo fixo em `code_rsi/PROTOCOL.md`; workflow
+  `.github/workflows/liquid-sense-coding-rsi.yml`. Gates e caches permitem
+  2/3/4 passagens, mantendo ambas as famílias arquiteturais ativas.
+- Não enviar valores esperados, referência ou tokens-alvo ao modelo de adaptação.
+  Sinais permitidos: ativações próprias, status de execução e fração aprovada.
+- Não afirmar causa interna única a partir de correlação de ativações.
+- Código gerado só roda no executor isolado; não dar credenciais nem montagens.
+- Não alegar melhor modelo pequeno com este piloto customizado.

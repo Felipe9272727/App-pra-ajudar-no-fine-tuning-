@@ -1,0 +1,11 @@
+{
+  "experiment": "coding-outcome-only",
+  "seed": 2026110408,
+  "base": "active V2, no rejected cycle2 dense edit",
+  "candidate_budget": 4,
+  "loop_counts": [
+    2,
+    3,
+    4
+  ]
+}

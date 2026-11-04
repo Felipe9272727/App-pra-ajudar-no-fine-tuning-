@@ -1,0 +1,11 @@
+{
+  "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "base_weight_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+  "liquid_patch_sha256": "6f679573fd8f3a02a31ce45543c1308f0a69dd7874e01c7ad57752c11d94f055",
+  "parent_commit": "cd8cb5826ac17100cb0960d428389a3d714d5417",
+  "model_nominal_parameters": "0.8B base; hybrid approximately 1.02B",
+  "promotion_can_disable_hybrid": false,
+  "answer_or_reference_token_supervision": false,
+  "max_parallel_evaluation_jobs": 4,
+  "cpu_threads": 4
+}

@@ -1,3 +1,26 @@
+# liquid sense 0.8 b LOOP — programação e loops experimentais
+
+Pedido atual: melhorar programação por edição direta dos pesos e feedback de
+execução, mantendo SenseNova + Liquid. Estado em `code_rsi/status.json`.
+O novo conjunto tem 48 funções Python em quatro divisões; é um piloto pequeno.
+O modelo recebe enunciado e seu próprio feedback, sem soluções de referência
+ou respostas-alvo nos prompts. Todos os pesos experimentais são salvos.
+
+Testar gates e caches para duas, três e quatro passagens pelo bloco compartilhado.
+Mais computação não garante melhor raciocínio. Não há alegação de ser o melhor
+modelo pequeno ou de já ter qualidade geral excepcional. A base nominal é 0,8B;
+o híbrido ampliado carrega aproximadamente 1,02B parâmetros.
+
+- [Protocolo e referências](code_rsi/PROTOCOL.md)
+- [Estado real](code_rsi/status.json)
+- [Workflow atual](.github/workflows/liquid-sense-coding-rsi.yml)
+- [Relatório ao terminar](CODE_REPORT.md)
+
+O ciclo 2 anterior está concluído: nenhuma edição foi promovida.
+Os resultados anteriores foram preservados abaixo e no histórico.
+
+---
+
 # liquid sense 0.8 b LOOP — RSI ciclo 2
 
 Continuação da V2 híbrida ativa. A V3 NCM foi arquivada separadamente.

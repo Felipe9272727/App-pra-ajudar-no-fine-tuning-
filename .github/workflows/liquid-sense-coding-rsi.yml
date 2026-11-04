@@ -1,0 +1,330 @@
+name: liquid sense - coding RSI and loop-depth experiment
+'on':
+  workflow_dispatch: null
+  push:
+    branches:
+    - codex/liquid-sense-code-rsi-20261104
+    paths:
+    - .github/workflows/liquid-sense-coding-rsi.yml
+    - code_rsi/run_request.json
+permissions:
+  contents: read
+concurrency:
+  group: coding-rsi-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  LS_CPU_THREADS: '4'
+  OMP_NUM_THREADS: '4'
+  MKL_NUM_THREADS: '4'
+  PYTHONUNBUFFERED: '1'
+  HF_HUB_DISABLE_TELEMETRY: '1'
+jobs:
+  prepare:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    outputs:
+      image: ${{ steps.image.outputs.image }}
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - name: Check data, source syntax and protocol rules
+      run: |-
+        sha256sum --check code_rsi/SHA256SUMS
+        python -m compileall -q code_rsi
+        python -m unittest discover -s tests -v
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+        prepare-assets: 'true'
+    - name: Verify 2/3/4 visits and independent recurrent/KV caches on the actual tiny runtime
+      run: python code_rsi/smoke_loops.py
+    - name: Verify original canonical weights
+      run: echo '04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696  upstream/model.safetensors-00001-of-00001.safetensors'
+        | sha256sum --check
+    - name: Pin isolated execution image and test sandbox
+      id: image
+      run: |-
+        docker pull python:3.12-slim
+        code_image=$(docker image inspect --format '{{index .RepoDigests 0}}' python:3.12-slim)
+        echo "image=$code_image" >> "$GITHUB_OUTPUT"
+        CODE_IMAGE="$code_image" python - <<'SMOKE'
+        import sys
+        sys.path.insert(0,'code_rsi')
+        from sandbox import evaluate
+        result=evaluate('def solve(xs): return sum(xs)', {'cases':[{'args':[[1,2,3]],'expected':6}]})
+        assert result['all_passed'],result
+        print('Isolated executor passed')
+        SMOKE
+  collect:
+    needs:
+    - prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: codex/liquid-sense-code-rsi-20261104
+        fetch-depth: 0
+    - name: Preserve concurrent source changes
+      run: python code_rsi/publish.py guard
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+        prepare-assets: 'false'
+    - name: Collect model activations, execution errors and bounded repair feedback
+      run: python code_rsi/pipeline.py collect
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: coding-collection
+        path: code_ci_output/collection/
+        retention-days: 3
+        if-no-files-found: warn
+      if: always()
+    permissions:
+      contents: write
+    env:
+      CODE_IMAGE: ${{ needs.prepare.outputs.image }}
+  development:
+    needs:
+    - prepare
+    - collect
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+        prepare-assets: 'false'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        path: .
+        name: coding-collection
+    - name: Test direct weight intervention and shared-weight loop depth
+      env:
+        VARIANT: ${{ matrix.variant }}
+      run: python code_rsi/pipeline.py development --variant "$VARIANT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: coding-development-${{ matrix.variant }}
+        path: code_ci_output/development-${{ matrix.variant }}/
+        retention-days: 3
+        if-no-files-found: warn
+      if: always()
+    env:
+      CODE_IMAGE: ${{ needs.prepare.outputs.image }}
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        variant:
+        - baseline
+        - edit_plus
+        - edit_minus
+        - edit_plus_loop3
+        - edit_plus_loop4
+  shortlist:
+    needs:
+    - development
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: codex/liquid-sense-code-rsi-20261104
+        fetch-depth: 0
+    - name: Preserve concurrent source changes
+      run: python code_rsi/publish.py guard
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'false'
+        prepare-assets: 'false'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        path: .
+        pattern: coding-*
+        merge-multiple: true
+    - name: Choose candidates using fresh development only
+      run: python code_rsi/pipeline.py shortlist
+    - id: matrix
+      run: echo "variants=$(python code_rsi/pipeline.py matrix)" >> "$GITHUB_OUTPUT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: coding-shortlist
+        path: code_ci_output/shortlist/
+        retention-days: 3
+        if-no-files-found: error
+    permissions:
+      contents: write
+    outputs:
+      variants: ${{ steps.matrix.outputs.variants }}
+  validation:
+    needs:
+    - prepare
+    - shortlist
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+        prepare-assets: 'false'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        path: .
+        name: coding-shortlist
+    - name: Validate transfer to distinct programming tasks
+      env:
+        VARIANT: ${{ matrix.variant }}
+      run: python code_rsi/pipeline.py validation --variant "$VARIANT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: coding-validation-${{ matrix.variant }}
+        path: code_ci_output/validation-${{ matrix.variant }}/
+        retention-days: 3
+        if-no-files-found: warn
+      if: always()
+    env:
+      CODE_IMAGE: ${{ needs.prepare.outputs.image }}
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        variant: ${{ fromJSON(needs.shortlist.outputs.variants) }}
+  freeze:
+    needs:
+    - validation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: codex/liquid-sense-code-rsi-20261104
+        fetch-depth: 0
+    - name: Preserve concurrent source changes
+      run: python code_rsi/publish.py guard
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'false'
+        prepare-assets: 'false'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        path: .
+        pattern: coding-*
+        merge-multiple: true
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        path: .
+        name: coding-shortlist
+    - name: Freeze weights and loop count before final task results
+      run: python code_rsi/pipeline.py freeze
+    - id: matrix
+      run: echo "variants=$(python code_rsi/pipeline.py matrix)" >> "$GITHUB_OUTPUT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: coding-frozen
+        path: code_ci_output/frozen/
+        retention-days: 3
+        if-no-files-found: error
+    permissions:
+      contents: write
+    outputs:
+      variants: ${{ steps.matrix.outputs.variants }}
+  final:
+    needs:
+    - prepare
+    - freeze
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'true'
+        prepare-assets: 'false'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        path: .
+        name: coding-frozen
+    - name: Measure pass at one without feedback or answer leakage
+      env:
+        VARIANT: ${{ matrix.variant }}
+        SHARD: ${{ matrix.shard }}
+      run: python code_rsi/pipeline.py final --variant "$VARIANT" --shard "$SHARD"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: coding-final-${{ matrix.variant }}-${{ matrix.shard }}
+        path: code_ci_output/final-${{ matrix.variant }}_shard${{ matrix.shard }}/
+        retention-days: 3
+        if-no-files-found: warn
+      if: always()
+    env:
+      CODE_IMAGE: ${{ needs.prepare.outputs.image }}
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        variant: ${{ fromJSON(needs.freeze.outputs.variants) }}
+        shard:
+        - 0
+        - 1
+  report:
+    needs:
+    - final
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+    - uses: ./.github/actions/liquid-runtime
+      with:
+        model-assets: 'false'
+        prepare-assets: 'false'
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        path: .
+        pattern: coding-*
+        merge-multiple: true
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        path: .
+        name: coding-frozen
+    - name: Check complete partitions and report actual outcomes
+      run: python code_rsi/pipeline.py report
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: coding-report
+        path: code_ci_output/final/
+        retention-days: 3
+        if-no-files-found: error
+    - run: cat CODE_REPORT.md >> "$GITHUB_STEP_SUMMARY"
+  save:
+    needs:
+    - report
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: codex/liquid-sense-code-rsi-20261104
+        fetch-depth: 0
+    - name: Preserve concurrent source changes
+      run: python code_rsi/publish.py guard
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        path: .
+        name: coding-report
+    - name: Save results, checkpoints and final status
+      run: python code_rsi/publish.py 'complete coding cycle and stop'
+    permissions:
+      contents: write
