@@ -1,0 +1,133 @@
+{
+  "trial": 1,
+  "hypothesis_file": "mentor/hypothesis_001.json",
+  "source_commit": "1d589092343f6a4119feab269f9b2493a54c35cb",
+  "parent_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "direction_sha256": "adc709eb7bfb091226bd0dfe45e9785166cbf86f5d194bb5a93cd19e35545ae7",
+  "fraction": 0.003,
+  "edited_parameter": "model.language_model.layers.31.mlp.down_proj.weight",
+  "reference_or_correct_next_token_supplied": false,
+  "backward_passes": 0,
+  "heldout_used": false,
+  "checkpoint_promoted": false,
+  "quality_claim": "none until full paired and historical tests plus fresh validation",
+  "stage": "rejected_on_screen",
+  "updated_unix": 1793824337.3433173,
+  "parent_screen": [
+    {
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+      "new_tokens": 72,
+      "hit_limit": false,
+      "seconds": 18.821179776999998,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count"
+    }
+  ],
+  "matched_random_screen": [
+    {
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+      "new_tokens": 72,
+      "hit_limit": false,
+      "seconds": 18.97908058899975,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count"
+    }
+  ],
+  "matched_random_edit": {
+    "actual_relative_norm": 0.0030009071342647076,
+    "changed_values": 863922,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    }
+  },
+  "negative_screen": [
+    {
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+      "new_tokens": 72,
+      "hit_limit": false,
+      "seconds": 18.95019116900039,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count"
+    }
+  ],
+  "negative_edit": {
+    "actual_relative_norm": 0.003001120872795582,
+    "changed_values": 869954,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    }
+  },
+  "accepted_for_validation": false,
+  "reason": "No strict gain without case regression on the observed screen"
+}

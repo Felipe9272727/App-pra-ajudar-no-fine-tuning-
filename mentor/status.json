@@ -1,11 +1,13 @@
 {
-  "status": "diagnostic_complete_awaiting_guided_trial",
+  "status": "trial_001_rejected_trial_002_prepared",
+  "trial": 1,
   "controller": "assistant",
   "legacy_rounds_completed": 31,
   "legacy_search_paused": true,
-  "guided_trials_completed": 0,
   "checkpoint_promoted": false,
   "model_process_active": false,
   "backward_passes": 0,
-  "final_test_evaluated": false
+  "final_test_evaluated": false,
+  "updated_unix": 1793824337.3446908,
+  "guided_trials_completed": 1
 }
