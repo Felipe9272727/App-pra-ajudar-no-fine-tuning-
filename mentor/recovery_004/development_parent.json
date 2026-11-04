@@ -381,5 +381,7 @@
     true,
     true
   ],
-  "anchor_nll": 3.1837292512257895
+  "anchor_nll": 3.1837292512257895,
+  "historical_output_replay_identical": true,
+  "historical_control_replay_identical": true
 }
