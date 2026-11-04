@@ -1,0 +1,3195 @@
+{
+  "variant": "v3_ncm",
+  "data_sha256": "35c2c27866849981cb8420c89a06446236a713895a147ef881b95abd7d5d09c9",
+  "head_sha256": "39766b24abde81398889a7c7e1b2e5d56ce2634881ac7b89ec35c020d78f517e",
+  "status": "complete",
+  "rows": [
+    {
+      "id": "heldout_sort_00",
+      "family": "sort",
+      "question": "Sort the letters of 'eiddb' alphabetically. Reply only with the resulting string.",
+      "answer": "bddei",
+      "numeric": false,
+      "ood": false,
+      "output": "ddd",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 6,
+      "seconds": 2.2084,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              1,
+              20
+            ],
+            "decoded_draft": "dd"
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": "ddd"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              169,
+              119,
+              119,
+              169,
+              100,
+              197,
+              38,
+              100
+            ],
+            "decoded_draft": "ddd"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 31,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_multiplication_04",
+      "family": "multiplication",
+      "question": "Calculate 16 * 17. Reply only with the integer.",
+      "answer": "272",
+      "numeric": true,
+      "ood": true,
+      "output": "q",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.2167,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              19
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": "q"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              113,
+              251,
+              153,
+              153,
+              251,
+              251,
+              251
+            ],
+            "decoded_draft": "q"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_subtraction_05",
+      "family": "subtraction",
+      "question": "Calculate 570 - 351. Reply only with the integer.",
+      "answer": "219",
+      "numeric": true,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.9979,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              113,
+              197,
+              197,
+              38,
+              126,
+              126,
+              126
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_python_07",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [19, 17, 15, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "875",
+      "numeric": true,
+      "ood": true,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.3642,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              9,
+              28
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              77,
+              197,
+              92,
+              191,
+              197,
+              100,
+              197
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 69,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_reverse_02",
+      "family": "reverse",
+      "question": "Reverse the characters of 'vurk'. Reply only with the resulting string.",
+      "answer": "kruv",
+      "numeric": false,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 5,
+      "seconds": 1.9666,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              1
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              19
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              28,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              242,
+              242,
+              242,
+              242,
+              242,
+              191,
+              191,
+              191
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 28,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_addition_02",
+      "family": "addition",
+      "question": "Calculate 19 + 61. Reply only with the integer.",
+      "answer": "80",
+      "numeric": true,
+      "ood": false,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 3,
+      "seconds": 1.8793,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              63,
+              8,
+              39,
+              28
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              120,
+              149,
+              197,
+              244,
+              156,
+              156,
+              156
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_python_01",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [5, 3, 8, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "83",
+      "numeric": true,
+      "ood": false,
+      "output": "1",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 2.1114,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              126,
+              100,
+              191,
+              100,
+              149,
+              131,
+              25
+            ],
+            "decoded_draft": "1"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 65,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_subtraction_06",
+      "family": "subtraction",
+      "question": "Calculate 735 - 238. Reply only with the integer.",
+      "answer": "497",
+      "numeric": true,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.8441,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              28,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              120,
+              197,
+              197,
+              100,
+              25,
+              156,
+              156
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_lowercase_00",
+      "family": "lowercase",
+      "question": "Convert 'FGE' to lowercase. Reply only with the resulting string.",
+      "answer": "fge",
+      "numeric": false,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.8957,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              9
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              5
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              85,
+              22,
+              22,
+              119,
+              100,
+              119,
+              22,
+              22
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_lowercase_01",
+      "family": "lowercase",
+      "question": "Convert 'ECB' to lowercase. Reply only with the resulting string.",
+      "answer": "ecb",
+      "numeric": false,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.9545,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              7
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              39,
+              39
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              156,
+              244,
+              244,
+              197,
+              197,
+              192,
+              192,
+              192
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_python_03",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 5, 8, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "106",
+      "numeric": true,
+      "ood": false,
+      "output": "1",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 4,
+      "seconds": 2.1289,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              120,
+              126,
+              231,
+              191,
+              100,
+              25,
+              25,
+              156
+            ],
+            "decoded_draft": "1"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 65,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_addition_05",
+      "family": "addition",
+      "question": "Calculate 481 + 442. Reply only with the integer.",
+      "answer": "923",
+      "numeric": true,
+      "ood": true,
+      "output": "1",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.9202,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              28,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              126,
+              231,
+              191,
+              100,
+              85,
+              85,
+              85
+            ],
+            "decoded_draft": "1"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_multiplication_06",
+      "family": "multiplication",
+      "question": "Calculate 19 * 13. Reply only with the integer.",
+      "answer": "247",
+      "numeric": true,
+      "ood": true,
+      "output": "8",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.0494,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              9,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              120,
+              120,
+              251,
+              251,
+              13,
+              13,
+              13,
+              13
+            ],
+            "decoded_draft": "8"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_lowercase_03",
+      "family": "lowercase",
+      "question": "Convert 'MRKZ' to lowercase. Reply only with the resulting string.",
+      "answer": "mrkz",
+      "numeric": false,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 5,
+      "seconds": 2.0203,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              251,
+              85,
+              244,
+              104,
+              197,
+              191,
+              192,
+              192
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 28,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_reverse_03",
+      "family": "reverse",
+      "question": "Reverse the characters of 'optw'. Reply only with the resulting string.",
+      "answer": "wtpo",
+      "numeric": false,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 5,
+      "seconds": 1.6701,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              1
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              28,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              124,
+              124,
+              124,
+              92,
+              92,
+              92,
+              92,
+              92
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_uppercase_03",
+      "family": "uppercase",
+      "question": "Convert 'ymm' to uppercase. Reply only with the resulting string.",
+      "answer": "YMM",
+      "numeric": false,
+      "ood": true,
+      "output": "q",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.9838,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              1
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              156,
+              156,
+              156,
+              85,
+              231,
+              231,
+              61,
+              61
+            ],
+            "decoded_draft": "q"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 26,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_addition_01",
+      "family": "addition",
+      "question": "Calculate 18 + 77. Reply only with the integer.",
+      "answer": "95",
+      "numeric": true,
+      "ood": false,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 3,
+      "seconds": 1.8811,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              63,
+              8,
+              39,
+              28
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              120,
+              251,
+              191,
+              251,
+              61,
+              156,
+              244
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_addition_04",
+      "family": "addition",
+      "question": "Calculate 162 + 394. Reply only with the integer.",
+      "answer": "556",
+      "numeric": true,
+      "ood": true,
+      "output": "88",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.0452,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              28,
+              8,
+              28
+            ],
+            "decoded_draft": "q"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              120,
+              120,
+              244,
+              242,
+              242,
+              244,
+              244,
+              244
+            ],
+            "decoded_draft": "88"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 7 * 7. Reply only with the integer.",
+      "answer": "49",
+      "numeric": true,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 2.2701,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              5,
+              9,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              22,
+              121,
+              197,
+              38,
+              126,
+              126,
+              126,
+              126
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 25,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_subtraction_01",
+      "family": "subtraction",
+      "question": "Calculate 176 - 134. Reply only with the integer.",
+      "answer": "42",
+      "numeric": true,
+      "ood": false,
+      "output": "q8",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 3,
+      "seconds": 2.0133,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              5,
+              8,
+              28
+            ],
+            "decoded_draft": "q"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              126,
+              120,
+              197,
+              197,
+              100,
+              229,
+              25,
+              25
+            ],
+            "decoded_draft": "q8"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_multiplication_07",
+      "family": "multiplication",
+      "question": "Calculate 14 * 17. Reply only with the integer.",
+      "answer": "238",
+      "numeric": true,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.0802,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              9,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              120,
+              251,
+              251,
+              251,
+              113,
+              113,
+              156
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_lowercase_02",
+      "family": "lowercase",
+      "question": "Convert 'QQZZQ' to lowercase. Reply only with the resulting string.",
+      "answer": "qqzzq",
+      "numeric": false,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 6,
+      "seconds": 2.0796,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              15
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              5
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              9,
+              5
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              191,
+              100,
+              85,
+              85,
+              100,
+              197,
+              192,
+              192
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 28,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_python_05",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [15, 14, 18, 19]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "586",
+      "numeric": true,
+      "ood": true,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.3532,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              44,
+              251,
+              191,
+              191,
+              197,
+              61,
+              251
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 69,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [2, 2, 9, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "81",
+      "numeric": true,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 2.2575,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              9,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              113,
+              77,
+              197,
+              100,
+              61,
+              131,
+              131,
+              25
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 65,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_subtraction_07",
+      "family": "subtraction",
+      "question": "Calculate 473 - 283. Reply only with the integer.",
+      "answer": "190",
+      "numeric": true,
+      "ood": true,
+      "output": "1",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 4,
+      "seconds": 2.3551,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              120,
+              38,
+              38,
+              126,
+              126,
+              126,
+              126
+            ],
+            "decoded_draft": "1"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 50 - 29. Reply only with the integer.",
+      "answer": "21",
+      "numeric": true,
+      "ood": false,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 3,
+      "seconds": 1.8829,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              63,
+              5,
+              8,
+              28
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              120,
+              100,
+              61,
+              149,
+              149,
+              126,
+              126
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_sort_01",
+      "family": "sort",
+      "question": "Sort the letters of 'dhieh' alphabetically. Reply only with the resulting string.",
+      "answer": "dehhi",
+      "numeric": false,
+      "ood": false,
+      "output": "ddd",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 6,
+      "seconds": 2.0071,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              1,
+              20
+            ],
+            "decoded_draft": "dd"
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              8,
+              9
+            ],
+            "decoded_draft": "ddd"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              131,
+              22,
+              119,
+              119,
+              100,
+              100,
+              48,
+              140
+            ],
+            "decoded_draft": "ddd"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 30,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_uppercase_00",
+      "family": "uppercase",
+      "question": "Convert 'dhgfh' to uppercase. Reply only with the resulting string.",
+      "answer": "DHGFH",
+      "numeric": false,
+      "ood": false,
+      "output": "CqC",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 6,
+      "seconds": 1.8671,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              1,
+              28,
+              8
+            ],
+            "decoded_draft": "qqq"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              121,
+              25,
+              156,
+              25,
+              155,
+              197,
+              155,
+              77
+            ],
+            "decoded_draft": "CqC"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 28,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_subtraction_04",
+      "family": "subtraction",
+      "question": "Calculate 750 - 569. Reply only with the integer.",
+      "answer": "181",
+      "numeric": true,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.8887,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              9,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              126,
+              120,
+              100,
+              100,
+              61,
+              149,
+              149,
+              149
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_subtraction_03",
+      "family": "subtraction",
+      "question": "Calculate 165 - 36. Reply only with the integer.",
+      "answer": "129",
+      "numeric": true,
+      "ood": false,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 4,
+      "seconds": 1.7947,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              9,
+              28,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              120,
+              120,
+              197,
+              197,
+              197,
+              38,
+              149,
+              149
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 28,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_multiplication_01",
+      "family": "multiplication",
+      "question": "Calculate 9 * 5. Reply only with the integer.",
+      "answer": "45",
+      "numeric": true,
+      "ood": false,
+      "output": "4",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 3,
+      "seconds": 2.0813,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              13,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              5,
+              28,
+              28
+            ],
+            "decoded_draft": "4"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              120,
+              113,
+              191,
+              100,
+              196,
+              149,
+              25,
+              25
+            ],
+            "decoded_draft": "4"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 25,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_sort_03",
+      "family": "sort",
+      "question": "Sort the letters of 'snss' alphabetically. Reply only with the resulting string.",
+      "answer": "nsss",
+      "numeric": false,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 5,
+      "seconds": 2.789,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              9,
+              9
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              251,
+              251,
+              251,
+              191,
+              191,
+              251,
+              251,
+              104
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 30,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_addition_06",
+      "family": "addition",
+      "question": "Calculate 240 + 323. Reply only with the integer.",
+      "answer": "563",
+      "numeric": true,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.3143,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              28,
+              28,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              129,
+              242,
+              242,
+              242,
+              244,
+              244,
+              244
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 99 - 67. Reply only with the integer.",
+      "answer": "32",
+      "numeric": true,
+      "ood": false,
+      "output": "22",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 3,
+      "seconds": 1.9769,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              21,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              5,
+              8,
+              28
+            ],
+            "decoded_draft": "2"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              126,
+              120,
+              67,
+              197,
+              67,
+              149,
+              149,
+              196
+            ],
+            "decoded_draft": "22"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_python_04",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [10, 14, 18, 12]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "0",
+      "numeric": true,
+      "ood": true,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 2,
+      "seconds": 2.3807,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              9,
+              8
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              38,
+              197,
+              92,
+              191,
+              155,
+              61,
+              61
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 69,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_reverse_01",
+      "family": "reverse",
+      "question": "Reverse the characters of 'ceedi'. Reply only with the resulting string.",
+      "answer": "ideec",
+      "numeric": false,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 6,
+      "seconds": 2.065,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              19
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              169,
+              169,
+              169,
+              169,
+              85,
+              100,
+              38,
+              38
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_uppercase_01",
+      "family": "uppercase",
+      "question": "Convert 'bjiid' to uppercase. Reply only with the resulting string.",
+      "answer": "BJIID",
+      "numeric": false,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 6,
+      "seconds": 1.9757,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              155,
+              155,
+              155,
+              191,
+              191,
+              191,
+              197,
+              197
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 28,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_python_06",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [14, 17, 17, 14]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "578",
+      "numeric": true,
+      "ood": true,
+      "output": "1",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.0365,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              9,
+              9,
+              8
+            ],
+            "decoded_draft": "q"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              77,
+              197,
+              6,
+              251,
+              229,
+              131,
+              144
+            ],
+            "decoded_draft": "1"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 69,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_uppercase_02",
+      "family": "uppercase",
+      "question": "Convert 'wslzs' to uppercase. Reply only with the resulting string.",
+      "answer": "WSLZS",
+      "numeric": false,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 6,
+      "seconds": 2.2041,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": "C"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              251,
+              251,
+              251,
+              251,
+              191,
+              191,
+              251,
+              191
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 28,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_addition_00",
+      "family": "addition",
+      "question": "Calculate 24 + 88. Reply only with the integer.",
+      "answer": "112",
+      "numeric": true,
+      "ood": false,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 4,
+      "seconds": 2.0136,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              31,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              63,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              126,
+              140,
+              191,
+              251,
+              149,
+              149,
+              156
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_sort_02",
+      "family": "sort",
+      "question": "Sort the letters of 'xvl' alphabetically. Reply only with the resulting string.",
+      "answer": "lvx",
+      "numeric": false,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.9298,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              1
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              242,
+              242,
+              242,
+              54,
+              54,
+              242,
+              242,
+              242
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 30,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_multiplication_05",
+      "family": "multiplication",
+      "question": "Calculate 13 * 14. Reply only with the integer.",
+      "answer": "182",
+      "numeric": true,
+      "ood": true,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.0165,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              9,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              120,
+              38,
+              38,
+              13,
+              13,
+              126,
+              13
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 8 * 6. Reply only with the integer.",
+      "answer": "48",
+      "numeric": true,
+      "ood": false,
+      "output": "4",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 3,
+      "seconds": 2.023,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              13,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              29,
+              39,
+              28
+            ],
+            "decoded_draft": "4"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              60,
+              113,
+              197,
+              196,
+              60,
+              60,
+              60,
+              196
+            ],
+            "decoded_draft": "4"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 25,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [1, 5, 2, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "75",
+      "numeric": true,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 2.1142,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              22,
+              60,
+              197,
+              191,
+              100,
+              149,
+              149,
+              61
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 65,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_reverse_00",
+      "family": "reverse",
+      "question": "Reverse the characters of 'ecd'. Reply only with the resulting string.",
+      "answer": "dce",
+      "numeric": false,
+      "ood": false,
+      "output": "dd",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 4,
+      "seconds": 2.0216,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              1
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              1,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              85,
+              85,
+              196,
+              100,
+              197,
+              191,
+              197,
+              230
+            ],
+            "decoded_draft": "dd"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 26,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_addition_07",
+      "family": "addition",
+      "question": "Calculate 128 + 389. Reply only with the integer.",
+      "answer": "517",
+      "numeric": true,
+      "ood": true,
+      "output": "88",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.9305,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              28,
+              8,
+              28
+            ],
+            "decoded_draft": "q"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              120,
+              120,
+              244,
+              242,
+              242,
+              244,
+              156,
+              244
+            ],
+            "decoded_draft": "88"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "heldout_addition_03",
+      "family": "addition",
+      "question": "Calculate 51 + 86. Reply only with the integer.",
+      "answer": "137",
+      "numeric": true,
+      "ood": false,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 4,
+      "seconds": 1.9285,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              18,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              63,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              120,
+              229,
+              197,
+              244,
+              156,
+              156,
+              156
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    }
+  ],
+  "selection_uses_heldout": false,
+  "protocol": {
+    "cpu_threads": 8,
+    "backbone": "BF16",
+    "routers": "FP32",
+    "NCM_max_bytes": 8,
+    "baseline_max_new_tokens": null,
+    "decoding": "greedy codebook nearest-centre",
+    "inference_tools": false,
+    "thinking": false
+  },
+  "code_sha256": {
+    "runtime.py": "da7370c6fad0f3b9c74589e80b1bf3d444e0a52b4d3e66bb89c1109bf777be09",
+    "codec.py": "7113bbfe3b9dac53a13f0e8bd1212a3a1c0da26137b61ae123b7b03ab6f8d212",
+    "evaluate.py": "2b00d4ca702fc5651f77ca8ac4a32b363ae5bbd916f0840884a38c8d2e273a61"
+  },
+  "architecture": {
+    "physical_layers": 32,
+    "layer_executions": 56,
+    "mhc_streams": 2,
+    "second_visit_gain": 0.05000000074505806,
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "sliding_window": 256,
+    "window_layers": [
+      7,
+      15,
+      27
+    ],
+    "parameters": 1020252592,
+    "backward_passes": 0
+  },
+  "loaded_parameters": 1021116466,
+  "total": 47,
+  "exact_correct": 0,
+  "content_correct": 0,
+  "byte_accuracy": 0.09844559585492228,
+  "peak_rss_mib": 2800.8671875
+}

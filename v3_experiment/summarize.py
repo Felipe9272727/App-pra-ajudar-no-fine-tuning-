@@ -16,6 +16,7 @@ def main():
         summary[key]={k:r[k] for k in ['exact_correct','content_correct','total','loaded_parameters','byte_accuracy','peak_rss_mib']}
         summary[key]['total_generation_seconds']=sum(row['seconds'] for row in r['rows'])
         summary[key]['mean_generation_seconds']=statistics.mean(row['seconds'] for row in r['rows'])
+        summary[key]['empty_outputs']=sum(not row['output'].strip() for row in r['rows'])
         summary[key]['by_family']={}
         for family in sorted({row['family'] for row in r['rows']}):
             rows=[row for row in r['rows'] if row['family']==family]
@@ -43,6 +44,7 @@ def main():
     lines+=['','Todos os resultados são de geração real; respostas incorretas ou vazias foram conservadas. '
         'O conjunto é customizado e pequeno, com aritmética, saída de Python e transformação de strings. '
         'Não é uma medida de capacidade geral de conversa ou de inteligência.','',
+        f"A V3 produziu {v3['empty_outputs']} respostas vazias em {v3['total']} casos. O codec sozinho reconstruiu as respostas de treino, mas o gerador condicionado não reproduziu essa capacidade na geração livre.",'',
         '## Por família e distribuição','',
         '| Família | Qwen reconstruído | Pai V2 | V3 |','|---|---:|---:|---:|']
     for family in summary['v3_ncm']['by_family']:
@@ -57,7 +59,7 @@ def main():
         '|---|---:|---:|---:|']
     for h in archive['heads']:
         lines.append(f"| {h['id']} | {h['ridge']} | {h['exact_correct']}/{h['total']} | {h['byte_accuracy']:.4f} |")
-    lines+=['',f"Cabeça selecionada: **{frozen['selected_head']}**, congelada em `frozen.json` antes do teste. '",
+    lines+=['',f"Cabeça selecionada: **{frozen['selected_head']}**, congelada em `frozen.json` antes do teste.",
         'O teste não escolhe pesos e não promove a V3. O pai é a candidata 2 ainda experimental da V2.','',
         '## O que esta V3 efetivamente contém','',
         '- Backbone SenseNova/Liquid ativo: 32 camadas físicas, 56 execuções, mHC de duas vias, ganho da segunda visita 0,05, convolução de sete posições e SWA256.',
@@ -70,7 +72,7 @@ def main():
         'O download grande do upstream não ficou disponível neste ambiente. Recuperamos o port v1 salvo e sem treino, '
         'invertendo as escalas de saída, todas potências de dois, para reconstruir os 24 conjuntos de tensores Qwen. '
         'As cópias duplicadas coincidem bit a bit. O arquivo safetensors resultante tem hash diferente do upstream.','',
-        f"Uma sonda histórica teve NLL {recovery['original_recorded_nll']:.6f}; a referência recuperada teve {recovery['recovered_nll']:.6f}. '",
+        f"Uma sonda histórica teve NLL {recovery['original_recorded_nll']:.6f}; a referência recuperada teve {recovery['recovered_nll']:.6f}.",
         'Não atribuímos essa diferença automaticamente ao hardware ou ao formato. A referência é identificada como reconstruída; '
         'esta limitação impede tratar a execução como uma reprodução byte a byte do checkpoint oficial. '
         'Todas as variantes foram medidas novamente no mesmo ambiente.','',

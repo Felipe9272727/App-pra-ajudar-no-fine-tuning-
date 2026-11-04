@@ -1,10 +1,10 @@
 {
-  "status": "frozen_for_heldout",
+  "status": "heldout_generation",
   "experiment": true,
   "backward_passes": 0,
-  "updated_unix": 1793757020.0603452,
+  "updated_unix": 1793757224.5952456,
   "codec_sha256": "61233deea9dd915c99c112498c41664cf9a77cb99c5d7c12861f44309737fd0b",
-  "model_process_active": false,
+  "model_process_active": true,
   "train_examples_completed": 128,
   "parent_weight_write": {
     "changed_bf16_values": 2488648,
@@ -45,6 +45,6 @@
     "parameters": 1020252592,
     "backward_passes": 0
   },
-  "evaluating": null,
+  "evaluating": "v2_parent",
   "selected_head": "head_00"
 }
