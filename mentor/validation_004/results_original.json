@@ -1,0 +1,206 @@
+{
+  "variant": "original",
+  "status": "running",
+  "rows": [
+    {
+      "id": "v4_interval_union",
+      "group": "far",
+      "output": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort()\n    if len(intervals) == 1:\n        return intervals[0][1] - intervals[0][0]\n    \n    total = 0.0\n    for i in range(len(intervals) - 1):\n        a, b = intervals[i]\n        c, d = intervals[i + 1]\n        if b < c:\n            total += c - b\n        else:\n            total += c - b\n            b = c\n    return total",
+      "new_tokens": 129,
+      "hit_limit": false,
+      "seconds": 14.91600349600003,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort()\n    if len(intervals) == 1:\n        return intervals[0][1] - intervals[0][0]\n    \n    total = 0.0\n    for i in range(len(intervals) - 1):\n        a, b = intervals[i]\n        c, d = intervals[i + 1]\n        if b < c:\n            total += c - b\n        else:\n            total += c - b\n            b = c\n    return total"
+    },
+    {
+      "id": "v4_reachable",
+      "group": "far",
+      "output": "def solve(adj, start, goal):\n    if start == goal:\n        return True\n    if start not in adj:\n        return False\n    if goal not in adj[start]:\n        return False\n    return solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 19.818820576000007,
+      "thinking": false,
+      "passed": 5,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "code": "def solve(adj, start, goal):\n    if start == goal:\n        return True\n    if start not in adj:\n        return False\n    if goal not in adj[start]:\n        return False\n    return solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve(adj, start, goal) or solve"
+    },
+    {
+      "id": "v4_range_updates",
+      "group": "far",
+      "output": "def solve(n, updates):\n    result = [0] * n\n    for left, right, value in updates:\n        for i in range(left, right + 1):\n            result[i] += value\n    return result",
+      "new_tokens": 51,
+      "hit_limit": false,
+      "seconds": 6.350653247999958,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "IndexError",
+      "error_types": [
+        "IndexError",
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(n, updates):\n    result = [0] * n\n    for left, right, value in updates:\n        for i in range(left, right + 1):\n            result[i] += value\n    return result"
+    },
+    {
+      "id": "v4_window_sums",
+      "group": "far",
+      "output": "def solve(xs, k):\n    if k <= 0 or len(xs) < k:\n        return []\n    \n    result = []\n    window = []\n    start = 0\n    \n    for i in range(len(xs)):\n        window.append(xs[i])\n        \n        if len(window) == k:\n            result.append(list(window))\n            window = window[:-1]\n        \n        if window:\n            start = i + 1\n    \n    return result",
+      "new_tokens": 101,
+      "hit_limit": false,
+      "seconds": 12.081630317000077,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs, k):\n    if k <= 0 or len(xs) < k:\n        return []\n    \n    result = []\n    window = []\n    start = 0\n    \n    for i in range(len(xs)):\n        window.append(xs[i])\n        \n        if len(window) == k:\n            result.append(list(window))\n            window = window[:-1]\n        \n        if window:\n            start = i + 1\n    \n    return result"
+    },
+    {
+      "id": "v4_integer_sqrt",
+      "group": "far",
+      "output": "def solve(n):\n    r = int(n ** 0.5)\n    return r * r <= n and r + 1\n",
+      "new_tokens": 32,
+      "hit_limit": false,
+      "seconds": 4.268150039000034,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(n):\n    r = int(n ** 0.5)\n    return r * r <= n and r + 1"
+    },
+    {
+      "id": "v4_expand_runs",
+      "group": "far",
+      "output": "def solve(runs):\n    result = []\n    for char, count in runs:\n        result.append(char * count)\n    return \"\".join(result)",
+      "new_tokens": 35,
+      "hit_limit": false,
+      "seconds": 4.372795138000015,
+      "thinking": false,
+      "passed": 8,
+      "total": 8,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(runs):\n    result = []\n    for char, count in runs:\n        result.append(char * count)\n    return \"\".join(result)"
+    },
+    {
+      "id": "v4_normalize_path",
+      "group": "far",
+      "output": "def solve(path):\n    if not path or not path.strip():\n        return \"/\"\n    \n    parts = path.split(\"/\")\n    result = []\n    \n    for part in parts:\n        if not part:\n            continue\n        if part.startswith(\".\"):\n            continue\n        if part == \"..\":\n            if result:\n                result.pop()\n        else:\n            result.append(part)\n    \n    if not result:\n        return \"/\"\n    \n    return \"/\" + \"/\".join(result)\n    \nsolve(\"/\")\nsolve(\"\")\nsolve(\"a/b\")\nsolve(\"a/b/c\")\nsolve(\"a/b/c/d\")\nsolve(\"a/b/c/d/e\")\nsolve(\"a/b/c/d/e/f\")\nsolve(\"a/b/c",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 17.574590530000023,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 31,
+      "code": "def solve(path):\n    if not path or not path.strip():\n        return \"/\"\n    \n    parts = path.split(\"/\")\n    result = []\n    \n    for part in parts:\n        if not part:\n            continue\n        if part.startswith(\".\"):\n            continue\n        if part == \"..\":\n            if result:\n                result.pop()\n        else:\n            result.append(part)\n    \n    if not result:\n        return \"/\"\n    \n    return \"/\" + \"/\".join(result)\n    \nsolve(\"/\")\nsolve(\"\")\nsolve(\"a/b\")\nsolve(\"a/b/c\")\nsolve(\"a/b/c/d\")\nsolve(\"a/b/c/d/e\")\nsolve(\"a/b/c/d/e/f\")\nsolve(\"a/b/c",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "controls": [],
+  "repeats": [],
+  "frozen_sha256": "bffac8f483863225e85774320a5301b26b70db9ab096f78de287d51fdbffdb46",
+  "backward_passes": 0,
+  "answers_in_generation_prompts": false,
+  "model": {
+    "variant": "original",
+    "loaded_parameters": 852985920
+  },
+  "runtime": {
+    "torch": "2.15.0+cpu",
+    "threads": 4,
+    "cpu_quota": "200000 100000"
+  }
+}
