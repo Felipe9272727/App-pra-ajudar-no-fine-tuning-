@@ -1,0 +1,46 @@
+{
+  "model_name": "liquid sense 0.8 b LOOP",
+  "cycle": 2,
+  "status": "complete",
+  "data_sha256": "b8353a9d288f2818ee17f3bc6ee77cf4cce0d915505bf7434b2d58780be31735",
+  "selected_candidate": null,
+  "scores": {
+    "original": {
+      "exact": 44,
+      "content": 44,
+      "total": 80,
+      "numeric_content": 18,
+      "numeric_total": 32,
+      "controls_exact": 26,
+      "controls_total": 48,
+      "loaded_parameters": 852985920,
+      "seconds": 210.1917
+    },
+    "baseline": {
+      "exact": 43,
+      "content": 43,
+      "total": 80,
+      "numeric_content": 19,
+      "numeric_total": 32,
+      "controls_exact": 24,
+      "controls_total": 48,
+      "loaded_parameters": 1020252592,
+      "seconds": 887.4932
+    }
+  },
+  "paired_exact_vs": {
+    "original": {
+      "wins": 1,
+      "losses": 2,
+      "exact_binomial_two_sided_p": 1.0
+    },
+    "baseline": {
+      "wins": 0,
+      "losses": 0,
+      "exact_binomial_two_sided_p": 1.0
+    }
+  },
+  "selection_used_final_test": false,
+  "backward_passes": 0,
+  "autonomous_rsi": false
+}

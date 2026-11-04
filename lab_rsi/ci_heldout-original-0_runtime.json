@@ -1,0 +1,16 @@
+{
+  "run_id": "41792894550",
+  "source_commit": "6fd66c767c5a2c9ec87c31ed2ea61302c99b16af",
+  "runner": "GitHub Actions 1000001438",
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "python": "3.12.15",
+  "torch": "2.15.0+cpu",
+  "transformers": "5.22.1",
+  "cpu_threads": 4,
+  "data_sha256": "b8353a9d288f2818ee17f3bc6ee77cf4cce0d915505bf7434b2d58780be31735",
+  "architecture_required": {
+    "gain": 0.05,
+    "beta": 0.0,
+    "liquid_mix": 1.0
+  }
+}
