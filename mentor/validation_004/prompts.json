@@ -1,0 +1,122 @@
+[
+  {
+    "id": "v4_interval_union",
+    "group": "far",
+    "prompt": "Write function solve(intervals). Each pair [a,b] represents the half-open real interval [a,b), with integer a <= b. Return the total length of their union. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_reachable",
+    "group": "far",
+    "prompt": "Write function solve(adj, start, goal). adj is a list of outgoing-neighbor lists of a directed graph with vertices 0 through len(adj)-1. Return whether goal is reachable from start, allowing a path of length zero. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_range_updates",
+    "group": "far",
+    "prompt": "Write function solve(n, updates). Start with n zeros. For each [left,right,value] add value at every index left <= i < right. Return the final list; 0 <= left <= right <= n. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_window_sums",
+    "group": "far",
+    "prompt": "Write function solve(xs, k). Return sums of all contiguous windows of exactly k elements, ordered by starting index. k is positive; return an empty list if k exceeds len(xs). Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_integer_sqrt",
+    "group": "far",
+    "prompt": "Write function solve(n). For a nonnegative integer n, return the greatest integer r such that r*r <= n. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_expand_runs",
+    "group": "far",
+    "prompt": "Write function solve(runs). runs contains pairs [character, count], with nonnegative counts and one-character strings. Return their run-length decoded string in order. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_normalize_path",
+    "group": "far",
+    "prompt": "Write function solve(path). Normalize an absolute Unix-style path: ignore empty slash-separated components and dot components, let each double-dot remove the previous component if present, and prevent moving above root. Return a leading slash, with no trailing slash except for root. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_column_label",
+    "group": "far",
+    "prompt": "Write function solve(n). Convert a positive integer to a spreadsheet column label, using uppercase letters and one-based alphabetic digits (A through Z, then AA, AB, and so on). Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_max_pair_product",
+    "group": "far",
+    "prompt": "Write function solve(xs). xs contains at least two integers. Return the largest product xs[i]*xs[j] over distinct indices i < j. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_remainder_groups",
+    "group": "far",
+    "prompt": "Write function solve(xs, k). k is positive. Return a list of k lists; list r contains the input integers whose Python remainder modulo k equals r, preserving their input order. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_snake_rows",
+    "group": "far",
+    "prompt": "Write function solve(matrix). Return one flattened list, traversing row 0 left to right, row 1 right to left, alternating direction on subsequent rows. Rows may have different lengths. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_prefix_xor",
+    "group": "far",
+    "prompt": "Write function solve(xs). Return a list whose element i is the bitwise XOR of xs[0] through xs[i]. Empty input gives an empty list. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_increasing_run",
+    "group": "far",
+    "prompt": "Write function solve(xs). Return the length of the longest contiguous strictly increasing run. Return zero for an empty input. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_decimal_add",
+    "group": "far",
+    "prompt": "Write function solve(a, b). a and b are nonempty strings of decimal digits representing nonnegative integers, possibly with leading zeros. Return their sum as a canonical decimal string, with no leading zeros unless the result is zero. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_next_greater",
+    "group": "far",
+    "prompt": "Write function solve(xs). For each position, return the VALUE of the first strictly greater element to its right, or None if no such element exists. Return a list of the same length as xs. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_inversion_count",
+    "group": "far",
+    "prompt": "Write function solve(xs). Return the number of index pairs i < j for which xs[i] > xs[j]. Equal values do not form inversions. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_edit_distance",
+    "group": "far",
+    "prompt": "Write function solve(a, b). Return the Levenshtein edit distance between strings a and b, with unit cost per character insertion, deletion or substitution. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_islands",
+    "group": "far",
+    "prompt": "Write function solve(grid). grid is a rectangular list of lists containing 0 or 1, possibly empty. Return the number of connected components of 1 cells using only horizontal and vertical adjacency. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_histogram_area",
+    "group": "far",
+    "prompt": "Write function solve(heights). Heights are nonnegative integers of adjacent unit-width histogram bars. Return the area of the largest axis-aligned rectangle fitting under the histogram; empty gives zero. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_record_order",
+    "group": "far",
+    "prompt": "Write function solve(records). Each record is a two-element list [name, score], where name is a string and score is an integer. Return a new list sorted by descending score, breaking ties by ascending name. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_numeric_motif",
+    "group": "near",
+    "prompt": "Write function solve(xs, motif). motif is a nonempty integer list. Return how many contiguous slices of xs equal motif, counting overlapping slices. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_overlap_coverage",
+    "group": "near",
+    "prompt": "Write function solve(s, sub). sub is nonempty. Return a boolean list with one entry per character of s. Entry i is true exactly when position i belongs to at least one occurrence of sub. Include overlapping occurrences. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_suffix_prefix",
+    "group": "near",
+    "prompt": "Write function solve(a, b). Return the largest k such that the last k characters of a equal the first k characters of b. k may be zero and cannot exceed either string length. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  },
+  {
+    "id": "v4_wildcard_windows",
+    "group": "near",
+    "prompt": "Write function solve(s, pattern). pattern is nonempty and its question-mark characters match any single character. Return the number of length-len(pattern) windows in s matching pattern, counting overlapping windows. Other pattern characters match literally. Return only the complete Python 3 function solve, without explanations, examples or tests. Do not print. Do not use imports."
+  }
+]

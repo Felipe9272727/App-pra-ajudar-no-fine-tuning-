@@ -1,0 +1,16 @@
+{
+  "files": {
+    "oracles.json": "7d45b9ddde825961af582f7cbc1bdb33c5b797c198b3f0b9539814034d22c17d",
+    "anchors.json": "ec7c295c439a9706c59f840562a88828014a323a4a88d6572af5cef079471e3c",
+    "controls.json": "0740b188d8f583a1cfa262b9009290864747c26ad6013fd49cc6822fce95771c",
+    "prompts.json": "8ec1272ec21491a0801c5cba0e0e15d2ffec9e103446428c36126436a76e5492"
+  },
+  "programming_tasks": 24,
+  "far_tasks": 20,
+  "near_tasks": 4,
+  "cases": 192,
+  "controls": 12,
+  "exact_prompt_overlap_with_old_coding_sets": 0,
+  "pretraining_novelty_known": false,
+  "built_before_model_outputs": true
+}

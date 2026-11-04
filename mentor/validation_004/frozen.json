@@ -1,0 +1,21 @@
+{
+  "status": "frozen_before_independent_inference",
+  "hypothesis": "mentor_002_reconstructed",
+  "candidate_sha256": "8fd291019b20f7d327e775c05a30f5b991395718040e4ad2fe52ed986ff748ef",
+  "files": {
+    "prompts.json": "8ec1272ec21491a0801c5cba0e0e15d2ffec9e103446428c36126436a76e5492",
+    "oracles.json": "7d45b9ddde825961af582f7cbc1bdb33c5b797c198b3f0b9539814034d22c17d",
+    "controls.json": "0740b188d8f583a1cfa262b9009290864747c26ad6013fd49cc6822fce95771c",
+    "anchors.json": "ec7c295c439a9706c59f840562a88828014a323a4a88d6572af5cef079471e3c",
+    "PROTOCOL.md": "642255a69bf40337565946ee565d3149d6c428e285f6b98dd0a2c91064f0ba1a",
+    "evaluate.py": "b2e543e241e7a7d782c542cc8debbb2e4e8d538763394ed9afcf37d9f74e1daf",
+    "build_data.py": "7737a57998068b9ac361e456b0744dd2e63386fba32459f1525c3a7534fea100"
+  },
+  "reserved_sets_observed": false,
+  "variants": [
+    "original",
+    "parent",
+    "candidate"
+  ],
+  "selection_after_observing_outputs_allowed": false
+}

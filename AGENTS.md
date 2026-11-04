@@ -113,3 +113,17 @@
   outcomes are unknown, not improvements or completed trials. Recovery replays
   must be recorded explicitly; do not repeat decisions already durably saved.
 - Current recovery journal: mentor/recovery_003.json, same predeclared trial 002.
+
+## Recovery and independent validation 004
+
+- Latest continuation: `codex/mentor002-independent-validation-20261104`.
+- Read `mentor/RECOVERY_004.md` and `mentor/recovery_004/frozen.json` first.
+  The prior commit saved only screening; its claimed full gain was unpublished.
+- `negative_002_recovered.pt` is a reconstruction of the fixed hypothesis,
+  not proof of bitwise identity with unsaved weights. Never conflate the two.
+- Run only missing phases in `mentor/recover_004.py` and locked three-way
+  `mentor/validation_004/evaluate.py`; results checkpoint every completed row.
+- Validation protocol and hashes must be committed before observing outputs.
+  No tuning or new hypotheses use this test; no new 100-round loop is authorized.
+- Preserve old best unless all declared gates pass. Commit outcome before
+  ending the turn; no promise of local work continuing between turns.

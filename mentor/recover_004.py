@@ -109,6 +109,17 @@ def score(model, tok, variant):
         data['controls'] += e.quality(model, tok, [row])
         save(path.name, data)
     data['control_bits'] = [r['correct'] for r in data['controls']]
+    if variant == 'parent' and 'same_runner_replay' not in data:
+        historical = json.loads((e.HERE/'best_metrics.json').read_text())
+        old_rows = {r['id']: r for r in historical['rows']}
+        drift = [r for r in data['rows'] if r['output'] != old_rows[r['id']]['output']]
+        tasks = {t['id']: t for t in e.DATA['search']+e.DATA['guard']}
+        repeats = e.coding(model, tok, [tasks[r['id']] for r in drift])
+        assert all(a['output'] == b['output'] and a['case_passed'] == b['case_passed']
+                   for a, b in zip(drift, repeats)), 'Same-runner parent is unstable'
+        data['same_runner_replay'] = {'drifted_task_ids': [r['id'] for r in drift],
+                                     'repeated_rows': repeats, 'stable': True}
+        save(path.name, data)
     if 'anchor_nll' not in data:
         data['anchor_nll'] = e.cr.likelihood(model, tok, e.DATA['anchors'], anchors=True)['mean_nll']
     data['status'] = 'complete'

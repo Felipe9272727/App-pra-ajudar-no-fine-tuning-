@@ -1,0 +1,104 @@
+[
+  {
+    "id": "v4_pt_en",
+    "domain": "language",
+    "question": "Traduza para inglês: \"A chave está debaixo da mesa.\" Responda apenas com a tradução.",
+    "answer": "The key is under the table.",
+    "aliases": [
+      "The key is underneath the table."
+    ],
+    "numeric": false
+  },
+  {
+    "id": "v4_en_pt",
+    "domain": "language",
+    "question": "Translate into Portuguese: \"We need clean water.\" Reply only with the translation.",
+    "answer": "Precisamos de água limpa.",
+    "aliases": [
+      "Nós precisamos de água limpa."
+    ],
+    "numeric": false
+  },
+  {
+    "id": "v4_antonym",
+    "domain": "language",
+    "question": "Qual é o antônimo de \"escasso\"? Responda apenas com uma palavra.",
+    "answer": "abundante",
+    "aliases": [
+      "farto"
+    ],
+    "numeric": false
+  },
+  {
+    "id": "v4_plural",
+    "domain": "language",
+    "question": "Escreva somente o plural da palavra portuguesa \"animal\".",
+    "answer": "animais",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "v4_fraction",
+    "domain": "reasoning",
+    "question": "A box has 24 marbles. One quarter are blue and half are red. The rest are green. How many are green? Reply only with the integer.",
+    "answer": "6",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "v4_order",
+    "domain": "reasoning",
+    "question": "Lia is older than Rui. Rui is older than Bia. Which of these three is the youngest? Reply only with the name.",
+    "answer": "Bia",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "v4_logic",
+    "domain": "reasoning",
+    "question": "Every dax is a wug. No wug is red. Can any dax be red? Reply only yes or no.",
+    "answer": "no",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "v4_clock",
+    "domain": "reasoning",
+    "question": "A meeting starts at 14:35 and lasts 50 minutes. At what time does it end? Reply only in HH:MM format.",
+    "answer": "15:25",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "v4_fact",
+    "domain": "general",
+    "question": "What is the chemical symbol for sodium? Reply only with the symbol.",
+    "answer": "Na",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "v4_geo",
+    "domain": "general",
+    "question": "Em qual continente fica o Peru? Responda apenas com o nome do continente.",
+    "answer": "América do Sul",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "v4_format",
+    "domain": "instruction",
+    "question": "Return exactly these three words in reverse order, separated by single spaces: stone river cloud",
+    "answer": "cloud river stone",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "v4_extract",
+    "domain": "instruction",
+    "question": "From the sentence \"The green boat crossed the quiet lake\", return only the color mentioned.",
+    "answer": "green",
+    "aliases": [],
+    "numeric": false
+  }
+]
