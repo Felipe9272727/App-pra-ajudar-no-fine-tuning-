@@ -3,6 +3,11 @@
 Nome: **liquid sense 0.8 b LOOP V3 NCM — EXPERIMENTO**.
 Esta branch não substitui nem promove o modelo da branch V2 em avaliação.
 
+**Resultado final: V3 0/47; pai V2 22/47; Qwen reconstruído 23/47.**
+O experimento foi preservado com seus pesos e falhas, sem promoção.
+Leia [RESULTADOS.md](RESULTADOS.md) para o protocolo, a limitação da referência
+reconstruída e todas as respostas brutas.
+
 ## O que foi implementado
 
 Adaptação experimental do mecanismo central NCM para respostas curtas:
@@ -84,6 +89,7 @@ python v3_experiment/evaluate.py develop
 python v3_experiment/evaluate.py heldout --variant qwen_original
 python v3_experiment/evaluate.py heldout --variant v2_parent
 python v3_experiment/evaluate.py heldout --variant v3_ncm
+python v3_experiment/summarize.py
 ```
 
 Não refaça a seleção após observar o teste. Os checkpoints incrementais,

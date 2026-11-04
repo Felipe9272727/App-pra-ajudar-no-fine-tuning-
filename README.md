@@ -4,6 +4,11 @@ Esta branch contém a V3 experimental, separada da V2 em avaliação.
 Protocolo e diferenças para o NCM oficial: [v3_experiment/README.md](v3_experiment/README.md).
 Estado retomável: `v3_experiment/status.json`. A V3 conserva SenseNova e Liquid.
 
+**Teste concluído: esta adaptação V3 falhou.** Em 47 perguntas novas, Qwen com
+tensores reconstruídos fez 23/47, o pai V2 fez 22/47 e a V3 fez 0/47, com 20
+respostas vazias. A V3 permanece somente como EXPERIMENTO, sem promoção.
+Resultados e limites: [v3_experiment/RESULTADOS.md](v3_experiment/RESULTADOS.md).
+
 Nome nominal da base: 0,8B. Híbrido ampliado: aproximadamente 1,02B parâmetros carregados.
 
 Novo piloto baseado em referências públicas de pesquisa automatizada: [LAB_METHODS.md](LAB_METHODS.md). SenseNova e componentes inspirados na Liquid devem permanecer ativos nas novas candidatas.

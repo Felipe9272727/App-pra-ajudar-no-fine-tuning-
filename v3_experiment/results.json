@@ -1,0 +1,182 @@
+{
+  "status": "EXPERIMENTO_COMPLETE",
+  "model_name": "liquid sense 0.8 b LOOP V3 NCM — EXPERIMENTO",
+  "scores": {
+    "qwen_original": {
+      "exact_correct": 23,
+      "content_correct": 23,
+      "total": 47,
+      "loaded_parameters": 852985920,
+      "byte_accuracy": 0.7046632124352331,
+      "peak_rss_mib": 2800.8671875,
+      "total_generation_seconds": 20.5345,
+      "mean_generation_seconds": 0.43690425531914895,
+      "empty_outputs": 0,
+      "by_family": {
+        "addition": {
+          "exact_correct": 5,
+          "total": 8
+        },
+        "lowercase": {
+          "exact_correct": 4,
+          "total": 4
+        },
+        "multiplication": {
+          "exact_correct": 5,
+          "total": 7
+        },
+        "python": {
+          "exact_correct": 0,
+          "total": 8
+        },
+        "reverse": {
+          "exact_correct": 1,
+          "total": 4
+        },
+        "sort": {
+          "exact_correct": 0,
+          "total": 4
+        },
+        "subtraction": {
+          "exact_correct": 5,
+          "total": 8
+        },
+        "uppercase": {
+          "exact_correct": 3,
+          "total": 4
+        }
+      },
+      "id": {
+        "exact_correct": 11,
+        "total": 23
+      },
+      "ood": {
+        "exact_correct": 12,
+        "total": 24
+      }
+    },
+    "v2_parent": {
+      "exact_correct": 22,
+      "content_correct": 22,
+      "total": 47,
+      "loaded_parameters": 1020252592,
+      "byte_accuracy": 0.6632124352331606,
+      "peak_rss_mib": 3069.71484375,
+      "total_generation_seconds": 62.9678,
+      "mean_generation_seconds": 1.339740425531915,
+      "empty_outputs": 0,
+      "by_family": {
+        "addition": {
+          "exact_correct": 5,
+          "total": 8
+        },
+        "lowercase": {
+          "exact_correct": 4,
+          "total": 4
+        },
+        "multiplication": {
+          "exact_correct": 6,
+          "total": 7
+        },
+        "python": {
+          "exact_correct": 0,
+          "total": 8
+        },
+        "reverse": {
+          "exact_correct": 0,
+          "total": 4
+        },
+        "sort": {
+          "exact_correct": 0,
+          "total": 4
+        },
+        "subtraction": {
+          "exact_correct": 5,
+          "total": 8
+        },
+        "uppercase": {
+          "exact_correct": 2,
+          "total": 4
+        }
+      },
+      "id": {
+        "exact_correct": 10,
+        "total": 23
+      },
+      "ood": {
+        "exact_correct": 12,
+        "total": 24
+      }
+    },
+    "v3_ncm": {
+      "exact_correct": 0,
+      "content_correct": 0,
+      "total": 47,
+      "loaded_parameters": 1021116466,
+      "byte_accuracy": 0.09844559585492228,
+      "peak_rss_mib": 2800.8671875,
+      "total_generation_seconds": 96.7885,
+      "mean_generation_seconds": 2.0593297872340424,
+      "empty_outputs": 20,
+      "by_family": {
+        "addition": {
+          "exact_correct": 0,
+          "total": 8
+        },
+        "lowercase": {
+          "exact_correct": 0,
+          "total": 4
+        },
+        "multiplication": {
+          "exact_correct": 0,
+          "total": 7
+        },
+        "python": {
+          "exact_correct": 0,
+          "total": 8
+        },
+        "reverse": {
+          "exact_correct": 0,
+          "total": 4
+        },
+        "sort": {
+          "exact_correct": 0,
+          "total": 4
+        },
+        "subtraction": {
+          "exact_correct": 0,
+          "total": 8
+        },
+        "uppercase": {
+          "exact_correct": 0,
+          "total": 4
+        }
+      },
+      "id": {
+        "exact_correct": 0,
+        "total": 23
+      },
+      "ood": {
+        "exact_correct": 0,
+        "total": 24
+      }
+    }
+  },
+  "data_sha256": "35c2c27866849981cb8420c89a06446236a713895a147ef881b95abd7d5d09c9",
+  "selected_head": "head_00",
+  "selection_used_test": false,
+  "reference_reconstructed": true,
+  "reference_probe": {
+    "original_recorded_nll": 0.4129200209863484,
+    "recovered_nll": 0.44317855313420296,
+    "mean_nll_delta": 0.030258532147854567,
+    "max_per_question_nll_delta": 0.10711824893951416,
+    "old_probe_only": true,
+    "v3_heldout_used": false,
+    "interpretation": "Recovered tensors are an algebraic reference. Safetensors file hash and old functional probe differ. Report this explicitly and compare all variants anew in the same environment.",
+    "matches_previous_host_within_0p02": false
+  },
+  "conclusion": "A V3 não superou o Qwen de referência neste conjunto. Não promover como melhoria geral.",
+  "backward_passes": 0,
+  "automatic_promotion": false
+}

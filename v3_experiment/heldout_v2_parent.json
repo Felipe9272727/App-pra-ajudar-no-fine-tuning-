@@ -1,0 +1,892 @@
+{
+  "variant": "v2_parent",
+  "data_sha256": "35c2c27866849981cb8420c89a06446236a713895a147ef881b95abd7d5d09c9",
+  "head_sha256": null,
+  "status": "complete",
+  "rows": [
+    {
+      "id": "heldout_sort_00",
+      "family": "sort",
+      "question": "Sort the letters of 'eiddb' alphabetically. Reply only with the resulting string.",
+      "answer": "bddei",
+      "numeric": false,
+      "ood": false,
+      "output": "ebdeid",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 3,
+      "byte_total": 6,
+      "seconds": 1.2932,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_multiplication_04",
+      "family": "multiplication",
+      "question": "Calculate 16 * 17. Reply only with the integer.",
+      "answer": "272",
+      "numeric": true,
+      "ood": true,
+      "output": "272",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.185,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_subtraction_05",
+      "family": "subtraction",
+      "question": "Calculate 570 - 351. Reply only with the integer.",
+      "answer": "219",
+      "numeric": true,
+      "ood": true,
+      "output": "219",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.135,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_python_07",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [19, 17, 15, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "875",
+      "numeric": true,
+      "ood": true,
+      "output": "19900000",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.3229,
+      "trace": {
+        "new_tokens": 8,
+        "hit_limit": true
+      }
+    },
+    {
+      "id": "heldout_reverse_02",
+      "family": "reverse",
+      "question": "Reverse the characters of 'vurk'. Reply only with the resulting string.",
+      "answer": "kruv",
+      "numeric": false,
+      "ood": true,
+      "output": "krcrvv",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 5,
+      "seconds": 1.5698,
+      "trace": {
+        "new_tokens": 5,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_addition_02",
+      "family": "addition",
+      "question": "Calculate 19 + 61. Reply only with the integer.",
+      "answer": "80",
+      "numeric": true,
+      "ood": false,
+      "output": "180",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 1.2935,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_python_01",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [5, 3, 8, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "83",
+      "numeric": true,
+      "ood": false,
+      "output": "140",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 1.5691,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_subtraction_06",
+      "family": "subtraction",
+      "question": "Calculate 735 - 238. Reply only with the integer.",
+      "answer": "497",
+      "numeric": true,
+      "ood": true,
+      "output": "147",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 4,
+      "seconds": 1.2158,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_lowercase_00",
+      "family": "lowercase",
+      "question": "Convert 'FGE' to lowercase. Reply only with the resulting string.",
+      "answer": "fge",
+      "numeric": false,
+      "ood": false,
+      "output": "fge",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.022,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_lowercase_01",
+      "family": "lowercase",
+      "question": "Convert 'ECB' to lowercase. Reply only with the resulting string.",
+      "answer": "ecb",
+      "numeric": false,
+      "ood": false,
+      "output": "ecb",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 0.9983,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_python_03",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 5, 8, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "106",
+      "numeric": true,
+      "ood": false,
+      "output": "100",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 3,
+      "byte_total": 4,
+      "seconds": 1.4797,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_addition_05",
+      "family": "addition",
+      "question": "Calculate 481 + 442. Reply only with the integer.",
+      "answer": "923",
+      "numeric": true,
+      "ood": true,
+      "output": "923",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.2187,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_multiplication_06",
+      "family": "multiplication",
+      "question": "Calculate 19 * 13. Reply only with the integer.",
+      "answer": "247",
+      "numeric": true,
+      "ood": true,
+      "output": "247",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.2297,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_lowercase_03",
+      "family": "lowercase",
+      "question": "Convert 'MRKZ' to lowercase. Reply only with the resulting string.",
+      "answer": "mrkz",
+      "numeric": false,
+      "ood": true,
+      "output": "mrkz",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 5,
+      "byte_total": 5,
+      "seconds": 1.2612,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_reverse_03",
+      "family": "reverse",
+      "question": "Reverse the characters of 'optw'. Reply only with the resulting string.",
+      "answer": "wtpo",
+      "numeric": false,
+      "ood": true,
+      "output": "wtoptw",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 5,
+      "seconds": 1.3687,
+      "trace": {
+        "new_tokens": 5,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_uppercase_03",
+      "family": "uppercase",
+      "question": "Convert 'ymm' to uppercase. Reply only with the resulting string.",
+      "answer": "YMM",
+      "numeric": false,
+      "ood": true,
+      "output": "YMMYMMYMMYMM",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 3,
+      "byte_total": 4,
+      "seconds": 2.1905,
+      "trace": {
+        "new_tokens": 8,
+        "hit_limit": true
+      }
+    },
+    {
+      "id": "heldout_addition_01",
+      "family": "addition",
+      "question": "Calculate 18 + 77. Reply only with the integer.",
+      "answer": "95",
+      "numeric": true,
+      "ood": false,
+      "output": "195",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 1.2141,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_addition_04",
+      "family": "addition",
+      "question": "Calculate 162 + 394. Reply only with the integer.",
+      "answer": "556",
+      "numeric": true,
+      "ood": true,
+      "output": "556",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.3997,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 7 * 7. Reply only with the integer.",
+      "answer": "49",
+      "numeric": true,
+      "ood": false,
+      "output": "49",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 3,
+      "byte_total": 3,
+      "seconds": 1.0511,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_subtraction_01",
+      "family": "subtraction",
+      "question": "Calculate 176 - 134. Reply only with the integer.",
+      "answer": "42",
+      "numeric": true,
+      "ood": false,
+      "output": "22",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 3,
+      "seconds": 1.0734,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_multiplication_07",
+      "family": "multiplication",
+      "question": "Calculate 14 * 17. Reply only with the integer.",
+      "answer": "238",
+      "numeric": true,
+      "ood": true,
+      "output": "238",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.263,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_lowercase_02",
+      "family": "lowercase",
+      "question": "Convert 'QQZZQ' to lowercase. Reply only with the resulting string.",
+      "answer": "qqzzq",
+      "numeric": false,
+      "ood": true,
+      "output": "qqzzq",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 6,
+      "byte_total": 6,
+      "seconds": 1.324,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_python_05",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [15, 14, 18, 19]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "586",
+      "numeric": true,
+      "ood": true,
+      "output": "1441\n",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.1827,
+      "trace": {
+        "new_tokens": 7,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [2, 2, 9, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "81",
+      "numeric": true,
+      "ood": false,
+      "output": "100",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 1.5029,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_subtraction_07",
+      "family": "subtraction",
+      "question": "Calculate 473 - 283. Reply only with the integer.",
+      "answer": "190",
+      "numeric": true,
+      "ood": true,
+      "output": "190",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.4058,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 50 - 29. Reply only with the integer.",
+      "answer": "21",
+      "numeric": true,
+      "ood": false,
+      "output": "21",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 3,
+      "byte_total": 3,
+      "seconds": 1.0098,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_sort_01",
+      "family": "sort",
+      "question": "Sort the letters of 'dhieh' alphabetically. Reply only with the resulting string.",
+      "answer": "dehhi",
+      "numeric": false,
+      "ood": false,
+      "output": "dhieh",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 6,
+      "seconds": 0.978,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_uppercase_00",
+      "family": "uppercase",
+      "question": "Convert 'dhgfh' to uppercase. Reply only with the resulting string.",
+      "answer": "DHGFH",
+      "numeric": false,
+      "ood": false,
+      "output": "DHGFHFH",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 5,
+      "byte_total": 6,
+      "seconds": 1.3808,
+      "trace": {
+        "new_tokens": 5,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_subtraction_04",
+      "family": "subtraction",
+      "question": "Calculate 750 - 569. Reply only with the integer.",
+      "answer": "181",
+      "numeric": true,
+      "ood": true,
+      "output": "181",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.1343,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_subtraction_03",
+      "family": "subtraction",
+      "question": "Calculate 165 - 36. Reply only with the integer.",
+      "answer": "129",
+      "numeric": true,
+      "ood": false,
+      "output": "129",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.2339,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_multiplication_01",
+      "family": "multiplication",
+      "question": "Calculate 9 * 5. Reply only with the integer.",
+      "answer": "45",
+      "numeric": true,
+      "ood": false,
+      "output": "45",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 3,
+      "byte_total": 3,
+      "seconds": 0.9464,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_sort_03",
+      "family": "sort",
+      "question": "Sort the letters of 'snss' alphabetically. Reply only with the resulting string.",
+      "answer": "nsss",
+      "numeric": false,
+      "ood": true,
+      "output": "ssns",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 3,
+      "byte_total": 5,
+      "seconds": 0.9896,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_addition_06",
+      "family": "addition",
+      "question": "Calculate 240 + 323. Reply only with the integer.",
+      "answer": "563",
+      "numeric": true,
+      "ood": true,
+      "output": "563",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.2229,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 99 - 67. Reply only with the integer.",
+      "answer": "32",
+      "numeric": true,
+      "ood": false,
+      "output": "22",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 3,
+      "seconds": 1.0218,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_python_04",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [10, 14, 18, 12]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "0",
+      "numeric": true,
+      "ood": true,
+      "output": "144",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 2,
+      "seconds": 1.4553,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_reverse_01",
+      "family": "reverse",
+      "question": "Reverse the characters of 'ceedi'. Reply only with the resulting string.",
+      "answer": "ideec",
+      "numeric": false,
+      "ood": false,
+      "output": "iicdeecce",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 6,
+      "seconds": 1.6839,
+      "trace": {
+        "new_tokens": 6,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_uppercase_01",
+      "family": "uppercase",
+      "question": "Convert 'bjiid' to uppercase. Reply only with the resulting string.",
+      "answer": "BJIID",
+      "numeric": false,
+      "ood": false,
+      "output": "BJIID",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 6,
+      "byte_total": 6,
+      "seconds": 1.4501,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_python_06",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [14, 17, 17, 14]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "578",
+      "numeric": true,
+      "ood": true,
+      "output": "144",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 4,
+      "seconds": 1.6724,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_uppercase_02",
+      "family": "uppercase",
+      "question": "Convert 'wslzs' to uppercase. Reply only with the resulting string.",
+      "answer": "WSLZS",
+      "numeric": false,
+      "ood": true,
+      "output": "WSLZS",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 6,
+      "byte_total": 6,
+      "seconds": 1.5642,
+      "trace": {
+        "new_tokens": 5,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_addition_00",
+      "family": "addition",
+      "question": "Calculate 24 + 88. Reply only with the integer.",
+      "answer": "112",
+      "numeric": true,
+      "ood": false,
+      "output": "112",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.2906,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_sort_02",
+      "family": "sort",
+      "question": "Sort the letters of 'xvl' alphabetically. Reply only with the resulting string.",
+      "answer": "lvx",
+      "numeric": false,
+      "ood": true,
+      "output": "xlv",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 4,
+      "seconds": 1.054,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_multiplication_05",
+      "family": "multiplication",
+      "question": "Calculate 13 * 14. Reply only with the integer.",
+      "answer": "182",
+      "numeric": true,
+      "ood": true,
+      "output": "198",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 4,
+      "seconds": 1.2406,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 8 * 6. Reply only with the integer.",
+      "answer": "48",
+      "numeric": true,
+      "ood": false,
+      "output": "48",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 3,
+      "byte_total": 3,
+      "seconds": 1.1129,
+      "trace": {
+        "new_tokens": 3,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [1, 5, 2, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "75",
+      "numeric": true,
+      "ood": false,
+      "output": "145",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 1.5817,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_reverse_00",
+      "family": "reverse",
+      "question": "Reverse the characters of 'ecd'. Reply only with the resulting string.",
+      "answer": "dce",
+      "numeric": false,
+      "ood": false,
+      "output": "dcececd",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 3,
+      "byte_total": 4,
+      "seconds": 1.4357,
+      "trace": {
+        "new_tokens": 5,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_addition_07",
+      "family": "addition",
+      "question": "Calculate 128 + 389. Reply only with the integer.",
+      "answer": "517",
+      "numeric": true,
+      "ood": true,
+      "output": "1517",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.4481,
+      "trace": {
+        "new_tokens": 5,
+        "hit_limit": false
+      }
+    },
+    {
+      "id": "heldout_addition_03",
+      "family": "addition",
+      "question": "Calculate 51 + 86. Reply only with the integer.",
+      "answer": "137",
+      "numeric": true,
+      "ood": false,
+      "output": "137",
+      "exact_correct": true,
+      "content_correct": true,
+      "byte_correct": 4,
+      "byte_total": 4,
+      "seconds": 1.291,
+      "trace": {
+        "new_tokens": 4,
+        "hit_limit": false
+      }
+    }
+  ],
+  "selection_uses_heldout": false,
+  "protocol": {
+    "cpu_threads": 8,
+    "backbone": "BF16",
+    "routers": "FP32",
+    "NCM_max_bytes": null,
+    "baseline_max_new_tokens": 8,
+    "decoding": "greedy autoregressive",
+    "inference_tools": false,
+    "thinking": false
+  },
+  "code_sha256": {
+    "runtime.py": "da7370c6fad0f3b9c74589e80b1bf3d444e0a52b4d3e66bb89c1109bf777be09",
+    "codec.py": "7113bbfe3b9dac53a13f0e8bd1212a3a1c0da26137b61ae123b7b03ab6f8d212",
+    "evaluate.py": "2b00d4ca702fc5651f77ca8ac4a32b363ae5bbd916f0840884a38c8d2e273a61"
+  },
+  "architecture": {
+    "physical_layers": 32,
+    "layer_executions": 56,
+    "mhc_streams": 2,
+    "second_visit_gain": 0.05000000074505806,
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "sliding_window": 256,
+    "window_layers": [
+      7,
+      15,
+      27
+    ],
+    "parameters": 1020252592,
+    "backward_passes": 0
+  },
+  "loaded_parameters": 1020252592,
+  "total": 47,
+  "exact_correct": 22,
+  "content_correct": 22,
+  "byte_accuracy": 0.6632124352331606,
+  "peak_rss_mib": 3069.71484375
+}

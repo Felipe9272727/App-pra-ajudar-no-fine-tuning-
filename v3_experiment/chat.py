@@ -1,8 +1,12 @@
 """Replay the saved V3 experiment without repeating its calibration."""
 import argparse
+import importlib.util
 import json
 from runtime import *
-from evaluate import make_experiment
+
+spec=importlib.util.spec_from_file_location('v3_evaluate_replay',HERE/'evaluate.py')
+evaluation=importlib.util.module_from_spec(spec);spec.loader.exec_module(evaluation)
+make_experiment=evaluation.make_experiment
 
 
 def main():
