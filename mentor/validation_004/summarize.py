@@ -99,7 +99,7 @@ def main():
         r=json.loads((ROOT/('mentor/recovery_004/development_'+k+'.json')).read_text())
         lines.append(f"| {k} | {sum(x['all_passed'] for x in r['rows'])}/16 | {sum(x['passed'] for x in r['rows'])}/81 | {sum(r['control_bits'])}/4 | {r['anchor_nll']:.9f} |")
     lines += ['', '## Validação independente congelada','',
-        '| Modelo | Tarefas | Casos | Fora da família de sobreposição | Próximas à hipótese | Controles | Limite de tokens |',
+        '| Modelo | Tarefas | Casos | Fora da família de sobreposição | Próximas à hipótese | Controles estritos | Limite de tokens |',
         '|---|---:|---:|---:|---:|---:|---:|']
     for k,s in scores.items():
         lines.append(f"| {k} | {s['all']['tasks_passed']}/24 | {s['all']['cases_passed']}/192 | {s['far']['tasks_passed']}/20 | {s['near']['tasks_passed']}/4 | {s['controls_correct']}/12 | {s['all']['hit_token_limit']} |")
@@ -121,6 +121,9 @@ def main():
          'preservar a candidata reconstruída e os resultados como experimento, sem promoção.'),'',
         'Critérios: '+json.dumps(checks,ensure_ascii=False)+'.','',
         'Limites: suíte customizada pequena, criada pelo mesmo assistente que conhece a hipótese; não é auditoria cega. '
+        'O controle de tradução contém um falso negativo conhecido: “Necessitamos de água limpa” é semanticamente '
+        'válido, mas não consta dos aliases congelados. Os escores automáticos e o gabarito não foram alterados; '
+        'uma mudança entre sinônimos válidos não demonstra ganho linguístico. '
         'Ausência de regressão nestes controles não prova preservação geral. Não é possível garantir novidade '
         'perante o pré-treino. Ganhos próximos ao problema editado podem ser especialização. Casos de uma mesma '
         'tarefa não são 192 observações independentes. Um IC bootstrap degenerado com todos os deltas zero '

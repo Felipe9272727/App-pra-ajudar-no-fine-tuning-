@@ -1,0 +1,16 @@
+{
+  "automated_scores_changed": false,
+  "oracles_or_aliases_changed_after_outputs": false,
+  "control_false_negatives_observed": [
+    {
+      "variant": "original",
+      "id": "v4_en_pt",
+      "output": "Necessitamos de água limpa.",
+      "automated_correct": false,
+      "semantic_review": "Valid translation of We need clean water. The preregistered finite exact-alias list omitted this synonym.",
+      "reviewer": "assistant, not a blinded independent reviewer",
+      "effect_on_gate": "none; frozen automatic scores remain unchanged"
+    }
+  ],
+  "interpretation": "Report strict-match controls separately from general language ability. Do not credit a change between equivalent translations as a genuine language gain. Other outputs are reviewed once all variants finish."
+}
