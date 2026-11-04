@@ -8,7 +8,15 @@
       "passes": 2,
       "changed_bf16_values": 3413590,
       "relative_frobenius": 0.02973232790827751,
-      "status": "awaiting_development"
+      "status": "development_complete",
+      "development": {
+        "tasks_passed": 6,
+        "tests_passed": 37,
+        "total": 8,
+        "controls_correct": 4,
+        "anchor_nll": 3.1747616728146872
+      },
+      "eligible": false
     },
     {
       "id": "edit_minus",
@@ -17,7 +25,15 @@
       "passes": 2,
       "changed_bf16_values": 3413571,
       "relative_frobenius": 0.0297283586114645,
-      "status": "awaiting_development"
+      "status": "development_complete",
+      "development": {
+        "tasks_passed": 6,
+        "tests_passed": 37,
+        "total": 8,
+        "controls_correct": 4,
+        "anchor_nll": 3.197652300198873
+      },
+      "eligible": false
     },
     {
       "id": "edit_plus_loop3",
@@ -26,7 +42,15 @@
       "passes": 3,
       "changed_bf16_values": 3413590,
       "relative_frobenius": 0.02973232790827751,
-      "status": "awaiting_development"
+      "status": "development_complete",
+      "development": {
+        "tasks_passed": 6,
+        "tests_passed": 37,
+        "total": 8,
+        "controls_correct": 4,
+        "anchor_nll": 3.179981787999471
+      },
+      "eligible": false
     },
     {
       "id": "edit_plus_loop4",
@@ -35,7 +59,15 @@
       "passes": 4,
       "changed_bf16_values": 3413590,
       "relative_frobenius": 0.02973232790827751,
-      "status": "awaiting_development"
+      "status": "development_complete",
+      "development": {
+        "tasks_passed": 6,
+        "tests_passed": 37,
+        "total": 8,
+        "controls_correct": 4,
+        "anchor_nll": 3.1845228473345437
+      },
+      "eligible": false
     }
   ],
   "selection_used_heldout": false

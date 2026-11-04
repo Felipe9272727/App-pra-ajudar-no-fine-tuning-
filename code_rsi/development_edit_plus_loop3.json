@@ -1,0 +1,228 @@
+{
+  "variant": "edit_plus_loop3",
+  "recipe": {
+    "gain": 0.05,
+    "beta": 0.0,
+    "liquid_mix": 1.0
+  },
+  "patch_sha256": "272f7907f3df0d0e6630849b4d7948011b77591231884aa4fc350cf68096fb37",
+  "changed_bf16_values": 3413590,
+  "architecture": {
+    "passes": 3,
+    "layer_executions": 80,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.949999988079071,
+      0.02500000037252903,
+      0.02500000037252903
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "local_window": 256,
+    "loaded_parameters": 1020252616,
+    "backward_passes": 0,
+    "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+  },
+  "cache_diagnostic": {
+    "max_abs_delta": 0.1875,
+    "same_top_token": true,
+    "passes": 3
+  },
+  "split": "development",
+  "status": "complete",
+  "data_sha256": "6f88b98fe7d57cb79e4f0ed5663a2eeb5cad9a400105b185a62c68d9751ae429",
+  "inference_code_sha256": {
+    "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+    "code_rsi/checkpoint_io.py": "5888ab3f8fc296e8e9c84ddec73bb9b72eac501fc3b84a6818949e2d52ef5873",
+    "code_rsi/sandbox.py": "eeebccb85200f8591d17a84336fc965083c069637a1bf81e52698772e3a34c15",
+    "code_rsi/loop_protocol.py": "c98ddd7e5596d8c315922ee93bda411188bb98b4b5fbdd84697a20dcbb058d76",
+    "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+    "modeling_sensenova_loop.py": "26e11d3522aa730c0ba031340ce42632bc2834da8cc0b6804006bb207d979a5b",
+    "rsi_cycle.py": "0bf4678c21fa14cc0687806fdb29e02bc9d9d754ae8821abf087acb865bd3e0a"
+  },
+  "protocol": {
+    "max_new_tokens": 160,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "pass_at_1": true,
+    "feedback_at_evaluation": false,
+    "sandbox_image": "python@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30",
+    "test_answers_in_prompt": false
+  },
+  "rows": [
+    {
+      "id": "sum_positive",
+      "output": "def solve(xs):\n    return sum(x for x in xs if x > 0)",
+      "new_tokens": 20,
+      "hit_limit": false,
+      "seconds": 6.991912911000014,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(xs):\n    return sum(x for x in xs if x > 0)"
+    },
+    {
+      "id": "rotate_right",
+      "output": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]",
+      "new_tokens": 43,
+      "hit_limit": false,
+      "seconds": 14.416315841999989,
+      "thinking": false,
+      "passed": 3,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]"
+    },
+    {
+      "id": "first_unique",
+      "output": "def solve(s):\n    count = {}\n    for char in s:\n        count[char] = count.get(char, 0) + 1\n    for char, count in count.items():\n        if count == 1:\n            return char\n    return \"\"",
+      "new_tokens": 59,
+      "hit_limit": false,
+      "seconds": 19.732290653999996,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(s):\n    count = {}\n    for char in s:\n        count[char] = count.get(char, 0) + 1\n    for char, count in count.items():\n        if count == 1:\n            return char\n    return \"\""
+    },
+    {
+      "id": "pair_count",
+      "output": "def solve(xs, target):\n    count = 0\n    for i in range(len(xs)):\n        for j in range(i + 1, len(xs)):\n            if xs[i] + xs[j] == target:\n                count += 1\n    return count",
+      "new_tokens": 59,
+      "hit_limit": false,
+      "seconds": 19.803780784999987,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(xs, target):\n    count = 0\n    for i in range(len(xs)):\n        for j in range(i + 1, len(xs)):\n            if xs[i] + xs[j] == target:\n                count += 1\n    return count"
+    },
+    {
+      "id": "char_counts",
+      "output": "def solve(s):\n    freq = {}\n    for char in s:\n        freq[char] = freq.get(char, 0) + 1\n    return freq",
+      "new_tokens": 37,
+      "hit_limit": false,
+      "seconds": 12.462656457999998,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(s):\n    freq = {}\n    for char in s:\n        freq[char] = freq.get(char, 0) + 1\n    return freq"
+    },
+    {
+      "id": "longest_run",
+      "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+      "new_tokens": 98,
+      "hit_limit": false,
+      "seconds": 32.736950232,
+      "thinking": false,
+      "passed": 4,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0"
+    },
+    {
+      "id": "binary_search",
+      "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1",
+      "new_tokens": 45,
+      "hit_limit": false,
+      "seconds": 15.16693249399998,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1"
+    },
+    {
+      "id": "flatten_once",
+      "output": "def solve(xss):\n    return [item for sublist in xss for item in sublist]",
+      "new_tokens": 21,
+      "hit_limit": false,
+      "seconds": 7.200497903999974,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(xss):\n    return [item for sublist in xss for item in sublist]"
+    }
+  ],
+  "tasks_passed": 6,
+  "tests_passed": 37,
+  "tests_total": 40,
+  "total": 8,
+  "failure_categories": {
+    "passed": 6,
+    "WrongReturnValue": 2
+  },
+  "controls_correct": 4,
+  "controls": {
+    "correct": 4,
+    "total": 4,
+    "rows": [
+      {
+        "id": "dev_0",
+        "question": "What is the chemical symbol for antimony? Reply only with the symbol.",
+        "answer": "Sb",
+        "aliases": [],
+        "numeric": false,
+        "output": "Sb\n",
+        "exact_correct": true,
+        "new_tokens": 5
+      },
+      {
+        "id": "dev_1",
+        "question": "What is the plural of child? Reply with one word.",
+        "answer": "children",
+        "aliases": [],
+        "numeric": false,
+        "output": "children",
+        "exact_correct": true,
+        "new_tokens": 2
+      },
+      {
+        "id": "dev_2",
+        "question": "What is the capital of Chile? Reply only with the city.",
+        "answer": "Santiago",
+        "aliases": [],
+        "numeric": false,
+        "output": "Santiago\n",
+        "exact_correct": true,
+        "new_tokens": 5
+      },
+      {
+        "id": "dev_3",
+        "question": "What organ pumps blood? Reply with one word.",
+        "answer": "heart",
+        "aliases": [],
+        "numeric": false,
+        "output": "heart",
+        "exact_correct": true,
+        "new_tokens": 2
+      }
+    ]
+  },
+  "anchor_nll": 3.179981787999471
+}
