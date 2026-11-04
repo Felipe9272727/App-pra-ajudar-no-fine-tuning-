@@ -1,0 +1,235 @@
+{
+  "variant": "baseline",
+  "recipe": {
+    "gain": 0.05,
+    "beta": 0.0,
+    "liquid_mix": 1.0
+  },
+  "patch_sha256": null,
+  "architecture": {
+    "passes": 2,
+    "layer_executions": 56,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.949999988079071,
+      0.05000000074505806
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "local_window": 256,
+    "loaded_parameters": 1020252592,
+    "backward_passes": 0,
+    "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+  },
+  "cache_diagnostic": {
+    "max_abs_delta": 0.1875,
+    "same_top_token": true,
+    "passes": 2
+  },
+  "split": "validation",
+  "status": "complete",
+  "data_sha256": "6f88b98fe7d57cb79e4f0ed5663a2eeb5cad9a400105b185a62c68d9751ae429",
+  "inference_code_sha256": {
+    "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+    "code_rsi/checkpoint_io.py": "5888ab3f8fc296e8e9c84ddec73bb9b72eac501fc3b84a6818949e2d52ef5873",
+    "code_rsi/sandbox.py": "eeebccb85200f8591d17a84336fc965083c069637a1bf81e52698772e3a34c15",
+    "code_rsi/loop_protocol.py": "c98ddd7e5596d8c315922ee93bda411188bb98b4b5fbdd84697a20dcbb058d76",
+    "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+    "modeling_sensenova_loop.py": "26e11d3522aa730c0ba031340ce42632bc2834da8cc0b6804006bb207d979a5b",
+    "rsi_cycle.py": "0bf4678c21fa14cc0687806fdb29e02bc9d9d754ae8821abf087acb865bd3e0a"
+  },
+  "protocol": {
+    "max_new_tokens": 160,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "pass_at_1": true,
+    "feedback_at_evaluation": false,
+    "sandbox_image": "python@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30",
+    "test_answers_in_prompt": false
+  },
+  "rows": [
+    {
+      "id": "divisible_sum",
+      "output": "def solve(xs, k):\n    return sum(x % k for x in xs if x % k == 0)",
+      "new_tokens": 26,
+      "hit_limit": false,
+      "seconds": 57.53466202000001,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(xs, k):\n    return sum(x % k for x in xs if x % k == 0)"
+    },
+    {
+      "id": "reverse_words",
+      "output": "def solve(s):\n    words = s.split()\n    return \" \".join(reversed(words))",
+      "new_tokens": 22,
+      "hit_limit": false,
+      "seconds": 49.76924928599999,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(s):\n    words = s.split()\n    return \" \".join(reversed(words))"
+    },
+    {
+      "id": "gcd",
+      "output": "def solve(a, b):\n    if a < 0 or b < 0:\n        raise ValueError(\"Both numbers must be nonnegative\")\n    while b:\n        a, b = b, a % b\n    return a",
+      "new_tokens": 52,
+      "hit_limit": false,
+      "seconds": 111.85142392699998,
+      "thinking": false,
+      "passed": 3,
+      "total": 5,
+      "all_passed": false,
+      "category": "ValueError",
+      "error_types": [
+        "ValueError"
+      ],
+      "code": "def solve(a, b):\n    if a < 0 or b < 0:\n        raise ValueError(\"Both numbers must be nonnegative\")\n    while b:\n        a, b = b, a % b\n    return a"
+    },
+    {
+      "id": "balanced",
+      "output": "def solve(s):\n    stack = []\n    for char in s:\n        if char == '(':\n            stack.append(char)\n        elif char == ')':\n            if not stack:\n                return False\n            stack.pop()\n        elif char == '[':\n            stack.append(char)\n        elif char == ']':\n            if not stack:\n                return False\n            stack.pop()\n        elif char == '{':\n            stack.append(char)\n        elif char == '}':\n            if not stack:\n                return False\n            stack.pop()\n    return len(stack) == 0",
+      "new_tokens": 131,
+      "hit_limit": false,
+      "seconds": 262.84840014499997,
+      "thinking": false,
+      "passed": 5,
+      "total": 6,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(s):\n    stack = []\n    for char in s:\n        if char == '(':\n            stack.append(char)\n        elif char == ')':\n            if not stack:\n                return False\n            stack.pop()\n        elif char == '[':\n            stack.append(char)\n        elif char == ']':\n            if not stack:\n                return False\n            stack.pop()\n        elif char == '{':\n            stack.append(char)\n        elif char == '}':\n            if not stack:\n                return False\n            stack.pop()\n    return len(stack) == 0"
+    },
+    {
+      "id": "transpose",
+      "output": "def solve(matrix):\n    if not matrix or not matrix[0]:\n        return []\n    rows = len(matrix)\n    cols = len(matrix[0])\n    result = []\n    for i in range(rows):\n        row = []\n        for j in range(cols):\n            row.append(matrix[i][j])\n        result.append(row)\n    return result",
+      "new_tokens": 81,
+      "hit_limit": false,
+      "seconds": 165.20192466800006,
+      "thinking": false,
+      "passed": 1,
+      "total": 4,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(matrix):\n    if not matrix or not matrix[0]:\n        return []\n    rows = len(matrix)\n    cols = len(matrix[0])\n    result = []\n    for i in range(rows):\n        row = []\n        for j in range(cols):\n            row.append(matrix[i][j])\n        result.append(row)\n    return result"
+    },
+    {
+      "id": "intersection",
+      "output": "def solve(a, b):\n    return sorted(set(a) & set(b))",
+      "new_tokens": 18,
+      "hit_limit": false,
+      "seconds": 42.1058500150001,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(a, b):\n    return sorted(set(a) & set(b))"
+    },
+    {
+      "id": "second_largest",
+      "output": "def solve(xs):\n    if len(xs) < 2:\n        return None\n    distinct = sorted(list(set(xs)))\n    if len(distinct) < 2:\n        return None\n    return distinct[1]",
+      "new_tokens": 50,
+      "hit_limit": false,
+      "seconds": 104.657005734,
+      "thinking": false,
+      "passed": 4,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(xs):\n    if len(xs) < 2:\n        return None\n    distinct = sorted(list(set(xs)))\n    if len(distinct) < 2:\n        return None\n    return distinct[1]"
+    },
+    {
+      "id": "merge_sorted",
+      "output": "def solve(a, b):\n    merged = []\n    i = 0\n    j = 0\n    while i < len(a) and j < len(b):\n        if a[i] < b[j]:\n            merged.append(a[i])\n            i += 1\n        else:\n            merged.append(b[j])\n            j += 1\n    return merged",
+      "new_tokens": 82,
+      "hit_limit": false,
+      "seconds": 167.10842835899996,
+      "thinking": false,
+      "passed": 1,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(a, b):\n    merged = []\n    i = 0\n    j = 0\n    while i < len(a) and j < len(b):\n        if a[i] < b[j]:\n            merged.append(a[i])\n            i += 1\n        else:\n            merged.append(b[j])\n            j += 1\n    return merged"
+    }
+  ],
+  "tasks_passed": 2,
+  "tests_passed": 26,
+  "tests_total": 40,
+  "total": 8,
+  "failure_categories": {
+    "WrongReturnValue": 5,
+    "passed": 2,
+    "ValueError": 1
+  },
+  "controls_correct": 4,
+  "controls": {
+    "correct": 4,
+    "total": 4,
+    "rows": [
+      {
+        "id": "val_4",
+        "question": "What is the chemical symbol for copper? Reply only with the symbol.",
+        "answer": "Cu",
+        "aliases": [],
+        "numeric": false,
+        "output": "Cu",
+        "exact_correct": true,
+        "new_tokens": 2
+      },
+      {
+        "id": "val_5",
+        "question": "What is the plural of mouse? Reply with one word.",
+        "answer": "mice",
+        "aliases": [],
+        "numeric": false,
+        "output": "mice",
+        "exact_correct": true,
+        "new_tokens": 3
+      },
+      {
+        "id": "val_6",
+        "question": "What is the capital of Estonia? Reply only with the city.",
+        "answer": "Tallinn",
+        "aliases": [],
+        "numeric": false,
+        "output": "Tallinn",
+        "exact_correct": true,
+        "new_tokens": 4
+      },
+      {
+        "id": "val_7",
+        "question": "How many sides does a triangle have? Reply with an integer.",
+        "answer": "3",
+        "aliases": [],
+        "numeric": true,
+        "output": "3",
+        "exact_correct": true,
+        "new_tokens": 2
+      }
+    ]
+  },
+  "anchor_nll": 3.1809088389078775
+}

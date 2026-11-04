@@ -1,0 +1,13 @@
+{
+  "data_sha256": "6f88b98fe7d57cb79e4f0ed5663a2eeb5cad9a400105b185a62c68d9751ae429",
+  "selected": null,
+  "selection_used_heldout": false,
+  "final_variants": [
+    "original",
+    "baseline"
+  ],
+  "selected_patch_sha256": null,
+  "frozen_unix": 1793811774.6421015,
+  "architecture_required": "SenseNova loop/mHC + Liquid-inspired active",
+  "reason": "no weight edit demonstrated transferable gain; keep incumbent"
+}

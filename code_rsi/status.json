@@ -1,5 +1,5 @@
 {
-  "status": "awaiting_validation",
+  "status": "frozen_before_final_test",
   "model_name": "liquid sense 0.8 b LOOP",
   "focus": "Python coding with execution feedback",
   "base_commit": "cd8cb5826ac17100cb0960d428389a3d714d5417",
@@ -11,7 +11,7 @@
   "architecture_can_be_disabled": false,
   "last_failed_run": 41863829379,
   "last_failure": "missing checkpoint parent directory",
-  "updated_unix": 1793810552.2009828,
+  "updated_unix": 1793811774.6463768,
   "candidates_saved": 4,
   "validation_queue": []
 }
