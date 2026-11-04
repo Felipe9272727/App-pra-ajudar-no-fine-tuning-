@@ -1,5 +1,5 @@
 {
-  "status": "migrated_to_local",
+  "status": "local_environment_prepared",
   "rounds_completed": 30,
   "round_budget": 100,
   "accepted_rounds": 0,
@@ -14,7 +14,8 @@
   "parent_commit": "155a8f54102d674db32431264cdc1f76aeaa56e9",
   "updated_unix": 1793822976.693,
   "current_round": null,
-  "last_interruption": "same checkpoint changed flatten_once outcomes across runners; no round 31 decision",
+  "last_interruption": "remote worker intentionally canceled before local migration; round 31 has no saved decision",
   "execution_target_branch": "codex/liquid-sense-local-cpu-20261104",
-  "remote_run_cancelled": 41894078717
+  "remote_run_cancelled": 41894078717,
+  "local_session": "local-cpu-20261104-1793823039702"
 }

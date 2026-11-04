@@ -68,3 +68,23 @@
   validação e teste não podem participar das 100 decisões de busca.
 - Workflow `.github/workflows/liquid-sense-rsi100.yml` aguarda o anterior para
   respeitar o limite de quatro máquinas. Não disparar outra cópia em paralelo.
+
+## Local CPU continuation
+
+- Active continuation: branch codex/liquid-sense-local-cpu-20261104. The remote
+  search and its waiting follow-on were canceled before local weight search.
+- Local environment: CPU quota 8, RAM 8 GiB, no GPU. Use FOUR inference threads:
+  three unchanged tasks took 33.028s at 4 versus 34.163s at 8, identical outputs.
+- Retain direct algebraic weight edits only, both architectural components, the
+  paired AND historical acceptance gates, and unseen validation/final isolation.
+- local_cpu/controller.py runs the existing engine through local_cpu/runner.py.
+  Generated code uses the same AST judge in a credential-free subprocess with
+  capability clearing, deny-by-default seccomp and finite CPU/memory limits.
+  This is a distinct execution environment, not a Docker run.
+- local_cpu/publisher.py pauses after every completed decision. The assistant's
+  local_cpu/coordinator.js uses connected GitHub tools, verifies branch SHA and
+  acknowledges only after durable commit. Never claim unsaved rounds or gains.
+- Runtime credentials must not be given to the model process. Do not duplicate
+  a round already saved. Runtime scratch/cache files are not durable checkpoints.
+- The finite continuation ends after 100 rounds, fresh validation and original
+  versus hybrid final evaluation; it is not autonomous recursive self-improvement.

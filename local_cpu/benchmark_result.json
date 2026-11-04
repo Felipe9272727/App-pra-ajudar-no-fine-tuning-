@@ -1,0 +1,80 @@
+{
+  "source_commit": "e5cbbc4b26cd2660d4ac50c3fffcc583fe35d468",
+  "checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "backward_passes": 0,
+  "kind": "generation speed only; no correctness score or weight selection",
+  "architecture": {
+    "passes": 2,
+    "layer_executions": 56,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.949999988079071,
+      0.05000000074505806
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "local_window": 256,
+    "loaded_parameters": 1020252592,
+    "backward_passes": 0,
+    "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+  },
+  "runs": [
+    {
+      "threads": 4,
+      "id": "sum_abs",
+      "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+      "new_tokens": 29,
+      "hit_limit": false,
+      "seconds": 8.19327501600003,
+      "thinking": false
+    },
+    {
+      "threads": 4,
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+      "new_tokens": 72,
+      "hit_limit": false,
+      "seconds": 18.84249602700004,
+      "thinking": false
+    },
+    {
+      "threads": 4,
+      "id": "flatten_once",
+      "output": "def solve(xss):\n    return [item for sublist in xss for item in sublist]",
+      "new_tokens": 21,
+      "hit_limit": false,
+      "seconds": 5.992587628000024,
+      "thinking": false
+    },
+    {
+      "threads": 8,
+      "id": "sum_abs",
+      "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+      "new_tokens": 29,
+      "hit_limit": false,
+      "seconds": 8.289834379000013,
+      "thinking": false
+    },
+    {
+      "threads": 8,
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+      "new_tokens": 72,
+      "hit_limit": false,
+      "seconds": 20.09310228600009,
+      "thinking": false
+    },
+    {
+      "threads": 8,
+      "id": "flatten_once",
+      "output": "def solve(xss):\n    return [item for sublist in xss for item in sublist]",
+      "new_tokens": 21,
+      "hit_limit": false,
+      "seconds": 5.779584702999955,
+      "thinking": false
+    }
+  ],
+  "load_seconds": 3.244160645000079,
+  "max_rss_kib": 2716504
+}

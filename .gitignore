@@ -11,3 +11,8 @@ lab_rsi/*_cache.pt
 ci_output/
 code_ci_output/
 rsi100_output/
+local_cpu/launch.json
+local_cpu/pending_publish.json
+local_cpu/publish_ack.json
+local_cpu/controller_failure.json
+local_cpu/runtime.log

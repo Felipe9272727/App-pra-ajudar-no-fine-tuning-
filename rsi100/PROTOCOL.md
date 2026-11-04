@@ -109,3 +109,18 @@ passe ambos os gates pode atualizar a referência e os pesos. Isso impede tanto
 creditar ganho da máquina quanto promover apenas a recuperação de perda da máquina.
 As novas regras são registradas antes de retomar a rodada 31 e não reclassificam
 rodadas antigas. O teste final permanece fechado e as arquiteturas/edições iguais.
+
+## Local CPU execution handoff
+
+Remote run 41894078717 and waiting follow-on 41894167794 were explicitly canceled
+before local search. Continue from the last saved checkpoint on the separate
+local CPU branch; original and best weights and all 30 decisions are preserved.
+The data, mutation seeds, 2/3/4 positive visits, active Liquid operators, greedy
+160-token limit, and strict paired/historical reward gates are unchanged. Local
+code execution uses the same AST/case judge under capability-cleared seccomp,
+with filesystem opens, network/process syscalls denied and CPU/RAM limits. This
+is explicitly a new execution environment, so recalibrate locally before edits.
+Four threads were selected after a 4/8 comparison on three observed search tasks
+(33.028s/34.163s, identical outputs); this small timing test is not an intelligence
+benchmark. Each decision pauses until the assistant verifies its GitHub commit.
+The local session is transient; durable progress is the verified Git head.
