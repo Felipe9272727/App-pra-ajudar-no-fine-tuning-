@@ -1,3 +1,22 @@
+# liquid sense 0.8 b LOOP — 100 tentativas com descarte de pioras
+
+Pedido atual: 100 rodadas de busca direta em pesos, sem gradientes. Cada tentativa
+parte do melhor checkpoint. Pioras e empates são descartados; o melhor é restaurado
+após cada avaliação e salvo no Git. Não são 100 passagens internas do decoder.
+O híbrido SenseNova + Liquid permanece ativo com 2/3/4 passagens internas.
+
+- [Protocolo de aceitação e limites](rsi100/PROTOCOL.md)
+- [Estado real e contador](rsi100/status.json)
+- [Execução](.github/workflows/liquid-sense-rsi100.yml)
+- [Relatório ao concluir](RSI100_REPORT.md)
+
+A busca repetida usa explicitamente tarefas observadas como currículo. Validação
+e teste novos medem transferência; o teste final não escolhe pesos. É adaptação
+por busca com recompensa, não prova de autonomia ou de ser o melhor modelo pequeno.
+A execução espera a avaliação anterior terminar antes de consumir novas CPUs.
+
+---
+
 # liquid sense 0.8 b LOOP — programação e loops experimentais
 
 Pedido atual: melhorar programação por edição direta dos pesos e feedback de

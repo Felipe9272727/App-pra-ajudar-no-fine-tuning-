@@ -1,0 +1,13 @@
+{
+  "round_budget": 100,
+  "chunk_size": 10,
+  "seed": 20261104100,
+  "parent_commit": "155a8f54102d674db32431264cdc1f76aeaa56e9",
+  "wait_for_prior_run": 41865344082,
+  "internal_passes": [
+    2,
+    3,
+    4
+  ],
+  "interpretation": "100 forward-only weight-search rounds, not 100 repeated decoder passes"
+}

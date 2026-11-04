@@ -55,3 +55,16 @@
 - Não afirmar causa interna única a partir de correlação de ativações.
 - Código gerado só roda no executor isolado; não dar credenciais nem montagens.
 - Não alegar melhor modelo pequeno com este piloto customizado.
+
+## Pedido mais recente: 100 tentativas com rollback
+
+- Branch `codex/liquid-sense-rsi100-20261104`; estado em `rsi100/status.json`.
+  Leia `rsi100/PROTOCOL.md`, `best_metrics.json` e `frozen.json` quando existirem.
+- São 100 rodadas de busca por recompensa sem gradientes, não 100 passagens
+  internas. O bloco continua com 2/3/4 passagens positivas e Liquid ativo.
+- Descartar candidatas com qualquer perda de casos corretos ou qualidade medida.
+  Restaurar o melhor peso e preservar sua cópia, com commit após cada decisão.
+- O currículo observado pode ser otimizado repetidamente; novos conjuntos de
+  validação e teste não podem participar das 100 decisões de busca.
+- Workflow `.github/workflows/liquid-sense-rsi100.yml` aguarda o anterior para
+  respeitar o limite de quatro máquinas. Não disparar outra cópia em paralelo.

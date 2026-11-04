@@ -54,19 +54,20 @@ def execute_payload(payload):
     env={'__builtins__':{k:getattr(builtins,k) for k in BUILTINS}}
     try:exec(compile(tree,'<candidate>','exec'),env)
     except Exception as e:return {'passed':0,'total':total,'all_passed':False,'category':type(e).__name__}
-    passed=0;errors=[]
+    passed=0;errors=[];case_passed=[]
     for case in cases:
         try:
             args=json.loads(json.dumps(case['args']))
             actual=env['solve'](*args)
             # Match JSON return conventions; do not award arbitrary truthy values.
             actual=json.loads(json.dumps(actual,allow_nan=False))
-            if same_value(actual,case['expected']):passed+=1
+            ok=same_value(actual,case['expected']);case_passed.append(ok)
+            if ok:passed+=1
             else:errors.append('WrongReturnValue')
-        except Exception as e:errors.append(type(e).__name__)
+        except Exception as e:errors.append(type(e).__name__);case_passed.append(False)
     return {'passed':passed,'total':total,'all_passed':passed==total,
         'category':'passed' if passed==total else (errors[0] if errors else 'WrongReturnValue'),
-        'error_types':sorted(set(errors))}
+        'error_types':sorted(set(errors)),'case_passed':case_passed}
 
 
 def evaluate(text,task):

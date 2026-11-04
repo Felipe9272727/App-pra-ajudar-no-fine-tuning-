@@ -1,0 +1,15 @@
+{
+  "status": "prepared",
+  "rounds_completed": 0,
+  "round_budget": 100,
+  "accepted_rounds": 0,
+  "rejected_rounds": 0,
+  "best_round": 0,
+  "model_name": "liquid sense 0.8 b LOOP",
+  "model_process_active": false,
+  "final_test_evaluated": false,
+  "selected": null,
+  "backward_passes": 0,
+  "process_continues_in_background": false,
+  "parent_commit": "155a8f54102d674db32431264cdc1f76aeaa56e9"
+}
