@@ -519,10 +519,264 @@
         true
       ],
       "code": "def solve(records):\n    return sorted(records, key=lambda x: (-x[1], x[0]))"
+    },
+    {
+      "id": "v4_numeric_motif",
+      "group": "near",
+      "output": "def solve(xs, motif):\n    count = 0\n    i = 0\n    while i < len(xs) - len(motif) + 1:\n        if xs[i:i+len(motif)] == motif:\n            count += 1\n            i += len(motif)\n        else:\n            i += 1\n    return count",
+      "new_tokens": 80,
+      "hit_limit": false,
+      "seconds": 25.331247171000086,
+      "thinking": false,
+      "passed": 4,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(xs, motif):\n    count = 0\n    i = 0\n    while i < len(xs) - len(motif) + 1:\n        if xs[i:i+len(motif)] == motif:\n            count += 1\n            i += len(motif)\n        else:\n            i += 1\n    return count"
+    },
+    {
+      "id": "v4_overlap_coverage",
+      "group": "near",
+      "output": "def solve(s, sub):\n    result = [False] * len(s)\n    for i in range(len(sub)):\n        for j in range(len(s)):\n            if s[j] == sub[i] and j >= i:\n                result[j - i] = True\n    return result",
+      "new_tokens": 64,
+      "hit_limit": false,
+      "seconds": 20.108057476999875,
+      "thinking": false,
+      "passed": 3,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(s, sub):\n    result = [False] * len(s)\n    for i in range(len(sub)):\n        for j in range(len(s)):\n            if s[j] == sub[i] and j >= i:\n                result[j - i] = True\n    return result"
+    },
+    {
+      "id": "v4_suffix_prefix",
+      "group": "near",
+      "output": "def solve(a, b):\n    if len(a) < len(b):\n        return 0\n    if len(b) < len(a):\n        return 0\n    k = min(len(a), len(b))\n    for i in range(k):\n        if a[i] == b[i]:\n            k += 1\n    return k",
+      "new_tokens": 76,
+      "hit_limit": false,
+      "seconds": 24.37842865100015,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(a, b):\n    if len(a) < len(b):\n        return 0\n    if len(b) < len(a):\n        return 0\n    k = min(len(a), len(b))\n    for i in range(k):\n        if a[i] == b[i]:\n            k += 1\n    return k"
+    },
+    {
+      "id": "v4_wildcard_windows",
+      "group": "near",
+      "output": "def solve(s, pattern):\n    n = len(pattern)\n    if n == 0:\n        return 0\n    if n > len(s):\n        return 0\n    count = 0\n    i = 0\n    while i < len(s) - n + 1:\n        j = i + n\n        if s[i:j] == pattern:\n            count += 1\n        else:\n            i = j\n    return count",
+      "new_tokens": 102,
+      "hit_limit": false,
+      "seconds": 31.922476726000014,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "ResourceLimit",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(s, pattern):\n    n = len(pattern)\n    if n == 0:\n        return 0\n    if n > len(s):\n        return 0\n    count = 0\n    i = 0\n    while i < len(s) - n + 1:\n        j = i + n\n        if s[i:j] == pattern:\n            count += 1\n        else:\n            i = j\n    return count"
     }
   ],
-  "controls": [],
-  "repeats": [],
+  "controls": [
+    {
+      "id": "v4_pt_en",
+      "domain": "language",
+      "output": "The key is under the table.",
+      "new_tokens": 8,
+      "hit_limit": false,
+      "seconds": 3.357555515000058,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_en_pt",
+      "domain": "language",
+      "output": "Precisamos de água limpa.",
+      "new_tokens": 9,
+      "hit_limit": false,
+      "seconds": 3.6418943339999714,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_antonym",
+      "domain": "language",
+      "output": "exigente",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.8788507610001943,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_plural",
+      "domain": "language",
+      "output": "animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais",
+      "new_tokens": 32,
+      "hit_limit": true,
+      "seconds": 11.732797635999987,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_fraction",
+      "domain": "reasoning",
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.8921936619999542,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_order",
+      "domain": "reasoning",
+      "output": "Rui",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.6411289289999331,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_logic",
+      "domain": "reasoning",
+      "output": "no",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.5124278529999629,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_clock",
+      "domain": "reasoning",
+      "output": "14:45",
+      "new_tokens": 6,
+      "hit_limit": false,
+      "seconds": 2.796114679000084,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_fact",
+      "domain": "general",
+      "output": "Na",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.2907894880002004,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_geo",
+      "domain": "general",
+      "output": "América do Sul",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.175389546000133,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_format",
+      "domain": "instruction",
+      "output": "cloud river stone stone\n",
+      "new_tokens": 7,
+      "hit_limit": false,
+      "seconds": 2.751255748000176,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_extract",
+      "domain": "instruction",
+      "output": "green",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.41120110199995,
+      "thinking": false,
+      "correct": true
+    }
+  ],
+  "repeats": [
+    {
+      "id": "v4_interval_union",
+      "output": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort(key=lambda x: x[0])\n    total = 0.0\n    for a, b in intervals:\n        if a > b:\n            continue\n        total += b - a\n    return total",
+      "new_tokens": 69,
+      "hit_limit": false,
+      "seconds": 22.222955292999814,
+      "thinking": false,
+      "passed": 4,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort(key=lambda x: x[0])\n    total = 0.0\n    for a, b in intervals:\n        if a > b:\n            continue\n        total += b - a\n    return total",
+      "identical": true
+    }
+  ],
   "frozen_sha256": "bffac8f483863225e85774320a5301b26b70db9ab096f78de287d51fdbffdb46",
   "backward_passes": 0,
   "answers_in_generation_prompts": false,
