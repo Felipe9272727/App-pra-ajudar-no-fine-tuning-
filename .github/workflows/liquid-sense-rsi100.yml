@@ -80,11 +80,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 10).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 1-10; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 1 --stop 10
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 1 --stop 10
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-10
@@ -107,11 +117,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 20).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 11-20; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 11 --stop 20
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 11 --stop 20
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-20
@@ -134,11 +154,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 30).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 21-30; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 21 --stop 30
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 21 --stop 30
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-30
@@ -161,11 +191,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 40).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 31-40; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 31 --stop 40
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 31 --stop 40
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-40
@@ -188,11 +228,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 50).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 41-50; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 41 --stop 50
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 41 --stop 50
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-50
@@ -215,11 +265,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 60).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 51-60; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 51 --stop 60
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 51 --stop 60
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-60
@@ -242,11 +302,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 70).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 61-70; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 61 --stop 70
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 61 --stop 70
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-70
@@ -269,11 +339,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 80).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 71-80; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 71 --stop 80
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 71 --stop 80
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-80
@@ -296,11 +376,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 90).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 81-90; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 81 --stop 90
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 81 --stop 90
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-90
@@ -323,11 +413,21 @@ jobs:
         fetch-depth: 0
     - name: Check immutable source and checkpoint owner
       run: python rsi100/publish.py guard
+    - name: Skip rounds already committed
+      id: resume
+      run: |
+        python - <<'PYRESUME' >> "$GITHUB_OUTPUT"
+        import json
+        done=json.load(open('rsi100/status.json'))['rounds_completed']
+        print('needed='+str(done < 100).lower())
+        PYRESUME
     - uses: ./.github/actions/liquid-runtime
+      if: steps.resume.outputs.needed == 'true'
       with:
         model-assets: 'true'
     - name: Attempt rounds 91-100; discard regressions and restore incumbent
-      run: python rsi100/engine.py chunk --start 91 --stop 100
+      if: steps.resume.outputs.needed == 'true'
+      run: python rsi100/watchdog.py chunk --start 91 --stop 100
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
       with:
         name: rsi100-chunk-100

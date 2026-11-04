@@ -1,5 +1,8 @@
 """One hundred finite forward-only weight-search rounds, with strict rollback."""
-import argparse,copy,json,os,sys,time
+import argparse,copy,json,os,sys,time,faulthandler,signal
+faulthandler.enable()
+faulthandler.register(signal.SIGUSR1, all_threads=True)
+from diagnostics import call
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];HERE=ROOT/'rsi100'
 sys.path.insert(0,str(ROOT/'code_rsi'))
@@ -19,7 +22,8 @@ def state(**kw):
  p=HERE/'status.json';j=json.loads(p.read_text());j.update(kw);j['updated_unix']=time.time();save('status.json',j)
 def provenance():
  return {'data_sha256':DATA_HASH,'source_commit':os.environ.get('GITHUB_SHA'),
-  'code_sha256':{str(p.relative_to(ROOT)):cr.file_hash(p) for p in [HERE/'engine.py',HERE/'mutation.py',HERE/'policy.py',ROOT/'code_rsi/runtime.py',ROOT/'code_rsi/sandbox.py',ROOT/'v2_adaptation/native_runtime.py']},
+  'code_sha256':{str(p.relative_to(ROOT)):cr.file_hash(p) for p in [HERE/'engine.py',HERE/'diagnostics.py',HERE/'watchdog.py',HERE/'publish.py',HERE/'mutation.py',HERE/'policy.py',ROOT/'code_rsi/runtime.py',ROOT/'code_rsi/sandbox.py',ROOT/'v2_adaptation/native_runtime.py']},
+  'execution_watchdog':'phase journal + separate process-group supervisor; timeouts do not score candidates',
   'protocol':{'max_new_tokens':160,'greedy':True,'feedback_at_evaluation':False,'cpu_threads':4,'code_image':os.environ.get('CODE_IMAGE')}}
 def snapshot(model):
  text=model.model.language_model
@@ -40,8 +44,8 @@ def apply(model,checkpoint):
 def coding(model,tok,rows):
  out=[]
  for task in rows:
-  generated=cr.generate(model,tok,task['prompt']);generated.pop('trace')
-  result=cr.evaluate(generated['output'],task)
+  generated=call('generate:'+task['id'],cr.generate,model,tok,task['prompt']);generated.pop('trace')
+  result=call('execute:'+task['id'],cr.evaluate,generated['output'],task,budget=60)
   bits=result.get('case_passed',[False]*len(task['cases']))
   assert len(bits)==len(task['cases']) and sum(bits)==result['passed']
   out.append({'id':task['id'],**generated,**result,'case_passed':bits})
@@ -51,16 +55,16 @@ def coding(model,tok,rows):
 def quality(model,tok,rows):
  results=[]
  for row in rows:
-  out=cr.generate(model,tok,row['question'],max_tokens=32);ok,_=cr.grade(out['output'],row)
+  out=call('control:'+row['id'],cr.generate,model,tok,row['question'],max_tokens=32);ok,_=cr.grade(out['output'],row)
   results.append({'id':row['id'],'output':out['output'],'correct':ok})
  return results
 @torch.inference_mode()
 def full_score(model,tok):
  rows=coding(model,tok,DATA['search']+DATA['guard'])
- controls=quality(model,tok,DATA['search_controls']);anchor=cr.likelihood(model,tok,DATA['anchors'],anchors=True)['mean_nll']
+ controls=quality(model,tok,DATA['search_controls']);anchor=call('anchor_likelihood',cr.likelihood,model,tok,DATA['anchors'],anchors=True,budget=240)['mean_nll']
  return {'rows':rows,'control_bits':[x['correct'] for x in controls],'controls':controls,'anchor_nll':anchor,**provenance()}
 def read_checkpoint(name):
- path=CK/name;payload=torch.load(path,weights_only=True);assert payload['data_sha256']==DATA_HASH;return payload
+ path=CK/name;payload=call('checkpoint_load:'+name,torch.load,path,weights_only=True);assert payload['data_sha256']==DATA_HASH;return payload
 
 def export(stage):
  import shutil
@@ -78,15 +82,17 @@ def chunk(start,stop):
  status=json.loads((HERE/'status.json').read_text());done=status['rounds_completed']
  if done>=stop:print('CHUNK_ALREADY_SAVED',done);return
  assert start-1<=done<stop
- model,_=cr.load('baseline');tok=cr.tokenizer();fresh=False
+ model,_=call('model_load',cr.load,'baseline',budget=300);tok=call('tokenizer_load',cr.tokenizer);fresh=False
  if not (CK/'baseline.pt').exists():
   base=snapshot(model);tensor_checkpoint(base,CK/'baseline.pt');tensor_checkpoint(base,CK/'best.pt')
   measured=full_score(model,tok);fresh=True;save('baseline_metrics.json',measured);save('best_metrics.json',measured)
   state(status='initialized',model_process_active=False,best_round=0)
-  pub.publish('save initial active hybrid and reward baseline')
- baseline=read_checkpoint('baseline.pt');best=read_checkpoint('best.pt');apply(model,best)
+  call('publish',pub.publish,'save initial active hybrid and reward baseline')
+ baseline=read_checkpoint('baseline.pt');best=read_checkpoint('best.pt');call('restore_incumbent',apply,model,best)
  # Recalibrate on this runner. Never credit hardware changes as improvements.
+ print('BASELINE_REPLAY_START',done,flush=True)
  prior=measured if fresh else full_score(model,tok)
+ print('BASELINE_REPLAY_END',done,flush=True)
  saved=json.loads((HERE/'best_metrics.json').read_text())
  assert flatten(prior['rows'])==flatten(saved['rows']) and prior['control_bits']==saved['control_bits'],'Incumbent changed outcomes across runners; stop'
  save('best_metrics.json',prior)
@@ -94,9 +100,9 @@ def chunk(start,stop):
  tasks={r['id']:r for r in DATA['search']+DATA['guard']}
  for number in range(done+1,stop+1):
   state(status='searching',model_process_active=True,current_round=number)
-  proposal,metadata=propose(best,baseline,direction,number,DATA['seed'])
-  arch=apply(model,proposal)
-  if proposal['passes']!=best['passes']:cr.cache_check(model,tok,proposal['passes'])
+  proposal,metadata=call('propose:'+str(number),propose,best,baseline,direction,number,DATA['seed'])
+  arch=call('apply_candidate:'+str(number),apply,model,proposal)
+  if proposal['passes']!=best['passes']:call('cache_check:'+str(number),cr.cache_check,model,tok,proposal['passes'])
   hard=[r['id'] for r in prior['rows'] if not r['all_passed']] or list(tasks)
   keys=[hard[(number-1)%len(hard)]]
   if len(hard)>1:keys.append(hard[number%len(hard)])
@@ -115,27 +121,27 @@ def chunk(start,stop):
     best=proposal;prior=measured;save('best_metrics.json',measured)
   # Bad and tied proposals never enter the deployed checkpoint or Git weights.
   # Restore even after success, so the replay path is exercised every round.
-  apply(model,best);del proposal
+  call('restore_incumbent',apply,model,best);del proposal
   save(f'round_{number:03d}.json',record)
   state(status='round_saved',rounds_completed=number,best_round=best['round'],
     accepted_rounds=sum(json.loads(p.read_text())['accepted'] for p in HERE.glob('round_*.json')),
     rejected_rounds=number-sum(json.loads(p.read_text())['accepted'] for p in HERE.glob('round_*.json')),
     model_process_active=False,current_round=None)
-  pub.publish(f'round {number:03d} '+('accept' if record['accepted'] else 'reject and restore best'))
+  call('publish',pub.publish,f'round {number:03d} '+('accept' if record['accepted'] else 'reject and restore best'))
   print('ROUND',number,'ACCEPT' if record['accepted'] else 'REJECT',record['reason'],flush=True)
  state(status='search_complete' if stop==100 else 'awaiting_next_chunk',model_process_active=False)
- pub.publish(f'chunk through round {stop:03d} complete')
+ call('publish',pub.publish,f'chunk through round {stop:03d} complete')
  export(f'chunk-{stop}')
 
 @torch.inference_mode()
 def freeze():
  status=json.loads((HERE/'status.json').read_text());assert status['rounds_completed']==100
  assert not (HERE/'frozen.json').exists()
- model,_=cr.load('baseline');tok=cr.tokenizer();results={}
+ model,_=call('model_load',cr.load,'baseline',budget=300);tok=call('tokenizer_load',cr.tokenizer);results={}
  for variant in ['baseline','best']:
   checkpoint=read_checkpoint(variant+'.pt');apply(model,checkpoint)
   rows=coding(model,tok,DATA['validation']);controls=quality(model,tok,DATA['controls']['val'])
-  anchors=cr.likelihood(model,tok,DATA['anchors'],anchors=True)['mean_nll']
+  anchors=call('anchor_likelihood',cr.likelihood,model,tok,DATA['anchors'],anchors=True,budget=240)['mean_nll']
   results[variant]={'rows':rows,'control_bits':[x['correct'] for x in controls],'controls':controls,'anchor_nll':anchors,**provenance()}
   save('validation_'+variant+'.json',results[variant])
  a,b=results['baseline'],results['best']
@@ -149,7 +155,7 @@ def freeze():
   'selection_used_heldout':False,'data_sha256':DATA_HASH,'frozen_unix':time.time(),
   'reason':'new validation confirms pass-at-one gain and no regression' if promoted else 'search changes did not pass fresh transfer gate; deploy baseline'})
  state(status='frozen_for_final',selected='best' if promoted else 'baseline',model_process_active=False)
- pub.publish('freeze transfer decision before final test');export('frozen')
+ call('publish',pub.publish,'freeze transfer decision before final test');export('frozen')
 
 @torch.inference_mode()
 def final(variant,shard):

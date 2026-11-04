@@ -86,3 +86,7 @@ minúsculo; não contam como as 100 tentativas nem como resultados de inteligên
 Artefatos duram três dias, enquanto commits guardam o progresso. Logs não são
 pesos rejeitados. Não alterar fonte durante o fluxo; o guard bloqueia mudanças
 concorrentes. Para retomar, verificar commits e estado antes de repetir trabalho.
+
+## Operational recovery 001
+
+Resume after saved round 30. No data, mutation or scoring changes. Per-generation limit 180s, execution 60s, model loading 300s, anchor scoring 240s, publication 180s; total chunk 3600s. External watchdog terminates stalled process groups and exports diagnostics. Timeout is an infrastructure failure, never a rejected candidate. Git commands have a 60s deadline; uncertain pushes are verified without blind retry. Previous checkpoint ownership is explicitly handed off in recovery_001.json; all saved rounds and weights remain intact.

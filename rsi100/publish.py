@@ -2,7 +2,8 @@
 import json,os,re,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];BRANCH='codex/liquid-sense-rsi100-20261104'
-def git(*a):return subprocess.check_output(['git',*a],cwd=ROOT,text=True).strip()
+def git(*a):
+ return subprocess.check_output(['git',*a],cwd=ROOT,text=True,timeout=60,env={**os.environ,'GIT_TERMINAL_PROMPT':'0'}).strip()
 def allowed(p):return bool(p=='RSI100_REPORT.md' or re.fullmatch(r'rsi100/(?:status|progress|best_metrics|baseline_metrics|frozen|summary|validation_[a-z0-9_]+|final_[a-z0-9_]+|round_\d{3})\.json',p) or re.fullmatch(r'rsi100/checkpoints/(?:baseline|best|accepted_\d{3})\.pt',p))
 def guard():
  git('merge-base','--is-ancestor',os.environ['GITHUB_SHA'],'HEAD')
@@ -17,7 +18,14 @@ def publish(phase):
  paths=sorted(p for p in paths if allowed(p))
  if not paths:return
  git('config','user.name','github-actions[bot]');git('config','user.email','41898282+github-actions[bot]@users.noreply.github.com')
- git('add','--',*paths);git('commit','-m','RSI100: '+phase);git('push','origin','HEAD:refs/heads/'+BRANCH)
+ git('add','--',*paths);git('commit','-m','RSI100: '+phase)
+ local=git('rev-parse','HEAD')
+ try:git('push','origin','HEAD:refs/heads/'+BRANCH)
+ except (subprocess.TimeoutExpired,subprocess.CalledProcessError):
+  # An interrupted response can conceal a successful push. Verify before
+  # declaring failure; never repeat an uncertain mutation or force a ref.
+  remote=git('ls-remote','origin','refs/heads/'+BRANCH).split()[0]
+  if remote!=local:raise
  print('SAVED',phase,git('rev-parse','HEAD'),flush=True)
 if __name__=='__main__':
  import sys

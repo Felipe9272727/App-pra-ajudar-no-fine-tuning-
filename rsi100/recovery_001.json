@@ -1,0 +1,20 @@
+{
+  "previous_run": 41875261527,
+  "previous_head": "1f6eaa7d42af04d53f748f0dbf50b3c4fecf624f",
+  "resume_after": 30,
+  "reason": "block 31-40 made no durable progress for over 50 minutes; internal cause not yet known",
+  "preserved": [
+    "all completed round records",
+    "baseline and best checkpoints",
+    "data and mutation rules",
+    "acceptance criteria"
+  ],
+  "changes": [
+    "per-operation wall-clock journal",
+    "external watchdog and stack dump",
+    "60-second Git timeout and uncertain push verification",
+    "skip completed chunks",
+    "explicit checkpoint-owner handoff"
+  ],
+  "timeouts": "infrastructure failure; no acceptance/rejection or counter increment"
+}
