@@ -52,7 +52,7 @@ def main():
     for c in archive['candidates']:
         d=c['development_generation'];val=c.get('validation');vt=f"{val['exact_correct']}/{val['total']}" if val else 'Não elegível'
         lines.append(f"| {c['step']} | {c['weight_write']['changed_bf16_values']} | {d['exact_correct']}/{d['total']} | {c['anchor']['mean_nll']:.5f} | {vt} | {c.get('passes_validation',False)} |")
-    lines+=['','As duas melhores candidatas elegíveis em desenvolvimento foram à validação. '
+    lines+=['','Somente candidatas elegíveis em desenvolvimento podem seguir à validação, no máximo duas. '
         'Promoção exige mais respostas exatas e nenhuma perda agregada nos controles não numéricos. '
         'As âncoras limitam especialização, mas não provam preservação geral. O teste final foi aberto somente após congelar a escolha.','',
         '## Arquitetura e limites','',

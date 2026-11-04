@@ -31,7 +31,7 @@ Nenhuma edição nova passou; o híbrido ativo foi preservado.
 | 2 | 3234082 | 13/24 | 3.18593 | Não elegível | False |
 | 3 | 3297389 | 12/24 | 3.18352 | Não elegível | False |
 
-As duas melhores candidatas elegíveis em desenvolvimento foram à validação. Promoção exige mais respostas exatas e nenhuma perda agregada nos controles não numéricos. As âncoras limitam especialização, mas não provam preservação geral. O teste final foi aberto somente após congelar a escolha.
+Nenhuma candidata foi elegível em desenvolvimento neste ciclo; a validação executou somente a base híbrida. Promoção exige mais respostas exatas e nenhuma perda agregada nos controles não numéricos. As âncoras limitam especialização, mas não provam preservação geral. O teste final foi aberto somente após congelar a escolha.
 
 ## Arquitetura e limites
 
