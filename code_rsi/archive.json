@@ -9,6 +9,15 @@
       "changed_bf16_values": 3413590,
       "relative_frobenius": 0.02973232790827751,
       "status": "awaiting_development"
+    },
+    {
+      "id": "edit_minus",
+      "patch": "code_rsi/checkpoints/edit_minus.pt",
+      "patch_sha256": "4ba69dac5ecb48e6a51d600378501c2dc5e057ecf68a85bc49f32f88e646a8d8",
+      "passes": 2,
+      "changed_bf16_values": 3413571,
+      "relative_frobenius": 0.0297283586114645,
+      "status": "awaiting_development"
     }
   ],
   "selection_used_heldout": false
