@@ -1,16 +1,17 @@
 {
-  "status": "prepared_waiting_for_rsi100",
+  "status": "prepared_waiting_for_local_rsi100",
   "model_name": "liquid sense 0.8 b LOOP",
   "model_process_active": false,
   "final_test_evaluated": false,
   "selected": null,
   "backward_passes": 0,
-  "parent_search_run": 41894078717,
+  "parent_search_run": null,
   "layers": [
     5,
     13,
     25,
     31
   ],
-  "channels_per_intervention": 64
+  "channels_per_intervention": 64,
+  "parent_search_branch": "codex/liquid-sense-local-cpu-20261104"
 }

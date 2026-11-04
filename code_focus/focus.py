@@ -24,7 +24,7 @@ def export(stage,weights=False):
    q=OUT/stage/p.relative_to(ROOT);q.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,q)
 def import_parent():
  # Read only the frozen selection, never use the preceding final-test scores.
- branch='refs/heads/codex/liquid-sense-rsi100-20261104'
+ branch='refs/heads/codex/liquid-sense-local-cpu-20261104'
  subprocess.run(['git','fetch','origin',branch],check=True)
  commit=subprocess.check_output(['git','rev-parse','FETCH_HEAD'],text=True).strip()
  frozen=json.loads(subprocess.check_output(['git','show','FETCH_HEAD:rsi100/frozen.json']))
