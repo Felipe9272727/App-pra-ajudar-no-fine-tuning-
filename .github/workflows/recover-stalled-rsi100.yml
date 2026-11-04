@@ -1,0 +1,49 @@
+name: Recover stalled experiment runs
+'on':
+  push:
+    branches: [codex/recover-stalled-rsi100-20261104]
+    paths: [.github/workflows/recover-stalled-rsi100.yml]
+permissions:
+  contents: read
+  actions: write
+jobs:
+  cancel_old_runs:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+    - name: Stop only superseded executions and verify termination
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        python - <<'PY'
+        import json,os,time,urllib.request,urllib.error
+        base='https://api.github.com/repos/Felipe9272727/App-pra-ajudar-no-fine-tuning-/actions/runs/'
+        expected={
+          41875261527:('codex/liquid-sense-rsi100-20261104','d9deee7ade993c4c711b9108a3f49880f776ae6b'),
+          41883759264:('codex/liquid-sense-code-focus-20261104','8159f9a36063d327bfa7ff5b9d9c1a2a175d1280'),
+        }
+        def req(run,method='GET',suffix=''):
+          headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'liquid-sense-recovery'}
+          request=urllib.request.Request(base+str(run)+suffix,headers=headers,method=method)
+          with urllib.request.urlopen(request,timeout=30) as r:
+            data=r.read()
+            return json.loads(data) if data else None
+        for run,(branch,sha) in expected.items():
+          before=req(run)
+          assert (before['head_branch'],before['head_sha'])==(branch,sha),'Unexpected run identity'
+          if before['status']=='completed':
+            print('ALREADY_TERMINAL',run,before['conclusion'],flush=True)
+            continue
+          try:req(run,'POST','/force-cancel')
+          except urllib.error.HTTPError as e:
+            if e.code not in (400,409):raise
+            assert req(run)['status']=='completed','Cancellation was rejected'
+          print('FORCE_CANCEL_REQUESTED',run,flush=True)
+        for _ in range(12):
+          states={run:req(run) for run in expected}
+          print('OLD_RUN_STATES',{run:(j['status'],j['conclusion']) for run,j in states.items()},flush=True)
+          if all(j['status']=='completed' for j in states.values()):break
+          time.sleep(10)
+        else:raise RuntimeError('Superseded execution has not reached terminal state')
+        PY
