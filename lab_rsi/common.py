@@ -1,6 +1,7 @@
 """Shared protocol and strict active-architecture checks for the new pilot."""
 import hashlib
 import collections
+import os
 import json
 from pathlib import Path
 import re
@@ -24,7 +25,9 @@ from modeling_sensenova_loop import execution_plan
 DATA=json.loads((HERE/'data.json').read_text())
 DATA_HASH=hashlib.sha256((HERE/'data.json').read_bytes()).hexdigest()
 RECIPE={'gain':0.05,'beta':0.,'liquid_mix':1.}
-torch.set_num_threads(8)
+CPU_THREADS=int(os.environ.get('LS_CPU_THREADS','8'))
+assert 1<=CPU_THREADS<=32
+torch.set_num_threads(CPU_THREADS)
 torch.set_grad_enabled(False)
 
 
@@ -60,6 +63,7 @@ def architecture_check(model):
 
 def load_hybrid():
     model=load_port(ROOT,True);apply_recipe(model,RECIPE)
+    torch.set_num_threads(CPU_THREADS)
     architecture_check(model)
     return model
 
@@ -154,7 +158,7 @@ def generate_rows(model,tok,rows,path,metadata):
         'inference_code_sha256':{str(p.relative_to(ROOT)):file_hash(p) for p in [
             HERE/'common.py',ROOT/'v2_adaptation/native_runtime.py',ROOT/'modeling_sensenova_loop.py',ROOT/'rsi_cycle.py']},
         'protocol':{'max_new_tokens':12,'greedy':True,'thinking':False,'use_cache':True,
-                    'cpu_threads':8,'backbone':'BF16','routers':'FP32','inference_tools':False,
+                    'cpu_threads':torch.get_num_threads(),'backbone':'BF16','routers':'FP32','inference_tools':False,
                     'batching':'at most 4 prompts with exactly the same token length; no padding'}}
     if previous:
         assert previous['data_sha256']==DATA_HASH

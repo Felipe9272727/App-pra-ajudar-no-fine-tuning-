@@ -8,3 +8,4 @@ sensenova_port/
 lab_rsi/features.pt
 lab_rsi/last_mlp_prior.pt
 lab_rsi/*_cache.pt
+ci_output/

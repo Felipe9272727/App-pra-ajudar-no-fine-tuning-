@@ -1,0 +1,8 @@
+{
+  "request": 1,
+  "purpose": "Resume saved direct-weight pilot on standard public GitHub runners",
+  "max_parallel_evaluation_machines": 4,
+  "cpu_threads_per_machine": 4,
+  "paid_or_larger_runners": false,
+  "keep_sensenova_and_liquid_active": true
+}

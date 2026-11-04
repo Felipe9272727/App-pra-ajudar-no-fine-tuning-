@@ -4,6 +4,9 @@ Nome nominal da base: 0,8B. Híbrido ampliado: aproximadamente 1,02B parâmetros
 
 Novo piloto baseado em referências públicas de pesquisa automatizada: [LAB_METHODS.md](LAB_METHODS.md). SenseNova e componentes inspirados na Liquid devem permanecer ativos nas novas candidatas.
 
+Execução paralela do novo piloto em CPUs padrão do GitHub: [GITHUB_ACTIONS.md](GITHUB_ACTIONS.md).
+Estado atual do novo piloto: `lab_rsi/status.json`. O primeiro piloto abaixo é histórico.
+
 ## Primeiro piloto concluído
 
 Código, estado retomável, patch de calibração e seis rodadas reais salvos. Nenhuma das seis candidatas de RSI venceu o critério de desenvolvimento; o checkpoint foi preservado.

@@ -1,5 +1,5 @@
 {
-  "status": "development_evaluation",
+  "status": "github_workflow_prepared",
   "model_display_name": "liquid sense 0.8 b LOOP",
   "branch": "codex/liquid-sense-loop-lab-pilot-20261103",
   "parent_commit": "cbdead4d6e07b17232361d3550bf2b263fdd4cd1",
@@ -20,5 +20,14 @@
   "updated_unix": 1793745891.5530674,
   "train_examples_done": 96,
   "candidates_fitted": 5,
-  "evaluating_candidate": "candidate_03"
+  "evaluating_candidate": null,
+  "model_process_active": false,
+  "execution_plan": {
+    "runner": "ubuntu-24.04",
+    "cpu_threads_per_job": 4,
+    "max_parallel_evaluation_jobs": 4,
+    "paid_runners": false,
+    "workflow": ".github/workflows/liquid-sense-benchmark.yml"
+  },
+  "recovery_note": "Temporary execution environment reset; five saved weight deltas and two completed development measurements recovered from Git. No new final-test answers observed."
 }

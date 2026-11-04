@@ -86,9 +86,11 @@ def main():
         '- O corpo continua com dimensões/pesos Qwen. Não são os pesos do SenseNova-Loop-9B nem o LFM3 completo. Roteadores mHC permanecem na inicialização; oito camadas inseridas têm saída neutra neste perfil.',
         '- O nome nominal 0,8B vem da base. O híbrido ampliado carrega aproximadamente 1,02B parâmetros, incluindo visão não avaliada aqui.','',
         '## Protocolo, limites e reprodução','',
-        'Greedy sem thinking, até 12 tokens de resposta, cache, BF16/FP32, oito threads CPU. '
+        f"Greedy sem thinking, até 12 tokens de resposta, cache, BF16/FP32, {reports['original']['protocol']['cpu_threads']} threads CPU por máquina. "
         'Até quatro prompts de comprimento idêntico por lote, sem padding, com a mesma organização nos modelos. '
-        'O híbrido executa mais camadas que o original; o orçamento de computação é maior.','',
+        'O híbrido executa mais camadas que o original; o orçamento de computação é maior. '
+        'No GitHub, cada modelo usa as mesmas duas partições e a mesma organização de lotes; '
+        'o hardware físico entre runners pode variar.','',
         '| Modelo | Parâmetros carregados | Tempo amortizado de geração, 64 perguntas | Respostas no limite de 12 tokens |',
         '|---|---:|---:|---:|']
     for key,s in summary.items():

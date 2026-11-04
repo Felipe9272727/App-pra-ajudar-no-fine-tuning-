@@ -23,3 +23,8 @@
   como inspiração compatível, não como o modelo Liquid completo.
 - Campos `pending` e `status` devem refletir a execução real; não afirmar que um
   processo continua rodando depois de encerrado.
+- O fluxo GitHub está em `.github/workflows/liquid-sense-benchmark.yml`.
+  Use somente runners padrão públicos, até quatro máquinas de avaliação,
+  quatro threads por máquina. Não habilitar cobrança ou runners maiores.
+- Leia os jobs/artifacts antes de retomar um fluxo incerto. Depois de congelar
+  e observar o teste, não reabra a seleção com esse mesmo teste.
