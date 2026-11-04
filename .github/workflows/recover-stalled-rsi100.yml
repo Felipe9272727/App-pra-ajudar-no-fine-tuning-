@@ -21,7 +21,7 @@ jobs:
         base='https://api.github.com/repos/Felipe9272727/App-pra-ajudar-no-fine-tuning-/actions/runs/'
         expected={
           41894078717:('codex/liquid-sense-rsi100-20261104','fea546fb0701a4c93c65bbf2eb8588e6578aaf8a'),
-          41894167794:('codex/liquid-sense-code-focus-20261104','31d7ccac6981bb4ba8a7e375a91572fc86fa5987'),
+          41904469034:('codex/liquid-sense-code-focus-20261104','a80af910a79b5312b709a955e8ff8bab026c7fdf'),
         }
         def req(run,method='GET',suffix=''):
           headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'liquid-sense-recovery'}
