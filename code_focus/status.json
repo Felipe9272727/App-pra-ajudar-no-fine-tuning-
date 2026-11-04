@@ -1,5 +1,5 @@
 {
-  "status": "prepared_waiting_for_local_rsi100",
+  "status": "paused_for_assistant_guided_research",
   "model_name": "liquid sense 0.8 b LOOP",
   "model_process_active": false,
   "final_test_evaluated": false,
@@ -13,5 +13,7 @@
     31
   ],
   "channels_per_intervention": 64,
-  "parent_search_branch": "codex/liquid-sense-local-cpu-20261104"
+  "parent_search_branch": "codex/liquid-sense-mentor-20261104",
+  "waiting_run_cancelled": 41904469034,
+  "pause_reason": "User requested assistant-authored causal weight research; legacy fixed search paused after 31 decisions"
 }
