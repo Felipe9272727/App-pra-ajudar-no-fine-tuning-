@@ -1,8 +1,8 @@
 {
   "experiment": "activation-localized coding intervention",
   "seed": 20261104201,
-  "wait_for_rsi100": 41891071593,
+  "wait_for_rsi100": 41894078717,
   "reference_answers_in_prompts": false,
   "gradient_updates": false,
-  "dependency_recovery": 2
+  "dependency_recovery": 3
 }
