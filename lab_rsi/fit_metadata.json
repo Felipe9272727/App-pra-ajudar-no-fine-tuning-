@@ -1,0 +1,40 @@
+{
+  "method": "iterative first-error RMSNorm margin + closed-form ridge; dense BF16 writes",
+  "training_examples": 224,
+  "backward_passes": 0,
+  "rounds_completed": 1,
+  "data_sha256": "b8353a9d288f2818ee17f3bc6ee77cf4cce0d915505bf7434b2d58780be31735",
+  "architecture": {
+    "physical_layers": 32,
+    "layer_executions": 56,
+    "mhc_streams": 2,
+    "second_visit_gain": 0.05000000074505806,
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "sliding_window": 256,
+    "window_layers": [
+      7,
+      15,
+      27
+    ],
+    "parameters": 1020252592,
+    "backward_passes": 0
+  },
+  "protocol": {
+    "controller": "assistant-defined bounded iterative weight editing, not autonomous RSI",
+    "rounds": 3,
+    "ridge": 0.05,
+    "margin": 1.5,
+    "hidden_residual_cap": 0.1,
+    "step_norm_cap": 0.02,
+    "cumulative_norm_cap": 0.04,
+    "anchor_weight": 4.0,
+    "correction": "first incorrect next token including EOS; preserve earlier correct tokens and generic anchors",
+    "selection": "top two by development exact answers, with strict improvement and anchor NLL <= 110% of baseline; validation exact must strictly improve and nonnumeric exact must not fall",
+    "heldout_used_for_selection": false,
+    "prior_questions_excluded": 429,
+    "max_new_tokens": 12,
+    "original_reference": "canonical pinned upstream weights, not V3 reconstruction",
+    "benchmark_limit": "custom task templates, no claim of general capability improvement"
+  }
+}

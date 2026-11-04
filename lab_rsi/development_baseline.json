@@ -1,0 +1,227 @@
+{
+  "answer": {
+    "mean_answer_nll": 1.1157558493626614,
+    "mean_eos_nll": 0.23504560774320757,
+    "mean_answer_token_accuracy": 0.6736111119389534,
+    "rows": [
+      {
+        "id": "development_uppercase_000",
+        "answer_nll": 0.24493026733398438,
+        "eos_nll": 0.058925412595272064,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_sort_000",
+        "answer_nll": 2.4555504322052,
+        "eos_nll": 0.016499502584338188,
+        "teacher_forced_answer_token_accuracy": 0.3333333432674408
+      },
+      {
+        "id": "development_subtraction_002",
+        "answer_nll": 0.29840266704559326,
+        "eos_nll": 0.00034814971149899065,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_addition_000",
+        "answer_nll": 0.07878325879573822,
+        "eos_nll": 0.00020561488054227084,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_lowercase_000",
+        "answer_nll": 0.36190858483314514,
+        "eos_nll": 0.0009808497270569205,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_multiplication_001",
+        "answer_nll": 1.0244237184524536,
+        "eos_nll": 0.00828626286238432,
+        "teacher_forced_answer_token_accuracy": 0.3333333432674408
+      },
+      {
+        "id": "development_subtraction_000",
+        "answer_nll": 0.1681590974330902,
+        "eos_nll": 0.0005998004344291985,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_uppercase_001",
+        "answer_nll": 0.18405504524707794,
+        "eos_nll": 0.01695319078862667,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_lowercase_001",
+        "answer_nll": 0.3183276951313019,
+        "eos_nll": 0.0018619834445416927,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_multiplication_000",
+        "answer_nll": 0.03556989133358002,
+        "eos_nll": 0.0006039702566340566,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_subtraction_001",
+        "answer_nll": 0.466952919960022,
+        "eos_nll": 0.005593481939285994,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_reverse_001",
+        "answer_nll": 4.136718273162842,
+        "eos_nll": 1.9263514280319214,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_general_003",
+        "answer_nll": 1.3686867952346802,
+        "eos_nll": 0.03072403185069561,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_sort_001",
+        "answer_nll": 2.1139981746673584,
+        "eos_nll": 0.03050401620566845,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_general_000",
+        "answer_nll": 0.017155935987830162,
+        "eos_nll": 0.014838917180895805,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_general_001",
+        "answer_nll": 0.33581966161727905,
+        "eos_nll": 0.03683215007185936,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_multiplication_002",
+        "answer_nll": 0.055618271231651306,
+        "eos_nll": 0.0018724543042480946,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_python_000",
+        "answer_nll": 2.7414791584014893,
+        "eos_nll": 0.07309532165527344,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_python_002",
+        "answer_nll": 2.27470064163208,
+        "eos_nll": 0.44960054755210876,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_reverse_000",
+        "answer_nll": 3.1457931995391846,
+        "eos_nll": 2.8592610359191895,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_general_002",
+        "answer_nll": 1.899034023284912,
+        "eos_nll": 0.0026169123593717813,
+        "teacher_forced_answer_token_accuracy": 0.5
+      },
+      {
+        "id": "development_addition_002",
+        "answer_nll": 0.027398062869906425,
+        "eos_nll": 0.0003507714136503637,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_addition_001",
+        "answer_nll": 0.2190677672624588,
+        "eos_nll": 0.003071236191317439,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_python_001",
+        "answer_nll": 2.8056068420410156,
+        "eos_nll": 0.10111754387617111,
+        "teacher_forced_answer_token_accuracy": 0.0
+      }
+    ]
+  },
+  "anchors": {
+    "mean_nll": 3.1809088389078775,
+    "rows": [
+      {
+        "nll": 2.1649465560913086,
+        "tokens": 8
+      },
+      {
+        "nll": 3.759136915206909,
+        "tokens": 8
+      },
+      {
+        "nll": 2.502558469772339,
+        "tokens": 8
+      },
+      {
+        "nll": 4.084253787994385,
+        "tokens": 8
+      },
+      {
+        "nll": 3.760953187942505,
+        "tokens": 8
+      },
+      {
+        "nll": 2.3381688594818115,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6469037532806396,
+        "tokens": 8
+      },
+      {
+        "nll": 3.6348793506622314,
+        "tokens": 8
+      },
+      {
+        "nll": 2.665140390396118,
+        "tokens": 8
+      },
+      {
+        "nll": 3.718648910522461,
+        "tokens": 8
+      },
+      {
+        "nll": 2.7955820560455322,
+        "tokens": 8
+      },
+      {
+        "nll": 4.099733829498291,
+        "tokens": 8
+      }
+    ]
+  },
+  "generation": {
+    "exact_correct": 13,
+    "content_correct": 13,
+    "total": 24
+  },
+  "architecture": {
+    "physical_layers": 32,
+    "layer_executions": 56,
+    "mhc_streams": 2,
+    "second_visit_gain": 0.05000000074505806,
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "sliding_window": 256,
+    "window_layers": [
+      7,
+      15,
+      27
+    ],
+    "parameters": 1020252592,
+    "backward_passes": 0
+  }
+}

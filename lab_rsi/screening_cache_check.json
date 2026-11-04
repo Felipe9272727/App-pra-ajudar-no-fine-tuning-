@@ -1,0 +1,4 @@
+{
+  "max_logit_delta": 0.0,
+  "final_generation_uses_full_model": true
+}
