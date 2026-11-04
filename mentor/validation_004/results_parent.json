@@ -210,6 +210,191 @@
         false,
         false
       ]
+    },
+    {
+      "id": "v4_max_pair_product",
+      "group": "far",
+      "output": "def solve(xs):\n    if len(xs) < 2:\n        return None\n    max_prod = 0\n    for i in range(len(xs)):\n        for j in range(i + 1, len(xs)):\n            prod = xs[i] * xs[j]\n            if prod > max_prod:\n                max_prod = prod\n    return max_prod",
+      "new_tokens": 79,
+      "hit_limit": false,
+      "seconds": 25.743161369999825,
+      "thinking": false,
+      "passed": 8,
+      "total": 8,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(xs):\n    if len(xs) < 2:\n        return None\n    max_prod = 0\n    for i in range(len(xs)):\n        for j in range(i + 1, len(xs)):\n            prod = xs[i] * xs[j]\n            if prod > max_prod:\n                max_prod = prod\n    return max_prod"
+    },
+    {
+      "id": "v4_remainder_groups",
+      "group": "far",
+      "output": "def solve(xs, k):\n    return [x % k for x in xs]",
+      "new_tokens": 19,
+      "hit_limit": false,
+      "seconds": 7.424714248999862,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs, k):\n    return [x % k for x in xs]"
+    },
+    {
+      "id": "v4_snake_rows",
+      "group": "far",
+      "output": "def solve(matrix):\n    result = []\n    for row in matrix:\n        if row:\n            if row[0] == 0:\n                result.extend(row[::-1])\n            else:\n                result.extend(row[::-1])\n    return result",
+      "new_tokens": 57,
+      "hit_limit": false,
+      "seconds": 18.154463033999946,
+      "thinking": false,
+      "passed": 4,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(matrix):\n    result = []\n    for row in matrix:\n        if row:\n            if row[0] == 0:\n                result.extend(row[::-1])\n            else:\n                result.extend(row[::-1])\n    return result"
+    },
+    {
+      "id": "v4_prefix_xor",
+      "group": "far",
+      "output": "def solve(xs):\n    if not xs:\n        return []\n    result = []\n    for i in range(len(xs)):\n        result.append(xs[i] ^ result[-1])\n    return result",
+      "new_tokens": 45,
+      "hit_limit": false,
+      "seconds": 14.724857589000067,
+      "thinking": false,
+      "passed": 1,
+      "total": 8,
+      "all_passed": false,
+      "category": "IndexError",
+      "error_types": [
+        "IndexError"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return []\n    result = []\n    for i in range(len(xs)):\n        result.append(xs[i] ^ result[-1])\n    return result"
+    },
+    {
+      "id": "v4_increasing_run",
+      "group": "far",
+      "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] > xs[i-1]:\n            current_len += 1\n        else:\n            current_len = 1\n    return max_len",
+      "new_tokens": 77,
+      "hit_limit": false,
+      "seconds": 24.779082992999975,
+      "thinking": false,
+      "passed": 4,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] > xs[i-1]:\n            current_len += 1\n        else:\n            current_len = 1\n    return max_len"
+    },
+    {
+      "id": "v4_decimal_add",
+      "group": "far",
+      "output": "def solve(a, b):\n    if not a or not b:\n        return \"\"\n    a = int(a)\n    b = int(b)\n    return str(a + b)",
+      "new_tokens": 42,
+      "hit_limit": false,
+      "seconds": 13.447627552000085,
+      "thinking": false,
+      "passed": 8,
+      "total": 8,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(a, b):\n    if not a or not b:\n        return \"\"\n    a = int(a)\n    b = int(b)\n    return str(a + b)"
+    },
+    {
+      "id": "v4_next_greater",
+      "group": "far",
+      "output": "def solve(xs):\n    if not xs:\n        return []\n    result = []\n    for i in range(len(xs)):\n        for j in range(i + 1, len(xs)):\n            if xs[j] > xs[i]:\n                result.append(xs[j])\n                break\n    return result",
+      "new_tokens": 67,
+      "hit_limit": false,
+      "seconds": 20.833786121000003,
+      "thinking": false,
+      "passed": 1,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return []\n    result = []\n    for i in range(len(xs)):\n        for j in range(i + 1, len(xs)):\n            if xs[j] > xs[i]:\n                result.append(xs[j])\n                break\n    return result"
     }
   ],
   "controls": [],
