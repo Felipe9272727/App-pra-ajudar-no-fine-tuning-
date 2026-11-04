@@ -1,5 +1,5 @@
 {
-  "status": "recovery_prepared",
+  "status": "paired_reference_saved",
   "rounds_completed": 30,
   "round_budget": 100,
   "accepted_rounds": 0,
@@ -12,7 +12,7 @@
   "backward_passes": 0,
   "process_continues_in_background": false,
   "parent_commit": "155a8f54102d674db32431264cdc1f76aeaa56e9",
-  "updated_unix": 1793819289.6372163,
+  "updated_unix": 1793821343.3132432,
   "current_round": null,
   "last_interruption": "same checkpoint changed flatten_once outcomes across runners; no round 31 decision"
 }
