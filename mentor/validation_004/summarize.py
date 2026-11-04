@@ -61,6 +61,13 @@ def main():
     new_controls = {x['id']:x for x in reports['candidate']['controls']}
     lost_controls = [k for k in old_controls if old_controls[k]['correct'] and not new_controls[k]['correct']]
     gain_controls = [k for k in old_controls if not old_controls[k]['correct'] and new_controls[k]['correct']]
+    original_controls = {x['id']:x for x in reports['original']['controls']}
+    controls_vs_original = {}
+    for name in ['parent','candidate']:
+        current = {x['id']:x for x in reports[name]['controls']}
+        controls_vs_original[name] = {
+            'strict_losses':[k for k in original_controls if original_controls[k]['correct'] and not current[k]['correct']],
+            'strict_gains':[k for k in original_controls if not original_controls[k]['correct'] and current[k]['correct']]}
     dev = json.loads((ROOT/'mentor/recovery_004/development_gate.json').read_text())
     primary = pairs['candidate_vs_parent']
     checks = {'development_gates':dev['eligible_for_fresh_validation'],
@@ -71,6 +78,7 @@ def main():
     promoted = all(checks.values())
     summary = {'status':'complete','scores':scores,'comparisons':pairs,
         'control_losses':lost_controls,'control_gains':gain_controls,
+        'strict_controls_vs_original':controls_vs_original,
         'promotion_checks':checks,'candidate_validated':promoted,'checkpoint_promoted':promoted,
         'selected_checkpoint':'mentor/checkpoints/negative_002_recovered.pt' if promoted else 'rsi100/checkpoints/best.pt',
         'decision':'validated_candidate_preserved' if promoted else 'generalization_not_confirmed_keep_parent',
@@ -110,6 +118,8 @@ def main():
         f"IC bootstrap empírico 95%: [{100*primary['task_bootstrap_95pct'][0]:.2f}, {100*primary['task_bootstrap_95pct'][1]:.2f}].",'',
         f"Controles perdidos: {lost_controls}; ganhos: {gain_controls}. NLL nova: pai {scores['parent']['anchor_nll']:.9f}, candidata {scores['candidate']['anchor_nll']:.9f}.",'',
         f"Candidata versus Qwen original: {len(pairs['candidate_vs_original']['task_wins'])} tarefas ganhas e {len(pairs['candidate_vs_original']['task_losses'])} perdidas; {len(pairs['candidate_vs_original']['case_wins'])} casos ganhos e {len(pairs['candidate_vs_original']['case_losses'])} perdidos. Diferenças herdadas da arquitetura não são atribuídas à edição.",'',
+        'Controles estritos versus original, por identidade (totais iguais podem ocultar trocas de acertos): '+json.dumps(controls_vs_original,ensure_ascii=False)+'. '
+        'O ganho estrito da tradução v4_en_pt reflete dois sinônimos semanticamente válidos e não deve ser interpretado como melhora real de tradução.','',
         'Quatro tarefas repetidas por variante tiveram textos e acertos idênticos. Como a geração é gulosa, '
         'essas repetições verificam estabilidade, sem criar novas amostras independentes. A comparação usa '
         'o mesmo contexto, limite, tokenizer, BF16, kernels eager, cache, seed e quatro threads. '

@@ -1,6 +1,6 @@
 {
   "variant": "parent",
-  "status": "running",
+  "status": "complete",
   "rows": [
     {
       "id": "v4_interval_union",
@@ -775,6 +775,75 @@
       ],
       "code": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort(key=lambda x: x[0])\n    total = 0.0\n    for a, b in intervals:\n        if a > b:\n            continue\n        total += b - a\n    return total",
       "identical": true
+    },
+    {
+      "id": "v4_normalize_path",
+      "output": "def solve(path):\n    if not path or path == '.':\n        return '/'\n    if not path:\n        return '/'\n    if path.startswith('/'):\n        return path\n    parts = path.split('/')\n    result = []\n    for part in parts:\n        if not part:\n            continue\n        if part == '.':\n            continue\n        if part == '..':\n            if result:\n                result.pop()\n        else:\n            result.append(part)\n    if not result:\n        return '/'\n    return '/' + '/'.join(result)",
+      "new_tokens": 125,
+      "hit_limit": false,
+      "seconds": 38.523258209999995,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(path):\n    if not path or path == '.':\n        return '/'\n    if not path:\n        return '/'\n    if path.startswith('/'):\n        return path\n    parts = path.split('/')\n    result = []\n    for part in parts:\n        if not part:\n            continue\n        if part == '.':\n            continue\n        if part == '..':\n            if result:\n                result.pop()\n        else:\n            result.append(part)\n    if not result:\n        return '/'\n    return '/' + '/'.join(result)",
+      "identical": true
+    },
+    {
+      "id": "v4_edit_distance",
+      "output": "def solve(a, b):\n    m, n = len(a), len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i - 1] == b[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = 1 +",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 49.58228814799986,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 13,
+      "code": "def solve(a, b):\n    m, n = len(a), len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i - 1] == b[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1]\n            else:\n                dp[i][j] = 1 +",
+      "identical": true
+    },
+    {
+      "id": "v4_numeric_motif",
+      "output": "def solve(xs, motif):\n    count = 0\n    i = 0\n    while i < len(xs) - len(motif) + 1:\n        if xs[i:i+len(motif)] == motif:\n            count += 1\n            i += len(motif)\n        else:\n            i += 1\n    return count",
+      "new_tokens": 80,
+      "hit_limit": false,
+      "seconds": 24.285931564000066,
+      "thinking": false,
+      "passed": 4,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(xs, motif):\n    count = 0\n    i = 0\n    while i < len(xs) - len(motif) + 1:\n        if xs[i:i+len(motif)] == motif:\n            count += 1\n            i += len(motif)\n        else:\n            i += 1\n    return count",
+      "identical": true
     }
   ],
   "frozen_sha256": "bffac8f483863225e85774320a5301b26b70db9ab096f78de287d51fdbffdb46",
@@ -809,5 +878,43 @@
     "torch": "2.15.0+cpu",
     "threads": 4,
     "cpu_quota": "200000 100000"
-  }
+  },
+  "anchor": {
+    "mean_nll": 3.0460955798625946,
+    "rows": [
+      {
+        "nll": 3.2804391384124756,
+        "tokens": 8
+      },
+      {
+        "nll": 2.8265695571899414,
+        "tokens": 8
+      },
+      {
+        "nll": 2.7937726974487305,
+        "tokens": 8
+      },
+      {
+        "nll": 3.8781344890594482,
+        "tokens": 8
+      },
+      {
+        "nll": 2.3708345890045166,
+        "tokens": 8
+      },
+      {
+        "nll": 2.453731060028076,
+        "tokens": 8
+      },
+      {
+        "nll": 2.9543371200561523,
+        "tokens": 8
+      },
+      {
+        "nll": 3.810945987701416,
+        "tokens": 8
+      }
+    ]
+  },
+  "completed_unix": 1793836738.5265636
 }
