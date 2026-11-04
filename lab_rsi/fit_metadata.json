@@ -2,7 +2,7 @@
   "method": "iterative first-error RMSNorm margin + closed-form ridge; dense BF16 writes",
   "training_examples": 224,
   "backward_passes": 0,
-  "rounds_completed": 1,
+  "rounds_completed": 2,
   "data_sha256": "b8353a9d288f2818ee17f3bc6ee77cf4cce0d915505bf7434b2d58780be31735",
   "architecture": {
     "physical_layers": 32,

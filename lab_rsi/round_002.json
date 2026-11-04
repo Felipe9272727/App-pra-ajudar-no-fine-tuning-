@@ -1,0 +1,253 @@
+{
+  "id": "candidate_02",
+  "step": 2,
+  "family": "iterative_first_error",
+  "patch": "lab_rsi/candidate_02.pt",
+  "patch_sha256": "44e41754fa4b426dcb46840345fd6f1c3af23c743cd81ec243c111bc867475d7",
+  "ridge": 0.05,
+  "status": "development_complete",
+  "development": {
+    "mean_answer_nll": 1.0777315058124561,
+    "mean_eos_nll": 0.31982331777423195,
+    "mean_answer_token_accuracy": 0.7291666691501936,
+    "rows": [
+      {
+        "id": "development_uppercase_000",
+        "answer_nll": 0.3080931305885315,
+        "eos_nll": 0.0863306075334549,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_sort_000",
+        "answer_nll": 2.3433115482330322,
+        "eos_nll": 0.03152402862906456,
+        "teacher_forced_answer_token_accuracy": 0.3333333432674408
+      },
+      {
+        "id": "development_subtraction_002",
+        "answer_nll": 0.5350835919380188,
+        "eos_nll": 0.00040463366894982755,
+        "teacher_forced_answer_token_accuracy": 0.6666666865348816
+      },
+      {
+        "id": "development_addition_000",
+        "answer_nll": 0.09740553051233292,
+        "eos_nll": 0.0002109781780745834,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_lowercase_000",
+        "answer_nll": 0.3653423488140106,
+        "eos_nll": 0.000985494232736528,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_multiplication_001",
+        "answer_nll": 1.06351900100708,
+        "eos_nll": 0.008428950794041157,
+        "teacher_forced_answer_token_accuracy": 0.3333333432674408
+      },
+      {
+        "id": "development_subtraction_000",
+        "answer_nll": 0.1925903707742691,
+        "eos_nll": 0.000606710382271558,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_uppercase_001",
+        "answer_nll": 0.15930874645709991,
+        "eos_nll": 0.016849340870976448,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_lowercase_001",
+        "answer_nll": 0.36812901496887207,
+        "eos_nll": 0.0018680518260225654,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_multiplication_000",
+        "answer_nll": 0.04477539286017418,
+        "eos_nll": 0.0005955114611424506,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_subtraction_001",
+        "answer_nll": 0.5151983499526978,
+        "eos_nll": 0.004939733073115349,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_reverse_001",
+        "answer_nll": 3.7789454460144043,
+        "eos_nll": 2.1432712078094482,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_general_003",
+        "answer_nll": 1.4315111637115479,
+        "eos_nll": 0.030716171488165855,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_sort_001",
+        "answer_nll": 2.5912704467773438,
+        "eos_nll": 0.03550741448998451,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_general_000",
+        "answer_nll": 0.016186490654945374,
+        "eos_nll": 0.014965406619012356,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_general_001",
+        "answer_nll": 0.3767249286174774,
+        "eos_nll": 0.04142750799655914,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_multiplication_002",
+        "answer_nll": 0.06764601171016693,
+        "eos_nll": 0.0018811402842402458,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_python_000",
+        "answer_nll": 2.293691873550415,
+        "eos_nll": 0.3105812072753906,
+        "teacher_forced_answer_token_accuracy": 0.3333333432674408
+      },
+      {
+        "id": "development_python_002",
+        "answer_nll": 1.5580039024353027,
+        "eos_nll": 1.8543131351470947,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_reverse_000",
+        "answer_nll": 3.250286817550659,
+        "eos_nll": 2.693880796432495,
+        "teacher_forced_answer_token_accuracy": 0.0
+      },
+      {
+        "id": "development_general_002",
+        "answer_nll": 1.8543957471847534,
+        "eos_nll": 0.0032289293594658375,
+        "teacher_forced_answer_token_accuracy": 0.5
+      },
+      {
+        "id": "development_addition_002",
+        "answer_nll": 0.035562291741371155,
+        "eos_nll": 0.00035065223346464336,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_addition_001",
+        "answer_nll": 0.3648706376552582,
+        "eos_nll": 0.0035065847914665937,
+        "teacher_forced_answer_token_accuracy": 1.0
+      },
+      {
+        "id": "development_python_001",
+        "answer_nll": 2.2537033557891846,
+        "eos_nll": 0.3893854320049286,
+        "teacher_forced_answer_token_accuracy": 0.3333333432674408
+      }
+    ]
+  },
+  "anchor": {
+    "mean_nll": 3.185928146044413,
+    "rows": [
+      {
+        "nll": 2.153031826019287,
+        "tokens": 8
+      },
+      {
+        "nll": 3.773632764816284,
+        "tokens": 8
+      },
+      {
+        "nll": 2.5087273120880127,
+        "tokens": 8
+      },
+      {
+        "nll": 4.08662223815918,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7684760093688965,
+        "tokens": 8
+      },
+      {
+        "nll": 2.3338801860809326,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6603169441223145,
+        "tokens": 8
+      },
+      {
+        "nll": 3.6341826915740967,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6751747131347656,
+        "tokens": 8
+      },
+      {
+        "nll": 3.728799819946289,
+        "tokens": 8
+      },
+      {
+        "nll": 2.801445484161377,
+        "tokens": 8
+      },
+      {
+        "nll": 4.106847763061523,
+        "tokens": 8
+      }
+    ]
+  },
+  "development_generation": {
+    "exact_correct": 13,
+    "content_correct": 13,
+    "total": 24
+  },
+  "passes_development_generation": false,
+  "passes_anchor": true,
+  "validation_eligible": false,
+  "weight_write": {
+    "changed_bf16_values": 3234082,
+    "delta_frobenius": 0.511343777179718,
+    "base_frobenius": 16.417512893676758,
+    "dense_weight_sha256": "c2cd5797333d72649187ca2f53832cf1b447da2eb0d774659428c397ef2d9520",
+    "runtime_adapter": false,
+    "architecture": {
+      "physical_layers": 32,
+      "layer_executions": 56,
+      "mhc_streams": 2,
+      "second_visit_gain": 0.05000000074505806,
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "sliding_window": 256,
+      "window_layers": [
+        7,
+        15,
+        27
+      ],
+      "parameters": 1020252592,
+      "backward_passes": 0
+    }
+  },
+  "training": {
+    "first_wrong_examples": 106,
+    "training_token_positions": 792,
+    "regression_columns": 651,
+    "preservation_columns": 545,
+    "anchor_positions": 96,
+    "ridge": 0.05,
+    "cumulative_relative_norm": 0.03114623948931694
+  }
+}

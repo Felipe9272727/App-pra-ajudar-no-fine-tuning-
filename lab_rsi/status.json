@@ -26,9 +26,9 @@
       "liquid_mix": 1.0
     }
   },
-  "updated_unix": 1793779233.025202,
-  "evaluating_candidate": "candidate_01",
-  "round": 1,
-  "rounds_completed": 1,
-  "candidates_fitted": 1
+  "updated_unix": 1793779550.7776642,
+  "evaluating_candidate": "candidate_02",
+  "round": 2,
+  "rounds_completed": 2,
+  "candidates_fitted": 2
 }
