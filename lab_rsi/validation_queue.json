@@ -1,0 +1,5 @@
+{
+  "candidate_ids": [],
+  "criterion": "top two by development exact answers, with strict improvement and anchor NLL <= 110% of baseline; validation exact must strictly improve and nonnumeric exact must not fall",
+  "heldout_used": false
+}

@@ -1,10 +1,10 @@
 {
-  "status": "round_checkpointed",
+  "status": "awaiting_validation",
   "phase": "cycle2_closed_form",
   "model_display_name": "liquid sense 0.8 b LOOP",
   "branch": "codex/liquid-sense-rsi-cycle2-20261104",
   "parent_commit": "86e3f6b22a7e809e23883bd982e54523225c0478",
-  "model_process_active": true,
+  "model_process_active": false,
   "final_test_evaluated": false,
   "backward_passes": 0,
   "selected_candidate": null,
@@ -26,9 +26,10 @@
       "liquid_mix": 1.0
     }
   },
-  "updated_unix": 1793779870.0009556,
-  "evaluating_candidate": "candidate_03",
+  "updated_unix": 1793779872.9231052,
+  "evaluating_candidate": null,
   "round": 3,
   "rounds_completed": 3,
-  "candidates_fitted": 3
+  "candidates_fitted": 3,
+  "validation_queue": []
 }
