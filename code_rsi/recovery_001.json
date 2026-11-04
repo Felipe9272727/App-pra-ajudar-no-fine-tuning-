@@ -1,0 +1,18 @@
+{
+  "run_id": 41863829379,
+  "source_commit": "5803987dc15c2837675b511587106cc4ff3e03dd",
+  "outcome": "collection failed before weight fitting",
+  "observed_from": "completed collect log ending with error and artifact upload",
+  "error": "checkpoint parent folder absent on clean Git checkout",
+  "heldout_observed": false,
+  "weights_edited_in_failed_run": false,
+  "initial_training_tasks_passed": 5,
+  "initial_training_tasks_total": 8,
+  "technical_loop_cache_checks": {
+    "2": 56,
+    "3": 80,
+    "4": 104
+  },
+  "recovery": "create checkpoint parents atomically; save activation progress after each completed training task; rerun the bounded cycle with unchanged tasks and gates",
+  "preserved_artifact": "https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/actions/runs/41863829379/artifacts/13342235528"
+}

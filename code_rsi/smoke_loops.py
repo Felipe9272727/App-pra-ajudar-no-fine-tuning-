@@ -8,6 +8,17 @@ from native_runtime import NativeTextModel,VisitGatedMHC
 
 @torch.inference_mode()
 def main():
+    from checkpoint_io import tensor_checkpoint
+    import tempfile
+    with tempfile.TemporaryDirectory() as folder:
+        # Git does not preserve empty folders: exercise an absent nested parent.
+        target=Path(folder)/'fresh-checkout/checkpoints/probe.pt'
+        tensor_checkpoint({'weight':torch.arange(4)},target)
+        assert torch.equal(torch.load(target,weights_only=True)['weight'],torch.arange(4))
+        tensor_checkpoint({'weight':torch.arange(2)},target)
+        assert torch.equal(torch.load(target,weights_only=True)['weight'],torch.arange(2))
+        assert not target.with_name(target.name+'.tmp').exists()
+        print('COLD_CHECKOUT_CHECKPOINT_OK',flush=True)
     raw=json.loads((ROOT/'sensenova_port/config.json').read_text())
     raw['text_config'].update(hidden_size=32,intermediate_size=64,num_attention_heads=4,
         num_key_value_heads=2,head_dim=8,vocab_size=128,eos_token_id=1,pad_token_id=1,

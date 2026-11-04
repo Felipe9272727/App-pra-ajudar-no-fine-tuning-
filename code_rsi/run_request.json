@@ -7,5 +7,7 @@
     2,
     3,
     4
-  ]
+  ],
+  "attempt": 2,
+  "reason": "recover missing checkpoint directory; same frozen data, final test still unopened"
 }

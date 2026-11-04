@@ -27,7 +27,7 @@ def state(**kw):
     p=HERE/'status.json';obj=json.loads(p.read_text());obj.update(kw);obj['updated_unix']=time.time();atomic_json(p,obj)
 
 def source_hashes():
-    paths=['code_rsi/runtime.py','code_rsi/sandbox.py','code_rsi/loop_protocol.py','v2_adaptation/native_runtime.py','modeling_sensenova_loop.py','rsi_cycle.py']
+    paths=['code_rsi/runtime.py','code_rsi/checkpoint_io.py','code_rsi/sandbox.py','code_rsi/loop_protocol.py','v2_adaptation/native_runtime.py','modeling_sensenova_loop.py','rsi_cycle.py']
     return {p:file_hash(ROOT/p) for p in paths}
 
 def configure_loops(model,passes,gains=None):

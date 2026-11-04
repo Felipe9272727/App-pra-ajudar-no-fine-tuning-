@@ -5,6 +5,7 @@ import shutil
 from runtime import *
 from loop_protocol import eligibility,validation_passes
 from publish import publish
+from checkpoint_io import tensor_checkpoint
 
 OUT=ROOT/'code_ci_output'
 def export(stage,paths):
@@ -23,8 +24,16 @@ def collect():
     assert not (HERE/'frozen.json').exists()
     model,meta=load('baseline');tok=tokenizer();state(status='collecting_outcome_feedback',model_process_active=True)
     meta['cache_diagnostic']=cache_check(model,tok,2)
-    records=[];features=[];rewards=[];tasks=DATA['train'];repairs=0
+    records=[];features=[];rewards=[];tasks=DATA['train'];repairs=0;completed=[]
+    progress=HERE/'checkpoints/collection_progress.pt'
+    if progress.exists():
+        saved=torch.load(progress,weights_only=True)
+        assert saved['data_sha256']==DATA_HASH and saved['inference_code_sha256']==source_hashes()
+        records=saved['records'];features=list(saved['features']);rewards=saved['rewards']
+        completed=saved['completed_ids'];repairs=sum(r['attempt']=='feedback_repair' for r in records)
+        assert set(completed)<={r['id'] for r in tasks}
     for row in tasks:
+        if row['id'] in completed:continue
         out=generate(model,tok,row['prompt'],capture=True)
         trace=out.pop('trace');feature=trace.pop('mlp_mean_abs_input')
         score=evaluate(out['output'],row)
@@ -39,6 +48,9 @@ def collect():
             records.append({'id':row['id'],'attempt':'feedback_repair','feedback':feedback,**repaired,**rscore,'visit_diagnostics':trace})
             features.append(feature);rewards.append(rscore['passed']/rscore['total'])
         atomic_json(HERE/'training_diagnostics.json',{'metadata':meta,'data_sha256':DATA_HASH,'records':records,'reference_code_supplied':False,'target_token_supervision':False})
+        completed.append(row['id'])
+        tensor_checkpoint({'features':torch.stack(features),'rewards':rewards,'records':records,
+            'completed_ids':completed,'data_sha256':DATA_HASH,'inference_code_sha256':source_hashes()},progress)
         print('DIAG',row['id'],score['category'],score['passed'],score['total'],flush=True)
     x=torch.stack(features);r=torch.tensor(rewards)
     xc=x-x.mean(0);rc=r-r.mean()
@@ -49,7 +61,7 @@ def collect():
         # Explicit exploratory probe, not a claim of learning from constant rewards.
         torch.manual_seed(DATA['seed']);direction=torch.randn(x.shape[1])
     direction=(direction/direction.square().mean().sqrt().clamp_min(1e-6)).clamp(-2,2)
-    torch.save({'mean_abs_mlp_inputs':x,'execution_rewards':r,'direction':direction,
+    tensor_checkpoint({'mean_abs_mlp_inputs':x,'execution_rewards':r,'direction':direction,
         'data_sha256':DATA_HASH,'informative_rewards':informative},HERE/'checkpoints/activation_summary.pt')
     prior=model.model.language_model.layers[31].mlp.down_proj.weight.detach().clone()
     archive=[]
@@ -63,7 +75,7 @@ def collect():
             'data_sha256':DATA_HASH,'backward_passes':0,'runtime_adapter':False,
             'method':'outcome-correlated neuron-column rescaling; paired signs; no target token labels',
             'exploratory_direction':not informative}
-        torch.save(patch,path)
+        tensor_checkpoint(patch,path)
         archive.append({'id':name,'patch':str(path.relative_to(ROOT)),'patch_sha256':file_hash(path),
             'passes':spec['passes'],'changed_bf16_values':int((written.view(torch.int16)!=prior.view(torch.int16)).sum()),
             'relative_frobenius':float((written.float()-prior.float()).norm()/prior.float().norm()),
