@@ -1,5 +1,8 @@
 {
-  "run_id": "41894078717",
-  "source_commit": "fea546fb0701a4c93c65bbf2eb8588e6578aaf8a",
-  "phase": "calibrate runner before round 031; keep historical reference"
+  "run_id": "local-cpu-20261104-1793823039702",
+  "source_commit": "916aec1bf131a8c82e0762c1db313e5e869e2cbc",
+  "phase": "calibrate runner before round 031; keep historical reference",
+  "publication_id": "c90fa2ea-2515-4b70-bb11-6137aae8d5a1",
+  "execution": "local CPU; publication controlled by assistant",
+  "last_observed_unix": 1793823340.5789404
 }
