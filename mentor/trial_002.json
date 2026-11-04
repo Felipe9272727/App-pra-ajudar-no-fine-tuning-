@@ -1,6 +1,6 @@
 {
   "trial": 2,
-  "source_commit": "af30af1d7a98c0cee508b94e695eecdeaa828fdf",
+  "source_commit": "21d8076a8d7a568940b3209211cdb3fe20952b87",
   "hypothesis_file": "mentor/hypothesis_002.json",
   "parent_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
   "backward_passes": 0,
@@ -188,54 +188,84 @@
       }
     ]
   },
-  "dose_probes": [],
-  "stage": "checked_same_generation_replay",
-  "updated_unix": 1793825007.489749,
-  "exact_cached_before": {
-    "bad_token_logit": 24.0,
-    "bad_token_log_odds": 2.191102981567383,
-    "top": [
-      {
-        "id": 2343,
-        "piece": " len",
-        "logit": 24.0
-      },
-      {
-        "id": 220,
-        "piece": " ",
-        "logit": 21.75
-      },
-      {
-        "id": 307,
-        "piece": " n",
-        "logit": 18.0
-      },
-      {
-        "id": 1262,
-        "piece": " min",
-        "logit": 17.375
-      },
-      {
-        "id": 585,
-        "piece": " i",
-        "logit": 16.75
-      },
-      {
-        "id": 1146,
-        "piece": " sub",
-        "logit": 16.125
-      },
-      {
-        "id": 318,
-        "piece": " (",
-        "logit": 16.0
-      },
-      {
-        "id": 2984,
-        "piece": " length",
-        "logit": 15.75
-      }
-    ]
-  },
-  "cached_replay_log_odds_error": 2.518064498901367
+  "instrumentation_policy": "fixed-prefix replay was inconsistent; selection uses free generation with a parent-output repeat check",
+  "stage": "screen_passed_measuring_full_parent",
+  "updated_unix": 1793832565.470335,
+  "chosen_fraction": 0.012,
+  "selection_rule": "predeclared 0.012 norm dose; judge only fresh free generation",
+  "actual_relative_norm": 0.012043029069900513,
+  "changed_values": 2029223,
+  "parent_screen": [
+    {
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+      "new_tokens": 72,
+      "hit_limit": false,
+      "seconds": 18.977217961000008,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count"
+    }
+  ],
+  "matched_random_screen": [
+    {
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+      "new_tokens": 72,
+      "hit_limit": false,
+      "seconds": 18.856310809999968,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count"
+    }
+  ],
+  "candidate_screen": [
+    {
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += 1\n        else:\n            i += 1\n    return count",
+      "new_tokens": 71,
+      "hit_limit": false,
+      "seconds": 18.533208125999977,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += 1\n        else:\n            i += 1\n    return count"
+    }
+  ]
 }
