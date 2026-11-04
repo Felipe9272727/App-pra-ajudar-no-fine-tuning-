@@ -1,0 +1,220 @@
+{
+  "round": 5,
+  "parent_best_round": 0,
+  "proposal": {
+    "method": "mHC bias weights and positive loop visit gates",
+    "seed": 20261104105,
+    "fraction": 0.08,
+    "passes": 3,
+    "late_gain": 0.04389811217784882,
+    "dense_relative_norm": 0.0,
+    "changed_dense_values_from_incumbent": 0
+  },
+  "architecture": {
+    "passes": 3,
+    "layer_executions": 80,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.9561018943786621,
+      0.021949056535959244,
+      0.021949056535959244
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "local_window": 256,
+    "loaded_parameters": 1020252616,
+    "backward_passes": 0,
+    "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+  },
+  "incumbent_anchor_nll": 3.1837292512257895,
+  "incumbent_control_bits": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "incumbent_case_bits": {
+    "sum_abs": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "clamp": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "count_even": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "palindrome": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "prefix_sums": [
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    "dedup_stable": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "overlap_count": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "run_lengths": [
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    "sum_positive": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "rotate_right": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "first_unique": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "pair_count": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "char_counts": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "longest_run": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "binary_search": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "flatten_once": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "screen": [
+    {
+      "id": "longest_run",
+      "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+      "new_tokens": 98,
+      "hit_limit": false,
+      "seconds": 23.31781212200002,
+      "thinking": false,
+      "passed": 4,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0"
+    },
+    {
+      "id": "prefix_sums",
+      "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs])]",
+      "new_tokens": 27,
+      "hit_limit": false,
+      "seconds": 6.868782087999989,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs])]"
+    }
+  ],
+  "accepted": false,
+  "reason": "no monotone screen gain",
+  "heldout_used": false,
+  "data_sha256": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d",
+  "source_commit": "d9deee7ade993c4c711b9108a3f49880f776ae6b",
+  "code_sha256": {
+    "rsi100/engine.py": "be2afeee8169d795797dd32ef17492d31163ca643093066c57b901659742d3fe",
+    "rsi100/mutation.py": "db1f854e2d0d4fc9dc9d2e7167e5572556bbc5e1a0d98aa75539b9af6011365e",
+    "rsi100/policy.py": "46ddebaf547b11496cbf79119619e118e1d4453dffc903dbe10ee79e81970bf6",
+    "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+    "code_rsi/sandbox.py": "5610324d3da291156d3566d4874f402ac7cb38a2594c3793fc0a9b1e9919b20f",
+    "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350"
+  },
+  "protocol": {
+    "max_new_tokens": 160,
+    "greedy": true,
+    "feedback_at_evaluation": false,
+    "cpu_threads": 4,
+    "code_image": "python@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30"
+  }
+}
