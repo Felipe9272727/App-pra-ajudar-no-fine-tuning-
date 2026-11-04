@@ -39,30 +39,19 @@ def develop():
     state=json.loads((HERE/'status.json').read_text())
     if state.get('final_test_evaluated') or (HERE/'frozen.json').exists():
         raise RuntimeError('This test was already frozen/observed. Start a fresh pilot instead of reselecting on it.')
-    # All candidates must be compared on ONE runner/hardware/thread configuration.
-    # Preserve previous measurements, but do not mix them into the new ranking.
-    archive=json.loads((HERE/'archive.json').read_text())
-    atomic_json(HERE/'previous_host_development.json',archive)
-    for c in archive['candidates']:
-        for key in ['development','anchor','passes_answer_nll','passes_anchor','weight_write',
-                    'validation_eligible','validation','passes_validation']:
-            c.pop(key,None)
-        c['status']='awaiting_development'
-    atomic_json(HERE/'archive.json',archive)
-    (HERE/'development_baseline.json').unlink(missing_ok=True)
     update_status(status='github_development',execution=runtime(),
         model_process_active=True,process_continues_in_background=False)
     try:fit.develop()
     finally:
         update_status(model_process_active=False)
-        export_stage('development',['lab_rsi/archive.json','lab_rsi/status.json',
-            'lab_rsi/previous_host_development.json','lab_rsi/development_baseline.json',
-            'lab_rsi/validation_queue.json','lab_rsi/screening_cache_check.json'])
+        export_stage('development',[str(p.relative_to(ROOT)) for p in HERE.glob('*.json')
+            if p.name not in ['data.json','ci_run_request.json']] +
+            [str(p.relative_to(ROOT)) for p in HERE.glob('candidate_*.pt')])
 
 
 def validation_matrix():
     queue=json.loads((HERE/'validation_queue.json').read_text())['candidate_ids']
-    assert all(x in {f'candidate_{i:02d}' for i in range(1,6)} for x in queue)
+    assert all(x in {f'candidate_{i:02d}' for i in range(1,4)} for x in queue)
     return ['baseline']+queue
 
 
@@ -85,6 +74,8 @@ def validate_variant(variant):
 
 def freeze():
     import evaluate
+    from protocol import controls_correct,validation_passes
+    from publish_progress import publish
     archive=json.loads((HERE/'archive.json').read_text())
     base=json.loads((HERE/'validation_baseline.json').read_text())
     assert base['status']=='complete' and base['data_sha256']==DATA_HASH
@@ -95,12 +86,14 @@ def freeze():
         assert v['patch_sha256']==c['patch_sha256']
         assert v['inference_code_sha256']==base['inference_code_sha256']
         assert v['protocol']==base['protocol']
-        c.update(status='validation_complete',validation={k:v[k] for k in ['exact_correct','content_correct','total']},
-            passes_validation=v['content_correct']>base['content_correct'] and v['exact_correct']>=base['exact_correct'])
+        c.update(status='validation_complete',validation={**{k:v[k] for k in ['exact_correct','content_correct','total']},'controls_exact':controls_correct(v),'baseline_controls_exact':controls_correct(base)},
+            passes_validation=c['validation_eligible'] and validation_passes(v,base))
     atomic_json(HERE/'archive.json',archive)
     update_status(status='validation_complete',execution=runtime(),model_process_active=False)
     evaluate.freeze()
-    export_stage('frozen',['lab_rsi/archive.json','lab_rsi/status.json','lab_rsi/frozen.json'])
+    publish('freeze selection before final test')
+    frozen=json.loads((HERE/'frozen.json').read_text())
+    export_stage('frozen',['lab_rsi/archive.json','lab_rsi/status.json','lab_rsi/frozen.json']+([frozen['patch']] if frozen['patch'] else []))
 
 
 @torch.inference_mode()

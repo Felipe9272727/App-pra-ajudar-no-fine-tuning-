@@ -21,6 +21,7 @@ from experiment import tokenizer,prompt_ids,load_teacher
 from native_runtime import load_port,SOURCE_LAYERS
 from rsi_cycle import atomic_json,apply_recipe
 from modeling_sensenova_loop import execution_plan
+from protocol import grade
 
 DATA=json.loads((HERE/'data.json').read_text())
 DATA_HASH=hashlib.sha256((HERE/'data.json').read_bytes()).hexdigest()
@@ -82,9 +83,15 @@ def apply_edit(model,patch,strength=None):
     layer=model.model.language_model.layers[31].mlp.down_proj
     # Restore the SAME existing dense parameter, then write the reconstructed edit.
     base=prior_mlp_weight()
-    strength=patch['strength'] if strength is None else strength
-    delta=(patch['left']@patch['right'])*strength
-    written=(base.float()+delta).to(base.dtype)
+    if 'dense_weight' in patch:
+        assert strength is None
+        written=patch['dense_weight']
+        assert written.shape==base.shape and written.dtype==base.dtype
+        delta=written.float()-base.float()
+    else:
+        strength=patch['strength'] if strength is None else strength
+        delta=(patch['left']@patch['right'])*strength
+        written=(base.float()+delta).to(base.dtype)
     layer.weight.copy_(written)
     assert torch.isfinite(layer.weight).all()
     return {'changed_bf16_values':int((written.view(torch.int16)!=base.view(torch.int16)).sum()),
@@ -140,23 +147,12 @@ def normalized(text):
     return re.sub(r'\s+',' ',text).strip().strip(' .!\n`"\'')
 
 
-def grade(text,row):
-    exact=normalized(text) in [normalized(x) for x in [row['answer']]+row.get('aliases',[])]
-    if row['numeric']:
-        # Separate mathematical content from compliance with "integer only".
-        # Expressions with several numbers are not blindly granted correctness.
-        numbers=re.findall(r'(?<![\w.])-?\d+(?![\w.])',text)
-        content=exact or (len(numbers)==1 and int(numbers[0])==int(row['answer']))
-    else:content=exact
-    return bool(exact),bool(content)
-
-
 @torch.inference_mode()
 def generate_rows(model,tok,rows,path,metadata):
     previous=json.loads(path.read_text()) if path.exists() else None
     report={**metadata,'status':'running','data_sha256':DATA_HASH,'rows':[],
         'inference_code_sha256':{str(p.relative_to(ROOT)):file_hash(p) for p in [
-            HERE/'common.py',ROOT/'v2_adaptation/native_runtime.py',ROOT/'modeling_sensenova_loop.py',ROOT/'rsi_cycle.py']},
+            HERE/'common.py',HERE/'protocol.py',ROOT/'v2_adaptation/native_runtime.py',ROOT/'modeling_sensenova_loop.py',ROOT/'rsi_cycle.py']},
         'protocol':{'max_new_tokens':12,'greedy':True,'thinking':False,'use_cache':True,
                     'cpu_threads':torch.get_num_threads(),'backbone':'BF16','routers':'FP32','inference_tools':False,
                     'batching':'at most 4 prompts with exactly the same token length; no padding'}}

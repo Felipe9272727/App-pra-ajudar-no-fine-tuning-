@@ -1,3 +1,34 @@
+# liquid sense 0.8 b LOOP — RSI ciclo 2
+
+Continuação da V2 híbrida ativa. A V3 NCM foi arquivada separadamente.
+A base nominal Qwen é 0,8B; o híbrido ampliado carrega cerca de 1,02B parâmetros.
+Componentes inspirados em SenseNova e Liquid permanecem ativos; não são
+os modelos completos nem seus pesos pré-treinados.
+
+O ciclo atual escreve diretamente a última matriz MLP, em três etapas de
+regressão fechada sem gradientes. O assistente definiu e controla o programa;
+não é autoaperfeiçoamento autônomo. Cada etapa salva pesos, erros e decisão
+em commit. Nenhum ganho é garantido.
+
+- Protocolo: [lab_rsi/PROTOCOL.md](lab_rsi/PROTOCOL.md).
+- Estado: [lab_rsi/status.json](lab_rsi/status.json).
+- Execução: [.github/workflows/liquid-sense-rsi-cycle2.yml](.github/workflows/liquid-sense-rsi-cycle2.yml).
+- Resultados anteriores: [history/PILOT1_REPORT.md](history/PILOT1_REPORT.md).
+- Relatório novo após conclusão: [LAB_REPORT.md](LAB_REPORT.md).
+
+No piloto anterior, híbrido 39/64 e original 34/64 em teste customizado.
+Nenhuma edição nova passou na validação. O ciclo 2 começa dessa base híbrida,
+usa perguntas novas e seleciona principalmente por respostas exatas geradas.
+O teste final não escolhe pesos.
+
+Reprodução CPU: instalar requirements-ci.txt e torch 2.15.0+cpu;
+executar download_model.py, build_sensenova_port.py e python lab_rsi/ci.py develop.
+O workflow organiza validação, congelamento e teste final sem misturar conjuntos.
+Não repetir o teste observado para selecionar edições.
+Os comandos do histórico abaixo não definem o ciclo atual.
+
+---
+
 # liquid sense 0.8 b LOOP
 
 Nome nominal da base: 0,8B. Híbrido ampliado: aproximadamente 1,02B parâmetros carregados.

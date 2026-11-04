@@ -1,5 +1,4 @@
-"""Generate the report only after all frozen final evaluations are complete."""
-import json
+"""Only report a complete fresh test after selection is frozen."""
 import math
 from common import *
 
@@ -10,117 +9,80 @@ def main():
     reports={v:json.loads((HERE/f'heldout_{v}.json').read_text()) for v in variants}
     assert all(r['status']=='complete' and r['data_sha256']==DATA_HASH for r in reports.values())
     archive=json.loads((HERE/'archive.json').read_text())
-    fit=json.loads((HERE/'fit_metadata.json').read_text())
-    devbase=json.loads((HERE/'development_baseline.json').read_text())
-    names={'original':'Qwen3.5-0.8B original','baseline':'Híbrido SenseNova + Liquid antes do novo ajuste',
-           'selected':'liquid sense 0.8 b LOOP após ajuste aceito'}
+    names={'original':'Qwen3.5-0.8B original','baseline':'Híbrido ativo antes do ciclo 2','selected':'Híbrido após edição aceita'}
     summary={}
-    for key,report in reports.items():
-        rows=report['rows'];numeric=[r for r in rows if r['numeric']];controls=[r for r in rows if not r['numeric']]
-        summary[key]={'exact':report['exact_correct'],'content':report['content_correct'],'total':report['total'],
-            'numeric_exact':sum(r['exact_correct'] for r in numeric),
-            'numeric_content':sum(r['content_correct'] for r in numeric),'numeric_total':len(numeric),
-            'general_exact':sum(r['exact_correct'] for r in controls),'general_total':len(controls),
-            'generation_limit_hits':sum(r['hit_limit'] for r in rows),
-            'amortized_generation_seconds':sum(r['amortized_seconds'] for r in rows),
-            'loaded_parameters':report['loaded_parameters']}
+    for v,r in reports.items():
+        numeric=[x for x in r['rows'] if x['numeric']];controls=[x for x in r['rows'] if not x['numeric']]
+        summary[v]={'exact':r['exact_correct'],'content':r['content_correct'],'total':r['total'],
+            'numeric_content':sum(x['content_correct'] for x in numeric),'numeric_total':len(numeric),
+            'controls_exact':sum(x['exact_correct'] for x in controls),'controls_total':len(controls),
+            'loaded_parameters':r['loaded_parameters'],'seconds':sum(x['amortized_seconds'] for x in r['rows'])}
     final='selected' if frozen['patch'] else 'baseline'
-    a=reports['original']['rows'];b=reports[final]['rows']
-    wins=sum(not x['content_correct'] and y['content_correct'] for x,y in zip(a,b))
-    losses=sum(x['content_correct'] and not y['content_correct'] for x,y in zip(a,b))
-    discordant=wins+losses
-    p=min(1.,2*sum(math.comb(discordant,i) for i in range(min(wins,losses)+1))/2**discordant) if discordant else 1.
-    overall={'model_name':'liquid sense 0.8 b LOOP','status':'complete','data_sha256':DATA_HASH,
-        'selected_candidate':frozen['candidate_id'],'scores':summary,
-        'paired_content_vs_original':{'wins':wins,'losses':losses,'exact_binomial_two_sided_p':p},
-        'selection_used_final_test':False,'backward_passes':0,
-        'interpretation':'Small custom benchmark; no claim of general intelligence improvement or autonomous RSI'}
+    comparisons={}
+    for other in ['original','baseline']:
+        pairs=list(zip(reports[other]['rows'],reports[final]['rows']))
+        assert all(a['id']==b['id'] for a,b in pairs)
+        w=sum(not a['exact_correct'] and b['exact_correct'] for a,b in pairs)
+        l=sum(a['exact_correct'] and not b['exact_correct'] for a,b in pairs)
+        n=w+l;p=min(1.,2*sum(math.comb(n,i) for i in range(min(w,l)+1))/2**n) if n else 1.
+        comparisons[other]={'wins':w,'losses':l,'exact_binomial_two_sided_p':p}
+    overall={'model_name':'liquid sense 0.8 b LOOP','cycle':2,'status':'complete','data_sha256':DATA_HASH,
+        'selected_candidate':frozen['candidate_id'],'scores':summary,'paired_exact_vs':comparisons,
+        'selection_used_final_test':False,'backward_passes':0,'autonomous_rsi':False}
     atomic_json(HERE/'summary.json',overall)
-    descriptor='Uma candidata passou pelos critérios de desenvolvimento e validação.' if frozen['patch'] else (
-        'Nenhuma nova edição densa passou pelos critérios registrados. O checkpoint final mantém o híbrido com SenseNova e Liquid ativos.')
-    lines=['# liquid sense 0.8 b LOOP — segundo piloto', '',descriptor,'',
-        'Os pesos foram realmente ajustados e avaliados. Não houve backward/autograd nem calculadora na inferência. '
-        'O assistente controlou os experimentos; isso não demonstra RSI autônomo geral.','',
-        '## Comparação final nova — 64 perguntas','',
-        '| Modelo | Formato exato | Conteúdo | Numérico/código (conteúdo) | Controles gerais |',
-        '|---|---:|---:|---:|---:|']
-    for key,s in summary.items():
-        lines.append(f"| {names[key]} | {s['exact']}/64 | {s['content']}/64 | {s['numeric_content']}/48 | {s['general_exact']}/16 |")
-    lines+=['','| Família | '+' | '.join(names[v] for v in variants)+' |',
-        '|---|'+'---:|'*len(variants)]
-    for family in ['addition','subtraction','multiplication','python','general_control']:
-        entries=[]
+    lines=['# liquid sense 0.8 b LOOP — RSI ciclo 2','',
+        'Três etapas sequenciais de edição direta da matriz MLP existente, sem gradientes. '
+        'O programa definido pelo assistente recalculou erros depois de cada edição. Não é RSI autônomo.','',
+        ('Edição promovida: '+frozen['candidate_id']) if frozen['patch'] else 'Nenhuma edição nova passou; o híbrido ativo foi preservado.','',
+        '## Teste final novo','',
+        '| Modelo | Exato | Conteúdo | Numérico/código | Controles | Parâmetros carregados | Tempo geração |',
+        '|---|---:|---:|---:|---:|---:|---:|']
+    for v,s in summary.items():
+        lines.append(f"| {names[v]} | {s['exact']}/{s['total']} | {s['content']}/{s['total']} | {s['numeric_content']}/{s['numeric_total']} | {s['controls_exact']}/{s['controls_total']} | {s['loaded_parameters']:,} | {s['seconds']:.1f}s |")
+    lines+=['','| Família | '+' | '.join(names[v] for v in variants)+' |','|---|'+'---:|'*len(variants)]
+    for family in sorted({r['family'] for r in DATA['heldout']}):
+        counts=[]
         for v in variants:
-            family_rows=[r for r in reports[v]['rows'] if r['family']==family]
-            entries.append(f"{sum(r['content_correct'] for r in family_rows)}/{len(family_rows)}")
-        lines.append('| '+family+' | '+' | '.join(entries)+' |')
-    lines+=['',f'Comparação pareada de conteúdo, original → checkpoint final: {wins} melhora(s), {losses} regressão(ões). '
-        f'Teste binomial exato nos pares discordantes: p={p:.4f}. As perguntas compartilham templates; '
-        'esse número é descritivo e não estabelece significância em capacidades gerais.','',
-        'O teste final não escolheu pesos. O checkpoint foi congelado antes de observar essas respostas. '
-        'Os resultados anteriores de 24 perguntas estão em PILOT_REPORT.md e não são comparáveis diretamente a este conjunto.','',
-        '## O que foi aprendido por edição direta','',
-        f"- {fit['training_examples']} exemplos sintéticos com respostas verificadas por código.",
-        f"- {fit['training_token_positions']} posições supervisionadas e {fit['anchor_positions']} posições de preservação.",
-        f"- {fit['wrong_token_positions']} posições tinham o próximo token preferido diferente do alvo.",
-        '- A matriz existente `layers.31.mlp.down_proj.weight` recebe um delta obtido por regressão ridge fechada.',
-        '- Fatores de posto 32 comprimem o checkpoint; são multiplicados e escritos na matriz densa ao carregar. Não há adaptador adicional na inferência.',
-        '- Correções conjuntas, correções de dígitos e controle só de parada foram definidos antes das avaliações.','',
-        '## Arquivo das candidatas','',
-        f"NLL de resposta da base híbrida ativa: {devbase['answer']['mean_answer_nll']:.6f}.",
-        f"NLL dos textos de preservação: {devbase['anchors']['mean_nll']:.6f}.",
-        '', '| Candidata | Família | Ridge | Força | NLL resposta | NLL preservação | Valores BF16 alterados | Validação conteúdo |',
-        '|---|---|---:|---:|---:|---:|---:|---|']
+            rows=[r for r in reports[v]['rows'] if r['family']==family]
+            counts.append(f"{sum(r['exact_correct'] for r in rows)}/{len(rows)}")
+        lines.append('| '+family+' | '+' | '.join(counts)+' |')
+    lines+=['','## Edições e seleção','',
+        '| Etapa | Valores BF16 alterados | Desenvolvimento exato | NLL âncoras | Validação exata | Promovível |',
+        '|---|---:|---:|---:|---:|---|']
     for c in archive['candidates']:
-        val=c.get('validation');valtext=f"{val['content_correct']}/{val['total']}" if val else 'Não elegível'
-        lines.append(f"| {c['id']} | {c['family']} | {c['ridge']} | {c['strength']} | "
-            f"{c['development']['mean_answer_nll']:.6f} | {c['anchor']['mean_nll']:.6f} | "
-            f"{c['weight_write']['changed_bf16_values']} | {valtext} |")
-    lines+=['','O controle `stop_only` nunca pode ser promovido. Para promoção é necessário reduzir a NLL de resposta, '
-        'preservar a NLL das âncoras e aumentar o conteúdo correto na validação sem reduzir o formato exato. '
-        'Todos os motivos e hashes estão em `lab_rsi/archive.json`.','',
-        '## As duas partes da arquitetura continuam presentes','',
-        '- SenseNova: topologia de 32 camadas físicas, 56 execuções, mHC de duas vias e segunda visita ativa com ganho 0,05.',
-        '- Liquid/LFM3: convolução de sete posições com coeficientes históricos aprendidos não nulos e atenção local de 256 tokens em três camadas.',
-        '- Todas as novas candidatas passaram pela mesma verificação de arquitetura. Nenhuma desliga essas partes para melhorar a métrica.',
-        '- O corpo continua com dimensões/pesos Qwen. Não são os pesos do SenseNova-Loop-9B nem o LFM3 completo. Roteadores mHC permanecem na inicialização; oito camadas inseridas têm saída neutra neste perfil.',
-        '- O nome nominal 0,8B vem da base. O híbrido ampliado carrega aproximadamente 1,02B parâmetros, incluindo visão não avaliada aqui.','',
-        '## Protocolo, limites e reprodução','',
-        f"Greedy sem thinking, até 12 tokens de resposta, cache, BF16/FP32, {reports['original']['protocol']['cpu_threads']} threads CPU por máquina. "
-        'Até quatro prompts de comprimento idêntico por lote, sem padding, com a mesma organização nos modelos. '
-        'O híbrido executa mais camadas que o original; o orçamento de computação é maior. '
-        'No GitHub, cada modelo usa as mesmas duas partições e a mesma organização de lotes; '
-        'o hardware físico entre runners pode variar.','',
-        '| Modelo | Parâmetros carregados | Tempo amortizado de geração, 64 perguntas | Respostas no limite de 12 tokens |',
-        '|---|---:|---:|---:|']
-    for key,s in summary.items():
-        lines.append(f"| {names[key]} | {s['loaded_parameters']:,} | {s['amortized_generation_seconds']:.1f} s | {s['generation_limit_hits']} |")
-    lines+=['','Benchmark customizado pequeno e principalmente na distribuição do currículo. Não avalia visão, '
-        'contexto longo ou inteligência geral. Uma diferença pequena pode ser ruído, formato ou especialização. '
-        'Não há afirmação de que o modelo passou a compreender sua arquitetura.','',
-        'Princípios públicos dos laboratórios e referências: [LAB_METHODS.md](LAB_METHODS.md). '
-        'Procedimento completo: [lab_rsi/PROTOCOL.md](lab_rsi/PROTOCOL.md).','',
-        'Estado final: concluído, salvo e parado. Não existe processo permanente de treino depois desta execução.','',
-        '## Respostas e correções completas','',
-        '| ID | Esperado | Original | Híbrido antes do ajuste | Final |',
-        '|---|---|---|---|---|']
-    def esc(text):return text.replace('|','\\|').replace('\n',' / ')
+        d=c['development_generation'];val=c.get('validation');vt=f"{val['exact_correct']}/{val['total']}" if val else 'Não elegível'
+        lines.append(f"| {c['step']} | {c['weight_write']['changed_bf16_values']} | {d['exact_correct']}/{d['total']} | {c['anchor']['mean_nll']:.5f} | {vt} | {c.get('passes_validation',False)} |")
+    lines+=['','As duas melhores candidatas elegíveis em desenvolvimento foram à validação. '
+        'Promoção exige mais respostas exatas e nenhuma perda agregada nos controles não numéricos. '
+        'As âncoras limitam especialização, mas não provam preservação geral. O teste final foi aberto somente após congelar a escolha.','',
+        '## Arquitetura e limites','',
+        'SenseNova: 32 camadas físicas, 56 execuções, mHC de duas vias e segunda visita ativa. '
+        'Liquid: convoluções de sete posições com histórico não nulo e janela local 256 em três camadas. '
+        'São componentes compatíveis inspirados nessas arquiteturas sobre pesos Qwen; não são os modelos completos. '
+        'Roteadores mHC continuam na inicialização e oito camadas inseridas têm saída neutra. '
+        'A base é nominalmente 0,8B; o híbrido carrega cerca de 1,02B parâmetros, incluindo visão não avaliada.','',
+        'Os primeiros erros são calculados com prefixos de resposta correta. A regressão usa uma aproximação local do RMSNorm; '
+        'somente a geração completa decide elegibilidade. Cada checkpoint contém a matriz BF16 densa escrita, sem adaptador extra.','',
+        'Mesmo conjunto, greedy sem thinking, 12 tokens, quatro threads CPU, duas partições iguais por modelo. '
+        'O híbrido usa mais computação que o original. Tempos em runners distintos são aproximados. '
+        'O teste customizado de 80 questões compartilha templates com o currículo; não mede inteligência geral. '
+        'Resultados anteriores (39/64 contra 34/64) são históricos em history/ e não são diretamente comparáveis.','',
+        'Comparações pareadas exatas: `'+json.dumps(comparisons,ensure_ascii=False)+'`. '
+        'Os p-valores são descritivos; há dependência entre templates.','',
+        'Estado: concluído e parado. Checkpoints das três etapas e escolha final salvos em commits.','',
+        '## Todas as respostas','',
+        '| ID | Esperado | Original | Híbrido inicial | Final |','|---|---|---|---|---|']
     by={v:{r['id']:r for r in report['rows']} for v,report in reports.items()}
+    def esc(x):return x.replace('|','\\|').replace('\n',' / ')
     for row in DATA['heldout']:
-        key=row['id'];texts=[esc(by[v][key]['output']) for v in ['original','baseline',final]]
-        lines.append(f"| {key} | {row['answer']} | {' | '.join(texts)} |")
+        lines.append('| '+row['id']+' | '+esc(row['answer'])+' | '+' | '.join(esc(by[v][row['id']]['output']) for v in ['original','baseline',final])+' |')
     (ROOT/'LAB_REPORT.md').write_text('\n'.join(lines)+'\n')
-    checkpoint={**frozen,'status':'complete','loaded_parameters':reports[final]['loaded_parameters'],
-        'report':'LAB_REPORT.md','summary':'lab_rsi/summary.json',
-        'replay':'python lab_rsi/replay.py --question YOUR_QUESTION',
-        'base_revision':'2fc06364715b967f1860aea9cf38778875588b17',
-        'sensenova_source_revision':'9937e91c7301b7dcbb5bf17e3e4e95c499a11e99',
-        'source_manifest':'model_identity.json'}
-    atomic_json(ROOT/'checkpoints/liquid_sense_loop.json',checkpoint)
+    atomic_json(ROOT/'checkpoints/liquid_sense_loop.json',{**frozen,'status':'complete',
+        'loaded_parameters':reports[final]['loaded_parameters'],'report':'LAB_REPORT.md',
+        'summary':'lab_rsi/summary.json','replay':'python lab_rsi/replay.py --question YOUR_QUESTION',
+        'base_revision':'2fc06364715b967f1860aea9cf38778875588b17','source_manifest':'model_identity.json'})
     update_status(status='complete',phase='checkpointed',evaluating_variant=None,
-                  final_test_evaluated=True,final_summary='lab_rsi/summary.json',
-                  selected_candidate=frozen['candidate_id'],process_continues_in_background=False)
+        final_test_evaluated=True,selected_candidate=frozen['candidate_id'],process_continues_in_background=False)
     print(json.dumps(overall,indent=2,ensure_ascii=False),flush=True)
-
 
 if __name__=='__main__':main()

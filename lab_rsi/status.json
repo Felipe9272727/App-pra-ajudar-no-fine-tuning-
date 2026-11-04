@@ -1,60 +1,13 @@
 {
-  "status": "complete",
+  "status": "prepared",
+  "phase": "fresh_cycle2",
   "model_display_name": "liquid sense 0.8 b LOOP",
-  "branch": "codex/liquid-sense-loop-lab-pilot-20261103",
-  "parent_commit": "cbdead4d6e07b17232361d3550bf2b263fdd4cd1",
-  "constraints": {
-    "direct_weight_updates": true,
-    "backward_passes": 0,
-    "sensenova_active": true,
-    "liquid_active": true,
-    "heldout_selection_forbidden": true
-  },
-  "baseline_recipe": {
-    "gain": 0.05,
-    "beta": 0.0,
-    "liquid_mix": 1.0
-  },
-  "architecture_can_be_disabled": false,
-  "phase": "checkpointed",
-  "updated_unix": 1793756484.3322227,
-  "train_examples_done": 96,
-  "candidates_fitted": 5,
-  "evaluating_candidate": null,
+  "branch": "codex/liquid-sense-rsi-cycle2-20261104",
+  "parent_commit": "86e3f6b22a7e809e23883bd982e54523225c0478",
   "model_process_active": false,
-  "execution_plan": {
-    "runner": "ubuntu-24.04",
-    "cpu_threads_per_job": 4,
-    "max_parallel_evaluation_jobs": 4,
-    "paid_runners": false,
-    "workflow": ".github/workflows/liquid-sense-benchmark.yml"
-  },
-  "recovery_note": "Temporary execution environment reset; five saved weight deltas and two completed development measurements recovered from Git. No new final-test answers observed.",
-  "execution": {
-    "run_id": "41750691403",
-    "source_commit": "94c6f0c74c201f82a8a1fc6423d3213bc1cc658d",
-    "runner": "GitHub Actions 1000001431",
-    "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
-    "python": "3.12.16",
-    "torch": "2.15.0+cpu",
-    "transformers": "5.22.1",
-    "cpu_threads": 4,
-    "data_sha256": "e0c6a198a8150ecf5e531e2fb33d8316db7dadc57ff23ead257a52440265425b",
-    "architecture_required": {
-      "gain": 0.05,
-      "beta": 0.0,
-      "liquid_mix": 1.0
-    }
-  },
-  "process_continues_in_background": false,
-  "validation_queue": [
-    "candidate_02",
-    "candidate_04"
-  ],
+  "final_test_evaluated": false,
+  "backward_passes": 0,
   "selected_candidate": null,
-  "heldout_used_for_selection": false,
-  "evaluating_variant": null,
-  "final_test_evaluated": true,
-  "final_summary": "lab_rsi/summary.json",
-  "completion_note": "Bounded GitHub Actions pilot finished; no permanent training loop"
+  "process_continues_in_background": false,
+  "architecture_can_be_disabled": false
 }

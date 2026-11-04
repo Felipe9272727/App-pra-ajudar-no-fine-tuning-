@@ -28,3 +28,15 @@
   quatro threads por máquina. Não habilitar cobrança ou runners maiores.
 - Leia os jobs/artifacts antes de retomar um fluxo incerto. Depois de congelar
   e observar o teste, não reabra a seleção com esse mesmo teste.
+
+## Ciclo 2 ativo
+
+- A branch `codex/liquid-sense-rsi-cycle2-20261104` continua o híbrido ativo
+  do commit `86e3f6b22a7e809e23883bd982e54523225c0478`, sem a V3.
+- O piloto anterior está em `history/` e na branch original; não usar seus
+  conjuntos observados como teste final deste ciclo.
+- Fluxo atual: `.github/workflows/liquid-sense-rsi-cycle2.yml`.
+- `lab_rsi/PROTOCOL.md` e `data.json` fixam três etapas e critérios antes
+  dos resultados. Não reabrir seleção depois do teste final.
+- Não promover edição só porque baixou NLL. Exigir geração correta e
+  preservação dos controles, conforme `protocol.validation_passes`.

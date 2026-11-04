@@ -1,116 +1,57 @@
-# Segundo piloto: liquid sense 0.8 b LOOP
+# RSI ciclo 2: edição direta iterativa
 
-## Arquitetura obrigatória
+Fonte preservada: piloto em `86e3f6b22a7e809e23883bd982e54523225c0478`.
+A V3 está arquivada na branch do experimento. Ela não é o modelo pai.
 
-Toda candidata usa a mesma base híbrida: 32 camadas físicas, 56 execuções,
-duas vias mHC, segunda visita com ganho 0,05, convoluções de sete posições
-com coeficientes históricos aprendidos não nulos e atenção local de 256
-tokens nas camadas 7, 15 e 27. Uma asserção verifica esses requisitos depois
-de cada escrita de pesos. Não se pode melhorar a métrica desligando o loop
-ou os componentes Liquid. A base de comparação interna já tem ambos ativos.
+O assistente controla um ciclo limitado de três etapas. Não é RSI autônomo.
+Nenhum gradiente, backward ou otimizador de gradiente será usado.
+As três etapas alteram diretamente a matriz BF16 existente
+`layers.31.mlp.down_proj.weight`, guardada integralmente em checkpoints.
+A base ativa mantém loop/mHC SenseNova e operadores inspirados em Liquid.
+Não são os modelos SenseNova/LFM3 completos. O nome nominal 0,8B vem do Qwen;
+o híbrido ampliado carrega aproximadamente 1,02B parâmetros, visão incluída.
 
-É uma adaptação da topologia SenseNova com dimensões e pesos Qwen, acrescida
-de operadores compatíveis inspirados no LFM3. Não é uma cópia dos pesos de
-SenseNova-Loop-9B nem da arquitetura completa LFM3. O roteador mHC permanece
-na inicialização determinística; oito camadas inseridas têm saídas neutras
-neste perfil conservador. O bloco repetido continua fazendo atualizações
-residuais não nulas. O ajuste deste piloto não aprende novos roteadores.
+## Dados e regra definida antes da execução
 
-O nome 0,8B identifica a escala da base original. A expansão carrega
-aproximadamente 1,02 bilhão de parâmetros, incluindo a parte visual herdada
-que estes testes somente de texto não exercitam.
+Semente 926110402: 224 adaptação, 24 desenvolvimento, 32 validação e 80 teste.
+Exclusão das perguntas anteriores em `history/`, `v2_adaptation/` e `rsi/`.
+Todos os splits são distintos. Perguntas sintéticas compartilham templates;
+essa avaliação mede tarefas restritas, não inteligência geral.
+Há 12 textos de preservação genérica; não são perguntas de teste.
+As respostas de transformação de strings respeitam a caixa das letras.
 
-## Aprendizagem por edição algébrica
+A cada etapa, o modelo atualizado fornece os logits nos prefixos corretos.
+Corrigir somente o primeiro próximo token errado (inclusive EOS), preservando
+os tokens anteriores corretos e posições nos textos genéricos. A diferença de
+embeddings de saída fornece a direção aproximada via RMSNorm, sem autograd.
+Resolver ridge fechado com lambda 0,05, margem 1,5, cap 0,10 no residual,
+cap 0,02 da norma da matriz por etapa e 0,04 cumulativo. Âncoras pesam quatro.
+A aritmética BF16 pode arredondar o limite ligeiramente.
+As features anteriores à última MLP são independentes da matriz editada;
+replay exige igualdade bit a bit com o modelo completo na criação do cache.
+Não há cache de features na geração usada para decidir promoção.
 
-Os 96 exemplos de treino têm respostas calculadas por funções Python fixas.
-O modelo recebe apenas o enunciado durante a inferência; não chama Python,
-busca, ferramenta externa ou modelo professor para responder às avaliações.
+Cada etapa parte da anterior, mesmo quando ela não passa em desenvolvimento.
+Os três snapshots são preservados. Essa trajetória e o orçamento são fixos.
+Elegível: mais respostas exatas que a base nas 24 questões de desenvolvimento,
+e NLL dos textos genéricos no máximo 110% da base. As duas melhores elegíveis
+por acerto exato (NLL desempata) seguem à validação de geração completa.
+Promoção: estritamente mais acertos exatos e nenhum declínio agregado nos
+controles não numéricos da validação. Priorizar validação exata, depois
+desenvolvimento exato e NLL para desempatar. Se nenhuma passar, manter a base.
+Não escolher com teste final. Congelar e salvar a escolha antes de abri-lo.
 
-São coletadas entradas da projeção de saída MLP da camada física 31. Para
-tokens errados, a diferença entre as direções do token correto e do token
-preferido define uma correção local de margem. A aproximação usa o Jacobiano
-do RMSNorm e limita a correção a 5% da norma do estado. Uma regressão ridge
-fechada ajusta a matriz existente. Exemplos corretos e textos de preservação
-recebem alvo residual zero. Isso é aprendizagem supervisionada por dados,
-apesar de não usar autograd, backward, SGD ou outro otimizador de gradiente.
+## Execução e persistência
 
-O delta é comprimido em fatores de posto 32 para salvar um checkpoint pequeno.
-Ao carregar, os fatores são multiplicados e somados à matriz densa original.
-Não se acrescenta um módulo LoRA ao caminho de inferência. A norma do delta
-é limitada a 10% da norma da matriz original antes da força da candidata.
+Workflow `.github/workflows/liquid-sense-rsi-cycle2.yml`, uma execução finita.
+CPU pública padrão Ubuntu, quatro threads, no máximo quatro avaliações
+simultâneas, sem runners pagos. Pesos originais têm revisão e SHA256 fixos;
+a referência original não usa reconstrução da V3.
+Greedy sem thinking, até 12 tokens, BF16/FP32, dois shards iguais por modelo.
+Original, híbrido anterior e, se promovida, candidata sob o mesmo protocolo.
+O híbrido consome mais computação que o original.
 
-Cinco programas candidatos estão registrados em `data.json`: duas forças de
-correção conjunta, duas correções só de dígitos e um controle só de parada.
-O controle de parada não pode ser promovido. O assistente controla a pesquisa;
-este piloto não alega que o modelo pequeno inventou o método ou se modificou
-autonomamente. As sugestões brutas do piloto anterior permanecem no histórico.
-
-## Avaliação e seleção
-
-- Treino: 96 tarefas, quatro famílias, respostas verificadas por código.
-- Preservação: 12 textos gerais, sem usar perguntas do teste final.
-- Desenvolvimento: 24 problemas; NLL dos dígitos e de parada são separadas.
-- Validação: 24 problemas com geração real, distintos do treino.
-- Teste final: 64 perguntas novas, 48 numéricas/código e 16 controles gerais.
-
-Só seguem para validação as duas melhores candidatas que reduzem a NLL da
-resposta e não aumentam a NLL dos textos de preservação em mais de 10%.
-Para promoção, é necessário ao menos um acerto adicional de conteúdo na
-validação e nenhuma redução nos acertos de formato exato. A seleção é
-congelada e registrada antes de executar o teste final. Se nenhuma passar,
-o híbrido com ambas as partes ativas é preservado.
-
-Geração: sem thinking, greedy, até 12 tokens, cache ativado, CPU com oito
-threads, corpo BF16 e roteadores FP32. Até quatro prompts de comprimento
-exatamente igual são agrupados, sem padding; todos os modelos usam a mesma
-organização. Os tempos por amostra são amortizados pelo tamanho do lote,
-não latência interativa individual. O Qwen original executa menos camadas,
-portanto o orçamento de computação não é igual, embora o de resposta seja.
-
-Relatamos conteúdo numérico e formato exato separadamente. O corretor de
-conteúdo exige um único inteiro identificável igual ao esperado; não concede
-acerto se a resposta simplesmente contiver vários números e um for correto.
-Os controles gerais usam respostas/aliases fixos, sem juiz de linguagem.
-
-É um benchmark customizado e pequeno, principalmente dentro da distribuição
-do currículo. Não mede inteligência geral, visão ou contextos longos. O teste
-anterior de 24 itens já foi observado e não participa da seleção deste piloto.
-Um eventual resultado favorável exige confirmação em benchmarks externos.
-
-## Retomar
-
-A base ativa deste piloto foi escolhida pelo requisito do usuário de manter
-as duas famílias arquiteturais. Isso não promove retroativamente a variante
-Liquid por causa dos 19/24 observados no teste antigo.
-
-A triagem de NLL pode reutilizar entradas MLP e resíduos da última camada,
-pois somente sua projeção de saída muda. Preservamos os tensores BF16 com a
-forma completa do GEMM e verificamos igualdade bit a bit com os logits da
-execução integral, incluindo a primeira candidata já medida integralmente.
-A validação e o teste final geram respostas com todas as camadas do modelo.
-As ativações temporárias são reconstruíveis e não são pesos do checkpoint.
-
-Após preparar a base com os comandos do README:
-
-```bash
-python lab_rsi/make_data.py
-python lab_rsi/fit.py collect
-python lab_rsi/fit.py fit
-python lab_rsi/fit.py develop
-python lab_rsi/evaluate.py validate
-python lab_rsi/evaluate.py freeze
-python lab_rsi/evaluate.py heldout --variant original
-python lab_rsi/evaluate.py heldout --variant baseline
-# Só necessário se um novo delta tiver sido promovido:
-python lab_rsi/evaluate.py heldout --variant selected
-```
-
-Não repita fases já completas nem descongele após observar o teste. Para usar
-o checkpoint final, sem refazer a coleta e o ajuste:
-
-```bash
-python lab_rsi/replay.py --question "Explique a diferença entre uma hipótese e uma evidência."
-```
-
-`lab_rsi/status.json` registra a fase real. Não há serviço permanente de
-treinamento em segundo plano depois de a sessão parar.
+Após cada decisão, salvar pesos e estado em commit GitHub sem force push.
+Alteração concorrente de fonte aborta o salvamento; artefatos ficam disponíveis
+por três dias e checkpoints já commitados permanecem no Git.
+Ao fim, salvar todos os resultados e parar. Não repetir o teste para seleção.

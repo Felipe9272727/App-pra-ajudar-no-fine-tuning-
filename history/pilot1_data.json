@@ -1,0 +1,1541 @@
+{
+  "version": "lab-pilot-v1",
+  "seed": 9261103,
+  "train": [
+    {
+      "id": "train_addition_07",
+      "family": "addition",
+      "question": "Calcule 69 + 99. Responda apenas com o inteiro.",
+      "answer": "168",
+      "numeric": true
+    },
+    {
+      "id": "train_python_10",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [8, 1, 6, 3]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "10",
+      "numeric": true
+    },
+    {
+      "id": "train_python_03",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [13, 13, 9, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "468",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 242 - 145. Reply only with the integer.",
+      "answer": "97",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_12",
+      "family": "subtraction",
+      "question": "Calculate 161 - 28. Reply only with the integer.",
+      "answer": "133",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_18",
+      "family": "multiplication",
+      "question": "Calculate 8 * 3. Reply only with the integer.",
+      "answer": "24",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_18",
+      "family": "addition",
+      "question": "Calculate 105 + 78. Reply only with the integer.",
+      "answer": "183",
+      "numeric": true
+    },
+    {
+      "id": "train_python_07",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [9, 5, 8, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "106",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_16",
+      "family": "addition",
+      "question": "Calculate 62 + 44. Reply only with the integer.",
+      "answer": "106",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_13",
+      "family": "subtraction",
+      "question": "Calcule 135 - 98. Responda apenas com o inteiro.",
+      "answer": "37",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_01",
+      "family": "addition",
+      "question": "Calcule 59 + 13. Responda apenas com o inteiro.",
+      "answer": "72",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_11",
+      "family": "subtraction",
+      "question": "Calcule 208 - 146. Responda apenas com o inteiro.",
+      "answer": "62",
+      "numeric": true
+    },
+    {
+      "id": "train_python_14",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [13, 3, 11, 5]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "324",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_17",
+      "family": "addition",
+      "question": "Calcule 88 + 96. Responda apenas com o inteiro.",
+      "answer": "184",
+      "numeric": true
+    },
+    {
+      "id": "train_python_11",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [6, 1, 12, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "1",
+      "numeric": true
+    },
+    {
+      "id": "train_python_09",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [3, 13, 12, 6]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "178",
+      "numeric": true
+    },
+    {
+      "id": "train_python_15",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [1, 6, 5, 3]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "35",
+      "numeric": true
+    },
+    {
+      "id": "train_python_05",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [10, 8, 2, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "49",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_06",
+      "family": "subtraction",
+      "question": "Calculate 245 - 60. Reply only with the integer.",
+      "answer": "185",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_01",
+      "family": "multiplication",
+      "question": "Calcule 6 * 17. Responda apenas com o inteiro.",
+      "answer": "102",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_03",
+      "family": "subtraction",
+      "question": "Calcule 217 - 118. Responda apenas com o inteiro.",
+      "answer": "99",
+      "numeric": true
+    },
+    {
+      "id": "train_python_17",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [5, 12, 5, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "99",
+      "numeric": true
+    },
+    {
+      "id": "train_python_21",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [1, 8, 4, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "1",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_13",
+      "family": "addition",
+      "question": "Calcule 86 + 115. Responda apenas com o inteiro.",
+      "answer": "201",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_11",
+      "family": "addition",
+      "question": "Calcule 45 + 88. Responda apenas com o inteiro.",
+      "answer": "133",
+      "numeric": true
+    },
+    {
+      "id": "train_python_08",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [5, 11, 1, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "196",
+      "numeric": true
+    },
+    {
+      "id": "train_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [1, 5, 10, 11]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "147",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_16",
+      "family": "multiplication",
+      "question": "Calculate 14 * 6. Reply only with the integer.",
+      "answer": "84",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_19",
+      "family": "subtraction",
+      "question": "Calcule 111 - 45. Responda apenas com o inteiro.",
+      "answer": "66",
+      "numeric": true
+    },
+    {
+      "id": "train_python_18",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [10, 1, 10, 5]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "26",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_03",
+      "family": "multiplication",
+      "question": "Calcule 15 * 8. Responda apenas com o inteiro.",
+      "answer": "120",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_09",
+      "family": "subtraction",
+      "question": "Calcule 91 - 79. Responda apenas com o inteiro.",
+      "answer": "12",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_23",
+      "family": "subtraction",
+      "question": "Calcule 141 - 135. Responda apenas com o inteiro.",
+      "answer": "6",
+      "numeric": true
+    },
+    {
+      "id": "train_python_23",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [3, 8, 1, 5]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "35",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_12",
+      "family": "multiplication",
+      "question": "Calculate 11 * 18. Reply only with the integer.",
+      "answer": "198",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_19",
+      "family": "multiplication",
+      "question": "Calcule 11 * 3. Responda apenas com o inteiro.",
+      "answer": "33",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_20",
+      "family": "subtraction",
+      "question": "Calculate 191 - 40. Reply only with the integer.",
+      "answer": "151",
+      "numeric": true
+    },
+    {
+      "id": "train_python_13",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [9, 5, 9, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "187",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_03",
+      "family": "addition",
+      "question": "Calcule 87 + 117. Responda apenas com o inteiro.",
+      "answer": "204",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_06",
+      "family": "addition",
+      "question": "Calculate 122 + 24. Reply only with the integer.",
+      "answer": "146",
+      "numeric": true
+    },
+    {
+      "id": "train_python_20",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [12, 1, 1, 6]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "2",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_07",
+      "family": "multiplication",
+      "question": "Calcule 3 * 18. Responda apenas com o inteiro.",
+      "answer": "54",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_15",
+      "family": "addition",
+      "question": "Calcule 27 + 89. Responda apenas com o inteiro.",
+      "answer": "116",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_04",
+      "family": "multiplication",
+      "question": "Calculate 6 * 3. Reply only with the integer.",
+      "answer": "18",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_14",
+      "family": "subtraction",
+      "question": "Calculate 195 - 40. Reply only with the integer.",
+      "answer": "155",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_08",
+      "family": "addition",
+      "question": "Calculate 91 + 25. Reply only with the integer.",
+      "answer": "116",
+      "numeric": true
+    },
+    {
+      "id": "train_python_22",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 3, 2, 12]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "9",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_21",
+      "family": "subtraction",
+      "question": "Calcule 132 - 101. Responda apenas com o inteiro.",
+      "answer": "31",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_02",
+      "family": "addition",
+      "question": "Calculate 124 + 123. Reply only with the integer.",
+      "answer": "247",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_05",
+      "family": "multiplication",
+      "question": "Calcule 5 * 14. Responda apenas com o inteiro.",
+      "answer": "70",
+      "numeric": true
+    },
+    {
+      "id": "train_python_06",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 10, 1, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "50",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_10",
+      "family": "subtraction",
+      "question": "Calculate 160 - 26. Reply only with the integer.",
+      "answer": "134",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 239 - 87. Reply only with the integer.",
+      "answer": "152",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_11",
+      "family": "multiplication",
+      "question": "Calcule 9 * 16. Responda apenas com o inteiro.",
+      "answer": "144",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_19",
+      "family": "addition",
+      "question": "Calcule 38 + 95. Responda apenas com o inteiro.",
+      "answer": "133",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_09",
+      "family": "multiplication",
+      "question": "Calcule 9 * 17. Responda apenas com o inteiro.",
+      "answer": "153",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_12",
+      "family": "addition",
+      "question": "Calculate 23 + 102. Reply only with the integer.",
+      "answer": "125",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_20",
+      "family": "addition",
+      "question": "Calculate 57 + 36. Reply only with the integer.",
+      "answer": "93",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_18",
+      "family": "subtraction",
+      "question": "Calculate 67 - 42. Reply only with the integer.",
+      "answer": "25",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_20",
+      "family": "multiplication",
+      "question": "Calculate 18 * 5. Reply only with the integer.",
+      "answer": "90",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_04",
+      "family": "addition",
+      "question": "Calculate 120 + 108. Reply only with the integer.",
+      "answer": "228",
+      "numeric": true
+    },
+    {
+      "id": "train_python_19",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [2, 10, 5, 3]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "34",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_21",
+      "family": "multiplication",
+      "question": "Calcule 16 * 14. Responda apenas com o inteiro.",
+      "answer": "224",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_14",
+      "family": "multiplication",
+      "question": "Calculate 4 * 14. Reply only with the integer.",
+      "answer": "56",
+      "numeric": true
+    },
+    {
+      "id": "train_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [5, 1, 12, 11]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "147",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_13",
+      "family": "multiplication",
+      "question": "Calcule 10 * 18. Responda apenas com o inteiro.",
+      "answer": "180",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_23",
+      "family": "multiplication",
+      "question": "Calcule 3 * 17. Responda apenas com o inteiro.",
+      "answer": "51",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_04",
+      "family": "subtraction",
+      "question": "Calculate 138 - 28. Reply only with the integer.",
+      "answer": "110",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_22",
+      "family": "addition",
+      "question": "Calculate 102 + 97. Reply only with the integer.",
+      "answer": "199",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_08",
+      "family": "subtraction",
+      "question": "Calculate 234 - 113. Reply only with the integer.",
+      "answer": "121",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_21",
+      "family": "addition",
+      "question": "Calcule 93 + 92. Responda apenas com o inteiro.",
+      "answer": "185",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_05",
+      "family": "subtraction",
+      "question": "Calcule 196 - 187. Responda apenas com o inteiro.",
+      "answer": "9",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_05",
+      "family": "addition",
+      "question": "Calcule 123 + 22. Responda apenas com o inteiro.",
+      "answer": "145",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 11 * 4. Reply only with the integer.",
+      "answer": "44",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_15",
+      "family": "multiplication",
+      "question": "Calcule 15 * 16. Responda apenas com o inteiro.",
+      "answer": "240",
+      "numeric": true
+    },
+    {
+      "id": "train_python_01",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [1, 7, 5, 11]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "196",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_10",
+      "family": "addition",
+      "question": "Calculate 122 + 41. Reply only with the integer.",
+      "answer": "163",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_07",
+      "family": "subtraction",
+      "question": "Calcule 64 - 23. Responda apenas com o inteiro.",
+      "answer": "41",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_09",
+      "family": "addition",
+      "question": "Calcule 102 + 55. Responda apenas com o inteiro.",
+      "answer": "157",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_22",
+      "family": "subtraction",
+      "question": "Calculate 127 - 85. Reply only with the integer.",
+      "answer": "42",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_17",
+      "family": "subtraction",
+      "question": "Calcule 212 - 161. Responda apenas com o inteiro.",
+      "answer": "51",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 13 * 16. Reply only with the integer.",
+      "answer": "208",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_22",
+      "family": "multiplication",
+      "question": "Calculate 12 * 13. Reply only with the integer.",
+      "answer": "156",
+      "numeric": true
+    },
+    {
+      "id": "train_python_16",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [11, 5, 7, 11]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "316",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_08",
+      "family": "multiplication",
+      "question": "Calculate 18 * 15. Reply only with the integer.",
+      "answer": "270",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_10",
+      "family": "multiplication",
+      "question": "Calculate 10 * 12. Reply only with the integer.",
+      "answer": "120",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_16",
+      "family": "subtraction",
+      "question": "Calculate 196 - 133. Reply only with the integer.",
+      "answer": "63",
+      "numeric": true
+    },
+    {
+      "id": "train_python_04",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [12, 1, 9, 12]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "82",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_14",
+      "family": "addition",
+      "question": "Calculate 89 + 14. Reply only with the integer.",
+      "answer": "103",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_17",
+      "family": "multiplication",
+      "question": "Calcule 6 * 12. Responda apenas com o inteiro.",
+      "answer": "72",
+      "numeric": true
+    },
+    {
+      "id": "train_multiplication_06",
+      "family": "multiplication",
+      "question": "Calculate 13 * 8. Reply only with the integer.",
+      "answer": "104",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_00",
+      "family": "addition",
+      "question": "Calculate 87 + 78. Reply only with the integer.",
+      "answer": "165",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_01",
+      "family": "subtraction",
+      "question": "Calcule 89 - 22. Responda apenas com o inteiro.",
+      "answer": "67",
+      "numeric": true
+    },
+    {
+      "id": "train_python_12",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [8, 3, 3, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "18",
+      "numeric": true
+    },
+    {
+      "id": "train_subtraction_15",
+      "family": "subtraction",
+      "question": "Calcule 127 - 32. Responda apenas com o inteiro.",
+      "answer": "95",
+      "numeric": true
+    },
+    {
+      "id": "train_addition_23",
+      "family": "addition",
+      "question": "Calcule 92 + 17. Responda apenas com o inteiro.",
+      "answer": "109",
+      "numeric": true
+    }
+  ],
+  "development": [
+    {
+      "id": "development_subtraction_01",
+      "family": "subtraction",
+      "question": "Calcule 210 - 31. Responda apenas com o inteiro.",
+      "answer": "179",
+      "numeric": true
+    },
+    {
+      "id": "development_addition_01",
+      "family": "addition",
+      "question": "Calcule 46 + 53. Responda apenas com o inteiro.",
+      "answer": "99",
+      "numeric": true
+    },
+    {
+      "id": "development_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 10 * 16. Reply only with the integer.",
+      "answer": "160",
+      "numeric": true
+    },
+    {
+      "id": "development_multiplication_04",
+      "family": "multiplication",
+      "question": "Calculate 12 * 4. Reply only with the integer.",
+      "answer": "48",
+      "numeric": true
+    },
+    {
+      "id": "development_python_04",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [3, 1, 7, 13]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "228",
+      "numeric": true
+    },
+    {
+      "id": "development_subtraction_04",
+      "family": "subtraction",
+      "question": "Calculate 97 - 90. Reply only with the integer.",
+      "answer": "7",
+      "numeric": true
+    },
+    {
+      "id": "development_multiplication_05",
+      "family": "multiplication",
+      "question": "Calcule 5 * 17. Responda apenas com o inteiro.",
+      "answer": "85",
+      "numeric": true
+    },
+    {
+      "id": "development_python_01",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [1, 9, 8, 1]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "83",
+      "numeric": true
+    },
+    {
+      "id": "development_multiplication_03",
+      "family": "multiplication",
+      "question": "Calcule 10 * 11. Responda apenas com o inteiro.",
+      "answer": "110",
+      "numeric": true
+    },
+    {
+      "id": "development_subtraction_03",
+      "family": "subtraction",
+      "question": "Calcule 71 - 28. Responda apenas com o inteiro.",
+      "answer": "43",
+      "numeric": true
+    },
+    {
+      "id": "development_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 86 - 67. Reply only with the integer.",
+      "answer": "19",
+      "numeric": true
+    },
+    {
+      "id": "development_addition_00",
+      "family": "addition",
+      "question": "Calculate 39 + 105. Reply only with the integer.",
+      "answer": "144",
+      "numeric": true
+    },
+    {
+      "id": "development_multiplication_01",
+      "family": "multiplication",
+      "question": "Calcule 4 * 7. Responda apenas com o inteiro.",
+      "answer": "28",
+      "numeric": true
+    },
+    {
+      "id": "development_addition_03",
+      "family": "addition",
+      "question": "Calcule 127 + 118. Responda apenas com o inteiro.",
+      "answer": "245",
+      "numeric": true
+    },
+    {
+      "id": "development_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [9, 1, 8, 13]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "251",
+      "numeric": true
+    },
+    {
+      "id": "development_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 15 * 4. Reply only with the integer.",
+      "answer": "60",
+      "numeric": true
+    },
+    {
+      "id": "development_python_05",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [10, 1, 10, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "1",
+      "numeric": true
+    },
+    {
+      "id": "development_subtraction_05",
+      "family": "subtraction",
+      "question": "Calcule 148 - 70. Responda apenas com o inteiro.",
+      "answer": "78",
+      "numeric": true
+    },
+    {
+      "id": "development_python_03",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [12, 5, 13, 12]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "194",
+      "numeric": true
+    },
+    {
+      "id": "development_addition_05",
+      "family": "addition",
+      "question": "Calcule 105 + 82. Responda apenas com o inteiro.",
+      "answer": "187",
+      "numeric": true
+    },
+    {
+      "id": "development_addition_04",
+      "family": "addition",
+      "question": "Calculate 17 + 43. Reply only with the integer.",
+      "answer": "60",
+      "numeric": true
+    },
+    {
+      "id": "development_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [8, 5, 2, 13]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "194",
+      "numeric": true
+    },
+    {
+      "id": "development_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 170 - 50. Reply only with the integer.",
+      "answer": "120",
+      "numeric": true
+    },
+    {
+      "id": "development_addition_02",
+      "family": "addition",
+      "question": "Calculate 23 + 19. Reply only with the integer.",
+      "answer": "42",
+      "numeric": true
+    }
+  ],
+  "validation": [
+    {
+      "id": "validation_addition_02",
+      "family": "addition",
+      "question": "Calculate 67 + 115. Reply only with the integer.",
+      "answer": "182",
+      "numeric": true
+    },
+    {
+      "id": "validation_subtraction_03",
+      "family": "subtraction",
+      "question": "Calcule 75 - 57. Responda apenas com o inteiro.",
+      "answer": "18",
+      "numeric": true
+    },
+    {
+      "id": "validation_addition_05",
+      "family": "addition",
+      "question": "Calcule 14 + 76. Responda apenas com o inteiro.",
+      "answer": "90",
+      "numeric": true
+    },
+    {
+      "id": "validation_python_04",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [8, 9, 13, 11]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "371",
+      "numeric": true
+    },
+    {
+      "id": "validation_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 113 - 102. Reply only with the integer.",
+      "answer": "11",
+      "numeric": true
+    },
+    {
+      "id": "validation_subtraction_04",
+      "family": "subtraction",
+      "question": "Calculate 243 - 214. Reply only with the integer.",
+      "answer": "29",
+      "numeric": true
+    },
+    {
+      "id": "validation_multiplication_03",
+      "family": "multiplication",
+      "question": "Calcule 17 * 16. Responda apenas com o inteiro.",
+      "answer": "272",
+      "numeric": true
+    },
+    {
+      "id": "validation_subtraction_05",
+      "family": "subtraction",
+      "question": "Calcule 97 - 21. Responda apenas com o inteiro.",
+      "answer": "76",
+      "numeric": true
+    },
+    {
+      "id": "validation_subtraction_01",
+      "family": "subtraction",
+      "question": "Calcule 208 - 187. Responda apenas com o inteiro.",
+      "answer": "21",
+      "numeric": true
+    },
+    {
+      "id": "validation_addition_03",
+      "family": "addition",
+      "question": "Calcule 110 + 24. Responda apenas com o inteiro.",
+      "answer": "134",
+      "numeric": true
+    },
+    {
+      "id": "validation_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 16 * 18. Reply only with the integer.",
+      "answer": "288",
+      "numeric": true
+    },
+    {
+      "id": "validation_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 9 * 6. Reply only with the integer.",
+      "answer": "54",
+      "numeric": true
+    },
+    {
+      "id": "validation_multiplication_01",
+      "family": "multiplication",
+      "question": "Calcule 18 * 8. Responda apenas com o inteiro.",
+      "answer": "144",
+      "numeric": true
+    },
+    {
+      "id": "validation_addition_01",
+      "family": "addition",
+      "question": "Calcule 17 + 108. Responda apenas com o inteiro.",
+      "answer": "125",
+      "numeric": true
+    },
+    {
+      "id": "validation_python_05",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [5, 7, 13, 12]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "243",
+      "numeric": true
+    },
+    {
+      "id": "validation_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [10, 13, 13, 11]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "459",
+      "numeric": true
+    },
+    {
+      "id": "validation_addition_00",
+      "family": "addition",
+      "question": "Calculate 36 + 76. Reply only with the integer.",
+      "answer": "112",
+      "numeric": true
+    },
+    {
+      "id": "validation_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [3, 7, 4, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "139",
+      "numeric": true
+    },
+    {
+      "id": "validation_python_01",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [9, 3, 5, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "115",
+      "numeric": true
+    },
+    {
+      "id": "validation_addition_04",
+      "family": "addition",
+      "question": "Calculate 126 + 44. Reply only with the integer.",
+      "answer": "170",
+      "numeric": true
+    },
+    {
+      "id": "validation_python_03",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [9, 9, 13, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "331",
+      "numeric": true
+    },
+    {
+      "id": "validation_multiplication_05",
+      "family": "multiplication",
+      "question": "Calcule 11 * 8. Responda apenas com o inteiro.",
+      "answer": "88",
+      "numeric": true
+    },
+    {
+      "id": "validation_multiplication_04",
+      "family": "multiplication",
+      "question": "Calculate 17 * 7. Reply only with the integer.",
+      "answer": "119",
+      "numeric": true
+    },
+    {
+      "id": "validation_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 173 - 97. Reply only with the integer.",
+      "answer": "76",
+      "numeric": true
+    }
+  ],
+  "heldout": [
+    {
+      "id": "heldout_addition_10",
+      "family": "addition",
+      "question": "Calculate 30 + 63. Reply only with the integer.",
+      "answer": "93",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 6 * 18. Reply only with the integer.",
+      "answer": "108",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_10",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [6, 7, 5, 13]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "243",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_11",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [9, 10, 7, 2]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "130",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_01",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [8, 11, 7, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "251",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_06",
+      "family": "subtraction",
+      "question": "Calculate 64 - 30. Reply only with the integer.",
+      "answer": "34",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_08",
+      "family": "multiplication",
+      "question": "Calculate 6 * 11. Reply only with the integer.",
+      "answer": "66",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 9, 6, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "81",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_07",
+      "family": "multiplication",
+      "question": "Calcule 11 * 11. Responda apenas com o inteiro.",
+      "answer": "121",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_03",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [3, 11, 2, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "130",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_06",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 7, 1, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "50",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_10",
+      "family": "multiplication",
+      "question": "Calculate 8 * 7. Reply only with the integer.",
+      "answer": "56",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_07",
+      "family": "addition",
+      "question": "Calcule 104 + 31. Responda apenas com o inteiro.",
+      "answer": "135",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_01",
+      "family": "multiplication",
+      "question": "Calcule 4 * 8. Responda apenas com o inteiro.",
+      "answer": "32",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_04",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [11, 12, 12, 12]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "121",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_04",
+      "family": "addition",
+      "question": "Calculate 109 + 64. Reply only with the integer.",
+      "answer": "173",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_03",
+      "family": "subtraction",
+      "question": "Calcule 143 - 18. Responda apenas com o inteiro.",
+      "answer": "125",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_09",
+      "family": "subtraction",
+      "question": "Calcule 102 - 99. Responda apenas com o inteiro.",
+      "answer": "3",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_03",
+      "family": "addition",
+      "question": "Calcule 11 + 105. Responda apenas com o inteiro.",
+      "answer": "116",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_05",
+      "family": "multiplication",
+      "question": "Calcule 12 * 3. Responda apenas com o inteiro.",
+      "answer": "36",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_07",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [5, 5, 8, 11]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "171",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_04",
+      "family": "subtraction",
+      "question": "Calculate 70 - 53. Reply only with the integer.",
+      "answer": "17",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [5, 8, 13, 4]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "194",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_09",
+      "family": "multiplication",
+      "question": "Calcule 8 * 12. Responda apenas com o inteiro.",
+      "answer": "96",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_08",
+      "family": "addition",
+      "question": "Calculate 76 + 60. Reply only with the integer.",
+      "answer": "136",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_11",
+      "family": "subtraction",
+      "question": "Calcule 158 - 22. Responda apenas com o inteiro.",
+      "answer": "136",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_09",
+      "family": "addition",
+      "question": "Calcule 21 + 108. Responda apenas com o inteiro.",
+      "answer": "129",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_08",
+      "family": "subtraction",
+      "question": "Calculate 190 - 139. Reply only with the integer.",
+      "answer": "51",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_01",
+      "family": "addition",
+      "question": "Calcule 103 + 126. Responda apenas com o inteiro.",
+      "answer": "229",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_07",
+      "family": "subtraction",
+      "question": "Calcule 147 - 29. Responda apenas com o inteiro.",
+      "answer": "118",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 57 - 34. Reply only with the integer.",
+      "answer": "23",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_11",
+      "family": "addition",
+      "question": "Calcule 64 + 106. Responda apenas com o inteiro.",
+      "answer": "170",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_09",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [5, 13, 6, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "194",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 4 * 6. Reply only with the integer.",
+      "answer": "24",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_10",
+      "family": "subtraction",
+      "question": "Calculate 117 - 71. Reply only with the integer.",
+      "answer": "46",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_08",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [1, 8, 7, 4]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "50",
+      "numeric": true
+    },
+    {
+      "id": "heldout_python_05",
+      "family": "python",
+      "question": "Qual inteiro este código Python imprime?\n```python\nxs = [7, 5, 10, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nResponda apenas com o inteiro.",
+      "answer": "74",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_03",
+      "family": "multiplication",
+      "question": "Calcule 5 * 6. Responda apenas com o inteiro.",
+      "answer": "30",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_11",
+      "family": "multiplication",
+      "question": "Calcule 15 * 19. Responda apenas com o inteiro.",
+      "answer": "285",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_01",
+      "family": "subtraction",
+      "question": "Calcule 187 - 79. Responda apenas com o inteiro.",
+      "answer": "108",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 218 - 179. Reply only with the integer.",
+      "answer": "39",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_06",
+      "family": "multiplication",
+      "question": "Calculate 16 * 7. Reply only with the integer.",
+      "answer": "112",
+      "numeric": true
+    },
+    {
+      "id": "heldout_multiplication_04",
+      "family": "multiplication",
+      "question": "Calculate 3 * 10. Reply only with the integer.",
+      "answer": "30",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_02",
+      "family": "addition",
+      "question": "Calculate 75 + 63. Reply only with the integer.",
+      "answer": "138",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_00",
+      "family": "addition",
+      "question": "Calculate 125 + 48. Reply only with the integer.",
+      "answer": "173",
+      "numeric": true
+    },
+    {
+      "id": "heldout_subtraction_05",
+      "family": "subtraction",
+      "question": "Calcule 217 - 200. Responda apenas com o inteiro.",
+      "answer": "17",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_05",
+      "family": "addition",
+      "question": "Calcule 23 + 27. Responda apenas com o inteiro.",
+      "answer": "50",
+      "numeric": true
+    },
+    {
+      "id": "heldout_addition_06",
+      "family": "addition",
+      "question": "Calculate 13 + 121. Reply only with the integer.",
+      "answer": "134",
+      "numeric": true
+    },
+    {
+      "id": "heldout_control_00",
+      "family": "general_control",
+      "question": "What is the chemical symbol for silver? Reply only with the symbol.",
+      "answer": "Ag",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_01",
+      "family": "general_control",
+      "question": "Qual é o símbolo químico do chumbo? Responda só o símbolo.",
+      "answer": "Pb",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_02",
+      "family": "general_control",
+      "question": "Which planet is known for its prominent rings? Reply with its English name only.",
+      "answer": "Saturn",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_03",
+      "family": "general_control",
+      "question": "Qual planeta fica mais perto do Sol? Responda só o nome.",
+      "answer": "Mercúrio",
+      "aliases": [
+        "Mercurio"
+      ],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_04",
+      "family": "general_control",
+      "question": "What is the opposite of \"empty\"? Reply with one English word.",
+      "answer": "full",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_05",
+      "family": "general_control",
+      "question": "Qual é o contrário de \"largo\"? Responda com uma palavra.",
+      "answer": "estreito",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_06",
+      "family": "general_control",
+      "question": "What is the past tense of \"teach\"? Reply with one word.",
+      "answer": "taught",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_07",
+      "family": "general_control",
+      "question": "Qual é o plural de \"animal\"? Responda só a palavra.",
+      "answer": "animais",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_08",
+      "family": "general_control",
+      "question": "What is the SI unit of electric resistance? Reply with the English name only.",
+      "answer": "ohm",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_09",
+      "family": "general_control",
+      "question": "Qual órgão bombeia o sangue? Responda com uma palavra.",
+      "answer": "coração",
+      "aliases": [
+        "coracao"
+      ],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_10",
+      "family": "general_control",
+      "question": "Which continent contains Kenya? Reply with the English name only.",
+      "answer": "Africa",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_11",
+      "family": "general_control",
+      "question": "Qual é a capital da Argentina? Responda apenas o nome.",
+      "answer": "Buenos Aires",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_12",
+      "family": "general_control",
+      "question": "What gas do humans need to breathe to survive? Reply with one English word.",
+      "answer": "oxygen",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_13",
+      "family": "general_control",
+      "question": "Qual animal produz mel? Responda com uma palavra.",
+      "answer": "abelha",
+      "aliases": [
+        "abelhas"
+      ],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_14",
+      "family": "general_control",
+      "question": "What shape has exactly five sides? Reply with one English word.",
+      "answer": "pentagon",
+      "aliases": [],
+      "numeric": false
+    },
+    {
+      "id": "heldout_control_15",
+      "family": "general_control",
+      "question": "Qual é o idioma predominante no México? Responda com uma palavra.",
+      "answer": "espanhol",
+      "aliases": [],
+      "numeric": false
+    }
+  ],
+  "anchors": [
+    "A biblioteca guarda livros e documentos para leitores de todas as idades.",
+    "Software tests help programmers detect incorrect behavior before deployment.",
+    "Uma hipótese científica precisa de evidências e pode ser refutada por experimentos.",
+    "A neural network computes outputs using numerical parameters and nonlinear functions.",
+    "Água, luz e nutrientes permitem que muitas plantas cresçam.",
+    "The train arrived at the station before the rain began.",
+    "Em Python, listas podem conter elementos de diferentes tipos.",
+    "The Moon reflects sunlight and orbits the Earth.",
+    "Uma pergunta clara ajuda a obter uma resposta útil e verificável.",
+    "Always compare a proposed change against a reproducible baseline.",
+    "O jardim tinha flores amarelas e uma pequena árvore perto do portão.",
+    "Shared parameters can be applied repeatedly without storing separate copies."
+  ],
+  "protocol": {
+    "max_new_tokens": 12,
+    "decoding": "greedy",
+    "thinking": false,
+    "selection": "development answer NLL, anchor drift <= 10%, validation content and exact accuracy nondecreasing, at least one additional validation content success",
+    "heldout_selects_weights": false,
+    "inference_tools": false,
+    "candidates": [
+      {
+        "family": "joint",
+        "ridge": 0.1,
+        "strength": 0.5
+      },
+      {
+        "family": "joint",
+        "ridge": 0.1,
+        "strength": 1.0
+      },
+      {
+        "family": "digits",
+        "ridge": 0.1,
+        "strength": 0.5
+      },
+      {
+        "family": "digits",
+        "ridge": 1.0,
+        "strength": 1.0
+      },
+      {
+        "family": "stop_only",
+        "ridge": 0.1,
+        "strength": 0.5
+      }
+    ],
+    "stop_only_is_negative_control": true,
+    "backward_passes": 0
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "candidate_ids": [
-    "candidate_02",
-    "candidate_04"
-  ],
-  "criterion": "development answer NLL, anchor drift <= 10%, validation content and exact accuracy nondecreasing, at least one additional validation content success",
-  "heldout_used": false
-}

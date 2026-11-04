@@ -1,0 +1,47 @@
+{
+  "branch": "codex/liquid-sense-loop-lab-pilot-20261103",
+  "commit": "86e3f6b22a7e809e23883bd982e54523225c0478",
+  "summary": {
+    "model_name": "liquid sense 0.8 b LOOP",
+    "status": "complete",
+    "data_sha256": "e0c6a198a8150ecf5e531e2fb33d8316db7dadc57ff23ead257a52440265425b",
+    "selected_candidate": null,
+    "scores": {
+      "original": {
+        "exact": 34,
+        "content": 34,
+        "total": 64,
+        "numeric_exact": 26,
+        "numeric_content": 26,
+        "numeric_total": 48,
+        "general_exact": 8,
+        "general_total": 16,
+        "generation_limit_hits": 1,
+        "amortized_generation_seconds": 151.0361,
+        "loaded_parameters": 852985920
+      },
+      "baseline": {
+        "exact": 39,
+        "content": 39,
+        "total": 64,
+        "numeric_exact": 27,
+        "numeric_content": 27,
+        "numeric_total": 48,
+        "general_exact": 12,
+        "general_total": 16,
+        "generation_limit_hits": 2,
+        "amortized_generation_seconds": 357.1388,
+        "loaded_parameters": 1020252592
+      }
+    },
+    "paired_content_vs_original": {
+      "wins": 6,
+      "losses": 1,
+      "exact_binomial_two_sided_p": 0.125
+    },
+    "selection_used_final_test": false,
+    "backward_passes": 0,
+    "interpretation": "Small custom benchmark; no claim of general intelligence improvement or autonomous RSI"
+  },
+  "v3_status": "archived on separate experiment branch; not a parent of this cycle"
+}

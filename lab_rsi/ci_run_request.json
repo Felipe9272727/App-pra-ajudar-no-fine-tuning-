@@ -1,8 +1,7 @@
 {
-  "request": 1,
-  "purpose": "Resume saved direct-weight pilot on standard public GitHub runners",
-  "max_parallel_evaluation_machines": 4,
-  "cpu_threads_per_machine": 4,
-  "paid_or_larger_runners": false,
-  "keep_sensenova_and_liquid_active": true
+  "cycle": 2,
+  "seed": 926110402,
+  "rounds": 3,
+  "v3": "archived",
+  "baseline_commit": "86e3f6b22a7e809e23883bd982e54523225c0478"
 }
