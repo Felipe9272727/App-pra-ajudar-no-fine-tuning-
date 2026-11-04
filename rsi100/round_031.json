@@ -1,0 +1,764 @@
+{
+  "round": 31,
+  "parent_best_round": 0,
+  "proposal": {
+    "method": "activation-informed column perturbation",
+    "seed": 20261104131,
+    "fraction": 0.08,
+    "passes": 2,
+    "late_gain": 0.05,
+    "dense_relative_norm": 0.07689474523067474,
+    "changed_dense_values_from_incumbent": 3571808
+  },
+  "architecture": {
+    "passes": 2,
+    "layer_executions": 56,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.949999988079071,
+      0.05000000074505806
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "local_window": 256,
+    "loaded_parameters": 1020252592,
+    "backward_passes": 0,
+    "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+  },
+  "comparison_policy": "strict gain over both paired and historical incumbent",
+  "calibration_file": "calibration_031.json",
+  "historical_incumbent_case_bits": {
+    "sum_abs": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "clamp": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "count_even": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "palindrome": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "prefix_sums": [
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    "dedup_stable": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "overlap_count": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "run_lengths": [
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    "sum_positive": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "rotate_right": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "first_unique": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "pair_count": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "char_counts": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "longest_run": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "binary_search": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "flatten_once": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "historical_incumbent_control_bits": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "historical_incumbent_anchor_nll": 3.1837292512257895,
+  "incumbent_anchor_nll": 3.1837292512257895,
+  "incumbent_control_bits": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "incumbent_case_bits": {
+    "sum_abs": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "clamp": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "count_even": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "palindrome": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "prefix_sums": [
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    "dedup_stable": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "overlap_count": [
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "run_lengths": [
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    "sum_positive": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "rotate_right": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "first_unique": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "pair_count": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "char_counts": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "longest_run": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "binary_search": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "flatten_once": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "screen": [
+    {
+      "id": "prefix_sums",
+      "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum(xs) for x in xs]",
+      "new_tokens": 27,
+      "hit_limit": false,
+      "seconds": 7.781610832000069,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum(xs) for x in xs]"
+    },
+    {
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n - len(sub) + 1:\n        j = i\n        while j + len(sub) <= n:\n            if s[j:j+len(sub)] == sub:\n                count += 1\n                j += len(sub)\n            else:\n                break\n        i += 1\n    return count",
+      "new_tokens": 98,
+      "hit_limit": false,
+      "seconds": 25.975220729000057,
+      "thinking": false,
+      "passed": 4,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n - len(sub) + 1:\n        j = i\n        while j + len(sub) <= n:\n            if s[j:j+len(sub)] == sub:\n                count += 1\n                j += len(sub)\n            else:\n                break\n        i += 1\n    return count"
+    }
+  ],
+  "accepted": false,
+  "reason": "paired incumbent: no monotone execution gain",
+  "heldout_used": false,
+  "data_sha256": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d",
+  "source_commit": "916aec1bf131a8c82e0762c1db313e5e869e2cbc",
+  "code_sha256": {
+    "rsi100/engine.py": "d5ec72fc09b83bc0b0a47d49f7a7f69fc4fb0a628c14d17534d885f8326f9cec",
+    "rsi100/diagnostics.py": "14a92e231b9ff61cd73e4496f03eef8d4b31323d65bb6bd4277a07ed587acc8f",
+    "rsi100/watchdog.py": "5b3e7ad8376f6ed5f241fffe226564d7b27e62472e840a1f187cf42469fee2db",
+    "rsi100/publish.py": "754c4ffd93ac19ba39baab161a4e15384164aae48b95f368781264a5a7ce4cf9",
+    "rsi100/mutation.py": "db1f854e2d0d4fc9dc9d2e7167e5572556bbc5e1a0d98aa75539b9af6011365e",
+    "rsi100/policy.py": "cdb36509f39ee0a299987efe4ede72188a51858628990cbe583ddc1613c0fbb8",
+    "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+    "code_rsi/sandbox.py": "5610324d3da291156d3566d4874f402ac7cb38a2594c3793fc0a9b1e9919b20f",
+    "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+    "local_cpu/runner.py": "fa5a5dbce04c225d75e09e4a91bd0618cd713951f30d153b3ae92b47b451324b",
+    "local_cpu/sandbox.py": "2e29f08a236248cad241cbb8af94074f63857f7a8dadd1b876976c702b1c7693",
+    "local_cpu/publisher.py": "f030dedc8eca127e01a41701bf27ee21150b1dac3046548282e8e455c752a16f",
+    "local_cpu/controller.py": "189608b45b7ba9f7f763134cc3155cc6b88e870908e7679c0bc7775bc3e46cc7"
+  },
+  "execution_watchdog": "phase journal + separate process-group supervisor; timeouts do not score candidates",
+  "protocol": {
+    "max_new_tokens": 160,
+    "greedy": true,
+    "feedback_at_evaluation": false,
+    "cpu_threads": 4,
+    "code_image": null,
+    "executor": "capability-cleared syscall-filtered subprocess; same AST judge"
+  },
+  "execution": "local managed CPU",
+  "session": "local-cpu-20261104-1793823039702",
+  "full_evaluation": {
+    "rows": [
+      {
+        "id": "sum_abs",
+        "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+        "new_tokens": 29,
+        "hit_limit": false,
+        "seconds": 7.629394795000053,
+        "thinking": false,
+        "passed": 5,
+        "total": 5,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total"
+      },
+      {
+        "id": "clamp",
+        "output": "def solve(x, lo, hi):\n    if lo > hi:\n        return None\n    if lo == hi:\n        return lo\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+        "new_tokens": 57,
+        "hit_limit": false,
+        "seconds": 15.191153740000118,
+        "thinking": false,
+        "passed": 5,
+        "total": 5,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(x, lo, hi):\n    if lo > hi:\n        return None\n    if lo == hi:\n        return lo\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x"
+      },
+      {
+        "id": "count_even",
+        "output": "def solve(xs):\n    count = 0\n    for x in xs:\n        if x % 2 == 0:\n            count += 1\n    return count",
+        "new_tokens": 39,
+        "hit_limit": false,
+        "seconds": 10.940441085999964,
+        "thinking": false,
+        "passed": 5,
+        "total": 5,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(xs):\n    count = 0\n    for x in xs:\n        if x % 2 == 0:\n            count += 1\n    return count"
+      },
+      {
+        "id": "palindrome",
+        "output": "def solve(s):\n    return s == s[::-1]",
+        "new_tokens": 14,
+        "hit_limit": false,
+        "seconds": 4.164730344999953,
+        "thinking": false,
+        "passed": 6,
+        "total": 6,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(s):\n    return s == s[::-1]"
+      },
+      {
+        "id": "prefix_sums",
+        "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum(xs) for x in xs]",
+        "new_tokens": 27,
+        "hit_limit": false,
+        "seconds": 7.604950890000055,
+        "thinking": false,
+        "passed": 2,
+        "total": 5,
+        "all_passed": false,
+        "category": "WrongReturnValue",
+        "error_types": [
+          "WrongReturnValue"
+        ],
+        "case_passed": [
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum(xs) for x in xs]"
+      },
+      {
+        "id": "dedup_stable",
+        "output": "def solve(xs):\n    result = []\n    for x in xs:\n        if x not in result:\n            result.append(x)\n    return result",
+        "new_tokens": 35,
+        "hit_limit": false,
+        "seconds": 9.793099831999825,
+        "thinking": false,
+        "passed": 5,
+        "total": 5,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(xs):\n    result = []\n    for x in xs:\n        if x not in result:\n            result.append(x)\n    return result"
+      },
+      {
+        "id": "overlap_count",
+        "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n - len(sub) + 1:\n        j = i\n        while j + len(sub) <= n:\n            if s[j:j+len(sub)] == sub:\n                count += 1\n                j += len(sub)\n            else:\n                break\n        i += 1\n    return count",
+        "new_tokens": 98,
+        "hit_limit": false,
+        "seconds": 26.36410624999985,
+        "thinking": false,
+        "passed": 4,
+        "total": 5,
+        "all_passed": false,
+        "category": "WrongReturnValue",
+        "error_types": [
+          "WrongReturnValue"
+        ],
+        "case_passed": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n - len(sub) + 1:\n        j = i\n        while j + len(sub) <= n:\n            if s[j:j+len(sub)] == sub:\n                count += 1\n                j += len(sub)\n            else:\n                break\n        i += 1\n    return count"
+      },
+      {
+        "id": "run_lengths",
+        "output": "def solve(s):\n    if not s:\n        return []\n    result = []\n    i = 0\n    while i < len(s):\n        if s[i] == s[i-1]:\n            result.append(len(s[i:i+1]))\n            i += 1\n        else:\n            result.append(1)\n            i += 1\n    return result",
+        "new_tokens": 84,
+        "hit_limit": false,
+        "seconds": 23.052714709000156,
+        "thinking": false,
+        "passed": 2,
+        "total": 5,
+        "all_passed": false,
+        "category": "WrongReturnValue",
+        "error_types": [
+          "WrongReturnValue"
+        ],
+        "case_passed": [
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        "code": "def solve(s):\n    if not s:\n        return []\n    result = []\n    i = 0\n    while i < len(s):\n        if s[i] == s[i-1]:\n            result.append(len(s[i:i+1]))\n            i += 1\n        else:\n            result.append(1)\n            i += 1\n    return result"
+      },
+      {
+        "id": "sum_positive",
+        "output": "def solve(xs):\n    return sum(x for x in xs if x > 0)",
+        "new_tokens": 20,
+        "hit_limit": false,
+        "seconds": 5.472117823999952,
+        "thinking": false,
+        "passed": 5,
+        "total": 5,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(xs):\n    return sum(x for x in xs if x > 0)"
+      },
+      {
+        "id": "rotate_right",
+        "output": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)]",
+        "new_tokens": 160,
+        "hit_limit": true,
+        "seconds": 40.60815378800021,
+        "thinking": false,
+        "passed": 1,
+        "total": 5,
+        "all_passed": false,
+        "category": "WrongReturnValue",
+        "error_types": [
+          "WrongReturnValue"
+        ],
+        "case_passed": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "code": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)] if k < len(xs) else xs[len(xs) - 1 - k % len(xs)]"
+      },
+      {
+        "id": "first_unique",
+        "output": "def solve(s):\n    count = {}\n    for c in s:\n        count[c] = count.get(c, 0) + 1\n    for c, count in count.items():\n        if count == 1:\n            return c\n    return \"\"",
+        "new_tokens": 59,
+        "hit_limit": false,
+        "seconds": 16.089888669000175,
+        "thinking": false,
+        "passed": 5,
+        "total": 5,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(s):\n    count = {}\n    for c in s:\n        count[c] = count.get(c, 0) + 1\n    for c, count in count.items():\n        if count == 1:\n            return c\n    return \"\""
+      },
+      {
+        "id": "pair_count",
+        "output": "def solve(xs, target):\n    count = 0\n    for i in range(len(xs)):\n        for j in range(i + 1, len(xs)):\n            if xs[i] + xs[j] == target:\n                count += 1\n    return count",
+        "new_tokens": 59,
+        "hit_limit": false,
+        "seconds": 16.761796166000067,
+        "thinking": false,
+        "passed": 5,
+        "total": 5,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(xs, target):\n    count = 0\n    for i in range(len(xs)):\n        for j in range(i + 1, len(xs)):\n            if xs[i] + xs[j] == target:\n                count += 1\n    return count"
+      },
+      {
+        "id": "char_counts",
+        "output": "def solve(s):\n    freq = {}\n    for char in s:\n        freq[char] = freq.get(char, 0) + 1\n    return freq",
+        "new_tokens": 37,
+        "hit_limit": false,
+        "seconds": 10.196776060000047,
+        "thinking": false,
+        "passed": 5,
+        "total": 5,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(s):\n    freq = {}\n    for char in s:\n        freq[char] = freq.get(char, 0) + 1\n    return freq"
+      },
+      {
+        "id": "longest_run",
+        "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+        "new_tokens": 98,
+        "hit_limit": false,
+        "seconds": 26.524111250000033,
+        "thinking": false,
+        "passed": 4,
+        "total": 5,
+        "all_passed": false,
+        "category": "WrongReturnValue",
+        "error_types": [
+          "WrongReturnValue"
+        ],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0"
+      },
+      {
+        "id": "binary_search",
+        "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1",
+        "new_tokens": 45,
+        "hit_limit": false,
+        "seconds": 12.273149052999997,
+        "thinking": false,
+        "passed": 5,
+        "total": 5,
+        "all_passed": true,
+        "category": "passed",
+        "error_types": [],
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1"
+      },
+      {
+        "id": "flatten_once",
+        "output": "def solve(xss):\n    return [list(item) for sublist in xss]",
+        "new_tokens": 19,
+        "hit_limit": false,
+        "seconds": 5.504654244999983,
+        "thinking": false,
+        "passed": 1,
+        "total": 5,
+        "all_passed": false,
+        "category": "NameError",
+        "error_types": [
+          "NameError"
+        ],
+        "case_passed": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "code": "def solve(xss):\n    return [list(item) for sublist in xss]"
+      }
+    ],
+    "control_bits": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "controls": [
+      {
+        "id": "dev_0",
+        "output": "Sb\n",
+        "correct": true
+      },
+      {
+        "id": "dev_1",
+        "output": "children",
+        "correct": true
+      },
+      {
+        "id": "dev_2",
+        "output": "Santiago\n",
+        "correct": true
+      },
+      {
+        "id": "dev_3",
+        "output": "heart",
+        "correct": true
+      }
+    ],
+    "anchor_nll": 3.1653026938438416,
+    "data_sha256": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d",
+    "source_commit": "916aec1bf131a8c82e0762c1db313e5e869e2cbc",
+    "code_sha256": {
+      "rsi100/engine.py": "d5ec72fc09b83bc0b0a47d49f7a7f69fc4fb0a628c14d17534d885f8326f9cec",
+      "rsi100/diagnostics.py": "14a92e231b9ff61cd73e4496f03eef8d4b31323d65bb6bd4277a07ed587acc8f",
+      "rsi100/watchdog.py": "5b3e7ad8376f6ed5f241fffe226564d7b27e62472e840a1f187cf42469fee2db",
+      "rsi100/publish.py": "754c4ffd93ac19ba39baab161a4e15384164aae48b95f368781264a5a7ce4cf9",
+      "rsi100/mutation.py": "db1f854e2d0d4fc9dc9d2e7167e5572556bbc5e1a0d98aa75539b9af6011365e",
+      "rsi100/policy.py": "cdb36509f39ee0a299987efe4ede72188a51858628990cbe583ddc1613c0fbb8",
+      "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+      "code_rsi/sandbox.py": "5610324d3da291156d3566d4874f402ac7cb38a2594c3793fc0a9b1e9919b20f",
+      "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+      "local_cpu/runner.py": "fa5a5dbce04c225d75e09e4a91bd0618cd713951f30d153b3ae92b47b451324b",
+      "local_cpu/sandbox.py": "2e29f08a236248cad241cbb8af94074f63857f7a8dadd1b876976c702b1c7693",
+      "local_cpu/publisher.py": "f030dedc8eca127e01a41701bf27ee21150b1dac3046548282e8e455c752a16f",
+      "local_cpu/controller.py": "189608b45b7ba9f7f763134cc3155cc6b88e870908e7679c0bc7775bc3e46cc7"
+    },
+    "execution_watchdog": "phase journal + separate process-group supervisor; timeouts do not score candidates",
+    "protocol": {
+      "max_new_tokens": 160,
+      "greedy": true,
+      "feedback_at_evaluation": false,
+      "cpu_threads": 4,
+      "code_image": null,
+      "executor": "capability-cleared syscall-filtered subprocess; same AST judge"
+    },
+    "execution": "local managed CPU",
+    "session": "local-cpu-20261104-1793823039702"
+  }
+}

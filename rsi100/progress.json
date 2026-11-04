@@ -1,8 +1,8 @@
 {
   "run_id": "local-cpu-20261104-1793823039702",
   "source_commit": "916aec1bf131a8c82e0762c1db313e5e869e2cbc",
-  "phase": "calibrate runner before round 031; keep historical reference",
-  "publication_id": "c90fa2ea-2515-4b70-bb11-6137aae8d5a1",
+  "phase": "round 031 reject and restore best",
+  "publication_id": "96d97682-3819-46f1-b8f2-02102c0361ac",
   "execution": "local CPU; publication controlled by assistant",
-  "last_observed_unix": 1793823340.5789404
+  "last_observed_unix": 1793823659.9799144
 }
