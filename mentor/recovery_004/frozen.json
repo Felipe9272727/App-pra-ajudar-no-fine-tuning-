@@ -1,0 +1,44 @@
+{
+  "status": "candidate_recovered_frozen_before_validation",
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "candidate_sha256": "8fd291019b20f7d327e775c05a30f5b991395718040e4ad2fe52ed986ff748ef",
+  "checkpoint": "mentor/checkpoints/negative_002_recovered.pt",
+  "actual_relative_norm": 0.012043755501508713,
+  "changed_values": 2025354,
+  "old_report_relative_norm": 0.012043029069900513,
+  "old_report_changed_values": 2029223,
+  "parent_tokens_identical": true,
+  "tensor": "model.language_model.layers.31.mlp.down_proj.weight",
+  "shape": [
+    1024,
+    3584
+  ],
+  "dtype": "torch.bfloat16",
+  "all_other_tensor_groups_identical": true,
+  "recovery_is_not_proof_of_unsaved_candidate_bitwise_identity": true,
+  "backward_passes": 0,
+  "architecture": {
+    "passes": 2,
+    "layer_executions": 56,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.949999988079071,
+      0.05000000074505806
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "local_window": 256,
+    "loaded_parameters": 1020252592,
+    "backward_passes": 0,
+    "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+  },
+  "new_validation_observed": false,
+  "checkpoint_promoted": false,
+  "runtime": {
+    "torch": "2.15.0+cpu",
+    "threads": 4,
+    "cpu_quota": "200000 100000"
+  },
+  "created_unix": 1793835046.3508902
+}
