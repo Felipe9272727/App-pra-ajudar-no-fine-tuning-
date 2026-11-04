@@ -1,0 +1,928 @@
+{
+  "kind": "causal diagnostic only; no checkpoint promotion",
+  "controller": "assistant-authored hypothesis",
+  "parent_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "task": "overlap_count",
+  "student_output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+  "student_token_ids": [
+    727,
+    11290,
+    1104,
+    11,
+    1146,
+    1590,
+    198,
+    262,
+    307,
+    283,
+    2343,
+    1104,
+    8,
+    198,
+    262,
+    1698,
+    283,
+    220,
+    15,
+    198,
+    262,
+    585,
+    283,
+    220,
+    15,
+    198,
+    262,
+    1345,
+    585,
+    361,
+    307,
+    25,
+    198,
+    285,
+    413,
+    274,
+    957,
+    14244,
+    85339,
+    10309,
+    7025,
+    606,
+    1146,
+    25,
+    198,
+    309,
+    1698,
+    1373,
+    220,
+    16,
+    198,
+    309,
+    585,
+    1373,
+    2343,
+    10309,
+    8,
+    198,
+    285,
+    745,
+    25,
+    198,
+    309,
+    585,
+    1373,
+    220,
+    16,
+    198,
+    262,
+    460,
+    1698,
+    248044
+  ],
+  "backward_passes": 0,
+  "reference_solution_or_correct_token_provided": false,
+  "hypothesis": "The generated step expression uses match length and skips overlaps; test contextual suppression of its own length-call token.",
+  "source_hashes": {
+    "mentor/diagnose.py": "4c40c403e7f0a19dad9379cfcd9fc26d4e9905dbad8d7712067e7be8b67eb582"
+  },
+  "target_index": 54,
+  "bad_token_id": 2343,
+  "bad_token_piece": " len",
+  "target_prefix": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i +=",
+  "generation_score": {
+    "bad_token_logit": 24.875,
+    "bad_token_log_odds": 4.70916748046875,
+    "top": [
+      {
+        "id": 2343,
+        "piece": " len",
+        "logit": 24.875
+      },
+      {
+        "id": 220,
+        "piece": " ",
+        "logit": 19.625
+      },
+      {
+        "id": 307,
+        "piece": " n",
+        "logit": 18.625
+      },
+      {
+        "id": 1262,
+        "piece": " min",
+        "logit": 16.875
+      },
+      {
+        "id": 585,
+        "piece": " i",
+        "logit": 16.75
+      },
+      {
+        "id": 1146,
+        "piece": " sub",
+        "logit": 16.625
+      },
+      {
+        "id": 324,
+        "piece": " l",
+        "logit": 16.25
+      },
+      {
+        "id": 318,
+        "piece": " (",
+        "logit": 16.25
+      }
+    ]
+  },
+  "prefill_score": {
+    "bad_token_logit": 24.0,
+    "bad_token_log_odds": 2.3034114837646484,
+    "top": [
+      {
+        "id": 2343,
+        "piece": " len",
+        "logit": 24.0
+      },
+      {
+        "id": 220,
+        "piece": " ",
+        "logit": 21.625
+      },
+      {
+        "id": 307,
+        "piece": " n",
+        "logit": 18.125
+      },
+      {
+        "id": 1262,
+        "piece": " min",
+        "logit": 17.375
+      },
+      {
+        "id": 585,
+        "piece": " i",
+        "logit": 16.875
+      },
+      {
+        "id": 1146,
+        "piece": " sub",
+        "logit": 16.25
+      },
+      {
+        "id": 318,
+        "piece": " (",
+        "logit": 16.0
+      },
+      {
+        "id": 2984,
+        "piece": " length",
+        "logit": 15.75
+      }
+    ]
+  },
+  "preservation_prefixes": [
+    "def solve(s, sub):\n    n =",
+    "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i"
+  ],
+  "activation_norm": 17.426050186157227,
+  "residual_activation_norm": 10.865962982177734,
+  "preservation_projection_ratios": [
+    0.000145009282277897,
+    2.9461668873409508e-06
+  ],
+  "probes": [
+    {
+      "kind": "negative",
+      "requested_relative_norm": 0.001,
+      "actual_relative_norm": 0.0009785233996808529,
+      "changed_values": 380992,
+      "target": {
+        "bad_token_logit": 22.75,
+        "bad_token_log_odds": 1.0661087036132812,
+        "top": [
+          {
+            "id": 2343,
+            "piece": " len",
+            "logit": 22.75
+          },
+          {
+            "id": 220,
+            "piece": " ",
+            "logit": 21.625
+          },
+          {
+            "id": 307,
+            "piece": " n",
+            "logit": 17.875
+          },
+          {
+            "id": 1262,
+            "piece": " min",
+            "logit": 17.125
+          },
+          {
+            "id": 585,
+            "piece": " i",
+            "logit": 16.75
+          },
+          {
+            "id": 1146,
+            "piece": " sub",
+            "logit": 16.25
+          },
+          {
+            "id": 318,
+            "piece": " (",
+            "logit": 16.0
+          },
+          {
+            "id": 1866,
+            "piece": " max",
+            "logit": 15.25
+          }
+        ]
+      },
+      "preservation_contexts": [
+        {
+          "bad_token_logit": 26.125,
+          "bad_token_log_odds": 6.808427810668945,
+          "top": [
+            {
+              "id": 2343,
+              "piece": " len",
+              "logit": 26.125
+            },
+            {
+              "id": 1866,
+              "piece": " max",
+              "logit": 17.625
+            },
+            {
+              "id": 295,
+              "piece": " m",
+              "logit": 17.375
+            },
+            {
+              "id": 274,
+              "piece": " s",
+              "logit": 17.25
+            },
+            {
+              "id": 514,
+              "piece": " int",
+              "logit": 17.25
+            },
+            {
+              "id": 220,
+              "piece": " ",
+              "logit": 17.25
+            },
+            {
+              "id": 318,
+              "piece": " (",
+              "logit": 16.125
+            },
+            {
+              "id": 2984,
+              "piece": " length",
+              "logit": 16.0
+            }
+          ]
+        },
+        {
+          "bad_token_logit": 15.9375,
+          "bad_token_log_odds": -8.798702239990234,
+          "top": [
+            {
+              "id": 85339,
+              "piece": "+len",
+              "logit": 24.5
+            },
+            {
+              "id": 478,
+              "piece": " +",
+              "logit": 22.125
+            },
+            {
+              "id": 37063,
+              "piece": "+n",
+              "logit": 22.0
+            },
+            {
+              "id": 10,
+              "piece": "+",
+              "logit": 21.875
+            },
+            {
+              "id": 43938,
+              "piece": "+k",
+              "logit": 19.625
+            },
+            {
+              "id": 60,
+              "piece": "]",
+              "logit": 19.625
+            },
+            {
+              "id": 57838,
+              "piece": "+m",
+              "logit": 17.75
+            },
+            {
+              "id": 69285,
+              "piece": "+N",
+              "logit": 16.875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "negative",
+      "requested_relative_norm": 0.003,
+      "actual_relative_norm": 0.003001120872795582,
+      "changed_values": 869954,
+      "target": {
+        "bad_token_logit": 20.0,
+        "bad_token_log_odds": -1.6677875518798828,
+        "top": [
+          {
+            "id": 220,
+            "piece": " ",
+            "logit": 21.625
+          },
+          {
+            "id": 2343,
+            "piece": " len",
+            "logit": 20.0
+          },
+          {
+            "id": 307,
+            "piece": " n",
+            "logit": 17.5
+          },
+          {
+            "id": 1262,
+            "piece": " min",
+            "logit": 16.75
+          },
+          {
+            "id": 585,
+            "piece": " i",
+            "logit": 16.375
+          },
+          {
+            "id": 1146,
+            "piece": " sub",
+            "logit": 16.25
+          },
+          {
+            "id": 318,
+            "piece": " (",
+            "logit": 15.9375
+          },
+          {
+            "id": 1866,
+            "piece": " max",
+            "logit": 14.9375
+          }
+        ]
+      },
+      "preservation_contexts": [
+        {
+          "bad_token_logit": 26.125,
+          "bad_token_log_odds": 6.807498931884766,
+          "top": [
+            {
+              "id": 2343,
+              "piece": " len",
+              "logit": 26.125
+            },
+            {
+              "id": 1866,
+              "piece": " max",
+              "logit": 17.625
+            },
+            {
+              "id": 295,
+              "piece": " m",
+              "logit": 17.375
+            },
+            {
+              "id": 274,
+              "piece": " s",
+              "logit": 17.25
+            },
+            {
+              "id": 514,
+              "piece": " int",
+              "logit": 17.25
+            },
+            {
+              "id": 220,
+              "piece": " ",
+              "logit": 17.25
+            },
+            {
+              "id": 318,
+              "piece": " (",
+              "logit": 16.125
+            },
+            {
+              "id": 2984,
+              "piece": " length",
+              "logit": 16.0
+            }
+          ]
+        },
+        {
+          "bad_token_logit": 15.9375,
+          "bad_token_log_odds": -8.798702239990234,
+          "top": [
+            {
+              "id": 85339,
+              "piece": "+len",
+              "logit": 24.5
+            },
+            {
+              "id": 478,
+              "piece": " +",
+              "logit": 22.125
+            },
+            {
+              "id": 37063,
+              "piece": "+n",
+              "logit": 22.0
+            },
+            {
+              "id": 10,
+              "piece": "+",
+              "logit": 21.875
+            },
+            {
+              "id": 43938,
+              "piece": "+k",
+              "logit": 19.625
+            },
+            {
+              "id": 60,
+              "piece": "]",
+              "logit": 19.625
+            },
+            {
+              "id": 57838,
+              "piece": "+m",
+              "logit": 17.75
+            },
+            {
+              "id": 69285,
+              "piece": "+N",
+              "logit": 16.875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "negative",
+      "requested_relative_norm": 0.01,
+      "actual_relative_norm": 0.010037287138402462,
+      "changed_values": 1744230,
+      "target": {
+        "bad_token_logit": 9.6875,
+        "bad_token_log_odds": -11.705343246459961,
+        "top": [
+          {
+            "id": 220,
+            "piece": " ",
+            "logit": 21.375
+          },
+          {
+            "id": 307,
+            "piece": " n",
+            "logit": 16.0
+          },
+          {
+            "id": 1146,
+            "piece": " sub",
+            "logit": 15.9375
+          },
+          {
+            "id": 318,
+            "piece": " (",
+            "logit": 15.4375
+          },
+          {
+            "id": 1262,
+            "piece": " min",
+            "logit": 15.125
+          },
+          {
+            "id": 585,
+            "piece": " i",
+            "logit": 15.0
+          },
+          {
+            "id": 324,
+            "piece": " l",
+            "logit": 13.75
+          },
+          {
+            "id": 1866,
+            "piece": " max",
+            "logit": 13.4375
+          }
+        ]
+      },
+      "preservation_contexts": [
+        {
+          "bad_token_logit": 26.125,
+          "bad_token_log_odds": 6.788480758666992,
+          "top": [
+            {
+              "id": 2343,
+              "piece": " len",
+              "logit": 26.125
+            },
+            {
+              "id": 1866,
+              "piece": " max",
+              "logit": 17.625
+            },
+            {
+              "id": 295,
+              "piece": " m",
+              "logit": 17.5
+            },
+            {
+              "id": 274,
+              "piece": " s",
+              "logit": 17.25
+            },
+            {
+              "id": 514,
+              "piece": " int",
+              "logit": 17.25
+            },
+            {
+              "id": 220,
+              "piece": " ",
+              "logit": 17.25
+            },
+            {
+              "id": 318,
+              "piece": " (",
+              "logit": 16.125
+            },
+            {
+              "id": 2984,
+              "piece": " length",
+              "logit": 16.0
+            }
+          ]
+        },
+        {
+          "bad_token_logit": 15.9375,
+          "bad_token_log_odds": -8.798702239990234,
+          "top": [
+            {
+              "id": 85339,
+              "piece": "+len",
+              "logit": 24.5
+            },
+            {
+              "id": 478,
+              "piece": " +",
+              "logit": 22.125
+            },
+            {
+              "id": 37063,
+              "piece": "+n",
+              "logit": 22.0
+            },
+            {
+              "id": 10,
+              "piece": "+",
+              "logit": 21.875
+            },
+            {
+              "id": 43938,
+              "piece": "+k",
+              "logit": 19.625
+            },
+            {
+              "id": 60,
+              "piece": "]",
+              "logit": 19.625
+            },
+            {
+              "id": 57838,
+              "piece": "+m",
+              "logit": 17.75
+            },
+            {
+              "id": 69285,
+              "piece": "+N",
+              "logit": 16.875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "reverse",
+      "requested_relative_norm": 0.003,
+      "actual_relative_norm": 0.0030004517175257206,
+      "changed_values": 869966,
+      "target": {
+        "bad_token_logit": 27.875,
+        "bad_token_log_odds": 6.243965148925781,
+        "top": [
+          {
+            "id": 2343,
+            "piece": " len",
+            "logit": 27.875
+          },
+          {
+            "id": 220,
+            "piece": " ",
+            "logit": 21.5
+          },
+          {
+            "id": 307,
+            "piece": " n",
+            "logit": 18.5
+          },
+          {
+            "id": 1262,
+            "piece": " min",
+            "logit": 17.875
+          },
+          {
+            "id": 2984,
+            "piece": " length",
+            "logit": 17.375
+          },
+          {
+            "id": 585,
+            "piece": " i",
+            "logit": 17.375
+          },
+          {
+            "id": 1146,
+            "piece": " sub",
+            "logit": 16.375
+          },
+          {
+            "id": 318,
+            "piece": " (",
+            "logit": 16.125
+          }
+        ]
+      },
+      "preservation_contexts": [
+        {
+          "bad_token_logit": 26.25,
+          "bad_token_log_odds": 6.906017303466797,
+          "top": [
+            {
+              "id": 2343,
+              "piece": " len",
+              "logit": 26.25
+            },
+            {
+              "id": 1866,
+              "piece": " max",
+              "logit": 17.625
+            },
+            {
+              "id": 295,
+              "piece": " m",
+              "logit": 17.5
+            },
+            {
+              "id": 274,
+              "piece": " s",
+              "logit": 17.25
+            },
+            {
+              "id": 514,
+              "piece": " int",
+              "logit": 17.25
+            },
+            {
+              "id": 220,
+              "piece": " ",
+              "logit": 17.25
+            },
+            {
+              "id": 2984,
+              "piece": " length",
+              "logit": 16.125
+            },
+            {
+              "id": 318,
+              "piece": " (",
+              "logit": 16.125
+            }
+          ]
+        },
+        {
+          "bad_token_logit": 16.0,
+          "bad_token_log_odds": -8.737010955810547,
+          "top": [
+            {
+              "id": 85339,
+              "piece": "+len",
+              "logit": 24.5
+            },
+            {
+              "id": 478,
+              "piece": " +",
+              "logit": 22.125
+            },
+            {
+              "id": 37063,
+              "piece": "+n",
+              "logit": 22.0
+            },
+            {
+              "id": 10,
+              "piece": "+",
+              "logit": 21.875
+            },
+            {
+              "id": 43938,
+              "piece": "+k",
+              "logit": 19.75
+            },
+            {
+              "id": 60,
+              "piece": "]",
+              "logit": 19.625
+            },
+            {
+              "id": 57838,
+              "piece": "+m",
+              "logit": 17.75
+            },
+            {
+              "id": 69285,
+              "piece": "+N",
+              "logit": 16.875
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "random",
+      "requested_relative_norm": 0.003,
+      "actual_relative_norm": 0.0030009071342647076,
+      "changed_values": 863922,
+      "target": {
+        "bad_token_logit": 24.0,
+        "bad_token_log_odds": 2.4192352294921875,
+        "top": [
+          {
+            "id": 2343,
+            "piece": " len",
+            "logit": 24.0
+          },
+          {
+            "id": 220,
+            "piece": " ",
+            "logit": 21.5
+          },
+          {
+            "id": 307,
+            "piece": " n",
+            "logit": 18.125
+          },
+          {
+            "id": 1262,
+            "piece": " min",
+            "logit": 17.25
+          },
+          {
+            "id": 585,
+            "piece": " i",
+            "logit": 17.0
+          },
+          {
+            "id": 1146,
+            "piece": " sub",
+            "logit": 16.375
+          },
+          {
+            "id": 318,
+            "piece": " (",
+            "logit": 16.0
+          },
+          {
+            "id": 2984,
+            "piece": " length",
+            "logit": 15.8125
+          }
+        ]
+      },
+      "preservation_contexts": [
+        {
+          "bad_token_logit": 26.125,
+          "bad_token_log_odds": 6.787036895751953,
+          "top": [
+            {
+              "id": 2343,
+              "piece": " len",
+              "logit": 26.125
+            },
+            {
+              "id": 1866,
+              "piece": " max",
+              "logit": 17.625
+            },
+            {
+              "id": 295,
+              "piece": " m",
+              "logit": 17.5
+            },
+            {
+              "id": 274,
+              "piece": " s",
+              "logit": 17.25
+            },
+            {
+              "id": 514,
+              "piece": " int",
+              "logit": 17.25
+            },
+            {
+              "id": 220,
+              "piece": " ",
+              "logit": 17.25
+            },
+            {
+              "id": 318,
+              "piece": " (",
+              "logit": 16.125
+            },
+            {
+              "id": 2984,
+              "piece": " length",
+              "logit": 16.0
+            }
+          ]
+        },
+        {
+          "bad_token_logit": 15.9375,
+          "bad_token_log_odds": -8.79951286315918,
+          "top": [
+            {
+              "id": 85339,
+              "piece": "+len",
+              "logit": 24.5
+            },
+            {
+              "id": 478,
+              "piece": " +",
+              "logit": 22.125
+            },
+            {
+              "id": 37063,
+              "piece": "+n",
+              "logit": 22.0
+            },
+            {
+              "id": 10,
+              "piece": "+",
+              "logit": 21.875
+            },
+            {
+              "id": 43938,
+              "piece": "+k",
+              "logit": 19.75
+            },
+            {
+              "id": 60,
+              "piece": "]",
+              "logit": 19.625
+            },
+            {
+              "id": 57838,
+              "piece": "+m",
+              "logit": 17.75
+            },
+            {
+              "id": 69285,
+              "piece": "+N",
+              "logit": 16.875
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "diagnostic_complete; original checkpoint restored",
+  "directions_sha256": "adc709eb7bfb091226bd0dfe45e9785166cbf86f5d194bb5a93cd19e35545ae7",
+  "checkpoint_promoted": false
+}

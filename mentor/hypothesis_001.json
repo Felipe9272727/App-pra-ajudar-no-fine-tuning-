@@ -1,0 +1,18 @@
+{
+  "id": "mentor_001",
+  "author": "assistant",
+  "student_task": "overlap_count",
+  "observed_error": "The generated advancement expression uses match length, skipping overlaps.",
+  "negative_feedback": "Penalize only the length-call token already generated at this specific faulty step.",
+  "positive_oracle_token_or_solution_supplied": false,
+  "checkpoint_parent": "unchanged best.pt, best round 0; legacy 31 decisions saved",
+  "method": "Closed-form residualized activation direction; direct rank-one overwrite of final existing MLP down_proj; no gradients/adapters",
+  "preservation_contexts": "Earlier length-call prefixes from the same student response, not reference code",
+  "diagnostic": "negative edits suppress the token; reverse amplifies it; matched random direction barely changes it",
+  "chosen_fraction": 0.003,
+  "choice_reason": "Smallest tested fraction that changed the leading token in the fixed-prefix probe; 0.001 left the undesirable token first. Avoid unnecessarily larger 0.01.",
+  "causal_limit": "A fixed-prefix logit intervention does not establish end-to-end correctness or a unique internal cause.",
+  "planned_test": "Fresh generation of parent, matched-random control and negative edit; if screen strictly improves, full paired parent and candidate evaluation plus historical non-regression gate.",
+  "promotion_policy": "No deployment from logits or one task; keep candidate only if eligible for later unseen validation. Original checkpoint stays unchanged.",
+  "reserved_data_used": false
+}

@@ -88,3 +88,17 @@
   a round already saved. Runtime scratch/cache files are not durable checkpoints.
 - The finite continuation ends after 100 rounds, fresh validation and original
   versus hybrid final evaluation; it is not autonomous recursive self-improvement.
+
+## Latest user steering: assistant-guided research
+
+- The fixed automatic 100-round loop is PAUSED after 31 saved rejections.
+  Do not restart cell 43 or local_cpu/controller.py without reconciling state.
+- Active new branch: codex/liquid-sense-mentor-20261104; read mentor/status.json,
+  mentor/PROTOCOL.md and mentor/hypothesis_001.json.
+- The assistant authors each hypothesis from real semantic errors, own token
+  traces and controlled interventions. No correct solution/target token in the
+  student's input, no gradients, no claim of autonomous RSI.
+- Token/logit diagnostics are not quality gains. Full paired/historical retention
+  and unseen validation remain required. Review each result before proposing
+  another edit; budget initially four authored hypotheses.
+- Keep old Loop/mHC + Liquid operators, all original checkpoints and logs.
