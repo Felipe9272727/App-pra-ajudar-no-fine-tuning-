@@ -1,204 +1,204 @@
 {
   "answer": {
-    "mean_answer_nll": 1.1809079081285745,
-    "mean_eos_nll": 0.10899860156193124,
-    "mean_answer_token_accuracy": 0.6805555572112402,
+    "mean_answer_nll": 1.1866120484191924,
+    "mean_eos_nll": 0.1099002976158469,
+    "mean_answer_token_accuracy": 0.6597222238779068,
     "rows": [
       {
         "id": "development_subtraction_01",
-        "answer_nll": 0.2617592513561249,
-        "eos_nll": 0.0053600408136844635,
+        "answer_nll": 0.2991180717945099,
+        "eos_nll": 0.005906390026211739,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_addition_01",
-        "answer_nll": 1.262453556060791,
-        "eos_nll": 0.00941160973161459,
+        "answer_nll": 1.2836633920669556,
+        "eos_nll": 0.009279337711632252,
         "teacher_forced_answer_token_accuracy": 0.5
       },
       {
         "id": "development_multiplication_00",
-        "answer_nll": 0.03355811908841133,
-        "eos_nll": 0.0036814315244555473,
+        "answer_nll": 0.03245074674487114,
+        "eos_nll": 0.0032298800069838762,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_multiplication_04",
-        "answer_nll": 0.12061776220798492,
-        "eos_nll": 0.0017525089206174016,
+        "answer_nll": 0.12495206296443939,
+        "eos_nll": 0.0018215269083157182,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_python_04",
-        "answer_nll": 2.9452075958251953,
-        "eos_nll": 0.05560942739248276,
+        "answer_nll": 2.9781339168548584,
+        "eos_nll": 0.04860402271151543,
         "teacher_forced_answer_token_accuracy": 0.0
       },
       {
         "id": "development_subtraction_04",
-        "answer_nll": 1.0573855638504028,
-        "eos_nll": 0.006337189581245184,
+        "answer_nll": 1.1368029117584229,
+        "eos_nll": 0.0064373984932899475,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_multiplication_05",
-        "answer_nll": 1.9137245416641235,
-        "eos_nll": 0.024167582392692566,
+        "answer_nll": 1.7727066278457642,
+        "eos_nll": 0.02093912474811077,
         "teacher_forced_answer_token_accuracy": 0.5
       },
       {
         "id": "development_python_01",
-        "answer_nll": 4.570409774780273,
-        "eos_nll": 0.0484003983438015,
+        "answer_nll": 4.593536376953125,
+        "eos_nll": 0.048098351806402206,
         "teacher_forced_answer_token_accuracy": 0.0
       },
       {
         "id": "development_multiplication_03",
-        "answer_nll": 0.08906122297048569,
-        "eos_nll": 0.010766984894871712,
+        "answer_nll": 0.09627947956323624,
+        "eos_nll": 0.010491574183106422,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_subtraction_03",
-        "answer_nll": 0.9101811647415161,
-        "eos_nll": 0.006801311857998371,
-        "teacher_forced_answer_token_accuracy": 1.0
+        "answer_nll": 0.9599695205688477,
+        "eos_nll": 0.0073440345004200935,
+        "teacher_forced_answer_token_accuracy": 0.5
       },
       {
         "id": "development_subtraction_02",
-        "answer_nll": 0.4602397382259369,
-        "eos_nll": 0.0011629253858700395,
+        "answer_nll": 0.45740512013435364,
+        "eos_nll": 0.0011687598889693618,
         "teacher_forced_answer_token_accuracy": 0.5
       },
       {
         "id": "development_addition_00",
-        "answer_nll": 0.0174762774258852,
-        "eos_nll": 0.000179036331246607,
+        "answer_nll": 0.018499959260225296,
+        "eos_nll": 0.0001776060671545565,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_multiplication_01",
-        "answer_nll": 0.8061699271202087,
-        "eos_nll": 0.005435568280518055,
+        "answer_nll": 0.889523983001709,
+        "eos_nll": 0.005479554180055857,
         "teacher_forced_answer_token_accuracy": 0.5
       },
       {
         "id": "development_addition_03",
-        "answer_nll": 0.7198435664176941,
-        "eos_nll": 0.0028757192194461823,
+        "answer_nll": 0.719567060470581,
+        "eos_nll": 0.00312816072255373,
         "teacher_forced_answer_token_accuracy": 0.6666666865348816
       },
       {
         "id": "development_python_02",
-        "answer_nll": 3.4354989528656006,
-        "eos_nll": 0.24377374351024628,
+        "answer_nll": 3.3208320140838623,
+        "eos_nll": 0.24358154833316803,
         "teacher_forced_answer_token_accuracy": 0.0
       },
       {
         "id": "development_multiplication_02",
-        "answer_nll": 0.05590338259935379,
-        "eos_nll": 0.002664945786818862,
+        "answer_nll": 0.05087583139538765,
+        "eos_nll": 0.002818423556163907,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_python_05",
-        "answer_nll": 1.033422827720642,
-        "eos_nll": 2.0368638038635254,
+        "answer_nll": 1.0426417589187622,
+        "eos_nll": 2.070871353149414,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_subtraction_05",
-        "answer_nll": 1.7888836860656738,
-        "eos_nll": 0.013898025266826153,
+        "answer_nll": 1.8083345890045166,
+        "eos_nll": 0.013017788529396057,
         "teacher_forced_answer_token_accuracy": 0.5
       },
       {
         "id": "development_python_03",
-        "answer_nll": 2.8566906452178955,
-        "eos_nll": 0.040324244648218155,
+        "answer_nll": 2.861299514770508,
+        "eos_nll": 0.03969258815050125,
         "teacher_forced_answer_token_accuracy": 0.3333333432674408
       },
       {
         "id": "development_addition_05",
-        "answer_nll": 0.08898846060037613,
-        "eos_nll": 0.0010545651894062757,
+        "answer_nll": 0.07892660051584244,
+        "eos_nll": 0.0009344025747850537,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_addition_04",
-        "answer_nll": 1.0815510749816895,
-        "eos_nll": 0.0019396792631596327,
+        "answer_nll": 1.0847976207733154,
+        "eos_nll": 0.00197001826018095,
         "teacher_forced_answer_token_accuracy": 0.5
       },
       {
         "id": "development_python_00",
-        "answer_nll": 2.695013999938965,
-        "eos_nll": 0.0927748754620552,
+        "answer_nll": 2.755922555923462,
+        "eos_nll": 0.09197860956192017,
         "teacher_forced_answer_token_accuracy": 0.3333333432674408
       },
       {
         "id": "development_subtraction_00",
-        "answer_nll": 0.036610931158065796,
-        "eos_nll": 0.0001705739414319396,
+        "answer_nll": 0.027582133188843727,
+        "eos_nll": 0.00015722469834145159,
         "teacher_forced_answer_token_accuracy": 1.0
       },
       {
         "id": "development_addition_02",
-        "answer_nll": 0.10113777220249176,
-        "eos_nll": 0.000560245884116739,
+        "answer_nll": 0.08486731350421906,
+        "eos_nll": 0.00047946401173248887,
         "teacher_forced_answer_token_accuracy": 1.0
       }
     ]
   },
   "anchors": {
-    "mean_nll": 3.1762080589930215,
+    "mean_nll": 3.1830268700917563,
     "rows": [
       {
-        "nll": 2.1616604328155518,
+        "nll": 2.156362295150757,
         "tokens": 8
       },
       {
-        "nll": 3.7330477237701416,
+        "nll": 3.761838912963867,
         "tokens": 8
       },
       {
-        "nll": 2.4868290424346924,
+        "nll": 2.500138998031616,
         "tokens": 8
       },
       {
-        "nll": 4.08910608291626,
+        "nll": 4.083237648010254,
         "tokens": 8
       },
       {
-        "nll": 3.768434762954712,
+        "nll": 3.7832114696502686,
         "tokens": 8
       },
       {
-        "nll": 2.3258299827575684,
+        "nll": 2.3256583213806152,
         "tokens": 8
       },
       {
-        "nll": 2.6629300117492676,
+        "nll": 2.648219108581543,
         "tokens": 8
       },
       {
-        "nll": 3.642409324645996,
+        "nll": 3.6448822021484375,
         "tokens": 8
       },
       {
-        "nll": 2.6408870220184326,
+        "nll": 2.663752794265747,
         "tokens": 8
       },
       {
-        "nll": 3.715669870376587,
+        "nll": 3.7227783203125,
         "tokens": 8
       },
       {
-        "nll": 2.77565860748291,
+        "nll": 2.7930960655212402,
         "tokens": 8
       },
       {
-        "nll": 4.112033843994141,
+        "nll": 4.1131463050842285,
         "tokens": 8
       }
     ]

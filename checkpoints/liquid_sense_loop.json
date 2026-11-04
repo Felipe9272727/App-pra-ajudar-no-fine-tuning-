@@ -1,0 +1,62 @@
+{
+  "model_display_name": "liquid sense 0.8 b LOOP",
+  "data_sha256": "e0c6a198a8150ecf5e531e2fb33d8316db7dadc57ff23ead257a52440265425b",
+  "recipe": {
+    "gain": 0.05,
+    "beta": 0.0,
+    "liquid_mix": 1.0
+  },
+  "candidate_id": null,
+  "patch": null,
+  "patch_sha256": null,
+  "selection_used_heldout": false,
+  "architecture_can_be_disabled": false,
+  "reason": "No new dense edit passed the preregistered gates; retain both active architecture components",
+  "frozen_unix": 1793755982.9747095,
+  "protocol": {
+    "max_new_tokens": 12,
+    "decoding": "greedy",
+    "thinking": false,
+    "selection": "development answer NLL, anchor drift <= 10%, validation content and exact accuracy nondecreasing, at least one additional validation content success",
+    "heldout_selects_weights": false,
+    "inference_tools": false,
+    "candidates": [
+      {
+        "family": "joint",
+        "ridge": 0.1,
+        "strength": 0.5
+      },
+      {
+        "family": "joint",
+        "ridge": 0.1,
+        "strength": 1.0
+      },
+      {
+        "family": "digits",
+        "ridge": 0.1,
+        "strength": 0.5
+      },
+      {
+        "family": "digits",
+        "ridge": 1.0,
+        "strength": 1.0
+      },
+      {
+        "family": "stop_only",
+        "ridge": 0.1,
+        "strength": 0.5
+      }
+    ],
+    "stop_only_is_negative_control": true,
+    "backward_passes": 0
+  },
+  "liquid_patch_sha256": "6f679573fd8f3a02a31ce45543c1308f0a69dd7874e01c7ad57752c11d94f055",
+  "status": "complete",
+  "loaded_parameters": 1020252592,
+  "report": "LAB_REPORT.md",
+  "summary": "lab_rsi/summary.json",
+  "replay": "python lab_rsi/replay.py --question YOUR_QUESTION",
+  "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "sensenova_source_revision": "9937e91c7301b7dcbb5bf17e3e4e95c499a11e99",
+  "source_manifest": "model_identity.json"
+}
