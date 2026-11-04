@@ -21,7 +21,7 @@ def expired(entry, attempt, now, startup, startup_budget=300):
         return now-startup > startup_budget
     return now-entry['started_unix'] > entry['budget_seconds']
 
-def supervise(command, journal, *, poll=2, startup_budget=300, max_seconds=3600):
+def supervise(command, journal, *, poll=2, startup_budget=300, max_seconds=4500):
     attempt = str(uuid.uuid4())
     env = {**os.environ, 'RSI_ATTEMPT': attempt}
     child = subprocess.Popen(command, cwd=ROOT, env=env, start_new_session=True)

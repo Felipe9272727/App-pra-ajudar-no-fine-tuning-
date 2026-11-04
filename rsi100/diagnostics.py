@@ -8,7 +8,7 @@ from pathlib import Path
 PATH = Path(__file__).resolve().parent / 'live_progress.json'
 
 @contextlib.contextmanager
-def phase(name, budget=180, **details):
+def phase(name, budget=600, **details):
     entry = {'phase': name, 'budget_seconds': budget, 'started_unix': time.time(),
              'attempt': os.environ.get('RSI_ATTEMPT'), 'pid': os.getpid(), **details}
     tmp = PATH.with_suffix('.tmp')
@@ -20,6 +20,6 @@ def phase(name, budget=180, **details):
     finally:
         print('PHASE_END', name, round(time.time()-entry['started_unix'], 3), flush=True)
 
-def call(name, fn, *args, budget=180, **kwargs):
+def call(name, fn, *args, budget=600, **kwargs):
     with phase(name, budget):
         return fn(*args, **kwargs)

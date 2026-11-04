@@ -16,5 +16,13 @@
     "skip completed chunks",
     "explicit checkpoint-owner handoff"
   ],
-  "timeouts": "infrastructure failure; no acceptance/rejection or counter increment"
+  "timeouts": "infrastructure failure; no acceptance/rejection or counter increment",
+  "diagnosis_after_log_release": {
+    "not_a_deadlock": "task EVAL entries continued until cancellation",
+    "baseline_replay": "17:46:23 through 18:12:08 UTC plus controls/anchors",
+    "candidate_31": "screen showed overlap_count 4/5 versus incumbent 2/5; full evaluation triggered; no completed decision",
+    "longest_observed_task_gap_seconds": 315,
+    "native_cause": "unknown; CPU inference slowdown observed, optimized GPU kernels unavailable",
+    "adjustment": "600s operation budget and 4500s chunk budget; no timeout scored as model error"
+  }
 }

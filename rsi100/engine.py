@@ -17,6 +17,8 @@ import torch
 DATA=json.loads((HERE/'data.json').read_text());DATA_HASH=cr.file_hash(HERE/'data.json')
 CK=HERE/'checkpoints';REPORTS=ROOT/'rsi100_output'
 
+print('CPU_RUNTIME',json.dumps({'torch':torch.__version__,'threads':torch.get_num_threads(),'cpu_count':os.cpu_count(),'capability':torch.backends.cpu.get_cpu_capability()}),flush=True)
+
 def save(name,obj):cr.atomic_json(HERE/name,obj)
 def state(**kw):
  p=HERE/'status.json';j=json.loads(p.read_text());j.update(kw);j['updated_unix']=time.time();save('status.json',j)
@@ -61,7 +63,7 @@ def quality(model,tok,rows):
 @torch.inference_mode()
 def full_score(model,tok):
  rows=coding(model,tok,DATA['search']+DATA['guard'])
- controls=quality(model,tok,DATA['search_controls']);anchor=call('anchor_likelihood',cr.likelihood,model,tok,DATA['anchors'],anchors=True,budget=240)['mean_nll']
+ controls=quality(model,tok,DATA['search_controls']);anchor=call('anchor_likelihood',cr.likelihood,model,tok,DATA['anchors'],anchors=True,budget=600)['mean_nll']
  return {'rows':rows,'control_bits':[x['correct'] for x in controls],'controls':controls,'anchor_nll':anchor,**provenance()}
 def read_checkpoint(name):
  path=CK/name;payload=call('checkpoint_load:'+name,torch.load,path,weights_only=True);assert payload['data_sha256']==DATA_HASH;return payload
@@ -141,7 +143,7 @@ def freeze():
  for variant in ['baseline','best']:
   checkpoint=read_checkpoint(variant+'.pt');apply(model,checkpoint)
   rows=coding(model,tok,DATA['validation']);controls=quality(model,tok,DATA['controls']['val'])
-  anchors=call('anchor_likelihood',cr.likelihood,model,tok,DATA['anchors'],anchors=True,budget=240)['mean_nll']
+  anchors=call('anchor_likelihood',cr.likelihood,model,tok,DATA['anchors'],anchors=True,budget=600)['mean_nll']
   results[variant]={'rows':rows,'control_bits':[x['correct'] for x in controls],'controls':controls,'anchor_nll':anchors,**provenance()}
   save('validation_'+variant+'.json',results[variant])
  a,b=results['baseline'],results['best']

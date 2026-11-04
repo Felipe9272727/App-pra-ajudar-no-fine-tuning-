@@ -10,7 +10,7 @@
     4
   ],
   "interpretation": "100 forward-only weight-search rounds, not 100 repeated decoder passes",
-  "recovery_attempt": 1,
+  "recovery_attempt": 2,
   "resume_from_round": 30,
   "replaces_run": 41875261527
 }
