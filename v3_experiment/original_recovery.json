@@ -1,0 +1,11 @@
+{
+  "method": "invert exact power-of-two v1 output scaling; restore all 24 source layers",
+  "source_port": "saved v1 untrained checkpoint",
+  "tensor_elements": 873438784,
+  "duplicate_source_tensors_verified": 106,
+  "file_sha256": "c498047398ff4f9c89ec277d917a852022e7f94c7b696d96f4e5447991b01a3f",
+  "official_file_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+  "byte_identical_to_official": false,
+  "base_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "backward_passes": 0
+}

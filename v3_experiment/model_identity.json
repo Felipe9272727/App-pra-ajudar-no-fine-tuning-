@@ -1,0 +1,13 @@
+{
+  "display_name": "liquid sense 0.8 b LOOP V3 NCM — EXPERIMENTO",
+  "release_status": "EXPERIMENTO",
+  "parent": "V2 candidate_02, not a promoted production checkpoint",
+  "required_backbone": "Qwen dimensions and weights with SenseNova loop/mHC and Liquid-inspired 7-tap convolutions and SWA",
+  "ncm_component": "Official multiscale residual VQ, learned linear byte codec, frozen-hybrid-conditioned parallel code prediction",
+  "levels": [1, 2, 4, 8],
+  "max_answer_utf8_bytes": 8,
+  "canonical_ncm_reproduction": false,
+  "training_method": "PCA, k-means and ridge solves; no backpropagation",
+  "backward_passes": 0,
+  "affiliation": "Independent experimental adaptation; not an official Hazy Research, SenseNova or Liquid AI release"
+}

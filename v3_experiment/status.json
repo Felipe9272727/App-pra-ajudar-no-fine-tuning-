@@ -1,0 +1,48 @@
+{
+  "status": "collecting_hybrid_features",
+  "experiment": true,
+  "backward_passes": 0,
+  "updated_unix": 1793756321.9513965,
+  "codec_sha256": "61233deea9dd915c99c112498c41664cf9a77cb99c5d7c12861f44309737fd0b",
+  "model_process_active": true,
+  "train_examples_completed": 51,
+  "parent_weight_write": {
+    "changed_bf16_values": 2488648,
+    "delta_frobenius": 0.15513300895690918,
+    "base_frobenius": 16.417512893676758,
+    "dense_weight_sha256": "6a0c8ae0aa485c536d4e3a99b149431c7cad7052e1d5170d704814b3fffad33e",
+    "runtime_adapter": false,
+    "architecture": {
+      "physical_layers": 32,
+      "layer_executions": 56,
+      "mhc_streams": 2,
+      "second_visit_gain": 0.05000000074505806,
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "sliding_window": 256,
+      "window_layers": [
+        7,
+        15,
+        27
+      ],
+      "parameters": 1020252592,
+      "backward_passes": 0
+    }
+  },
+  "architecture": {
+    "physical_layers": 32,
+    "layer_executions": 56,
+    "mhc_streams": 2,
+    "second_visit_gain": 0.05000000074505806,
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "sliding_window": 256,
+    "window_layers": [
+      7,
+      15,
+      27
+    ],
+    "parameters": 1020252592,
+    "backward_passes": 0
+  }
+}

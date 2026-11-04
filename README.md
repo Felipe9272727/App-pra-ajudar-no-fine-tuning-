@@ -1,4 +1,8 @@
-# liquid sense 0.8 b LOOP
+# liquid sense 0.8 b LOOP V3 NCM — EXPERIMENTO
+
+Esta branch contém a V3 experimental, separada da V2 em avaliação.
+Protocolo e diferenças para o NCM oficial: [v3_experiment/README.md](v3_experiment/README.md).
+Estado retomável: `v3_experiment/status.json`. A V3 conserva SenseNova e Liquid.
 
 Nome nominal da base: 0,8B. Híbrido ampliado: aproximadamente 1,02B parâmetros carregados.
 

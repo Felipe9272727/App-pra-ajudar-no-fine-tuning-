@@ -1,0 +1,1566 @@
+{
+  "version": "V3-NCM-EXPERIMENTO-1",
+  "seed": 30112026,
+  "train": [
+    {
+      "id": "train_addition_16",
+      "family": "addition",
+      "question": "Calculate 29 + 12. Reply only with the integer.",
+      "answer": "41",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 98 - 31. Reply only with the integer.",
+      "answer": "67",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_08",
+      "family": "subtraction",
+      "question": "Calculate 53 - 10. Reply only with the integer.",
+      "answer": "43",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_07",
+      "family": "addition",
+      "question": "Calculate 68 + 32. Reply only with the integer.",
+      "answer": "100",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_reverse_01",
+      "family": "reverse",
+      "question": "Reverse the characters of 'ijie'. Reply only with the resulting string.",
+      "answer": "eiji",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_reverse_04",
+      "family": "reverse",
+      "question": "Reverse the characters of 'cbg'. Reply only with the resulting string.",
+      "answer": "gbc",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_sort_01",
+      "family": "sort",
+      "question": "Sort the letters of 'aiic' alphabetically. Reply only with the resulting string.",
+      "answer": "acii",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_lowercase_04",
+      "family": "lowercase",
+      "question": "Convert 'JGFI' to lowercase. Reply only with the resulting string.",
+      "answer": "jgfi",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_05",
+      "family": "subtraction",
+      "question": "Calculate 177 - 90. Reply only with the integer.",
+      "answer": "87",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_lowercase_05",
+      "family": "lowercase",
+      "question": "Convert 'CEC' to lowercase. Reply only with the resulting string.",
+      "answer": "cec",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_addition_17",
+      "family": "addition",
+      "question": "Calculate 32 + 69. Reply only with the integer.",
+      "answer": "101",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_lowercase_00",
+      "family": "lowercase",
+      "question": "Convert 'DGGJ' to lowercase. Reply only with the resulting string.",
+      "answer": "dggj",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_13",
+      "family": "multiplication",
+      "question": "Calculate 7 * 3. Reply only with the integer.",
+      "answer": "21",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_19",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [6, 9, 1, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "82",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_22",
+      "family": "addition",
+      "question": "Calculate 85 + 42. Reply only with the integer.",
+      "answer": "127",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_reverse_03",
+      "family": "reverse",
+      "question": "Reverse the characters of 'ghca'. Reply only with the resulting string.",
+      "answer": "achg",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_python_15",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [6, 6, 8, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "81",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_09",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [1, 4, 3, 5]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "35",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_07",
+      "family": "multiplication",
+      "question": "Calculate 4 * 7. Reply only with the integer.",
+      "answer": "28",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_01",
+      "family": "addition",
+      "question": "Calculate 48 + 65. Reply only with the integer.",
+      "answer": "113",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_lowercase_02",
+      "family": "lowercase",
+      "question": "Convert 'BDJD' to lowercase. Reply only with the resulting string.",
+      "answer": "bdjd",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_reverse_06",
+      "family": "reverse",
+      "question": "Reverse the characters of 'hjbbg'. Reply only with the resulting string.",
+      "answer": "gbbjh",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_addition_08",
+      "family": "addition",
+      "question": "Calculate 93 + 87. Reply only with the integer.",
+      "answer": "180",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_uppercase_02",
+      "family": "uppercase",
+      "question": "Convert 'ahh' to uppercase. Reply only with the resulting string.",
+      "answer": "AHH",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_uppercase_03",
+      "family": "uppercase",
+      "question": "Convert 'jajcd' to uppercase. Reply only with the resulting string.",
+      "answer": "JAJCD",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_09",
+      "family": "multiplication",
+      "question": "Calculate 6 * 11. Reply only with the integer.",
+      "answer": "66",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_00",
+      "family": "addition",
+      "question": "Calculate 87 + 26. Reply only with the integer.",
+      "answer": "113",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_16",
+      "family": "multiplication",
+      "question": "Calculate 4 * 12. Reply only with the integer.",
+      "answer": "48",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_12",
+      "family": "multiplication",
+      "question": "Calculate 11 * 7. Reply only with the integer.",
+      "answer": "77",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_21",
+      "family": "addition",
+      "question": "Calculate 48 + 24. Reply only with the integer.",
+      "answer": "72",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_21",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [7, 3, 9, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "220",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_16",
+      "family": "subtraction",
+      "question": "Calculate 119 - 29. Reply only with the integer.",
+      "answer": "90",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_21",
+      "family": "subtraction",
+      "question": "Calculate 108 - 20. Reply only with the integer.",
+      "answer": "88",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_23",
+      "family": "subtraction",
+      "question": "Calculate 53 - 39. Reply only with the integer.",
+      "answer": "14",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_20",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [8, 8, 8, 6]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "0",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_19",
+      "family": "multiplication",
+      "question": "Calculate 9 * 11. Reply only with the integer.",
+      "answer": "99",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_sort_03",
+      "family": "sort",
+      "question": "Sort the letters of 'ifjfj' alphabetically. Reply only with the resulting string.",
+      "answer": "ffijj",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_python_10",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [5, 4, 9, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "155",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_13",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [2, 6, 9, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "130",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_sort_06",
+      "family": "sort",
+      "question": "Sort the letters of 'ebac' alphabetically. Reply only with the resulting string.",
+      "answer": "abce",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_addition_11",
+      "family": "addition",
+      "question": "Calculate 53 + 35. Reply only with the integer.",
+      "answer": "88",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_uppercase_07",
+      "family": "uppercase",
+      "question": "Convert 'ieia' to uppercase. Reply only with the resulting string.",
+      "answer": "IEIA",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_addition_19",
+      "family": "addition",
+      "question": "Calculate 93 + 48. Reply only with the integer.",
+      "answer": "141",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_reverse_07",
+      "family": "reverse",
+      "question": "Reverse the characters of 'cab'. Reply only with the resulting string.",
+      "answer": "bac",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_14",
+      "family": "subtraction",
+      "question": "Calculate 137 - 65. Reply only with the integer.",
+      "answer": "72",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 8 * 11. Reply only with the integer.",
+      "answer": "88",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_02",
+      "family": "addition",
+      "question": "Calculate 33 + 26. Reply only with the integer.",
+      "answer": "59",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_12",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [9, 6, 1, 6]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "82",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_18",
+      "family": "multiplication",
+      "question": "Calculate 12 * 6. Reply only with the integer.",
+      "answer": "72",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_15",
+      "family": "multiplication",
+      "question": "Calculate 7 * 8. Reply only with the integer.",
+      "answer": "56",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_reverse_05",
+      "family": "reverse",
+      "question": "Reverse the characters of 'gehci'. Reply only with the resulting string.",
+      "answer": "icheg",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_03",
+      "family": "subtraction",
+      "question": "Calculate 93 - 35. Reply only with the integer.",
+      "answer": "58",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_22",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [8, 5, 7, 2]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "74",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_13",
+      "family": "addition",
+      "question": "Calculate 62 + 60. Reply only with the integer.",
+      "answer": "122",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_reverse_00",
+      "family": "reverse",
+      "question": "Reverse the characters of 'hjda'. Reply only with the resulting string.",
+      "answer": "adjh",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_20",
+      "family": "multiplication",
+      "question": "Calculate 4 * 10. Reply only with the integer.",
+      "answer": "40",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_23",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [6, 4, 7, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "130",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_sort_07",
+      "family": "sort",
+      "question": "Sort the letters of 'ddbgj' alphabetically. Reply only with the resulting string.",
+      "answer": "bddgj",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_lowercase_07",
+      "family": "lowercase",
+      "question": "Convert 'DEAI' to lowercase. Reply only with the resulting string.",
+      "answer": "deai",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_addition_12",
+      "family": "addition",
+      "question": "Calculate 49 + 74. Reply only with the integer.",
+      "answer": "123",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_lowercase_03",
+      "family": "lowercase",
+      "question": "Convert 'FCEFI' to lowercase. Reply only with the resulting string.",
+      "answer": "fcefi",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_python_18",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [6, 8, 2, 5]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "25",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_17",
+      "family": "multiplication",
+      "question": "Calculate 8 * 3. Reply only with the integer.",
+      "answer": "24",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_uppercase_05",
+      "family": "uppercase",
+      "question": "Convert 'ajhij' to uppercase. Reply only with the resulting string.",
+      "answer": "AJHIJ",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_addition_18",
+      "family": "addition",
+      "question": "Calculate 86 + 86. Reply only with the integer.",
+      "answer": "172",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_08",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [7, 8, 9, 1]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "131",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_03",
+      "family": "multiplication",
+      "question": "Calculate 8 * 5. Reply only with the integer.",
+      "answer": "40",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_01",
+      "family": "subtraction",
+      "question": "Calculate 53 - 17. Reply only with the integer.",
+      "answer": "36",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_01",
+      "family": "multiplication",
+      "question": "Calculate 6 * 10. Reply only with the integer.",
+      "answer": "60",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_sort_05",
+      "family": "sort",
+      "question": "Sort the letters of 'ggdg' alphabetically. Reply only with the resulting string.",
+      "answer": "dggg",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_python_14",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [3, 6, 6, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "90",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_sort_04",
+      "family": "sort",
+      "question": "Sort the letters of 'eefaf' alphabetically. Reply only with the resulting string.",
+      "answer": "aeeff",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_python_03",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [6, 4, 4, 3]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "9",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_06",
+      "family": "subtraction",
+      "question": "Calculate 73 - 48. Reply only with the integer.",
+      "answer": "25",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_01",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 9, 3, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "139",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_11",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [6, 2, 1, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "82",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_uppercase_00",
+      "family": "uppercase",
+      "question": "Convert 'bbdfa' to uppercase. Reply only with the resulting string.",
+      "answer": "BBDFA",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_reverse_02",
+      "family": "reverse",
+      "question": "Reverse the characters of 'eeg'. Reply only with the resulting string.",
+      "answer": "gee",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_addition_05",
+      "family": "addition",
+      "question": "Calculate 20 + 13. Reply only with the integer.",
+      "answer": "33",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_20",
+      "family": "subtraction",
+      "question": "Calculate 55 - 45. Reply only with the integer.",
+      "answer": "10",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_07",
+      "family": "subtraction",
+      "question": "Calculate 85 - 70. Reply only with the integer.",
+      "answer": "15",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 193 - 130. Reply only with the integer.",
+      "answer": "63",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_22",
+      "family": "multiplication",
+      "question": "Calculate 7 * 6. Reply only with the integer.",
+      "answer": "42",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_09",
+      "family": "addition",
+      "question": "Calculate 36 + 39. Reply only with the integer.",
+      "answer": "75",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_uppercase_04",
+      "family": "uppercase",
+      "question": "Convert 'dgb' to uppercase. Reply only with the resulting string.",
+      "answer": "DGB",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_05",
+      "family": "multiplication",
+      "question": "Calculate 11 * 12. Reply only with the integer.",
+      "answer": "132",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_04",
+      "family": "multiplication",
+      "question": "Calculate 10 * 3. Reply only with the integer.",
+      "answer": "30",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_04",
+      "family": "addition",
+      "question": "Calculate 58 + 54. Reply only with the integer.",
+      "answer": "112",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_19",
+      "family": "subtraction",
+      "question": "Calculate 79 - 36. Reply only with the integer.",
+      "answer": "43",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_14",
+      "family": "addition",
+      "question": "Calculate 85 + 81. Reply only with the integer.",
+      "answer": "166",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_uppercase_01",
+      "family": "uppercase",
+      "question": "Convert 'cdf' to uppercase. Reply only with the resulting string.",
+      "answer": "CDF",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_12",
+      "family": "subtraction",
+      "question": "Calculate 54 - 40. Reply only with the integer.",
+      "answer": "14",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_22",
+      "family": "subtraction",
+      "question": "Calculate 199 - 47. Reply only with the integer.",
+      "answer": "152",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_18",
+      "family": "subtraction",
+      "question": "Calculate 67 - 41. Reply only with the integer.",
+      "answer": "26",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_17",
+      "family": "subtraction",
+      "question": "Calculate 138 - 45. Reply only with the integer.",
+      "answer": "93",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 9, 3, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "171",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_23",
+      "family": "addition",
+      "question": "Calculate 93 + 49. Reply only with the integer.",
+      "answer": "142",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_11",
+      "family": "subtraction",
+      "question": "Calculate 122 - 109. Reply only with the integer.",
+      "answer": "13",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_05",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [3, 6, 3, 5]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "43",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_10",
+      "family": "multiplication",
+      "question": "Calculate 5 * 5. Reply only with the integer.",
+      "answer": "25",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_15",
+      "family": "subtraction",
+      "question": "Calculate 115 - 61. Reply only with the integer.",
+      "answer": "54",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_06",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [7, 2, 2, 3]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "58",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_uppercase_06",
+      "family": "uppercase",
+      "question": "Convert 'cgfa' to uppercase. Reply only with the resulting string.",
+      "answer": "CGFA",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_addition_06",
+      "family": "addition",
+      "question": "Calculate 77 + 49. Reply only with the integer.",
+      "answer": "126",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_16",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [8, 7, 5, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "123",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_23",
+      "family": "multiplication",
+      "question": "Calculate 12 * 9. Reply only with the integer.",
+      "answer": "108",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_06",
+      "family": "multiplication",
+      "question": "Calculate 6 * 5. Reply only with the integer.",
+      "answer": "30",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_09",
+      "family": "subtraction",
+      "question": "Calculate 142 - 32. Reply only with the integer.",
+      "answer": "110",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_lowercase_01",
+      "family": "lowercase",
+      "question": "Convert 'CIHG' to lowercase. Reply only with the resulting string.",
+      "answer": "cihg",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_10",
+      "family": "subtraction",
+      "question": "Calculate 75 - 26. Reply only with the integer.",
+      "answer": "49",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 7 * 5. Reply only with the integer.",
+      "answer": "35",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_sort_00",
+      "family": "sort",
+      "question": "Sort the letters of 'gdccg' alphabetically. Reply only with the resulting string.",
+      "answer": "ccdgg",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_08",
+      "family": "multiplication",
+      "question": "Calculate 3 * 3. Reply only with the integer.",
+      "answer": "9",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_lowercase_06",
+      "family": "lowercase",
+      "question": "Convert 'GJJHG' to lowercase. Reply only with the resulting string.",
+      "answer": "gjjhg",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_addition_20",
+      "family": "addition",
+      "question": "Calculate 73 + 62. Reply only with the integer.",
+      "answer": "135",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_10",
+      "family": "addition",
+      "question": "Calculate 84 + 70. Reply only with the integer.",
+      "answer": "154",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_sort_02",
+      "family": "sort",
+      "question": "Sort the letters of 'hid' alphabetically. Reply only with the resulting string.",
+      "answer": "dhi",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "train_python_17",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 8, 2, 2]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "0",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_14",
+      "family": "multiplication",
+      "question": "Calculate 8 * 8. Reply only with the integer.",
+      "answer": "64",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_07",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [2, 2, 1, 6]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "1",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [5, 3, 2, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "115",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_13",
+      "family": "subtraction",
+      "question": "Calculate 94 - 81. Reply only with the integer.",
+      "answer": "13",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_python_04",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [2, 9, 1, 4]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "82",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_11",
+      "family": "multiplication",
+      "question": "Calculate 4 * 3. Reply only with the integer.",
+      "answer": "12",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_03",
+      "family": "addition",
+      "question": "Calculate 93 + 37. Reply only with the integer.",
+      "answer": "130",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_subtraction_04",
+      "family": "subtraction",
+      "question": "Calculate 64 - 26. Reply only with the integer.",
+      "answer": "38",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_multiplication_21",
+      "family": "multiplication",
+      "question": "Calculate 3 * 5. Reply only with the integer.",
+      "answer": "15",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "train_addition_15",
+      "family": "addition",
+      "question": "Calculate 40 + 64. Reply only with the integer.",
+      "answer": "104",
+      "numeric": true,
+      "ood": false
+    }
+  ],
+  "development": [
+    {
+      "id": "development_uppercase_00",
+      "family": "uppercase",
+      "question": "Convert 'ifa' to uppercase. Reply only with the resulting string.",
+      "answer": "IFA",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "development_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [7, 4, 7, 5]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "123",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 6 * 4. Reply only with the integer.",
+      "answer": "24",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 177 - 137. Reply only with the integer.",
+      "answer": "40",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_python_01",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [1, 3, 4, 4]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "10",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_multiplication_01",
+      "family": "multiplication",
+      "question": "Calculate 8 * 12. Reply only with the integer.",
+      "answer": "96",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 114 - 28. Reply only with the integer.",
+      "answer": "86",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 3 * 12. Reply only with the integer.",
+      "answer": "36",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_addition_00",
+      "family": "addition",
+      "question": "Calculate 79 + 54. Reply only with the integer.",
+      "answer": "133",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_subtraction_01",
+      "family": "subtraction",
+      "question": "Calculate 115 - 64. Reply only with the integer.",
+      "answer": "51",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_reverse_00",
+      "family": "reverse",
+      "question": "Reverse the characters of 'hhh'. Reply only with the resulting string.",
+      "answer": "hhh",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "development_addition_01",
+      "family": "addition",
+      "question": "Calculate 58 + 17. Reply only with the integer.",
+      "answer": "75",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_sort_00",
+      "family": "sort",
+      "question": "Sort the letters of 'gjc' alphabetically. Reply only with the resulting string.",
+      "answer": "cgj",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "development_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [8, 3, 3, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "99",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "development_lowercase_00",
+      "family": "lowercase",
+      "question": "Convert 'HEF' to lowercase. Reply only with the resulting string.",
+      "answer": "hef",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "development_addition_02",
+      "family": "addition",
+      "question": "Calculate 27 + 58. Reply only with the integer.",
+      "answer": "85",
+      "numeric": true,
+      "ood": false
+    }
+  ],
+  "heldout": [
+    {
+      "id": "heldout_sort_00",
+      "family": "sort",
+      "question": "Sort the letters of 'eiddb' alphabetically. Reply only with the resulting string.",
+      "answer": "bddei",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "heldout_multiplication_04",
+      "family": "multiplication",
+      "question": "Calculate 16 * 17. Reply only with the integer.",
+      "answer": "272",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_subtraction_05",
+      "family": "subtraction",
+      "question": "Calculate 570 - 351. Reply only with the integer.",
+      "answer": "219",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_python_07",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [19, 17, 15, 10]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "875",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_reverse_02",
+      "family": "reverse",
+      "question": "Reverse the characters of 'vurk'. Reply only with the resulting string.",
+      "answer": "kruv",
+      "numeric": false,
+      "ood": true
+    },
+    {
+      "id": "heldout_addition_02",
+      "family": "addition",
+      "question": "Calculate 19 + 61. Reply only with the integer.",
+      "answer": "80",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_python_01",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [5, 3, 8, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "83",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_subtraction_06",
+      "family": "subtraction",
+      "question": "Calculate 735 - 238. Reply only with the integer.",
+      "answer": "497",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_lowercase_00",
+      "family": "lowercase",
+      "question": "Convert 'FGE' to lowercase. Reply only with the resulting string.",
+      "answer": "fge",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "heldout_lowercase_01",
+      "family": "lowercase",
+      "question": "Convert 'ECB' to lowercase. Reply only with the resulting string.",
+      "answer": "ecb",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "heldout_python_03",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [4, 5, 8, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "106",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_addition_05",
+      "family": "addition",
+      "question": "Calculate 481 + 442. Reply only with the integer.",
+      "answer": "923",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_multiplication_06",
+      "family": "multiplication",
+      "question": "Calculate 19 * 13. Reply only with the integer.",
+      "answer": "247",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_lowercase_03",
+      "family": "lowercase",
+      "question": "Convert 'MRKZ' to lowercase. Reply only with the resulting string.",
+      "answer": "mrkz",
+      "numeric": false,
+      "ood": true
+    },
+    {
+      "id": "heldout_reverse_03",
+      "family": "reverse",
+      "question": "Reverse the characters of 'optw'. Reply only with the resulting string.",
+      "answer": "wtpo",
+      "numeric": false,
+      "ood": true
+    },
+    {
+      "id": "heldout_uppercase_03",
+      "family": "uppercase",
+      "question": "Convert 'ymm' to uppercase. Reply only with the resulting string.",
+      "answer": "YMM",
+      "numeric": false,
+      "ood": true
+    },
+    {
+      "id": "heldout_addition_01",
+      "family": "addition",
+      "question": "Calculate 18 + 77. Reply only with the integer.",
+      "answer": "95",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_addition_04",
+      "family": "addition",
+      "question": "Calculate 162 + 394. Reply only with the integer.",
+      "answer": "556",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 7 * 7. Reply only with the integer.",
+      "answer": "49",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_subtraction_01",
+      "family": "subtraction",
+      "question": "Calculate 176 - 134. Reply only with the integer.",
+      "answer": "42",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_multiplication_07",
+      "family": "multiplication",
+      "question": "Calculate 14 * 17. Reply only with the integer.",
+      "answer": "238",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_lowercase_02",
+      "family": "lowercase",
+      "question": "Convert 'QQZZQ' to lowercase. Reply only with the resulting string.",
+      "answer": "qqzzq",
+      "numeric": false,
+      "ood": true
+    },
+    {
+      "id": "heldout_python_05",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [15, 14, 18, 19]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "586",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [2, 2, 9, 8]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "81",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_subtraction_07",
+      "family": "subtraction",
+      "question": "Calculate 473 - 283. Reply only with the integer.",
+      "answer": "190",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 50 - 29. Reply only with the integer.",
+      "answer": "21",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_sort_01",
+      "family": "sort",
+      "question": "Sort the letters of 'dhieh' alphabetically. Reply only with the resulting string.",
+      "answer": "dehhi",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "heldout_uppercase_00",
+      "family": "uppercase",
+      "question": "Convert 'dhgfh' to uppercase. Reply only with the resulting string.",
+      "answer": "DHGFH",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "heldout_subtraction_04",
+      "family": "subtraction",
+      "question": "Calculate 750 - 569. Reply only with the integer.",
+      "answer": "181",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_subtraction_03",
+      "family": "subtraction",
+      "question": "Calculate 165 - 36. Reply only with the integer.",
+      "answer": "129",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_multiplication_03",
+      "family": "multiplication",
+      "question": "Calculate 11 * 4. Reply only with the integer.",
+      "answer": "44",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_multiplication_01",
+      "family": "multiplication",
+      "question": "Calculate 9 * 5. Reply only with the integer.",
+      "answer": "45",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_sort_03",
+      "family": "sort",
+      "question": "Sort the letters of 'snss' alphabetically. Reply only with the resulting string.",
+      "answer": "nsss",
+      "numeric": false,
+      "ood": true
+    },
+    {
+      "id": "heldout_addition_06",
+      "family": "addition",
+      "question": "Calculate 240 + 323. Reply only with the integer.",
+      "answer": "563",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 99 - 67. Reply only with the integer.",
+      "answer": "32",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_python_04",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [10, 14, 18, 12]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "0",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_reverse_01",
+      "family": "reverse",
+      "question": "Reverse the characters of 'ceedi'. Reply only with the resulting string.",
+      "answer": "ideec",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "heldout_uppercase_01",
+      "family": "uppercase",
+      "question": "Convert 'bjiid' to uppercase. Reply only with the resulting string.",
+      "answer": "BJIID",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "heldout_python_06",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [14, 17, 17, 14]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "578",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_uppercase_02",
+      "family": "uppercase",
+      "question": "Convert 'wslzs' to uppercase. Reply only with the resulting string.",
+      "answer": "WSLZS",
+      "numeric": false,
+      "ood": true
+    },
+    {
+      "id": "heldout_addition_00",
+      "family": "addition",
+      "question": "Calculate 24 + 88. Reply only with the integer.",
+      "answer": "112",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_sort_02",
+      "family": "sort",
+      "question": "Sort the letters of 'xvl' alphabetically. Reply only with the resulting string.",
+      "answer": "lvx",
+      "numeric": false,
+      "ood": true
+    },
+    {
+      "id": "heldout_multiplication_05",
+      "family": "multiplication",
+      "question": "Calculate 13 * 14. Reply only with the integer.",
+      "answer": "182",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 8 * 6. Reply only with the integer.",
+      "answer": "48",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [1, 5, 2, 7]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "75",
+      "numeric": true,
+      "ood": false
+    },
+    {
+      "id": "heldout_reverse_00",
+      "family": "reverse",
+      "question": "Reverse the characters of 'ecd'. Reply only with the resulting string.",
+      "answer": "dce",
+      "numeric": false,
+      "ood": false
+    },
+    {
+      "id": "heldout_addition_07",
+      "family": "addition",
+      "question": "Calculate 128 + 389. Reply only with the integer.",
+      "answer": "517",
+      "numeric": true,
+      "ood": true
+    },
+    {
+      "id": "heldout_addition_03",
+      "family": "addition",
+      "question": "Calculate 51 + 86. Reply only with the integer.",
+      "answer": "137",
+      "numeric": true,
+      "ood": false
+    }
+  ],
+  "protocol": {
+    "max_answer_utf8_bytes": 8,
+    "ncm_levels": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "ridge_candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selection": "development exact short-answer accuracy, then byte accuracy",
+    "baseline_max_new_tokens": 8,
+    "heldout_selects_model": false,
+    "backward_passes": 0,
+    "parent": "V2 candidate_02; experimental parent, not a promoted incumbent",
+    "NCM_scope": "Learned linear byte VQ autoencoder and parallel multiscale residual codes, conditioned by frozen Qwen hybrid; not a reproduction of the full official learned Transformer VQ-VAE"
+  }
+}

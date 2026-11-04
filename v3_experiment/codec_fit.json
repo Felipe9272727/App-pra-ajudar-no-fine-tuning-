@@ -1,0 +1,39 @@
+{
+  "method": "PCA encoder, official NCM RVQ with k-means, ridge byte decoder",
+  "synthetic_codec_sequences": 4096,
+  "answer_sequence_repetitions": 8,
+  "train_byte_accuracy": 1.0,
+  "train_exact_reconstruction": 1.0,
+  "levels": [
+    {
+      "level": 0,
+      "positions": 1,
+      "codes": 16,
+      "mean_squared_error": 0.009809909388422966,
+      "nonzero_code_values": 1024
+    },
+    {
+      "level": 1,
+      "positions": 2,
+      "codes": 32,
+      "mean_squared_error": 0.007737563457340002,
+      "nonzero_code_values": 2048
+    },
+    {
+      "level": 2,
+      "positions": 4,
+      "codes": 64,
+      "mean_squared_error": 0.005752499680966139,
+      "nonzero_code_values": 4096
+    },
+    {
+      "level": 3,
+      "positions": 8,
+      "codes": 256,
+      "mean_squared_error": 0.0010459746699780226,
+      "nonzero_code_values": 16384
+    }
+  ],
+  "backward_passes": 0,
+  "uses_heldout": false
+}

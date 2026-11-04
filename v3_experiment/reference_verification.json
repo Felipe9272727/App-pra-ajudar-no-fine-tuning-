@@ -1,0 +1,10 @@
+{
+  "original_recorded_nll": 0.4129200209863484,
+  "recovered_nll": 0.44317855313420296,
+  "mean_nll_delta": 0.030258532147854567,
+  "max_per_question_nll_delta": 0.10711824893951416,
+  "old_probe_only": true,
+  "v3_heldout_used": false,
+  "interpretation": "Recovered tensors are an algebraic reference. Safetensors file hash and old functional probe differ. Report this explicitly and compare all variants anew in the same environment.",
+  "matches_previous_host_within_0p02": false
+}
