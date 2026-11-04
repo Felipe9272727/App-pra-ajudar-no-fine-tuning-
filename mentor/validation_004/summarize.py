@@ -82,7 +82,7 @@ def main():
         'Loop/mHC e operadores inspirados em Liquid permaneceram ativos. Zero gradientes, otimizadores ou fine-tuning.','',
         '## Recuperação','',
         'O commit 45b5152 preservou somente a triagem da hipótese 002 (pai 2/5, aleatório 2/5, candidata 5/5). '
-        'O checkpoint final e o resultado completo não estavam no GitHub. Foram preservados 31 descartes antigos, '
+        'O checkpoint final e o resultado completo não foram encontrados nas branches e artefatos acessíveis do GitHub. Foram preservados 31 descartes antigos, '
         'a rejeição da hipótese 001 e a V3 NCM como experimento não promovido. Não se reiniciou a busca automática.','',
         'A reconstrução usa a dose já fixada de 0,012 e as ativações do próprio modelo na geração real. '
         'Altera somente model.language_model.layers.31.mlp.down_proj.weight (1024×3584, BF16): '
@@ -109,6 +109,7 @@ def main():
         f"Diferença de pass@1: {100*primary['paired_task_delta']:.2f} pontos percentuais; "
         f"IC bootstrap empírico 95%: [{100*primary['task_bootstrap_95pct'][0]:.2f}, {100*primary['task_bootstrap_95pct'][1]:.2f}].",'',
         f"Controles perdidos: {lost_controls}; ganhos: {gain_controls}. NLL nova: pai {scores['parent']['anchor_nll']:.9f}, candidata {scores['candidate']['anchor_nll']:.9f}.",'',
+        f"Candidata versus Qwen original: {len(pairs['candidate_vs_original']['task_wins'])} tarefas ganhas e {len(pairs['candidate_vs_original']['task_losses'])} perdidas; {len(pairs['candidate_vs_original']['case_wins'])} casos ganhos e {len(pairs['candidate_vs_original']['case_losses'])} perdidos. Diferenças herdadas da arquitetura não são atribuídas à edição.",'',
         'Quatro tarefas repetidas por variante tiveram textos e acertos idênticos. Como a geração é gulosa, '
         'essas repetições verificam estabilidade, sem criar novas amostras independentes. A comparação usa '
         'o mesmo contexto, limite, tokenizer, BF16, kernels eager, cache, seed e quatro threads. '

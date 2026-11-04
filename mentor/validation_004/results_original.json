@@ -422,10 +422,379 @@
         true
       ],
       "code": "def solve(xs):\n    n = len(xs)\n    inversions = 0\n    for i in range(n):\n        for j in range(i + 1, n):\n            if xs[i] > xs[j]:\n                inversions += 1\n    return inversions"
+    },
+    {
+      "id": "v4_edit_distance",
+      "group": "far",
+      "output": "def solve(a, b):\n    if len(a) == 0 or len(b) == 0:\n        return 0\n    if a == b:\n        return 0\n    m, n = len(a), len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i - 1] == b[j - 1]:",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 17.946706138999843,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 14,
+      "code": "def solve(a, b):\n    if len(a) == 0 or len(b) == 0:\n        return 0\n    if a == b:\n        return 0\n    m, n = len(a), len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i - 1] == b[j - 1]:",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "v4_islands",
+      "group": "far",
+      "output": "def solve(grid):\n    if not grid or not grid[0]:\n        return 0\n    \n    rows = len(grid)\n    cols = len(grid[0])\n    \n    visited = [[False for _ in range(cols)] for _ in range(rows)]\n    count = 0\n    \n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1 and not visited[r][c]:\n                count += 1\n                visited[r][c] = True\n                # Explore all 4 directions\n                for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:\n                    nr, nc = r + dr",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 17.317838775000155,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "ContractError",
+      "detail": "UnsupportedName",
+      "code": "def solve(grid):\n    if not grid or not grid[0]:\n        return 0\n    \n    rows = len(grid)\n    cols = len(grid[0])\n    \n    visited = [[False for _ in range(cols)] for _ in range(rows)]\n    count = 0\n    \n    for r in range(rows):\n        for c in range(cols):\n            if grid[r][c] == 1 and not visited[r][c]:\n                count += 1\n                visited[r][c] = True\n                # Explore all 4 directions\n                for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:\n                    nr, nc = r + dr",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "v4_histogram_area",
+      "group": "far",
+      "output": "def solve(heights):\n    if not heights:\n        return 0\n    max_area = 0\n    left = 0\n    right = len(heights) - 1\n    \n    while left < right:\n        current_height = heights[left]\n        current_area = current_height * (right - left)\n        max_area = max(max_area, current_area)\n        \n        while heights[left] < current_height:\n            left += 1\n        while heights[right] < current_height:\n            right -= 1\n            \n    return max_area",
+      "new_tokens": 119,
+      "hit_limit": false,
+      "seconds": 13.448096866000014,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "ResourceLimit",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(heights):\n    if not heights:\n        return 0\n    max_area = 0\n    left = 0\n    right = len(heights) - 1\n    \n    while left < right:\n        current_height = heights[left]\n        current_area = current_height * (right - left)\n        max_area = max(max_area, current_area)\n        \n        while heights[left] < current_height:\n            left += 1\n        while heights[right] < current_height:\n            right -= 1\n            \n    return max_area"
+    },
+    {
+      "id": "v4_record_order",
+      "group": "far",
+      "output": "def solve(records):\n    return sorted(records, key=lambda x: (-x[1], x[0]))",
+      "new_tokens": 24,
+      "hit_limit": false,
+      "seconds": 3.073569138000039,
+      "thinking": false,
+      "passed": 8,
+      "total": 8,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(records):\n    return sorted(records, key=lambda x: (-x[1], x[0]))"
+    },
+    {
+      "id": "v4_numeric_motif",
+      "group": "near",
+      "output": "def solve(xs, motif):\n    count = 0\n    if not motif:\n        return count\n    if motif == xs:\n        count += 1\n    else:\n        i = 0\n        while i < len(xs) - len(motif):\n            if xs[i:i+len(motif)] == motif:\n                count += 1\n                i += len(motif)\n            else:\n                break\n    return count",
+      "new_tokens": 100,
+      "hit_limit": false,
+      "seconds": 11.407457184000123,
+      "thinking": false,
+      "passed": 4,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(xs, motif):\n    count = 0\n    if not motif:\n        return count\n    if motif == xs:\n        count += 1\n    else:\n        i = 0\n        while i < len(xs) - len(motif):\n            if xs[i:i+len(motif)] == motif:\n                count += 1\n                i += len(motif)\n            else:\n                break\n    return count"
+    },
+    {
+      "id": "v4_overlap_coverage",
+      "group": "near",
+      "output": "def solve(s, sub):\n    result = []\n    for i, c in enumerate(s):\n        if c == sub[0]:\n            result.append(True)\n        elif c == sub[1]:\n            result.append(True)\n        elif c == sub[2]:\n            result.append(True)\n        elif c == sub[3]:\n            result.append(True)\n        else:\n            result.append(False)\n    return result",
+      "new_tokens": 96,
+      "hit_limit": false,
+      "seconds": 10.591179772000032,
+      "thinking": false,
+      "passed": 4,
+      "total": 8,
+      "all_passed": false,
+      "category": "IndexError",
+      "error_types": [
+        "IndexError",
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "code": "def solve(s, sub):\n    result = []\n    for i, c in enumerate(s):\n        if c == sub[0]:\n            result.append(True)\n        elif c == sub[1]:\n            result.append(True)\n        elif c == sub[2]:\n            result.append(True)\n        elif c == sub[3]:\n            result.append(True)\n        else:\n            result.append(False)\n    return result"
+    },
+    {
+      "id": "v4_suffix_prefix",
+      "group": "near",
+      "output": "def solve(a, b):\n    if len(a) < len(b):\n        return 0\n    if len(a) > len(b):\n        return len(b) - 1\n    \n    k = min(len(a), len(b))\n    if k == 0:\n        return 0\n    \n    for i in range(k):\n        if a[i] == b[i]:\n            k += 1\n        else:\n            break\n    \n    return k",
+      "new_tokens": 100,
+      "hit_limit": false,
+      "seconds": 11.652668787000039,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(a, b):\n    if len(a) < len(b):\n        return 0\n    if len(a) > len(b):\n        return len(b) - 1\n    \n    k = min(len(a), len(b))\n    if k == 0:\n        return 0\n    \n    for i in range(k):\n        if a[i] == b[i]:\n            k += 1\n        else:\n            break\n    \n    return k"
+    },
+    {
+      "id": "v4_wildcard_windows",
+      "group": "near",
+      "output": "def solve(s, pattern):\n    n = len(s)\n    m = len(pattern)\n    count = 0\n    i = 0\n    while i < n - m + 1:\n        j = i\n        while j < n - m + 1:\n            if s[j] == pattern[j]:\n                j += 1\n            else:\n                break\n        if j == n - m + 1:\n            count += 1\n            i += 1\n        else:\n            j += 1\n    return count",
+      "new_tokens": 123,
+      "hit_limit": false,
+      "seconds": 14.705377564000173,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "ResourceLimit",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(s, pattern):\n    n = len(s)\n    m = len(pattern)\n    count = 0\n    i = 0\n    while i < n - m + 1:\n        j = i\n        while j < n - m + 1:\n            if s[j] == pattern[j]:\n                j += 1\n            else:\n                break\n        if j == n - m + 1:\n            count += 1\n            i += 1\n        else:\n            j += 1\n    return count"
     }
   ],
-  "controls": [],
-  "repeats": [],
+  "controls": [
+    {
+      "id": "v4_pt_en",
+      "domain": "language",
+      "output": "The key is under the table.\n",
+      "new_tokens": 10,
+      "hit_limit": false,
+      "seconds": 1.5111894720000691,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_en_pt",
+      "domain": "language",
+      "output": "Necessitamos de água limpa.",
+      "new_tokens": 10,
+      "hit_limit": false,
+      "seconds": 1.4089871449998554,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_antonym",
+      "domain": "language",
+      "output": "vazio",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.5625903749998997,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_plural",
+      "domain": "language",
+      "output": "animais",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.5118167149998953,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_fraction",
+      "domain": "reasoning",
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.6150173119999636,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_order",
+      "domain": "reasoning",
+      "output": "Rui",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.5813778100000491,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_logic",
+      "domain": "reasoning",
+      "output": "No",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 0.45868068499999026,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_clock",
+      "domain": "reasoning",
+      "output": "15:25",
+      "new_tokens": 6,
+      "hit_limit": false,
+      "seconds": 0.9085708650000015,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_fact",
+      "domain": "general",
+      "output": "Na",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 0.43331372200009355,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "v4_geo",
+      "domain": "general",
+      "output": "América do Norte",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 0.7791673589999846,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_format",
+      "domain": "instruction",
+      "output": "dcloud river stone",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 0.7138056369999504,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "v4_extract",
+      "domain": "instruction",
+      "output": "green",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 0.44035254799996437,
+      "thinking": false,
+      "correct": true
+    }
+  ],
+  "repeats": [
+    {
+      "id": "v4_interval_union",
+      "output": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort()\n    if len(intervals) == 1:\n        return intervals[0][1] - intervals[0][0]\n    \n    total = 0.0\n    for i in range(len(intervals) - 1):\n        a, b = intervals[i]\n        c, d = intervals[i + 1]\n        if b < c:\n            total += c - b\n        else:\n            total += c - b\n            b = c\n    return total",
+      "new_tokens": 129,
+      "hit_limit": false,
+      "seconds": 14.640733069000134,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort()\n    if len(intervals) == 1:\n        return intervals[0][1] - intervals[0][0]\n    \n    total = 0.0\n    for i in range(len(intervals) - 1):\n        a, b = intervals[i]\n        c, d = intervals[i + 1]\n        if b < c:\n            total += c - b\n        else:\n            total += c - b\n            b = c\n    return total",
+      "identical": true
+    },
+    {
+      "id": "v4_normalize_path",
+      "output": "def solve(path):\n    if not path or not path.strip():\n        return \"/\"\n    \n    parts = path.split(\"/\")\n    result = []\n    \n    for part in parts:\n        if not part:\n            continue\n        if part.startswith(\".\"):\n            continue\n        if part == \"..\":\n            if result:\n                result.pop()\n        else:\n            result.append(part)\n    \n    if not result:\n        return \"/\"\n    \n    return \"/\" + \"/\".join(result)\n    \nsolve(\"/\")\nsolve(\"\")\nsolve(\"a/b\")\nsolve(\"a/b/c\")\nsolve(\"a/b/c/d\")\nsolve(\"a/b/c/d/e\")\nsolve(\"a/b/c/d/e/f\")\nsolve(\"a/b/c",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 18.23014847699983,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 31,
+      "code": "def solve(path):\n    if not path or not path.strip():\n        return \"/\"\n    \n    parts = path.split(\"/\")\n    result = []\n    \n    for part in parts:\n        if not part:\n            continue\n        if part.startswith(\".\"):\n            continue\n        if part == \"..\":\n            if result:\n                result.pop()\n        else:\n            result.append(part)\n    \n    if not result:\n        return \"/\"\n    \n    return \"/\" + \"/\".join(result)\n    \nsolve(\"/\")\nsolve(\"\")\nsolve(\"a/b\")\nsolve(\"a/b/c\")\nsolve(\"a/b/c/d\")\nsolve(\"a/b/c/d/e\")\nsolve(\"a/b/c/d/e/f\")\nsolve(\"a/b/c",
+      "identical": true
+    }
+  ],
   "frozen_sha256": "bffac8f483863225e85774320a5301b26b70db9ab096f78de287d51fdbffdb46",
   "backward_passes": 0,
   "answers_in_generation_prompts": false,
