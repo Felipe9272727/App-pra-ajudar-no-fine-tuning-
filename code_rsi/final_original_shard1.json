@@ -1,0 +1,217 @@
+{
+  "variant": "original",
+  "loaded_parameters": 852985920,
+  "shard": 1,
+  "shards": 2,
+  "frozen_sha256": "f694102a83ae9fbb836cc04257355cf1df77c8a6f58a9b7f8639fb7008fb39a6",
+  "split": "heldout",
+  "status": "complete",
+  "data_sha256": "6f88b98fe7d57cb79e4f0ed5663a2eeb5cad9a400105b185a62c68d9751ae429",
+  "inference_code_sha256": {
+    "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+    "code_rsi/checkpoint_io.py": "5888ab3f8fc296e8e9c84ddec73bb9b72eac501fc3b84a6818949e2d52ef5873",
+    "code_rsi/sandbox.py": "eeebccb85200f8591d17a84336fc965083c069637a1bf81e52698772e3a34c15",
+    "code_rsi/loop_protocol.py": "c98ddd7e5596d8c315922ee93bda411188bb98b4b5fbdd84697a20dcbb058d76",
+    "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+    "modeling_sensenova_loop.py": "26e11d3522aa730c0ba031340ce42632bc2834da8cc0b6804006bb207d979a5b",
+    "rsi_cycle.py": "0bf4678c21fa14cc0687806fdb29e02bc9d9d754ae8821abf087acb865bd3e0a"
+  },
+  "protocol": {
+    "max_new_tokens": 160,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "pass_at_1": true,
+    "feedback_at_evaluation": false,
+    "sandbox_image": "python@sha256:b18b261e1b4974b4f321451ad5251ded85abb22c2b8b262da527dda1d031ab30",
+    "test_answers_in_prompt": false
+  },
+  "rows": [
+    {
+      "id": "median",
+      "output": "def solve(xs):\n    if not xs:\n        return None\n    n = len(xs)\n    if n % 2 == 1:\n        return int(xs[n // 2])\n    else:\n        return (xs[n // 2 - 1] + xs[n // 2]) / 2.0",
+      "new_tokens": 72,
+      "hit_limit": false,
+      "seconds": 69.91948517099999,
+      "thinking": false,
+      "passed": 3,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return None\n    n = len(xs)\n    if n % 2 == 1:\n        return int(xs[n // 2])\n    else:\n        return (xs[n // 2 - 1] + xs[n // 2]) / 2.0"
+    },
+    {
+      "id": "factorial",
+      "output": "def solve(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n == 0:\n        return 1\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result",
+      "new_tokens": 68,
+      "hit_limit": false,
+      "seconds": 66.15940298699999,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(n):\n    if n < 0:\n        raise ValueError(\"Input must be a non-negative integer\")\n    if n == 0:\n        return 1\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result"
+    },
+    {
+      "id": "fibonacci",
+      "output": "def solve(n):\n    if n < 0:\n        raise ValueError(\"Input must be nonnegative\")\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b",
+      "new_tokens": 90,
+      "hit_limit": false,
+      "seconds": 87.29957991499998,
+      "thinking": false,
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "ContractError",
+      "detail": "UnsupportedName",
+      "code": "def solve(n):\n    if n < 0:\n        raise ValueError(\"Input must be nonnegative\")\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b"
+    },
+    {
+      "id": "nonzero",
+      "output": "def solve(xs):\n    return [x for x in xs if x != 0]",
+      "new_tokens": 20,
+      "hit_limit": false,
+      "seconds": 21.396278323000047,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(xs):\n    return [x for x in xs if x != 0]"
+    },
+    {
+      "id": "cumulative_product",
+      "output": "def solve(xs):\n    if not xs:\n        return []\n    result = []\n    for x in xs:\n        result.append(x)\n    return result",
+      "new_tokens": 37,
+      "hit_limit": false,
+      "seconds": 36.983482735999985,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return []\n    result = []\n    for x in xs:\n        result.append(x)\n    return result"
+    },
+    {
+      "id": "max_subarray",
+      "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_sum = 0\n    current_sum = 0\n    for x in xs:\n        current_sum += x\n        if current_sum > max_sum:\n            max_sum = current_sum\n        if current_sum < 0:\n            current_sum = 0\n    return max_sum",
+      "new_tokens": 80,
+      "hit_limit": false,
+      "seconds": 76.806362213,
+      "thinking": false,
+      "passed": 4,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_sum = 0\n    current_sum = 0\n    for x in xs:\n        current_sum += x\n        if current_sum > max_sum:\n            max_sum = current_sum\n        if current_sum < 0:\n            current_sum = 0\n    return max_sum"
+    },
+    {
+      "id": "strip_vowels",
+      "output": "def solve(s):\n    vowels = set(\"aeiouAEIOU\")\n    return \"\".join(c for c in s if c not in vowels)",
+      "new_tokens": 33,
+      "hit_limit": false,
+      "seconds": 33.318964120999965,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(s):\n    vowels = set(\"aeiouAEIOU\")\n    return \"\".join(c for c in s if c not in vowels)"
+    },
+    {
+      "id": "missing_number",
+      "output": "def solve(xs, n):\n    return sorted(set(xs))",
+      "new_tokens": 14,
+      "hit_limit": false,
+      "seconds": 15.830823811999949,
+      "thinking": false,
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "code": "def solve(xs, n):\n    return sorted(set(xs))"
+    },
+    {
+      "id": "is_sorted",
+      "output": "def solve(xs):\n    return all(x >= x[0] for x in xs)\nsolve([1,2,3])\nsolve([3,2,1])\nsolve([1,1,1])\nsolve([1,2,3,4])\nsolve([1,2,3,4,5])\nsolve([1,2,3,4,5,6])\nsolve([1,2,3,4,5,6,7])\nsolve([1,2,3,4,5,6,7,8])\nsolve([1,2,3,4,5,6,7,8,9])\nsolve([1,2,3,4,5,6,7,8",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 150.38824122300002,
+      "thinking": false,
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 12,
+      "code": "def solve(xs):\n    return all(x >= x[0] for x in xs)\nsolve([1,2,3])\nsolve([3,2,1])\nsolve([1,1,1])\nsolve([1,2,3,4])\nsolve([1,2,3,4,5])\nsolve([1,2,3,4,5,6])\nsolve([1,2,3,4,5,6,7])\nsolve([1,2,3,4,5,6,7,8])\nsolve([1,2,3,4,5,6,7,8,9])\nsolve([1,2,3,4,5,6,7,8"
+    },
+    {
+      "id": "find_all",
+      "output": "def solve(xs, target):\n    return [i for i, x in enumerate(xs) if x == target]",
+      "new_tokens": 25,
+      "hit_limit": false,
+      "seconds": 25.785967486999994,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(xs, target):\n    return [i for i, x in enumerate(xs) if x == target]"
+    },
+    {
+      "id": "to_base_two",
+      "output": "def solve(n):\n    if n < 0:\n        raise ValueError(\"Input must be nonnegative\")\n    return bin(n)[2:]",
+      "new_tokens": 32,
+      "hit_limit": false,
+      "seconds": 32.493583569000066,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(n):\n    if n < 0:\n        raise ValueError(\"Input must be nonnegative\")\n    return bin(n)[2:]"
+    },
+    {
+      "id": "unique_words",
+      "output": "def solve(s):\n    words = s.split()\n    return sorted(set(words))",
+      "new_tokens": 19,
+      "hit_limit": false,
+      "seconds": 20.347894303999965,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "def solve(s):\n    words = s.split()\n    return sorted(set(words))"
+    }
+  ],
+  "tasks_passed": 6,
+  "tests_passed": 39,
+  "tests_total": 60,
+  "total": 12,
+  "failure_categories": {
+    "WrongReturnValue": 4,
+    "passed": 6,
+    "ContractError": 1,
+    "SyntaxError": 1
+  }
+}

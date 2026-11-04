@@ -1,17 +1,17 @@
 {
-  "status": "frozen_before_final_test",
+  "status": "complete",
   "model_name": "liquid sense 0.8 b LOOP",
   "focus": "Python coding with execution feedback",
   "base_commit": "cd8cb5826ac17100cb0960d428389a3d714d5417",
   "model_process_active": false,
-  "final_test_evaluated": false,
+  "final_test_evaluated": true,
   "selected_candidate": null,
   "backward_passes": 0,
   "process_continues_in_background": false,
   "architecture_can_be_disabled": false,
   "last_failed_run": 41863829379,
   "last_failure": "missing checkpoint parent directory",
-  "updated_unix": 1793811774.6463768,
+  "updated_unix": 1793812600.4761302,
   "candidates_saved": 4,
   "validation_queue": []
 }
