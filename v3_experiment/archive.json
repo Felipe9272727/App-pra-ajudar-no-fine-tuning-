@@ -26,7 +26,10 @@
       "ridge": 10.0,
       "checkpoint": "v3_experiment/head_02.pt",
       "sha256": "2e388ff1f8e9ee988d6c89030ad5063ef7121b4c24b6e246ea6fe235f370374b",
-      "status": "awaiting_development"
+      "status": "development_complete",
+      "exact_correct": 0,
+      "byte_accuracy": 0.018518518518518517,
+      "total": 16
     }
   ]
 }

@@ -1,0 +1,1118 @@
+{
+  "variant": "head_00",
+  "data_sha256": "35c2c27866849981cb8420c89a06446236a713895a147ef881b95abd7d5d09c9",
+  "head_sha256": "39766b24abde81398889a7c7e1b2e5d56ce2634881ac7b89ec35c020d78f517e",
+  "status": "complete",
+  "rows": [
+    {
+      "id": "development_uppercase_00",
+      "family": "uppercase",
+      "question": "Convert 'ifa' to uppercase. Reply only with the resulting string.",
+      "answer": "IFA",
+      "numeric": false,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 2.0825,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              1
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              28,
+              28,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              149,
+              67,
+              67,
+              100,
+              197,
+              197,
+              100,
+              100
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 26,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_python_02",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [7, 4, 7, 5]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "123",
+      "numeric": true,
+      "ood": false,
+      "output": "1",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 4,
+      "seconds": 2.0874,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              77,
+              197,
+              197,
+              100,
+              46,
+              25,
+              61
+            ],
+            "decoded_draft": "1"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 65,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_multiplication_00",
+      "family": "multiplication",
+      "question": "Calculate 6 * 4. Reply only with the integer.",
+      "answer": "24",
+      "numeric": true,
+      "ood": false,
+      "output": "44",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 3,
+      "seconds": 1.8928,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              13,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              53,
+              9,
+              8
+            ],
+            "decoded_draft": "4"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              120,
+              120,
+              67,
+              126,
+              126,
+              126,
+              126,
+              126
+            ],
+            "decoded_draft": "44"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 25,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_subtraction_02",
+      "family": "subtraction",
+      "question": "Calculate 177 - 137. Reply only with the integer.",
+      "answer": "40",
+      "numeric": true,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 1.8504,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              13,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              22,
+              9,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              126,
+              120,
+              85,
+              126,
+              126,
+              126,
+              126,
+              22
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 29,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_python_01",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [1, 3, 4, 4]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "10",
+      "numeric": true,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 2.265,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              9,
+              8,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              113,
+              77,
+              197,
+              197,
+              100,
+              229,
+              126,
+              25
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 65,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_multiplication_01",
+      "family": "multiplication",
+      "question": "Calculate 8 * 12. Reply only with the integer.",
+      "answer": "96",
+      "numeric": true,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 2.1197,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              9,
+              39,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              113,
+              191,
+              197,
+              155,
+              155,
+              155,
+              155
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 26,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_subtraction_00",
+      "family": "subtraction",
+      "question": "Calculate 114 - 28. Reply only with the integer.",
+      "answer": "86",
+      "numeric": true,
+      "ood": false,
+      "output": "00",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 3,
+      "seconds": 2.0373,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              31,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              5,
+              9,
+              28
+            ],
+            "decoded_draft": "0"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              113,
+              113,
+              191,
+              191,
+              61,
+              61,
+              61,
+              61
+            ],
+            "decoded_draft": "00"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 28,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_multiplication_02",
+      "family": "multiplication",
+      "question": "Calculate 3 * 12. Reply only with the integer.",
+      "answer": "36",
+      "numeric": true,
+      "ood": false,
+      "output": "q",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 2.0259,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              19
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              5,
+              39,
+              28
+            ],
+            "decoded_draft": "q"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              113,
+              191,
+              191,
+              191,
+              197,
+              251,
+              197
+            ],
+            "decoded_draft": "q"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 26,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_addition_00",
+      "family": "addition",
+      "question": "Calculate 79 + 54. Reply only with the integer.",
+      "answer": "133",
+      "numeric": true,
+      "ood": false,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 4,
+      "seconds": 2.0751,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              63,
+              8,
+              39,
+              39
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              120,
+              60,
+              100,
+              244,
+              156,
+              156,
+              156
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_subtraction_01",
+      "family": "subtraction",
+      "question": "Calculate 115 - 64. Reply only with the integer.",
+      "answer": "51",
+      "numeric": true,
+      "ood": false,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 2,
+      "byte_total": 3,
+      "seconds": 2.0178,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              12,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              63,
+              22,
+              9,
+              28
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              120,
+              120,
+              197,
+              197,
+              60,
+              25,
+              156,
+              156
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 28,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_reverse_00",
+      "family": "reverse",
+      "question": "Reverse the characters of 'hhh'. Reply only with the resulting string.",
+      "answer": "hhh",
+      "numeric": false,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.8571,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              1
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              5
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              5,
+              9
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              191,
+              67,
+              119,
+              38,
+              38,
+              148,
+              148,
+              148
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 26,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_addition_01",
+      "family": "addition",
+      "question": "Calculate 58 + 17. Reply only with the integer.",
+      "answer": "75",
+      "numeric": true,
+      "ood": false,
+      "output": "1",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 1.9634,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              63,
+              9,
+              9,
+              8
+            ],
+            "decoded_draft": "1"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              22,
+              100,
+              100,
+              169,
+              22,
+              22,
+              22
+            ],
+            "decoded_draft": "1"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_sort_00",
+      "family": "sort",
+      "question": "Sort the letters of 'gjc' alphabetically. Reply only with the resulting string.",
+      "answer": "cgj",
+      "numeric": false,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.9836,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              2
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              5
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              5,
+              9
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              244,
+              156,
+              156,
+              197,
+              230,
+              148,
+              148,
+              148
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 30,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_python_00",
+      "family": "python",
+      "question": "What integer does this Python code print?\n```python\nxs = [8, 3, 3, 9]\nprint(sum(x*x for x in xs if x % 2 == 1))\n```\nReply only with the integer.",
+      "answer": "99",
+      "numeric": true,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 3,
+      "seconds": 2.061,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              11
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              20
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              1,
+              8,
+              8,
+              28
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              13,
+              77,
+              197,
+              197,
+              61,
+              25,
+              131,
+              25
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 65,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_lowercase_00",
+      "family": "lowercase",
+      "question": "Convert 'HEF' to lowercase. Reply only with the resulting string.",
+      "answer": "hef",
+      "numeric": false,
+      "ood": false,
+      "output": "",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 0,
+      "byte_total": 4,
+      "seconds": 1.778,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              1
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              28,
+              28,
+              8,
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              156,
+              169,
+              100,
+              197,
+              197,
+              100,
+              48,
+              48
+            ],
+            "decoded_draft": ""
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    },
+    {
+      "id": "development_addition_02",
+      "family": "addition",
+      "question": "Calculate 27 + 58. Reply only with the integer.",
+      "answer": "85",
+      "numeric": true,
+      "ood": false,
+      "output": "11",
+      "exact_correct": false,
+      "content_correct": false,
+      "byte_correct": 1,
+      "byte_total": 3,
+      "seconds": 1.6882,
+      "trace": {
+        "levels": [
+          {
+            "level": 0,
+            "positions": 1,
+            "codes": [
+              8
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 1,
+            "positions": 2,
+            "codes": [
+              23,
+              30
+            ],
+            "decoded_draft": ""
+          },
+          {
+            "level": 2,
+            "positions": 4,
+            "codes": [
+              63,
+              8,
+              28,
+              28
+            ],
+            "decoded_draft": "11"
+          },
+          {
+            "level": 3,
+            "positions": 8,
+            "codes": [
+              203,
+              13,
+              191,
+              54,
+              191,
+              251,
+              251,
+              104
+            ],
+            "decoded_draft": "11"
+          }
+        ],
+        "parallel_codes": 15,
+        "generation_level_passes": 4,
+        "prefix_passes": 1,
+        "prefix_tokens": 27,
+        "autoregressive_fallback": false,
+        "backward_passes": 0
+      }
+    }
+  ],
+  "selection_uses_heldout": false,
+  "protocol": {
+    "cpu_threads": 8,
+    "backbone": "BF16",
+    "routers": "FP32",
+    "NCM_max_bytes": 8,
+    "baseline_max_new_tokens": null,
+    "decoding": "greedy codebook nearest-centre",
+    "inference_tools": false,
+    "thinking": false
+  },
+  "code_sha256": {
+    "runtime.py": "da7370c6fad0f3b9c74589e80b1bf3d444e0a52b4d3e66bb89c1109bf777be09",
+    "codec.py": "7113bbfe3b9dac53a13f0e8bd1212a3a1c0da26137b61ae123b7b03ab6f8d212",
+    "evaluate.py": "2b00d4ca702fc5651f77ca8ac4a32b363ae5bbd916f0840884a38c8d2e273a61"
+  },
+  "architecture": {
+    "physical_layers": 32,
+    "layer_executions": 56,
+    "mhc_streams": 2,
+    "second_visit_gain": 0.05000000074505806,
+    "conv_kernel": 7,
+    "learned_history_nonzero": 221184,
+    "sliding_window": 256,
+    "window_layers": [
+      7,
+      15,
+      27
+    ],
+    "parameters": 1020252592,
+    "backward_passes": 0
+  },
+  "loaded_parameters": 1021116466,
+  "total": 16,
+  "exact_correct": 0,
+  "content_correct": 0,
+  "byte_accuracy": 0.14814814814814814,
+  "peak_rss_mib": 2631.24609375
+}
