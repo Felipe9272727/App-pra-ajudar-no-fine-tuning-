@@ -1,0 +1,18 @@
+{
+  "id": "mentor_recovery_003",
+  "previous_source_commit": "0fd96cbdf322e3f1a858467318fa64a22e71e9d8",
+  "reason": "Local workspace and execution cells were unavailable after the turn; trial 002 completion was not durably archived.",
+  "previous_unpublished_result": "unknown; never count as completed or improved",
+  "verified_saved_state": {
+    "legacy_rounds_completed": 31,
+    "legacy_accepted": 0,
+    "guided_trial_001": "rejected 2/5, same as parent and random control",
+    "guided_trial_002": "no confirmed end-to-end outcome"
+  },
+  "recovery_action": "Restore exact pinned weights/runtime and replay only the unpublished trial 002 with the existing predeclared 0.012 hypothesis. Do not repeat the 31 saved rounds or observe reserved sets.",
+  "trial_code_sha256": "3115a908681bc80eea2a9237cbe2522b35717b04c119d17d709f6ffb2321f4a3",
+  "parent_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "local_background_execution_guaranteed": false,
+  "completion_rule": "Finish evaluation and verify GitHub outcome commit before sending final response",
+  "prepared_unix": 1793832399.1608436
+}

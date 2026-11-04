@@ -102,3 +102,14 @@
   and unseen validation remain required. Review each result before proposing
   another edit; budget initially four authored hypotheses.
 - Keep old Loop/mHC + Liquid operators, all original checkpoints and logs.
+
+## Local execution durability correction
+
+- Local files/processes and functions.exec cells were lost between turns.
+  An active local process is not a durable background training service.
+- Before ending a turn, finish the current local subtrial and verify its outcome
+  commit on GitHub. Never promise that a local search continues between messages.
+- On resumption inspect durable branch head and records first. Missing local
+  outcomes are unknown, not improvements or completed trials. Recovery replays
+  must be recorded explicitly; do not repeat decisions already durably saved.
+- Current recovery journal: mentor/recovery_003.json, same predeclared trial 002.

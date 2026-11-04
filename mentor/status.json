@@ -1,9 +1,14 @@
 {
-  "status": "trial_002_prepared_free_generation_control",
+  "status": "recovery_prepared_for_trial_002",
   "trial": 2,
-  "source_commit": "af30af1d7a98c0cee508b94e695eecdeaa828fdf",
-  "model_process_active": false,
+  "recovery": "mentor_recovery_003",
+  "controller": "assistant",
+  "legacy_rounds_completed": 31,
+  "legacy_search_paused": true,
+  "guided_trials_completed": 1,
   "checkpoint_promoted": false,
-  "error": "Cached replay diverged; inspect before editing",
-  "updated_unix": 1793825007.4924374
+  "model_process_active": false,
+  "backward_passes": 0,
+  "final_test_evaluated": false,
+  "updated_unix": 1793832399.161126
 }
