@@ -113,6 +113,9 @@ def main():
         'Quatro tarefas repetidas por variante tiveram textos e acertos idênticos. Como a geração é gulosa, '
         'essas repetições verificam estabilidade, sem criar novas amostras independentes. A comparação usa '
         'o mesmo contexto, limite, tokenizer, BF16, kernels eager, cache, seed e quatro threads. '
+        'Os híbridos têm 32 camadas físicas, 56 execuções de camada por passo e aproximadamente 1,02B parâmetros; '
+        'o Qwen original usa suas 24 camadas e aproximadamente 0,87B parâmetros. A comparação com o original '
+        'não equaliza FLOPs ou latência; a comparação pai/candidata mantém a mesma arquitetura e computação. '
         'Casos, gabaritos e implementações de referência ficaram fora das entradas do modelo. '
         'Os hashes e o protocolo foram publicados antes das saídas desta validação.','',
         '## Decisão','',
