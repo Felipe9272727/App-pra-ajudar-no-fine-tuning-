@@ -1,0 +1,17 @@
+{
+  "from_run": 41894078717,
+  "waiting_focus_run_cancelled": 41894167794,
+  "remote_terminal_state_verified": true,
+  "checkpoint_head": "e5cbbc4b26cd2660d4ac50c3fffcc583fe35d468",
+  "rounds_completed": 30,
+  "accepted_rounds": 0,
+  "to_branch": "codex/liquid-sense-local-cpu-20261104",
+  "local_cpu_quota": 8,
+  "local_memory_gib": 8,
+  "gpu": false,
+  "chosen_threads": 4,
+  "thread_choice": "Three unchanged tasks: 4 threads 33.028s, 8 threads 34.163s; identical outputs",
+  "peak_benchmark_rss_gib": 2.5906600952148438,
+  "mutation_method_unchanged": true,
+  "backward_passes": 0
+}
