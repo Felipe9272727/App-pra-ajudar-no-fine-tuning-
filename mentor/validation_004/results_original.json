@@ -1,6 +1,6 @@
 {
   "variant": "original",
-  "status": "running",
+  "status": "complete",
   "rows": [
     {
       "id": "v4_interval_union",
@@ -793,6 +793,48 @@
       "line": 31,
       "code": "def solve(path):\n    if not path or not path.strip():\n        return \"/\"\n    \n    parts = path.split(\"/\")\n    result = []\n    \n    for part in parts:\n        if not part:\n            continue\n        if part.startswith(\".\"):\n            continue\n        if part == \"..\":\n            if result:\n                result.pop()\n        else:\n            result.append(part)\n    \n    if not result:\n        return \"/\"\n    \n    return \"/\" + \"/\".join(result)\n    \nsolve(\"/\")\nsolve(\"\")\nsolve(\"a/b\")\nsolve(\"a/b/c\")\nsolve(\"a/b/c/d\")\nsolve(\"a/b/c/d/e\")\nsolve(\"a/b/c/d/e/f\")\nsolve(\"a/b/c",
       "identical": true
+    },
+    {
+      "id": "v4_edit_distance",
+      "output": "def solve(a, b):\n    if len(a) == 0 or len(b) == 0:\n        return 0\n    if a == b:\n        return 0\n    m, n = len(a), len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i - 1] == b[j - 1]:",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 18.94973138699993,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 14,
+      "code": "def solve(a, b):\n    if len(a) == 0 or len(b) == 0:\n        return 0\n    if a == b:\n        return 0\n    m, n = len(a), len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i - 1] == b[j - 1]:",
+      "identical": true
+    },
+    {
+      "id": "v4_numeric_motif",
+      "output": "def solve(xs, motif):\n    count = 0\n    if not motif:\n        return count\n    if motif == xs:\n        count += 1\n    else:\n        i = 0\n        while i < len(xs) - len(motif):\n            if xs[i:i+len(motif)] == motif:\n                count += 1\n                i += len(motif)\n            else:\n                break\n    return count",
+      "new_tokens": 100,
+      "hit_limit": false,
+      "seconds": 11.701027676999956,
+      "thinking": false,
+      "passed": 4,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(xs, motif):\n    count = 0\n    if not motif:\n        return count\n    if motif == xs:\n        count += 1\n    else:\n        i = 0\n        while i < len(xs) - len(motif):\n            if xs[i:i+len(motif)] == motif:\n                count += 1\n                i += len(motif)\n            else:\n                break\n    return count",
+      "identical": true
     }
   ],
   "frozen_sha256": "bffac8f483863225e85774320a5301b26b70db9ab096f78de287d51fdbffdb46",
@@ -806,5 +848,43 @@
     "torch": "2.15.0+cpu",
     "threads": 4,
     "cpu_quota": "200000 100000"
-  }
+  },
+  "anchor": {
+    "mean_nll": 3.040736138820648,
+    "rows": [
+      {
+        "nll": 3.3119993209838867,
+        "tokens": 8
+      },
+      {
+        "nll": 2.786017656326294,
+        "tokens": 8
+      },
+      {
+        "nll": 2.750882387161255,
+        "tokens": 8
+      },
+      {
+        "nll": 3.8665127754211426,
+        "tokens": 8
+      },
+      {
+        "nll": 2.361985683441162,
+        "tokens": 8
+      },
+      {
+        "nll": 2.5268776416778564,
+        "tokens": 8
+      },
+      {
+        "nll": 2.9549367427825928,
+        "tokens": 8
+      },
+      {
+        "nll": 3.766676902770996,
+        "tokens": 8
+      }
+    ]
+  },
+  "completed_unix": 1793835956.5217228
 }
