@@ -27,9 +27,10 @@ e.provenance=provenance
 def save(report,stage):
     report.update(stage=stage,updated_unix=time.time())
     e.cr.atomic_json(HERE/'trial_002.json',report)
+    terminal=stage in ['rejected_on_screen','rejected_full_evaluation','eligible_for_fresh_validation','no_token_effect_within_budget']
     e.cr.atomic_json(HERE/'status.json',{'status':stage,'trial':2,'controller':'assistant',
-      'legacy_search_paused':True,'legacy_rounds_completed':31,'guided_trials_completed':1,
-      'model_process_active':stage not in ['rejected_on_screen','rejected_full_evaluation','eligible_for_fresh_validation','no_token_effect_within_budget'],
+      'legacy_search_paused':True,'legacy_rounds_completed':31,'guided_trials_completed':2 if terminal else 1,
+      'model_process_active':not terminal,
       'checkpoint_promoted':False,'backward_passes':0,'final_test_evaluated':False,'updated_unix':time.time()})
     print('MENTOR_002',stage,flush=True)
 
@@ -120,5 +121,5 @@ def main():
 if __name__=='__main__':
     try:main()
     except Exception as exc:
-        e.cr.atomic_json(HERE/'status.json',{'status':'interrupted','trial':2,'model_process_active':False,'checkpoint_promoted':False,'error':str(exc),'updated_unix':time.time()})
+        e.cr.atomic_json(HERE/'status.json',{'status':'interrupted','trial':2,'source_commit':os.environ.get('MENTOR_SOURCE_COMMIT'),'model_process_active':False,'checkpoint_promoted':False,'error':str(exc),'updated_unix':time.time()})
         raise
