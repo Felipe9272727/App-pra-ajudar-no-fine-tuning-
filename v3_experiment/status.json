@@ -1,11 +1,11 @@
 {
-  "status": "collecting_hybrid_features",
+  "status": "development_generation",
   "experiment": true,
   "backward_passes": 0,
-  "updated_unix": 1793756321.9513965,
+  "updated_unix": 1793756989.0463634,
   "codec_sha256": "61233deea9dd915c99c112498c41664cf9a77cb99c5d7c12861f44309737fd0b",
   "model_process_active": true,
-  "train_examples_completed": 51,
+  "train_examples_completed": 128,
   "parent_weight_write": {
     "changed_bf16_values": 2488648,
     "delta_frobenius": 0.15513300895690918,
@@ -44,5 +44,6 @@
     ],
     "parameters": 1020252592,
     "backward_passes": 0
-  }
+  },
+  "evaluating": "head_02"
 }

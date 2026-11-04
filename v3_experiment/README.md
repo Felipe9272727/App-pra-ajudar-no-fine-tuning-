@@ -38,7 +38,9 @@ de resposta. Não é um assistente geral NCM nem uma promessa de ganhos de
 - 128 exemplos supervisionados: aritmética, saída de Python e operações de texto.
 - 4096 sequências sintéticas adicionais para aprender o codec, sem perguntas de teste.
 - 16 perguntas de desenvolvimento para escolher entre três regularizações fixas.
-- 48 perguntas novas de teste, incluindo casos com operandos e letras fora da distribuição.
+- 48 candidatas a teste, incluindo operandos e letras fora da distribuição.
+  Uma repetição exata de pergunta de piloto anterior foi identificada por auditoria
+  antes da avaliação e excluída igualmente das três variantes: **47 perguntas novas**.
 - Três variantes: Qwen original, híbrido pai da candidata 2, V3 com NCM adaptado.
 
 Perguntas e respostas são fixadas antes de testar. Gabaritos são calculados

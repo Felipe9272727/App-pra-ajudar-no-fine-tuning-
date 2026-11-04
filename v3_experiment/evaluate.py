@@ -81,6 +81,8 @@ def develop():
         'parent_patch':'lab_rsi/candidate_02.pt','parent_patch_sha256':file_hash(PARENT_PATCH),
         'liquid_patch_sha256':file_hash(ROOT/'checkpoints/liquid_patch.pt'),
         'data_sha256':DATA_HASH,'selected_by':'development exact answer accuracy then byte accuracy',
+        'data_audit_sha256':file_hash(HERE/'data_audit.json'),
+        'final_question_ids':[r['id'] for r in fresh_heldout()],
         'uses_heldout_for_selection':False,'frozen_unix':time.time(),
         'experiment_scope':DATA['protocol']['NCM_scope'],'backward_passes':0,
         'sensenova_and_liquid_required':True}
@@ -93,6 +95,8 @@ def develop():
 def heldout(variant):
     frozen=json.loads((HERE/'frozen.json').read_text())
     assert not frozen['uses_heldout_for_selection'] and frozen['data_sha256']==DATA_HASH
+    assert frozen['data_audit_sha256']==file_hash(HERE/'data_audit.json')
+    rows=fresh_heldout();assert [r['id'] for r in rows]==frozen['final_question_ids']
     path=HERE/f'heldout_{variant}.json'
     if path.exists() and json.loads(path.read_text())['status']=='complete':
         print('ALREADY_COMPLETE',variant,flush=True);return
@@ -103,7 +107,7 @@ def heldout(variant):
     if variant=='v3_ncm':
         checkpoint=ROOT/frozen['checkpoint'];assert file_hash(checkpoint)==frozen['checkpoint_sha256']
         exp=make_experiment(model,tok,checkpoint);sha=file_hash(checkpoint)
-    result=evaluate_rows(DATA['heldout'],variant,path,model,tok,exp,sha)
+    result=evaluate_rows(rows,variant,path,model,tok,exp,sha)
     status(status='between_heldout_variants',evaluating=None,model_process_active=False)
     print('HELDOUT_COMPLETE',variant,result['exact_correct'],result['content_correct'],result['total'],flush=True)
 

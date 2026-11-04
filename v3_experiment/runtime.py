@@ -25,6 +25,15 @@ DATA_HASH=file_hash(HERE/'data.json')
 PARENT_PATCH=ROOT/'lab_rsi/candidate_02.pt'
 
 
+def fresh_heldout():
+    audit=json.loads((HERE/'data_audit.json').read_text())
+    assert audit['data_sha256']==DATA_HASH and not audit['heldout_outputs_observed_before_audit']
+    excluded=set(audit['excluded_ids'])
+    rows=[r for r in DATA['heldout'] if r['id'] not in excluded]
+    assert len(rows)==audit['primary_fresh_questions']
+    return rows
+
+
 def status(**kwargs):
     p=HERE/'status.json';state=json.loads(p.read_text()) if p.exists() else {}
     state.update(kwargs,updated_unix=time.time());atomic_json(p,state)

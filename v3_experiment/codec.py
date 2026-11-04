@@ -25,9 +25,9 @@ def bytes_tensor(text):
 class ByteConceptCodec(nn.Module):
     def __init__(self):
         super().__init__()
-        self.register_buffer('mean',torch.zeros(257))
-        self.register_buffer('basis',torch.zeros(257,DIM))
-        self.register_buffer('decoder',torch.zeros(DIM+1,257))
+        self.mean=nn.Parameter(torch.zeros(257),requires_grad=False)
+        self.basis=nn.Parameter(torch.zeros(257,DIM),requires_grad=False)
+        self.decoder=nn.Parameter(torch.zeros(DIM+1,257),requires_grad=False)
         self.vq=MultiscaleResidualVectorQuantizer(SIZES,DIM,
             SimpleNamespace(use_manual_levels=True,manual_levels=LEVELS),
             quant_resi={'enabled':False},pre_quant_norm_type='none')

@@ -9,14 +9,19 @@ from runtime import *
 from codec import bytes_tensor
 
 
+def save_torch(path,data):
+    temporary=path.with_suffix(path.suffix+'.tmp')
+    torch.save(data,temporary);temporary.replace(path)
+
+
 @torch.inference_mode()
 def fit_codec():
     if (HERE/'codec.pt').exists():print('CODEC_ALREADY_SAVED',flush=True);return
     status(status='training_codec',experiment=True,backward_passes=0)
     codec=ByteConceptCodec()
     report=codec.fit([r['answer'] for r in DATA['train']])
-    torch.save({'state':codec.state_dict(),'data_sha256':DATA_HASH,
-                'scope':'linear byte autoencoder + official NCM RVQ'},HERE/'codec.pt')
+    save_torch(HERE/'codec.pt',{'state':codec.state_dict(),'data_sha256':DATA_HASH,
+                'scope':'linear byte autoencoder + official NCM RVQ'})
     atomic_json(HERE/'codec_fit.json',report)
     status(status='codec_checkpointed',codec_sha256=file_hash(HERE/'codec.pt'))
     print('CODEC_FIT',report,flush=True)
@@ -30,7 +35,7 @@ def collect():
     status(status='collecting_hybrid_features',model_process_active=True)
     model,write=parent_model();tok=tokenizer();codec=load_codec(HERE/'codec.pt')
     embeds=byte_embeddings(model,tok)
-    torch.save({'bytes':embeds,'parent_patch_sha256':file_hash(PARENT_PATCH)},HERE/'query_embeddings.pt')
+    save_torch(HERE/'query_embeddings.pt',{'bytes':embeds,'parent_patch_sha256':file_hash(PARENT_PATCH)})
     exp=NCMExperiment(model,tok,codec,embeds)
     for j,row in enumerate(DATA['train']):
         output=folder/f'train_{j:03d}.pt'
@@ -51,8 +56,8 @@ def collect():
             random_codes=torch.randint(SIZES[i],used.shape,generator=gen)
             used[noise]=random_codes[noise]
             z=codec.update(z,used,i)
-        torch.save({'id':row['id'],'x':features,'y':targets,'data_sha256':DATA_HASH,
-                    'seed_for_this_stream':320011+j},output)
+        save_torch(output,{'id':row['id'],'x':features,'y':targets,'data_sha256':DATA_HASH,
+                    'seed_for_this_stream':320011+j})
         status(status='collecting_hybrid_features',train_examples_completed=j+1,
                parent_weight_write=write,architecture=architecture_check(model))
         if (j+1)%4==0:print('FEATURES',j+1,len(DATA['train']),flush=True)
@@ -85,9 +90,9 @@ def fit_heads():
     archive=[]
     for n,lam in enumerate(DATA['protocol']['ridge_candidates']):
         key=f'head_{n:02d}';path=HERE/f'{key}.pt'
-        torch.save({'heads':all_heads[str(lam)],'ridge':lam,'data_sha256':DATA_HASH,
+        save_torch(path,{'heads':all_heads[str(lam)],'ridge':lam,'data_sha256':DATA_HASH,
             'codec_sha256':file_hash(HERE/'codec.pt'),'parent_patch_sha256':file_hash(PARENT_PATCH),
-            'scope':'EXPERIMENTO: NCM-inspired short answers with active SenseNova and Liquid'},path)
+            'scope':'EXPERIMENTO: NCM-inspired short answers with active SenseNova and Liquid'})
         archive.append({'id':key,'ridge':lam,'checkpoint':str(path.relative_to(ROOT)),
             'sha256':file_hash(path),'status':'awaiting_development'})
     atomic_json(HERE/'head_fit.json',{'backward_passes':0,'method':'closed-form ridge on frozen hybrid features',

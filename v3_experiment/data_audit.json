@@ -1,0 +1,11 @@
+{
+  "excluded_ids": [
+    "heldout_multiplication_03"
+  ],
+  "exclusion_rule": "Exact question previously appeared in earlier pilot data; exclude before observing any V3 test output",
+  "candidate_questions": 48,
+  "primary_fresh_questions": 47,
+  "heldout_outputs_observed_before_audit": false,
+  "train_and_development_unchanged": true,
+  "data_sha256": "35c2c27866849981cb8420c89a06446236a713895a147ef881b95abd7d5d09c9"
+}

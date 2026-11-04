@@ -1,0 +1,116 @@
+{
+  "backward_passes": 0,
+  "method": "closed-form ridge on frozen hybrid features",
+  "conditioning_corruption_probability": 0.1,
+  "rows": [
+    {
+      "level": 0,
+      "positions": 1,
+      "ridge": 0.1,
+      "feature_rows": 128,
+      "learned_weights": 135936,
+      "nonzero_weights": 131066,
+      "train_residual_mse": 4.2149200453422964e-05
+    },
+    {
+      "level": 0,
+      "positions": 1,
+      "ridge": 1.0,
+      "feature_rows": 128,
+      "learned_weights": 135936,
+      "nonzero_weights": 131033,
+      "train_residual_mse": 9.911925735650584e-05
+    },
+    {
+      "level": 0,
+      "positions": 1,
+      "ridge": 10.0,
+      "feature_rows": 128,
+      "learned_weights": 135936,
+      "nonzero_weights": 130950,
+      "train_residual_mse": 0.00018534444097895175
+    },
+    {
+      "level": 1,
+      "positions": 2,
+      "ridge": 0.1,
+      "feature_rows": 256,
+      "learned_weights": 135936,
+      "nonzero_weights": 135293,
+      "train_residual_mse": 0.00024587090592831373
+    },
+    {
+      "level": 1,
+      "positions": 2,
+      "ridge": 1.0,
+      "feature_rows": 256,
+      "learned_weights": 135936,
+      "nonzero_weights": 135294,
+      "train_residual_mse": 0.0004782197647728026
+    },
+    {
+      "level": 1,
+      "positions": 2,
+      "ridge": 10.0,
+      "feature_rows": 256,
+      "learned_weights": 135936,
+      "nonzero_weights": 135259,
+      "train_residual_mse": 0.0009329408640041947
+    },
+    {
+      "level": 2,
+      "positions": 4,
+      "ridge": 0.1,
+      "feature_rows": 512,
+      "learned_weights": 135936,
+      "nonzero_weights": 135422,
+      "train_residual_mse": 0.0007730053621344268
+    },
+    {
+      "level": 2,
+      "positions": 4,
+      "ridge": 1.0,
+      "feature_rows": 512,
+      "learned_weights": 135936,
+      "nonzero_weights": 135418,
+      "train_residual_mse": 0.0011180887231603265
+    },
+    {
+      "level": 2,
+      "positions": 4,
+      "ridge": 10.0,
+      "feature_rows": 512,
+      "learned_weights": 135936,
+      "nonzero_weights": 135408,
+      "train_residual_mse": 0.0014457814395427704
+    },
+    {
+      "level": 3,
+      "positions": 8,
+      "ridge": 0.1,
+      "feature_rows": 1024,
+      "learned_weights": 135936,
+      "nonzero_weights": 135680,
+      "train_residual_mse": 0.0020086299628019333
+    },
+    {
+      "level": 3,
+      "positions": 8,
+      "ridge": 1.0,
+      "feature_rows": 1024,
+      "learned_weights": 135936,
+      "nonzero_weights": 135680,
+      "train_residual_mse": 0.0026075870264321566
+    },
+    {
+      "level": 3,
+      "positions": 8,
+      "ridge": 10.0,
+      "feature_rows": 1024,
+      "learned_weights": 135936,
+      "nonzero_weights": 135669,
+      "train_residual_mse": 0.00305385934188962
+    }
+  ],
+  "training_examples": 128
+}
