@@ -35,11 +35,16 @@ def save(report,stage):
 
 @torch.inference_mode()
 def cached_logits(model,prompt,prefix):
-    e.call('mentor002_cached_prefill',lambda:None)
-    result=model(input_ids=prompt,use_cache=True,logits_to_keep=1)
-    for token in prefix:
-        result=model(input_ids=torch.tensor([[token]],dtype=torch.long),past_key_values=result.past_key_values,use_cache=True,logits_to_keep=1)
-    return result.logits[0,-1].float()
+    # Use the identical GenerationMixin preparation/cache/position path. Force
+    # only the student's already-generated prefix; the target remains free.
+    length=prompt.shape[1];all_ids=list(range(model.get_output_embeddings().weight.shape[0]))
+    def allowed(batch_id,current):
+        step=current.shape[0]-length
+        return [prefix[step]] if step<len(prefix) else all_ids
+    result=e.call('mentor002_same_generation_path',model.generate,input_ids=prompt,
+      max_new_tokens=len(prefix)+1,use_cache=True,do_sample=False,pad_token_id=model.config.text_config.eos_token_id,
+      return_dict_in_generate=True,output_scores=True,prefix_allowed_tokens_fn=allowed)
+    return result.scores[-1][0].float()
 
 @torch.inference_mode()
 def main():
@@ -74,6 +79,7 @@ def main():
     initial=cached_logits(model,prompt,ids[:target]);report['exact_cached_before']=token_stats(initial,bad,tok)
     replay_error=abs(report['exact_cached_before']['bad_token_log_odds']-report['generation_before']['bad_token_log_odds'])
     report['cached_replay_log_odds_error']=replay_error
+    save(report,'checked_same_generation_replay')
     assert report['exact_cached_before']['top'][0]['id']==bad and replay_error<.5,'Cached replay diverged; inspect before editing'
     old=torch.load(HERE/'directions_001.pt',weights_only=True);norm=parent['dense_weight'].float().norm()
     old_proposal=copy.deepcopy(parent)

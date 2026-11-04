@@ -13,5 +13,6 @@
   ],
   "selection_rule": "Smallest dose that removes the undesirable token from first place under exact cached replay of the same student prefix, before code-correctness scoring.",
   "next_tests": "Verify cached replay against real generation scores. Compare fresh parent, matched-random and candidate generation; reject ties/case losses. If screen passes, full paired/historical execution, controls and NLL gates. Never promote from logits alone.",
-  "reserved_data_used": false
+  "reserved_data_used": false,
+  "replay_preparation": "Use model.generate with only the already-generated student prefix forced, leaving the target unrestricted. Preserve the same generation cache/mask/position preparation; assert parent target margin matches the original generation before any edit."
 }
