@@ -5,14 +5,10 @@
   "hypothesis": "The original diagnostic captured full-prefix activations, not the cached state actually used during decoding. Original cached bad-token log-odds 4.709 versus full-prefix 2.303 demonstrate a margin mismatch.",
   "method": "Capture final existing MLP inputs during actual student decoding. Residualize target state against all preceding student-token states. Direct negative-only rank-one overwrite; preserve both architecture families.",
   "correct_solution_or_positive_target_provided": false,
-  "dose_grid": [
-    0.003,
-    0.006,
-    0.012,
-    0.02
-  ],
-  "selection_rule": "Smallest dose that removes the undesirable token from first place under exact cached replay of the same student prefix, before code-correctness scoring.",
-  "next_tests": "Verify cached replay against real generation scores. Compare fresh parent, matched-random and candidate generation; reject ties/case losses. If screen passes, full paired/historical execution, controls and NLL gates. Never promote from logits alone.",
+  "dose_grid": null,
+  "selection_rule": "Fixed 0.012 norm before fresh-code scoring, using actual cached-generation MLP states. The original 0.003 fixed-prefix probe was too weak to change observed free decoding; actual generation token margin was larger. Preserve all preceding student-token states. Accept/reject only by fresh code execution and full paired/historical quality gates.",
+  "next_tests": "Repeat parent free generation and verify its output matches the activation-capture run. Compare matched random and candidate code. If screen passes, full paired and historical execution/control/NLL gates. Ignore inconsistent fixed-prefix instruments.",
   "reserved_data_used": false,
-  "replay_preparation": "Use model.generate with only the already-generated student prefix forced, leaving the target unrestricted. Preserve the same generation cache/mask/position preparation; assert parent target margin matches the original generation before any edit."
+  "replay_preparation": "Fixed-prefix replay failed consistency and is excluded from selection. Repeat the unchanged parent with the actual free-generation API before evaluating the edit.",
+  "chosen_fraction": 0.012
 }

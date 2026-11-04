@@ -1,6 +1,6 @@
 """Hypothesis 002: edit the actual cached decoding state, preserve prior tokens.
 
-Choose dose by a predeclared negative-only token rule, then test fresh code.
+Use a predeclared norm dose and test fresh, unconstrained code generation.
 No correct replacement token or reference solution enters generation.
 """
 import copy,json,os,sys,time
@@ -35,19 +35,6 @@ def save(report,stage):
     print('MENTOR_002',stage,flush=True)
 
 @torch.inference_mode()
-def cached_logits(model,prompt,prefix):
-    # Use the identical GenerationMixin preparation/cache/position path. Force
-    # only the student's already-generated prefix; the target remains free.
-    length=prompt.shape[1];all_ids=list(range(model.get_output_embeddings().weight.shape[0]))
-    def allowed(batch_id,current):
-        step=current.shape[0]-length
-        return [prefix[step]] if step<len(prefix) else all_ids
-    result=e.call('mentor002_same_generation_path',model.generate,input_ids=prompt,
-      max_new_tokens=len(prefix)+1,use_cache=True,do_sample=False,pad_token_id=model.config.text_config.eos_token_id,
-      return_dict_in_generate=True,output_scores=True,prefix_allowed_tokens_fn=allowed)
-    return result.scores[-1][0].float()
-
-@torch.inference_mode()
 def main():
     model,_=e.call('mentor002_load',e.cr.load,'baseline',budget=300);tok=e.cr.tokenizer()
     parent=e.read_checkpoint('best.pt');e.apply(model,parent)
@@ -75,31 +62,21 @@ def main():
       'checkpoint_promoted':False,'correct_replacement_token_or_solution_supplied':False,
       'parent_output':text,'parent_token_ids':ids,'target_index':target,'bad_token_id':bad,'bad_piece':tok.decode([bad]),
       'preserved_prior_token_count':target,'preservation_projection_ratios':(preserve@direction/preserve.norm(dim=1)).tolist(),
-      'generation_before':token_stats(generation.scores[target][0].float(),bad,tok),'dose_probes':[]}
+      'generation_before':token_stats(generation.scores[target][0].float(),bad,tok),'instrumentation_policy':'fixed-prefix replay was inconsistent; selection uses free generation with a parent-output repeat check'}
     save(report,'captured_actual_decoding_activations')
-    initial=cached_logits(model,prompt,ids[:target]);report['exact_cached_before']=token_stats(initial,bad,tok)
-    replay_error=abs(report['exact_cached_before']['bad_token_log_odds']-report['generation_before']['bad_token_log_odds'])
-    report['cached_replay_log_odds_error']=replay_error
-    save(report,'checked_same_generation_replay')
-    assert report['exact_cached_before']['top'][0]['id']==bad and replay_error<.5,'Cached replay diverged; inspect before editing'
-    old=torch.load(HERE/'directions_001.pt',weights_only=True);norm=parent['dense_weight'].float().norm()
-    old_proposal=copy.deepcopy(parent)
-    old_proposal['dense_weight']=(parent['dense_weight'].float()-.003*norm*torch.outer(old['bad_output_direction'],old['input_direction'])).to(parent['dense_weight'].dtype)
-    e.apply(model,old_proposal);report['previous_edit_exact_cached']=token_stats(cached_logits(model,prompt,ids[:target]),bad,tok)
-    candidate=None
-    for fraction in [.003,.006,.012,.02]:
-        proposal=copy.deepcopy(parent)
-        proposal['dense_weight']=(parent['dense_weight'].float()-fraction*norm*torch.outer(output,direction)).to(parent['dense_weight'].dtype)
-        e.apply(model,proposal);stats=token_stats(cached_logits(model,prompt,ids[:target]),bad,tok)
-        report['dose_probes'].append({'fraction':fraction,'actual_relative_norm':float((proposal['dense_weight'].float()-parent['dense_weight'].float()).norm()/norm),
-          'changed_values':int((proposal['dense_weight']!=parent['dense_weight']).sum()),'cached_score':stats})
-        save(report,'probing_cached_dose')
-        if stats['top'][0]['id']!=bad:
-            candidate=proposal;report['chosen_fraction']=fraction;break
-    e.apply(model,parent)
-    if candidate is None:
-        save(report,'no_token_effect_within_budget');return
+    # The prior fixed-prefix instrument failed its own replay check. Do not
+    # use it to select or credit an edit; use repeated free generation instead.
+    norm=parent['dense_weight'].float().norm()
+    fraction=.012
+    candidate=copy.deepcopy(parent)
+    candidate['dense_weight']=(parent['dense_weight'].float()-fraction*norm*torch.outer(output,direction)).to(parent['dense_weight'].dtype)
+    report.update(chosen_fraction=fraction,selection_rule='predeclared 0.012 norm dose; judge only fresh free generation',
+      actual_relative_norm=float((candidate['dense_weight'].float()-parent['dense_weight'].float()).norm()/norm),
+      changed_values=int((candidate['dense_weight']!=parent['dense_weight']).sum()))
+    save(report,'candidate_constructed_from_actual_decoding_states')
     e.apply(model,parent);base=e.coding(model,tok,[task]);report['parent_screen']=base
+    assert base[0]['output']==text,'Parent free-generation changed; stop before crediting an edit'
+    old=torch.load(HERE/'directions_001.pt',weights_only=True)
     random=copy.deepcopy(parent)
     random['dense_weight']=(parent['dense_weight'].float()-report['chosen_fraction']*norm*torch.outer(old['random_output_direction'],direction)).to(parent['dense_weight'].dtype)
     e.apply(model,random);report['matched_random_screen']=e.coding(model,tok,[task])

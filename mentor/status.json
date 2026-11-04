@@ -1,5 +1,5 @@
 {
-  "status": "interrupted",
+  "status": "trial_002_prepared_free_generation_control",
   "trial": 2,
   "source_commit": "af30af1d7a98c0cee508b94e695eecdeaa828fdf",
   "model_process_active": false,
