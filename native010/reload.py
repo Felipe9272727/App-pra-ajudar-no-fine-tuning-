@@ -20,6 +20,9 @@ def load_candidate(variant):
  for path,digest in frozen['files'].items():assert e.cr.file_hash(ROOT/path)==digest,path
  for name,digest in manifest['overlay_sha256'].items():assert e.cr.file_hash(HERE/'checkpoints'/name)==digest,name
  model,tok,parent,meta=load()
+ audit={r['name']:r['sha256_values'] for r in map(json.loads,(HERE/'parameters.jsonl').read_text().splitlines())}
+ complete_parent={n:tensor_hash(p) for n,p in model.named_parameters()}
+ assert complete_parent==audit,'Full selected-parent parameter mismatch'
  actual={n:tensor_hash(p) for n,p in modified_parameters(model,variant).items()}
  assert actual==manifest['parent_tensor_hashes'],'Loaded model is not the frozen parent'
  arch=build(model,variant,HERE);verify_bundle(model,variant,HERE)

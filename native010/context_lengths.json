@@ -1,0 +1,16 @@
+{
+  "thinking": false,
+  "prompt_token_lengths": {
+    "prefix_sums": 58,
+    "rotate_right": 61,
+    "longest_run": 62,
+    "overlap_count": 59,
+    "sum_abs": 59,
+    "palindrome": 56,
+    "binary_search": 61
+  },
+  "max_new_tokens": 160,
+  "max_prompt_plus_generation_tokens": 222,
+  "local_window": 256,
+  "no_window_truncation_on_seven_task_screen": true
+}

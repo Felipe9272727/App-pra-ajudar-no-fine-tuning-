@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "complete",
   "variant": "routed",
   "model": {
     "variant": "baseline",
@@ -83,6 +83,145 @@
         false,
         false
       ]
+    },
+    {
+      "id": "rotate_right",
+      "output": "```python\ndef solve(xs, k):\n    if not xs:\n        return []\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    if not k:\n        return []\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return [x * k % len(xs)]\n```\n\n```python",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 58.97787578999851,
+      "thinking": false,
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "NameError",
+      "error_types": [
+        "NameError"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs, k):\n    return [x * k % len(xs)]"
+    },
+    {
+      "id": "longest_run",
+      "output": "```python\ndef solve(xs):\n    if not xs:\n        return 0\n    return 0\n```\n\n```python\ndef solve(xs):\n    if not xs:\n        return 0\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\n",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 57.980209191999165,
+      "thinking": false,
+      "passed": 1,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    return 0"
+    },
+    {
+      "id": "overlap_count",
+      "output": "```python\ndef solve(s, sub):\n    count = 0\n    for i in range(len(s) - 1):\n        if i < len(sub)\n            if sub in s:\n                count += 1\n    return count\n```\n\n```python\ndef solve(s, sub):\n    count = 0\n    for i in range(len(s) - 1):\n        if i < len(sub):\n            if sub in s:\n                count += 1\n    return count\n```\n\n```python\ndef solve(s, sub):\n    count = 0\n    for i in range(len(s) - 1):\n        if i < len(sub):\n            if sub in s:\n                count += ",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 66.58607672599464,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "code": "def solve(s, sub):\n    count = 0\n    for i in range(len(s) - 1):\n        if i < len(sub):\n            if sub in s:\n                count += 1\n    return count"
+    },
+    {
+      "id": "sum_abs",
+      "output": "```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 55.844422291003866,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(xs):\n    return 0"
+    },
+    {
+      "id": "palindrome",
+      "output": "```python\ndef solve(s):\n    if s == s:\n        return True\n    else:\n        return False\n```\n\n```python\ndef solve(s):\n    if s == s:\n        return True\n    else:\n        return False\n```\n\n```python\ndef solve(s):\n    if s == s:\n        return True\n    else:\n        return False\n```\n\n```python\ndef solve(s):\n    if s == s:\n        return True\n    else:\n        return False\n```\n\n```python\ndef solve(s):\n    if s == s:\n        return True\n    else:\n        return False\n```\n\n```python\ndef solve(s):\n    if s == s:\n",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 57.04041912499815,
+      "thinking": false,
+      "passed": 4,
+      "total": 6,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "code": "def solve(s):\n    if s == s:\n        return True\n    else:\n        return False"
+    },
+    {
+      "id": "binary_search",
+      "output": "```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\n",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 60.48120727700007,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "code": "def solve(xs, target):\n    if target is None:\n        return -1\n    return -1"
     }
   ],
   "protocol": {
@@ -93,5 +232,8 @@
     "no_answers_in_input": true,
     "data_sha256": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d"
   },
-  "controls": []
+  "controls": [],
+  "tasks_passed": 0,
+  "cases_passed": 11,
+  "total_cases": 36
 }
