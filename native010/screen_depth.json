@@ -1,0 +1,143 @@
+{
+  "status": "running",
+  "variant": "depth",
+  "model": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "physical_layers": 32,
+      "executions": 56,
+      "passes": 2,
+      "streams": 2,
+      "neutral_layers": [],
+      "visit_gains": [
+        1.0,
+        1.0
+      ],
+      "projection_factors": {
+        "4": 0.25,
+        "5": 0.25,
+        "6": 0.25,
+        "7": 0.25,
+        "8": 0.25,
+        "9": 0.25,
+        "10": 0.25,
+        "11": 0.25,
+        "12": 0.5,
+        "13": 0.5,
+        "14": 0.5,
+        "15": 0.5,
+        "16": 0.25,
+        "17": 0.25,
+        "18": 0.25,
+        "19": 0.25,
+        "20": 0.25,
+        "21": 0.25,
+        "22": 0.25,
+        "23": 0.25,
+        "24": 0.5,
+        "25": 0.5,
+        "26": 0.5,
+        "27": 0.5
+      },
+      "local_windows": {
+        "3": 0,
+        "7": 256,
+        "11": 256,
+        "15": 256,
+        "19": 0,
+        "23": 0,
+        "27": 256,
+        "31": 0
+      },
+      "input_dependent_routers": 0,
+      "history_nonzero": 331776,
+      "parameters": 1020252592,
+      "backward_passes": 0,
+      "lineage": "Qwen3.5 widths and DeltaNet; Loop/mHC plus compatible Liquid-inspired kernels; not full LFM3"
+    }
+  },
+  "rows": [
+    {
+      "id": "prefix_sums",
+      "output": "```python\ndef solve(xs):\n    return [0] + [0] * len(xs)\n```\n\n```python\ndef solve(xs):\n    return [0] + [0] * len(xs)\n```\n\n```python\ndef solve(xs):\n    return [0] + [0] * len(xs)\n```\n\n```python\ndef solve(xs):\n    return [0] + [0] * len(xs)\n```\n\n```python\ndef solve(xs):\n    return [0] + [0] * len(xs)\n```\n\n```python\ndef solve(xs):\n    return [0] + [0] * len(xs)\n```\n\n```python\ndef solve(xs):\n    return [0] + [0",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 52.34447661299782,
+      "thinking": false,
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    return [0] + [0] * len(xs)"
+    },
+    {
+      "id": "rotate_right",
+      "output": "```python\ndef solve(xs, k):\n    if not xs:\n        return []\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return [x * k % len(xs)]\n```\n\n```python\ndef solve(xs, k):\n    return",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 59.21961749700131,
+      "thinking": false,
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "NameError",
+      "error_types": [
+        "NameError"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs, k):\n    return [x * k % len(xs)]"
+    },
+    {
+      "id": "longest_run",
+      "output": "```python\ndef solve(xs):\n    if not xs:\n        return 0\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```\n\n```python\n```",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 53.68747002999953,
+      "thinking": false,
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "ContractError",
+      "detail": "FunctionDefinitionsOnly",
+      "code": "",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "protocol": {
+    "max_new_tokens": 160,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "no_answers_in_input": true,
+    "data_sha256": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d"
+  },
+  "controls": []
+}
