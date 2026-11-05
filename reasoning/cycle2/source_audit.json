@@ -17,5 +17,12 @@
     "six_saved_decodes_ended_at_config_eos": true,
     "premature_im_end_seen_in_these_six_traces": false,
     "conclusion": "No EOS mismatch failure established; do not change historical stopping behavior"
+  },
+  "repeated_instruction_audit": {
+    "phrase": "Think silently if needed.",
+    "present_in_rendered_input": false,
+    "rendered_prompt_sha256": "8aa8632206995cfab80fd1384427ec40ef7449f9417d9e97de01839634d5d815",
+    "system_role_in_rendered_input": false,
+    "generation_excerpt_location": "thinking1024_liquid.json rows gsm8k:914 output"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "status": "original_development_comparison",
+  "status": "budget1024_liquid",
   "model_process_active": true,
   "checkpoint_promoted": false,
   "hypothesis": 6,
   "previous_public_results_observed": true,
   "backward_passes": 0,
-  "updated_unix": 1793846669.997822,
+  "updated_unix": 1793847015.0535634,
   "hypotheses_this_cycle": [
     6,
     7
