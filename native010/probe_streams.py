@@ -8,6 +8,7 @@ from native010.native_runtime import build,verify_bundle
 
 @torch.inference_mode()
 def main():
+ status=json.loads((HERE/'status.json').read_text());status.update(status='mechanism_probe',model_process_active=True);e.cr.atomic_json(HERE/'status.json',status)
  model,tok,parent,meta=load();build(model,'routed',HERE);verify_bundle(model,'routed',HERE)
  stats={};handles=[]
  for i,l in enumerate(model.model.language_model.layers[4:28],4):
@@ -29,5 +30,6 @@ def main():
   'routers_with_observed_conditional_post_gates':sum(s['maximum_post_difference']>0 for s in stats.values()),
   'maximum_stream_difference':max(s['maximum_stream_difference'] for s in stats.values()),
   'used_to_select_weights':False}
+ status.update(status='mechanism_probe_complete',model_process_active=False);e.cr.atomic_json(HERE/'status.json',status)
  e.cr.atomic_json(HERE/'stream_probe.json',out);print(json.dumps({k:v for k,v in out.items() if k!='per_router'}))
 if __name__=='__main__':main()

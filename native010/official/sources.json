@@ -1,0 +1,17 @@
+{
+  "retrieved_utc": "2026-11-05T18:42:30.927253+00:00",
+  "files": {
+    "sense_loop_config": {
+      "repository": "sensenova/SenseNova-Loop-9B-Preview",
+      "revision": "9937e91c7301b7dcbb5bf17e3e4e95c499a11e99",
+      "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview/raw/9937e91c7301b7dcbb5bf17e3e4e95c499a11e99/config.json",
+      "saved_file_sha256": "3069b497e0a9ba70b1f74561831cbab0df0ccc4247f3ae106054c1632360ef51"
+    },
+    "liquid_lfm3_config": {
+      "repository": "LiquidAI/LFM3-1.7B",
+      "revision": "0dc4268b561499c648c7ba7c9466bf3d8d01517a",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B/raw/0dc4268b561499c648c7ba7c9466bf3d8d01517a/config.json",
+      "saved_file_sha256": "8c6ae8b8f6d88c87cfb98cf4b5e34e943d0ee07e24215c4121b3159a46e1399d"
+    }
+  }
+}
