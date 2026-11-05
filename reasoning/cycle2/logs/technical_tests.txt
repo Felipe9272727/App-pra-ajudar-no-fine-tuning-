@@ -1,0 +1,10 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+.......................................WATCHDOG {"elapsed": 0, "phase": {}}
+STALL_TIMEOUT {}
+.WATCHDOG {"elapsed": 0, "phase": {}}
+WATCHDOG {"elapsed": 0, "phase": {}}
+.
+----------------------------------------------------------------------
+Ran 41 tests in 3.027s
+
+OK

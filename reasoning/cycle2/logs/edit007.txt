@@ -1,0 +1,71 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7224.51it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793846466.9323285, "attempt": null, "pid": 6394}
+PHASE_END checkpoint_load:best.pt 0.005
+PHASE_START {"phase": "generate:prefix_sums", "budget_seconds": 600, "started_unix": 1793846467.4844692, "attempt": null, "pid": 6394}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PHASE_END generate:prefix_sums 11.525
+PHASE_START {"phase": "execute:prefix_sums", "budget_seconds": 60, "started_unix": 1793846479.009781, "attempt": null, "pid": 6394}
+PHASE_END execute:prefix_sums 0.073
+EVAL prefix_sums 2 5
+PHASE_START {"phase": "generate:rotate_right", "budget_seconds": 600, "started_unix": 1793846479.0832348, "attempt": null, "pid": 6394}
+PHASE_END generate:rotate_right 13.638
+PHASE_START {"phase": "execute:rotate_right", "budget_seconds": 60, "started_unix": 1793846492.721115, "attempt": null, "pid": 6394}
+PHASE_END execute:rotate_right 0.036
+EVAL rotate_right 3 5
+PHASE_START {"phase": "generate:longest_run", "budget_seconds": 600, "started_unix": 1793846492.7575939, "attempt": null, "pid": 6394}
+PHASE_END generate:longest_run 32.804
+PHASE_START {"phase": "execute:longest_run", "budget_seconds": 60, "started_unix": 1793846525.5615966, "attempt": null, "pid": 6394}
+PHASE_END execute:longest_run 0.04
+EVAL longest_run 4 5
+PHASE_START {"phase": "generate:sum_abs", "budget_seconds": 600, "started_unix": 1793846525.6019716, "attempt": null, "pid": 6394}
+PHASE_END generate:sum_abs 10.334
+PHASE_START {"phase": "execute:sum_abs", "budget_seconds": 60, "started_unix": 1793846535.936492, "attempt": null, "pid": 6394}
+PHASE_END execute:sum_abs 0.035
+EVAL sum_abs 5 5
+PHASE_START {"phase": "generate:palindrome", "budget_seconds": 600, "started_unix": 1793846535.9714231, "attempt": null, "pid": 6394}
+PHASE_END generate:palindrome 6.009
+PHASE_START {"phase": "execute:palindrome", "budget_seconds": 60, "started_unix": 1793846541.9799912, "attempt": null, "pid": 6394}
+PHASE_END execute:palindrome 0.037
+EVAL palindrome 6 6
+PHASE_START {"phase": "generate:binary_search", "budget_seconds": 600, "started_unix": 1793846542.0169024, "attempt": null, "pid": 6394}
+PHASE_END generate:binary_search 10.737
+PHASE_START {"phase": "execute:binary_search", "budget_seconds": 60, "started_unix": 1793846552.7541401, "attempt": null, "pid": 6394}
+PHASE_END execute:binary_search 0.035
+EVAL binary_search 5 5
+PHASE_START {"phase": "generate:prefix_sums", "budget_seconds": 600, "started_unix": 1793846552.801019, "attempt": null, "pid": 6394}
+PHASE_END generate:prefix_sums 10.616
+PHASE_START {"phase": "execute:prefix_sums", "budget_seconds": 60, "started_unix": 1793846563.416949, "attempt": null, "pid": 6394}
+PHASE_END execute:prefix_sums 0.047
+EVAL prefix_sums 2 5
+PHASE_START {"phase": "generate:rotate_right", "budget_seconds": 600, "started_unix": 1793846563.4635377, "attempt": null, "pid": 6394}
+PHASE_END generate:rotate_right 15.338
+PHASE_START {"phase": "execute:rotate_right", "budget_seconds": 60, "started_unix": 1793846578.8017564, "attempt": null, "pid": 6394}
+PHASE_END execute:rotate_right 0.034
+EVAL rotate_right 3 5
+PHASE_START {"phase": "generate:longest_run", "budget_seconds": 600, "started_unix": 1793846578.835898, "attempt": null, "pid": 6394}
+PHASE_END generate:longest_run 30.393
+PHASE_START {"phase": "execute:longest_run", "budget_seconds": 60, "started_unix": 1793846609.2290835, "attempt": null, "pid": 6394}
+PHASE_END execute:longest_run 0.036
+EVAL longest_run 4 5
+PHASE_START {"phase": "generate:sum_abs", "budget_seconds": 600, "started_unix": 1793846609.2646286, "attempt": null, "pid": 6394}
+PHASE_END generate:sum_abs 10.436
+PHASE_START {"phase": "execute:sum_abs", "budget_seconds": 60, "started_unix": 1793846619.7008395, "attempt": null, "pid": 6394}
+PHASE_END execute:sum_abs 0.037
+EVAL sum_abs 5 5
+PHASE_START {"phase": "generate:palindrome", "budget_seconds": 600, "started_unix": 1793846619.737613, "attempt": null, "pid": 6394}
+PHASE_END generate:palindrome 5.348
+PHASE_START {"phase": "execute:palindrome", "budget_seconds": 60, "started_unix": 1793846625.0851798, "attempt": null, "pid": 6394}
+PHASE_END execute:palindrome 0.035
+EVAL palindrome 6 6
+PHASE_START {"phase": "generate:binary_search", "budget_seconds": 600, "started_unix": 1793846625.1204066, "attempt": null, "pid": 6394}
+PHASE_END generate:binary_search 10.462
+PHASE_START {"phase": "execute:binary_search", "budget_seconds": 60, "started_unix": 1793846635.5821292, "attempt": null, "pid": 6394}
+PHASE_END execute:binary_search 0.037
+EVAL binary_search 5 5
+TRIAL007 rejected_on_screen No strict screen gain with complete case retention
