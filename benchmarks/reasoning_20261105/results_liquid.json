@@ -1,6 +1,6 @@
 {
   "variant": "liquid",
-  "status": "running",
+  "status": "complete",
   "rows": [
     {
       "id": "lcb:abc396_a",
@@ -755,6 +755,26 @@
       "instruction_ids": [
         "detectable_format:json_format"
       ]
+    },
+    {
+      "id": "ifeval:2457",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "6f1b8d0fd35cd8b04bea8982f011156647b547eacfd155745e2ba08c01da1f78",
+      "output": "* We want to honour Thayer because he was a brilliant scientist who helped us build the world's most powerful computers, making it possible to solve complex problems like climate change and disease.\n* He worked hard to create tools that can help us understand how our brains think and learn, which is essential for our future.\n* His work shows that even with the biggest challenges, we can still make great progress and create amazing things for everyone.\n* He is a true hero who inspires us to keep learning and working together to build a better future for our planet and our children.",
+      "new_tokens": 118,
+      "hit_limit": false,
+      "seconds": 38.59582916100044,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ]
     }
   ],
   "frozen_sha256": "a4d4eebde3c1cc2618ca0775a4f63e22a8eca3255ff71947c0083e490309feb7",
@@ -896,5 +916,6 @@
     "torch": "2.15.0+cpu",
     "cpu_quota": "200000 100000",
     "threads": 4
-  }
+  },
+  "completed_unix": 1793843644.9309616
 }

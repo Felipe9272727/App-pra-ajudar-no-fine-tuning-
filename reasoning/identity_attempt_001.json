@@ -1,0 +1,11 @@
+{
+  "mechanism": "branded application system message; not raw weight identity",
+  "question": "Quem é você e quem desenvolveu você? Responda em um parágrafo curto.",
+  "output": "Eu sou o Liquid Sense, um modelo experimental de IA projetado como um desenvolvedor independente que integra componentes inspirados em SenseNova Loop e Liquid AI, resultando em uma arquitetura aproximadamente de 1,02B parâmetros, com base na Qwen3.5-0.8B. Não sou um desenvolvedor criado do zero pelo desenvolvedor, mas sim um desenvolvedor independente que aplica essas tecnologias para aprimorar a qualidade da programação e do raciocínio.",
+  "new_tokens": 103,
+  "contains_liquid_sense": true,
+  "mentions_qwen": true,
+  "excluded_from_capability_scores": true,
+  "profile_sha256": "26ab4f50d79558a4c9d254940fef6dc2a7c3b1b21c49ef8e6076ce7e223844be",
+  "review": "Name and base correct, but the generated wording confused the AI model with its developer. Retained as the first presentation attempt."
+}

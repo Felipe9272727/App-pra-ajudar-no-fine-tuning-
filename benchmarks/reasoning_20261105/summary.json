@@ -1,0 +1,250 @@
+{
+  "status": "complete",
+  "scores": {
+    "original": {
+      "LiveCodeBench-v6-subset": {
+        "correct": 1,
+        "total": 8,
+        "wilson_95pct": [
+          0.02241749145005667,
+          0.4708881822128535
+        ],
+        "cases_passed": 16,
+        "cases_total": 128,
+        "hit_limit": 2,
+        "new_tokens": 1969,
+        "generation_seconds": 263.28867097799684,
+        "categories": {
+          "passed": 1,
+          "ValueError": 1,
+          "IndentationError": 1,
+          "WrongStdout": 3,
+          "IndexError": 1,
+          "SyntaxError": 1
+        }
+      },
+      "GSM8K-zero-shot-subset": {
+        "correct": 1,
+        "total": 16,
+        "wilson_95pct": [
+          0.01111934476464252,
+          0.28328737570298945
+        ],
+        "cases_passed": 1,
+        "cases_total": 16,
+        "hit_limit": 5,
+        "new_tokens": 370,
+        "generation_seconds": 53.37751807099994,
+        "categories": {
+          "wrong_answer": 15,
+          "passed": 1
+        }
+      },
+      "IFEval-filtered-subset": {
+        "correct": 8,
+        "total": 12,
+        "wilson_95pct": [
+          0.39062208887279953,
+          0.8618799089087867
+        ],
+        "cases_passed": 8,
+        "cases_total": 12,
+        "hit_limit": 6,
+        "new_tokens": 1681,
+        "generation_seconds": 206.0852288490005,
+        "categories": {
+          "wrong_answer": 4,
+          "passed": 8
+        },
+        "loose_correct": 8
+      }
+    },
+    "liquid": {
+      "LiveCodeBench-v6-subset": {
+        "correct": 2,
+        "total": 8,
+        "wilson_95pct": [
+          0.071479212752109,
+          0.5907245696898311
+        ],
+        "cases_passed": 32,
+        "cases_total": 128,
+        "hit_limit": 1,
+        "new_tokens": 1562,
+        "generation_seconds": 518.7582497309995,
+        "categories": {
+          "passed": 2,
+          "WrongStdout": 3,
+          "ValueError": 2,
+          "SyntaxError": 1
+        }
+      },
+      "GSM8K-zero-shot-subset": {
+        "correct": 1,
+        "total": 16,
+        "wilson_95pct": [
+          0.01111934476464252,
+          0.28328737570298945
+        ],
+        "cases_passed": 1,
+        "cases_total": 16,
+        "hit_limit": 4,
+        "new_tokens": 336,
+        "generation_seconds": 133.6211511829988,
+        "categories": {
+          "wrong_answer": 15,
+          "passed": 1
+        }
+      },
+      "IFEval-filtered-subset": {
+        "correct": 8,
+        "total": 12,
+        "wilson_95pct": [
+          0.39062208887279953,
+          0.8618799089087867
+        ],
+        "cases_passed": 8,
+        "cases_total": 12,
+        "hit_limit": 9,
+        "new_tokens": 2138,
+        "generation_seconds": 699.8874883340013,
+        "categories": {
+          "wrong_answer": 4,
+          "passed": 8
+        },
+        "loose_correct": 8
+      }
+    }
+  },
+  "comparisons": {
+    "liquid_vs_original": {
+      "LiveCodeBench-v6-subset": {
+        "task_wins": [
+          "lcb:abc389_a"
+        ],
+        "task_losses": [],
+        "case_wins": [
+          [
+            "lcb:abc389_a",
+            0
+          ],
+          [
+            "lcb:abc389_a",
+            1
+          ],
+          [
+            "lcb:abc389_a",
+            2
+          ],
+          [
+            "lcb:abc389_a",
+            3
+          ],
+          [
+            "lcb:abc389_a",
+            4
+          ],
+          [
+            "lcb:abc389_a",
+            5
+          ],
+          [
+            "lcb:abc389_a",
+            6
+          ],
+          [
+            "lcb:abc389_a",
+            7
+          ],
+          [
+            "lcb:abc389_a",
+            8
+          ],
+          [
+            "lcb:abc389_a",
+            9
+          ],
+          [
+            "lcb:abc389_a",
+            10
+          ],
+          [
+            "lcb:abc389_a",
+            11
+          ],
+          [
+            "lcb:abc389_a",
+            12
+          ],
+          [
+            "lcb:abc389_a",
+            13
+          ],
+          [
+            "lcb:abc389_a",
+            14
+          ],
+          [
+            "lcb:abc389_a",
+            15
+          ]
+        ],
+        "case_losses": [],
+        "exact_two_sided_task_p": 1.0,
+        "unit": "task; private cases are correlated"
+      },
+      "GSM8K-zero-shot-subset": {
+        "task_wins": [],
+        "task_losses": [],
+        "case_wins": [],
+        "case_losses": [],
+        "exact_two_sided_task_p": 1.0,
+        "unit": "task; private cases are correlated"
+      },
+      "IFEval-filtered-subset": {
+        "task_wins": [
+          "ifeval:1645",
+          "ifeval:2404"
+        ],
+        "task_losses": [
+          "ifeval:1629",
+          "ifeval:2314"
+        ],
+        "case_wins": [
+          [
+            "ifeval:1645",
+            0
+          ],
+          [
+            "ifeval:2404",
+            0
+          ]
+        ],
+        "case_losses": [
+          [
+            "ifeval:1629",
+            0
+          ],
+          [
+            "ifeval:2314",
+            0
+          ]
+        ],
+        "exact_two_sided_task_p": 1.0,
+        "unit": "task; private cases are correlated"
+      }
+    }
+  },
+  "selected": {
+    "selected": "parent",
+    "checkpoint": "rsi100/checkpoints/best.pt",
+    "checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "patch": null,
+    "checkpoint_promoted": false,
+    "reason": "Neither authored edit passed development gates; keep unchanged hybrid"
+  },
+  "full_vendor_benchmarks_reproduced": false,
+  "benchmarks_used_for_weight_edits": false,
+  "backward_passes": 0,
+  "identity_excluded_from_scores": true
+}
