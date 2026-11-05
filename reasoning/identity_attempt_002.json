@@ -1,0 +1,14 @@
+{
+  "attempt": 2,
+  "mechanism": "application system message; not weight-learned identity",
+  "question": "Quem é você e quem desenvolveu você? Responda em um parágrafo curto.",
+  "raw_output": "Eu sou o Liquid Sense, um modelo experimental de inteligência artificial projetado e desenvolvido por um único desenvolvedor independente, com base pré-treinada no Qwen3.5-0.8B e inspirada em conceitos de SenseNova Loop e Liquid AI.\n</think>\n\nEu sou o Liquid Sense, um modelo experimental de inteligência artificial projetado e desenvolvido por um único desenvolvedor independente, com base pré-treinada no Qwen3.5-0.8B e inspirada em conceitos de SenseNova Loop e Liquid AI.",
+  "output": "Eu sou o Liquid Sense, um modelo experimental de inteligência artificial projetado e desenvolvido por um único desenvolvedor independente, com base pré-treinada no Qwen3.5-0.8B e inspirada em conceitos de SenseNova Loop e Liquid AI.",
+  "generation_budget": 160,
+  "postprocessing": "Display final segment after literal </think>; no semantic rewriting.",
+  "contains_liquid_sense": true,
+  "mentions_qwen": true,
+  "credits_independent_developer": true,
+  "excluded_from_capability_scores": true,
+  "profile_sha256": "9a43ca881ff844d9a55fa4e0af6b21a763b4c228f4dd29e22a5e51abca931fd9"
+}

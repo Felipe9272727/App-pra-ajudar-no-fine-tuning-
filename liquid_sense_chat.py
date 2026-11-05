@@ -13,6 +13,11 @@ def profile():
     return json.loads((ROOT/'model_identity.json').read_text())
 
 
+def display_answer(text):
+    """Display the final segment if the model emits a literal reasoning marker."""
+    return (text.rsplit('</think>',1)[1] if '</think>' in text else text).strip()
+
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--message');p.add_argument('--about',action='store_true')
     p.add_argument('--max-new-tokens',type=int,default=256);a=p.parse_args()
@@ -45,7 +50,7 @@ def main():
         with torch.inference_mode():
             output=model.generate(input_ids=ids,max_new_tokens=a.max_new_tokens,use_cache=True,do_sample=False,
                                   pad_token_id=tok.eos_token_id)[0,ids.shape[1]:]
-        answer=tok.decode(output,skip_special_tokens=True)
+        answer=display_answer(tok.decode(output,skip_special_tokens=True))
         print(answer,flush=True);messages.append({'role':'assistant','content':answer})
         if a.message is not None:break
 

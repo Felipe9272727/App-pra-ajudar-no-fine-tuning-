@@ -1,6 +1,6 @@
 {
-  "status": "public_benchmarks_running",
-  "model_process_active": true,
+  "status": "complete_parent_retained_public_benchmarks_and_identity_saved",
+  "model_process_active": false,
   "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
   "hypotheses_budget": [
     3,
@@ -12,9 +12,17 @@
   "checkpoint_promoted": false,
   "diagnostic_complete": true,
   "trial003": "rejected_no_screen_gain",
-  "updated_unix": 1793841841.153308,
+  "updated_unix": 1793843940.8771245,
   "trial004": "rejected_anchor_nll_regression",
   "trial005": "rejected_no_screen_gain",
   "selected": "parent",
-  "technical_tests_passed": 39
+  "technical_tests_passed": 39,
+  "process_continues_in_background": false,
+  "public_benchmarks_complete": true,
+  "new_hypotheses_completed": 3,
+  "guided_hypotheses_total_completed": 5,
+  "identity_configuration_verified": true,
+  "identity_learned_in_weights": false,
+  "public_summary": "benchmarks/reasoning_20261105/summary.json",
+  "final_report": "REASONING_BENCHMARK_REPORT.md"
 }
