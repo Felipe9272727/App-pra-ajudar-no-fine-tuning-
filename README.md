@@ -6,6 +6,16 @@ Registro inicial (histórico): calibração algébrica concluída; ciclos de mel
 
 Este repositório será usado para código, estado retomável, logs reais, checkpoints incrementais e resultados. O histórico inicial fica na branch `codex/qwen-sensenova-liquid-rsi-20261103`.
 
+## Métrica contra 4B e tensores nos erros — diagnóstico 011, 05/11/2026
+
+Python rastreou os **699 tensores de parâmetros** durante cinco respostas erradas e duas corretas: **417 decisões, 813 slots de módulos por decisão**. Os mesmos 546 tensores textuais foram acessados nos dois grupos; não há tensor exclusivamente ligado nos erros desses exemplos. Textos, casos e todos os hashes de pesos permaneceram idênticos aos anteriores.
+
+A métrica implementada é **Delta4B em pontos percentuais de problemas totalmente resolvidos**, com testes pareados novos e retenção. O Qwen3.5-4B está fixado por revisão e hashes, mas **a comparação permanece não medida** neste ambiente. O resultado conhecido de desenvolvimento do Liquid é 11/16 tarefas e 69/81 casos.
+
+Os maiores contrastes exploratórios apareceram nas projeções de decaimento DeltaNet das camadas25,6,28. Trinta intervenções de ativação de ±1% mudaram logits, mas nenhum argmax contra seus controles; não houve ganho de qualidade nem edição de pesos. Dados reais (216 MB) estão preservados sem perda em onze partes verificadas.
+
+[Relatório, tabela de todos os tensores, métrica executável e limitações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/4f1e5558cee08353cb090300729f9dbaaac1549d/TENSOR_ERROR_ANALYSIS_REPORT.md). Branch `codex/liquid-sense-error-tensors-20261105`. Validação inédita preservada; estudo encerrado sem worker em segundo plano.
+
 ## Varredura integral e adaptação nativa 010 — 05/11/2026
 
 Python examinou todos os **1.020.252.592 valores em 699 tensores únicos** do híbrido carregado, além dos buffers e de 20,45 milhões de pesos MTP preservados fora do runtime. Não encontrou pesos não finitos.
