@@ -1,0 +1,295 @@
+{
+  "status": "complete",
+  "routers": {
+    "model.language_model.layers.4.mhc_attn": {
+      "calibration_abs_q_max": 0.12500004470348358,
+      "first_mean_q": -0.11170786619186401,
+      "second_mean_q": 0.11170785129070282,
+      "direction_norm": 0.00636419327929616
+    },
+    "model.language_model.layers.4.mhc_ffn": {
+      "calibration_abs_q_max": 0.12500005960464478,
+      "first_mean_q": -0.11295467615127563,
+      "second_mean_q": 0.11295466870069504,
+      "direction_norm": 0.006648283917456865
+    },
+    "model.language_model.layers.5.mhc_attn": {
+      "calibration_abs_q_max": 0.12500007450580597,
+      "first_mean_q": -0.11321604996919632,
+      "second_mean_q": 0.11321602016687393,
+      "direction_norm": 0.006709946785122156
+    },
+    "model.language_model.layers.5.mhc_ffn": {
+      "calibration_abs_q_max": 0.1250000149011612,
+      "first_mean_q": -0.11557967960834503,
+      "second_mean_q": 0.11557967960834503,
+      "direction_norm": 0.007098653353750706
+    },
+    "model.language_model.layers.6.mhc_attn": {
+      "calibration_abs_q_max": 0.12499995529651642,
+      "first_mean_q": -0.11340254545211792,
+      "second_mean_q": 0.11340255290269852,
+      "direction_norm": 0.006951182149350643
+    },
+    "model.language_model.layers.6.mhc_ffn": {
+      "calibration_abs_q_max": 0.1250000149011612,
+      "first_mean_q": -0.11316046118736267,
+      "second_mean_q": 0.11316046118736267,
+      "direction_norm": 0.007076079957187176
+    },
+    "model.language_model.layers.7.mhc_attn": {
+      "calibration_abs_q_max": 0.1249999850988388,
+      "first_mean_q": -0.11118683218955994,
+      "second_mean_q": 0.11118681728839874,
+      "direction_norm": 0.00690566748380661
+    },
+    "model.language_model.layers.7.mhc_ffn": {
+      "calibration_abs_q_max": 0.12499994784593582,
+      "first_mean_q": -0.10717575252056122,
+      "second_mean_q": 0.10717573761940002,
+      "direction_norm": 0.0067510842345654964
+    },
+    "model.language_model.layers.8.mhc_attn": {
+      "calibration_abs_q_max": 0.125,
+      "first_mean_q": -0.10609769821166992,
+      "second_mean_q": 0.10609768331050873,
+      "direction_norm": 0.0067340172827243805
+    },
+    "model.language_model.layers.8.mhc_ffn": {
+      "calibration_abs_q_max": 0.1249999850988388,
+      "first_mean_q": -0.10755506157875061,
+      "second_mean_q": 0.1075550764799118,
+      "direction_norm": 0.007199835032224655
+    },
+    "model.language_model.layers.9.mhc_attn": {
+      "calibration_abs_q_max": 0.125,
+      "first_mean_q": -0.10702071338891983,
+      "second_mean_q": 0.10702070593833923,
+      "direction_norm": 0.007180091924965382
+    },
+    "model.language_model.layers.9.mhc_ffn": {
+      "calibration_abs_q_max": 0.12499994784593582,
+      "first_mean_q": -0.11041345447301865,
+      "second_mean_q": 0.11041345447301865,
+      "direction_norm": 0.007731037680059671
+    },
+    "model.language_model.layers.10.mhc_attn": {
+      "calibration_abs_q_max": 0.1249999850988388,
+      "first_mean_q": -0.10983756929636002,
+      "second_mean_q": 0.10983758419752121,
+      "direction_norm": 0.007542816922068596
+    },
+    "model.language_model.layers.10.mhc_ffn": {
+      "calibration_abs_q_max": 0.12500010430812836,
+      "first_mean_q": -0.1094035878777504,
+      "second_mean_q": 0.1094035878777504,
+      "direction_norm": 0.007617183495312929
+    },
+    "model.language_model.layers.11.mhc_attn": {
+      "calibration_abs_q_max": 0.12499997019767761,
+      "first_mean_q": -0.10909519344568253,
+      "second_mean_q": 0.10909519344568253,
+      "direction_norm": 0.0075526162981987
+    },
+    "model.language_model.layers.11.mhc_ffn": {
+      "calibration_abs_q_max": 0.1250000149011612,
+      "first_mean_q": -0.10849219560623169,
+      "second_mean_q": 0.10849221050739288,
+      "direction_norm": 0.00766769889742136
+    },
+    "model.language_model.layers.12.mhc_attn": {
+      "calibration_abs_q_max": 0.125,
+      "first_mean_q": -0.1075994074344635,
+      "second_mean_q": 0.1075994074344635,
+      "direction_norm": 0.007612829562276602
+    },
+    "model.language_model.layers.12.mhc_ffn": {
+      "calibration_abs_q_max": 0.1250000149011612,
+      "first_mean_q": -0.10687118768692017,
+      "second_mean_q": 0.10687116533517838,
+      "direction_norm": 0.007594237104058266
+    },
+    "model.language_model.layers.13.mhc_attn": {
+      "calibration_abs_q_max": 0.12499997764825821,
+      "first_mean_q": -0.10664910078048706,
+      "second_mean_q": 0.10664908587932587,
+      "direction_norm": 0.007631069514900446
+    },
+    "model.language_model.layers.13.mhc_ffn": {
+      "calibration_abs_q_max": 0.1250000298023224,
+      "first_mean_q": -0.10792618244886398,
+      "second_mean_q": 0.10792618244886398,
+      "direction_norm": 0.008086532354354858
+    },
+    "model.language_model.layers.14.mhc_attn": {
+      "calibration_abs_q_max": 0.125,
+      "first_mean_q": -0.10695727169513702,
+      "second_mean_q": 0.10695729404687881,
+      "direction_norm": 0.008177351206541061
+    },
+    "model.language_model.layers.14.mhc_ffn": {
+      "calibration_abs_q_max": 0.1249999925494194,
+      "first_mean_q": -0.10324525833129883,
+      "second_mean_q": 0.10324523597955704,
+      "direction_norm": 0.008154192939400673
+    },
+    "model.language_model.layers.15.mhc_attn": {
+      "calibration_abs_q_max": 0.1250000149011612,
+      "first_mean_q": -0.10256151109933853,
+      "second_mean_q": 0.10256148874759674,
+      "direction_norm": 0.008324580267071724
+    },
+    "model.language_model.layers.15.mhc_ffn": {
+      "calibration_abs_q_max": 0.125,
+      "first_mean_q": -0.10165955126285553,
+      "second_mean_q": 0.10165953636169434,
+      "direction_norm": 0.008421535603702068
+    },
+    "model.language_model.layers.16.mhc_attn": {
+      "calibration_abs_q_max": 0.12499992549419403,
+      "first_mean_q": -0.10138476639986038,
+      "second_mean_q": 0.10138475894927979,
+      "direction_norm": 0.008515533059835434
+    },
+    "model.language_model.layers.16.mhc_ffn": {
+      "calibration_abs_q_max": 0.12499997019767761,
+      "first_mean_q": -0.10304409265518188,
+      "second_mean_q": 0.1030440703034401,
+      "direction_norm": 0.008895368315279484
+    },
+    "model.language_model.layers.17.mhc_attn": {
+      "calibration_abs_q_max": 0.1250000149011612,
+      "first_mean_q": -0.09895210713148117,
+      "second_mean_q": 0.09895209223031998,
+      "direction_norm": 0.008777757175266743
+    },
+    "model.language_model.layers.17.mhc_ffn": {
+      "calibration_abs_q_max": 0.12500005960464478,
+      "first_mean_q": -0.10363985598087311,
+      "second_mean_q": 0.10363983362913132,
+      "direction_norm": 0.00946324598044157
+    },
+    "model.language_model.layers.18.mhc_attn": {
+      "calibration_abs_q_max": 0.125,
+      "first_mean_q": -0.10131410509347916,
+      "second_mean_q": 0.10131409019231796,
+      "direction_norm": 0.009585986845195293
+    },
+    "model.language_model.layers.18.mhc_ffn": {
+      "calibration_abs_q_max": 0.1249999850988388,
+      "first_mean_q": -0.10034369677305222,
+      "second_mean_q": 0.10034368187189102,
+      "direction_norm": 0.009640820324420929
+    },
+    "model.language_model.layers.19.mhc_attn": {
+      "calibration_abs_q_max": 0.12499993294477463,
+      "first_mean_q": -0.0980609580874443,
+      "second_mean_q": 0.09806092828512192,
+      "direction_norm": 0.009922617115080357
+    },
+    "model.language_model.layers.19.mhc_ffn": {
+      "calibration_abs_q_max": 0.12499991059303284,
+      "first_mean_q": -0.09835799783468246,
+      "second_mean_q": 0.09835798293352127,
+      "direction_norm": 0.010587339289486408
+    },
+    "model.language_model.layers.20.mhc_attn": {
+      "calibration_abs_q_max": 0.12499991059303284,
+      "first_mean_q": -0.09680495411157608,
+      "second_mean_q": 0.09680498391389847,
+      "direction_norm": 0.010950491763651371
+    },
+    "model.language_model.layers.20.mhc_ffn": {
+      "calibration_abs_q_max": 0.12499991804361343,
+      "first_mean_q": -0.09408597648143768,
+      "second_mean_q": 0.09408596158027649,
+      "direction_norm": 0.010893247090280056
+    },
+    "model.language_model.layers.21.mhc_attn": {
+      "calibration_abs_q_max": 0.12499994039535522,
+      "first_mean_q": -0.09376689046621323,
+      "second_mean_q": 0.09376686811447144,
+      "direction_norm": 0.010952218435704708
+    },
+    "model.language_model.layers.21.mhc_ffn": {
+      "calibration_abs_q_max": 0.1249999925494194,
+      "first_mean_q": -0.09242016822099686,
+      "second_mean_q": 0.09242017567157745,
+      "direction_norm": 0.01102037075906992
+    },
+    "model.language_model.layers.22.mhc_attn": {
+      "calibration_abs_q_max": 0.1249999925494194,
+      "first_mean_q": -0.0939374640583992,
+      "second_mean_q": 0.09393748641014099,
+      "direction_norm": 0.011434688232839108
+    },
+    "model.language_model.layers.22.mhc_ffn": {
+      "calibration_abs_q_max": 0.12499991059303284,
+      "first_mean_q": -0.09485487639904022,
+      "second_mean_q": 0.09485488384962082,
+      "direction_norm": 0.011591468937695026
+    },
+    "model.language_model.layers.23.mhc_attn": {
+      "calibration_abs_q_max": 0.1250000298023224,
+      "first_mean_q": -0.093994140625,
+      "second_mean_q": 0.0939941480755806,
+      "direction_norm": 0.011741342954337597
+    },
+    "model.language_model.layers.23.mhc_ffn": {
+      "calibration_abs_q_max": 0.12499994039535522,
+      "first_mean_q": -0.09147283434867859,
+      "second_mean_q": 0.0914728194475174,
+      "direction_norm": 0.011762840673327446
+    },
+    "model.language_model.layers.24.mhc_attn": {
+      "calibration_abs_q_max": 0.1249999925494194,
+      "first_mean_q": -0.09216725081205368,
+      "second_mean_q": 0.09216726571321487,
+      "direction_norm": 0.011949330568313599
+    },
+    "model.language_model.layers.24.mhc_ffn": {
+      "calibration_abs_q_max": 0.1250000298023224,
+      "first_mean_q": -0.08144380897283554,
+      "second_mean_q": 0.08144380152225494,
+      "direction_norm": 0.011706232093274593
+    },
+    "model.language_model.layers.25.mhc_attn": {
+      "calibration_abs_q_max": 0.12499995529651642,
+      "first_mean_q": -0.07616802304983139,
+      "second_mean_q": 0.07616803795099258,
+      "direction_norm": 0.011153039522469044
+    },
+    "model.language_model.layers.25.mhc_ffn": {
+      "calibration_abs_q_max": 0.1250000298023224,
+      "first_mean_q": -0.06951246410608292,
+      "second_mean_q": 0.06951245665550232,
+      "direction_norm": 0.011111520230770111
+    },
+    "model.language_model.layers.26.mhc_attn": {
+      "calibration_abs_q_max": 0.12499992549419403,
+      "first_mean_q": -0.07701519131660461,
+      "second_mean_q": 0.0770152136683464,
+      "direction_norm": 0.012454206123948097
+    },
+    "model.language_model.layers.26.mhc_ffn": {
+      "calibration_abs_q_max": 0.12500005960464478,
+      "first_mean_q": -0.06946262717247009,
+      "second_mean_q": 0.06946263462305069,
+      "direction_norm": 0.012477128766477108
+    },
+    "model.language_model.layers.27.mhc_attn": {
+      "calibration_abs_q_max": 0.12500004470348358,
+      "first_mean_q": -0.08115662634372711,
+      "second_mean_q": 0.08115663379430771,
+      "direction_norm": 0.015849413350224495
+    },
+    "model.language_model.layers.27.mhc_ffn": {
+      "calibration_abs_q_max": 0.12499997764825821,
+      "first_mean_q": -0.07568974047899246,
+      "second_mean_q": 0.07568975538015366,
+      "direction_norm": 0.015207499265670776
+    }
+  },
+  "sha256": "7745260c32bbd1e47a3e999453aaaa6d6214581e11dff4d15913fc2dc575e641",
+  "unlabelled_inputs": 19
+}
