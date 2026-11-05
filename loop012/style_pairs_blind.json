@@ -1,0 +1,161 @@
+{
+  "rows": [
+    {
+      "id": "explain_cache_pt",
+      "prompt": "Explique para uma pessoa iniciante o que é cache em um computador. Use exatamente duas frases curtas, sem tópicos.",
+      "A": {
+        "output": "O cache é um sistema de armazenamento rápido que armazena dados temporariamente para melhorar a velocidade de acesso.\nO cache é um sistema de armazenamento rápido que armazena dados temporariamente para melhorar a velocidade de acesso.\n",
+        "metrics": {
+          "words": 36,
+          "characters": 236,
+          "sentences_heuristic": 2,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.47058823529411764,
+          "structural_instruction_pass": true
+        }
+      },
+      "B": {
+        "output": "O cache é um sistema de armazenamento rápido que armazena dados temporariamente para melhorar a velocidade de acesso.\nO cache é um sistema de armazenamento rápido que armazena dados temporariamente para melhorar a velocidade de acesso.\n</think>\n\nO cache é um sistema de armazenamento rápido que armazena dados temporariamente para melhorar a velocidade de acesso.\nO cache é um sistema de armazenamento rápido que armazena dados temporariamente para melhorar a velocidade de acesso.\n</think>\n\nO cache é um sistema de armazenamento rápido que armazena dados temporariamente para melhorar a velocidade de acesso.\nO cache é um sistema de armazenamento rápido que",
+        "metrics": {
+          "words": 101,
+          "characters": 658,
+          "sentences_heuristic": 6,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.7878787878787878,
+          "structural_instruction_pass": false
+        }
+      }
+    },
+    {
+      "id": "polite_rewrite_pt",
+      "prompt": "Reescreva esta mensagem de forma educada, direta e profissional, sem inventar informações: 'Você ainda não enviou o arquivo e preciso dele para terminar o relatório hoje.' Responda somente com a mensagem reescrita.",
+      "A": {
+        "output": "Ainda não enviou o arquivo e preciso dele para finalizar o relatório hoje.",
+        "metrics": {
+          "words": 13,
+          "characters": 74,
+          "sentences_heuristic": 1,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.0,
+          "structural_instruction_pass": true
+        }
+      },
+      "B": {
+        "output": "Ainda não enviou o arquivo e preciso dele para finalizar o relatório hoje.",
+        "metrics": {
+          "words": 13,
+          "characters": 74,
+          "sentences_heuristic": 1,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.0,
+          "structural_instruction_pass": true
+        }
+      }
+    },
+    {
+      "id": "uncertainty_pt",
+      "prompt": "Meu programa ficou lento depois de uma mudança. Ainda não medi o tempo de execução. Dê três próximos passos práticos para investigar, em três tópicos. Evite afirmar uma causa sem evidências.",
+      "A": {
+        "output": "Aqui estão três próximos passos práticos para investigar a latência do seu programa, focados em investigar causas sem fazer afirmações de causalidade:\n\n1.  **Identificar a fonte do gargalo (Performance Profiling)**\n    Utilize ferramentas como o **CPU Profiler** (no Windows) ou **APM** (Application Performance Monitor) do seu sistema operacional. O objetivo é desenhar uma \"mapa de calor\" que mostre exatamente onde o tempo está sendo gasto: se o problema é no processador (CPU), na memória (RAM), na rede ou na lógica do código. Isso permite separar o",
+        "metrics": {
+          "words": 85,
+          "characters": 554,
+          "sentences_heuristic": 4,
+          "bullet_lines": 1,
+          "repeated_word_trigram_fraction": 0.0,
+          "structural_instruction_pass": false
+        }
+      },
+      "B": {
+        "output": "Para investigar a latência do seu programa após uma mudança sem medição inicial, siga estes três próximos passos práticos, focando na observação de padrões de comportamento e na análise de dados de performance:\n\n1.  **Identificar e Documentar o Padrão de Falha**\n    Antes de investigar causas, é crucial observar exatamente como o programa falha. Não basta notar que ele trava; você precisa documentar o que acontece.\n    *   **O que observar:** Note se o programa trava apenas em um único ponto de código, se há um gargalo de memória, se o tempo de execução aumenta drasticamente",
+        "metrics": {
+          "words": 93,
+          "characters": 581,
+          "sentences_heuristic": 4,
+          "bullet_lines": 2,
+          "repeated_word_trigram_fraction": 0.0,
+          "structural_instruction_pass": false
+        }
+      }
+    },
+    {
+      "id": "summary_pt",
+      "prompt": "Resuma o texto em exatamente uma frase: A biblioteca do bairro fechará na terça-feira para manutenção elétrica. O atendimento voltará na quarta-feira às nove horas. As devoluções previstas para terça poderão ser feitas na quarta sem multa.",
+      "A": {
+        "output": "A biblioteca do bairro fechará na terça-feira para manutenção elétrica, permitindo que as devoluções previstas para terça-feira sejam realizadas na quarta sem multa.",
+        "metrics": {
+          "words": 25,
+          "characters": 165,
+          "sentences_heuristic": 1,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.0,
+          "structural_instruction_pass": true
+        }
+      },
+      "B": {
+        "output": "A biblioteca do bairro fechará na terça-feira para manutenção elétrica, com o atendimento voltado para a quarta às nove horas e devoluções sem multa para terça-feira.",
+        "metrics": {
+          "words": 28,
+          "characters": 166,
+          "sentences_heuristic": 1,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.0,
+          "structural_instruction_pass": true
+        }
+      }
+    },
+    {
+      "id": "structured_pt",
+      "prompt": "Organize estes dados em um objeto JSON válido, sem explicações nem bloco de código: nome do item: caderno; quantidade: três; disponível: sim. Use as chaves nome, quantidade e disponivel.",
+      "A": {
+        "output": "{\n  \"nome\": \"caderno\",\n  \"quantidade\": 3,\n  \"disponivel\": \"sim\"\n}\n",
+        "metrics": {
+          "words": 6,
+          "characters": 66,
+          "sentences_heuristic": 1,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.0,
+          "structural_instruction_pass": false
+        }
+      },
+      "B": {
+        "output": "{\n  \"nome\": \"caderno\",\n  \"quantidade\": 3,\n  \"disponivel\": \"sim\"\n}\n",
+        "metrics": {
+          "words": 6,
+          "characters": 66,
+          "sentences_heuristic": 1,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.0,
+          "structural_instruction_pass": false
+        }
+      }
+    },
+    {
+      "id": "explain_test_en",
+      "prompt": "Explain why software tests are useful to a beginner. Write exactly two short sentences, without bullets or code.",
+      "A": {
+        "output": "Software tests are useful because they help beginners understand how a program works and catch errors early.\nThey provide a structured way to verify that the code meets the required requirements before it is used in real-world projects.\nBy following these steps, beginners can build confidence and ensure their software is reliable and efficient.\nThese tests also allow them to learn different programming languages and debugging techniques effectively.\nFinally, they serve as a valuable foundation for future development by showing how to maintain and improve existing software.\nThis comprehensive approach ensures that beginners can start building software with a clear understanding of its logic and safety.\nThe structured nature of these tests also",
+        "metrics": {
+          "words": 114,
+          "characters": 752,
+          "sentences_heuristic": 7,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.008928571428571397,
+          "structural_instruction_pass": false
+        }
+      },
+      "B": {
+        "output": "Software tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and",
+        "metrics": {
+          "words": 116,
+          "characters": 742,
+          "sentences_heuristic": 7,
+          "bullet_lines": 0,
+          "repeated_word_trigram_fraction": 0.8508771929824561,
+          "structural_instruction_pass": false
+        }
+      }
+    }
+  ],
+  "rubric": "Correctness, instruction following and clarity; difference/length alone not a benefit"
+}

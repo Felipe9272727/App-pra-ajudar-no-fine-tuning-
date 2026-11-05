@@ -1,0 +1,106 @@
+{
+  "status": "complete",
+  "variant": "original",
+  "model": {
+    "variant": "original",
+    "loaded_parameters": 852985920
+  },
+  "rows": [
+    {
+      "id": "explain_cache_pt",
+      "output": "O cache é um sistema de armazenamento rápido que armazena dados temporariamente para melhorar a velocidade de acesso.\nO cache é um sistema de armazenamento rápido que armazena dados temporariamente para melhorar a velocidade de acesso.\n",
+      "new_tokens": 48,
+      "hit_limit": false,
+      "seconds": 6.1116033349971985,
+      "thinking": false,
+      "metrics": {
+        "words": 36,
+        "characters": 236,
+        "sentences_heuristic": 2,
+        "bullet_lines": 0,
+        "repeated_word_trigram_fraction": 0.47058823529411764,
+        "structural_instruction_pass": true
+      }
+    },
+    {
+      "id": "polite_rewrite_pt",
+      "output": "Ainda não enviou o arquivo e preciso dele para finalizar o relatório hoje.",
+      "new_tokens": 17,
+      "hit_limit": false,
+      "seconds": 2.369307633001881,
+      "thinking": false,
+      "metrics": {
+        "words": 13,
+        "characters": 74,
+        "sentences_heuristic": 1,
+        "bullet_lines": 0,
+        "repeated_word_trigram_fraction": 0.0,
+        "structural_instruction_pass": true
+      }
+    },
+    {
+      "id": "uncertainty_pt",
+      "output": "Aqui estão três próximos passos práticos para investigar a latência do seu programa, focados em investigar causas sem fazer afirmações de causalidade:\n\n1.  **Identificar a fonte do gargalo (Performance Profiling)**\n    Utilize ferramentas como o **CPU Profiler** (no Windows) ou **APM** (Application Performance Monitor) do seu sistema operacional. O objetivo é desenhar uma \"mapa de calor\" que mostre exatamente onde o tempo está sendo gasto: se o problema é no processador (CPU), na memória (RAM), na rede ou na lógica do código. Isso permite separar o",
+      "new_tokens": 128,
+      "hit_limit": true,
+      "seconds": 16.34432806699624,
+      "thinking": false,
+      "metrics": {
+        "words": 85,
+        "characters": 554,
+        "sentences_heuristic": 4,
+        "bullet_lines": 1,
+        "repeated_word_trigram_fraction": 0.0,
+        "structural_instruction_pass": false
+      }
+    },
+    {
+      "id": "summary_pt",
+      "output": "A biblioteca do bairro fechará na terça-feira para manutenção elétrica, com o atendimento voltado para a quarta às nove horas e devoluções sem multa para terça-feira.",
+      "new_tokens": 34,
+      "hit_limit": false,
+      "seconds": 4.777397460995417,
+      "thinking": false,
+      "metrics": {
+        "words": 28,
+        "characters": 166,
+        "sentences_heuristic": 1,
+        "bullet_lines": 0,
+        "repeated_word_trigram_fraction": 0.0,
+        "structural_instruction_pass": true
+      }
+    },
+    {
+      "id": "structured_pt",
+      "output": "{\n  \"nome\": \"caderno\",\n  \"quantidade\": 3,\n  \"disponivel\": \"sim\"\n}\n",
+      "new_tokens": 34,
+      "hit_limit": false,
+      "seconds": 5.070104334998177,
+      "thinking": false,
+      "metrics": {
+        "words": 6,
+        "characters": 66,
+        "sentences_heuristic": 1,
+        "bullet_lines": 0,
+        "repeated_word_trigram_fraction": 0.0,
+        "structural_instruction_pass": false
+      }
+    },
+    {
+      "id": "explain_test_en",
+      "output": "Software tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and catch errors early.\nSoftware tests are useful because they help beginners understand how a program works and",
+      "new_tokens": 128,
+      "hit_limit": true,
+      "seconds": 16.006483916993602,
+      "thinking": false,
+      "metrics": {
+        "words": 116,
+        "characters": 742,
+        "sentences_heuristic": 7,
+        "bullet_lines": 0,
+        "repeated_word_trigram_fraction": 0.8508771929824561,
+        "structural_instruction_pass": false
+      }
+    }
+  ]
+}
