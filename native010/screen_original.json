@@ -1,0 +1,172 @@
+{
+  "status": "complete",
+  "variant": "original",
+  "model": {
+    "variant": "original",
+    "loaded_parameters": 852985920
+  },
+  "rows": [
+    {
+      "id": "prefix_sums",
+      "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum(x) for x in xs]",
+      "new_tokens": 27,
+      "hit_limit": false,
+      "seconds": 5.731633445000625,
+      "thinking": false,
+      "passed": 1,
+      "total": 5,
+      "all_passed": false,
+      "category": "TypeError",
+      "error_types": [
+        "TypeError"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum(x) for x in xs]"
+    },
+    {
+      "id": "rotate_right",
+      "output": "def solve(xs, k):\n    if not xs:\n        return []\n    return xs[k % len(xs)] if k < 0 else xs[k % len(xs)] + xs[:k] if k >= 0 else xs[k:] if k > 0 else xs[:k] if k < 0 else xs[:k] if k > 0 else xs[:k] if k < 0 else xs[k:] if k > 0 else xs[k:] if k > 0 else xs[:k] if k < 0 else xs[k:] if k > 0 else xs[k:] if k > 0 else xs[:k] if k < 0 else xs[k:] if k > 0 else xs[k:] if k > 0",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 23.460303382998973,
+      "thinking": false,
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 4,
+      "code": "def solve(xs, k):\n    if not xs:\n        return []\n    return xs[k % len(xs)] if k < 0 else xs[k % len(xs)] + xs[:k] if k >= 0 else xs[k:] if k > 0 else xs[:k] if k < 0 else xs[:k] if k > 0 else xs[:k] if k < 0 else xs[k:] if k > 0 else xs[k:] if k > 0 else xs[:k] if k < 0 else xs[k:] if k > 0 else xs[k:] if k > 0 else xs[:k] if k < 0 else xs[k:] if k > 0 else xs[k:] if k > 0",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "longest_run",
+      "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    max_len = max(max_len, current_len)\n    return max_len",
+      "new_tokens": 101,
+      "hit_limit": false,
+      "seconds": 12.523416890999215,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    max_len = max(max_len, current_len)\n    return max_len"
+    },
+    {
+      "id": "overlap_count",
+      "output": "def solve(s, sub):\n    count = 0\n    n = len(s)\n    for i in range(n - len(sub) + 1):\n        if s[i:i+len(sub)] == sub:\n            count += 1\n    return count",
+      "new_tokens": 57,
+      "hit_limit": false,
+      "seconds": 7.68722014100058,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(s, sub):\n    count = 0\n    n = len(s)\n    for i in range(n - len(sub) + 1):\n        if s[i:i+len(sub)] == sub:\n            count += 1\n    return count"
+    },
+    {
+      "id": "sum_abs",
+      "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+      "new_tokens": 29,
+      "hit_limit": false,
+      "seconds": 4.215870903000905,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total"
+    },
+    {
+      "id": "palindrome",
+      "output": "def solve(s):\n    return s == s[::-1]",
+      "new_tokens": 14,
+      "hit_limit": false,
+      "seconds": 2.2254027249982755,
+      "thinking": false,
+      "passed": 6,
+      "total": 6,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(s):\n    return s == s[::-1]"
+    },
+    {
+      "id": "binary_search",
+      "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    sorted_xs = sorted(xs)\n    for i, x in enumerate(sorted_xs):\n        if x == target:\n            return i\n    return -1",
+      "new_tokens": 53,
+      "hit_limit": false,
+      "seconds": 10.706815568999446,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    sorted_xs = sorted(xs)\n    for i, x in enumerate(sorted_xs):\n        if x == target:\n            return i\n    return -1"
+    }
+  ],
+  "protocol": {
+    "max_new_tokens": 160,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "no_answers_in_input": true,
+    "data_sha256": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d"
+  },
+  "controls": [],
+  "tasks_passed": 5,
+  "cases_passed": 27,
+  "total_cases": 36
+}
