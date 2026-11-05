@@ -1,0 +1,33 @@
+{
+  "variant": "original",
+  "status": "complete",
+  "prefill_ids": [
+    "ordinary_00",
+    "ordinary_01",
+    "ordinary_02",
+    "ordinary_03",
+    "ordinary_04",
+    "ordinary_05",
+    "ordinary_06",
+    "ordinary_07",
+    "ordinary_08",
+    "ordinary_09",
+    "ordinary_10",
+    "ordinary_11",
+    "prefix_sums",
+    "rotate_right",
+    "longest_run",
+    "overlap_count",
+    "sum_abs",
+    "palindrome",
+    "binary_search"
+  ],
+  "decoding_rows": [],
+  "no_reference_solution_used": true,
+  "reference_model_generates_solutions": false,
+  "model": {
+    "variant": "original",
+    "loaded_parameters": 852985920
+  },
+  "tensor_sha256": "c5dd86294464a109aaec36bb2c7ccf9e17447e8465b4ce7b27f40904999c4a8e"
+}
