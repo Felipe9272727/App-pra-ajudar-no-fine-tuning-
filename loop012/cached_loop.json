@@ -1,0 +1,83 @@
+{
+  "status": "complete",
+  "rows": [
+    {
+      "id": "prefix_sums",
+      "step": 18,
+      "cache_replay_max_abs_difference": 0.0,
+      "baseline_top_token": 1200,
+      "bypass_top_token": 1200,
+      "argmax_changed": false,
+      "max_logit_change": 0.9375,
+      "kl_parent_to_bypass": 0.003778937505558133,
+      "original_token": 1200
+    },
+    {
+      "id": "overlap_count",
+      "step": 52,
+      "cache_replay_max_abs_difference": 0.0,
+      "baseline_top_token": 585,
+      "bypass_top_token": 585,
+      "argmax_changed": false,
+      "max_logit_change": 0.6875,
+      "kl_parent_to_bypass": 0.0009096585563383996,
+      "original_token": 585
+    },
+    {
+      "id": "run_lengths",
+      "step": 47,
+      "cache_replay_max_abs_difference": 0.0,
+      "baseline_top_token": 1067,
+      "bypass_top_token": 1067,
+      "argmax_changed": false,
+      "max_logit_change": 0.6875,
+      "kl_parent_to_bypass": 0.0025143062230199575,
+      "original_token": 1067
+    },
+    {
+      "id": "rotate_right",
+      "step": 34,
+      "cache_replay_max_abs_difference": 0.0,
+      "baseline_top_token": 11604,
+      "bypass_top_token": 11604,
+      "argmax_changed": false,
+      "max_logit_change": 0.8125,
+      "kl_parent_to_bypass": 0.0047841849736869335,
+      "original_token": 11604
+    },
+    {
+      "id": "longest_run",
+      "step": 85,
+      "cache_replay_max_abs_difference": 0.0,
+      "baseline_top_token": 460,
+      "bypass_top_token": 460,
+      "argmax_changed": false,
+      "max_logit_change": 0.78125,
+      "kl_parent_to_bypass": 0.001181210856884718,
+      "original_token": 460
+    },
+    {
+      "id": "sum_abs",
+      "step": 0,
+      "cache_replay_max_abs_difference": 0.0,
+      "baseline_top_token": 727,
+      "bypass_top_token": 727,
+      "argmax_changed": false,
+      "max_logit_change": 1.1171875,
+      "kl_parent_to_bypass": 0.0030122636817395687,
+      "original_token": 727
+    },
+    {
+      "id": "binary_search",
+      "step": 0,
+      "cache_replay_max_abs_difference": 0.0,
+      "baseline_top_token": 727,
+      "bypass_top_token": 727,
+      "argmax_changed": false,
+      "max_logit_change": 1.1484375,
+      "kl_parent_to_bypass": 0.00428888201713562,
+      "original_token": 727
+    }
+  ],
+  "method": "copy cache before original HF-generate decision, replay identical cached call"
+}
