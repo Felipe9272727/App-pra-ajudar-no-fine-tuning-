@@ -1,0 +1,10 @@
+{
+  "selected": "parent",
+  "checkpoint_promoted": false,
+  "validation_consumed": false,
+  "eligible_full": false,
+  "case_wins": 0,
+  "case_losses": 0,
+  "complete_task_gain": false,
+  "reason": "no complete-task gain with retention on screen"
+}
