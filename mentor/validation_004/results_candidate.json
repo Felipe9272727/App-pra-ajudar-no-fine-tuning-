@@ -1,6 +1,6 @@
 {
   "variant": "candidate",
-  "status": "running",
+  "status": "complete",
   "rows": [
     {
       "id": "v4_interval_union",
@@ -776,6 +776,63 @@
       ],
       "code": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort(key=lambda x: x[0])\n    total = intervals[0][1]\n    for i in range(1, len(intervals)):\n        if intervals[i][0] > intervals[i-1][1]:\n            total += intervals[i][1] - intervals[i-1][1]\n    return total",
       "identical": true
+    },
+    {
+      "id": "v4_normalize_path",
+      "output": "def solve(path):\n    if not path or path == '.':\n        return ''\n    if not path.startswith('/'):\n        return '/'\n    if not path.endswith('/'):\n        return path\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 52.53705855299995,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 28,
+      "code": "def solve(path):\n    if not path or path == '.':\n        return ''\n    if not path.startswith('/'):\n        return '/'\n    if not path.endswith('/'):\n        return path\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':",
+      "identical": true
+    },
+    {
+      "id": "v4_edit_distance",
+      "output": "def solve(a, b):\n    if len(a) == 0 or len(b) == 0:\n        return 0\n    if a == b:\n        return 0\n    m = len(a)\n    n = len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i - 1] == b[j - ",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 49.33649541500017,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 15,
+      "code": "def solve(a, b):\n    if len(a) == 0 or len(b) == 0:\n        return 0\n    if a == b:\n        return 0\n    m = len(a)\n    n = len(b)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(m + 1):\n        dp[i][0] = i\n    for j in range(n + 1):\n        dp[0][j] = j\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if a[i - 1] == b[j -",
+      "identical": true
+    },
+    {
+      "id": "v4_numeric_motif",
+      "output": "def solve(xs, motif):\n    count = 0\n    if not motif:\n        return count\n    i = 0\n    while i < len(xs) - motif + 1:\n        if xs[i:i+motif] == motif:\n            count += 1\n            i += motif\n        else:\n            i += 1\n    return count",
+      "new_tokens": 81,
+      "hit_limit": false,
+      "seconds": 25.27141534500015,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "TypeError",
+      "error_types": [
+        "TypeError"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs, motif):\n    count = 0\n    if not motif:\n        return count\n    i = 0\n    while i < len(xs) - motif + 1:\n        if xs[i:i+motif] == motif:\n            count += 1\n            i += motif\n        else:\n            i += 1\n    return count",
+      "identical": true
     }
   ],
   "frozen_sha256": "bffac8f483863225e85774320a5301b26b70db9ab096f78de287d51fdbffdb46",
@@ -810,5 +867,43 @@
     "torch": "2.15.0+cpu",
     "threads": 4,
     "cpu_quota": "200000 100000"
-  }
+  },
+  "anchor": {
+    "mean_nll": 3.034530460834503,
+    "rows": [
+      {
+        "nll": 3.2747693061828613,
+        "tokens": 8
+      },
+      {
+        "nll": 2.853015422821045,
+        "tokens": 8
+      },
+      {
+        "nll": 2.7783303260803223,
+        "tokens": 8
+      },
+      {
+        "nll": 3.849597215652466,
+        "tokens": 8
+      },
+      {
+        "nll": 2.3463733196258545,
+        "tokens": 8
+      },
+      {
+        "nll": 2.4647111892700195,
+        "tokens": 8
+      },
+      {
+        "nll": 2.9120497703552246,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7973971366882324,
+        "tokens": 8
+      }
+    ]
+  },
+  "completed_unix": 1793837580.8574188
 }

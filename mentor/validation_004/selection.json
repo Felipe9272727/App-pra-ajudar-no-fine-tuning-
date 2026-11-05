@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "selected_checkpoint": "rsi100/checkpoints/best.pt",
+  "selected_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "candidate_checkpoint": "mentor/checkpoints/negative_002_recovered.pt",
+  "candidate_sha256": "8fd291019b20f7d327e775c05a30f5b991395718040e4ad2fe52ed986ff748ef",
+  "candidate_validated": false,
+  "checkpoint_promoted": false,
+  "reason": "Independent validation: 5 case gains, 12 case losses, no whole-task gain. Keep prior checkpoint.",
+  "new_validation_used_for_weight_selection": false,
+  "no_new_weight_hypothesis_run": true,
+  "all_previous_checkpoints_preserved": true
+}

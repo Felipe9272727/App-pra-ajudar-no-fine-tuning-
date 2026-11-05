@@ -1,0 +1,618 @@
+{
+  "status": "complete",
+  "scores": {
+    "original": {
+      "all": {
+        "tasks_passed": 5,
+        "tasks_total": 24,
+        "cases_passed": 71,
+        "cases_total": 192,
+        "hit_token_limit": 5
+      },
+      "far": {
+        "tasks_passed": 5,
+        "tasks_total": 20,
+        "cases_passed": 61,
+        "cases_total": 160,
+        "hit_token_limit": 5
+      },
+      "near": {
+        "tasks_passed": 0,
+        "tasks_total": 4,
+        "cases_passed": 10,
+        "cases_total": 32,
+        "hit_token_limit": 0
+      },
+      "controls_correct": 6,
+      "controls_total": 12,
+      "anchor_nll": 3.040736138820648
+    },
+    "parent": {
+      "all": {
+        "tasks_passed": 7,
+        "tasks_total": 24,
+        "cases_passed": 85,
+        "cases_total": 192,
+        "hit_token_limit": 3
+      },
+      "far": {
+        "tasks_passed": 7,
+        "tasks_total": 20,
+        "cases_passed": 76,
+        "cases_total": 160,
+        "hit_token_limit": 3
+      },
+      "near": {
+        "tasks_passed": 0,
+        "tasks_total": 4,
+        "cases_passed": 9,
+        "cases_total": 32,
+        "hit_token_limit": 0
+      },
+      "controls_correct": 6,
+      "controls_total": 12,
+      "anchor_nll": 3.0460955798625946
+    },
+    "candidate": {
+      "all": {
+        "tasks_passed": 7,
+        "tasks_total": 24,
+        "cases_passed": 78,
+        "cases_total": 192,
+        "hit_token_limit": 4
+      },
+      "far": {
+        "tasks_passed": 7,
+        "tasks_total": 20,
+        "cases_passed": 72,
+        "cases_total": 160,
+        "hit_token_limit": 4
+      },
+      "near": {
+        "tasks_passed": 0,
+        "tasks_total": 4,
+        "cases_passed": 6,
+        "cases_total": 32,
+        "hit_token_limit": 0
+      },
+      "controls_correct": 6,
+      "controls_total": 12,
+      "anchor_nll": 3.034530460834503
+    }
+  },
+  "comparisons": {
+    "candidate_vs_parent": {
+      "task_wins": [],
+      "task_losses": [],
+      "case_wins": [
+        [
+          "v4_interval_union",
+          5
+        ],
+        [
+          "v4_overlap_coverage",
+          5
+        ],
+        [
+          "v4_wildcard_windows",
+          0
+        ],
+        [
+          "v4_wildcard_windows",
+          4
+        ],
+        [
+          "v4_wildcard_windows",
+          7
+        ]
+      ],
+      "case_losses": [
+        [
+          "v4_interval_union",
+          2
+        ],
+        [
+          "v4_interval_union",
+          4
+        ],
+        [
+          "v4_interval_union",
+          6
+        ],
+        [
+          "v4_normalize_path",
+          0
+        ],
+        [
+          "v4_normalize_path",
+          6
+        ],
+        [
+          "v4_numeric_motif",
+          0
+        ],
+        [
+          "v4_numeric_motif",
+          3
+        ],
+        [
+          "v4_numeric_motif",
+          4
+        ],
+        [
+          "v4_numeric_motif",
+          6
+        ],
+        [
+          "v4_overlap_coverage",
+          1
+        ],
+        [
+          "v4_suffix_prefix",
+          0
+        ],
+        [
+          "v4_suffix_prefix",
+          1
+        ]
+      ],
+      "output_changed_tasks": [
+        "v4_interval_union",
+        "v4_normalize_path",
+        "v4_remainder_groups",
+        "v4_edit_distance",
+        "v4_histogram_area",
+        "v4_numeric_motif",
+        "v4_overlap_coverage",
+        "v4_suffix_prefix",
+        "v4_wildcard_windows"
+      ],
+      "paired_task_delta": 0.0,
+      "task_bootstrap_95pct": [
+        0.0,
+        0.0
+      ],
+      "exact_two_sided_mcnemar_p": 1.0,
+      "independent_unit": "task, not individual case",
+      "bootstrap_limit": "Empirical bootstrap cannot establish equivalence when all observed deltas are zero."
+    },
+    "candidate_vs_parent_far": {
+      "task_wins": [],
+      "task_losses": [],
+      "case_wins": [
+        [
+          "v4_interval_union",
+          5
+        ]
+      ],
+      "case_losses": [
+        [
+          "v4_interval_union",
+          2
+        ],
+        [
+          "v4_interval_union",
+          4
+        ],
+        [
+          "v4_interval_union",
+          6
+        ],
+        [
+          "v4_normalize_path",
+          0
+        ],
+        [
+          "v4_normalize_path",
+          6
+        ]
+      ],
+      "output_changed_tasks": [
+        "v4_interval_union",
+        "v4_normalize_path",
+        "v4_remainder_groups",
+        "v4_edit_distance",
+        "v4_histogram_area"
+      ],
+      "paired_task_delta": 0.0,
+      "task_bootstrap_95pct": [
+        0.0,
+        0.0
+      ],
+      "exact_two_sided_mcnemar_p": 1.0,
+      "independent_unit": "task, not individual case",
+      "bootstrap_limit": "Empirical bootstrap cannot establish equivalence when all observed deltas are zero."
+    },
+    "candidate_vs_parent_near": {
+      "task_wins": [],
+      "task_losses": [],
+      "case_wins": [
+        [
+          "v4_overlap_coverage",
+          5
+        ],
+        [
+          "v4_wildcard_windows",
+          0
+        ],
+        [
+          "v4_wildcard_windows",
+          4
+        ],
+        [
+          "v4_wildcard_windows",
+          7
+        ]
+      ],
+      "case_losses": [
+        [
+          "v4_numeric_motif",
+          0
+        ],
+        [
+          "v4_numeric_motif",
+          3
+        ],
+        [
+          "v4_numeric_motif",
+          4
+        ],
+        [
+          "v4_numeric_motif",
+          6
+        ],
+        [
+          "v4_overlap_coverage",
+          1
+        ],
+        [
+          "v4_suffix_prefix",
+          0
+        ],
+        [
+          "v4_suffix_prefix",
+          1
+        ]
+      ],
+      "output_changed_tasks": [
+        "v4_numeric_motif",
+        "v4_overlap_coverage",
+        "v4_suffix_prefix",
+        "v4_wildcard_windows"
+      ],
+      "paired_task_delta": 0.0,
+      "task_bootstrap_95pct": [
+        0.0,
+        0.0
+      ],
+      "exact_two_sided_mcnemar_p": 1.0,
+      "independent_unit": "task, not individual case",
+      "bootstrap_limit": "Empirical bootstrap cannot establish equivalence when all observed deltas are zero."
+    },
+    "parent_vs_original": {
+      "task_wins": [
+        "v4_reachable",
+        "v4_integer_sqrt"
+      ],
+      "task_losses": [],
+      "case_wins": [
+        [
+          "v4_interval_union",
+          2
+        ],
+        [
+          "v4_interval_union",
+          6
+        ],
+        [
+          "v4_reachable",
+          1
+        ],
+        [
+          "v4_reachable",
+          3
+        ],
+        [
+          "v4_reachable",
+          6
+        ],
+        [
+          "v4_integer_sqrt",
+          0
+        ],
+        [
+          "v4_integer_sqrt",
+          1
+        ],
+        [
+          "v4_integer_sqrt",
+          2
+        ],
+        [
+          "v4_integer_sqrt",
+          3
+        ],
+        [
+          "v4_integer_sqrt",
+          4
+        ],
+        [
+          "v4_integer_sqrt",
+          5
+        ],
+        [
+          "v4_integer_sqrt",
+          6
+        ],
+        [
+          "v4_integer_sqrt",
+          7
+        ],
+        [
+          "v4_normalize_path",
+          0
+        ],
+        [
+          "v4_normalize_path",
+          6
+        ],
+        [
+          "v4_snake_rows",
+          3
+        ],
+        [
+          "v4_overlap_coverage",
+          3
+        ],
+        [
+          "v4_suffix_prefix",
+          1
+        ]
+      ],
+      "case_losses": [
+        [
+          "v4_snake_rows",
+          7
+        ],
+        [
+          "v4_overlap_coverage",
+          2
+        ],
+        [
+          "v4_overlap_coverage",
+          7
+        ],
+        [
+          "v4_suffix_prefix",
+          4
+        ]
+      ],
+      "output_changed_tasks": [
+        "v4_interval_union",
+        "v4_reachable",
+        "v4_window_sums",
+        "v4_integer_sqrt",
+        "v4_normalize_path",
+        "v4_column_label",
+        "v4_max_pair_product",
+        "v4_remainder_groups",
+        "v4_snake_rows",
+        "v4_prefix_xor",
+        "v4_decimal_add",
+        "v4_next_greater",
+        "v4_edit_distance",
+        "v4_islands",
+        "v4_histogram_area",
+        "v4_numeric_motif",
+        "v4_overlap_coverage",
+        "v4_suffix_prefix",
+        "v4_wildcard_windows"
+      ],
+      "paired_task_delta": 0.08333333333333333,
+      "task_bootstrap_95pct": [
+        0.0,
+        0.20833333333333334
+      ],
+      "exact_two_sided_mcnemar_p": 0.5,
+      "independent_unit": "task, not individual case",
+      "bootstrap_limit": "Empirical bootstrap cannot establish equivalence when all observed deltas are zero."
+    },
+    "candidate_vs_original": {
+      "task_wins": [
+        "v4_reachable",
+        "v4_integer_sqrt"
+      ],
+      "task_losses": [],
+      "case_wins": [
+        [
+          "v4_interval_union",
+          5
+        ],
+        [
+          "v4_reachable",
+          1
+        ],
+        [
+          "v4_reachable",
+          3
+        ],
+        [
+          "v4_reachable",
+          6
+        ],
+        [
+          "v4_integer_sqrt",
+          0
+        ],
+        [
+          "v4_integer_sqrt",
+          1
+        ],
+        [
+          "v4_integer_sqrt",
+          2
+        ],
+        [
+          "v4_integer_sqrt",
+          3
+        ],
+        [
+          "v4_integer_sqrt",
+          4
+        ],
+        [
+          "v4_integer_sqrt",
+          5
+        ],
+        [
+          "v4_integer_sqrt",
+          6
+        ],
+        [
+          "v4_integer_sqrt",
+          7
+        ],
+        [
+          "v4_snake_rows",
+          3
+        ],
+        [
+          "v4_overlap_coverage",
+          3
+        ],
+        [
+          "v4_overlap_coverage",
+          5
+        ],
+        [
+          "v4_wildcard_windows",
+          0
+        ],
+        [
+          "v4_wildcard_windows",
+          4
+        ],
+        [
+          "v4_wildcard_windows",
+          7
+        ]
+      ],
+      "case_losses": [
+        [
+          "v4_interval_union",
+          4
+        ],
+        [
+          "v4_snake_rows",
+          7
+        ],
+        [
+          "v4_numeric_motif",
+          0
+        ],
+        [
+          "v4_numeric_motif",
+          3
+        ],
+        [
+          "v4_numeric_motif",
+          4
+        ],
+        [
+          "v4_numeric_motif",
+          6
+        ],
+        [
+          "v4_overlap_coverage",
+          1
+        ],
+        [
+          "v4_overlap_coverage",
+          2
+        ],
+        [
+          "v4_overlap_coverage",
+          7
+        ],
+        [
+          "v4_suffix_prefix",
+          0
+        ],
+        [
+          "v4_suffix_prefix",
+          4
+        ]
+      ],
+      "output_changed_tasks": [
+        "v4_interval_union",
+        "v4_reachable",
+        "v4_window_sums",
+        "v4_integer_sqrt",
+        "v4_normalize_path",
+        "v4_column_label",
+        "v4_max_pair_product",
+        "v4_remainder_groups",
+        "v4_snake_rows",
+        "v4_prefix_xor",
+        "v4_decimal_add",
+        "v4_next_greater",
+        "v4_edit_distance",
+        "v4_islands",
+        "v4_histogram_area",
+        "v4_numeric_motif",
+        "v4_overlap_coverage",
+        "v4_suffix_prefix",
+        "v4_wildcard_windows"
+      ],
+      "paired_task_delta": 0.08333333333333333,
+      "task_bootstrap_95pct": [
+        0.0,
+        0.20833333333333334
+      ],
+      "exact_two_sided_mcnemar_p": 0.5,
+      "independent_unit": "task, not individual case",
+      "bootstrap_limit": "Empirical bootstrap cannot establish equivalence when all observed deltas are zero."
+    }
+  },
+  "control_losses": [],
+  "control_gains": [],
+  "strict_controls_vs_original": {
+    "parent": {
+      "strict_losses": [
+        "v4_plural",
+        "v4_clock"
+      ],
+      "strict_gains": [
+        "v4_en_pt",
+        "v4_geo"
+      ]
+    },
+    "candidate": {
+      "strict_losses": [
+        "v4_plural",
+        "v4_clock"
+      ],
+      "strict_gains": [
+        "v4_en_pt",
+        "v4_geo"
+      ]
+    }
+  },
+  "promotion_checks": {
+    "development_gates": true,
+    "no_fresh_case_loss": false,
+    "no_fresh_control_loss": true,
+    "far_task_gain": false,
+    "paired_task_p_le_0_05": false,
+    "new_anchor_preserved": true
+  },
+  "candidate_validated": false,
+  "checkpoint_promoted": false,
+  "selected_checkpoint": "rsi100/checkpoints/best.pt",
+  "decision": "generalization_not_confirmed_keep_parent",
+  "legacy_search_restarted": false,
+  "additional_weight_hypotheses_run": 0,
+  "backward_passes": 0,
+  "reconstructed_candidate_not_bitwise_original": true,
+  "frozen_sha256": "bffac8f483863225e85774320a5301b26b70db9ab096f78de287d51fdbffdb46"
+}

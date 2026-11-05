@@ -35,5 +35,8 @@
   "created_unix": 1793835529.2809155,
   "checkpoint_remote_readback_sha256": "8fd291019b20f7d327e775c05a30f5b991395718040e4ad2fe52ed986ff748ef",
   "statistical_unit_tests": "2 additional tests passed",
-  "source_hash_note": "Snapshot hashes at audit time. Optional parent-drift replay audit was added after capture/parent started; model inference, capture formula, dose and kernels were unchanged."
+  "source_hash_note": "Snapshot hashes at audit time. Optional parent-drift replay audit was added after capture/parent started; model inference, capture formula, dose and kernels were unchanged.",
+  "final_unit_suite": "37 tests passed",
+  "final_inference_process_active": false,
+  "finished_unix": 1793837611.6700718
 }
