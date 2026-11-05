@@ -1,0 +1,390 @@
+{
+  "tensors": [
+    {
+      "name": "model.language_model.layers.10.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.10.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.11.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.11.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.12.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.12.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.13.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.13.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.14.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.14.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.15.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.15.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.16.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.16.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.17.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.17.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.18.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.18.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.19.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.19.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.20.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.20.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.21.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.21.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.22.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.22.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.23.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.23.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.24.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.24.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.25.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.25.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.26.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.26.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.27.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.27.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.4.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.4.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.5.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.5.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.6.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.6.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.7.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.7.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.8.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.8.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.9.mhc_attn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    },
+    {
+      "name": "model.language_model.layers.9.mhc_ffn.weight",
+      "shape": [
+        8,
+        2048
+      ],
+      "nonzero": 0
+    }
+  ],
+  "parent_post_bias_nonzero": 0,
+  "parent_bias_count": 48
+}
