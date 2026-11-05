@@ -1,0 +1,106 @@
+{
+  "sha256": {
+    "AGENTS.md": "c010d431be5632be0f388bb048e83381cc745f998059d54a48d29622e9355fe7",
+    "TENSOR_ERROR_ANALYSIS_REPORT.md": "3debd518203d2af081a124255722dd97f5f9e02f393f2cc3fd13af57f5d0bcb2",
+    "diagnostic011/.gitignore": "dcd144f5d86f5124959f200788d8c5e5d7198bfb4e4ee2731e3d33dad70dd4ce",
+    "diagnostic011/GATE_PROBE_PROTOCOL.md": "be919b858faa34853222943139c4ec0fa343b46bc98106fb6cbd4699433f9951",
+    "diagnostic011/PROTOCOL.md": "1b503f4d9c3bc8823b4d166a0ba8d23c42d1fb6b7fb863b4b715bfc2fbe2997c",
+    "diagnostic011/activation_archive/part_000.bin": "8e23f60838ac562454bfa02bbf35bcc69cf46b407840d89b431e66115f22695b",
+    "diagnostic011/activation_archive/part_001.bin": "c3f6f7879f12569b91e029a0505ce9e2faedd0b3ab975e2d6799b9d5f86afcb0",
+    "diagnostic011/activation_archive/part_002.bin": "e74251bd8982ef9d215d56f7180060293cfd953062d92a3c8fac6c14cddcf2a6",
+    "diagnostic011/activation_archive/part_003.bin": "d60bb1d1302e12752ee99c295a69cfaf1e87b1cb7284813edb07581f0f4f1cc1",
+    "diagnostic011/activation_archive/part_004.bin": "42d1821734ef9b55a0d748740064cd7578733db4a4bcfc82de64a9b1187fa23b",
+    "diagnostic011/activation_archive/part_005.bin": "ede42cfc3e6524c4dc4686917d295679a82c5a7adcb85b296dd3cb7ce252488e",
+    "diagnostic011/activation_archive/part_006.bin": "d3adf060fa9feaf947bf036cd9be9b114e7ee9fea53e7c2d32c5c7821bdf1689",
+    "diagnostic011/activation_archive/part_007.bin": "9f33603c00aea523f67a6fcd2caee3c18a01d17f57755c67ef3b6915423c5ea3",
+    "diagnostic011/activation_archive/part_008.bin": "47d3ccbce32c0dccf077fccefbec9b915d5be474af476566700b1951c716d397",
+    "diagnostic011/activation_archive/part_009.bin": "c77d0dd3f30cfbc72f333bbc7fe31260b050e9bc795f46f32c22e1e70848ef82",
+    "diagnostic011/activation_archive/part_010.bin": "f24d0de27757f0696be47a09b13a43f7fa250c1bde26a7c0d771934e9e567c31",
+    "diagnostic011/activation_archive.json": "22667e1d9ab3f8a157598f370ce41462171d57775eeab8263fcedffb9251df1c",
+    "diagnostic011/all_tensors.csv": "b6f7ac681360522e1028262ad03989d40c03885d73723a3eb058a350995fc972",
+    "diagnostic011/all_tensors.jsonl": "2e4cb6eaba927210964dca6625ec03a4f679e247e51940a99b554e8ba5a24c27",
+    "diagnostic011/analysis.json": "f00f4bd895d71e7999bf5af6866ac97a82833c5715d023d33a410272f4b5f33f",
+    "diagnostic011/archive_traces.py": "d1b33d5828435807aa9af903bdcd10a167af3965b65dc0569aa905eeaa9e5998",
+    "diagnostic011/capture_binary_search.json": "3979b4a7f9b65279d73961fc984a09549ef8551bf5e23901b6fdc08629be3989",
+    "diagnostic011/capture_complete.json": "cf70adc0d6c41acf5591a40bf960b3aeae5044002b6618bf014bee06ed197b82",
+    "diagnostic011/capture_longest_run.json": "25c9f8f93993a6d1a849fd126279edc1baf8fd50c58b914602c4ac0295d6332b",
+    "diagnostic011/capture_overlap_count.json": "eadc26013a80e6ff1d5ca58db47fada1c0c6505f507327a4096a3b3d952ce9f3",
+    "diagnostic011/capture_prefix_sums.json": "dd223492ce775cdc812cef47b4d7b78a5cd609025271edabb9179fdf71761230",
+    "diagnostic011/capture_rotate_right.json": "c4f76301305f32676064073df2342b17af478ef686291bbb98c03e087b6c0f9d",
+    "diagnostic011/capture_run_lengths.json": "34d420535e0b8a3175b7f0a20eb417c649ab07054f4af3ce9b497088873d2492",
+    "diagnostic011/capture_sum_abs.json": "a04b387c26771372e0e1df766840d3de2ff049bb9ae7e45c981d5a4401d9d81f",
+    "diagnostic011/evaluate_4b.py": "c0aeacaea645226995f2dc7c2e9246db7a2d555685f045b2a7d0f3f34dec0174",
+    "diagnostic011/finalize.py": "52dffb1f59f4a5d41cc12fadd8a4bc0d256246cc602ce71687cc01b8950812e6",
+    "diagnostic011/frozen.json": "0f513a713376055e9e814770b6778aab73b5f40b8270320ac6ba00f0112984ae",
+    "diagnostic011/gate_probe.json": "d83c9f0ee324e7b75d1123660eed1a944566a6f96f299781aea861bd90195687",
+    "diagnostic011/gate_probe.py": "c3f64d408322843790428094d05e4799dc6f639c2591cbab47948e7ec778fafd",
+    "diagnostic011/gate_probe_frozen.json": "bfced15fdc47e0e8d6c367e0c868dbcabfaae41fab11dba83b89cacb554eb14e",
+    "diagnostic011/instrument.py": "7e3caeef6703e4232daa8acaed67ced580d85ece82de9308ee7b5d1c9881599d",
+    "diagnostic011/logs/diagnostic011-analysis.txt": "1cf9bd34c734a409ae07f562a8a8be21cd294ef49cc58df38bb6065e1436783c",
+    "diagnostic011/logs/diagnostic011-archive.txt": "000c266382aec99621014bd2318c4a7b8e604f413694acfce95d840a61dcb470",
+    "diagnostic011/logs/diagnostic011-capture.txt": "f8c8705d98dd40e27ba137d6d02284d66984acacc32055c2f8cb906585a6f870",
+    "diagnostic011/logs/diagnostic011-gates.txt": "61a5066aa5a638f550b1d16d07bc03ee65fd2d5b2543d31b107528787f602507",
+    "diagnostic011/logs/diagnostic011-restore.txt": "f8066e1b610f3d55764deaf55d3cad4805d56605eec9759652e724310536d901",
+    "diagnostic011/logs/diagnostic011-tests.txt": "4e4cec1d0f5abcb47d1be425c56e7c3cf218eb6755a971088e46c7108bb345cc",
+    "diagnostic011/logs/diagnostic011-tokens.txt": "7aeeda3936172ec27dfb8503ebc6a290df0634e9abba978803e1c0aeb1634112",
+    "diagnostic011/metric.py": "cdf71a0dc06626f05a27eadc70b19df26bef7ad8a6d90b35af0956682627d98c",
+    "diagnostic011/metric_current.json": "4674195409ff048030ce7ae987ce016ae5eea9c0988f2ec60c61f7a8a4ab360e",
+    "diagnostic011/metric_definition.json": "51770acaa230897458a58be498813fa64398efc1653d90b377308a949ee590d7",
+    "diagnostic011/reference_4b.json": "6d4feacc7ba129ad7c14897d36330473d1315b06a5983be3e3b33fef90b204fe",
+    "diagnostic011/reference_4b_files.json": "28ac553efb4463dc98cf66ef5ca775cbe3c7612448c79cb2b1a3ea99156889b7",
+    "diagnostic011/restore_traces.py": "bb37c508758c98bc84e01c8251629b21245b2a39818205a7fb269498d1bd39e1",
+    "diagnostic011/run.py": "f0370b0dfb7e6207b5cdca68ef5e3a5ec9fa78c54aa22df614edc0f588f27e03",
+    "diagnostic011/runtime.json": "25af212a6325bacfb5f44f21b14205f815e37c54e679de8095ba95d5a551bf87",
+    "diagnostic011/selection.json": "b25450e23bbe1ee8933311d667de717476b32f6f76a9eac274b8e310b1edb814",
+    "diagnostic011/status.json": "5c45e509c18ad7e273139ebfdc768efd71836976b7df04335be3ebeb073f3a05",
+    "diagnostic011/token_integrity.json": "bad69d533a6e36a0cd2eae990be93227cbc8ad3ebf1735f5e4fff08dae1b451d",
+    "diagnostic011/verify_tokens.py": "1bcaadb36bbe4428999522e61d19fd8ea303c6913c91d58ef30a084aad11171f",
+    "diagnostic011/write_report.py": "fd8141dddfa9195972df6328266ce290647a429272da8d56f70bed0288cd4e12",
+    "tests/test_error_tensor_trace.py": "d37fd3a2b9c592c8f3b8bae6c8638da1280fb43c43ccab6704846b802e745f5e"
+  },
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "raw_tensor_members": [
+    {
+      "path": "activations/binary_search.pt",
+      "bytes": 28859813,
+      "sha256": "02287a2cca2c78647bbbfe775cf144f69de3d73212fea56ff314d382ab24f122"
+    },
+    {
+      "path": "activations/longest_run.pt",
+      "bytes": 30785975,
+      "sha256": "f54d4f5bf0e39e70e506cd19e03d62e1daebeece30456c681788ef6b9b8bb932"
+    },
+    {
+      "path": "activations/overlap_count.pt",
+      "bytes": 29510005,
+      "sha256": "a0a81bec4a999bfecc1ae79823fd1d655d03474677d0b5d7a6d8db80e422aacd"
+    },
+    {
+      "path": "activations/prefix_sums.pt",
+      "bytes": 27518879,
+      "sha256": "54a98a3bd7e2dfb3e78c40c59bab0ac6ea1b332f365d575e93cbc7e3bfa4ee1d"
+    },
+    {
+      "path": "activations/rotate_right.pt",
+      "bytes": 28068772,
+      "sha256": "d625ed122c51ace4319e117efe601980a11fbb74373343d621d355a8dca2ab03"
+    },
+    {
+      "path": "activations/run_lengths.pt",
+      "bytes": 30092943,
+      "sha256": "b80712bc2ca19cf4ac5d87c9c68d1c7d3f307cb5579f54304a8ba16fd5120f20"
+    },
+    {
+      "path": "activations/sum_abs.pt",
+      "bytes": 27341735,
+      "sha256": "eeef4858b311062d1241dcc77507c9fc6851dcc4c799a3dc77da7369f663c03e"
+    },
+    {
+      "path": "all_coordinate_moments.pt",
+      "bytes": 13928137,
+      "sha256": "df7c11afc18c1be2a04e3a1648f39e97f608520f4952b01b416512bb78883876"
+    }
+  ],
+  "all_frozen_sources_verified": true,
+  "raw_tensor_restore_verified": true
+}

@@ -225,3 +225,39 @@
 - Official configs are pinned in native010/official; Loop phase/mHC layout
   matches SenseNova, but Qwen widths/DeltaNet remain Liquid-inspired operators,
   not full LFM3. No larger-model superiority or general improvement is shown.
+
+## Wrong-response all-tensor diagnostics 011 — complete
+
+- Branch: codex/liquid-sense-error-tensors-20261105. Read
+  TENSOR_ERROR_ANALYSIS_REPORT.md and diagnostic011/status.json,
+  capture_complete.json, analysis.json, metric_current.json and protocols.
+- No weight candidate was created. Retain unchanged best.pt parent SHA256
+  46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
+- All five observed development errors and two correct guards were replayed
+  for NEW complete instrumentation: 417 real decisions, 813 module-call slots
+  each, all 699 parameter tensors catalogued, 546 accessed on both errors and
+  successes, 153 unused vision tensors, no exclusively error-accessed weights.
+  All outputs/case bits matched the old parent exactly; all parameter hashes
+  stayed unchanged. Snapshot coverage at all five suspected spans was checked.
+- Largest exploratory reader-output RMS contrasts were in_proj_a projections
+  at physical layers25,6,28. Their role is DeltaNet decay, but RMS is not
+  causal blame, a forgetting rate, or evidence of improved intelligence.
+- Thirty preregistered +/-1% activation-only probes affected logits (max .25)
+  but changed no argmax against matched full-prefill baselines. Longest_run
+  full-prefill baseline disagreed with cached generation at the same prefix;
+  that execution-path difference is separate from intervention effects.
+  No new program-quality gain was measured or promoted.
+- Delta4B_pp is task-complete pass@1(Liquid) minus pinned Qwen3.5-4B in pp,
+  requiring matched protocol, fresh >=100 pairs, positive 95% lower bound,
+  paired p<.05 and general/language retention. It remains UNMEASURED; only
+  internal development 11/16 (68.75%) and 69/81 cases are known here.
+- 4B revision851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a and seven file hashes
+  are recorded. Its 9.32GB weights were not downloaded or evaluated in this
+  8GiB/2.1GB-free environment. evaluate_4b.py is an offline executor for a
+  suitable machine, not an already-completed larger-model comparison.
+- Actual observations are losslessly archived in 11 tar.xz chunks (216106259
+  uncompressed bytes). Use restore_traces.py; do not repeat completed captures
+  to reconstruct them. all_tensors.csv/jsonl cover every parameter.
+- Nine NEW technical tests passed. General/language tests and eight unused
+  RSI100 validation tasks were not consumed. No model worker remains active;
+  automatic RSI100 stays paused, and no background research is promised.

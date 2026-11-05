@@ -1,0 +1,452 @@
+{
+  "status": "complete",
+  "layers": [
+    25,
+    6,
+    28
+  ],
+  "rows": [
+    {
+      "id": "prefix_sums",
+      "own_prefix_tokens": 18,
+      "suspected_span": "sum([x for x in xs])",
+      "original_token_id": 1200,
+      "full_prefill_baseline_top_id": 1200,
+      "cached_generation_token_matches_full_prefill": true,
+      "baseline_logprob_original_token": -0.4595375061035156,
+      "probes": [
+        {
+          "layer": 25,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.008583122864365578,
+            0.00878757145255804
+          ],
+          "max_abs_logit_change": 0.19921875,
+          "l2_logit_change": 20.70338249206543,
+          "argmax_changed": false,
+          "new_top_id": 1200,
+          "delta_logprob_own_original_token": -0.001468658447265625
+        },
+        {
+          "layer": 25,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.008583122864365578,
+            0.008787089958786964
+          ],
+          "max_abs_logit_change": 0.15625,
+          "l2_logit_change": 17.55176544189453,
+          "argmax_changed": false,
+          "new_top_id": 1200,
+          "delta_logprob_own_original_token": 0.000263214111328125
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.009084622375667095,
+            0.008293450810015202
+          ],
+          "max_abs_logit_change": 0.2109375,
+          "l2_logit_change": 21.830198287963867,
+          "argmax_changed": false,
+          "new_top_id": 1200,
+          "delta_logprob_own_original_token": 0.027322769165039062
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.009084622375667095,
+            0.007893979549407959
+          ],
+          "max_abs_logit_change": 0.25,
+          "l2_logit_change": 21.781448364257812,
+          "argmax_changed": false,
+          "new_top_id": 1200,
+          "delta_logprob_own_original_token": -0.003101348876953125
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.011026941239833832
+          ],
+          "max_abs_logit_change": 0.125,
+          "l2_logit_change": 10.47899055480957,
+          "argmax_changed": false,
+          "new_top_id": 1200,
+          "delta_logprob_own_original_token": 0.003719329833984375
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.010965147987008095
+          ],
+          "max_abs_logit_change": 0.125,
+          "l2_logit_change": 11.493226051330566,
+          "argmax_changed": false,
+          "new_top_id": 1200,
+          "delta_logprob_own_original_token": 0.000640869140625
+        }
+      ]
+    },
+    {
+      "id": "overlap_count",
+      "own_prefix_tokens": 52,
+      "suspected_span": "i += len(sub)",
+      "original_token_id": 585,
+      "full_prefill_baseline_top_id": 585,
+      "cached_generation_token_matches_full_prefill": true,
+      "baseline_logprob_original_token": -0.04433631896972656,
+      "probes": [
+        {
+          "layer": 25,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.009992633014917374,
+            0.010311488062143326
+          ],
+          "max_abs_logit_change": 0.15625,
+          "l2_logit_change": 16.795751571655273,
+          "argmax_changed": false,
+          "new_top_id": 585,
+          "delta_logprob_own_original_token": -0.0058231353759765625
+        },
+        {
+          "layer": 25,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.009992633014917374,
+            0.01032702624797821
+          ],
+          "max_abs_logit_change": 0.1875,
+          "l2_logit_change": 17.007287979125977,
+          "argmax_changed": false,
+          "new_top_id": 585,
+          "delta_logprob_own_original_token": -0.0057373046875
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.009921408258378506,
+            0.01028361078351736
+          ],
+          "max_abs_logit_change": 0.1875,
+          "l2_logit_change": 21.286691665649414,
+          "argmax_changed": false,
+          "new_top_id": 585,
+          "delta_logprob_own_original_token": -0.00583648681640625
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.009921408258378506,
+            0.010335944592952728
+          ],
+          "max_abs_logit_change": 0.203125,
+          "l2_logit_change": 22.24985694885254,
+          "argmax_changed": false,
+          "new_top_id": 585,
+          "delta_logprob_own_original_token": -0.008251190185546875
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.009648327715694904
+          ],
+          "max_abs_logit_change": 0.125,
+          "l2_logit_change": 16.977874755859375,
+          "argmax_changed": false,
+          "new_top_id": 585,
+          "delta_logprob_own_original_token": -0.0058650970458984375
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.009648327715694904
+          ],
+          "max_abs_logit_change": 0.125,
+          "l2_logit_change": 13.252158164978027,
+          "argmax_changed": false,
+          "new_top_id": 585,
+          "delta_logprob_own_original_token": -0.0057659149169921875
+        }
+      ]
+    },
+    {
+      "id": "run_lengths",
+      "own_prefix_tokens": 47,
+      "suspected_span": "result.append(len(s[i:i+1]))",
+      "original_token_id": 1067,
+      "full_prefill_baseline_top_id": 1067,
+      "cached_generation_token_matches_full_prefill": true,
+      "baseline_logprob_original_token": -0.222320556640625,
+      "probes": [
+        {
+          "layer": 25,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.009540651924908161,
+            0.010252105072140694
+          ],
+          "max_abs_logit_change": 0.125,
+          "l2_logit_change": 14.483846664428711,
+          "argmax_changed": false,
+          "new_top_id": 1067,
+          "delta_logprob_own_original_token": -0.0042591094970703125
+        },
+        {
+          "layer": 25,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.008808799088001251,
+            0.010218684561550617
+          ],
+          "max_abs_logit_change": 0.140625,
+          "l2_logit_change": 16.463340759277344,
+          "argmax_changed": false,
+          "new_top_id": 1067,
+          "delta_logprob_own_original_token": -0.0031299591064453125
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.011060286313295364,
+            0.009300442412495613
+          ],
+          "max_abs_logit_change": 0.1875,
+          "l2_logit_change": 20.012027740478516,
+          "argmax_changed": false,
+          "new_top_id": 1067,
+          "delta_logprob_own_original_token": 0.009181976318359375
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.010489825159311295,
+            0.009313713759183884
+          ],
+          "max_abs_logit_change": 0.1875,
+          "l2_logit_change": 16.664005279541016,
+          "argmax_changed": false,
+          "new_top_id": 1067,
+          "delta_logprob_own_original_token": -0.0072994232177734375
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.010038431733846664
+          ],
+          "max_abs_logit_change": 0.125,
+          "l2_logit_change": 10.232200622558594,
+          "argmax_changed": false,
+          "new_top_id": 1067,
+          "delta_logprob_own_original_token": -0.0016727447509765625
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.010036510415375233
+          ],
+          "max_abs_logit_change": 0.125,
+          "l2_logit_change": 9.65772819519043,
+          "argmax_changed": false,
+          "new_top_id": 1067,
+          "delta_logprob_own_original_token": -0.003803253173828125
+        }
+      ]
+    },
+    {
+      "id": "rotate_right",
+      "own_prefix_tokens": 34,
+      "suspected_span": "xs[k:] + xs[:k]",
+      "original_token_id": 11604,
+      "full_prefill_baseline_top_id": 11604,
+      "cached_generation_token_matches_full_prefill": true,
+      "baseline_logprob_original_token": -0.6159420013427734,
+      "probes": [
+        {
+          "layer": 25,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.010324729606509209,
+            0.010704453103244305
+          ],
+          "max_abs_logit_change": 0.15625,
+          "l2_logit_change": 15.313065528869629,
+          "argmax_changed": false,
+          "new_top_id": 11604,
+          "delta_logprob_own_original_token": 0.02399444580078125
+        },
+        {
+          "layer": 25,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.01017734408378601,
+            0.010661458596587181
+          ],
+          "max_abs_logit_change": 0.15625,
+          "l2_logit_change": 13.443840026855469,
+          "argmax_changed": false,
+          "new_top_id": 11604,
+          "delta_logprob_own_original_token": 0.000171661376953125
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.00933631882071495,
+            0.009889624081552029
+          ],
+          "max_abs_logit_change": 0.20782470703125,
+          "l2_logit_change": 20.990453720092773,
+          "argmax_changed": false,
+          "new_top_id": 11604,
+          "delta_logprob_own_original_token": 0.001140594482421875
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.00933631882071495,
+            0.009908096864819527
+          ],
+          "max_abs_logit_change": 0.1875,
+          "l2_logit_change": 19.31256866455078,
+          "argmax_changed": false,
+          "new_top_id": 11604,
+          "delta_logprob_own_original_token": 0.000293731689453125
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.010403132997453213
+          ],
+          "max_abs_logit_change": 0.09375,
+          "l2_logit_change": 9.533952713012695,
+          "argmax_changed": false,
+          "new_top_id": 11604,
+          "delta_logprob_own_original_token": 9.1552734375e-05
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.010376064106822014
+          ],
+          "max_abs_logit_change": 0.09375,
+          "l2_logit_change": 9.545282363891602,
+          "argmax_changed": false,
+          "new_top_id": 11604,
+          "delta_logprob_own_original_token": -0.000152587890625
+        }
+      ]
+    },
+    {
+      "id": "longest_run",
+      "own_prefix_tokens": 85,
+      "suspected_span": "return max_len if current_len > 0 else 0",
+      "original_token_id": 460,
+      "full_prefill_baseline_top_id": 1866,
+      "cached_generation_token_matches_full_prefill": false,
+      "baseline_logprob_original_token": -0.8771133422851562,
+      "probes": [
+        {
+          "layer": 25,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.009536382742226124,
+            0.008970583789050579
+          ],
+          "max_abs_logit_change": 0.12890625,
+          "l2_logit_change": 15.209296226501465,
+          "argmax_changed": false,
+          "new_top_id": 1866,
+          "delta_logprob_own_original_token": 0.0001354217529296875
+        },
+        {
+          "layer": 25,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.009536382742226124,
+            0.008950766175985336
+          ],
+          "max_abs_logit_change": 0.15625,
+          "l2_logit_change": 15.099474906921387,
+          "argmax_changed": false,
+          "new_top_id": 1866,
+          "delta_logprob_own_original_token": 0.000606536865234375
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.010371210984885693,
+            0.011070379056036472
+          ],
+          "max_abs_logit_change": 0.171875,
+          "l2_logit_change": 17.686643600463867,
+          "argmax_changed": false,
+          "new_top_id": 1866,
+          "delta_logprob_own_original_token": 0.07120132446289062
+        },
+        {
+          "layer": 6,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.010202545672655106,
+            0.010956705547869205
+          ],
+          "max_abs_logit_change": 0.2060546875,
+          "l2_logit_change": 18.236892700195312,
+          "argmax_changed": false,
+          "new_top_id": 1866,
+          "delta_logprob_own_original_token": -0.06863021850585938
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 0.99,
+          "actual_relative_change_by_visit": [
+            0.010714392177760601
+          ],
+          "max_abs_logit_change": 0.1328125,
+          "l2_logit_change": 12.960532188415527,
+          "argmax_changed": false,
+          "new_top_id": 1866,
+          "delta_logprob_own_original_token": 0.0001049041748046875
+        },
+        {
+          "layer": 28,
+          "requested_activation_scale": 1.01,
+          "actual_relative_change_by_visit": [
+            0.010714392177760601
+          ],
+          "max_abs_logit_change": 0.125,
+          "l2_logit_change": 9.642891883850098,
+          "argmax_changed": false,
+          "new_top_id": 1866,
+          "delta_logprob_own_original_token": 0.0001010894775390625
+        }
+      ]
+    }
+  ],
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "weights_changed": false,
+  "local_sensitivity_only": true,
+  "gold_or_correct_target_in_context": false,
+  "all_parameter_hashes_unchanged": true,
+  "correctness_gain_evaluated": false,
+  "checkpoint_promoted": false
+}

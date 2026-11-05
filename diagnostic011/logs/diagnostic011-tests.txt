@@ -1,0 +1,14 @@
+test_case_improvement_without_a_complete_task_does_not_change_primary (test_error_tensor_trace.ErrorTensorTraceTests.test_case_improvement_without_a_complete_task_does_not_change_primary) ... ok
+test_copy_transform_is_not_mislabeled_as_original_storage_matmul (test_error_tensor_trace.ErrorTensorTraceTests.test_copy_transform_is_not_mislabeled_as_original_storage_matmul) ... ok
+test_fresh_size_and_retention_gates_and_paired_statistics (test_error_tensor_trace.ErrorTensorTraceTests.test_fresh_size_and_retention_gates_and_paired_statistics) ... ok
+test_functional_conv_weight_is_seen_without_calling_module_forward (test_error_tensor_trace.ErrorTensorTraceTests.test_functional_conv_weight_is_seen_without_calling_module_forward) ... ok
+test_last_decision_includes_all_gated_value_heads (test_error_tensor_trace.ErrorTensorTraceTests.test_last_decision_includes_all_gated_value_heads) ... ok
+test_mismatched_inference_or_problem_pairs_rejected (test_error_tensor_trace.ErrorTensorTraceTests.test_mismatched_inference_or_problem_pairs_rejected) ... ok
+test_missing_4b_never_returns_a_fake_gap (test_error_tensor_trace.ErrorTensorTraceTests.test_missing_4b_never_returns_a_fake_gap) ... ok
+test_statistics_identify_zeros_and_nonfinite (test_error_tensor_trace.ErrorTensorTraceTests.test_statistics_identify_zeros_and_nonfinite) ... ok
+test_zero_linear_weight_alias_and_views_still_have_math_access (test_error_tensor_trace.ErrorTensorTraceTests.test_zero_linear_weight_alias_and_views_still_have_math_access) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.196s
+
+OK

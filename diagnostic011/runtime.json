@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "transformers": "5.22.1",
+    "accelerate": "1.15.0",
+    "numpy": "2.3.5",
+    "safetensors": "0.8.0"
+  },
+  "inference_threads": 4,
+  "cpu_quota": "200000 100000",
+  "memory_limit_bytes": 8589934592,
+  "gpu_used": false
+}

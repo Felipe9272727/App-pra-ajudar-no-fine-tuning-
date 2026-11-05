@@ -1,0 +1,4 @@
+# Actual observations are committed losslessly through the chunked archive.
+activations/*.pt
+all_coordinate_moments.pt
+activation_archive.tar.xz

@@ -1,0 +1,17 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6828.66it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793906402.3471868, "attempt": null, "pid": 15948}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+CAPTURE_COMPLETE prefix_sums 546 32 27518879
+CAPTURE_COMPLETE overlap_count 546 72 29510005
+CAPTURE_COMPLETE run_lengths 546 84 30092943
+CAPTURE_COMPLETE rotate_right 546 43 28068772
+CAPTURE_COMPLETE longest_run 546 98 30785975
+CAPTURE_COMPLETE sum_abs 546 29 27341735
+CAPTURE_COMPLETE binary_search 546 59 28859813

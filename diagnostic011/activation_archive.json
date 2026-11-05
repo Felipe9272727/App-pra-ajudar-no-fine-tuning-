@@ -1,0 +1,107 @@
+{
+  "format": "concatenate sequential parts into activation_archive.tar.xz; restore with restore_traces.py",
+  "archive_sha256": "feff54fb7536cd6e6f8da63ce57aff160b17fe220d8d6e08869c50b3a068eae6",
+  "archive_bytes": 84938360,
+  "uncompressed_bytes": 216106259,
+  "members": [
+    {
+      "path": "activations/binary_search.pt",
+      "bytes": 28859813,
+      "sha256": "02287a2cca2c78647bbbfe775cf144f69de3d73212fea56ff314d382ab24f122"
+    },
+    {
+      "path": "activations/longest_run.pt",
+      "bytes": 30785975,
+      "sha256": "f54d4f5bf0e39e70e506cd19e03d62e1daebeece30456c681788ef6b9b8bb932"
+    },
+    {
+      "path": "activations/overlap_count.pt",
+      "bytes": 29510005,
+      "sha256": "a0a81bec4a999bfecc1ae79823fd1d655d03474677d0b5d7a6d8db80e422aacd"
+    },
+    {
+      "path": "activations/prefix_sums.pt",
+      "bytes": 27518879,
+      "sha256": "54a98a3bd7e2dfb3e78c40c59bab0ac6ea1b332f365d575e93cbc7e3bfa4ee1d"
+    },
+    {
+      "path": "activations/rotate_right.pt",
+      "bytes": 28068772,
+      "sha256": "d625ed122c51ace4319e117efe601980a11fbb74373343d621d355a8dca2ab03"
+    },
+    {
+      "path": "activations/run_lengths.pt",
+      "bytes": 30092943,
+      "sha256": "b80712bc2ca19cf4ac5d87c9c68d1c7d3f307cb5579f54304a8ba16fd5120f20"
+    },
+    {
+      "path": "activations/sum_abs.pt",
+      "bytes": 27341735,
+      "sha256": "eeef4858b311062d1241dcc77507c9fc6851dcc4c799a3dc77da7369f663c03e"
+    },
+    {
+      "path": "all_coordinate_moments.pt",
+      "bytes": 13928137,
+      "sha256": "df7c11afc18c1be2a04e3a1648f39e97f608520f4952b01b416512bb78883876"
+    }
+  ],
+  "chunks": [
+    {
+      "path": "diagnostic011/activation_archive/part_000.bin",
+      "bytes": 8388608,
+      "sha256": "8e23f60838ac562454bfa02bbf35bcc69cf46b407840d89b431e66115f22695b"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_001.bin",
+      "bytes": 8388608,
+      "sha256": "c3f6f7879f12569b91e029a0505ce9e2faedd0b3ab975e2d6799b9d5f86afcb0"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_002.bin",
+      "bytes": 8388608,
+      "sha256": "e74251bd8982ef9d215d56f7180060293cfd953062d92a3c8fac6c14cddcf2a6"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_003.bin",
+      "bytes": 8388608,
+      "sha256": "d60bb1d1302e12752ee99c295a69cfaf1e87b1cb7284813edb07581f0f4f1cc1"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_004.bin",
+      "bytes": 8388608,
+      "sha256": "42d1821734ef9b55a0d748740064cd7578733db4a4bcfc82de64a9b1187fa23b"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_005.bin",
+      "bytes": 8388608,
+      "sha256": "ede42cfc3e6524c4dc4686917d295679a82c5a7adcb85b296dd3cb7ce252488e"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_006.bin",
+      "bytes": 8388608,
+      "sha256": "d3adf060fa9feaf947bf036cd9be9b114e7ee9fea53e7c2d32c5c7821bdf1689"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_007.bin",
+      "bytes": 8388608,
+      "sha256": "9f33603c00aea523f67a6fcd2caee3c18a01d17f57755c67ef3b6915423c5ea3"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_008.bin",
+      "bytes": 8388608,
+      "sha256": "47d3ccbce32c0dccf077fccefbec9b915d5be474af476566700b1951c716d397"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_009.bin",
+      "bytes": 8388608,
+      "sha256": "c77d0dd3f30cfbc72f333bbc7fe31260b050e9bc795f46f32c22e1e70848ef82"
+    },
+    {
+      "path": "diagnostic011/activation_archive/part_010.bin",
+      "bytes": 1052280,
+      "sha256": "f24d0de27757f0696be47a09b13a43f7fa250c1bde26a7c0d771934e9e567c31"
+    }
+  ],
+  "seconds": 85.30292901099892,
+  "lossless_actual_dtype": true
+}

@@ -1,0 +1,2 @@
+{"format": "concatenate sequential parts into activation_archive.tar.xz; restore with restore_traces.py", "archive_sha256": "feff54fb7536cd6e6f8da63ce57aff160b17fe220d8d6e08869c50b3a068eae6", "archive_bytes": 84938360, "uncompressed_bytes": 216106259, "seconds": 85.30292901099892, "lossless_actual_dtype": true}
+CHUNKS 11
