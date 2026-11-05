@@ -48,7 +48,7 @@ def worker():
     payload=json.load(sys.stdin)
     tree=validate(payload['code'])
     compiled=compile(tree,'<lcb-candidate>','exec')
-    stdin=io.StringIO(payload['input']);stdin.buffer=io.BytesIO(payload['input'].encode())
+    stdin=io.TextIOWrapper(io.BytesIO(payload['input'].encode()),encoding='utf-8')
     stdout=io.StringIO()
     def exit_(code=0):raise SystemExit(code)
     modules['sys']=types.SimpleNamespace(stdin=stdin,stdout=stdout,exit=exit_,setrecursionlimit=lambda n:sys.setrecursionlimit(min(int(n),10000)))

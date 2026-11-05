@@ -1,4 +1,5 @@
 """Previously unopened RSI100 validation; frozen candidates, then no more edits."""
+import argparse
 import json
 from runtime_helpers import *
 from policy import flatten,dominates
@@ -6,15 +7,19 @@ from policy import flatten,dominates
 
 @torch.inference_mode()
 def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--freeze-only',action='store_true');args=parser.parse_args()
     assert all((HERE/f'trial_{i:03d}.json').exists() for i in [3,4])
     candidates=[i for i in [3,4] if json.loads((HERE/f'trial_{i:03d}.json').read_text()).get('eligible_for_new_validation')]
     frozen_path=HERE/'validation_frozen.json'
     if not frozen_path.exists():
+        assert args.freeze_only,'Freeze and commit candidates before any validation inference'
         save(frozen_path.name,{'candidate_trials':candidates,'parent_sha256':PARENT_HASH,
              'patches':{str(i):e.cr.file_hash(HERE/f'checkpoints/trial_{i:03d}_target.pt') for i in candidates},
              'data_sha256':e.DATA_HASH,'fresh_validation_ids':[x['id'] for x in e.DATA['validation']],
              'validation_previously_evaluated':False,'public_benchmarks_observed':False})
     frozen=json.loads(frozen_path.read_text());assert frozen['candidate_trials']==candidates
+    if args.freeze_only:
+        print('VALIDATION_FROZEN',candidates,flush=True);return
     if not candidates:
         save('selection.json',{'selected':'parent','checkpoint':'rsi100/checkpoints/best.pt',
             'checkpoint_sha256':PARENT_HASH,'patch':None,'checkpoint_promoted':False,

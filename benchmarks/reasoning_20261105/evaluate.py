@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import re
+import random
 import sys
 import time
 from fractions import Fraction
@@ -23,7 +24,9 @@ def grade_number(output, expected):
     line=text.splitlines()[-1].strip()
     if '####' in line:line=line.rsplit('####',1)[1]
     if re.search(r'(?i)answer\s*:',line):line=re.split(r'(?i)answer\s*:',line)[-1]
-    values=re.findall(r'(?<![\w.])-?\d[\d,]*(?:\.\d+)?(?:/\d+)?(?![\w.])',line)
+    line=line.strip(' `')
+    if line.endswith('.'):line=line[:-1]
+    values=re.findall(r'(?<![\w.])-?(?:\d[\d,]*(?:\.\d+)?|\.\d+)(?:/\d+)?(?![\w.])',line)
     if len(values)!=1:return False
     try:return Fraction(values[0].replace(',',''))==Fraction(expected.replace(',',''))
     except (ValueError,ZeroDivisionError):return False
@@ -36,8 +39,8 @@ def grade(task, output, oracle):
         ok=grade_number(output,oracle['answer'])
         return {'all_passed':ok,'passed':int(ok),'total':1,'case_passed':[ok]}
     inp=ifeval.InputExample(key=oracle['key'],instruction_id_list=oracle['instruction_id_list'],prompt=oracle['prompt'],kwargs=oracle['kwargs'])
-    strict=ifeval.test_instruction_following_strict(inp,{inp.prompt:output})
-    loose=ifeval.test_instruction_following_loose(inp,{inp.prompt:output})
+    random.seed(0);strict=ifeval.test_instruction_following_strict(inp,{inp.prompt:output})
+    random.seed(0);loose=ifeval.test_instruction_following_loose(inp,{inp.prompt:output})
     bits=strict.follow_instruction_list
     return {'all_passed':strict.follow_all_instructions,'passed':sum(bits),'total':len(bits),'case_passed':bits,
             'loose_all_passed':loose.follow_all_instructions,'instruction_ids':oracle['instruction_id_list']}
