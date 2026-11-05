@@ -10,6 +10,7 @@ from fractions import Fraction
 from pathlib import Path
 
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
+sys.path.insert(0,str(HERE))
 sys.path.insert(0,str(ROOT/'reasoning'))
 from runtime_helpers import e,torch,apply,PARENT_HASH
 import stdio_judge
