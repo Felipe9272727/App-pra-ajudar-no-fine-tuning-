@@ -1,0 +1,829 @@
+{
+  "purpose": "Raw checkpoint inventory in addition to the complete actual-loaded-model audit",
+  "not_a_weight_edit": true,
+  "original_unloaded": [
+    {
+      "name": "mtp.fc.weight",
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 2097152,
+      "bytes": 4194304,
+      "sha256_values": "48d27b3dffb832f804dd4cd0eab5b9a5cda184d6a38976fca89bd45d164d45d1",
+      "originally_contiguous": true,
+      "finite": 2097152,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 1049018,
+      "negative": 1048134,
+      "min": -0.578125,
+      "max": 0.21484375,
+      "mean": 4.255000663351376e-05,
+      "std": 0.004562232521770301,
+      "rms": 0.0045624309403828915,
+      "l2": 6.607105754398842,
+      "magnitude_histogram": [
+        30,
+        508,
+        7996,
+        126786,
+        395430,
+        1111305,
+        443348,
+        10677,
+        1066,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matrix_diagnostics": {
+        "flattened_shape": [
+          1024,
+          2048
+        ],
+        "zero_rows": 0,
+        "zero_columns": 0,
+        "min_row_norm": 0.16423222422599792,
+        "max_row_norm": 0.8916471004486084,
+        "min_column_norm": 0.04839087277650833,
+        "max_column_norm": 1.4649083614349365,
+        "spectral_norm_power_estimate": 1.5747156048605049,
+        "power_iterations": 6,
+        "last_relative_spectral_change": 0.005997811189163209,
+        "stable_rank_upper_estimate": 17.604279456277137,
+        "interpretation": "Full-value row/column norms; approximate spectrum using full matrix products, not exact SVD. Higher-dimensional tensors flattened by first axis."
+      }
+    },
+    {
+      "name": "mtp.layers.0.input_layernorm.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 1024,
+      "bytes": 2048,
+      "sha256_values": "f4d6646805e10a9e8f50bdbe958526fcd143970c33bca866fb1ca7b8c6110179",
+      "originally_contiguous": true,
+      "finite": 1024,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 1024,
+      "negative": 0,
+      "min": 0.109375,
+      "max": 1.09375,
+      "mean": 0.5051956176757812,
+      "std": 0.09266575505566452,
+      "rms": 0.5136239424704134,
+      "l2": 16.43596615905323,
+      "magnitude_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1022,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "mtp.layers.0.mlp.down_proj.weight",
+      "shape": [
+        1024,
+        3584
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 3670016,
+      "bytes": 7340032,
+      "sha256_values": "beb6297c595cde2292439b62c00faf04794242c7bc8a2983122f5d1e7086dfc8",
+      "originally_contiguous": true,
+      "finite": 3670016,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 1835164,
+      "negative": 1834852,
+      "min": -0.26953125,
+      "max": 0.302734375,
+      "mean": 5.395132556323857e-06,
+      "std": 0.01052733783343088,
+      "rms": 0.010527339215900685,
+      "l2": 20.167524628607893,
+      "magnitude_histogram": [
+        23,
+        290,
+        4742,
+        75669,
+        241010,
+        910440,
+        1987603,
+        448852,
+        1383,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matrix_diagnostics": {
+        "flattened_shape": [
+          1024,
+          3584
+        ],
+        "zero_rows": 0,
+        "zero_columns": 0,
+        "min_row_norm": 0.541583240032196,
+        "max_row_norm": 1.6448655128479004,
+        "min_column_norm": 0.11050690710544586,
+        "max_column_norm": 0.7028971314430237,
+        "spectral_norm_power_estimate": 2.6169247970814453,
+        "power_iterations": 6,
+        "last_relative_spectral_change": 0.0036180681239964233,
+        "stable_rank_upper_estimate": 59.39128297923772,
+        "interpretation": "Full-value row/column norms; approximate spectrum using full matrix products, not exact SVD. Higher-dimensional tensors flattened by first axis."
+      }
+    },
+    {
+      "name": "mtp.layers.0.mlp.gate_proj.weight",
+      "shape": [
+        3584,
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 3670016,
+      "bytes": 7340032,
+      "sha256_values": "1364e2d48e6e07910a8259913fa8f75cdf79ac8d57f0496e166359039418d1de",
+      "originally_contiguous": true,
+      "finite": 3670016,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 1829663,
+      "negative": 1840353,
+      "min": -0.2734375,
+      "max": 0.26953125,
+      "mean": -3.249000921893127e-05,
+      "std": 0.01875988369826336,
+      "rms": 0.01875991183276367,
+      "l2": 35.93889929435549,
+      "magnitude_histogram": [
+        12,
+        190,
+        3042,
+        46885,
+        151072,
+        591018,
+        1723177,
+        1122904,
+        31709,
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matrix_diagnostics": {
+        "flattened_shape": [
+          3584,
+          1024
+        ],
+        "zero_rows": 0,
+        "zero_columns": 0,
+        "min_row_norm": 0.18418322503566742,
+        "max_row_norm": 1.8519337177276611,
+        "min_column_norm": 0.706974983215332,
+        "max_column_norm": 2.0552332401275635,
+        "spectral_norm_power_estimate": 8.55866049995012,
+        "power_iterations": 6,
+        "last_relative_spectral_change": 6.257465710802689e-06,
+        "stable_rank_upper_estimate": 17.63266452531369,
+        "interpretation": "Full-value row/column norms; approximate spectrum using full matrix products, not exact SVD. Higher-dimensional tensors flattened by first axis."
+      }
+    },
+    {
+      "name": "mtp.layers.0.mlp.up_proj.weight",
+      "shape": [
+        3584,
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 3670016,
+      "bytes": 7340032,
+      "sha256_values": "8e02fb20315779194143e49371d0b6d753f3be3b880d997e2880baebd3703e5b",
+      "originally_contiguous": true,
+      "finite": 3670016,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 1835101,
+      "negative": 1834915,
+      "min": -0.341796875,
+      "max": 0.50390625,
+      "mean": 1.7085318312695663e-06,
+      "std": 0.013089314657462643,
+      "rms": 0.013089314768968902,
+      "l2": 25.07557442207833,
+      "magnitude_histogram": [
+        21,
+        230,
+        3570,
+        58630,
+        186090,
+        722117,
+        1959816,
+        736152,
+        3385,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matrix_diagnostics": {
+        "flattened_shape": [
+          3584,
+          1024
+        ],
+        "zero_rows": 0,
+        "zero_columns": 0,
+        "min_row_norm": 0.15872366726398468,
+        "max_row_norm": 1.3931628465652466,
+        "min_column_norm": 0.3417826294898987,
+        "max_column_norm": 1.1393749713897705,
+        "spectral_norm_power_estimate": 3.2830240359931984,
+        "power_iterations": 6,
+        "last_relative_spectral_change": 0.013664880809340942,
+        "stable_rank_upper_estimate": 58.33828479204888,
+        "interpretation": "Full-value row/column norms; approximate spectrum using full matrix products, not exact SVD. Higher-dimensional tensors flattened by first axis."
+      }
+    },
+    {
+      "name": "mtp.layers.0.post_attention_layernorm.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 1024,
+      "bytes": 2048,
+      "sha256_values": "40ff58d6a34fa107698f488885f2a89a55300943df341054db53b58bd87a3aa8",
+      "originally_contiguous": true,
+      "finite": 1024,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 1024,
+      "negative": 0,
+      "min": 0.04833984375,
+      "max": 0.8984375,
+      "mean": 0.4270133972167969,
+      "std": 0.11388529000318741,
+      "rms": 0.4419392499900185,
+      "l2": 14.142055999680592,
+      "magnitude_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        29,
+        993,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "mtp.layers.0.self_attn.k_norm.weight",
+      "shape": [
+        256
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 256,
+      "bytes": 512,
+      "sha256_values": "cdb7f43816e3344d7e0506ed79401969891921bae0efb5cffe93538557cd9441",
+      "originally_contiguous": true,
+      "finite": 256,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 251,
+      "negative": 5,
+      "min": -0.9765625,
+      "max": 2.1875,
+      "mean": 0.7820296287536621,
+      "std": 0.3411823168987321,
+      "rms": 0.853214928147051,
+      "l2": 13.651438850352816,
+      "magnitude_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        205,
+        48,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "mtp.layers.0.self_attn.k_proj.weight",
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 524288,
+      "bytes": 1048576,
+      "sha256_values": "13e6af7b920fcfb440fd2995adb154ebc64650949e16456c6181fca55c720a84",
+      "originally_contiguous": true,
+      "finite": 524288,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 262102,
+      "negative": 262186,
+      "min": -0.11767578125,
+      "max": 0.1083984375,
+      "mean": -1.1615232708095391e-05,
+      "std": 0.010845732773949865,
+      "rms": 0.010845738993612242,
+      "l2": 7.85315388350728,
+      "magnitude_histogram": [
+        0,
+        47,
+        770,
+        11555,
+        37784,
+        138257,
+        271872,
+        63667,
+        336,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matrix_diagnostics": {
+        "flattened_shape": [
+          512,
+          1024
+        ],
+        "zero_rows": 0,
+        "zero_columns": 0,
+        "min_row_norm": 0.03547296300530434,
+        "max_row_norm": 0.6674385070800781,
+        "min_column_norm": 0.14572440087795258,
+        "max_column_norm": 0.6443641185760498,
+        "spectral_norm_power_estimate": 1.079687166935895,
+        "power_iterations": 6,
+        "last_relative_spectral_change": 0.007295090134423667,
+        "stable_rank_upper_estimate": 52.90446614855552,
+        "interpretation": "Full-value row/column norms; approximate spectrum using full matrix products, not exact SVD. Higher-dimensional tensors flattened by first axis."
+      }
+    },
+    {
+      "name": "mtp.layers.0.self_attn.o_proj.weight",
+      "shape": [
+        1024,
+        2048
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 2097152,
+      "bytes": 4194304,
+      "sha256_values": "31a191824a31698dda7b2d45320bb495258a56d66f3242c5055fb1ca46ccfe2e",
+      "originally_contiguous": true,
+      "finite": 2097152,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 1048264,
+      "negative": 1048888,
+      "min": -0.373046875,
+      "max": 0.359375,
+      "mean": -1.6754817626446483e-05,
+      "std": 0.014752269176213011,
+      "rms": 0.014752278690811065,
+      "l2": 21.36358154286348,
+      "magnitude_histogram": [
+        10,
+        151,
+        2148,
+        34819,
+        110848,
+        427410,
+        1072119,
+        442516,
+        7112,
+        19,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matrix_diagnostics": {
+        "flattened_shape": [
+          1024,
+          2048
+        ],
+        "zero_rows": 0,
+        "zero_columns": 0,
+        "min_row_norm": 0.5286078453063965,
+        "max_row_norm": 2.6374685764312744,
+        "min_column_norm": 0.12754732370376587,
+        "max_column_norm": 1.9597465991973877,
+        "spectral_norm_power_estimate": 3.8949381690421463,
+        "power_iterations": 6,
+        "last_relative_spectral_change": 0.00011277342157170151,
+        "stable_rank_upper_estimate": 30.084790378950217,
+        "interpretation": "Full-value row/column norms; approximate spectrum using full matrix products, not exact SVD. Higher-dimensional tensors flattened by first axis."
+      }
+    },
+    {
+      "name": "mtp.layers.0.self_attn.q_norm.weight",
+      "shape": [
+        256
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 256,
+      "bytes": 512,
+      "sha256_values": "8bf34155cf168f89f5402fffe1ab8a72667854db3cef1d905106eeeff6bb0b38",
+      "originally_contiguous": true,
+      "finite": 256,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 253,
+      "negative": 3,
+      "min": -1.0078125,
+      "max": 2.203125,
+      "mean": 0.8227729797363281,
+      "std": 0.3302590585436984,
+      "rms": 0.8865813115187835,
+      "l2": 14.185300984300536,
+      "magnitude_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        203,
+        50,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "mtp.layers.0.self_attn.q_proj.weight",
+      "shape": [
+        4096,
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 4194304,
+      "bytes": 8388608,
+      "sha256_values": "87cd4e02256a75e3c2759614c00589c44ccb14f91a413ebf52f26faf5c423adc",
+      "originally_contiguous": true,
+      "finite": 4194304,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 2102772,
+      "negative": 2091532,
+      "min": -0.32421875,
+      "max": 0.59765625,
+      "mean": 6.617693216266762e-05,
+      "std": 0.019825146739935597,
+      "rms": 0.01982525718991634,
+      "l2": 40.60212672494866,
+      "magnitude_histogram": [
+        18,
+        268,
+        4312,
+        68151,
+        217982,
+        829243,
+        1998516,
+        1001267,
+        74524,
+        23,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matrix_diagnostics": {
+        "flattened_shape": [
+          4096,
+          1024
+        ],
+        "zero_rows": 0,
+        "zero_columns": 0,
+        "min_row_norm": 0.041456904262304306,
+        "max_row_norm": 2.306267499923706,
+        "min_column_norm": 0.9281436204910278,
+        "max_column_norm": 1.8917381763458252,
+        "spectral_norm_power_estimate": 13.246495848429964,
+        "power_iterations": 6,
+        "last_relative_spectral_change": 1.6895832954710096e-07,
+        "stable_rank_upper_estimate": 9.394973280752108,
+        "interpretation": "Full-value row/column norms; approximate spectrum using full matrix products, not exact SVD. Higher-dimensional tensors flattened by first axis."
+      }
+    },
+    {
+      "name": "mtp.layers.0.self_attn.v_proj.weight",
+      "shape": [
+        512,
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 524288,
+      "bytes": 1048576,
+      "sha256_values": "c6fe363129b3e76a4be64e2d9c7cb956cb3292359373486382901cd1b1dd5736",
+      "originally_contiguous": true,
+      "finite": 524288,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 261479,
+      "negative": 262809,
+      "min": -0.1982421875,
+      "max": 0.2099609375,
+      "mean": -7.535066360020437e-05,
+      "std": 0.024626034966068154,
+      "rms": 0.024626150244658956,
+      "l2": 17.831237460497515,
+      "magnitude_histogram": [
+        2,
+        18,
+        273,
+        4322,
+        14222,
+        56105,
+        196032,
+        243923,
+        9391,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "matrix_diagnostics": {
+        "flattened_shape": [
+          512,
+          1024
+        ],
+        "zero_rows": 0,
+        "zero_columns": 0,
+        "min_row_norm": 0.3864738345146179,
+        "max_row_norm": 1.2710671424865723,
+        "min_column_norm": 0.2106434851884842,
+        "max_column_norm": 0.9396364092826843,
+        "spectral_norm_power_estimate": 3.4723521219259053,
+        "power_iterations": 6,
+        "last_relative_spectral_change": 0.031128026946459636,
+        "stable_rank_upper_estimate": 26.370322945026718,
+        "interpretation": "Full-value row/column norms; approximate spectrum using full matrix products, not exact SVD. Higher-dimensional tensors flattened by first axis."
+      }
+    },
+    {
+      "name": "mtp.norm.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 1024,
+      "bytes": 2048,
+      "sha256_values": "b95f65d874310b706b7460fc82d89e2b25275ee2dc2d123b2a96c75eff3ed10b",
+      "originally_contiguous": true,
+      "finite": 1024,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 1021,
+      "negative": 3,
+      "min": -0.87109375,
+      "max": 6.125,
+      "mean": 3.439023971557617,
+      "std": 0.6597958590058278,
+      "rms": 3.5017447726111,
+      "l2": 112.0558327235552,
+      "magnitude_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        899,
+        118,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "mtp.pre_fc_norm_embedding.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 1024,
+      "bytes": 2048,
+      "sha256_values": "94f4a65e7fd3eae385489f69c3d27b0abc0f9f706ff59580e3ce7a7fae551513",
+      "originally_contiguous": true,
+      "finite": 1024,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 1,
+      "negative": 1023,
+      "min": -0.6640625,
+      "max": 0.042236328125,
+      "mean": -0.4334218502044678,
+      "std": 0.09782952414024577,
+      "rms": 0.4443254618274436,
+      "l2": 14.218414778478195,
+      "magnitude_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        69,
+        951,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "mtp.pre_fc_norm_hidden.weight",
+      "shape": [
+        1024
+      ],
+      "dtype": "torch.bfloat16",
+      "numel": 1024,
+      "bytes": 2048,
+      "sha256_values": "83544d29d3a6c236e3cef4230e682d4a43e4f0f2ffc01fae1936b22cda96da20",
+      "originally_contiguous": true,
+      "finite": 1024,
+      "nan": 0,
+      "inf": 0,
+      "zeros": 0,
+      "positive": 41,
+      "negative": 983,
+      "min": -0.703125,
+      "max": 0.72265625,
+      "mean": -0.3436075448989868,
+      "std": 0.1288311423500625,
+      "rms": 0.366965404569329,
+      "l2": 11.742892946218529,
+      "magnitude_histogram": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        8,
+        105,
+        907,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "port_unloaded": [
+    {
+      "name": "mtp.fc.weight",
+      "numel": 2097152,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.input_layernorm.weight",
+      "numel": 1024,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.mlp.down_proj.weight",
+      "numel": 3670016,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.mlp.gate_proj.weight",
+      "numel": 3670016,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.mlp.up_proj.weight",
+      "numel": 3670016,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.post_attention_layernorm.weight",
+      "numel": 1024,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.self_attn.k_norm.weight",
+      "numel": 256,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.self_attn.k_proj.weight",
+      "numel": 524288,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.self_attn.o_proj.weight",
+      "numel": 2097152,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.self_attn.q_norm.weight",
+      "numel": 256,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.self_attn.q_proj.weight",
+      "numel": 4194304,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.layers.0.self_attn.v_proj.weight",
+      "numel": 524288,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.norm.weight",
+      "numel": 1024,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.pre_fc_norm_embedding.weight",
+      "numel": 1024,
+      "bitwise_equal_to_scanned_original": true
+    },
+    {
+      "name": "mtp.pre_fc_norm_hidden.weight",
+      "numel": 1024,
+      "bitwise_equal_to_scanned_original": true
+    }
+  ],
+  "files": {
+    "upstream/model.safetensors-00001-of-00001.safetensors": {
+      "bytes": 1746942600,
+      "sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696"
+    },
+    "sensenova_port/model.safetensors": {
+      "bytes": 2082191184,
+      "sha256": "14c3497c97c509515dd70d77e1baa50fda5f7ba1f3fbff8a0237d570ea4540c1"
+    }
+  },
+  "raw_original_tensors": 488,
+  "raw_original_values": 873438784,
+  "raw_port_tensors": 690,
+  "raw_port_values": 1040263040,
+  "additional_unique_values_scanned": 20452864,
+  "nonfinite_additional_values": 0,
+  "explanation": "The raw Qwen file also stores multi-token-prediction (mtp.*) weights. Neither the standard original autoregressive loader nor our evaluated hybrid instantiates them. They remain preserved and were scanned separately; this is not a missing thinking module or a cause uniquely assigned to errors."
+}
