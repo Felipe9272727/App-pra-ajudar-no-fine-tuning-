@@ -1,0 +1,27 @@
+{
+  "bypass_cases": 23,
+  "bypass_tasks": 2,
+  "case_wins_vs_parent": 0,
+  "case_losses_vs_parent": 0,
+  "changed_program_texts": 4,
+  "style_different_outputs": 4,
+  "style_total": 6,
+  "descriptive_pair_preferences": {
+    "original": 2,
+    "tie": 2,
+    "parent": 2
+  },
+  "style_automatic_strict_checks": {
+    "original": 3,
+    "parent": 2,
+    "bypass": 1
+  },
+  "style_token_limit_hits": {
+    "original": 2,
+    "parent": 3,
+    "bypass": 2
+  },
+  "json_true_only_rule_is_stricter_than_prompt": true,
+  "automatic_rule_not_changed": true,
+  "quality_gain_from_loop_established": false
+}
