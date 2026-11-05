@@ -1,0 +1,65 @@
+{
+  "format": "ZIP archive split into 8MiB sequential chunks; concatenate in listed order then unzip",
+  "archive_sha256": "edff50ce8e115101a3796c8f775d8347b7f1b5ee1fd5f057aa0548636a3ab8c3",
+  "members": {
+    "teacher_targets.pt": {
+      "bytes": 50528071,
+      "sha256": "5ad3dc1a1cfba9dccf3663b8b912fd279387140130f33d9ef1326e19eb0ba70b"
+    },
+    "liquid_statistics.pt": {
+      "bytes": 33044945,
+      "sha256": "2e3e68dd839c1ab5795b792345aab3f8f45f67830d74bf49c7a15658a6d6acf6"
+    },
+    "router_states.pt": {
+      "bytes": 15445901,
+      "sha256": "305511999f5efa31b2b2a6c4ff42bc369fcb573eeb422dfdb08b9c30fea5710f"
+    }
+  },
+  "chunks": [
+    {
+      "path": "native010/activation_archive/part_000.bin",
+      "bytes": 8388608,
+      "sha256": "2e719d144e052dfcb1048d7f7085498d16ae74731a1d4e60c889443cad6f746f"
+    },
+    {
+      "path": "native010/activation_archive/part_001.bin",
+      "bytes": 8388608,
+      "sha256": "60a85b608c11735e7bf6828833225a05815b28949554aaad407051cfd91f5be5"
+    },
+    {
+      "path": "native010/activation_archive/part_002.bin",
+      "bytes": 8388608,
+      "sha256": "58440974a78a3b3ec751aa90ffb0157432d0774d1e02b7f4a0d668242dbd7bca"
+    },
+    {
+      "path": "native010/activation_archive/part_003.bin",
+      "bytes": 8388608,
+      "sha256": "cba518d96894adb199a88a57f01c3c9c6f7dc3d8a82052e5ff28c8baad81aea3"
+    },
+    {
+      "path": "native010/activation_archive/part_004.bin",
+      "bytes": 8388608,
+      "sha256": "f0e1646c4d8fd3197603bf9c588b1f3983a6ed7bd1050fd5168941da31501c84"
+    },
+    {
+      "path": "native010/activation_archive/part_005.bin",
+      "bytes": 8388608,
+      "sha256": "3789e676ebaac268a7f86e30dea00d2331a3ce5321e0f06e794cd9d686c177ac"
+    },
+    {
+      "path": "native010/activation_archive/part_006.bin",
+      "bytes": 8388608,
+      "sha256": "3dda4d1c175928a2f4f51e712ffa00d595b5374f4d019a1f87c6cb459e5df637"
+    },
+    {
+      "path": "native010/activation_archive/part_007.bin",
+      "bytes": 8388608,
+      "sha256": "b7b14837a0df8a47aacd6d25af2ae949d0e711d86eac655375d2e4df889b339f"
+    },
+    {
+      "path": "native010/activation_archive/part_008.bin",
+      "bytes": 3351038,
+      "sha256": "e40eec4d7e7a2fea97c29190df9e7ed134f79e7a97ed103595f39c1f27ae1202"
+    }
+  ]
+}

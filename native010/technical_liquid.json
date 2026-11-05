@@ -1,0 +1,80 @@
+{
+  "status": "complete",
+  "cold_reconstruction_bitwise_verified": true,
+  "architecture": {
+    "physical_layers": 32,
+    "executions": 56,
+    "passes": 2,
+    "streams": 2,
+    "neutral_layers": [],
+    "visit_gains": [
+      1.0,
+      1.0
+    ],
+    "projection_factors": {
+      "4": 0.25,
+      "5": 0.25,
+      "6": 0.25,
+      "7": 0.25,
+      "8": 0.25,
+      "9": 0.25,
+      "10": 0.25,
+      "11": 0.25,
+      "12": 0.5,
+      "13": 0.5,
+      "14": 0.5,
+      "15": 0.5,
+      "16": 0.25,
+      "17": 0.25,
+      "18": 0.25,
+      "19": 0.25,
+      "20": 0.25,
+      "21": 0.25,
+      "22": 0.25,
+      "23": 0.25,
+      "24": 0.5,
+      "25": 0.5,
+      "26": 0.5,
+      "27": 0.5
+    },
+    "local_windows": {
+      "3": 0,
+      "7": 256,
+      "11": 256,
+      "15": 256,
+      "19": 0,
+      "23": 0,
+      "27": 256,
+      "31": 0
+    },
+    "input_dependent_routers": 0,
+    "history_nonzero": 387858,
+    "parameters": 1020252592,
+    "backward_passes": 0,
+    "lineage": "Qwen3.5 widths and DeltaNet; Loop/mHC plus compatible Liquid-inspired kernels; not full LFM3"
+  },
+  "probes": [
+    {
+      "length": 17,
+      "max_logit_difference": 0.125,
+      "same_top_token": true,
+      "finite": true,
+      "passed": true
+    },
+    {
+      "length": 257,
+      "max_logit_difference": 0.307373046875,
+      "same_top_token": true,
+      "finite": true,
+      "passed": true
+    },
+    {
+      "length": 513,
+      "max_logit_difference": 0.3515625,
+      "same_top_token": true,
+      "finite": true,
+      "passed": true
+    }
+  ],
+  "passed": true
+}
