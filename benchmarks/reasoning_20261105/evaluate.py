@@ -65,14 +65,16 @@ def identity_probe(model,tok):
 
 @torch.inference_mode()
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('variant',choices=['original','liquid','parent']);a=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('variant',choices=['original','liquid','parent'])
+    parser.add_argument('--output-dir',type=Path,default=HERE);a=parser.parse_args()
     frozen=json.loads((HERE/'frozen.json').read_text())
     assert a.variant in frozen['variants']
     for name,digest in frozen['files'].items():assert e.cr.file_hash(ROOT/name)==digest,name
     selection=json.loads((ROOT/'reasoning/selection.json').read_text())
     assert e.cr.file_hash(ROOT/'reasoning/selection.json')==frozen['selection_sha256']
     rows=json.loads((HERE/'prompts.json').read_text());oracles=json.loads((HERE/'oracles.json').read_text())
-    path=HERE/f'results_{a.variant}.json';fingerprint=e.cr.file_hash(HERE/'frozen.json')
+    a.output_dir.mkdir(parents=True,exist_ok=True)
+    path=a.output_dir/f'results_{a.variant}.json';fingerprint=e.cr.file_hash(HERE/'frozen.json')
     report=json.loads(path.read_text()) if path.exists() else {'variant':a.variant,'status':'running','rows':[],
         'frozen_sha256':fingerprint,'branding_in_benchmark':False,'no_reference_answers_in_generation':True,
         'backward_passes':0,'matched_protocol':{'greedy':True,'thinking':False,'cpu_threads':4,'cache':True,'precision':'BF16','attention':'eager'}}
