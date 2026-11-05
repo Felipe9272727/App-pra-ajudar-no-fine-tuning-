@@ -1,0 +1,26 @@
+{
+  "explain_cache_pt": {
+    "A": "original",
+    "B": "parent"
+  },
+  "polite_rewrite_pt": {
+    "A": "parent",
+    "B": "original"
+  },
+  "uncertainty_pt": {
+    "A": "original",
+    "B": "parent"
+  },
+  "summary_pt": {
+    "A": "parent",
+    "B": "original"
+  },
+  "structured_pt": {
+    "A": "parent",
+    "B": "original"
+  },
+  "explain_test_en": {
+    "A": "parent",
+    "B": "original"
+  }
+}

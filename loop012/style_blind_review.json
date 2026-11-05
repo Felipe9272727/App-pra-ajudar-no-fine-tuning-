@@ -1,0 +1,14 @@
+{
+  "reviewer": "assistant researcher, anonymous A/B ordering; not an independent human evaluation",
+  "rubric": "Factual correctness and instruction following first, then clarity and repetition. No benefit awarded for difference or length alone.",
+  "rows": [
+    {"id":"explain_cache_pt","preferred":"A","reason":"A ends after two sentences, although it unnecessarily repeats the definition. B repeats further, emits stray </think> markers and ends incomplete."},
+    {"id":"polite_rewrite_pt","preferred":"tie","reason":"Identical text. Both preserve the deadline and purpose but remain fairly blunt; no demonstrated improvement in courtesy."},
+    {"id":"uncertainty_pt","preferred":"A","reason":"Both truncate before providing three steps. A begins with relevant profiling; B introduces the unsupported claim that the program hangs/crashes, whereas the user only reported slowness."},
+    {"id":"summary_pt","preferred":"A","reason":"A clearly preserves closure and the extension of returns to Wednesday without a fee. It omits reopening time. B is awkward and makes the timing of fee-free returns ambiguous."},
+    {"id":"structured_pt","preferred":"tie","reason":"Identical valid JSON preserving the provided data. The string sim is acceptable because the prompt did not explicitly require a boolean. The preregistered automatic true-only check is stricter than the prompt and is reported separately, not changed retroactively."},
+    {"id":"explain_test_en","preferred":"A","reason":"Both exceed the requested two sentences and truncate. A contains distinct explanations; B repeats the same sentence without advancing."}
+  ],
+  "automatic_checks_unchanged": true,
+  "general_superiority_established": false
+}
