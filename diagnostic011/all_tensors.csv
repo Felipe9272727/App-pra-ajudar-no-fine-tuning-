@@ -1,0 +1,700 @@
+name,shape,numel,dtype,observed_in_errors,observed_in_guards,weight_all_zero,weight_rms,error_reader_output_rms,guard_reader_output_rms,error_guard_log_rms_ratio
+model.visual.patch_embed.proj.weight,"[768, 3, 2, 16, 16]",1179648,torch.bfloat16,False,False,False,0.0072184774917327795,,,
+model.visual.patch_embed.proj.bias,[768],768,torch.bfloat16,False,False,False,0.39363427594115685,,,
+model.visual.pos_embed.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.13973223862101453,,,
+model.visual.blocks.0.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.0394373564609396,,,
+model.visual.blocks.0.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.29550333004296175,,,
+model.visual.blocks.0.norm2.weight,[768],768,torch.bfloat16,False,False,False,4.11896007865904,,,
+model.visual.blocks.0.norm2.bias,[768],768,torch.bfloat16,False,False,False,0.3180268622964682,,,
+model.visual.blocks.0.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.027426794483431438,,,
+model.visual.blocks.0.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.5303758304282686,,,
+model.visual.blocks.0.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.013860684866880149,,,
+model.visual.blocks.0.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.3944621217503186,,,
+model.visual.blocks.0.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.015882708178343287,,,
+model.visual.blocks.0.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,2.067865818447497,,,
+model.visual.blocks.0.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.0131715083505219,,,
+model.visual.blocks.0.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.715638227146345,,,
+model.visual.blocks.1.norm1.weight,[768],768,torch.bfloat16,False,False,False,0.9690764959195488,,,
+model.visual.blocks.1.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.3253293088878939,,,
+model.visual.blocks.1.norm2.weight,[768],768,torch.bfloat16,False,False,False,1.4216674920442887,,,
+model.visual.blocks.1.norm2.bias,[768],768,torch.bfloat16,False,False,False,0.2909022102830143,,,
+model.visual.blocks.1.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.020410056682640475,,,
+model.visual.blocks.1.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.6604122773574614,,,
+model.visual.blocks.1.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.013106040486517884,,,
+model.visual.blocks.1.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.5232161948314569,,,
+model.visual.blocks.1.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.014938168442743337,,,
+model.visual.blocks.1.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.1993962094731496,,,
+model.visual.blocks.1.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.011775466151720398,,,
+model.visual.blocks.1.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.37157934482548377,,,
+model.visual.blocks.2.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.1651652380509792,,,
+model.visual.blocks.2.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.32874872759857515,,,
+model.visual.blocks.2.norm2.weight,[768],768,torch.bfloat16,False,False,False,1.28417765299318,,,
+model.visual.blocks.2.norm2.bias,[768],768,torch.bfloat16,False,False,False,0.2856888368376851,,,
+model.visual.blocks.2.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.016797671828410677,,,
+model.visual.blocks.2.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.6565591675361473,,,
+model.visual.blocks.2.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.012292948964409819,,,
+model.visual.blocks.2.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.25213638123562093,,,
+model.visual.blocks.2.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.014354293986359528,,,
+model.visual.blocks.2.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.2220107048487048,,,
+model.visual.blocks.2.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.011568942587280535,,,
+model.visual.blocks.2.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.2115191820994494,,,
+model.visual.blocks.3.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.2892803836444235,,,
+model.visual.blocks.3.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.2787518201332972,,,
+model.visual.blocks.3.norm2.weight,[768],768,torch.bfloat16,False,False,False,1.252724491719155,,,
+model.visual.blocks.3.norm2.bias,[768],768,torch.bfloat16,False,False,False,0.3970200720072743,,,
+model.visual.blocks.3.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.015517734633777857,,,
+model.visual.blocks.3.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.5525647998352183,,,
+model.visual.blocks.3.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.012098557631475602,,,
+model.visual.blocks.3.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.22566486378756057,,,
+model.visual.blocks.3.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.01466789825344334,,,
+model.visual.blocks.3.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.4325319776940113,,,
+model.visual.blocks.3.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.01152825198734999,,,
+model.visual.blocks.3.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.21423045852300915,,,
+model.visual.blocks.4.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.2289964051510924,,,
+model.visual.blocks.4.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.2703898631493111,,,
+model.visual.blocks.4.norm2.weight,[768],768,torch.bfloat16,False,False,False,1.3264941899235527,,,
+model.visual.blocks.4.norm2.bias,[768],768,torch.bfloat16,False,False,False,0.4079593181614873,,,
+model.visual.blocks.4.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.015707315000946357,,,
+model.visual.blocks.4.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.5146318175528051,,,
+model.visual.blocks.4.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.011555007124559149,,,
+model.visual.blocks.4.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.23478301223983555,,,
+model.visual.blocks.4.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.014823027892358166,,,
+model.visual.blocks.4.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.597391435889653,,,
+model.visual.blocks.4.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.01153741784423106,,,
+model.visual.blocks.4.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.22036781093058502,,,
+model.visual.blocks.5.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.3026646448143764,,,
+model.visual.blocks.5.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.28493030384540835,,,
+model.visual.blocks.5.norm2.weight,[768],768,torch.bfloat16,False,False,False,1.4996650080833394,,,
+model.visual.blocks.5.norm2.bias,[768],768,torch.bfloat16,False,False,False,0.4853778038407729,,,
+model.visual.blocks.5.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.016013427775455946,,,
+model.visual.blocks.5.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.4845124820362045,,,
+model.visual.blocks.5.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.01146199842126698,,,
+model.visual.blocks.5.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.2928518679411274,,,
+model.visual.blocks.5.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.01538717248377711,,,
+model.visual.blocks.5.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.813252901198765,,,
+model.visual.blocks.5.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.011453391296033415,,,
+model.visual.blocks.5.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.2425307226816065,,,
+model.visual.blocks.6.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.5326299093920908,,,
+model.visual.blocks.6.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.2900654879783957,,,
+model.visual.blocks.6.norm2.weight,[768],768,torch.bfloat16,False,False,False,1.6325273584231945,,,
+model.visual.blocks.6.norm2.bias,[768],768,torch.bfloat16,False,False,False,0.5230921204814422,,,
+model.visual.blocks.6.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.015355670543596,,,
+model.visual.blocks.6.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.5443162678572417,,,
+model.visual.blocks.6.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.012326369348366282,,,
+model.visual.blocks.6.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.28821436263690475,,,
+model.visual.blocks.6.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.014504360647313239,,,
+model.visual.blocks.6.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.7587740858815224,,,
+model.visual.blocks.6.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.01278985116397091,,,
+model.visual.blocks.6.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.2525945623985074,,,
+model.visual.blocks.7.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.607700235731095,,,
+model.visual.blocks.7.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.3140547954237233,,,
+model.visual.blocks.7.norm2.weight,[768],768,torch.bfloat16,False,False,False,1.991227661731102,,,
+model.visual.blocks.7.norm2.bias,[768],768,torch.bfloat16,False,False,False,0.7174796389196642,,,
+model.visual.blocks.7.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.01550540988339316,,,
+model.visual.blocks.7.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.577528697571174,,,
+model.visual.blocks.7.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.01191046800525571,,,
+model.visual.blocks.7.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.17702957300803135,,,
+model.visual.blocks.7.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.014113869884543245,,,
+model.visual.blocks.7.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.8723428467002694,,,
+model.visual.blocks.7.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.013767369848875546,,,
+model.visual.blocks.7.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.21328500915973156,,,
+model.visual.blocks.8.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.725379578895668,,,
+model.visual.blocks.8.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.40846849923190304,,,
+model.visual.blocks.8.norm2.weight,[768],768,torch.bfloat16,False,False,False,6.1341156493256,,,
+model.visual.blocks.8.norm2.bias,[768],768,torch.bfloat16,False,False,False,2.5138450054738617,,,
+model.visual.blocks.8.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.01613169527035064,,,
+model.visual.blocks.8.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.6133714425214138,,,
+model.visual.blocks.8.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.01257665795495613,,,
+model.visual.blocks.8.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.1966985526300324,,,
+model.visual.blocks.8.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.014568861188796512,,,
+model.visual.blocks.8.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.7806416172842998,,,
+model.visual.blocks.8.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.015003782737554221,,,
+model.visual.blocks.8.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.3009230498358468,,,
+model.visual.blocks.9.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.9424326209268021,,,
+model.visual.blocks.9.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.519580480834614,,,
+model.visual.blocks.9.norm2.weight,[768],768,torch.bfloat16,False,False,False,9.419777076544777,,,
+model.visual.blocks.9.norm2.bias,[768],768,torch.bfloat16,False,False,False,3.599731128015295,,,
+model.visual.blocks.9.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.01652343426273581,,,
+model.visual.blocks.9.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.6126855555262443,,,
+model.visual.blocks.9.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.014723858598630572,,,
+model.visual.blocks.9.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.3401868022179479,,,
+model.visual.blocks.9.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.015034392872327136,,,
+model.visual.blocks.9.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.8467234212887338,,,
+model.visual.blocks.9.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.015740621627335343,,,
+model.visual.blocks.9.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.550556971464182,,,
+model.visual.blocks.10.norm1.weight,[768],768,torch.bfloat16,False,False,False,2.1168085207175604,,,
+model.visual.blocks.10.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.5999907844264091,,,
+model.visual.blocks.10.norm2.weight,[768],768,torch.bfloat16,False,False,False,14.18014279870236,,,
+model.visual.blocks.10.norm2.bias,[768],768,torch.bfloat16,False,False,False,4.203119437521782,,,
+model.visual.blocks.10.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.016779977550373033,,,
+model.visual.blocks.10.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.615498121732498,,,
+model.visual.blocks.10.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.015700128996453473,,,
+model.visual.blocks.10.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.44379003048548815,,,
+model.visual.blocks.10.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.015581946317778528,,,
+model.visual.blocks.10.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.8472327120288423,,,
+model.visual.blocks.10.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.016881731217072718,,,
+model.visual.blocks.10.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,0.7823738555137738,,,
+model.visual.blocks.11.norm1.weight,[768],768,torch.bfloat16,False,False,False,1.8831050112685057,,,
+model.visual.blocks.11.norm1.bias,[768],768,torch.bfloat16,False,False,False,0.6240919638657567,,,
+model.visual.blocks.11.norm2.weight,[768],768,torch.bfloat16,False,False,False,12.690562024367704,,,
+model.visual.blocks.11.norm2.bias,[768],768,torch.bfloat16,False,False,False,2.9605050465887697,,,
+model.visual.blocks.11.attn.qkv.weight,"[2304, 768]",1769472,torch.bfloat16,False,False,False,0.01734495436717985,,,
+model.visual.blocks.11.attn.qkv.bias,[2304],2304,torch.bfloat16,False,False,False,0.5511256879118591,,,
+model.visual.blocks.11.attn.proj.weight,"[768, 768]",589824,torch.bfloat16,False,False,False,0.018273682495235588,,,
+model.visual.blocks.11.attn.proj.bias,[768],768,torch.bfloat16,False,False,False,0.7628923251968258,,,
+model.visual.blocks.11.mlp.linear_fc1.weight,"[3072, 768]",2359296,torch.bfloat16,False,False,False,0.01597168779174822,,,
+model.visual.blocks.11.mlp.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,1.6929704783944546,,,
+model.visual.blocks.11.mlp.linear_fc2.weight,"[768, 3072]",2359296,torch.bfloat16,False,False,False,0.016695223408582028,,,
+model.visual.blocks.11.mlp.linear_fc2.bias,[768],768,torch.bfloat16,False,False,False,1.0545348751615757,,,
+model.visual.merger.norm.weight,[768],768,torch.bfloat16,False,False,False,1.8741799939851145,,,
+model.visual.merger.norm.bias,[768],768,torch.bfloat16,False,False,False,0.5785286809814101,,,
+model.visual.merger.linear_fc1.weight,"[3072, 3072]",9437184,torch.bfloat16,False,False,False,0.01169619278975124,,,
+model.visual.merger.linear_fc1.bias,[3072],3072,torch.bfloat16,False,False,False,0.011585042408506841,,,
+model.visual.merger.linear_fc2.weight,"[1024, 3072]",3145728,torch.bfloat16,False,False,False,0.009882594518446317,,,
+model.visual.merger.linear_fc2.bias,[1024],1024,torch.bfloat16,False,False,False,0.02433475211136422,,,
+model.language_model.embed_tokens.weight,"[248320, 1024]",254279680,torch.bfloat16,True,True,False,0.019696785884475643,1.5667407035827636,1.5010335445404053,0.042843569070100784
+model.language_model.layers.0.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,6.065901912792936,0.0389995738863945,0.03888968005776405,0.0028217521030455828
+model.language_model.layers.0.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,2.4523858578686233,0.0389995738863945,0.03888968005776405,0.0028217521030455828
+model.language_model.layers.0.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.05504440270312951,0.0389995738863945,0.03888968005776405,0.0028217521030455828
+model.language_model.layers.0.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9553915496355038,0.11322663128376007,0.11152533069252968,0.015139670111238956
+model.language_model.layers.0.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.012371178894160548,0.0389995738863945,0.03888968005776405,0.0028217521030455828
+model.language_model.layers.0.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.016555086379056328,1.2982156991958618,1.3097131848335266,-0.008817390538752079
+model.language_model.layers.0.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.017298962259942586,0.9304887175559997,0.9331696033477783,-0.002877018880099058
+model.language_model.layers.0.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.017505675818983046,1.3559604644775392,1.3112450242042542,0.033532921224832535
+model.language_model.layers.0.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.037693938038439415,2.377063512802124,2.3254581689834595,0.02194887585937977
+model.language_model.layers.0.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.012117132480298987,0.462180095911026,0.44746850430965424,0.032348427921533585
+model.language_model.layers.0.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.00855655491933857,0.20007681846618652,0.1986100673675537,0.007357998285442591
+model.language_model.layers.0.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008496885837166098,0.0224214032292366,0.022245380096137524,0.007881613448262215
+model.language_model.layers.0.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.267164375068255,1.2390602111816407,1.2383436560630798,0.000578474544454366
+model.language_model.layers.0.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.12813167466475908,0.8940004348754883,0.8908173739910126,0.003566810628399253
+model.language_model.layers.1.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.124544959316976,0.026449086144566536,0.02652170415967703,-0.0027418138924986124
+model.language_model.layers.1.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.3649620963430316,0.026449086144566536,0.02652170415967703,-0.0027418138924986124
+model.language_model.layers.1.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.05185530271179495,0.026449086144566536,0.02652170415967703,-0.0027418138924986124
+model.language_model.layers.1.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9310708532896517,0.06438125669956207,0.0631212443113327,0.019765209406614304
+model.language_model.layers.1.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.012666719691516613,0.026449086144566536,0.02652170415967703,-0.0027418138924986124
+model.language_model.layers.1.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.016638558560276365,0.9025454521179199,0.9122276306152344,-0.010670526884496212
+model.language_model.layers.1.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.01917442658296909,1.2780527591705322,1.2920938730239868,-0.010926416143774986
+model.language_model.layers.1.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.018608291969304316,1.1831781625747682,1.1307072043418884,0.04536089673638344
+model.language_model.layers.1.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.03014192602246864,2.035279107093811,1.906175136566162,0.06553429365158081
+model.language_model.layers.1.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.013301976931837892,0.5378924012184143,0.5293772518634796,0.015957269817590714
+model.language_model.layers.1.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008557004364022892,0.244680255651474,0.24542631208896637,-0.0030444664880633354
+model.language_model.layers.1.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008588168976649645,0.028103861212730407,0.028360484167933464,-0.009089767932891846
+model.language_model.layers.1.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.43929724718541613,1.3594927310943603,1.3633381724357605,-0.0028245963621884584
+model.language_model.layers.1.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.18621974895117122,0.9982503414154053,0.999699056148529,-0.0014502188423648477
+model.language_model.layers.2.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,2.7352728214390973,0.030594604462385176,0.030291974544525146,0.009940879419445992
+model.language_model.layers.2.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.4075816263788474,0.030594604462385176,0.030291974544525146,0.009940879419445992
+model.language_model.layers.2.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.06032716328081207,0.030594604462385176,0.030291974544525146,0.009940879419445992
+model.language_model.layers.2.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9408620313914005,0.08506054580211639,0.08506852388381958,-9.376250091008842e-05
+model.language_model.layers.2.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.01250261251249043,0.030594604462385176,0.030291974544525146,0.009940879419445992
+model.language_model.layers.2.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.017255382618401253,1.0263679504394532,1.0360355973243713,-0.009375215508043766
+model.language_model.layers.2.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.01951023566646208,1.5812246084213257,1.5782564878463745,0.0018788794986903667
+model.language_model.layers.2.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.01852367518316503,1.3765264749526978,1.3119863867759705,0.04802098125219345
+model.language_model.layers.2.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.02745427808757817,1.8521829128265381,1.7413710951805115,0.06169205531477928
+model.language_model.layers.2.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.01624531534234131,0.8193388104438781,0.8203029930591583,-0.0011760948691517115
+model.language_model.layers.2.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008153195744104244,0.2520810663700104,0.2515716701745987,0.002022841712459922
+model.language_model.layers.2.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008233294419996927,0.034864341467618944,0.03433101624250412,0.015415329486131668
+model.language_model.layers.2.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.4512804290515345,1.4207199573516847,1.424780547618866,-0.0028540650382637978
+model.language_model.layers.2.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.26504843445451537,1.091614031791687,1.0904361605644226,0.0010795724811032414
+model.language_model.layers.3.self_attn.q_proj.weight,"[4096, 1024]",4194304,torch.bfloat16,True,True,False,0.019775766379718722,2.2578926563262938,2.241420030593872,0.007322260178625584
+model.language_model.layers.3.self_attn.k_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.012410831063066608,0.6039960980415344,0.6157904863357544,-0.01933903619647026
+model.language_model.layers.3.self_attn.v_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.012757253721043967,0.5984558582305908,0.5948931872844696,0.005970856174826622
+model.language_model.layers.3.self_attn.o_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.012173785839566404,0.024997854977846144,0.025052811950445175,-0.002196039305999875
+model.language_model.layers.3.self_attn.q_norm.weight,[256],256,torch.bfloat16,True,True,False,0.4637264454212901,1.3804097175598145,1.370756447315216,0.0070176078006625175
+model.language_model.layers.3.self_attn.k_norm.weight,[256],256,torch.bfloat16,True,True,False,0.47224701903376126,1.4407553195953369,1.4427591562271118,-0.0013898728648200631
+model.language_model.layers.3.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.016312636727067165,1.025207257270813,1.0167789459228516,0.00825505144894123
+model.language_model.layers.3.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008007684219728507,0.25424433052539824,0.25176598876714706,0.009795691817998886
+model.language_model.layers.3.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008075715472179919,0.030797895416617392,0.030368207022547722,0.014050140976905823
+model.language_model.layers.3.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.35555905524146497,1.3436615943908692,1.3442211151123047,-0.00041630587656982243
+model.language_model.layers.3.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.2467726221422002,1.131232500076294,1.1275018453598022,0.0033033110667020082
+model.language_model.layers.4.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.1249334067106247,0.12799552828073502,-0.024214453995227814
+model.language_model.layers.4.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.6354759281728803,0.0236545167863369,0.02353800181299448,0.00493783550336957
+model.language_model.layers.4.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.4599016413560084,0.0236545167863369,0.02353800181299448,0.00493783550336957
+model.language_model.layers.4.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.07746422772466875,0.0236545167863369,0.02353800181299448,0.00493783550336957
+model.language_model.layers.4.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.8920204874773593,0.06334804147481918,0.0628473125398159,0.007935781031847
+model.language_model.layers.4.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011713948631420522,0.0236545167863369,0.02353800181299448,0.00493783550336957
+model.language_model.layers.4.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.018891354406552836,1.3059324502944947,1.3183255195617676,-0.009445070289075375
+model.language_model.layers.4.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.01792994682242074,1.4435179948806762,1.4516193866729736,-0.005596593488007784
+model.language_model.layers.4.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.01528529625799855,1.3629900932312011,1.3013787865638733,0.04625660926103592
+model.language_model.layers.4.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.026961642345512515,1.6067330360412597,1.4939199686050415,0.07279942184686661
+model.language_model.layers.4.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.015557687527465138,0.8957080960273742,0.8970735371112823,-0.0015232834266498685
+model.language_model.layers.4.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008121816404031834,0.27596632242202757,0.27333301305770874,0.009587906301021576
+model.language_model.layers.4.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008134658354126287,0.03317739814519882,0.032828301191329956,0.010577920824289322
+model.language_model.layers.4.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.5004536189938169,1.4642335653305054,1.4629226326942444,0.0008956949459388852
+model.language_model.layers.4.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.23867050536335482,1.1577816724777221,1.153874397277832,0.0033805386628955603
+model.language_model.layers.4.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12422953248023987,0.1276865303516388,-0.027447354048490524
+model.language_model.layers.4.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12422953248023987,0.1276865303516388,-0.027447354048490524
+model.language_model.layers.4.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1265111818909645,0.12982077151536942,-0.02582409232854843
+model.language_model.layers.4.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1265111818909645,0.12982077151536942,-0.02582409232854843
+model.language_model.layers.5.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.12448950707912446,0.12764538824558258,-0.025034595280885696
+model.language_model.layers.5.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.4303584821923536,0.024595536291599274,0.024013436399400234,0.023951472714543343
+model.language_model.layers.5.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.7203248568376037,0.024595536291599274,0.024013436399400234,0.023951472714543343
+model.language_model.layers.5.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.0644491419093789,0.024595536291599274,0.024013436399400234,0.023951472714543343
+model.language_model.layers.5.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9411376949958373,0.06883446723222733,0.06687512248754501,0.02887754514813423
+model.language_model.layers.5.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011808184869814204,0.024595536291599274,0.024013436399400234,0.023951472714543343
+model.language_model.layers.5.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.017735514246301973,1.1909216165542602,1.1875898241996765,0.0028015433344990015
+model.language_model.layers.5.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.016520075171882257,1.2141635417938232,1.20707768201828,0.005853060632944107
+model.language_model.layers.5.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.015270917901013665,1.4665754079818725,1.3750527501106262,0.06443798542022705
+model.language_model.layers.5.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.024045204663938134,1.4917248964309693,1.3054090738296509,0.13341669738292694
+model.language_model.layers.5.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.01459375167248558,0.7592142462730408,0.7577895224094391,0.001878284616395831
+model.language_model.layers.5.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008293396127755488,0.2767815887928009,0.2745586633682251,0.008063738234341145
+model.language_model.layers.5.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008253216417318632,0.03150252439081669,0.03102142456918955,0.015389621257781982
+model.language_model.layers.5.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.4604411606336354,1.4122436046600342,1.4113750457763672,0.0006151691195555031
+model.language_model.layers.5.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.23461402195902673,1.1212165117263795,1.118110477924347,0.002774082822725177
+model.language_model.layers.5.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1249334067106247,0.12799552828073502,-0.024214453995227814
+model.language_model.layers.5.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1249334067106247,0.12799552828073502,-0.024214453995227814
+model.language_model.layers.5.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12677539139986038,0.12981650233268738,-0.02370499074459076
+model.language_model.layers.5.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12677539139986038,0.12981650233268738,-0.02370499074459076
+model.language_model.layers.6.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.12640461921691895,0.12951623648405075,-0.024318208917975426
+model.language_model.layers.6.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,2.8619029564584393,0.0221652764827013,0.020907603204250336,0.0584140308201313
+model.language_model.layers.6.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.1450083913037519,0.0221652764827013,0.020907603204250336,0.0584140308201313
+model.language_model.layers.6.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.05866208983859822,0.0221652764827013,0.020907603204250336,0.0584140308201313
+model.language_model.layers.6.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9824769628410773,0.05507683232426643,0.05408397316932678,0.01819128356873989
+model.language_model.layers.6.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.012058906425592993,0.0221652764827013,0.020907603204250336,0.0584140308201313
+model.language_model.layers.6.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.017023737299196418,0.9723550319671631,0.9674555957317352,0.005051468964666128
+model.language_model.layers.6.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.01597696577075924,1.3086762189865113,1.3106234073638916,-0.0014868101570755243
+model.language_model.layers.6.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.017124045371377804,1.351497197151184,1.3234971165657043,0.020935507491230965
+model.language_model.layers.6.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.02262563954847061,1.280037021636963,1.1072396039962769,0.14501889050006866
+model.language_model.layers.6.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.013823932166628212,0.7543096780776978,0.752371072769165,0.0025733946822583675
+model.language_model.layers.6.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008360646681546942,0.2936080992221832,0.290726438164711,0.009863094426691532
+model.language_model.layers.6.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.0081902099476595,0.030257346853613854,0.029979336075484753,0.009230676107108593
+model.language_model.layers.6.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.40792308271795696,1.3502153873443603,1.3494136333465576,0.000593962671700865
+model.language_model.layers.6.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.19751489288578045,1.112836527824402,1.1104475855827332,0.0021490592043846846
+model.language_model.layers.6.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12448951005935668,0.12764539569616318,-0.025034595280885696
+model.language_model.layers.6.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12448951005935668,0.12764539569616318,-0.025034595280885696
+model.language_model.layers.6.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12758358418941498,0.1304320991039276,-0.022081084549427032
+model.language_model.layers.6.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12758358418941498,0.1304320991039276,-0.022081084549427032
+model.language_model.layers.7.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.7.self_attn.q_proj.weight,"[4096, 1024]",4194304,torch.bfloat16,True,True,False,0.015363533903544254,1.0817179441452027,1.0943684577941895,-0.011626997962594032
+model.language_model.layers.7.self_attn.k_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.010589208172335381,0.4219983696937561,0.4250236302614212,-0.007143320515751839
+model.language_model.layers.7.self_attn.v_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.011849251088074287,0.4529069423675537,0.44362856447696686,0.02069908194243908
+model.language_model.layers.7.self_attn.o_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011170720206658838,0.02740305885672569,0.026037631556391716,0.05111177638173103
+model.language_model.layers.7.self_attn.q_norm.weight,[256],256,torch.bfloat16,True,True,False,0.5186114639335434,1.3620859384536743,1.3507814407348633,0.0083340248093009
+model.language_model.layers.7.self_attn.k_norm.weight,[256],256,torch.bfloat16,True,True,False,0.5196377920274116,1.5100584030151367,1.5086691975593567,0.0009203489171341062
+model.language_model.layers.7.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.01246540210267713,0.6534358501434326,0.6480121910572052,0.008334852755069733
+model.language_model.layers.7.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008437049490937213,0.2846056818962097,0.2809506356716156,0.012925650924444199
+model.language_model.layers.7.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008232255883879365,0.030180060490965843,0.02917864266782999,0.03374443203210831
+model.language_model.layers.7.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.16507444899861748,1.1175869703292847,1.1171905994415283,0.00035470392322167754
+model.language_model.layers.7.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.20707815065985624,1.0922569513320923,1.0868773460388184,0.004937360994517803
+model.language_model.layers.7.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12640461921691895,0.12951623648405075,-0.024318208917975426
+model.language_model.layers.7.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12640461921691895,0.12951623648405075,-0.024318208917975426
+model.language_model.layers.7.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12776079177856445,0.1304367259144783,-0.020728563889861107
+model.language_model.layers.7.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12776079177856445,0.1304367259144783,-0.020728563889861107
+model.language_model.layers.8.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.8.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.6354759281728803,0.0,0.0,0.0
+model.language_model.layers.8.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.4599016413560084,0.0,0.0,0.0
+model.language_model.layers.8.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.07765846494877551,0.0,0.0,0.0
+model.language_model.layers.8.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.8920204874773593,0.05870031043887138,0.05752149969339371,0.02028622478246689
+model.language_model.layers.8.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.8.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.018891354406552836,1.2677694082260131,1.2873621582984924,-0.015336273238062859
+model.language_model.layers.8.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.01792994682242074,1.4223445415496827,1.4440390467643738,-0.015137465670704842
+model.language_model.layers.8.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.01528529625799855,1.2333185434341432,1.210637390613556,0.01856159418821335
+model.language_model.layers.8.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.026961642345512515,1.4695026874542236,1.3999371528625488,0.048496708273887634
+model.language_model.layers.8.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.015557687527465138,0.8558633923530579,0.8587712347507477,-0.003391766222193837
+model.language_model.layers.8.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008121816404031834,0.27796216011047364,0.2745695561170578,0.012280330061912537
+model.language_model.layers.8.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.8.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.5004536189938169,1.47101628780365,1.4675921201705933,0.0023304466158151627
+model.language_model.layers.8.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.23867050536335482,1.1621444463729858,1.1561774611473083,0.005147655960172415
+model.language_model.layers.8.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.8.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.8.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.8.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.9.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.9.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.4303584821923536,0.0,0.0,0.0
+model.language_model.layers.9.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.7203248568376037,0.0,0.0,0.0
+model.language_model.layers.9.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.06460960266441378,0.0,0.0,0.0
+model.language_model.layers.9.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9411376949958373,0.06482544243335724,0.06246984750032425,0.03701413422822952
+model.language_model.layers.9.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.9.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.017735514246301973,1.155422043800354,1.1607654690742493,-0.004614014178514481
+model.language_model.layers.9.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.016520075171882257,1.1935466527938843,1.194030225276947,-0.00040509560494683683
+model.language_model.layers.9.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.015270917901013665,1.3903579473495484,1.349272608757019,0.029995586723089218
+model.language_model.layers.9.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.024045204663938134,1.3658736228942872,1.232180118560791,0.10300914943218231
+model.language_model.layers.9.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.01459375167248558,0.7253230929374694,0.7238920032978058,0.0019750152714550495
+model.language_model.layers.9.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008293396127755488,0.2803372323513031,0.27615614235401154,0.015026824548840523
+model.language_model.layers.9.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.9.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.4604411606336354,1.4188803911209107,1.415134072303772,0.002643782878294587
+model.language_model.layers.9.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.23461402195902673,1.1275994062423706,1.1213039755821228,0.0055986978113651276
+model.language_model.layers.9.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.9.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.9.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.9.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.10.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.10.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,2.8619029564584393,0.0,0.0,0.0
+model.language_model.layers.10.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.1450083913037519,0.0,0.0,0.0
+model.language_model.layers.10.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.058829925445966894,0.0,0.0,0.0
+model.language_model.layers.10.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9824769628410773,0.05063111260533333,0.0495305061340332,0.021977446973323822
+model.language_model.layers.10.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.10.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.017023737299196418,0.9608519554138184,0.9580900967121124,0.0028785718604922295
+model.language_model.layers.10.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.01597696577075924,1.2796046257019043,1.2867452502250671,-0.00556482607498765
+model.language_model.layers.10.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.017124045371377804,1.312418270111084,1.3086454272270203,0.0028788098134100437
+model.language_model.layers.10.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.02262563954847061,1.2123976707458497,1.101489782333374,0.09593628346920013
+model.language_model.layers.10.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.013823932166628212,0.7345198631286621,0.7310829758644104,0.0046901218593120575
+model.language_model.layers.10.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008360646681546942,0.2916127383708954,0.2878287732601166,0.013060972094535828
+model.language_model.layers.10.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.10.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.40792308271795696,1.3545928239822387,1.3511263132095337,0.0025623366236686707
+model.language_model.layers.10.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.19751489288578045,1.1121635675430297,1.108666181564331,0.003149670083075762
+model.language_model.layers.10.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.10.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.10.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.10.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.11.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.11.self_attn.q_proj.weight,"[4096, 1024]",4194304,torch.bfloat16,True,True,False,0.015363533903544254,0.9290155529975891,0.9406366050243378,-0.012431384064257145
+model.language_model.layers.11.self_attn.k_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.010589208172335381,0.4073318123817444,0.4111113101243973,-0.009235880337655544
+model.language_model.layers.11.self_attn.v_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.011849251088074287,0.446962571144104,0.4386593848466873,0.018751611933112144
+model.language_model.layers.11.self_attn.o_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.11.self_attn.q_norm.weight,[256],256,torch.bfloat16,True,True,False,0.5186114639335434,1.3960842609405517,1.3898261189460754,0.004492666106671095
+model.language_model.layers.11.self_attn.k_norm.weight,[256],256,torch.bfloat16,True,True,False,0.5196377920274116,1.5129074811935426,1.5118052959442139,0.0007288183551281691
+model.language_model.layers.11.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.01246540210267713,0.6446093797683716,0.6393956243991852,0.008121088147163391
+model.language_model.layers.11.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008437049490937213,0.2807579755783081,0.27670374512672424,0.014545592479407787
+model.language_model.layers.11.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.11.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.16507444899861748,1.1168798208236694,1.1159176230430603,0.0008618692518211901
+model.language_model.layers.11.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.20707815065985624,1.0879127740859986,1.0822476148605347,0.00522094639018178
+model.language_model.layers.11.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.11.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.11.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.11.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.12.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.1244901180267334,0.12724753469228745,-0.021907921880483627
+model.language_model.layers.12.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,2.88040604467506,0.021255401149392127,0.02100996021181345,0.011614442802965641
+model.language_model.layers.12.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.4176410264802122,0.021255401149392127,0.02100996021181345,0.011614442802965641
+model.language_model.layers.12.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.056525222251124684,0.021255401149392127,0.02100996021181345,0.011614442802965641
+model.language_model.layers.12.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,1.002011897871149,0.05792347490787506,0.056810248643159866,0.01940598338842392
+model.language_model.layers.12.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011472440076215467,0.021255401149392127,0.02100996021181345,0.011614442802965641
+model.language_model.layers.12.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.017056276562596607,1.2310041427612304,1.2218455076217651,0.007467807270586491
+model.language_model.layers.12.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.014785819546467727,1.3626768589019775,1.3564599752426147,0.004572649952024221
+model.language_model.layers.12.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.013939528858927337,1.320238208770752,1.2982951402664185,0.01676025241613388
+model.language_model.layers.12.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.023024593206616838,1.328037428855896,1.2310505509376526,0.07583436369895935
+model.language_model.layers.12.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.011597451083256629,0.5941590070724487,0.5869906842708588,0.012138072401285172
+model.language_model.layers.12.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.00835320268969957,0.2813297212123871,0.27803365886211395,0.011785168200731277
+model.language_model.layers.12.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008037725829412102,0.027116604894399644,0.026293793693184853,0.030813388526439667
+model.language_model.layers.12.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.4345479307805671,1.34067645072937,1.3377623558044434,0.0021759422961622477
+model.language_model.layers.12.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.2084265337609975,1.065631127357483,1.060548722743988,0.004780767485499382
+model.language_model.layers.12.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.12.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1264428287744522,0.12933765351772308,-0.022636177018284798
+model.language_model.layers.12.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12644962668418885,0.12914663553237915,-0.021104462444782257
+model.language_model.layers.12.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12644962668418885,0.12914663553237915,-0.021104462444782257
+model.language_model.layers.13.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.12477988749742508,0.12754108756780624,-0.021887268871068954
+model.language_model.layers.13.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,2.9791719307664013,0.019316504523158074,0.01891298219561577,0.021111300215125084
+model.language_model.layers.13.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.737624202957727,0.019316504523158074,0.01891298219561577,0.021111300215125084
+model.language_model.layers.13.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.05151582157415389,0.019316504523158074,0.01891298219561577,0.021111300215125084
+model.language_model.layers.13.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,1.019349882283005,0.057200676202774046,0.05586996674537659,0.02353879250586033
+model.language_model.layers.13.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.01126083413734502,0.019316504523158074,0.01891298219561577,0.021111300215125084
+model.language_model.layers.13.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.01623881113475195,0.9243779063224793,0.9193947613239288,0.005405334290117025
+model.language_model.layers.13.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.01455874165421682,1.2475502490997314,1.24836003780365,-0.0006488878279924393
+model.language_model.layers.13.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.018343292045891163,1.688621497154236,1.6146679520606995,0.04478314146399498
+model.language_model.layers.13.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.025716539083181635,1.638802671432495,1.5157852172851562,0.07803228497505188
+model.language_model.layers.13.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.010653918613199835,0.49672289490699767,0.4882194250822067,0.017267368733882904
+model.language_model.layers.13.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008427656579594765,0.2851456582546234,0.2812406122684479,0.013789507560431957
+model.language_model.layers.13.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008115559882625587,0.024787215515971184,0.024147965013980865,0.026127886027097702
+model.language_model.layers.13.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.4311062936735049,1.3061543941497802,1.3008219003677368,0.004090989474207163
+model.language_model.layers.13.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.20233897953720867,1.049627709388733,1.0431749820709229,0.006166598293930292
+model.language_model.layers.13.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1244901180267334,0.12724753469228745,-0.021907921880483627
+model.language_model.layers.13.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1244901180267334,0.12724753469228745,-0.021907921880483627
+model.language_model.layers.13.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12603520452976227,0.12872783094644547,-0.02113904058933258
+model.language_model.layers.13.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12603520452976227,0.12872783094644547,-0.02113904058933258
+model.language_model.layers.14.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.1241938516497612,0.12704690545797348,-0.022712696343660355
+model.language_model.layers.14.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,2.9486411634333125,0.020567510277032852,0.02064414881169796,-0.003719263942912221
+model.language_model.layers.14.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.3442797836287554,0.020567510277032852,0.02064414881169796,-0.003719263942912221
+model.language_model.layers.14.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.05268927694476337,0.020567510277032852,0.02064414881169796,-0.003719263942912221
+model.language_model.layers.14.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,1.0434747961278767,0.05388569384813309,0.0539114847779274,-0.0004785013443324715
+model.language_model.layers.14.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011666184624708212,0.020567510277032852,0.02064414881169796,-0.003719263942912221
+model.language_model.layers.14.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.016493583781582954,0.9191125988960266,0.9147643446922302,0.004742208402603865
+model.language_model.layers.14.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.013811085766320766,1.4927931785583497,1.489500880241394,0.0022079392801970243
+model.language_model.layers.14.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.018132166061415586,1.3829917430877685,1.3302984237670898,0.03884578496217728
+model.language_model.layers.14.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.024080125029766607,1.263322401046753,1.1739322543144226,0.07338603585958481
+model.language_model.layers.14.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.011071899336903331,0.5700202703475952,0.5634229183197021,0.01164142694324255
+model.language_model.layers.14.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008314252254712856,0.2770755171775818,0.274557501077652,0.009129328653216362
+model.language_model.layers.14.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.007956179077788707,0.02465868815779686,0.024164476431906223,0.020245688036084175
+model.language_model.layers.14.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.3827631515348511,1.2727249622344972,1.270638883113861,0.0016404041089117527
+model.language_model.layers.14.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.17705039877766157,1.0368096113204956,1.0330562591552734,0.0036266762763261795
+model.language_model.layers.14.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12477988749742508,0.12754108756780624,-0.021887268871068954
+model.language_model.layers.14.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12477988749742508,0.12754108756780624,-0.021887268871068954
+model.language_model.layers.14.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12535421252250672,0.12807101756334305,-0.02144152857363224
+model.language_model.layers.14.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12535421252250672,0.12807101756334305,-0.02144152857363224
+model.language_model.layers.15.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.12565643787384034,0.1286889687180519,-0.023846905678510666
+model.language_model.layers.15.self_attn.q_proj.weight,"[4096, 1024]",4194304,torch.bfloat16,True,True,False,0.014110583322669023,1.068258237838745,1.0639283061027527,0.0040615457110106945
+model.language_model.layers.15.self_attn.k_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.011648987318445004,0.4556676626205444,0.45527561008930206,0.0008607972995378077
+model.language_model.layers.15.self_attn.v_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.01448186239952574,0.4961565971374512,0.4812343567609787,0.030537201091647148
+model.language_model.layers.15.self_attn.o_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011643826247283605,0.02684522047638893,0.027079960331320763,-0.008706212043762207
+model.language_model.layers.15.self_attn.q_norm.weight,[256],256,torch.bfloat16,True,True,False,0.6643384808778596,1.3248678922653199,1.3205276727676392,0.00328132975846529
+model.language_model.layers.15.self_attn.k_norm.weight,[256],256,torch.bfloat16,True,True,False,0.6675766050344879,1.5976513624191284,1.5931538343429565,0.0028190179727971554
+model.language_model.layers.15.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.010966086754024553,0.590799081325531,0.5876986086368561,0.0052617397159338
+model.language_model.layers.15.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008428695033787173,0.2943679988384247,0.2912055104970932,0.010801420547068119
+model.language_model.layers.15.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008092283062787845,0.02696268744766712,0.02628284879028797,0.0255373977124691
+model.language_model.layers.15.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.2440228820017744,1.102802586555481,1.0997087955474854,0.0028093892615288496
+model.language_model.layers.15.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.1778786972766179,1.0795943021774292,1.076938509941101,0.002463046694174409
+model.language_model.layers.15.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1241938516497612,0.12704690545797348,-0.022712696343660355
+model.language_model.layers.15.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1241938516497612,0.12704690545797348,-0.022712696343660355
+model.language_model.layers.15.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12600840032100677,0.1290273517370224,-0.023675816133618355
+model.language_model.layers.15.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12600840032100677,0.1290273517370224,-0.023675816133618355
+model.language_model.layers.16.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.12893733978271485,0.13197271525859833,-0.023268628865480423
+model.language_model.layers.16.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.7010440693632844,0.02098158188164234,0.020611831918358803,0.01777973212301731
+model.language_model.layers.16.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.6993623981273227,0.02098158188164234,0.020611831918358803,0.01777973212301731
+model.language_model.layers.16.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.07656940368035405,0.02098158188164234,0.020611831918358803,0.01777973212301731
+model.language_model.layers.16.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9963019060041036,0.06768883764743805,0.06782308593392372,-0.001981372246518731
+model.language_model.layers.16.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011197567096145299,0.02098158188164234,0.020611831918358803,0.01777973212301731
+model.language_model.layers.16.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.018433232195903343,1.4015954971313476,1.4059604406356812,-0.00310945650562644
+model.language_model.layers.16.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.014988340671249321,1.5870672464370728,1.585473656654358,0.001004667836241424
+model.language_model.layers.16.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.015809959207897246,1.3163511991500854,1.1806524991989136,0.10879646241664886
+model.language_model.layers.16.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.026526545073781972,1.9285969734191895,1.7344091534614563,0.10612598806619644
+model.language_model.layers.16.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.012010966936130185,0.7132635474205017,0.7111939191818237,0.0029057920910418034
+model.language_model.layers.16.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008232391427881847,0.3064349591732025,0.3056775778532028,0.002474700566381216
+model.language_model.layers.16.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.007945464725085904,0.029329842329025267,0.029065771959722042,0.009044274687767029
+model.language_model.layers.16.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.5307421001643609,1.4592499017715455,1.4562683701515198,0.0020453264005482197
+model.language_model.layers.16.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.1797796665217388,1.1242047071456909,1.1207789778709412,0.0030518644489347935
+model.language_model.layers.16.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12565643787384034,0.1286889687180519,-0.023846905678510666
+model.language_model.layers.16.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12565643787384034,0.1286889687180519,-0.023846905678510666
+model.language_model.layers.16.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1285540997982025,0.13141927868127823,-0.022043000906705856
+model.language_model.layers.16.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1285540997982025,0.13141927868127823,-0.022043000906705856
+model.language_model.layers.17.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.13324231505393982,0.13670772314071655,-0.02567584253847599
+model.language_model.layers.17.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,2.2256978045775595,0.022035177052021026,0.02174500934779644,0.013255801983177662
+model.language_model.layers.17.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.3582555612091798,0.022035177052021026,0.02174500934779644,0.013255801983177662
+model.language_model.layers.17.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.06101309494323455,0.022035177052021026,0.02174500934779644,0.013255801983177662
+model.language_model.layers.17.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,1.0351305112697786,0.05913485959172249,0.057415176182985306,0.02951190061867237
+model.language_model.layers.17.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011576505739318541,0.022035177052021026,0.02174500934779644,0.013255801983177662
+model.language_model.layers.17.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.01743543842764246,1.2256867170333863,1.2289530634880066,-0.002661369042471051
+model.language_model.layers.17.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.014459503923077219,1.3785493135452271,1.3884917497634888,-0.007186364382505417
+model.language_model.layers.17.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.015881151961077502,1.0601372718811035,0.9970093965530396,0.061393436044454575
+model.language_model.layers.17.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.02250936881569698,1.5412947416305542,1.366300106048584,0.1205163449048996
+model.language_model.layers.17.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.01242898077062283,0.7985873341560363,0.7968044579029083,0.002235058695077896
+model.language_model.layers.17.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.00830551759999018,0.32079836130142214,0.3188890963792801,0.005969434045255184
+model.language_model.layers.17.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008010914568508588,0.03214376866817474,0.03156508505344391,0.018167052417993546
+model.language_model.layers.17.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.4671330766697613,1.404133915901184,1.4024592638015747,0.0011934071080759168
+model.language_model.layers.17.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.1821209660931755,1.1520223140716552,1.1489639282226562,0.002658287761732936
+model.language_model.layers.17.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.12893733978271485,0.13197271525859833,-0.023268628865480423
+model.language_model.layers.17.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.12893733978271485,0.13197271525859833,-0.023268628865480423
+model.language_model.layers.17.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.13250834941864015,0.13550997525453568,-0.02239958383142948
+model.language_model.layers.17.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.13250834941864015,0.13550997525453568,-0.02239958383142948
+model.language_model.layers.18.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.13854871392250062,0.1420787125825882,-0.025159217417240143
+model.language_model.layers.18.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.160859320932919,0.027066994830965994,0.02643454633653164,0.02364334650337696
+model.language_model.layers.18.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.3902056629702724,0.027066994830965994,0.02643454633653164,0.02364334650337696
+model.language_model.layers.18.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.06440319761671355,0.027066994830965994,0.02643454633653164,0.02364334650337696
+model.language_model.layers.18.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,1.0152785664033646,0.07232991755008697,0.07046816498041153,0.02607678435742855
+model.language_model.layers.18.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011689354169102405,0.027066994830965994,0.02643454633653164,0.02364334650337696
+model.language_model.layers.18.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.017586823706658875,1.1968565225601195,1.1951748728752136,0.0014060382964089513
+model.language_model.layers.18.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.015439354175486628,1.7188803195953368,1.7225831747055054,-0.002151895547285676
+model.language_model.layers.18.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.01560804854504343,1.355743408203125,1.2889152765274048,0.050548896193504333
+model.language_model.layers.18.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.022444228181364892,1.303226351737976,1.2270745038986206,0.060210078954696655
+model.language_model.layers.18.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.013675707577295304,0.9788756251335144,0.978647381067276,0.00023314618738368154
+model.language_model.layers.18.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.0084209019074991,0.36197444796562195,0.3590584397315979,0.008088451810181141
+model.language_model.layers.18.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.007904073300566881,0.041007494926452635,0.040305985137820244,0.01725483126938343
+model.language_model.layers.18.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.41641924367802075,1.3788989782333374,1.3775590062141418,0.0009722749819047749
+model.language_model.layers.18.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.18656591751157978,1.177815580368042,1.1741219758987427,0.003140876302495599
+model.language_model.layers.18.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.13324231505393982,0.13670772314071655,-0.02567584253847599
+model.language_model.layers.18.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.13324231505393982,0.13670772314071655,-0.02567584253847599
+model.language_model.layers.18.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1357113778591156,0.13928818702697754,-0.02601463720202446
+model.language_model.layers.18.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1357113778591156,0.13928818702697754,-0.02601463720202446
+model.language_model.layers.19.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.14844773709774017,0.15201004594564438,-0.02371365763247013
+model.language_model.layers.19.self_attn.q_proj.weight,"[4096, 1024]",4194304,torch.bfloat16,True,True,False,0.015684687857861517,1.3330799341201782,1.3031209111213684,0.022729933261871338
+model.language_model.layers.19.self_attn.k_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.011470827461682738,0.4933713436126709,0.4965852051973343,-0.00649296585470438
+model.language_model.layers.19.self_attn.v_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.01654397636284943,0.6300966024398804,0.6153571605682373,0.023670239374041557
+model.language_model.layers.19.self_attn.o_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.01383527715161957,0.04210042655467987,0.041920006275177,0.004294696729630232
+model.language_model.layers.19.self_attn.q_norm.weight,[256],256,torch.bfloat16,True,True,False,0.6746840417445552,1.3424774646759032,1.3309562802314758,0.00861901231110096
+model.language_model.layers.19.self_attn.k_norm.weight,[256],256,torch.bfloat16,True,True,False,0.682385678251183,1.6439992427825927,1.6396601796150208,0.002642831765115261
+model.language_model.layers.19.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.014231563725632333,1.193796944618225,1.1869203448295593,0.0057769715785980225
+model.language_model.layers.19.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.00894215648959165,0.38125531673431395,0.3787590116262436,0.0065691000781953335
+model.language_model.layers.19.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.00858306108498484,0.05472542867064476,0.05421874858438969,0.009301659651100636
+model.language_model.layers.19.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.21522688156610723,1.1776897192001343,1.174150824546814,0.003009435487911105
+model.language_model.layers.19.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.24550957374088273,1.2413246631622314,1.2366889119148254,0.003741527907550335
+model.language_model.layers.19.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.13854871392250062,0.1420787125825882,-0.025159217417240143
+model.language_model.layers.19.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.13854871392250062,0.1420787125825882,-0.025159217417240143
+model.language_model.layers.19.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14409643709659575,0.14774861931800842,-0.02502952143549919
+model.language_model.layers.19.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14409643709659575,0.14774861931800842,-0.02502952143549919
+model.language_model.layers.20.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.14844773709774017,0.15201004594564438,-0.02371365763247013
+model.language_model.layers.20.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.7010440693632844,0.0,0.0,0.0
+model.language_model.layers.20.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.6993623981273227,0.0,0.0,0.0
+model.language_model.layers.20.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.0768236657275019,0.0,0.0,0.0
+model.language_model.layers.20.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9963019060041036,0.0783868670463562,0.07706403359770775,0.017019761726260185
+model.language_model.layers.20.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.20.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.018433232195903343,1.329990601539612,1.3430692553520203,-0.009785632602870464
+model.language_model.layers.20.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.014988340671249321,1.5119698524475098,1.5278902053833008,-0.010474512353539467
+model.language_model.layers.20.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.015809959207897246,1.239263391494751,1.119871973991394,0.10130274295806885
+model.language_model.layers.20.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.026526545073781972,1.8438744306564332,1.7595383524894714,0.0468175895512104
+model.language_model.layers.20.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.012010966936130185,0.6882898449897766,0.6934093236923218,-0.0074104382656514645
+model.language_model.layers.20.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008232391427881847,0.3012995898723602,0.3013121783733368,-4.178372910246253e-05
+model.language_model.layers.20.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.20.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.5307421001643609,1.4738063573837281,1.472259283065796,0.0010502781951799989
+model.language_model.layers.20.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.1797796665217388,1.1283467054367065,1.1254642605781555,0.0025578183121979237
+model.language_model.layers.20.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.20.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.20.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.20.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.21.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.14844773709774017,0.15201004594564438,-0.02371365763247013
+model.language_model.layers.21.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,2.2256978045775595,0.0,0.0,0.0
+model.language_model.layers.21.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.3582555612091798,0.0,0.0,0.0
+model.language_model.layers.21.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.0611988680756214,0.0,0.0,0.0
+model.language_model.layers.21.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,1.0351305112697786,0.05652966350317001,0.055096834897994995,0.02567322924733162
+model.language_model.layers.21.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.21.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.01743543842764246,1.1834500551223754,1.1925294399261475,-0.007642670534551144
+model.language_model.layers.21.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.014459503923077219,1.3303014278411864,1.34640771150589,-0.012034539133310318
+model.language_model.layers.21.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.015881151961077502,0.9825096130371094,0.9587222337722778,0.024508699774742126
+model.language_model.layers.21.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.02250936881569698,1.4913660764694214,1.3542436361312866,0.09644941240549088
+model.language_model.layers.21.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.01242898077062283,0.7739772439002991,0.7805718183517456,-0.00848425179719925
+model.language_model.layers.21.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.00830551759999018,0.3153739094734192,0.3154587596654892,-0.0002690319379325956
+model.language_model.layers.21.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.21.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.4671330766697613,1.4074087619781495,1.4062548279762268,0.0008201810996979475
+model.language_model.layers.21.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.1821209660931755,1.151293897628784,1.1485285758972168,0.002404776168987155
+model.language_model.layers.21.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.21.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.21.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.21.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.22.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.14844773709774017,0.15201004594564438,-0.02371365763247013
+model.language_model.layers.22.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.160859320932919,0.0,0.0,0.0
+model.language_model.layers.22.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.3902056629702724,0.0,0.0,0.0
+model.language_model.layers.22.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.06457992516309377,0.0,0.0,0.0
+model.language_model.layers.22.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,1.0152785664033646,0.07316096127033234,0.07124747335910797,0.0265025831758976
+model.language_model.layers.22.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.22.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.017586823706658875,1.1650053024291993,1.171427607536316,-0.005497518926858902
+model.language_model.layers.22.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.015439354175486628,1.6879074335098267,1.7083577513694763,-0.012042985297739506
+model.language_model.layers.22.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.01560804854504343,1.2955221652984619,1.2684693336486816,0.021102897822856903
+model.language_model.layers.22.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.022444228181364892,1.2953216791152955,1.2409517168998718,0.04288046061992645
+model.language_model.layers.22.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.013675707577295304,0.962846291065216,0.9666062593460083,-0.0038974438793957233
+model.language_model.layers.22.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.0084209019074991,0.35963064432144165,0.3590249866247177,0.0016855093417689204
+model.language_model.layers.22.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.22.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.41641924367802075,1.3791592359542846,1.378191590309143,0.0007018963224254549
+model.language_model.layers.22.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.18656591751157978,1.180241322517395,1.1770736575126648,0.0026875350158661604
+model.language_model.layers.22.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.22.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.22.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.22.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.23.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.14844773709774017,0.15201004594564438,-0.02371365763247013
+model.language_model.layers.23.self_attn.q_proj.weight,"[4096, 1024]",4194304,torch.bfloat16,True,True,False,0.015684687857861517,1.172740912437439,1.162192702293396,0.00903517846018076
+model.language_model.layers.23.self_attn.k_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.011470827461682738,0.4839973270893097,0.4875495880842209,-0.007312624715268612
+model.language_model.layers.23.self_attn.v_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.01654397636284943,0.6367980480194092,0.6271674931049347,0.015238882973790169
+model.language_model.layers.23.self_attn.o_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.23.self_attn.q_norm.weight,[256],256,torch.bfloat16,True,True,False,0.6746840417445552,1.3903644561767579,1.3782069683074951,0.008782569319009781
+model.language_model.layers.23.self_attn.k_norm.weight,[256],256,torch.bfloat16,True,True,False,0.682385678251183,1.6476617813110352,1.643480896949768,0.002540695946663618
+model.language_model.layers.23.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.014231563725632333,1.17279212474823,1.173447072505951,-0.0005582937155850232
+model.language_model.layers.23.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.00894215648959165,0.3808016240596771,0.37919700145721436,0.004222762770950794
+model.language_model.layers.23.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,True,0.0,0.0,0.0,0.0
+model.language_model.layers.23.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.21522688156610723,1.1770035743713378,1.174330234527588,0.002273952355608344
+model.language_model.layers.23.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.24550957374088273,1.2439603328704834,1.2396816611289978,0.003445524023845792
+model.language_model.layers.23.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.23.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.23.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.23.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.24.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.159931880235672,0.16403937339782715,-0.025358498096466064
+model.language_model.layers.24.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.176548021849265,0.04816642701625824,0.05051412992179394,-0.04759087786078453
+model.language_model.layers.24.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.534176579404872,0.04816642701625824,0.05051412992179394,-0.04759087786078453
+model.language_model.layers.24.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.09621458723074876,0.04816642701625824,0.05051412992179394,-0.04759087786078453
+model.language_model.layers.24.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.9015646870022962,0.1500008523464203,0.1564091593027115,-0.04183444380760193
+model.language_model.layers.24.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011079087520042507,0.04816642701625824,0.05051412992179394,-0.04759087786078453
+model.language_model.layers.24.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.021207758657296072,2.0400885105133058,2.0312641859054565,0.0043348162434995174
+model.language_model.layers.24.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.015863975027673595,1.8090052843093871,1.814386010169983,-0.002969975583255291
+model.language_model.layers.24.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.017126392408315556,1.6412482261657715,1.5641465187072754,0.04811675846576691
+model.language_model.layers.24.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.025288437787869995,2.451440620422363,2.1570534706115723,0.12793269753456116
+model.language_model.layers.24.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.015414926475220352,1.291345739364624,1.2771415710449219,0.011060476303100586
+model.language_model.layers.24.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008895065958728412,0.3862484097480774,0.38432665169239044,0.00498789269477129
+model.language_model.layers.24.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.00854502151059311,0.05011290907859802,0.04931986518204212,0.01595163904130459
+model.language_model.layers.24.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.573298416609465,1.5608829736709595,1.557632029056549,0.0020849411375820637
+model.language_model.layers.24.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.3129544863169519,1.2985108137130736,1.2940835356712341,0.0034153484739363194
+model.language_model.layers.24.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.24.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.14844773709774017,0.15201005339622498,-0.023713719099760056
+model.language_model.layers.24.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.15787221491336823,0.16239630430936813,-0.028253721073269844
+model.language_model.layers.24.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.15787221491336823,0.16239630430936813,-0.028253721073269844
+model.language_model.layers.25.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.16665004193782806,0.17106806486845016,-0.026165446266531944
+model.language_model.layers.25.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.0687194748892783,0.03702448680996895,0.03791368380188942,-0.02373257838189602
+model.language_model.layers.25.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.3988551363325108,0.03702448680996895,0.03791368380188942,-0.02373257838189602
+model.language_model.layers.25.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.11724152807309154,0.03702448680996895,0.03791368380188942,-0.02373257838189602
+model.language_model.layers.25.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.8213945790478141,0.10865173935890197,0.11109603568911552,-0.02224726974964142
+model.language_model.layers.25.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.010704880809931254,0.03702448680996895,0.03791368380188942,-0.02373257838189602
+model.language_model.layers.25.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.02265171799691658,2.416939449310303,2.406812906265259,0.004198665264993906
+model.language_model.layers.25.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.016656302763258204,1.8317013263702393,1.815315306186676,0.008986031636595726
+model.language_model.layers.25.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.015496316129886825,1.4931138515472413,1.4400117993354797,0.03621242567896843
+model.language_model.layers.25.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.024922886345670574,2.8421106815338133,2.427839994430542,0.15754500031471252
+model.language_model.layers.25.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.016786448960705417,1.4252417802810669,1.4162011742591858,0.00636336812749505
+model.language_model.layers.25.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.008929586499752555,0.39326195120811464,0.3936718553304672,-0.0010417760349810123
+model.language_model.layers.25.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008553911026024062,0.05192307233810425,0.05219164676964283,-0.005159193184226751
+model.language_model.layers.25.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.679563716600526,1.672957992553711,1.6703156232833862,0.0015806573210284114
+model.language_model.layers.25.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.367940864269081,1.3378609657287597,1.3329142928123474,0.0037043539341539145
+model.language_model.layers.25.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.15993188321590424,0.16403937339782715,-0.025358498096466064
+model.language_model.layers.25.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.15993188321590424,0.16403937339782715,-0.025358498096466064
+model.language_model.layers.25.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.16471704840660095,0.16931980103254318,-0.02756008505821228
+model.language_model.layers.25.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.16471704840660095,0.16931980103254318,-0.02756008505821228
+model.language_model.layers.26.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.17917811572551728,0.18563701212406158,-0.03541283681988716
+model.language_model.layers.26.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.9920322216315993,0.0475840263068676,0.04719029180705547,0.008308961987495422
+model.language_model.layers.26.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.3861756886686323,0.0475840263068676,0.04719029180705547,0.008308961987495422
+model.language_model.layers.26.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.12035700505175301,0.0475840263068676,0.04719029180705547,0.008308961987495422
+model.language_model.layers.26.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.7962054263204312,0.14246669113636018,0.14083778858184814,0.011499431915581226
+model.language_model.layers.26.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.01010959297205982,0.0475840263068676,0.04719029180705547,0.008308961987495422
+model.language_model.layers.26.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.023485909205117523,2.755726385116577,2.732010841369629,0.008643122389912605
+model.language_model.layers.26.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.017163349264458005,2.05975399017334,2.0447341203689575,0.007318828254938126
+model.language_model.layers.26.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.015772669710061457,1.8008067846298217,1.799482822418213,0.0007354891858994961
+model.language_model.layers.26.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.023237277860548418,3.028448534011841,2.7564280033111572,0.09411479532718658
+model.language_model.layers.26.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.017744456771946523,1.6532298088073731,1.6405121684074402,0.007722286507487297
+model.language_model.layers.26.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.009069661735436258,0.41364081501960753,0.41281184554100037,0.0020060669630765915
+model.language_model.layers.26.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008577501524766688,0.06165693402290344,0.06495797634124756,-0.05215487256646156
+model.language_model.layers.26.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.7351645450955099,1.7141617298126222,1.7097182869911194,0.0025955105666071177
+model.language_model.layers.26.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.41473233952138944,1.3773451566696167,1.3716654777526855,0.004132185596972704
+model.language_model.layers.26.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.16665004193782806,0.17106806486845016,-0.026165446266531944
+model.language_model.layers.26.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.16665004193782806,0.17106806486845016,-0.026165446266531944
+model.language_model.layers.26.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.17495713233947754,0.1795460432767868,-0.02589070238173008
+model.language_model.layers.26.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.17495713233947754,0.1795460432767868,-0.02589070238173008
+model.language_model.layers.27.native_visit_gain,[2],2,torch.float32,True,True,False,0.6726811939636566,0.19363332092761992,0.20021430402994156,-0.033422041684389114
+model.language_model.layers.27.self_attn.q_proj.weight,"[4096, 1024]",4194304,torch.bfloat16,True,True,False,0.015568697624369389,1.359734845161438,1.3318111896514893,0.020749874413013458
+model.language_model.layers.27.self_attn.k_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.011157305434310462,0.5451528549194335,0.5500206649303436,-0.00888961274176836
+model.language_model.layers.27.self_attn.v_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.019897007829865015,0.8889904975891113,0.8700672388076782,0.021516000851988792
+model.language_model.layers.27.self_attn.o_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.016718429513216462,0.06532236859202385,0.06838817521929741,-0.04586540907621384
+model.language_model.layers.27.self_attn.q_norm.weight,[256],256,torch.bfloat16,True,True,False,0.5417405927780473,1.2796438694000245,1.2711642980575562,0.006648562848567963
+model.language_model.layers.27.self_attn.k_norm.weight,[256],256,torch.bfloat16,True,True,False,0.5399983737372485,1.4992575883865356,1.5003014206886292,-0.0006960071623325348
+model.language_model.layers.27.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.01707541240061408,1.5233337879180908,1.5074191093444824,0.010502190329134464
+model.language_model.layers.27.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.009325227423522589,0.401629638671875,0.3989769369363785,0.006626773159950972
+model.language_model.layers.27.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.009007179173104314,0.05945698618888855,0.05724754370748997,0.03786834329366684
+model.language_model.layers.27.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.2360634530105969,1.1898232460021974,1.184140384197235,0.0047876485623419285
+model.language_model.layers.27.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.3682058925843224,1.3199665069580078,1.3142281770706177,0.004356774035841227
+model.language_model.layers.27.mhc_attn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.17917811572551728,0.18563701212406158,-0.03541283681988716
+model.language_model.layers.27.mhc_attn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.17917811572551728,0.18563701212406158,-0.03541283681988716
+model.language_model.layers.27.mhc_ffn.weight,"[8, 2048]",16384,torch.float32,True,True,True,0.0,0.1889662802219391,0.19651895016431808,-0.03919030725955963
+model.language_model.layers.27.mhc_ffn.bias,[8],8,torch.float32,True,True,False,1.4612054241594536,0.1889662802219391,0.19651895016431808,-0.03919030725955963
+model.language_model.layers.28.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.523619687261199,0.05345870554447174,0.05325247906148434,0.0038651535287499428
+model.language_model.layers.28.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.349692401457549,0.05345870554447174,0.05325247906148434,0.0038651535287499428
+model.language_model.layers.28.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.13380220858099087,0.05345870554447174,0.05325247906148434,0.0038651535287499428
+model.language_model.layers.28.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.8211637167697284,0.1494304895401001,0.1465264931321144,0.019625063985586166
+model.language_model.layers.28.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.010527690276332123,0.05345870554447174,0.05325247906148434,0.0038651535287499428
+model.language_model.layers.28.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.023602759104169698,2.520274305343628,2.4964842796325684,0.009484234265983105
+model.language_model.layers.28.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.017556858527136593,1.9406788110733033,1.929615080356598,0.0057172346860170364
+model.language_model.layers.28.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.018960379996580762,2.0988321781158445,2.0798712968826294,0.009075107984244823
+model.language_model.layers.28.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.02811656926969172,2.568515253067017,2.2348581552505493,0.1391502469778061
+model.language_model.layers.28.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.016995333790799746,1.5161489248275757,1.5103315114974976,0.0038443722296506166
+model.language_model.layers.28.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.009524613308386835,0.39157347083091737,0.3882681578397751,0.008476942777633667
+model.language_model.layers.28.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.009138262509488338,0.06188564822077751,0.06166497431695461,0.0035721559543162584
+model.language_model.layers.28.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.6547058201061114,1.6088306903839111,1.6002174019813538,0.005368103738874197
+model.language_model.layers.28.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.40091021830185397,1.341943883895874,1.3316543102264404,0.0076972078531980515
+model.language_model.layers.29.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.4675959136393164,0.0504007413983345,0.04911430925130844,0.02585551142692566
+model.language_model.layers.29.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.4228183844578925,0.0504007413983345,0.04911430925130844,0.02585551142692566
+model.language_model.layers.29.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.12908627032264744,0.0504007413983345,0.04911430925130844,0.02585551142692566
+model.language_model.layers.29.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,0.888583134842171,0.14687116146087648,0.1361023187637329,0.07614880055189133
+model.language_model.layers.29.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.011587041415473492,0.0504007413983345,0.04911430925130844,0.02585551142692566
+model.language_model.layers.29.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.02269317547094447,2.482082748413086,2.459038734436035,0.009327524341642857
+model.language_model.layers.29.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.017819499092430732,1.8987766742706298,1.8918305039405823,0.0036649219691753387
+model.language_model.layers.29.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.017009094444582436,1.296765971183777,1.2304484844207764,0.05249474570155144
+model.language_model.layers.29.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.027514082638478134,3.2152318954467773,2.8432726860046387,0.1229436993598938
+model.language_model.layers.29.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.017179402781003307,1.611374807357788,1.6045483946800232,0.004245435819029808
+model.language_model.layers.29.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.009768013195743209,0.43299702405929563,0.4306154102087021,0.005515476688742638
+model.language_model.layers.29.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.009241061031129542,0.07292253971099853,0.07249534130096436,0.005875459406524897
+model.language_model.layers.29.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.7254313821594613,1.6720192909240723,1.6630222797393799,0.005395493470132351
+model.language_model.layers.29.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.4188688962664618,1.3633095979690553,1.3536386489868164,0.007119050249457359
+model.language_model.layers.30.linear_attn.dt_bias,[16],16,torch.bfloat16,True,True,False,3.516924164521429,0.06810457706451416,0.06527851894497871,0.042381372302770615
+model.language_model.layers.30.linear_attn.A_log,[16],16,torch.bfloat16,True,True,False,1.3531805507190229,0.06810457706451416,0.06527851894497871,0.042381372302770615
+model.language_model.layers.30.linear_attn.conv1d.weight,"[6144, 1, 7]",43008,torch.bfloat16,True,True,False,0.11541675565700724,0.06810457706451416,0.06527851894497871,0.042381372302770615
+model.language_model.layers.30.linear_attn.norm.weight,[128],128,torch.bfloat16,True,True,False,1.0372612621057307,0.19082091152668,0.18603714555501938,0.025388993322849274
+model.language_model.layers.30.linear_attn.out_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.012223725388337797,0.06810457706451416,0.06527851894497871,0.042381372302770615
+model.language_model.layers.30.linear_attn.in_proj_qkv.weight,"[6144, 1024]",6291456,torch.bfloat16,True,True,False,0.020012873995938305,1.9644320011138916,1.9375134706497192,0.013797737658023834
+model.language_model.layers.30.linear_attn.in_proj_z.weight,"[2048, 1024]",2097152,torch.bfloat16,True,True,False,0.017863416904687988,1.7538160324096679,1.7254195809364319,0.016323717311024666
+model.language_model.layers.30.linear_attn.in_proj_b.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.01930066189798036,1.8926891565322876,1.8506444692611694,0.022464675828814507
+model.language_model.layers.30.linear_attn.in_proj_a.weight,"[16, 1024]",16384,torch.bfloat16,True,True,False,0.030692425519825116,2.613493633270264,2.400537848472595,0.08499510586261749
+model.language_model.layers.30.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.017495601909920392,1.674994158744812,1.665700912475586,0.005563727114349604
+model.language_model.layers.30.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.010008067054862122,0.4728389620780945,0.4683990031480789,0.009434401988983154
+model.language_model.layers.30.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.009145226630679308,0.09172090440988541,0.09006240218877792,0.018247589468955994
+model.language_model.layers.30.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.5164144031386733,1.477979874610901,1.4720847606658936,0.003996600396931171
+model.language_model.layers.30.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.39504630808368707,1.3394695520401,1.331666648387909,0.005842394195497036
+model.language_model.layers.31.self_attn.q_proj.weight,"[4096, 1024]",4194304,torch.bfloat16,True,True,False,0.016401308036646283,1.7913455486297607,1.7951987385749817,-0.0021486699115484953
+model.language_model.layers.31.self_attn.k_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.010125689954109821,0.4340622305870056,0.4330884963274002,0.002245882526040077
+model.language_model.layers.31.self_attn.v_proj.weight,"[512, 1024]",524288,torch.bfloat16,True,True,False,0.018553588941749313,2.2628891468048096,2.275641679763794,-0.0056196702644228935
+model.language_model.layers.31.self_attn.o_proj.weight,"[1024, 2048]",2097152,torch.bfloat16,True,True,False,0.013855085282449643,0.11354705095291137,0.11398142203688622,-0.0038181624840945005
+model.language_model.layers.31.self_attn.q_norm.weight,[256],256,torch.bfloat16,True,True,False,0.49180183078641365,1.173517608642578,1.1694196462631226,0.0034981505014002323
+model.language_model.layers.31.self_attn.k_norm.weight,[256],256,torch.bfloat16,True,True,False,0.47686213832273266,1.4564565181732179,1.4552301168441772,0.0008424547268077731
+model.language_model.layers.31.mlp.gate_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.01888421431000432,1.654241180419922,1.6669989228248596,-0.007682552561163902
+model.language_model.layers.31.mlp.up_proj.weight,"[3584, 1024]",3670016,torch.bfloat16,True,True,False,0.011090701127013413,0.6329879760742188,0.6367366909980774,-0.0059047881513834
+model.language_model.layers.31.mlp.down_proj.weight,"[1024, 3584]",3670016,torch.bfloat16,True,True,False,0.008569442165656412,0.1896064668893814,0.19822045415639877,-0.04442913085222244
+model.language_model.layers.31.input_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.2897281490462564,1.2508673906326293,1.2466166615486145,0.003404062008485198
+model.language_model.layers.31.post_attention_layernorm.weight,[1024],1024,torch.bfloat16,True,True,False,0.26141619274636874,1.2008548259735108,1.1972233057022095,0.0030286891851574183
+model.language_model.norm.weight,[1024],1024,torch.bfloat16,True,True,False,3.3760657384226955,4.144176006317139,4.092791795730591,0.012476607225835323
