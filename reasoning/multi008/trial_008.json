@@ -1,0 +1,673 @@
+{
+  "trial": 8,
+  "stage": "rejected_on_screen",
+  "screens": {
+    "inverse_control": {
+      "rows": [
+        {
+          "id": "prefix_sums",
+          "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]",
+          "new_tokens": 32,
+          "hit_limit": false,
+          "seconds": 13.124623576999966,
+          "thinking": false,
+          "passed": 2,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            true,
+            false,
+            true,
+            false,
+            false
+          ],
+          "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]"
+        },
+        {
+          "id": "rotate_right",
+          "output": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]",
+          "new_tokens": 43,
+          "hit_limit": false,
+          "seconds": 16.270123280000007,
+          "thinking": false,
+          "passed": 3,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            true,
+            false,
+            true,
+            true,
+            false
+          ],
+          "code": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]"
+        },
+        {
+          "id": "longest_run",
+          "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+          "new_tokens": 98,
+          "hit_limit": false,
+          "seconds": 40.656271925000055,
+          "thinking": false,
+          "passed": 4,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0"
+        },
+        {
+          "id": "overlap_count",
+          "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+          "new_tokens": 72,
+          "hit_limit": false,
+          "seconds": 24.410347795999996,
+          "thinking": false,
+          "passed": 2,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count"
+        },
+        {
+          "id": "sum_abs",
+          "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+          "new_tokens": 29,
+          "hit_limit": false,
+          "seconds": 11.184500909999997,
+          "thinking": false,
+          "passed": 5,
+          "total": 5,
+          "all_passed": true,
+          "category": "passed",
+          "error_types": [],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "code": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total"
+        },
+        {
+          "id": "palindrome",
+          "output": "def solve(s):\n    return s == s[::-1]",
+          "new_tokens": 14,
+          "hit_limit": false,
+          "seconds": 5.98504710300017,
+          "thinking": false,
+          "passed": 6,
+          "total": 6,
+          "all_passed": true,
+          "category": "passed",
+          "error_types": [],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "code": "def solve(s):\n    return s == s[::-1]"
+        },
+        {
+          "id": "binary_search",
+          "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1",
+          "new_tokens": 45,
+          "hit_limit": false,
+          "seconds": 19.494043971999872,
+          "thinking": false,
+          "passed": 5,
+          "total": 5,
+          "all_passed": true,
+          "category": "passed",
+          "error_types": [],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1"
+        }
+      ],
+      "architecture": {
+        "passes": 2,
+        "layer_executions": 56,
+        "physical_layers": 32,
+        "mhc_streams": 2,
+        "visit_gain_weights": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "conv_kernel": 7,
+        "learned_history_nonzero": 221184,
+        "local_window": 256,
+        "loaded_parameters": 1020252592,
+        "backward_passes": 0,
+        "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3",
+        "layer_visit_gains": {
+          "4": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "5": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "6": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "7": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "8": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "9": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "10": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "11": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "12": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "13": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "14": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "15": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "16": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "17": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "18": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "19": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "20": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "21": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "22": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "23": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "24": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "25": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "26": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "27": [
+            0.949999988079071,
+            0.05000000074505806
+          ]
+        }
+      },
+      "moments": {
+        "mean_squared_log_moment_distance": 0.0023914492697561704,
+        "per_tensor": {
+          "0.input_layernorm": 0.0,
+          "0.post_attention_layernorm": 0.0,
+          "1.input_layernorm": 0.0,
+          "1.post_attention_layernorm": 0.0,
+          "2.input_layernorm": 0.0,
+          "2.post_attention_layernorm": 0.0,
+          "3.input_layernorm": 0.0,
+          "3.post_attention_layernorm": 0.0,
+          "4.input_layernorm": 0.004474021960049868,
+          "4.post_attention_layernorm": 0.004591529257595539,
+          "5.input_layernorm": 0.004585783462971449,
+          "5.post_attention_layernorm": 0.004638538230210543,
+          "6.input_layernorm": 0.005127306096255779,
+          "6.post_attention_layernorm": 0.004552424885332584,
+          "7.input_layernorm": 0.0040300460532307625,
+          "7.post_attention_layernorm": 0.004780558403581381,
+          "12.input_layernorm": 0.004533523228019476,
+          "12.post_attention_layernorm": 0.004264841787517071,
+          "13.input_layernorm": 0.004363514482975006,
+          "13.post_attention_layernorm": 0.004609729163348675,
+          "14.input_layernorm": 0.004714209586381912,
+          "14.post_attention_layernorm": 0.0043732477352023125,
+          "15.input_layernorm": 0.004436803050339222,
+          "15.post_attention_layernorm": 0.0044356053695082664,
+          "16.input_layernorm": 0.003908686805516481,
+          "16.post_attention_layernorm": 0.003664756193757057,
+          "17.input_layernorm": 0.003063515294343233,
+          "17.post_attention_layernorm": 0.003112031612545252,
+          "18.input_layernorm": 0.002447740873321891,
+          "18.post_attention_layernorm": 0.002337984973564744,
+          "19.input_layernorm": 0.002086807508021593,
+          "19.post_attention_layernorm": 0.0015725432895123959,
+          "24.input_layernorm": 0.0007345195626839995,
+          "24.post_attention_layernorm": 0.0005322620272636414,
+          "25.input_layernorm": 0.00041838324978016317,
+          "25.post_attention_layernorm": 0.00040981429629027843,
+          "26.input_layernorm": 0.00035468823625706136,
+          "26.post_attention_layernorm": 0.0003798023681156337,
+          "27.input_layernorm": 0.00036739560891874135,
+          "27.post_attention_layernorm": 0.0003135516890324652,
+          "28.input_layernorm": 0.003922771662473679,
+          "28.post_attention_layernorm": 0.0027920822612941265,
+          "29.input_layernorm": 0.0021034616511315107,
+          "29.post_attention_layernorm": 0.001893106265924871,
+          "30.input_layernorm": 0.0016455581644549966,
+          "30.post_attention_layernorm": 0.0015402387361973524,
+          "31.input_layernorm": 0.0014506970765069127,
+          "31.post_attention_layernorm": 0.0012254827888682485
+        }
+      },
+      "case_wins": 0,
+      "case_losses": 0
+    },
+    "target": {
+      "rows": [
+        {
+          "id": "prefix_sums",
+          "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]",
+          "new_tokens": 32,
+          "hit_limit": false,
+          "seconds": 13.826714196000012,
+          "thinking": false,
+          "passed": 2,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            true,
+            false,
+            true,
+            false,
+            false
+          ],
+          "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]"
+        },
+        {
+          "id": "rotate_right",
+          "output": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]",
+          "new_tokens": 43,
+          "hit_limit": false,
+          "seconds": 16.05871982000008,
+          "thinking": false,
+          "passed": 3,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            true,
+            false,
+            true,
+            true,
+            false
+          ],
+          "code": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]"
+        },
+        {
+          "id": "longest_run",
+          "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+          "new_tokens": 98,
+          "hit_limit": false,
+          "seconds": 33.85405816399998,
+          "thinking": false,
+          "passed": 4,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0"
+        },
+        {
+          "id": "overlap_count",
+          "output": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count",
+          "new_tokens": 72,
+          "hit_limit": false,
+          "seconds": 26.574477146999925,
+          "thinking": false,
+          "passed": 2,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            false,
+            false,
+            true,
+            true,
+            false
+          ],
+          "code": "def solve(s, sub):\n    n = len(s)\n    count = 0\n    i = 0\n    while i < n:\n        if s[i:i+len(sub)] == sub:\n            count += 1\n            i += len(sub)\n        else:\n            i += 1\n    return count"
+        },
+        {
+          "id": "sum_abs",
+          "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+          "new_tokens": 29,
+          "hit_limit": false,
+          "seconds": 11.346791372000098,
+          "thinking": false,
+          "passed": 5,
+          "total": 5,
+          "all_passed": true,
+          "category": "passed",
+          "error_types": [],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "code": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total"
+        },
+        {
+          "id": "palindrome",
+          "output": "def solve(s):\n    return s == s[::-1]",
+          "new_tokens": 14,
+          "hit_limit": false,
+          "seconds": 5.592916270999922,
+          "thinking": false,
+          "passed": 6,
+          "total": 6,
+          "all_passed": true,
+          "category": "passed",
+          "error_types": [],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "code": "def solve(s):\n    return s == s[::-1]"
+        },
+        {
+          "id": "binary_search",
+          "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    return xs.index(target) if target in xs else -1",
+          "new_tokens": 32,
+          "hit_limit": false,
+          "seconds": 12.256186838000076,
+          "thinking": false,
+          "passed": 5,
+          "total": 5,
+          "all_passed": true,
+          "category": "passed",
+          "error_types": [],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    return xs.index(target) if target in xs else -1"
+        }
+      ],
+      "architecture": {
+        "passes": 2,
+        "layer_executions": 56,
+        "physical_layers": 32,
+        "mhc_streams": 2,
+        "visit_gain_weights": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "conv_kernel": 7,
+        "learned_history_nonzero": 221184,
+        "local_window": 256,
+        "loaded_parameters": 1020252592,
+        "backward_passes": 0,
+        "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3",
+        "layer_visit_gains": {
+          "4": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "5": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "6": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "7": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "8": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "9": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "10": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "11": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "12": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "13": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "14": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "15": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "16": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "17": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "18": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "19": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "20": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "21": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "22": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "23": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "24": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "25": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "26": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "27": [
+            0.949999988079071,
+            0.05000000074505806
+          ]
+        }
+      },
+      "moments": {
+        "mean_squared_log_moment_distance": 0.001618947391155719,
+        "per_tensor": {
+          "0.input_layernorm": 0.0,
+          "0.post_attention_layernorm": 0.0,
+          "1.input_layernorm": 0.0,
+          "1.post_attention_layernorm": 0.0,
+          "2.input_layernorm": 0.0,
+          "2.post_attention_layernorm": 0.0,
+          "3.input_layernorm": 0.0,
+          "3.post_attention_layernorm": 0.0,
+          "4.input_layernorm": 0.003120338311418891,
+          "4.post_attention_layernorm": 0.003262394806370139,
+          "5.input_layernorm": 0.003439885564148426,
+          "5.post_attention_layernorm": 0.0034617295023053885,
+          "6.input_layernorm": 0.004012871067970991,
+          "6.post_attention_layernorm": 0.003320380114018917,
+          "7.input_layernorm": 0.002690673340111971,
+          "7.post_attention_layernorm": 0.0035798889584839344,
+          "12.input_layernorm": 0.003495496464893222,
+          "12.post_attention_layernorm": 0.003276157658547163,
+          "13.input_layernorm": 0.0034225902054458857,
+          "13.post_attention_layernorm": 0.003617886919528246,
+          "14.input_layernorm": 0.003758740145713091,
+          "14.post_attention_layernorm": 0.003394243773072958,
+          "15.input_layernorm": 0.003371279453858733,
+          "15.post_attention_layernorm": 0.0034140923526138067,
+          "16.input_layernorm": 0.0030028484761714935,
+          "16.post_attention_layernorm": 0.002745039062574506,
+          "17.input_layernorm": 0.002286594593897462,
+          "17.post_attention_layernorm": 0.00222917553037405,
+          "18.input_layernorm": 0.0016578652430325747,
+          "18.post_attention_layernorm": 0.0014649869408458471,
+          "19.input_layernorm": 0.0012773036723956466,
+          "19.post_attention_layernorm": 0.0008753463625907898,
+          "24.input_layernorm": 0.00037821405567228794,
+          "24.post_attention_layernorm": 0.0002531216596253216,
+          "25.input_layernorm": 0.00019516327301971614,
+          "25.post_attention_layernorm": 0.0001670984347583726,
+          "26.input_layernorm": 0.00015868958143983036,
+          "26.post_attention_layernorm": 0.00014107231982052326,
+          "27.input_layernorm": 0.00013183747068978846,
+          "27.post_attention_layernorm": 0.0001051963772624731,
+          "28.input_layernorm": 0.0015428208280354738,
+          "28.post_attention_layernorm": 0.0010513956658542156,
+          "29.input_layernorm": 0.0007397534791380167,
+          "29.post_attention_layernorm": 0.0006541931652463973,
+          "30.input_layernorm": 0.0005614218534901738,
+          "30.post_attention_layernorm": 0.0005243774503469467,
+          "31.input_layernorm": 0.0004981643287464976,
+          "31.post_attention_layernorm": 0.0004291463119443506
+        }
+      },
+      "case_wins": 0,
+      "case_losses": 0
+    }
+  },
+  "checkpoint_promoted": false,
+  "backward_passes": 0,
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "patch_hashes": {
+    "inverse_control": "79511be72a69dfc2e1036c519bfa466a6eea93a153d97d745ad000463e90036a",
+    "target": "034a908697864b8a00a526409b5adeec9a8b2f85181676066a0a1d6d1edb8002"
+  },
+  "eligible_for_validation": false,
+  "reason": "No strict case gain with complete screen retention"
+}

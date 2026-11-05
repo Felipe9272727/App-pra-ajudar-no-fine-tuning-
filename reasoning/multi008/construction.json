@@ -1,0 +1,738 @@
+{
+  "per_tensor": {
+    "0.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.0,
+      "mean_abs_log_correction": 0.0,
+      "clipped_coordinates": 0
+    },
+    "0.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.0,
+      "mean_abs_log_correction": 0.0,
+      "clipped_coordinates": 0
+    },
+    "1.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.0,
+      "mean_abs_log_correction": 0.0,
+      "clipped_coordinates": 0
+    },
+    "1.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.0,
+      "mean_abs_log_correction": 0.0,
+      "clipped_coordinates": 0
+    },
+    "2.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.0,
+      "mean_abs_log_correction": 0.0,
+      "clipped_coordinates": 0
+    },
+    "2.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.0,
+      "mean_abs_log_correction": 0.0,
+      "clipped_coordinates": 0
+    },
+    "3.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.0,
+      "mean_abs_log_correction": 0.0,
+      "clipped_coordinates": 0
+    },
+    "3.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.0,
+      "mean_abs_log_correction": 0.0,
+      "clipped_coordinates": 0
+    },
+    "4.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.030582798644900322,
+      "mean_abs_log_correction": 0.0023060457315295935,
+      "clipped_coordinates": 13
+    },
+    "4.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.03142944723367691,
+      "mean_abs_log_correction": 0.0023189785424619913,
+      "clipped_coordinates": 14
+    },
+    "5.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.031079107895493507,
+      "mean_abs_log_correction": 0.0024537346325814724,
+      "clipped_coordinates": 15
+    },
+    "5.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.03208214417099953,
+      "mean_abs_log_correction": 0.00248639564961195,
+      "clipped_coordinates": 15
+    },
+    "6.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.031745072454214096,
+      "mean_abs_log_correction": 0.002521245274692774,
+      "clipped_coordinates": 16
+    },
+    "6.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.03021835722029209,
+      "mean_abs_log_correction": 0.0027786707505583763,
+      "clipped_coordinates": 14
+    },
+    "7.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.027536652982234955,
+      "mean_abs_log_correction": 0.003133318154141307,
+      "clipped_coordinates": 14
+    },
+    "7.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.031297095119953156,
+      "mean_abs_log_correction": 0.0027832151390612125,
+      "clipped_coordinates": 15
+    },
+    "12.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.031038686633110046,
+      "mean_abs_log_correction": 0.002606423106044531,
+      "clipped_coordinates": 17
+    },
+    "12.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.0314348079264164,
+      "mean_abs_log_correction": 0.0025507593527436256,
+      "clipped_coordinates": 15
+    },
+    "13.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.03205661103129387,
+      "mean_abs_log_correction": 0.002516811713576317,
+      "clipped_coordinates": 16
+    },
+    "13.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.03295311704277992,
+      "mean_abs_log_correction": 0.00255454215221107,
+      "clipped_coordinates": 14
+    },
+    "14.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.03199484571814537,
+      "mean_abs_log_correction": 0.002514088526368141,
+      "clipped_coordinates": 14
+    },
+    "14.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.030845725908875465,
+      "mean_abs_log_correction": 0.0025275610387325287,
+      "clipped_coordinates": 14
+    },
+    "15.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.02923201583325863,
+      "mean_abs_log_correction": 0.0027088236529380083,
+      "clipped_coordinates": 14
+    },
+    "15.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.03049023076891899,
+      "mean_abs_log_correction": 0.002533043036237359,
+      "clipped_coordinates": 14
+    },
+    "16.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.028357671573758125,
+      "mean_abs_log_correction": 0.0024060902651399374,
+      "clipped_coordinates": 12
+    },
+    "16.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.027934880927205086,
+      "mean_abs_log_correction": 0.002465429250150919,
+      "clipped_coordinates": 13
+    },
+    "17.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.026000136509537697,
+      "mean_abs_log_correction": 0.0022875862196087837,
+      "clipped_coordinates": 11
+    },
+    "17.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.02488115057349205,
+      "mean_abs_log_correction": 0.0025068677496165037,
+      "clipped_coordinates": 11
+    },
+    "18.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.022448861971497536,
+      "mean_abs_log_correction": 0.002381701022386551,
+      "clipped_coordinates": 11
+    },
+    "18.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.022103603929281235,
+      "mean_abs_log_correction": 0.002617877908051014,
+      "clipped_coordinates": 8
+    },
+    "19.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.02106623910367489,
+      "mean_abs_log_correction": 0.00220314459875226,
+      "clipped_coordinates": 10
+    },
+    "19.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.01740421913564205,
+      "mean_abs_log_correction": 0.002019421197474003,
+      "clipped_coordinates": 9
+    },
+    "24.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.013026283122599125,
+      "mean_abs_log_correction": 0.0015661552315577865,
+      "clipped_coordinates": 5
+    },
+    "24.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.009748293086886406,
+      "mean_abs_log_correction": 0.001471271156333387,
+      "clipped_coordinates": 1
+    },
+    "25.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.008694822899997234,
+      "mean_abs_log_correction": 0.0013529019197449088,
+      "clipped_coordinates": 1
+    },
+    "25.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.008892036974430084,
+      "mean_abs_log_correction": 0.0014391985023394227,
+      "clipped_coordinates": 1
+    },
+    "26.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.007608335465192795,
+      "mean_abs_log_correction": 0.0012874676613137126,
+      "clipped_coordinates": 1
+    },
+    "26.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.009070250205695629,
+      "mean_abs_log_correction": 0.0013577570207417011,
+      "clipped_coordinates": 1
+    },
+    "27.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.010109895840287209,
+      "mean_abs_log_correction": 0.001332558924332261,
+      "clipped_coordinates": 0
+    },
+    "27.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.008396770805120468,
+      "mean_abs_log_correction": 0.0012216323520988226,
+      "clipped_coordinates": 0
+    },
+    "28.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.023726552724838257,
+      "mean_abs_log_correction": 0.005196358077228069,
+      "clipped_coordinates": 0
+    },
+    "28.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.02041527070105076,
+      "mean_abs_log_correction": 0.004379410296678543,
+      "clipped_coordinates": 0
+    },
+    "29.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.019963601604104042,
+      "mean_abs_log_correction": 0.003747520735487342,
+      "clipped_coordinates": 0
+    },
+    "29.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.018293697386980057,
+      "mean_abs_log_correction": 0.003536367788910866,
+      "clipped_coordinates": 0
+    },
+    "30.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.017787663266062737,
+      "mean_abs_log_correction": 0.003241024212911725,
+      "clipped_coordinates": 0
+    },
+    "30.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.01641189120709896,
+      "mean_abs_log_correction": 0.003093818435445428,
+      "clipped_coordinates": 0
+    },
+    "31.input_layernorm": {
+      "prefill_relative_rms_deviation": 0.01807210221886635,
+      "mean_abs_log_correction": 0.002855614759027958,
+      "clipped_coordinates": 0
+    },
+    "31.post_attention_layernorm": {
+      "prefill_relative_rms_deviation": 0.015025460161268711,
+      "mean_abs_log_correction": 0.002665302949026227,
+      "clipped_coordinates": 0
+    }
+  },
+  "actual_changes": {
+    "inverse_control": {
+      "per_tensor": {
+        "0.input_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "0.post_attention_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "1.input_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "1.post_attention_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "2.input_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "2.post_attention_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "3.input_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "3.post_attention_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "4.input_layernorm": {
+          "changed_values": 707,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02088773250579834
+        },
+        "4.post_attention_layernorm": {
+          "changed_values": 862,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020634889602661133
+        },
+        "5.input_layernorm": {
+          "changed_values": 818,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02122020721435547
+        },
+        "5.post_attention_layernorm": {
+          "changed_values": 852,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020771503448486328
+        },
+        "6.input_layernorm": {
+          "changed_values": 830,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020833373069763184
+        },
+        "6.post_attention_layernorm": {
+          "changed_values": 937,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020667672157287598
+        },
+        "7.input_layernorm": {
+          "changed_values": 960,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020618557929992676
+        },
+        "7.post_attention_layernorm": {
+          "changed_values": 898,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020700693130493164
+        },
+        "12.input_layernorm": {
+          "changed_values": 790,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02105259895324707
+        },
+        "12.post_attention_layernorm": {
+          "changed_values": 847,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020576119422912598
+        },
+        "13.input_layernorm": {
+          "changed_values": 763,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020891308784484863
+        },
+        "13.post_attention_layernorm": {
+          "changed_values": 859,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020700693130493164
+        },
+        "14.input_layernorm": {
+          "changed_values": 769,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02088773250579834
+        },
+        "14.post_attention_layernorm": {
+          "changed_values": 876,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02059304714202881
+        },
+        "15.input_layernorm": {
+          "changed_values": 845,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020280838012695312
+        },
+        "15.post_attention_layernorm": {
+          "changed_values": 888,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02034175395965576
+        },
+        "16.input_layernorm": {
+          "changed_values": 749,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02127659320831299
+        },
+        "16.post_attention_layernorm": {
+          "changed_values": 905,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020700693130493164
+        },
+        "17.input_layernorm": {
+          "changed_values": 785,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02116405963897705
+        },
+        "17.post_attention_layernorm": {
+          "changed_values": 907,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020634889602661133
+        },
+        "18.input_layernorm": {
+          "changed_values": 790,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020618557929992676
+        },
+        "18.post_attention_layernorm": {
+          "changed_values": 929,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020634889602661133
+        },
+        "19.input_layernorm": {
+          "changed_values": 870,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020700693130493164
+        },
+        "19.post_attention_layernorm": {
+          "changed_values": 812,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020710110664367676
+        },
+        "24.input_layernorm": {
+          "changed_values": 519,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020547986030578613
+        },
+        "24.post_attention_layernorm": {
+          "changed_values": 665,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020061731338500977
+        },
+        "25.input_layernorm": {
+          "changed_values": 461,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020785212516784668
+        },
+        "25.post_attention_layernorm": {
+          "changed_values": 692,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020588278770446777
+        },
+        "26.input_layernorm": {
+          "changed_values": 455,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02059495449066162
+        },
+        "26.post_attention_layernorm": {
+          "changed_values": 670,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020172953605651855
+        },
+        "27.input_layernorm": {
+          "changed_values": 778,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.01671731472015381
+        },
+        "27.post_attention_layernorm": {
+          "changed_values": 633,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0071326494216918945
+        },
+        "28.input_layernorm": {
+          "changed_values": 921,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.019323647022247314
+        },
+        "28.post_attention_layernorm": {
+          "changed_values": 921,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.018970191478729248
+        },
+        "29.input_layernorm": {
+          "changed_values": 848,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.016129016876220703
+        },
+        "29.post_attention_layernorm": {
+          "changed_values": 917,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.01466667652130127
+        },
+        "30.input_layernorm": {
+          "changed_values": 884,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.01308906078338623
+        },
+        "30.post_attention_layernorm": {
+          "changed_values": 880,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.014905154705047607
+        },
+        "31.input_layernorm": {
+          "changed_values": 914,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.01538461446762085
+        },
+        "31.post_attention_layernorm": {
+          "changed_values": 883,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.01538461446762085
+        }
+      },
+      "changed_tensors": 40,
+      "changed_values": 32289
+    },
+    "target": {
+      "per_tensor": {
+        "0.input_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "0.post_attention_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "1.input_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "1.post_attention_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "2.input_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "2.post_attention_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "3.input_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "3.post_attention_layernorm": {
+          "changed_values": 0,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0
+        },
+        "4.input_layernorm": {
+          "changed_values": 702,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02035623788833618
+        },
+        "4.post_attention_layernorm": {
+          "changed_values": 862,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02018636465072632
+        },
+        "5.input_layernorm": {
+          "changed_values": 816,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02035623788833618
+        },
+        "5.post_attention_layernorm": {
+          "changed_values": 852,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020193874835968018
+        },
+        "6.input_layernorm": {
+          "changed_values": 829,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020435988903045654
+        },
+        "6.post_attention_layernorm": {
+          "changed_values": 937,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02008366584777832
+        },
+        "7.input_layernorm": {
+          "changed_values": 959,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02010047435760498
+        },
+        "7.post_attention_layernorm": {
+          "changed_values": 898,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02016127109527588
+        },
+        "12.input_layernorm": {
+          "changed_values": 791,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02035623788833618
+        },
+        "12.post_attention_layernorm": {
+          "changed_values": 847,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02018636465072632
+        },
+        "13.input_layernorm": {
+          "changed_values": 762,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020408153533935547
+        },
+        "13.post_attention_layernorm": {
+          "changed_values": 859,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02018505334854126
+        },
+        "14.input_layernorm": {
+          "changed_values": 769,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0200803279876709
+        },
+        "14.post_attention_layernorm": {
+          "changed_values": 874,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02018505334854126
+        },
+        "15.input_layernorm": {
+          "changed_values": 844,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02009272575378418
+        },
+        "15.post_attention_layernorm": {
+          "changed_values": 888,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02016127109527588
+        },
+        "16.input_layernorm": {
+          "changed_values": 749,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02088165283203125
+        },
+        "16.post_attention_layernorm": {
+          "changed_values": 905,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02011263370513916
+        },
+        "17.input_layernorm": {
+          "changed_values": 785,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02025318145751953
+        },
+        "17.post_attention_layernorm": {
+          "changed_values": 907,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020202040672302246
+        },
+        "18.input_layernorm": {
+          "changed_values": 790,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020435988903045654
+        },
+        "18.post_attention_layernorm": {
+          "changed_values": 929,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02009648084640503
+        },
+        "19.input_layernorm": {
+          "changed_values": 870,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0200803279876709
+        },
+        "19.post_attention_layernorm": {
+          "changed_values": 810,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020193874835968018
+        },
+        "24.input_layernorm": {
+          "changed_values": 520,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020547926425933838
+        },
+        "24.post_attention_layernorm": {
+          "changed_values": 665,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020061731338500977
+        },
+        "25.input_layernorm": {
+          "changed_values": 462,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.020785212516784668
+        },
+        "25.post_attention_layernorm": {
+          "changed_values": 692,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.019117653369903564
+        },
+        "26.input_layernorm": {
+          "changed_values": 453,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02059495449066162
+        },
+        "26.post_attention_layernorm": {
+          "changed_values": 671,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.02017289400100708
+        },
+        "27.input_layernorm": {
+          "changed_values": 779,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.015197575092315674
+        },
+        "27.post_attention_layernorm": {
+          "changed_values": 633,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.0071326494216918945
+        },
+        "28.input_layernorm": {
+          "changed_values": 921,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.01932370662689209
+        },
+        "28.post_attention_layernorm": {
+          "changed_values": 921,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.018970131874084473
+        },
+        "29.input_layernorm": {
+          "changed_values": 849,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.016129016876220703
+        },
+        "29.post_attention_layernorm": {
+          "changed_values": 917,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.01466667652130127
+        },
+        "30.input_layernorm": {
+          "changed_values": 885,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.013089001178741455
+        },
+        "30.post_attention_layernorm": {
+          "changed_values": 880,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.014905095100402832
+        },
+        "31.input_layernorm": {
+          "changed_values": 915,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.015384674072265625
+        },
+        "31.post_attention_layernorm": {
+          "changed_values": 884,
+          "constraints_reverted": 0,
+          "actual_max_relative_gain_change": 0.015384674072265625
+        }
+      },
+      "changed_tensors": 40,
+      "changed_values": 32281
+    }
+  }
+}
