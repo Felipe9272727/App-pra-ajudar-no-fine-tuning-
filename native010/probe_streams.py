@@ -4,12 +4,12 @@ from pathlib import Path
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parent
 sys.path.insert(0,str(ROOT/'reasoning'))
 from runtime_helpers import load,torch,e
-from native010.native_runtime import build,verify_bundle
+from native010.reload import load_candidate
 
 @torch.inference_mode()
 def main():
  status=json.loads((HERE/'status.json').read_text());status.update(status='mechanism_probe',model_process_active=True);e.cr.atomic_json(HERE/'status.json',status)
- model,tok,parent,meta=load();build(model,'routed',HERE);verify_bundle(model,'routed',HERE)
+ model,tok,meta=load_candidate('routed')
  stats={};handles=[]
  for i,l in enumerate(model.model.language_model.layers[4:28],4):
   for name in ['mhc_attn','mhc_ffn']:
