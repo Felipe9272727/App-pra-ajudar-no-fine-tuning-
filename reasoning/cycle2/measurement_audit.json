@@ -1,0 +1,101 @@
+{
+  "original": {
+    "GSM8K-zero-shot-subset": {
+      "n": 16,
+      "fully_correct": 1,
+      "capped": 5,
+      "categories": {
+        "numeric_or_instruction": 16
+      },
+      "capped_ids": [
+        "gsm8k:914",
+        "gsm8k:157",
+        "gsm8k:930",
+        "gsm8k:292",
+        "gsm8k:46"
+      ]
+    },
+    "IFEval-filtered-subset": {
+      "n": 12,
+      "fully_correct": 8,
+      "capped": 6,
+      "categories": {
+        "numeric_or_instruction": 12
+      },
+      "capped_ids": [
+        "ifeval:2567",
+        "ifeval:1361",
+        "ifeval:1667",
+        "ifeval:1645",
+        "ifeval:3732",
+        "ifeval:2404"
+      ]
+    },
+    "LiveCodeBench-v6-subset": {
+      "n": 8,
+      "fully_correct": 1,
+      "capped": 2,
+      "categories": {
+        "passed": 1,
+        "ValueError": 1,
+        "IndentationError": 1,
+        "WrongStdout": 3,
+        "IndexError": 1,
+        "SyntaxError": 1
+      },
+      "capped_ids": [
+        "lcb:abc399_b",
+        "lcb:abc387_a"
+      ]
+    }
+  },
+  "liquid": {
+    "GSM8K-zero-shot-subset": {
+      "n": 16,
+      "fully_correct": 1,
+      "capped": 4,
+      "categories": {
+        "numeric_or_instruction": 16
+      },
+      "capped_ids": [
+        "gsm8k:914",
+        "gsm8k:157",
+        "gsm8k:292",
+        "gsm8k:1211"
+      ]
+    },
+    "IFEval-filtered-subset": {
+      "n": 12,
+      "fully_correct": 8,
+      "capped": 9,
+      "categories": {
+        "numeric_or_instruction": 12
+      },
+      "capped_ids": [
+        "ifeval:2567",
+        "ifeval:1629",
+        "ifeval:1361",
+        "ifeval:2314",
+        "ifeval:1667",
+        "ifeval:1645",
+        "ifeval:2207",
+        "ifeval:2807",
+        "ifeval:3732"
+      ]
+    },
+    "LiveCodeBench-v6-subset": {
+      "n": 8,
+      "fully_correct": 2,
+      "capped": 1,
+      "categories": {
+        "passed": 2,
+        "WrongStdout": 3,
+        "ValueError": 2,
+        "SyntaxError": 1
+      },
+      "capped_ids": [
+        "lcb:abc389_b"
+      ]
+    }
+  }
+}
