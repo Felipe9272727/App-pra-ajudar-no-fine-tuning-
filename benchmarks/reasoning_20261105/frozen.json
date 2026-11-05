@@ -1,0 +1,36 @@
+{
+  "status": "frozen_before_public_inference",
+  "selection_sha256": "d1cabe31695df73a7d61f5a30cd0c384144e446e9285cd092199286c7ebd5517",
+  "selected": {
+    "selected": "parent",
+    "checkpoint": "rsi100/checkpoints/best.pt",
+    "checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "patch": null,
+    "checkpoint_promoted": false,
+    "reason": "Neither authored edit passed development gates; keep unchanged hybrid"
+  },
+  "variants": [
+    "original",
+    "liquid"
+  ],
+  "files": {
+    "benchmarks/reasoning_20261105/PROTOCOL.md": "893d263ee17a84628bd912f6a8de1defa17b1e1b8c1044a67a46b5825426bbb0",
+    "benchmarks/reasoning_20261105/build_data.py": "246131075881d0c96a48e6db04ce78b398198bc514f25b03a21ed46aad3c69d6",
+    "benchmarks/reasoning_20261105/stdio_judge.py": "059ccfb04475c1c1264e7ff0c70b4fdea1d8c8a07d6f910373206e2f1e2f27fc",
+    "benchmarks/reasoning_20261105/evaluate.py": "dd623709f1a0bb971e1ceee554098684d7faa550f3fcd4c2843c669bed5abc80",
+    "benchmarks/reasoning_20261105/prompts.json": "d37599532735ec05a1288d8469279617656391cc543b3d82020a480510224c4f",
+    "benchmarks/reasoning_20261105/oracles.json": "842796d5f55fcfa8c046101431ff267df53227648533a4efe1813a4a1ae5458d",
+    "benchmarks/reasoning_20261105/selected_ids.json": "50f4f1517291394a3ee3fef434243a8448c9cea9e94b94248a160e7c783c2d3a",
+    "benchmarks/reasoning_20261105/sources.json": "d6d47c071548a6321b5890f2170cf8677a087819e28f4c69a9281c97dc3cda2b",
+    "benchmarks/reasoning_20261105/vendor/instruction_following_eval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "benchmarks/reasoning_20261105/vendor/instruction_following_eval/instructions_registry.py": "ec92d72c264f6d906978613085db262356174300370a3fffe6fefd5969ce9cfc",
+    "benchmarks/reasoning_20261105/vendor/instruction_following_eval/instructions_util.py": "a73797261eee5bf447e279d82a2b700b1bdd3cb1193412dbab1270a85832bc6b",
+    "benchmarks/reasoning_20261105/vendor/instruction_following_eval/instructions.py": "60e086f5342a03ce8e18b64bbcccf86308f523c08aa826707a562150a52f3edf",
+    "benchmarks/reasoning_20261105/vendor/instruction_following_eval/evaluation_lib.py": "35decc06000718487f44d7deafa6d3f48a8ec0886281edf40162c0265b7d248c",
+    "reasoning/runtime_helpers.py": "3decc031b87f7fe5bf6feca52dc3d6d2ba82c60eed9d21341e0977f028836238",
+    "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+    "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+    "modeling_sensenova_loop.py": "26e11d3522aa730c0ba031340ce42632bc2834da8cc0b6804006bb207d979a5b"
+  },
+  "public_outputs_used_for_weight_selection": false
+}
