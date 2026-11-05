@@ -1,6 +1,6 @@
 {
   "variant": "original",
-  "status": "running",
+  "status": "complete",
   "rows": [
     {
       "id": "lcb:abc396_a",
@@ -637,6 +637,146 @@
       "instruction_ids": [
         "detectable_format:number_bullet_lists"
       ]
+    },
+    {
+      "id": "ifeval:1667",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "9caf1f2b16f1af17fbf62226166686bdfd1daf879c1ab1c0eb2ab0428fe331a6",
+      "output": "The presidency of Martin Van Buren, who served as the 22nd president of the United States from 1837 to 1841, stands as a pivotal chapter in American political history. His tenure was marked by a complex blend of domestic challenges and international tensions that shaped the nation's trajectory. Van Buren was a man of considerable influence, known for his political acumen and his ability to navigate the delicate balance between federal and state governments. His administration was characterized by a focus on economic development and social reform, which laid the groundwork for future reforms.\n\nThe beginning of Van Buren's presidency was marked by the election of 1836, which resulted in a landslide victory for him. This election was significant because it marked the end of the era of Andrew Jackson and the beginning of a new political era. Van Buren's victory was not only a political triumph but also a strategic move to consolidate power and establish",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 23.374527603999923,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ],
+      "loose_all_passed": false,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ]
+    },
+    {
+      "id": "ifeval:1645",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "d43f207bb4aee13d84be41beb2508cda4ac53577f5ee3ab6efe871350c91262b",
+      "output": "SHEDLON IS THE NAME OF A SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SHARED SH",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 23.32934940299947,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ],
+      "loose_all_passed": false,
+      "instruction_ids": [
+        "change_case:english_capital"
+      ]
+    },
+    {
+      "id": "ifeval:2207",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "c10093a6c8c9aec1144440b2de9dee0b30348b970d74d796b97abde34f94f26d",
+      "output": "The study indicates that exposure to VHF radio waves does not influence the proliferation of the tested bacterial species. Consequently, the observed growth rates remain unaffected by the radio frequency exposure. This finding suggests that the radio waves do not exert a significant impact on the biological activity of the organisms under investigation. The data supports the conclusion that the proposed intervention has no adverse effect on the target population.",
+      "new_tokens": 77,
+      "hit_limit": false,
+      "seconds": 9.424842191999232,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ]
+    },
+    {
+      "id": "ifeval:2807",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "7044bdbaa722fb3feec677e30084c953405609b5d721ddf8cb2f026f78052a6f",
+      "output": "<<the witch's legal empire>>\nhey, if you're a wizard and you've been sued for stealing a spell, you need a lawyer who doesn't just write contracts but actually makes them work. i represent witches who want to turn their bad luck into a big payday. don't worry, i'm not a judge, i'm a wizard who knows how to draft the best deal possible. let's get this case done right, or else you'll have to pay me to fix it. call me now and let's see if you're ready to be a hero in your own right. <<the witch's legal empire>>",
+      "new_tokens": 128,
+      "hit_limit": false,
+      "seconds": 15.346865977000562,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "detectable_format:title"
+      ]
+    },
+    {
+      "id": "ifeval:3732",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "8eee5111b7ee187817f6a44814604774a85e27ec3959bcff469f9c563c800fb5",
+      "output": "(Verse 1)\nThe morning mist is thick and gray,\nA quiet town where the air is still.\nNo loud city noise, no rush of traffic,\nJust the gentle hum of the morning light.\nI walk along the **river** banks,\nWhere the water flows with a soft, clear sound.\nThe old stone houses stand tall and proud,\nWith stories of the past and the old.\nI stop at the **festival** grounds,\nWhere the sun rises and the air is sweet.\nThe **festival** is a celebration,\nOf the people who come to gather.\n\n(Chorus)\nSo let the **river** flow beneath the sky,\nWhere the **festival** is held and the sky is high.\nA peaceful place to rest and sleep,\nWhere the **river** meets the **festival** in peace.\nThe **river** is a path, the **river",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 22.46336730100029,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "keywords:existence"
+      ]
+    },
+    {
+      "id": "ifeval:2404",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "9b5fe533d35cc0ceebb84ac06ad2726409718b4abacd7e03ff51b77d7daf4922",
+      "output": "{\n  \"character_analysis\": {\n    \"role\": \"The Last Guardian\",\n    \"key_traits\": [\n      \"Unyielding\",\n      \"Intelligent\",\n      \"Resilient\",\n      \"Protective\"\n    ],\n    \"behavioral_patterns\": [\n      \"Prioritizes safety over comfort\",\n      \"Uses wit to navigate obstacles\",\n      \"Maintains composure under pressure\",\n      \"Values trust above all else\"\n    ],\n    \"unique_qualities\": [\n      \"Demonstrates exceptional leadership\",\n      \"Shows deep empathy for others\",\n      \"Has a unique perspective on the situation\",\n      \"Is capable of making difficult choices\"\n    ]\n  },\n  \"contextual_significance\": {\n    \"outcome\": \"Radcliffe's success was not just about survival, but about proving his worth and the value of his companions",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 24.352676329000133,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ],
+      "loose_all_passed": false,
+      "instruction_ids": [
+        "detectable_format:json_format"
+      ]
+    },
+    {
+      "id": "ifeval:2457",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "6f1b8d0fd35cd8b04bea8982f011156647b547eacfd155745e2ba08c01da1f78",
+      "output": "* We want to honor Thayer because he was a brilliant scientist who helped us build amazing tools like AI, helping us solve big problems and make our world smarter.\n* He worked hard to create these new technologies, even when the world was hard to understand, and he kept learning and growing to help others.\n* His work shows that we can use smart machines to help us, and he was the first person to share his ideas with the world.\n* We want to remember his hard work and his amazing ideas so that we can keep using these great tools to help our families and communities.",
+      "new_tokens": 122,
+      "hit_limit": false,
+      "seconds": 15.713596618000338,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ]
     }
   ],
   "frozen_sha256": "a4d4eebde3c1cc2618ca0775a4f63e22a8eca3255ff71947c0083e490309feb7",
@@ -659,5 +799,6 @@
     "torch": "2.15.0+cpu",
     "cpu_quota": "200000 100000",
     "threads": 4
-  }
+  },
+  "completed_unix": 1793842281.9227123
 }
