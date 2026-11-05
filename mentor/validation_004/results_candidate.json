@@ -53,6 +53,161 @@
         true
       ],
       "code": "def solve(adj, start, goal):\n    visited = set()\n    queue = [start]\n    visited.add(start)\n    \n    while queue:\n        node = queue.pop(0)\n        \n        if node == goal:\n            return True\n        \n        for neighbor in adj[node]:\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n    \n    return False"
+    },
+    {
+      "id": "v4_range_updates",
+      "group": "far",
+      "output": "def solve(n, updates):\n    result = [0] * n\n    for left, right, value in updates:\n        for i in range(left, right + 1):\n            result[i] += value\n    return result",
+      "new_tokens": 51,
+      "hit_limit": false,
+      "seconds": 16.72469342000022,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "IndexError",
+      "error_types": [
+        "IndexError",
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(n, updates):\n    result = [0] * n\n    for left, right, value in updates:\n        for i in range(left, right + 1):\n            result[i] += value\n    return result"
+    },
+    {
+      "id": "v4_window_sums",
+      "group": "far",
+      "output": "def solve(xs, k):\n    if not xs or k <= 0 or k > len(xs):\n        return []\n    result = []\n    for i in range(len(xs) - k + 1):\n        window = xs[i:i+k]\n        result.append(window)\n    return result",
+      "new_tokens": 66,
+      "hit_limit": false,
+      "seconds": 21.51701582500027,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs, k):\n    if not xs or k <= 0 or k > len(xs):\n        return []\n    result = []\n    for i in range(len(xs) - k + 1):\n        window = xs[i:i+k]\n        result.append(window)\n    return result"
+    },
+    {
+      "id": "v4_integer_sqrt",
+      "group": "far",
+      "output": "def solve(n):\n    r = int(n**0.5)\n    return r if r*r <= n else r-1",
+      "new_tokens": 29,
+      "hit_limit": false,
+      "seconds": 10.430613535999782,
+      "thinking": false,
+      "passed": 8,
+      "total": 8,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(n):\n    r = int(n**0.5)\n    return r if r*r <= n else r-1"
+    },
+    {
+      "id": "v4_expand_runs",
+      "group": "far",
+      "output": "def solve(runs):\n    result = []\n    for char, count in runs:\n        result.append(char * count)\n    return \"\".join(result)",
+      "new_tokens": 35,
+      "hit_limit": false,
+      "seconds": 11.751276580000194,
+      "thinking": false,
+      "passed": 8,
+      "total": 8,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(runs):\n    result = []\n    for char, count in runs:\n        result.append(char * count)\n    return \"\".join(result)"
+    },
+    {
+      "id": "v4_normalize_path",
+      "group": "far",
+      "output": "def solve(path):\n    if not path or path == '.':\n        return ''\n    if not path.startswith('/'):\n        return '/'\n    if not path.endswith('/'):\n        return path\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 51.057011473999864,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 28,
+      "code": "def solve(path):\n    if not path or path == '.':\n        return ''\n    if not path.startswith('/'):\n        return '/'\n    if not path.endswith('/'):\n        return path\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':\n        return ''\n    if path == '..':\n        return ''\n    if path == '.':",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "v4_column_label",
+      "group": "far",
+      "output": "def solve(n):\n    if n < 1:\n        return None\n    if n == 1:\n        return \"A\"\n    if n == 26:\n        return \"Z\"\n    if n == 27:\n        return \"AA\"\n    if n == 28:\n        return \"AB\"\n    if n == 29:\n        return \"AC\"\n    if n == 30:\n        return \"AD\"\n    if n == 31:\n        return \"AE\"\n    if n == 32:\n        return \"AF\"\n    if n == 33:\n        return \"AG\"\n    if n == 34:\n",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 49.53615878399978,
+      "thinking": false,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 22,
+      "code": "def solve(n):\n    if n < 1:\n        return None\n    if n == 1:\n        return \"A\"\n    if n == 26:\n        return \"Z\"\n    if n == 27:\n        return \"AA\"\n    if n == 28:\n        return \"AB\"\n    if n == 29:\n        return \"AC\"\n    if n == 30:\n        return \"AD\"\n    if n == 31:\n        return \"AE\"\n    if n == 32:\n        return \"AF\"\n    if n == 33:\n        return \"AG\"\n    if n == 34:",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
     }
   ],
   "controls": [],

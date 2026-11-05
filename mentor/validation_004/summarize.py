@@ -128,6 +128,14 @@ def main():
         'não equaliza FLOPs ou latência; a comparação pai/candidata mantém a mesma arquitetura e computação. '
         'Casos, gabaritos e implementações de referência ficaram fora das entradas do modelo. '
         'Os hashes e o protocolo foram publicados antes das saídas desta validação.','',
+        '## Escopo matemático da preservação','',
+        'Antes do arredondamento BF16, o efeito em uma nova ativação h é '
+        'ΔW h = -0,012 ||W|| u (vᵀ h). A residualização restringe o efeito apenas '
+        'nas 54 ativações anteriores da própria resposta usada na edição; a regularização '
+        'torna essa proteção aproximada. O arredondamento BF16 acrescenta outro resíduo. '
+        'Contextos novos fora desse conjunto podem mudar, e uma troca de token na decodificação '
+        'gulosa pode alterar todo o programa seguinte. As regressões observadas são compatíveis '
+        'com esse alcance limitado, sem identificar uma causa neural exclusiva de programação.','',
         '## Decisão','',
         ('Os critérios registrados foram atendidos; preservar a candidata validada, sem alegar inteligência geral.' if promoted else
          'A generalização não foi confirmada pelos critérios registrados. Manter o checkpoint pai como melhor versão; '
