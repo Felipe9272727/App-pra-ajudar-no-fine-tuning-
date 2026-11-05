@@ -1,0 +1,9 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7450.82it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793905156.331873, "attempt": null, "pid": 15532}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+{"input_is_unlabelled": true, "generated_answers": false, "routers_with_observed_stream_separation": 47, "routers_with_observed_conditional_post_gates": 48, "maximum_stream_difference": 0.125, "used_to_select_weights": false}

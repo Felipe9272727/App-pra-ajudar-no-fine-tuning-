@@ -194,3 +194,34 @@
 - A future study needs a new hypothesis/registration and actual decoding
   states at the erroneous decision; do not invent missing full-precision
   activations or silently reuse an observed set as a new independent test.
+
+## Complete weight audit and native architectural ablations 010 — complete
+
+- Branch: codex/liquid-sense-native-audit-20261105. Read
+  NATIVE_ARCHITECTURE_REPORT.md and native010/status.json, selection.json,
+  NATIVE_PROTOCOL.md and screen_comparison.json before inference.
+- Python scanned all 1,020,252,592 values in 699 unique loaded tensors, all
+  buffers, and separately all 20,452,864 values in 15 preserved, unused MTP
+  tensors. No nonfinite weights. Vision was inspected, not functionally tested.
+- Three frozen native ablations finished: depth 8/36 cases, liquid 11/36,
+  routed 11/36, all 0/7 complete tasks. Repeated parent is 27/36, 3/7;
+  original Qwen is 27/36, 5/7. No candidate passed the monotone screen.
+- They changed 138639155 / 139308551 / 140095367 scalar values respectively;
+  all 32 physical layers were active, with 56 executions and two-stream mHC.
+  Routed initialized all 48 input-dependent routers; the probe observed
+  post-gate differences in 48 and stream separation in 47. Mechanism change
+  and 10.37% temporal calibration-MSE reduction are not intelligence gains.
+- Preserve unchanged best.pt SHA256 46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
+  Validation eight remains unused; no full/general gate was run on these
+  rejected candidates. Do not repeat completed experiments or restart RSI100.
+- Native experiments are deterministic incremental bundles, not monolithic
+  safetensors. Use native010.reload.load_candidate, which checks all parent
+  tensors and reconstructs overlays AFTER the legacy loader. Legacy load_port
+  alone resets source layers and would erase their native adaptation.
+- Code, exact overlays, per-tensor hashes and outputs are preserved. Construction
+  activations are ZIP data in nine chunks with a hash-checked restoration
+  script. No previous checkpoint/report was removed. 55 technical tests and
+  all nine cache probes passed; no background model worker remains.
+- Official configs are pinned in native010/official; Loop phase/mHC layout
+  matches SenseNova, but Qwen widths/DeltaNet remain Liquid-inspired operators,
+  not full LFM3. No larger-model superiority or general improvement is shown.

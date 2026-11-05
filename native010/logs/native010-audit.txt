@@ -1,0 +1,40 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:  93%|█████████▎| 629/675 [00:00<00:00, 6286.68it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6548.10it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793902357.9460669, "attempt": null, "pid": 8988}
+PHASE_END checkpoint_load:best.pt 0.005
+FULL_SCAN 1 699 model.visual.patch_embed.proj.weight
+FULL_SCAN 26 699 model.visual.blocks.1.mlp.linear_fc2.weight
+FULL_SCAN 51 699 model.visual.blocks.3.mlp.linear_fc2.bias
+FULL_SCAN 76 699 model.visual.blocks.6.norm1.weight
+FULL_SCAN 101 699 model.visual.blocks.8.norm1.bias
+FULL_SCAN 126 699 model.visual.blocks.10.norm2.weight
+FULL_SCAN 151 699 model.visual.merger.linear_fc1.bias
+FULL_SCAN 176 699 model.language_model.layers.1.linear_attn.in_proj_b.weight
+FULL_SCAN 201 699 model.language_model.layers.3.self_attn.q_norm.weight
+FULL_SCAN 226 699 model.language_model.layers.4.mhc_ffn.bias
+FULL_SCAN 251 699 model.language_model.layers.6.linear_attn.out_proj.weight
+FULL_SCAN 276 699 model.language_model.layers.7.post_attention_layernorm.weight
+FULL_SCAN 301 699 model.language_model.layers.9.linear_attn.dt_bias
+FULL_SCAN 326 699 model.language_model.layers.10.linear_attn.in_proj_z.weight
+FULL_SCAN 351 699 model.language_model.layers.11.mhc_attn.bias
+FULL_SCAN 376 699 model.language_model.layers.13.linear_attn.conv1d.weight
+FULL_SCAN 401 699 model.language_model.layers.14.linear_attn.in_proj_a.weight
+FULL_SCAN 426 699 model.language_model.layers.15.mhc_ffn.bias
+FULL_SCAN 451 699 model.language_model.layers.17.linear_attn.out_proj.weight
+FULL_SCAN 476 699 model.language_model.layers.18.mlp.up_proj.weight
+FULL_SCAN 501 699 model.language_model.layers.20.linear_attn.dt_bias
+FULL_SCAN 526 699 model.language_model.layers.21.linear_attn.in_proj_z.weight
+FULL_SCAN 551 699 model.language_model.layers.22.input_layernorm.weight
+FULL_SCAN 576 699 model.language_model.layers.24.linear_attn.conv1d.weight
+FULL_SCAN 601 699 model.language_model.layers.25.linear_attn.in_proj_a.weight
+FULL_SCAN 626 699 model.language_model.layers.26.mhc_attn.weight
+FULL_SCAN 651 699 model.language_model.layers.28.linear_attn.in_proj_qkv.weight
+FULL_SCAN 676 699 model.language_model.layers.30.linear_attn.conv1d.weight
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+ALL_WEIGHTS_AUDITED 699 1020252592 [8, 9, 10, 11, 20, 21, 22, 23]

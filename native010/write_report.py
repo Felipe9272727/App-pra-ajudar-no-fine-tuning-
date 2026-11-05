@@ -84,7 +84,8 @@ contribuir para a saída, preservando número de parâmetros e 56 execuções.
 
 B ajustou os 24 kernels com sistemas de ridge de sete coeficientes por canal,
 usando ativações em 19 textos/enunciados já observados, sem respostas.
-Alvos eram preativações numéricas internas do Qwen, armazenadas em BF16;
+Alvos eram pré-ativações recalculadas em FP32 a partir de QKV reais e
+kernels do Qwen, depois armazenadas em BF16;
 nenhum programa de referência foi gerado. Limite antes da quantização: 5% da
 norma do canal; maior variação escrita após BF16: 5,36%. O MSE médio dos
 sinais de calibração caiu de {objective['mean_layer_mse_before']:.9f} para
@@ -110,7 +111,9 @@ específica que justificasse alterá-los.
 
 Sete tarefas de desenvolvimento já observadas, 36 casos, mesma tokenização,
 mesmo contexto por problema, greedy, thinking desativado, 160 tokens novos,
-BF16 e quatro threads em CPU. Os programas foram avaliados no mesmo sandbox
+BF16 e quatro threads em CPU. O maior prompt somado ao orçamento de geração
+tem 222 tokens, abaixo da janela local 256: não houve corte de contexto pela
+janela nessa triagem. Os programas foram avaliados no mesmo sandbox
 sem credenciais, com limites de recursos e seccomp. Os casos esperados só
 entram no avaliador, depois da geração; não entram no contexto dos modelos.
 

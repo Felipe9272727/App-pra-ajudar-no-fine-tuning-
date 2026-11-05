@@ -1,0 +1,68 @@
+PHASE checkpoint depth
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 8581.44it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793903514.6332347, "attempt": null, "pid": 9887}
+PHASE_END checkpoint_load:best.pt 0.005
+CHECKPOINT depth 138639155
+PHASE technical depth
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:  82%|████████▏ | 556/675 [00:00<00:00, 5542.65it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 5400.46it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793903523.732657, "attempt": null, "pid": 10013}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+CACHE depth {'length': 17, 'max_logit_difference': 0.1875, 'same_top_token': True, 'finite': True, 'passed': True}
+CACHE depth {'length': 257, 'max_logit_difference': 0.171875, 'same_top_token': True, 'finite': True, 'passed': True}
+CACHE depth {'length': 513, 'max_logit_difference': 0.1640625, 'same_top_token': True, 'finite': True, 'passed': True}
+PHASE checkpoint liquid
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6961.65it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793903559.0684965, "attempt": null, "pid": 10176}
+PHASE_END checkpoint_load:best.pt 0.005
+CHECKPOINT liquid 139308551
+PHASE technical liquid
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7914.07it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793903566.8462791, "attempt": null, "pid": 10199}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+CACHE liquid {'length': 17, 'max_logit_difference': 0.125, 'same_top_token': True, 'finite': True, 'passed': True}
+CACHE liquid {'length': 257, 'max_logit_difference': 0.307373046875, 'same_top_token': True, 'finite': True, 'passed': True}
+CACHE liquid {'length': 513, 'max_logit_difference': 0.3515625, 'same_top_token': True, 'finite': True, 'passed': True}
+PHASE checkpoint routed
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 8982.09it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793903603.634465, "attempt": null, "pid": 10229}
+PHASE_END checkpoint_load:best.pt 0.005
+CHECKPOINT routed 140095367
+PHASE technical routed
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 9049.88it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793903612.9098778, "attempt": null, "pid": 10496}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+CACHE routed {'length': 17, 'max_logit_difference': 0.171875, 'same_top_token': True, 'finite': True, 'passed': True}
+CACHE routed {'length': 257, 'max_logit_difference': 0.171875, 'same_top_token': True, 'finite': True, 'passed': True}
+CACHE routed {'length': 513, 'max_logit_difference': 0.1953125, 'same_top_token': True, 'finite': True, 'passed': True}
+INTEGRITY_PHASES_COMPLETE

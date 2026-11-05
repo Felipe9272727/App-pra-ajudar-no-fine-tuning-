@@ -1,0 +1,15 @@
+{
+  "selected": "parent",
+  "checkpoint": "rsi100/checkpoints/best.pt",
+  "checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "checkpoint_promoted": false,
+  "fresh_validation_consumed": false,
+  "reason": "All three native ablations failed the predeclared development screen; preserve unchanged parent",
+  "native_candidates_saved": [
+    "native010/checkpoint_depth.json",
+    "native010/checkpoint_liquid.json",
+    "native010/checkpoint_routed.json"
+  ],
+  "monolithic_native_safetensors_exported": false,
+  "incremental_reconstruction_bitwise_verified": true
+}

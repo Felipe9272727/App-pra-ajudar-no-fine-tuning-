@@ -1,0 +1,27 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7248.43it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793903414.404439, "attempt": null, "pid": 9668}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+LIQUID_STATS ordinary_00
+LIQUID_STATS ordinary_01
+LIQUID_STATS ordinary_02
+LIQUID_STATS ordinary_03
+LIQUID_STATS ordinary_04
+LIQUID_STATS ordinary_05
+LIQUID_STATS ordinary_06
+LIQUID_STATS ordinary_07
+LIQUID_STATS ordinary_08
+LIQUID_STATS ordinary_09
+LIQUID_STATS ordinary_10
+LIQUID_STATS ordinary_11
+LIQUID_STATS prefix_sums
+LIQUID_STATS rotate_right
+LIQUID_STATS longest_run
+LIQUID_STATS overlap_count
+LIQUID_STATS sum_abs
+LIQUID_STATS palindrome
+LIQUID_STATS binary_search

@@ -1,0 +1,35 @@
+{
+  "parent": {
+    "tasks": 3,
+    "cases": 27
+  },
+  "original": {
+    "tasks": 5,
+    "cases": 27
+  },
+  "candidates": {
+    "depth": {
+      "tasks": 0,
+      "cases": 8,
+      "wins": 0,
+      "losses": 19,
+      "full_development_eligible": false
+    },
+    "liquid": {
+      "tasks": 0,
+      "cases": 11,
+      "wins": 0,
+      "losses": 16,
+      "full_development_eligible": false
+    },
+    "routed": {
+      "tasks": 0,
+      "cases": 11,
+      "wins": 0,
+      "losses": 16,
+      "full_development_eligible": false
+    }
+  },
+  "independent_validation_opened": false,
+  "checkpoint_promoted": false
+}

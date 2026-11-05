@@ -26,9 +26,9 @@ def main():
   'audit_values':read('audit_complete.json')['unique_parameter_values'],'native_ablations_completed':3,
   'native_checkpoint_manifests_saved':True,'technical_tests_passed':55,'backward_passes':0,
   'independent_validation_consumed':False,'source_frozen_integrity_verified':True,'report':'NATIVE_ARCHITECTURE_REPORT.md'})
- all_files=[p for p in HERE.rglob('*') if p.is_file() and '__pycache__' not in str(p) and p.suffix not in ['.pt','.zip'] and p.name!='artifact_integrity.json']
+ all_files=[ROOT/'NATIVE_ARCHITECTURE_REPORT.md',ROOT/'AGENTS.md']+[p for p in HERE.rglob('*') if p.is_file() and '__pycache__' not in str(p) and p.suffix not in ['.pt','.zip'] and p.name!='artifact_integrity.json']
  put('artifact_integrity.json',{'sha256':{str(p.relative_to(ROOT)):sha(p) for p in sorted(all_files)},
   'binary_checkpoints':{str(p.relative_to(ROOT)):sha(p) for p in (HERE/'checkpoints').glob('*.pt')},
-  'row_column_norms_sha256':sha(HERE/'row_column_norms.pt'),'parent_unchanged':True})
+  'row_column_norms_sha256':sha(HERE/'row_column_norms.pt'),'unloaded_row_column_norms_sha256':sha(HERE/'unloaded_row_column_norms.pt'),'parent_unchanged':True})
  print(json.dumps(selection,indent=2))
 if __name__=='__main__':main()

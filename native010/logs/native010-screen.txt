@@ -1,0 +1,253 @@
+SCREEN_VARIANT original
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 7606.50it/s]
+PHASE_START {"phase": "generate:prefix_sums", "budget_seconds": 600, "started_unix": 1793903701.1967201, "attempt": null, "pid": 11392}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PHASE_END generate:prefix_sums 5.755
+PHASE_START {"phase": "execute:prefix_sums", "budget_seconds": 60, "started_unix": 1793903706.952267, "attempt": null, "pid": 11392}
+PHASE_END execute:prefix_sums 0.036
+EVAL prefix_sums 1 5
+PHASE_START {"phase": "generate:rotate_right", "budget_seconds": 600, "started_unix": 1793903706.989884, "attempt": null, "pid": 11392}
+PHASE_END generate:rotate_right 23.462
+PHASE_START {"phase": "execute:rotate_right", "budget_seconds": 60, "started_unix": 1793903730.4514785, "attempt": null, "pid": 11392}
+PHASE_END execute:rotate_right 0.046
+EVAL rotate_right 0 5
+PHASE_START {"phase": "generate:longest_run", "budget_seconds": 600, "started_unix": 1793903730.4988616, "attempt": null, "pid": 11392}
+PHASE_END generate:longest_run 12.524
+PHASE_START {"phase": "execute:longest_run", "budget_seconds": 60, "started_unix": 1793903743.0233614, "attempt": null, "pid": 11392}
+PHASE_END execute:longest_run 0.039
+EVAL longest_run 5 5
+PHASE_START {"phase": "generate:overlap_count", "budget_seconds": 600, "started_unix": 1793903743.06435, "attempt": null, "pid": 11392}
+PHASE_END generate:overlap_count 7.688
+PHASE_START {"phase": "execute:overlap_count", "budget_seconds": 60, "started_unix": 1793903750.752749, "attempt": null, "pid": 11392}
+PHASE_END execute:overlap_count 0.037
+EVAL overlap_count 5 5
+PHASE_START {"phase": "generate:sum_abs", "budget_seconds": 600, "started_unix": 1793903750.7921178, "attempt": null, "pid": 11392}
+PHASE_END generate:sum_abs 4.217
+PHASE_START {"phase": "execute:sum_abs", "budget_seconds": 60, "started_unix": 1793903755.0091147, "attempt": null, "pid": 11392}
+PHASE_END execute:sum_abs 0.039
+EVAL sum_abs 5 5
+PHASE_START {"phase": "generate:palindrome", "budget_seconds": 600, "started_unix": 1793903755.0496204, "attempt": null, "pid": 11392}
+PHASE_END generate:palindrome 2.226
+PHASE_START {"phase": "execute:palindrome", "budget_seconds": 60, "started_unix": 1793903757.2761025, "attempt": null, "pid": 11392}
+PHASE_END execute:palindrome 0.041
+EVAL palindrome 6 6
+PHASE_START {"phase": "generate:binary_search", "budget_seconds": 600, "started_unix": 1793903757.319144, "attempt": null, "pid": 11392}
+PHASE_END generate:binary_search 10.708
+PHASE_START {"phase": "execute:binary_search", "budget_seconds": 60, "started_unix": 1793903768.02707, "attempt": null, "pid": 11392}
+PHASE_END execute:binary_search 0.037
+EVAL binary_search 5 5
+SCREEN_VARIANT parent
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 12104.18it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793903776.2687562, "attempt": null, "pid": 13015}
+PHASE_END checkpoint_load:best.pt 0.008
+PHASE_START {"phase": "generate:prefix_sums", "budget_seconds": 600, "started_unix": 1793903776.287301, "attempt": null, "pid": 13015}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PHASE_END generate:prefix_sums 13.918
+PHASE_START {"phase": "execute:prefix_sums", "budget_seconds": 60, "started_unix": 1793903790.2052026, "attempt": null, "pid": 13015}
+PHASE_END execute:prefix_sums 0.039
+EVAL prefix_sums 2 5
+PHASE_START {"phase": "generate:rotate_right", "budget_seconds": 600, "started_unix": 1793903790.2461247, "attempt": null, "pid": 13015}
+PHASE_END generate:rotate_right 15.206
+PHASE_START {"phase": "execute:rotate_right", "budget_seconds": 60, "started_unix": 1793903805.4524333, "attempt": null, "pid": 13015}
+PHASE_END execute:rotate_right 0.037
+EVAL rotate_right 3 5
+PHASE_START {"phase": "generate:longest_run", "budget_seconds": 600, "started_unix": 1793903805.4905775, "attempt": null, "pid": 13015}
+PHASE_END generate:longest_run 42.082
+PHASE_START {"phase": "execute:longest_run", "budget_seconds": 60, "started_unix": 1793903847.5726335, "attempt": null, "pid": 13015}
+PHASE_END execute:longest_run 0.037
+EVAL longest_run 4 5
+PHASE_START {"phase": "generate:overlap_count", "budget_seconds": 600, "started_unix": 1793903847.6123464, "attempt": null, "pid": 13015}
+PHASE_END generate:overlap_count 25.73
+PHASE_START {"phase": "execute:overlap_count", "budget_seconds": 60, "started_unix": 1793903873.342308, "attempt": null, "pid": 13015}
+PHASE_END execute:overlap_count 0.057
+EVAL overlap_count 2 5
+PHASE_START {"phase": "generate:sum_abs", "budget_seconds": 600, "started_unix": 1793903873.4012103, "attempt": null, "pid": 13015}
+PHASE_END generate:sum_abs 11.39
+PHASE_START {"phase": "execute:sum_abs", "budget_seconds": 60, "started_unix": 1793903884.7908366, "attempt": null, "pid": 13015}
+PHASE_END execute:sum_abs 0.044
+EVAL sum_abs 5 5
+PHASE_START {"phase": "generate:palindrome", "budget_seconds": 600, "started_unix": 1793903884.8364997, "attempt": null, "pid": 13015}
+PHASE_END generate:palindrome 5.776
+PHASE_START {"phase": "execute:palindrome", "budget_seconds": 60, "started_unix": 1793903890.6121519, "attempt": null, "pid": 13015}
+PHASE_END execute:palindrome 0.057
+EVAL palindrome 6 6
+PHASE_START {"phase": "generate:binary_search", "budget_seconds": 600, "started_unix": 1793903890.6703424, "attempt": null, "pid": 13015}
+PHASE_END generate:binary_search 21.241
+PHASE_START {"phase": "execute:binary_search", "budget_seconds": 60, "started_unix": 1793903911.9114852, "attempt": null, "pid": 13015}
+PHASE_END execute:binary_search 0.045
+EVAL binary_search 5 5
+SCREEN_VARIANT depth
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 8314.28it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793903917.9690511, "attempt": null, "pid": 15034}
+PHASE_END checkpoint_load:best.pt 0.005
+PHASE_START {"phase": "generate:prefix_sums", "budget_seconds": 600, "started_unix": 1793903918.9948573, "attempt": null, "pid": 15034}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PHASE_END generate:prefix_sums 52.368
+PHASE_START {"phase": "execute:prefix_sums", "budget_seconds": 60, "started_unix": 1793903971.362898, "attempt": null, "pid": 15034}
+PHASE_END execute:prefix_sums 0.037
+EVAL prefix_sums 0 5
+PHASE_START {"phase": "generate:rotate_right", "budget_seconds": 600, "started_unix": 1793903971.401175, "attempt": null, "pid": 15034}
+PHASE_END generate:rotate_right 59.221
+PHASE_START {"phase": "execute:rotate_right", "budget_seconds": 60, "started_unix": 1793904030.6221066, "attempt": null, "pid": 15034}
+PHASE_END execute:rotate_right 0.035
+EVAL rotate_right 0 5
+PHASE_START {"phase": "generate:longest_run", "budget_seconds": 600, "started_unix": 1793904030.6590986, "attempt": null, "pid": 15034}
+PHASE_END generate:longest_run 53.688
+PHASE_START {"phase": "execute:longest_run", "budget_seconds": 60, "started_unix": 1793904084.3476112, "attempt": null, "pid": 15034}
+PHASE_END execute:longest_run 0.045
+EVAL longest_run 0 5
+PHASE_START {"phase": "generate:overlap_count", "budget_seconds": 600, "started_unix": 1793904084.394434, "attempt": null, "pid": 15034}
+PHASE_END generate:overlap_count 54.647
+PHASE_START {"phase": "execute:overlap_count", "budget_seconds": 60, "started_unix": 1793904139.0412471, "attempt": null, "pid": 15034}
+PHASE_END execute:overlap_count 0.039
+EVAL overlap_count 0 5
+PHASE_START {"phase": "generate:sum_abs", "budget_seconds": 600, "started_unix": 1793904139.0824294, "attempt": null, "pid": 15034}
+PHASE_END generate:sum_abs 55.035
+PHASE_START {"phase": "execute:sum_abs", "budget_seconds": 60, "started_unix": 1793904194.11716, "attempt": null, "pid": 15034}
+PHASE_END execute:sum_abs 0.041
+EVAL sum_abs 2 5
+PHASE_START {"phase": "generate:palindrome", "budget_seconds": 600, "started_unix": 1793904194.160628, "attempt": null, "pid": 15034}
+PHASE_END generate:palindrome 55.648
+PHASE_START {"phase": "execute:palindrome", "budget_seconds": 60, "started_unix": 1793904249.8087194, "attempt": null, "pid": 15034}
+PHASE_END execute:palindrome 0.05
+EVAL palindrome 4 6
+PHASE_START {"phase": "generate:binary_search", "budget_seconds": 600, "started_unix": 1793904249.8606815, "attempt": null, "pid": 15034}
+PHASE_END generate:binary_search 59.447
+PHASE_START {"phase": "execute:binary_search", "budget_seconds": 60, "started_unix": 1793904309.3075023, "attempt": null, "pid": 15034}
+PHASE_END execute:binary_search 0.05
+EVAL binary_search 2 5
+SCREEN_VARIANT liquid
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 8194.82it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793904316.1069965, "attempt": null, "pid": 15230}
+PHASE_END checkpoint_load:best.pt 0.009
+PHASE_START {"phase": "generate:prefix_sums", "budget_seconds": 600, "started_unix": 1793904317.6010597, "attempt": null, "pid": 15230}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PHASE_END generate:prefix_sums 57.014
+PHASE_START {"phase": "execute:prefix_sums", "budget_seconds": 60, "started_unix": 1793904374.6152225, "attempt": null, "pid": 15230}
+PHASE_END execute:prefix_sums 0.043
+EVAL prefix_sums 0 5
+PHASE_START {"phase": "generate:rotate_right", "budget_seconds": 600, "started_unix": 1793904374.7707336, "attempt": null, "pid": 15230}
+PHASE_END generate:rotate_right 56.78
+PHASE_START {"phase": "execute:rotate_right", "budget_seconds": 60, "started_unix": 1793904431.5507765, "attempt": null, "pid": 15230}
+PHASE_END execute:rotate_right 0.039
+EVAL rotate_right 0 5
+PHASE_START {"phase": "generate:longest_run", "budget_seconds": 600, "started_unix": 1793904431.5927212, "attempt": null, "pid": 15230}
+PHASE_END generate:longest_run 53.502
+PHASE_START {"phase": "execute:longest_run", "budget_seconds": 60, "started_unix": 1793904485.0946355, "attempt": null, "pid": 15230}
+PHASE_END execute:longest_run 0.043
+EVAL longest_run 1 5
+PHASE_START {"phase": "generate:overlap_count", "budget_seconds": 600, "started_unix": 1793904485.1387486, "attempt": null, "pid": 15230}
+PHASE_END generate:overlap_count 53.481
+PHASE_START {"phase": "execute:overlap_count", "budget_seconds": 60, "started_unix": 1793904538.6198745, "attempt": null, "pid": 15230}
+PHASE_END execute:overlap_count 0.046
+EVAL overlap_count 2 5
+PHASE_START {"phase": "generate:sum_abs", "budget_seconds": 600, "started_unix": 1793904538.6678388, "attempt": null, "pid": 15230}
+PHASE_END generate:sum_abs 54.477
+PHASE_START {"phase": "execute:sum_abs", "budget_seconds": 60, "started_unix": 1793904593.144592, "attempt": null, "pid": 15230}
+PHASE_END execute:sum_abs 0.039
+EVAL sum_abs 2 5
+PHASE_START {"phase": "generate:palindrome", "budget_seconds": 600, "started_unix": 1793904593.18507, "attempt": null, "pid": 15230}
+PHASE_END generate:palindrome 55.71
+PHASE_START {"phase": "execute:palindrome", "budget_seconds": 60, "started_unix": 1793904648.8953884, "attempt": null, "pid": 15230}
+PHASE_END execute:palindrome 0.059
+EVAL palindrome 4 6
+PHASE_START {"phase": "generate:binary_search", "budget_seconds": 600, "started_unix": 1793904648.955865, "attempt": null, "pid": 15230}
+PHASE_END generate:binary_search 55.75
+PHASE_START {"phase": "execute:binary_search", "budget_seconds": 60, "started_unix": 1793904704.7064385, "attempt": null, "pid": 15230}
+PHASE_END execute:binary_search 0.037
+EVAL binary_search 2 5
+SCREEN_VARIANT routed
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7343.77it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793904711.0355875, "attempt": null, "pid": 15443}
+PHASE_END checkpoint_load:best.pt 0.005
+PHASE_START {"phase": "generate:prefix_sums", "budget_seconds": 600, "started_unix": 1793904712.2292337, "attempt": null, "pid": 15443}
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PHASE_END generate:prefix_sums 56.679
+PHASE_START {"phase": "execute:prefix_sums", "budget_seconds": 60, "started_unix": 1793904768.90804, "attempt": null, "pid": 15443}
+PHASE_END execute:prefix_sums 0.039
+EVAL prefix_sums 0 5
+PHASE_START {"phase": "generate:rotate_right", "budget_seconds": 600, "started_unix": 1793904768.9486098, "attempt": null, "pid": 15443}
+PHASE_END generate:rotate_right 58.979
+PHASE_START {"phase": "execute:rotate_right", "budget_seconds": 60, "started_unix": 1793904827.9276457, "attempt": null, "pid": 15443}
+PHASE_END execute:rotate_right 0.047
+EVAL rotate_right 0 5
+PHASE_START {"phase": "generate:longest_run", "budget_seconds": 600, "started_unix": 1793904827.976975, "attempt": null, "pid": 15443}
+PHASE_END generate:longest_run 57.982
+PHASE_START {"phase": "execute:longest_run", "budget_seconds": 60, "started_unix": 1793904885.9588342, "attempt": null, "pid": 15443}
+PHASE_END execute:longest_run 0.04
+EVAL longest_run 1 5
+PHASE_START {"phase": "generate:overlap_count", "budget_seconds": 600, "started_unix": 1793904886.0010633, "attempt": null, "pid": 15443}
+PHASE_END generate:overlap_count 66.588
+PHASE_START {"phase": "execute:overlap_count", "budget_seconds": 60, "started_unix": 1793904952.589208, "attempt": null, "pid": 15443}
+PHASE_END execute:overlap_count 0.052
+EVAL overlap_count 2 5
+PHASE_START {"phase": "generate:sum_abs", "budget_seconds": 600, "started_unix": 1793904952.6460848, "attempt": null, "pid": 15443}
+PHASE_END generate:sum_abs 55.846
+PHASE_START {"phase": "execute:sum_abs", "budget_seconds": 60, "started_unix": 1793905008.4920914, "attempt": null, "pid": 15443}
+PHASE_END execute:sum_abs 0.041
+EVAL sum_abs 2 5
+PHASE_START {"phase": "generate:palindrome", "budget_seconds": 600, "started_unix": 1793905008.534448, "attempt": null, "pid": 15443}
+PHASE_END generate:palindrome 57.042
+PHASE_START {"phase": "execute:palindrome", "budget_seconds": 60, "started_unix": 1793905065.5762465, "attempt": null, "pid": 15443}
+PHASE_END execute:palindrome 0.054
+EVAL palindrome 4 6
+PHASE_START {"phase": "generate:binary_search", "budget_seconds": 600, "started_unix": 1793905065.6330733, "attempt": null, "pid": 15443}
+PHASE_END generate:binary_search 60.482
+PHASE_START {"phase": "execute:binary_search", "budget_seconds": 60, "started_unix": 1793905126.1155903, "attempt": null, "pid": 15443}
+PHASE_END execute:binary_search 0.044
+EVAL binary_search 2 5
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+{
+  "depth": {
+    "tasks": 0,
+    "cases": 8,
+    "wins": 0,
+    "losses": 19,
+    "full_development_eligible": false
+  },
+  "liquid": {
+    "tasks": 0,
+    "cases": 11,
+    "wins": 0,
+    "losses": 16,
+    "full_development_eligible": false
+  },
+  "routed": {
+    "tasks": 0,
+    "cases": 11,
+    "wins": 0,
+    "losses": 16,
+    "full_development_eligible": false
+  }
+}
+ALL_SCREEN_VARIANTS_COMPLETE

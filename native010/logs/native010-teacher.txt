@@ -1,0 +1,25 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 9222.84it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TEACHER ordinary_00 28
+TEACHER ordinary_01 26
+TEACHER ordinary_02 28
+TEACHER ordinary_03 19
+TEACHER ordinary_04 28
+TEACHER ordinary_05 21
+TEACHER ordinary_06 22
+TEACHER ordinary_07 23
+TEACHER ordinary_08 22
+TEACHER ordinary_09 22
+TEACHER ordinary_10 27
+TEACHER ordinary_11 22
+TEACHER prefix_sums 58
+TEACHER rotate_right 61
+TEACHER longest_run 62
+TEACHER overlap_count 59
+TEACHER sum_abs 59
+TEACHER palindrome 56
+TEACHER binary_search 61

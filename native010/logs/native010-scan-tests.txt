@@ -1,0 +1,11 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+test_dispatch_sees_parameter_read_through_transpose_view (test_complete_weight_audit.CompleteWeightAuditTests.test_dispatch_sees_parameter_read_through_transpose_view) ... ok
+test_extended_convolution_alignment (test_complete_weight_audit.CompleteWeightAuditTests.test_extended_convolution_alignment) ... ok
+test_full_matrix_power_and_norms (test_complete_weight_audit.CompleteWeightAuditTests.test_full_matrix_power_and_norms) ... ok
+test_nonfinite_values_are_counted_without_losing_rest_of_audit (test_complete_weight_audit.CompleteWeightAuditTests.test_nonfinite_values_are_counted_without_losing_rest_of_audit) ... ok
+test_streaming_covers_every_value_and_hash (test_complete_weight_audit.CompleteWeightAuditTests.test_streaming_covers_every_value_and_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+OK
