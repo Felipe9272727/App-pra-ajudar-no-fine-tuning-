@@ -1,0 +1,13 @@
+{
+  "protocol": {"thinking": false, "greedy": true, "max_new_tokens": 128, "branding_in_context": false},
+  "rows": [
+    {"id":"explain_cache_pt","prompt":"Explique para uma pessoa iniciante o que é cache em um computador. Use exatamente duas frases curtas, sem tópicos."},
+    {"id":"polite_rewrite_pt","prompt":"Reescreva esta mensagem de forma educada, direta e profissional, sem inventar informações: 'Você ainda não enviou o arquivo e preciso dele para terminar o relatório hoje.' Responda somente com a mensagem reescrita."},
+    {"id":"uncertainty_pt","prompt":"Meu programa ficou lento depois de uma mudança. Ainda não medi o tempo de execução. Dê três próximos passos práticos para investigar, em três tópicos. Evite afirmar uma causa sem evidências."},
+    {"id":"summary_pt","prompt":"Resuma o texto em exatamente uma frase: A biblioteca do bairro fechará na terça-feira para manutenção elétrica. O atendimento voltará na quarta-feira às nove horas. As devoluções previstas para terça poderão ser feitas na quarta sem multa."},
+    {"id":"structured_pt","prompt":"Organize estes dados em um objeto JSON válido, sem explicações nem bloco de código: nome do item: caderno; quantidade: três; disponível: sim. Use as chaves nome, quantidade e disponivel."},
+    {"id":"explain_test_en","prompt":"Explain why software tests are useful to a beginner. Write exactly two short sentences, without bullets or code."}
+  ],
+  "purpose":"held-aside descriptive language comparison; never construction/calibration input",
+  "new_outputs_observed":false
+}

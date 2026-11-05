@@ -1,0 +1,23 @@
+{
+  "files": {
+    "loop012/PROTOCOL.md": "9dd94e72abad8bf218015e5d32e0dd6f5c67459c370111d94128045c768390d8",
+    "loop012/style_inputs.json": "fabb0a3cb3076aac0adcac2f8d02c65f9b7f1546a12cdc00688cf695b1888279",
+    "loop012/core.py": "009d940cefda4bde89a8f36a496284c868eaa99c811688d041e9f12666b7dc3f",
+    "loop012/diagnose.py": "1cb45ed0aad9e2eb130c52d2fd7d87f78d17e1896479fee52200f8165a338882",
+    "loop012/edit.py": "f074769b51892d24a2418daeef4d21ac5eeeaa0eb048a70957ec0f0f14091cb3",
+    "diagnostic011/capture_complete.json": "cf70adc0d6c41acf5591a40bf960b3aeae5044002b6618bf014bee06ed197b82",
+    "diagnostic011/token_integrity.json": "bad69d533a6e36a0cd2eae990be93227cbc8ad3ebf1735f5e4fff08dae1b451d",
+    "reasoning/cycle2/development_original.json": "fc4dc2f6d324f8c345a24d1e94c49483e7f93d725fa4a73c212faf410b698cb7",
+    "reasoning/cycle2/trial_006_parent_full.json": "d4693c1bea118233ba6c534279069d651944c70c4ed861e8d7e7baf4ce3e9eff",
+    "reasoning/multi008/inputs.json": "e1435bf158565570742b4ac89e3a9bd4878a268affa231e26871cb0413bb29fd",
+    "reasoning/runtime_helpers.py": "3decc031b87f7fe5bf6feca52dc3d6d2ba82c60eed9d21341e0977f028836238",
+    "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+    "modeling_sensenova_loop.py": "26e11d3522aa730c0ba031340ce42632bc2834da8cc0b6804006bb207d979a5b",
+    "rsi100/checkpoints/best.pt": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "rsi100/data.json": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d",
+    "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+    "local_cpu/sandbox.py": "2e29f08a236248cad241cbb8af94074f63857f7a8dadd1b876976c702b1c7693"
+  },
+  "new_quality_outputs_observed": false,
+  "no_style_inputs_in_construction": true
+}
