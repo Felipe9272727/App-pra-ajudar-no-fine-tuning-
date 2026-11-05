@@ -1,6 +1,6 @@
 {
   "trial": 4,
-  "stage": "constructed",
+  "stage": "rejected_full_gates",
   "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
   "metadata": {
     "target_task": "rotate_right",
@@ -271,5 +271,8 @@
   },
   "backward_passes": 0,
   "fresh_benchmark_used": false,
-  "checkpoint_promoted": false
+  "checkpoint_promoted": false,
+  "eligible_for_new_validation": false,
+  "reason": "paired incumbent: anchor NLL regression",
+  "model_process_active": false
 }

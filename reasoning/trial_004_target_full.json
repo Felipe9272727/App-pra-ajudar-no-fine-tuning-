@@ -281,8 +281,101 @@
         true
       ],
       "code": "def solve(s):\n    freq = {}\n    for char in s:\n        freq[char] = freq.get(char, 0) + 1\n    return freq"
+    },
+    {
+      "id": "longest_run",
+      "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+      "new_tokens": 98,
+      "hit_limit": false,
+      "seconds": 33.92615723699964,
+      "thinking": false,
+      "passed": 4,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0"
+    },
+    {
+      "id": "binary_search",
+      "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    if target in xs:\n        return xs.index(target)\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1",
+      "new_tokens": 59,
+      "hit_limit": false,
+      "seconds": 20.538347943999725,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    if target in xs:\n        return xs.index(target)\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1"
+    },
+    {
+      "id": "flatten_once",
+      "output": "def solve(xss):\n    return [item for sublist in xss for item in sublist]",
+      "new_tokens": 21,
+      "hit_limit": false,
+      "seconds": 7.602822707000087,
+      "thinking": false,
+      "passed": 5,
+      "total": 5,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(xss):\n    return [item for sublist in xss for item in sublist]"
     }
   ],
-  "controls": [],
-  "status": "running"
+  "controls": [
+    {
+      "id": "dev_0",
+      "output": "Sb\n",
+      "correct": true
+    },
+    {
+      "id": "dev_1",
+      "output": "children",
+      "correct": true
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago\n",
+      "correct": true
+    },
+    {
+      "id": "dev_3",
+      "output": "heart",
+      "correct": true
+    }
+  ],
+  "status": "complete",
+  "control_bits": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "anchor_nll": 3.189104914665222
 }

@@ -8,7 +8,8 @@ from the rank-one dense edit. No feedback-selected dose grid is introduced.
 
 Start from unchanged parent; do not stack unvalidated 004. Keep shared weights,
 32 physical layers, mHC and all Liquid operators. Use three complete virtual
-visits with independent recurrent/KV caches: 82 layer executions per step.
+visits with independent recurrent/KV caches: 80 layer executions per step
+(8 outside the loop + 24 middle layers × 3 visits).
 For diagnostic-selected layers 25,27,26, directly store FP32 visit weights
 [0.925,0.05,0.025]. Other middle layers store [0.949999,0.05,0.000001]. Every
 visit is positive and each layer's gains sum to one. The tiny non-target third

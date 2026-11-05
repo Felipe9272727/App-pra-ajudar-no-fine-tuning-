@@ -20,7 +20,7 @@ def main():
         patch={'parent_sha256':PARENT_HASH,'hypothesis':5,'kind':kind,'passes':3,'layer_visit_gains':gains}
         tensor_checkpoint(patch,HERE/f'checkpoints/trial_005_{kind}.pt');patches[kind]=patch
     report={'trial':5,'stage':'constructed','parent_sha256':PARENT_HASH,'screens':{},
-        'metadata':{'passes':3,'layer_executions':82,'target_layers':diag['target_layers'],'control_layers':diag['control_layers']},
+        'metadata':{'passes':3,'layer_executions':80,'target_layers':diag['target_layers'],'control_layers':diag['control_layers']},
         'backward_passes':0,'checkpoint_promoted':False,'fresh_benchmark_used':False}
     save('trial_005.json',report)
     base={r['id']:r for r in diag['rows']};baseline=[base[k] for k in SCREEN]
