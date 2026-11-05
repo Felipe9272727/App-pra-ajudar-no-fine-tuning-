@@ -1,0 +1,24 @@
+{
+  "metric": "Delta4B_pp",
+  "liquid": {
+    "problems": 16,
+    "fully_solved": 11,
+    "problem_pass_at_1": 0.6875,
+    "cases_passed": 69,
+    "cases_total": 81
+  },
+  "status": "unmeasured_missing_4b_reference",
+  "delta_pp": null,
+  "coding_superiority_confirmed": false,
+  "scope": "observed internal 16-task development; NOT LiveCodeBench or independent validation",
+  "target_reference": {
+    "model_id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "weights_total_size_bytes": 9319737856,
+    "source_url": "https://huggingface.co/Qwen/Qwen3.5-4B/tree/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "downloaded_weights": false,
+    "evaluated": false
+  },
+  "promotion_allowed": false,
+  "goal": "Positive task-level Delta4B on fresh frozen benchmark pairs, with retention"
+}
