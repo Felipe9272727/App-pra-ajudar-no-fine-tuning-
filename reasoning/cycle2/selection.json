@@ -1,8 +1,14 @@
 {
+  "selected": "parent",
   "checkpoint": "rsi100/checkpoints/best.pt",
   "checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
-  "selected": "parent",
   "patch": null,
   "checkpoint_promoted": false,
-  "reason": "Hypothesis006 did not pass development; independent validation remains unopened"
+  "hypothesis_outcomes": {
+    "006": "rejected_anchor_nll_regression",
+    "007": "rejected_no_screen_gain"
+  },
+  "fresh_validation_consumed": false,
+  "weight_selection_uses_thinking_diagnostic": false,
+  "reason": "Neither new direct-weight intervention passed development; preserve unchanged parent"
 }

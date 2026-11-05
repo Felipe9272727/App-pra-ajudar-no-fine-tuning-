@@ -1,9 +1,15 @@
 {
-  "status": "router007_rejected_on_screen",
-  "model_process_active": false,
+  "status": "original_development_comparison",
+  "model_process_active": true,
   "checkpoint_promoted": false,
   "hypothesis": 6,
   "previous_public_results_observed": true,
   "backward_passes": 0,
-  "updated_unix": 1793846635.6359375
+  "updated_unix": 1793846669.997822,
+  "hypotheses_this_cycle": [
+    6,
+    7
+  ],
+  "weights_research_complete": true,
+  "validation_consumed": false
 }
