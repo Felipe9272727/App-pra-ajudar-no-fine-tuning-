@@ -2,13 +2,24 @@
 
 Experimento de Felipe: adaptar diretamente os pesos de Qwen3.5-0.8B a um decoder loop/mHC inspirado em SenseNova-Loop-9B e a operadores compatíveis inspirados em Liquid LFM3.
 
-Status inicial: calibração algébrica concluída; ciclos de melhoria e avaliação em preparação. Não há demonstração de autoaperfeiçoamento recursivo geral ou de ganho de inteligência.
+Registro inicial (histórico): calibração algébrica concluída; ciclos de melhoria e avaliação em preparação. Não há demonstração de autoaperfeiçoamento recursivo geral ou de ganho de inteligência.
 
 Este repositório será usado para código, estado retomável, logs reais, checkpoints incrementais e resultados. O histórico inicial fica na branch `codex/qwen-sensenova-liquid-rsi-20261103`.
 
+## Pesquisa mais recente — diagnóstico concluído em 2026-11-05
+
+[Relatório completo, fixado por commit](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/c57b3124986268e495ff5324bdfdbe831028970e/ERROR_ANALYSIS_REPORT.md).
+[Código, checkpoints e estado retomável](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/codex/liquid-sense-error-analysis-20261105).
+
+As edições diretas 006 e 007 foram concluídas sem promoção. A 006 ganhou um caso de programação, mas piorou a NLL de linguagem contra o pai. A 007 separou os fluxos mHC que operavam em igualdade, porém não mudou os acertos. Os pesos anteriores e os cinco novos artefatos de tensores foram preservados e conferidos.
+
+Nos mesmos 16 problemas de desenvolvimento, o Qwen original resolveu 12 tarefas e 66/81 casos; o híbrido preservado resolveu 11 tarefas e 69/81 casos, ambos com 4/4 controles. São trocas entre tarefas, sem superioridade geral demonstrada. Em três problemas diagnósticos já observados, com raciocínio e até 1.024 tokens, o Qwen concluiu 2/3 respostas corretas e o híbrido 0/3, preso em repetição. O modo de raciocínio ficou opcional e experimental.
+
+O checkpoint híbrido pai continua selecionado. Nenhuma melhoria nova nos pesos foi validada. Todos os testes deste ciclo terminaram; nenhum processo de modelo foi deixado rodando entre turnos.
+
 ## Retomada concluída em 2026-11-05
 
-Estado mais recente: [branch de recuperação e validação](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/codex/mentor002-independent-validation-20261104).
+Estado desta etapa histórica: [branch de recuperação e validação](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/codex/mentor002-independent-validation-20261104).
 [Relatório completo, fixado por commit](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/478cc5933a11925ef050507ae4f761234f0569ad/MENTOR002_VALIDATION_REPORT.md).
 
 A hipótese 002 original tinha somente sua triagem salva; o checkpoint final não foi encontrado no estado persistido acessível. A reconstrução da hipótese reproduziu 11→12 tarefas e 69→72 casos no desenvolvimento, com 4/4 controles. Não se afirma identidade bit a bit com os pesos não salvos.
