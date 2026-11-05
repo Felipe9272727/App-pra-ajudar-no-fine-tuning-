@@ -1,0 +1,19 @@
+{
+  "candidate_eligible": false,
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "target_patch_sha256": "034a908697864b8a00a526409b5adeec9a8b2f85181676066a0a1d6d1edb8002",
+  "baseline_norms_sha256": "8e671882b077c42a05de41e77a27c14299ebeaa63791155a98390ee127a88bdc",
+  "validation_source_sha256": "ac7f864f8ab65840e57e5eb122d5e455f7ac55f6f228915b783a03d550e828fe",
+  "data_sha256": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d",
+  "validation_ids": [
+    "r100_sum_cubes",
+    "r100_count_negative",
+    "r100_word_prefix",
+    "r100_adjacent_changes",
+    "r100_absolute_differences",
+    "r100_repeat_words",
+    "r100_closed_range_filter",
+    "r100_reverse_each_word"
+  ],
+  "previously_observed_validation_outputs": false
+}
