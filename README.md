@@ -1,6 +1,38 @@
-# liquid sense 0.8 b LOOP — 100 tentativas com descarte de pioras
+# Liquid Sense 0.8B LOOP
 
-Pedido atual: 100 rodadas de busca direta em pesos, sem gradientes. Cada tentativa
+Um projeto independente conduzido por um desenvolvedor, dedicado a investigar
+programação e raciocínio por meio de alterações verificáveis nos pesos.
+A base pré-treinada é **Qwen3.5-0.8B**; o híbrido com componentes inspirados em
+**SenseNova Loop/mHC e Liquid AI** carrega aproximadamente **1,02B parâmetros**.
+
+## Pesquisa atual — 2026-11-05
+
+A continuação usa ativações da geração real, hipóteses pré-registradas e
+comparações com rollback. As hipóteses 003 e 005 reforçaram contribuições e
+profundidade do loop, sem aumentar os acertos da triagem. A hipótese 004 ganhou
+um caso de programação, mas piorou a NLL das âncoras e não foi promovida.
+O checkpoint pai permanece selecionado. Não há alegação de maior inteligência.
+
+- [Estado atual](reasoning/status.json) e [protocolo](reasoning/PROTOCOL.md).
+- [Benchmarks oficiais de origem e subconjuntos locais](benchmarks/reasoning_20261105/README.md).
+- [Decisões e seleção de pesos](reasoning/selection.json).
+- [Validação anterior da hipótese 002](MENTOR002_VALIDATION_REPORT.md).
+
+A apresentação do chat dá crédito ao projeto independente e preserva a origem
+no Qwen. Essa configuração de identidade não é uma melhoria aprendida nos pesos
+e fica fora dos benchmarks. Para consultar a apresentação ou conversar:
+
+```
+python liquid_sense_chat.py --about
+python liquid_sense_chat.py --message "Quem é você?"
+```
+
+## Histórico preservado — busca de 100 tentativas
+
+O estágio abaixo foi pausado após 31 rejeições; não foi reiniciado nesta
+continuação. Seus registros, pesos e checkpoints permanecem preservados.
+
+Protocolo deste estágio histórico: 100 rodadas de busca direta em pesos, sem gradientes. Cada tentativa
 parte do melhor checkpoint. Pioras e empates são descartados; o melhor é restaurado
 após cada avaliação e salvo no Git. Não são 100 passagens internas do decoder.
 O híbrido SenseNova + Liquid permanece ativo com 2/3/4 passagens internas.

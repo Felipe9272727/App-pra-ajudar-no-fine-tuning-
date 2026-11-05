@@ -22,7 +22,8 @@ def main():
     with contextlib.redirect_stdout(sys.stderr):
         from runtime_helpers import load,apply,e,torch,PARENT_HASH
     assert 1<=a.max_new_tokens<=1024
-    model,tok,parent,_=load()
+    with contextlib.redirect_stdout(sys.stderr):
+        model,tok,parent,_=load()
     selection_path=ROOT/'reasoning/selection.json'
     if selection_path.exists():
         selected=json.loads(selection_path.read_text())
