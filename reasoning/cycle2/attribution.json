@@ -1,0 +1,113 @@
+{
+  "definition": "c_j=h_j * dot(unembedding[own_bad_token], W[:,j])",
+  "interpretation": "linear contribution to an unnormalised readout proxy of this MLP branch; residual stream and final RMSNorm omitted; not token probability or unique cause",
+  "bad_token": 6521,
+  "bad_piece": "[k",
+  "top_positive_input_coordinates": [
+    {
+      "column": 595,
+      "input": 2.28125,
+      "contribution_proxy": 0.077989861369133
+    },
+    {
+      "column": 327,
+      "input": -0.7890625,
+      "contribution_proxy": 0.05498986691236496
+    },
+    {
+      "column": 776,
+      "input": -0.85546875,
+      "contribution_proxy": 0.03377586975693703
+    },
+    {
+      "column": 46,
+      "input": 2.703125,
+      "contribution_proxy": 0.02880788967013359
+    },
+    {
+      "column": 90,
+      "input": -1.59375,
+      "contribution_proxy": 0.023149356245994568
+    },
+    {
+      "column": 2,
+      "input": -1.953125,
+      "contribution_proxy": 0.020031407475471497
+    },
+    {
+      "column": 12,
+      "input": 1.375,
+      "contribution_proxy": 0.017896628007292747
+    },
+    {
+      "column": 2509,
+      "input": -0.2578125,
+      "contribution_proxy": 0.016561685130000114
+    },
+    {
+      "column": 11,
+      "input": -1.6875,
+      "contribution_proxy": 0.01557791605591774
+    },
+    {
+      "column": 495,
+      "input": -0.74609375,
+      "contribution_proxy": 0.014359474182128906
+    },
+    {
+      "column": 939,
+      "input": -1.8828125,
+      "contribution_proxy": 0.012880673632025719
+    },
+    {
+      "column": 139,
+      "input": -0.8671875,
+      "contribution_proxy": 0.012514092028141022
+    },
+    {
+      "column": 15,
+      "input": -1.421875,
+      "contribution_proxy": 0.012439767830073833
+    },
+    {
+      "column": 40,
+      "input": 1.734375,
+      "contribution_proxy": 0.011714204214513302
+    },
+    {
+      "column": 74,
+      "input": -1.9453125,
+      "contribution_proxy": 0.010587689466774464
+    },
+    {
+      "column": 45,
+      "input": 1.1484375,
+      "contribution_proxy": 0.010316433385014534
+    },
+    {
+      "column": 42,
+      "input": -3.09375,
+      "contribution_proxy": 0.010077424347400665
+    },
+    {
+      "column": 31,
+      "input": -0.4453125,
+      "contribution_proxy": 0.009762938134372234
+    },
+    {
+      "column": 1259,
+      "input": 1.015625,
+      "contribution_proxy": 0.009005432948470116
+    },
+    {
+      "column": 26,
+      "input": -1.421875,
+      "contribution_proxy": 0.008565145544707775
+    }
+  ],
+  "linear_proxy_sum_before": 0.4294736981391907,
+  "linear_proxy_sum_after": 0.12106893956661224,
+  "unit_direction_proxy_delta": -0.5013658404350281,
+  "note_on_trial_metadata": "target_direct_bad_logit_delta is the unit-direction proxy delta, NOT an observed model logit delta",
+  "weight_indices_and_actual_values": "trial_006.json metadata.largest_actual_changes; full exact matrix in checkpoints/trial_006_target.pt"
+}

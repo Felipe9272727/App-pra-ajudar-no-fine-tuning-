@@ -1,0 +1,21 @@
+{
+  "url": "https://huggingface.co/Qwen/Qwen3.5-0.8B/blob/2fc06364715b967f1860aea9cf38778875588b17/README.md",
+  "sha256": "87a163af54f32fa608a0f8d3ac67945c53dd2b4a7c96740b3d7fdc28e8458864",
+  "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "observations": [
+    "Official card warns 0.8B may loop in thinking mode",
+    "Official recommended output budgets are much larger than these CPU pilots",
+    "Official text inference recommendations include nonzero presence penalties and sampling; the historical controlled pilot used greedy decoding"
+  ],
+  "generation_config_probe": {
+    "http_status": 404,
+    "upstream_files_modified": false
+  },
+  "eos_audit": {
+    "config_eos": 248044,
+    "tokenizer_eos": 248046,
+    "six_saved_decodes_ended_at_config_eos": true,
+    "premature_im_end_seen_in_these_six_traces": false,
+    "conclusion": "No EOS mismatch failure established; do not change historical stopping behavior"
+  }
+}
