@@ -6,6 +6,16 @@ Registro inicial (histórico): calibração algébrica concluída; ciclos de mel
 
 Este repositório será usado para código, estado retomável, logs reais, checkpoints incrementais e resultados. O histórico inicial fica na branch `codex/qwen-sensenova-liquid-rsi-20261103`.
 
+## Loop, linguagem e edição temporal protegida — estudo 012, 05/11/2026
+
+O loop altera estados internos: distância L2 relativa média de **5,98%** nos 21 pontos medidos. Substituir apenas sua segunda saída pela primeira mudou quatro de sete programas, mas não os acertos: **23/35 casos e 2/7 tarefas completas**, com zero ganhos/perdas. Sete replays da chamada real com cópia do cache foram bit-exatos. Isso demonstra influência funcional, sem ganho de programação demonstrado nessa amostra.
+
+Em seis prompts neutros, a fala diferiu do Qwen em quatro. A revisão qualitativa sem nomes preferiu Liquid2, Qwen2 e empatou2, com vantagens específicas e falhas também; sem superioridade geral de linguagem.
+
+Uma nova edição direta, sem gradientes ou respostas fornecidas, alterou **24.522 valores em duas matrizes de memória das camadas6,25**, protegendo amostras da primeira visita. Proposta e controle oposto permaneceram **23/35 e 2/7**. Ambos foram arquivados como experimentos; **best.pt continua intacto**. O reinício do executor foi registrado e a referência recuperada reproduziu todos os textos e casos antigos.
+
+[Relatório, dados completos, pesos e limitações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/0a70bfbd0a877c6e4793cc24742116581b0428a2/LOOP_LANGUAGE_RESEARCH_REPORT.md). Branch `codex/liquid-sense-loop-language-20261105`. Validação inédita preservada, cinco novos testes técnicos passaram e estudo encerrado sem worker em segundo plano.
+
 ## Métrica contra 4B e tensores nos erros — diagnóstico 011, 05/11/2026
 
 Python rastreou os **699 tensores de parâmetros** durante cinco respostas erradas e duas corretas: **417 decisões, 813 slots de módulos por decisão**. Os mesmos 546 tensores textuais foram acessados nos dois grupos; não há tensor exclusivamente ligado nos erros desses exemplos. Textos, casos e todos os hashes de pesos permaneceram idênticos aos anteriores.
