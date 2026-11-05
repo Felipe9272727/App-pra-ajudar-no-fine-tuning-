@@ -71,3 +71,13 @@ weight-learned identity or a capability gain. Keep branding out of raw benchmark
 
 Save and verify each outcome commit on GitHub. End with no active local worker;
 never promise transient local execution continues between turns.
+
+## Authored amendment after hypothesis 003, before public outputs
+
+003's fixed two-visit gain shift changed no case outcomes. The continued user
+request also motivates a separate hypothesis about actual added depth. Read
+hypothesis_005.md: one selective third-visit intervention with a matched depth
+control, from unchanged parent, not a dose grid or stacking of unvalidated 004.
+The finite continuation now contains hypotheses 003/004/005. All qualifying
+candidates are frozen together before the single unopened RSI100 validation.
+No hypothesis is added after that validation or after public benchmarks.

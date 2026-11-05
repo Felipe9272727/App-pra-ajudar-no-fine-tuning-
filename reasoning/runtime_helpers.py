@@ -33,8 +33,12 @@ def load():
 @torch.inference_mode()
 def apply(model, parent, patch=None):
     arch = e.apply(model,parent)
+    passes=parent['passes']
     if patch:
         assert patch['parent_sha256']==PARENT_HASH
+        passes=patch.get('passes',passes)
+        if passes!=parent['passes']:
+            e.cr.configure_loops(model,passes)
         if 'dense_weight' in patch:
             target = model.model.language_model.layers[31].mlp.down_proj.weight
             assert patch['dense_weight'].shape==target.shape
@@ -46,7 +50,7 @@ def apply(model, parent, patch=None):
             assert torch.isfinite(values).all() and bool((values>0).all())
             assert abs(float(values.sum())-1.)<1e-6
             layer.native_visit_gain.copy_(values)
-    arch = e.cr.check_architecture(model,parent['passes'])
+    arch = e.cr.check_architecture(model,passes)
     arch['layer_visit_gains']={str(i):l.native_visit_gain.tolist()
         for i,l in enumerate(model.model.language_model.layers) if 4<=i<28}
     return arch

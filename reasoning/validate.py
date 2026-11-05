@@ -8,8 +8,8 @@ from policy import flatten,dominates
 @torch.inference_mode()
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--freeze-only',action='store_true');args=parser.parse_args()
-    assert all((HERE/f'trial_{i:03d}.json').exists() for i in [3,4])
-    candidates=[i for i in [3,4] if json.loads((HERE/f'trial_{i:03d}.json').read_text()).get('eligible_for_new_validation')]
+    assert all((HERE/f'trial_{i:03d}.json').exists() for i in [3,4,5])
+    candidates=[i for i in [3,4,5] if json.loads((HERE/f'trial_{i:03d}.json').read_text()).get('eligible_for_new_validation')]
     frozen_path=HERE/'validation_frozen.json'
     if not frozen_path.exists():
         assert args.freeze_only,'Freeze and commit candidates before any validation inference'
