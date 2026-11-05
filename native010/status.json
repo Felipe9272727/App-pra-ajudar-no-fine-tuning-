@@ -1,5 +1,5 @@
 {
-  "status": "audit_complete_native_design_pending",
+  "status": "liquid_complete",
   "model_process_active": false,
   "checkpoint_promoted": false,
   "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",

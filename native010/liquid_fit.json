@@ -1,0 +1,152 @@
+{
+  "status": "complete",
+  "per_layer": {
+    "0": {
+      "changed_values": 864,
+      "max_relative_channel_change_after_quantization": 0.0023258933797478676,
+      "mean_relative_channel_change": 3.148289761156775e-05,
+      "positions": 228.0
+    },
+    "1": {
+      "changed_values": 116,
+      "max_relative_channel_change_after_quantization": 0.0015663288068026304,
+      "mean_relative_channel_change": 3.201693971277564e-06,
+      "positions": 228.0
+    },
+    "2": {
+      "changed_values": 99,
+      "max_relative_channel_change_after_quantization": 0.0015739022055640817,
+      "mean_relative_channel_change": 2.553009835537523e-06,
+      "positions": 228.0
+    },
+    "4": {
+      "changed_values": 42686,
+      "max_relative_channel_change_after_quantization": 0.053483299911022186,
+      "mean_relative_channel_change": 0.05001528933644295,
+      "positions": 228.0
+    },
+    "5": {
+      "changed_values": 42677,
+      "max_relative_channel_change_after_quantization": 0.05334814265370369,
+      "mean_relative_channel_change": 0.050003986805677414,
+      "positions": 228.0
+    },
+    "6": {
+      "changed_values": 42675,
+      "max_relative_channel_change_after_quantization": 0.053434353321790695,
+      "mean_relative_channel_change": 0.0499853789806366,
+      "positions": 228.0
+    },
+    "8": {
+      "changed_values": 42680,
+      "max_relative_channel_change_after_quantization": 0.05348039045929909,
+      "mean_relative_channel_change": 0.05000393092632294,
+      "positions": 228.0
+    },
+    "9": {
+      "changed_values": 42639,
+      "max_relative_channel_change_after_quantization": 0.0533321388065815,
+      "mean_relative_channel_change": 0.04997222498059273,
+      "positions": 228.0
+    },
+    "10": {
+      "changed_values": 42706,
+      "max_relative_channel_change_after_quantization": 0.05342048406600952,
+      "mean_relative_channel_change": 0.04996214434504509,
+      "positions": 228.0
+    },
+    "12": {
+      "changed_values": 42674,
+      "max_relative_channel_change_after_quantization": 0.05323805287480354,
+      "mean_relative_channel_change": 0.04998909309506416,
+      "positions": 228.0
+    },
+    "13": {
+      "changed_values": 42696,
+      "max_relative_channel_change_after_quantization": 0.053621768951416016,
+      "mean_relative_channel_change": 0.050002142786979675,
+      "positions": 228.0
+    },
+    "14": {
+      "changed_values": 42691,
+      "max_relative_channel_change_after_quantization": 0.05333862453699112,
+      "mean_relative_channel_change": 0.049992214888334274,
+      "positions": 228.0
+    },
+    "16": {
+      "changed_values": 42636,
+      "max_relative_channel_change_after_quantization": 0.05342157557606697,
+      "mean_relative_channel_change": 0.04994872212409973,
+      "positions": 228.0
+    },
+    "17": {
+      "changed_values": 42661,
+      "max_relative_channel_change_after_quantization": 0.05339958891272545,
+      "mean_relative_channel_change": 0.04996694251894951,
+      "positions": 228.0
+    },
+    "18": {
+      "changed_values": 42637,
+      "max_relative_channel_change_after_quantization": 0.053058747202157974,
+      "mean_relative_channel_change": 0.04998265579342842,
+      "positions": 228.0
+    },
+    "20": {
+      "changed_values": 42646,
+      "max_relative_channel_change_after_quantization": 0.053308844566345215,
+      "mean_relative_channel_change": 0.04997758939862251,
+      "positions": 228.0
+    },
+    "21": {
+      "changed_values": 42663,
+      "max_relative_channel_change_after_quantization": 0.053234394639730453,
+      "mean_relative_channel_change": 0.05001312494277954,
+      "positions": 228.0
+    },
+    "22": {
+      "changed_values": 42564,
+      "max_relative_channel_change_after_quantization": 0.05322956293821335,
+      "mean_relative_channel_change": 0.050001099705696106,
+      "positions": 228.0
+    },
+    "24": {
+      "changed_values": 42542,
+      "max_relative_channel_change_after_quantization": 0.053603675216436386,
+      "mean_relative_channel_change": 0.049814824014902115,
+      "positions": 228.0
+    },
+    "25": {
+      "changed_values": 42529,
+      "max_relative_channel_change_after_quantization": 0.053236979991197586,
+      "mean_relative_channel_change": 0.04971190169453621,
+      "positions": 228.0
+    },
+    "26": {
+      "changed_values": 42597,
+      "max_relative_channel_change_after_quantization": 0.05321752652525902,
+      "mean_relative_channel_change": 0.04957425221800804,
+      "positions": 228.0
+    },
+    "28": {
+      "changed_values": 42502,
+      "max_relative_channel_change_after_quantization": 0.05330413952469826,
+      "mean_relative_channel_change": 0.049788977950811386,
+      "positions": 228.0
+    },
+    "29": {
+      "changed_values": 42565,
+      "max_relative_channel_change_after_quantization": 0.05325551703572273,
+      "mean_relative_channel_change": 0.049800772219896317,
+      "positions": 228.0
+    },
+    "30": {
+      "changed_values": 42526,
+      "max_relative_channel_change_after_quantization": 0.053278591483831406,
+      "mean_relative_channel_change": 0.04976120963692665,
+      "positions": 228.0
+    }
+  },
+  "sha256": "6bf1ec13669a5b87e5047880e1aa3c0af9e85021d28da6824f3c0a2d7ecf2022",
+  "solver": "closed-form per-channel ridge",
+  "no_gradient": true
+}
