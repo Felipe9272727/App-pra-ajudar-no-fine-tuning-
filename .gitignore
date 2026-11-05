@@ -20,3 +20,4 @@ benchmarks/reasoning_20261105/lcb_v6.jsonl
 benchmarks/reasoning_20261105/gsm8k_test.jsonl
 
 benchmarks/reasoning_20261105/vendor/instruction_following_eval/data/input_data.jsonl
+reasoning/cycle2/upstream_model_card.md
