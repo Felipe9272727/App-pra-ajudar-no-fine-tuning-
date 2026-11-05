@@ -7,8 +7,15 @@
   "stacked_on_008": false,
   "backward_passes": 0,
   "fresh_validation_consumed": false,
-  "updated_unix": 1793874963.6453612,
+  "updated_unix": 1793875299.1290796,
   "process_continues_in_background": false,
   "selected": "parent",
-  "technical_tests_passed": 46
+  "technical_tests_passed": 46,
+  "studies_completed_this_request": [
+    8,
+    9
+  ],
+  "guided_hypotheses_total_completed": 9,
+  "tensor_artifacts_archived": 22,
+  "final_report": "MULTI_TENSOR_REPORT.md"
 }
