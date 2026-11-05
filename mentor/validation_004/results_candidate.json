@@ -749,7 +749,35 @@
       "correct": true
     }
   ],
-  "repeats": [],
+  "repeats": [
+    {
+      "id": "v4_interval_union",
+      "output": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort(key=lambda x: x[0])\n    total = intervals[0][1]\n    for i in range(1, len(intervals)):\n        if intervals[i][0] > intervals[i-1][1]:\n            total += intervals[i][1] - intervals[i-1][1]\n    return total",
+      "new_tokens": 91,
+      "hit_limit": false,
+      "seconds": 28.816200050000134,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "code": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort(key=lambda x: x[0])\n    total = intervals[0][1]\n    for i in range(1, len(intervals)):\n        if intervals[i][0] > intervals[i-1][1]:\n            total += intervals[i][1] - intervals[i-1][1]\n    return total",
+      "identical": true
+    }
+  ],
   "frozen_sha256": "bffac8f483863225e85774320a5301b26b70db9ab096f78de287d51fdbffdb46",
   "backward_passes": 0,
   "answers_in_generation_prompts": false,

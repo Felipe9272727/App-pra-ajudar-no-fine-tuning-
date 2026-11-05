@@ -12,5 +12,8 @@
       "effect_on_gate": "none; frozen automatic scores remain unchanged"
     }
   ],
-  "interpretation": "Report strict-match controls separately from general language ability. Do not credit a change between equivalent translations as a genuine language gain. Other outputs are reviewed once all variants finish."
+  "interpretation": "Strict scores and frozen aliases remain unchanged. Original-to-hybrid strict gain on v4_en_pt is not a semantic translation improvement. Original clock and plural successes are lost in both hybrids; these are inherited architecture differences, not new candidate effects.",
+  "all_variant_controls_reviewed": true,
+  "additional_false_negatives_observed": [],
+  "review_scope": "Assistant reviewed all 36 control outputs. Parent and candidate outputs match exactly; the only known semantic false negative is the original translation already listed. Repeated plural outputs fail the explicit one-word instruction."
 }
