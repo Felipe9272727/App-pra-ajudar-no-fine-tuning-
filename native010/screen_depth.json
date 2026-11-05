@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "complete",
   "variant": "depth",
   "model": {
     "variant": "baseline",
@@ -129,6 +129,97 @@
         false,
         false
       ]
+    },
+    {
+      "id": "overlap_count",
+      "output": "```python\ndef solve(s, sub):\n    count = 0\n    for i in range(len(s) - 1):\n        if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 54.6456224149988,
+      "thinking": false,
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 1,
+      "code": "```python\ndef solve(s, sub):\n    count = 0\n    for i in range(len(s) - 1):\n        if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i < len(sub)\n            if i",
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "sum_abs",
+      "output": "```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return 0\n```\n\n```python\ndef solve(xs):\n    return",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 55.03363189299853,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "code": "def solve(xs):\n    return 0"
+    },
+    {
+      "id": "palindrome",
+      "output": "```python\ndef solve(s):\n    if s == s:\n        return True\n    return False\n```\n\n```python\ndef solve(s):\n    return s == s\n```\n\n```python\ndef solve(s):\n    return s == s\n```\n\n```python\ndef solve(s):\n    return s == s\n```\n\n```python\ndef solve(s):\n    return s == s\n```\n\n```python\ndef solve(s):\n    return s == s\n```\n\n```python\ndef solve(s):\n    return s == s\n```\n\n```python\ndef solve(s):\n    return s == s\n```\n\n```python\ndef solve(s):\n    return s == s\n```\n\n```python\ndef solve(s):",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 55.6469664239994,
+      "thinking": false,
+      "passed": 4,
+      "total": 6,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "code": "def solve(s):\n    return s == s"
+    },
+    {
+      "id": "binary_search",
+      "output": "```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\ndef solve(xs, target):\n    if target is None:\n        return -1\n    return -1\n```\n\n```python\n",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "seconds": 59.445277238002745,
+      "thinking": false,
+      "passed": 2,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "code": "def solve(xs, target):\n    if target is None:\n        return -1\n    return -1"
     }
   ],
   "protocol": {
@@ -139,5 +230,8 @@
     "no_answers_in_input": true,
     "data_sha256": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d"
   },
-  "controls": []
+  "controls": [],
+  "tasks_passed": 0,
+  "cases_passed": 8,
+  "total_cases": 36
 }
