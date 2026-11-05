@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "id": "prefix_sums",
+  "group": "error",
+  "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]",
+  "new_tokens": 32,
+  "hit_limit": false,
+  "seconds": 33.68764366999676,
+  "thinking": false,
+  "passed": 2,
+  "total": 5,
+  "all_passed": false,
+  "category": "WrongReturnValue",
+  "error_types": [
+    "WrongReturnValue"
+  ],
+  "case_passed": [
+    true,
+    false,
+    true,
+    false,
+    false
+  ],
+  "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]",
+  "actual_forward_calls": 32,
+  "parameter_tensors_total": 699,
+  "observed_parameter_tensors": 546,
+  "unobserved_parameter_tensors": 153,
+  "profiled_call_slots_per_token": 813,
+  "profile_shape": [
+    32,
+    813,
+    12
+  ],
+  "recorded_nonfinite_activation_values": 0.0,
+  "selected_snapshot_steps": [
+    16,
+    18,
+    31
+  ],
+  "suspected_point": {
+    "char_offset": 60,
+    "estimated_token_index": 18,
+    "marker": "sum([x for x in xs])",
+    "only_a_suspected_error_span": true,
+    "actual_token_index": 18,
+    "actual_suspected_point_snapshot_present": true
+  },
+  "activations_sha256": "54a98a3bd7e2dfb3e78c40c59bab0ac6ea1b332f365d575e93cbc7e3bfa4ee1d",
+  "tensor_archive_bytes": 27518879,
+  "old_output_and_case_bits_identical": true,
+  "seconds_instrumented": 34.183117773995036
+}
