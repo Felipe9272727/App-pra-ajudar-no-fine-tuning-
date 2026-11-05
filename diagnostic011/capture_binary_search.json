@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "id": "binary_search",
+  "group": "guard",
+  "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    if target in xs:\n        return xs.index(target)\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1",
+  "new_tokens": 59,
+  "hit_limit": false,
+  "seconds": 67.74244776200067,
+  "thinking": false,
+  "passed": 5,
+  "total": 5,
+  "all_passed": true,
+  "category": "passed",
+  "error_types": [],
+  "case_passed": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    if target in xs:\n        return xs.index(target)\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1",
+  "actual_forward_calls": 59,
+  "parameter_tensors_total": 699,
+  "observed_parameter_tensors": 546,
+  "unobserved_parameter_tensors": 153,
+  "profiled_call_slots_per_token": 813,
+  "profile_shape": [
+    59,
+    813,
+    12
+  ],
+  "recorded_nonfinite_activation_values": 0.0,
+  "selected_snapshot_steps": [
+    0,
+    29,
+    58
+  ],
+  "suspected_point": {
+    "char_offset": 0,
+    "estimated_token_index": 0,
+    "marker": null,
+    "only_a_suspected_error_span": false,
+    "actual_token_index": 0,
+    "actual_suspected_point_snapshot_present": true
+  },
+  "activations_sha256": "02287a2cca2c78647bbbfe775cf144f69de3d73212fea56ff314d382ab24f122",
+  "tensor_archive_bytes": 28859813,
+  "old_output_and_case_bits_identical": true,
+  "seconds_instrumented": 68.3219496390011
+}

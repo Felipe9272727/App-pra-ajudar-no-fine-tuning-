@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "id": "sum_abs",
+  "group": "guard",
+  "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+  "new_tokens": 29,
+  "hit_limit": false,
+  "seconds": 35.78992929400556,
+  "thinking": false,
+  "passed": 5,
+  "total": 5,
+  "all_passed": true,
+  "category": "passed",
+  "error_types": [],
+  "case_passed": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "code": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+  "actual_forward_calls": 29,
+  "parameter_tensors_total": 699,
+  "observed_parameter_tensors": 546,
+  "unobserved_parameter_tensors": 153,
+  "profiled_call_slots_per_token": 813,
+  "profile_shape": [
+    29,
+    813,
+    12
+  ],
+  "recorded_nonfinite_activation_values": 0.0,
+  "selected_snapshot_steps": [
+    0,
+    14,
+    28
+  ],
+  "suspected_point": {
+    "char_offset": 0,
+    "estimated_token_index": 0,
+    "marker": null,
+    "only_a_suspected_error_span": false,
+    "actual_token_index": 0,
+    "actual_suspected_point_snapshot_present": true
+  },
+  "activations_sha256": "eeef4858b311062d1241dcc77507c9fc6851dcc4c799a3dc77da7369f663c03e",
+  "tensor_archive_bytes": 27341735,
+  "old_output_and_case_bits_identical": true,
+  "seconds_instrumented": 36.03050105700095
+}

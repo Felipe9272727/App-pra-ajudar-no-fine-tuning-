@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "id": "longest_run",
+  "group": "error",
+  "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+  "new_tokens": 98,
+  "hit_limit": false,
+  "seconds": 108.7244159519978,
+  "thinking": false,
+  "passed": 4,
+  "total": 5,
+  "all_passed": false,
+  "category": "WrongReturnValue",
+  "error_types": [
+    "WrongReturnValue"
+  ],
+  "case_passed": [
+    true,
+    true,
+    true,
+    true,
+    false
+  ],
+  "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+  "actual_forward_calls": 98,
+  "parameter_tensors_total": 699,
+  "observed_parameter_tensors": 546,
+  "unobserved_parameter_tensors": 153,
+  "profiled_call_slots_per_token": 813,
+  "profile_shape": [
+    98,
+    813,
+    12
+  ],
+  "recorded_nonfinite_activation_values": 0.0,
+  "selected_snapshot_steps": [
+    49,
+    85,
+    97
+  ],
+  "suspected_point": {
+    "char_offset": 267,
+    "estimated_token_index": 85,
+    "marker": "return max_len if current_len > 0 else 0",
+    "only_a_suspected_error_span": true,
+    "actual_token_index": 85,
+    "actual_suspected_point_snapshot_present": true
+  },
+  "activations_sha256": "f54d4f5bf0e39e70e506cd19e03d62e1daebeece30456c681788ef6b9b8bb932",
+  "tensor_archive_bytes": 30785975,
+  "old_output_and_case_bits_identical": true,
+  "seconds_instrumented": 109.31692127599672
+}

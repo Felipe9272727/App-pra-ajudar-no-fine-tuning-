@@ -1,0 +1,22 @@
+{
+  "layers": [
+    25,
+    6,
+    28
+  ],
+  "error_ids": [
+    "prefix_sums",
+    "overlap_count",
+    "run_lengths",
+    "rotate_right",
+    "longest_run"
+  ],
+  "files": {
+    "diagnostic011/gate_probe.py": "c3f64d408322843790428094d05e4799dc6f639c2591cbab47948e7ec778fafd",
+    "diagnostic011/GATE_PROBE_PROTOCOL.md": "be919b858faa34853222943139c4ec0fa343b46bc98106fb6cbd4699433f9951",
+    "diagnostic011/analysis.json": "f00f4bd895d71e7999bf5af6866ac97a82833c5715d023d33a410272f4b5f33f",
+    "diagnostic011/capture_complete.json": "cf70adc0d6c41acf5591a40bf960b3aeae5044002b6618bf014bee06ed197b82",
+    "rsi100/checkpoints/best.pt": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8"
+  },
+  "probes_observed": false
+}
