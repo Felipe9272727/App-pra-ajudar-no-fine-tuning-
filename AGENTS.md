@@ -261,3 +261,43 @@
 - Nine NEW technical tests passed. General/language tests and eight unused
   RSI100 validation tasks were not consumed. No model worker remains active;
   automatic RSI100 stays paused, and no background research is promised.
+
+## Loop/language research and protected gate edit 012 — complete
+
+- Branch codex/liquid-sense-loop-language-20261105. Read
+  LOOP_LANGUAGE_RESEARCH_REPORT.md and loop012/decision.json, recovery.json,
+  selection.json, PROTOCOL.md and status.json. No new checkpoint promoted.
+- The actual first/second loop exit differs at all21 saved decisions: mean
+  relative L2 .05979967, cosine .99822564. Seven real cached-call replays were
+  bit-exact before causal output replacement; no full-prefill/cache confound.
+- Replacing only the second loop exit with the first (all56 computations still
+  executed) changed four of seven program texts/ASTs but no case bits:23/35
+  cases,2/7 tasks both ways. This diagnostic is not an eligible single-pass model.
+  Mechanical influence is not a demonstrated coding benefit.
+- Neutral language pilot6: four outputs differ from Qwen original, two equal.
+  Anonymous-order assistant review preferred Liquid2, Qwen2, ties2; not an
+  independent human/general-superiority evaluation. Liquid had3 truncations,
+  original2. Some Liquid outputs emitted stray think-closing tags. Strict JSON
+  boolean check was more restrictive than the prompt; keep it unchanged and
+  distinguish the semantic review accepting both identical string-sim outputs.
+- One new direct closed-form edit changed24522 BF16 values in in_proj_a weights
+  of physical layers6,25. It protects64 sampled inputs per layer and aligns
+  second-pass internal teacher signals, not correct answer tokens/programs.
+  First-visit/sample protection is not a global guarantee. No gradient/optimizer.
+- Target and opposite-direction control both completed the7-task/35-case screen:
+ 23/35 cases,2/7 tasks, zero gains/losses against paired/historical parent.
+  Internal activation fit is not a quality gain. Both exact overlays and all
+  construction states are preserved; no more dose search in this study.
+- Parent remains best.pt hash46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
+  Eight RSI100 validation tasks remain unused; full/general/candidate-language
+  gates were not run after failed screening. Original matched7-task reference
+  is23/35 and4/7, not another earlier27/36 screen.
+- Executor restarted before any screen row was saved. Checkpoints were already
+  committed. Recovery verified hashes and reran only unsaved scoring phases,
+  with a new paired parent replay matching every old text and case bit.
+  Use resume_screen.py to resume only missing rows if another interruption occurs.
+- To inspect rejected edits, use loop012.core.load_variant('target'/'inverse').
+  To restore parent, cold-load it or restore BOTH saved parent_gate_weights.pt
+  matrices: legacy e.apply does not reset this parameter family. Do not replace
+  best.pt with the incremental overlay format. Five new technical tests passed.
+  All model workers end before the turn ends; RSI100 stays paused.

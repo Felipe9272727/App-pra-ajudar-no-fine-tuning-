@@ -1,0 +1,11 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+test_bypass_returns_first_exit_without_mutating_either_tensor (test_loop_specialization.LoopSpecializationTests.test_bypass_returns_first_exit_without_mutating_either_tensor) ... ok
+test_language_structure_is_checked_independently_of_length (test_loop_specialization.LoopSpecializationTests.test_language_structure_is_checked_independently_of_length) ... ok
+test_protected_update_is_orthogonal_to_preservation_inputs (test_loop_specialization.LoopSpecializationTests.test_protected_update_is_orthogonal_to_preservation_inputs) ... ok
+test_teacher_prefix_only_forces_preexisting_student_ids (test_loop_specialization.LoopSpecializationTests.test_teacher_prefix_only_forces_preexisting_student_ids) ... ok
+test_unidentifiable_target_aborts_instead_of_uncontrolled_update (test_loop_specialization.LoopSpecializationTests.test_unidentifiable_target_aborts_instead_of_uncontrolled_update) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+OK

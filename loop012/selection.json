@@ -1,0 +1,12 @@
+{
+  "selected": "parent",
+  "checkpoint": "rsi100/checkpoints/best.pt",
+  "checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "checkpoint_promoted": false,
+  "fresh_validation_consumed": false,
+  "reason": "Protected temporal gate edit and inverse tied parent with zero complete-task gain",
+  "experimental_overlays": [
+    "loop012/checkpoints/target.pt",
+    "loop012/checkpoints/inverse.pt"
+  ]
+}

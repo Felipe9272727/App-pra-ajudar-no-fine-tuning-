@@ -1,0 +1,25 @@
+PHASE collect_parent
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:  96%|█████████▌| 645/675 [00:00<00:00, 6434.60it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6482.98it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793910804.1726217, "attempt": null, "pid": 22597}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PHASE collect_teacher
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 6260.49it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TEACHER_INTERNAL_GATE overlap_count 52
+TEACHER_INTERNAL_GATE longest_run 85
+PHASE construct
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+CONSTRUCTION complete {'6': {'protected_rows': 64, 'protected_rank': 64, 'target_residual_ratios': [0.5505608320236206, 0.6195785999298096], 'requested_relative_frobenius': 0.005151993595063686, 'ridge': 6.518959999084473, 'variants': {'target': {'changed_values': 11205, 'relative_frobenius_after_bf16': 0.005317595321685076, 'max_protected_relative_l2': 0.0039015612564980984, 'max_protected_output_rms_delta': 0.0026108771562576294, 'guard_passed': True, 'target_requested_delta_mse': 0.0045123109593987465, 'target_delta_mse': 5.885702194063924e-06}, 'inverse': {'changed_values': 11202, 'relative_frobenius_after_bf16': 0.005318382289260626, 'max_protected_relative_l2': 0.0041212658397853374, 'max_protected_output_rms_delta': 0.0027579006273299456, 'guard_passed': True, 'target_requested_delta_mse': 0.0045123109593987465, 'target_delta_mse': 0.01764092966914177}}}, '25': {'protected_rows': 64, 'protected_rank': 64, 'target_residual_ratios': [0.4019557535648346, 0.45463255047798157], 'requested_relative_frobenius': 0.008415364660322666, 'ridge': 5.063741683959961, 'variants': {'target': {'changed_values': 13317, 'relative_frobenius_after_bf16': 0.008562441915273666, 'max_protected_relative_l2': 0.00189882330596447, 'max_protected_output_rms_delta': 0.0037512092385441065, 'guard_passed': True, 'target_requested_delta_mse': 0.012525390833616257, 'target_delta_mse': 5.977553428238025e-06}, 'inverse': {'changed_values': 13320, 'relative_frobenius_after_bf16': 0.008559668436646461, 'max_protected_relative_l2': 0.0017847269773483276, 'max_protected_output_rms_delta': 0.0036059534177184105, 'guard_passed': True, 'target_requested_delta_mse': 0.012525390833616257, 'target_delta_mse': 0.049430735409259796}}}}
+CONSTRUCTION_PHASES_COMPLETE
