@@ -1,0 +1,27 @@
+{
+  "files": {
+    "reasoning/cycle2/PROTOCOL.md": "127e61182ba8ff73468d2922d8edaa5da74358bb8226b4b13ef6eed6d91ae0ab",
+    "reasoning/cycle2/run.py": "93e3c44478af927e8127dd4ec3de1e5284db74d8fd5e1be55ce346fe3747049f",
+    "reasoning/traces.pt": "ac9fef90dca073142b828b58cd3bebc807a09b03f2029c4b8c252f64af206a2c",
+    "reasoning/trial_004.json": "721fb1e2a8260283d559391627a0112efd9afe7c0c0d24d59e06fe53673fa544",
+    "rsi100/data.json": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d",
+    "rsi100/checkpoints/best.pt": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "benchmarks/reasoning_20261105/prompts.json": "d37599532735ec05a1288d8469279617656391cc543b3d82020a480510224c4f",
+    "benchmarks/reasoning_20261105/oracles.json": "842796d5f55fcfa8c046101431ff267df53227648533a4efe1813a4a1ae5458d"
+  },
+  "diagnostic_ids": [
+    "gsm8k:914",
+    "gsm8k:501",
+    "lcb:abc387_a"
+  ],
+  "thinking_modes": [
+    false,
+    true
+  ],
+  "max_tokens": 512,
+  "sampling": false,
+  "new_hypotheses": [
+    6
+  ],
+  "final_validation_observed": false
+}
