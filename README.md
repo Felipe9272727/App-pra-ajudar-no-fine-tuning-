@@ -6,7 +6,18 @@ Registro inicial (histórico): calibração algébrica concluída; ciclos de mel
 
 Este repositório será usado para código, estado retomável, logs reais, checkpoints incrementais e resultados. O histórico inicial fica na branch `codex/qwen-sensenova-liquid-rsi-20261103`.
 
-## Pesquisa mais recente — diagnóstico concluído em 2026-11-05
+## Pesquisa mais recente — edições distribuídas 008/009 concluídas
+
+[Relatório e comparações, fixados por commit](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f8a0a7f5801baeeb225aad38996e951c6f00ded7/MULTI_TENSOR_REPORT.md).
+[Código, pesos e estado retomável](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/codex/liquid-sense-multi-tensor-20261105).
+
+Foram construídas duas candidatas independentes por edição direta: 32.281 valores em 40 tensores de normalização, e 4.994.722 valores em quatro matrizes MLP das camadas 5, 13, 25 e 31. Sem gradientes nem soluções corretas nas entradas; o original forneceu apenas vetores internos dos enunciados.
+
+Na mesma triagem de sete problemas, ambas fizeram 27/36 casos e 3/7 tarefas completas, iguais ao híbrido pai. Controles inversos também não acrescentaram acertos. Não houve ganho demonstrado e nenhuma candidata foi promovida. O checkpoint anterior permanece selecionado.
+
+Foram preservados e conferidos 22 artefatos de tensores, com os pesos exatos e as ativações. Os 46 testes técnicos passaram. Os testes de modelo terminaram; não há execução permanente nem retomada automática das 100 rodadas. O conjunto reservado continua sem execução nesta continuação, pois as candidatas falharam na triagem.
+
+## Pesquisa anterior — diagnóstico concluído em 2026-11-05
 
 [Relatório completo, fixado por commit](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/c57b3124986268e495ff5324bdfdbe831028970e/ERROR_ANALYSIS_REPORT.md).
 [Código, checkpoints e estado retomável](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/codex/liquid-sense-error-analysis-20261105).
