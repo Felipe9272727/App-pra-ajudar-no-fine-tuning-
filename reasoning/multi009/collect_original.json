@@ -1,0 +1,36 @@
+{
+  "variant": "original",
+  "status": "complete",
+  "input_ids": [
+    "ordinary_00",
+    "ordinary_01",
+    "ordinary_02",
+    "ordinary_03",
+    "ordinary_04",
+    "ordinary_05",
+    "ordinary_06",
+    "ordinary_07",
+    "ordinary_08",
+    "ordinary_09",
+    "ordinary_10",
+    "ordinary_11",
+    "prefix_sums",
+    "rotate_right",
+    "longest_run",
+    "overlap_count",
+    "sum_abs",
+    "palindrome",
+    "binary_search"
+  ],
+  "correct_or_generated_solutions_in_context": false,
+  "model": {
+    "variant": "original",
+    "loaded_parameters": 852985920
+  },
+  "tensor_hashes": {
+    "5": "1e5bc2d5a0fc7ea847c42638b64f6dc08010f989065561bd73bb92b46a5c7582",
+    "13": "58cd2f45959e0dc41de1d8303ff93bcadad61c2834b718743b005fc9e03352ec",
+    "25": "1e919b6508061c81348de54581e56b5eea92fbbc861c21cdfafbd5a68f81867e",
+    "31": "4b0c8578c81b42df132b360874491128b51e6025f1fcd0edcc2a1496a2c8b095"
+  }
+}

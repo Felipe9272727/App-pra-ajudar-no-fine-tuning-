@@ -1,0 +1,57 @@
+{
+  "variant": "parent",
+  "status": "complete",
+  "input_ids": [
+    "ordinary_00",
+    "ordinary_01",
+    "ordinary_02",
+    "ordinary_03",
+    "ordinary_04",
+    "ordinary_05",
+    "ordinary_06",
+    "ordinary_07",
+    "ordinary_08",
+    "ordinary_09",
+    "ordinary_10",
+    "ordinary_11",
+    "prefix_sums",
+    "rotate_right",
+    "longest_run",
+    "overlap_count",
+    "sum_abs",
+    "palindrome",
+    "binary_search"
+  ],
+  "correct_or_generated_solutions_in_context": false,
+  "model": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    }
+  },
+  "tensor_hashes": {
+    "5": "83b5565e0702f0d93b82d998ce200b43ef85424b6d91d72ba27c8e02c34514c6",
+    "13": "49e9d7846d99120fb03d5176cbaf024818b3c3cf84231fa6034186c2b2418fa4",
+    "25": "96baff10033ca761f45738de98c6b0d55e2677d0e374b562d34e207972e2a110",
+    "31": "19cf2ce8de9bddb43d8cd5c264ef028572897aabc0275c6bcf2ddfa7c1349826"
+  }
+}

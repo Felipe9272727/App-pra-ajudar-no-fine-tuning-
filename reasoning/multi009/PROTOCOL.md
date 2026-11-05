@@ -18,8 +18,9 @@ positions per input, including the final position. For hybrid loop layers,
 combine visits tokenwise with their existing .95/.05 gains. Other layers have
 weight1. Original donor mapping is SOURCE_LAYERS. Inputs/token positions match.
 
-At each layer, language states P from12 ordinary texts define a preservation
-subspace. Code-prompt states X from the seven enunciados are residualized by
+At each layer, states P from12 ordinary texts AND the five matched prompts
+where parent is equal/better define a preservation subspace. Code-prompt
+states X from longest_run and overlap_count are residualized by
 SVD against P, relative cutoff1e-5. Abort if residual norm <5% of original.
 Let R be the residual states, D=Y_original-Y_parent at the same positions.
 No token labels, correct replacement code or answers enter D: it consists
@@ -50,3 +51,16 @@ gain, strict case gain, no case/control losses and no worse NLL versus parent.
 No tuning after that validation; otherwise retain parent. Observed old public
 or diagnostic tests are never a new final. Finish workers and save decisions
 on GitHub before ending the turn; no permanent background execution.
+
+## Targeting correction before construction and candidate quality
+
+The initial source1824a66 collected the same19 inputs but proposed transporting
+all seven coding prompts. No009 candidate was constructed or evaluated from
+that proposal. Before any edit, narrow its targets using the already-published
+original/parent development comparison: longest_run5→4 and overlap_count5→2.
+Protect prefix_sums,rotate_right,sum_abs,palindrome,binary_search instead of
+copying original behavior where it is equal/worse. This uses existing case
+fractions, never reference program text or any new validation result.
+Capture methods, input texts, sampling, evaluation cases and thresholds stay
+unchanged. initial_preregistration.json preserves the preceding file hashes.
+The updated source and hashes are committed before any009 weight construction.

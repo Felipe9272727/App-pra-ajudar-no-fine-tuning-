@@ -14,6 +14,7 @@ from native_runtime import SOURCE_LAYERS
 
 LAYERS=[5,13,25,31]
 SCREEN=['prefix_sums','rotate_right','longest_run','overlap_count','sum_abs','palindrome','binary_search']
+TARGET_CODES={'longest_run','overlap_count'}
 INPUTS=ROOT/'reasoning/multi008/inputs.json'
 def save(name,value):e.cr.atomic_json(HERE/name,value)
 def state(**kw):
@@ -28,6 +29,8 @@ def verify():
 def initialize():
     names=['reasoning/multi009/PROTOCOL.md','reasoning/multi009/study009.py','reasoning/multi009/validate009.py',
         'reasoning/multi008/inputs.json','reasoning/multi008/trial_008.json','reasoning/runtime_helpers.py',
+        'reasoning/cycle2/development_original.json','reasoning/cycle2/trial_006_parent_full.json',
+        'reasoning/multi009/initial_preregistration.json',
         'rsi100/data.json','rsi100/engine.py','rsi100/policy.py','code_rsi/runtime.py',
         'v2_adaptation/native_runtime.py','local_cpu/sandbox.py','rsi100/checkpoints/best.pt']
     save('frozen.json',{'files':{p:e.cr.file_hash(ROOT/p) for p in names},'layers':LAYERS,
@@ -107,15 +110,22 @@ def construct(model):
     baseline=snapshot(model);expected=json.loads((HERE/'baseline_hashes.json').read_text())
     assert all(tensor_hash(w)==expected[k] for k,w in baseline.items())
     report={'layers':{},'changed_values':{'target':0,'inverse_control':0},'aborted':False}
+    original_scores={r['id']:r['passed'] for r in json.loads((ROOT/'reasoning/cycle2/development_original.json').read_text())['rows']}
+    parent_scores={r['id']:r['passed'] for r in json.loads((ROOT/'reasoning/cycle2/trial_006_parent_full.json').read_text())['rows']}
+    assert all(original_scores[k]>parent_scores[k] for k in TARGET_CODES)
+    assert all(original_scores[k]<=parent_scores[k] for k in set(SCREEN)-TARGET_CODES)
     manifests={k:{'parent_sha256':PARENT_HASH,'baseline_hashes':expected,'files':{}} for k in ['inverse_control','target']}
     for i in LAYERS:
         key=str(i);own=torch.load(HERE/f'collect_parent_layer_{i:02d}.pt',weights_only=True)
         ref=torch.load(HERE/f'collect_original_layer_{i:02d}.pt',weights_only=True)
         assert set(own)==set(ref)
         for ep in own:assert torch.equal(own[ep]['positions'],ref[ep]['positions'])
-        language=combined(own,'ordinary','x');code=combined(own,'coding_prompt','x')
-        desired=combined(ref,'coding_prompt','y')-combined(own,'coding_prompt','y')
+        language=torch.cat([v['x'] for ep,v in own.items() if ep not in TARGET_CODES])
+        code=torch.cat([v['x'] for ep,v in own.items() if ep in TARGET_CODES])
+        desired=torch.cat([ref[ep]['y']-v['y'] for ep,v in own.items() if ep in TARGET_CODES])
+        info_counts={'preserved_states':len(language),'target_states':len(code),'target_task_ids':sorted(TARGET_CODES)}
         delta,info=fit_delta(baseline[key],language,code,desired)
+        info.update(info_counts)
         if delta is None:report.update(aborted=True,abort_layer=i);report['layers'][key]=info;break
         info['variants']={}
         for kind,sign in [('inverse_control',-1),('target',1)]:
