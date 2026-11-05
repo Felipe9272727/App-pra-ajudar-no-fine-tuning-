@@ -1,0 +1,27 @@
+{
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "baseline_hashes": {
+    "5": "60f0a77529c775c10da70e76c08a9518918abbae9b264b9d5d6130dff55520e7",
+    "13": "09751bd4c7ef156fd8c5cf4e3be0d6250c7cccc14cf30883fbb28d213fec6132",
+    "25": "412058832c188e22c34c358c8e59601fbc9a945b7ac7fb8ed5b4712302b237a8",
+    "31": "1866748ce87d32cfee34891d2fa393fdfeee77447935f6a31d036e4b80332a48"
+  },
+  "files": {
+    "5": {
+      "path": "reasoning/multi009/checkpoints/trial_009_target_layer_05.pt",
+      "sha256": "541ab2249128104c60b0819e161c6630ed62bb86200696a594d42dd179d0ab82"
+    },
+    "13": {
+      "path": "reasoning/multi009/checkpoints/trial_009_target_layer_13.pt",
+      "sha256": "da2a8962c397481ce7addc4e3abb6bf29ea8b443438e01b89e7d0fe5a007237f"
+    },
+    "25": {
+      "path": "reasoning/multi009/checkpoints/trial_009_target_layer_25.pt",
+      "sha256": "444a91be41c039816679a46393ec817460c0b0c3ef4c46af8c7c8655c9e64c35"
+    },
+    "31": {
+      "path": "reasoning/multi009/checkpoints/trial_009_target_layer_31.pt",
+      "sha256": "7d0670ede1dfe3f153d3af6b4237e61e2269900418da10e3d3c5b9463b4ab012"
+    }
+  }
+}

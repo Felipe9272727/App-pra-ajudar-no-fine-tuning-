@@ -1,0 +1,28 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:  92%|█████████▏| 622/675 [00:00<00:00, 6216.09it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6278.91it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793873630.3824027, "attempt": null, "pid": 1669}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+VECTOR_CAPTURE parent ordinary_00
+VECTOR_CAPTURE parent ordinary_01
+VECTOR_CAPTURE parent ordinary_02
+VECTOR_CAPTURE parent ordinary_03
+VECTOR_CAPTURE parent ordinary_04
+VECTOR_CAPTURE parent ordinary_05
+VECTOR_CAPTURE parent ordinary_06
+VECTOR_CAPTURE parent ordinary_07
+VECTOR_CAPTURE parent ordinary_08
+VECTOR_CAPTURE parent ordinary_09
+VECTOR_CAPTURE parent ordinary_10
+VECTOR_CAPTURE parent ordinary_11
+VECTOR_CAPTURE parent prefix_sums
+VECTOR_CAPTURE parent rotate_right
+VECTOR_CAPTURE parent longest_run
+VECTOR_CAPTURE parent overlap_count
+VECTOR_CAPTURE parent sum_abs
+VECTOR_CAPTURE parent palindrome
+VECTOR_CAPTURE parent binary_search

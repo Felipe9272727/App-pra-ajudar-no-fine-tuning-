@@ -1,0 +1,81 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6992.22it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793873856.7989092, "attempt": null, "pid": 1737}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PHASE_START {"phase": "generate:prefix_sums", "budget_seconds": 600, "started_unix": 1793873880.791286, "attempt": null, "pid": 1737}
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PHASE_END generate:prefix_sums 9.484
+PHASE_START {"phase": "execute:prefix_sums", "budget_seconds": 60, "started_unix": 1793873890.275668, "attempt": null, "pid": 1737}
+PHASE_END execute:prefix_sums 0.041
+EVAL prefix_sums 2 5
+PHASE_START {"phase": "generate:rotate_right", "budget_seconds": 600, "started_unix": 1793873890.318121, "attempt": null, "pid": 1737}
+PHASE_END generate:rotate_right 15.715
+PHASE_START {"phase": "execute:rotate_right", "budget_seconds": 60, "started_unix": 1793873906.0330045, "attempt": null, "pid": 1737}
+PHASE_END execute:rotate_right 0.039
+EVAL rotate_right 3 5
+PHASE_START {"phase": "generate:longest_run", "budget_seconds": 600, "started_unix": 1793873906.0739295, "attempt": null, "pid": 1737}
+PHASE_END generate:longest_run 37.853
+PHASE_START {"phase": "execute:longest_run", "budget_seconds": 60, "started_unix": 1793873943.9266293, "attempt": null, "pid": 1737}
+PHASE_END execute:longest_run 0.048
+EVAL longest_run 4 5
+PHASE_START {"phase": "generate:overlap_count", "budget_seconds": 600, "started_unix": 1793873943.9772615, "attempt": null, "pid": 1737}
+PHASE_END generate:overlap_count 34.416
+PHASE_START {"phase": "execute:overlap_count", "budget_seconds": 60, "started_unix": 1793873978.3930488, "attempt": null, "pid": 1737}
+PHASE_END execute:overlap_count 0.04
+EVAL overlap_count 2 5
+PHASE_START {"phase": "generate:sum_abs", "budget_seconds": 600, "started_unix": 1793873978.4360907, "attempt": null, "pid": 1737}
+PHASE_END generate:sum_abs 11.498
+PHASE_START {"phase": "execute:sum_abs", "budget_seconds": 60, "started_unix": 1793873989.933882, "attempt": null, "pid": 1737}
+PHASE_END execute:sum_abs 0.041
+EVAL sum_abs 5 5
+PHASE_START {"phase": "generate:palindrome", "budget_seconds": 600, "started_unix": 1793873989.9768188, "attempt": null, "pid": 1737}
+PHASE_END generate:palindrome 6.371
+PHASE_START {"phase": "execute:palindrome", "budget_seconds": 60, "started_unix": 1793873996.348258, "attempt": null, "pid": 1737}
+PHASE_END execute:palindrome 0.04
+EVAL palindrome 6 6
+PHASE_START {"phase": "generate:binary_search", "budget_seconds": 600, "started_unix": 1793873996.3900547, "attempt": null, "pid": 1737}
+PHASE_END generate:binary_search 11.24
+PHASE_START {"phase": "execute:binary_search", "budget_seconds": 60, "started_unix": 1793874007.6303015, "attempt": null, "pid": 1737}
+PHASE_END execute:binary_search 0.042
+EVAL binary_search 5 5
+PHASE_START {"phase": "generate:prefix_sums", "budget_seconds": 600, "started_unix": 1793874030.0117412, "attempt": null, "pid": 1737}
+PHASE_END generate:prefix_sums 11.131
+PHASE_START {"phase": "execute:prefix_sums", "budget_seconds": 60, "started_unix": 1793874041.1426585, "attempt": null, "pid": 1737}
+PHASE_END execute:prefix_sums 0.041
+EVAL prefix_sums 2 5
+PHASE_START {"phase": "generate:rotate_right", "budget_seconds": 600, "started_unix": 1793874041.185309, "attempt": null, "pid": 1737}
+PHASE_END generate:rotate_right 14.339
+PHASE_START {"phase": "execute:rotate_right", "budget_seconds": 60, "started_unix": 1793874055.5240202, "attempt": null, "pid": 1737}
+PHASE_END execute:rotate_right 0.042
+EVAL rotate_right 3 5
+PHASE_START {"phase": "generate:longest_run", "budget_seconds": 600, "started_unix": 1793874055.5680826, "attempt": null, "pid": 1737}
+PHASE_END generate:longest_run 34.893
+PHASE_START {"phase": "execute:longest_run", "budget_seconds": 60, "started_unix": 1793874090.4617057, "attempt": null, "pid": 1737}
+PHASE_END execute:longest_run 0.044
+EVAL longest_run 4 5
+PHASE_START {"phase": "generate:overlap_count", "budget_seconds": 600, "started_unix": 1793874090.5083768, "attempt": null, "pid": 1737}
+PHASE_END generate:overlap_count 24.718
+PHASE_START {"phase": "execute:overlap_count", "budget_seconds": 60, "started_unix": 1793874115.2269456, "attempt": null, "pid": 1737}
+PHASE_END execute:overlap_count 0.04
+EVAL overlap_count 2 5
+PHASE_START {"phase": "generate:sum_abs", "budget_seconds": 600, "started_unix": 1793874115.268723, "attempt": null, "pid": 1737}
+PHASE_END generate:sum_abs 11.318
+PHASE_START {"phase": "execute:sum_abs", "budget_seconds": 60, "started_unix": 1793874126.586991, "attempt": null, "pid": 1737}
+PHASE_END execute:sum_abs 0.043
+EVAL sum_abs 5 5
+PHASE_START {"phase": "generate:palindrome", "budget_seconds": 600, "started_unix": 1793874126.632219, "attempt": null, "pid": 1737}
+PHASE_END generate:palindrome 5.938
+PHASE_START {"phase": "execute:palindrome", "budget_seconds": 60, "started_unix": 1793874132.5703993, "attempt": null, "pid": 1737}
+PHASE_END execute:palindrome 0.037
+EVAL palindrome 6 6
+PHASE_START {"phase": "generate:binary_search", "budget_seconds": 600, "started_unix": 1793874132.6088586, "attempt": null, "pid": 1737}
+PHASE_END generate:binary_search 16.323
+PHASE_START {"phase": "execute:binary_search", "budget_seconds": 60, "started_unix": 1793874148.931574, "attempt": null, "pid": 1737}
+PHASE_END execute:binary_search 0.044
+EVAL binary_search 5 5
+TRIAL009 rejected_on_screen No strict gain with complete case retention

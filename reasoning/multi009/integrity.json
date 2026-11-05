@@ -1,0 +1,200 @@
+{
+  "preserved_checkpoints_and_upstream": {
+    "rsi100/checkpoints/best.pt": true,
+    "mentor/checkpoints/negative_002_recovered.pt": true,
+    "upstream/model.safetensors-00001-of-00001.safetensors": true
+  },
+  "frozen_file_checks": {
+    "benchmarks/reasoning_20261105/frozen.json": {
+      "benchmarks/reasoning_20261105/PROTOCOL.md": true,
+      "benchmarks/reasoning_20261105/build_data.py": true,
+      "benchmarks/reasoning_20261105/stdio_judge.py": true,
+      "benchmarks/reasoning_20261105/evaluate.py": true,
+      "benchmarks/reasoning_20261105/prompts.json": true,
+      "benchmarks/reasoning_20261105/oracles.json": true,
+      "benchmarks/reasoning_20261105/selected_ids.json": true,
+      "benchmarks/reasoning_20261105/sources.json": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/__init__.py": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/instructions_registry.py": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/instructions_util.py": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/instructions.py": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/evaluation_lib.py": true,
+      "reasoning/runtime_helpers.py": true,
+      "code_rsi/runtime.py": true,
+      "v2_adaptation/native_runtime.py": true,
+      "modeling_sensenova_loop.py": true
+    },
+    "reasoning/multi008/frozen.json": {
+      "reasoning/multi008/PROTOCOL.md": true,
+      "reasoning/multi008/study008.py": true,
+      "reasoning/multi008/validate008.py": true,
+      "reasoning/multi008/inputs.json": true,
+      "reasoning/runtime_helpers.py": true,
+      "rsi100/data.json": true,
+      "rsi100/engine.py": true,
+      "rsi100/policy.py": true,
+      "code_rsi/runtime.py": true,
+      "local_cpu/sandbox.py": true,
+      "v2_adaptation/native_runtime.py": true,
+      "lab_rsi/common.py": true,
+      "upstream/tokenizer_config.json": true,
+      "rsi100/checkpoints/best.pt": true
+    },
+    "reasoning/multi009/frozen.json": {
+      "reasoning/multi009/PROTOCOL.md": true,
+      "reasoning/multi009/study009.py": true,
+      "reasoning/multi009/validate009.py": true,
+      "reasoning/multi008/inputs.json": true,
+      "reasoning/multi008/trial_008.json": true,
+      "reasoning/runtime_helpers.py": true,
+      "reasoning/cycle2/development_original.json": true,
+      "reasoning/cycle2/trial_006_parent_full.json": true,
+      "reasoning/multi009/initial_preregistration.json": true,
+      "rsi100/data.json": true,
+      "rsi100/engine.py": true,
+      "rsi100/policy.py": true,
+      "code_rsi/runtime.py": true,
+      "v2_adaptation/native_runtime.py": true,
+      "local_cpu/sandbox.py": true,
+      "rsi100/checkpoints/best.pt": true
+    }
+  },
+  "artifacts": {
+    "reasoning/multi008/checkpoints/baseline_norms.pt": {
+      "bytes": 113519,
+      "sha256": "8e671882b077c42a05de41e77a27c14299ebeaa63791155a98390ee127a88bdc",
+      "git_blob": "04f6e366b5e927ca618d7a20442823bd61eabc89",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi008/checkpoints/trial_008_inverse_control.pt": {
+      "bytes": 114497,
+      "sha256": "79511be72a69dfc2e1036c519bfa466a6eea93a153d97d745ad000463e90036a",
+      "git_blob": "5fbb284cf47f66430caadfffba3e0c1f69b1d3c3",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi008/checkpoints/trial_008_target.pt": {
+      "bytes": 113947,
+      "sha256": "034a908697864b8a00a526409b5adeec9a8b2f85181676066a0a1d6d1edb8002",
+      "git_blob": "496dc2b726828e8e5a75b33166937fa49631e3ad",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi008/collect_original.pt": {
+      "bytes": 4093095,
+      "sha256": "c5dd86294464a109aaec36bb2c7ccf9e17447e8465b4ce7b27f40904999c4a8e",
+      "git_blob": "a5c16ce1869d50f0849787d5338d708307e221b1",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi008/collect_parent.pt": {
+      "bytes": 5667315,
+      "sha256": "9debeb847ef50877f3828a2c2604665481cd3c0a54b05811db94b0219677dd88",
+      "git_blob": "f3e8bef9c4935b5a239dabf80f3714e15b5841ce",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi008/directions_008.pt": {
+      "bytes": 633083,
+      "sha256": "8fae5217ccaa164bf736299a219c0bcd3253de1ed1fa07588e1c889fc7a754dd",
+      "git_blob": "890400ded77d9a9e7c4e743c7448eea89abae369",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/checkpoints/trial_009_inverse_control_layer_05.pt": {
+      "bytes": 7342139,
+      "sha256": "8f2023a36b6584bda00763d07b528366a4e3346435b4df6d5fd30862420779d4",
+      "git_blob": "b7a0ed4e3e3a5ecf7d8c75c602f86cc07f76125b",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/checkpoints/trial_009_inverse_control_layer_13.pt": {
+      "bytes": 7342139,
+      "sha256": "d93cbebab7e9e7c774ea3711f960cc053c338267248078c154a57794f0aef1e1",
+      "git_blob": "c8813f204618a9481c6e51e2bab2c4d61813566e",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/checkpoints/trial_009_inverse_control_layer_25.pt": {
+      "bytes": 7342139,
+      "sha256": "0e0521baee33376466e16bf91049340062489cb275b50b8213e9e37e7dca7b65",
+      "git_blob": "33f5cfdff4ebeaac336bc5669125179785dd07b4",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/checkpoints/trial_009_inverse_control_layer_31.pt": {
+      "bytes": 7342139,
+      "sha256": "3df6b7ae05201bda35e519d0226ae6c29415dd14de3a5e1fc5d549a79274500e",
+      "git_blob": "b297e4a60d60e24a10ecc0ca21da3cb8d500bfa0",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/checkpoints/trial_009_target_layer_05.pt": {
+      "bytes": 7342076,
+      "sha256": "541ab2249128104c60b0819e161c6630ed62bb86200696a594d42dd179d0ab82",
+      "git_blob": "4e57e284747e019caaf22824e6b4f21ee94abe0a",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/checkpoints/trial_009_target_layer_13.pt": {
+      "bytes": 7342076,
+      "sha256": "da2a8962c397481ce7addc4e3abb6bf29ea8b443438e01b89e7d0fe5a007237f",
+      "git_blob": "1212737ba36ca6a07c3d2200de848bc92b243dce",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/checkpoints/trial_009_target_layer_25.pt": {
+      "bytes": 7342076,
+      "sha256": "444a91be41c039816679a46393ec817460c0b0c3ef4c46af8c7c8655c9e64c35",
+      "git_blob": "60ce5fd0962c76e6800f3577f006a6a6def960c2",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/checkpoints/trial_009_target_layer_31.pt": {
+      "bytes": 7342076,
+      "sha256": "7d0670ede1dfe3f153d3af6b4237e61e2269900418da10e3d3c5b9463b4ab012",
+      "git_blob": "98eff2ec27745f81ee5149a4950103a7836f8707",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/collect_original_layer_05.pt": {
+      "bytes": 4221923,
+      "sha256": "1e5bc2d5a0fc7ea847c42638b64f6dc08010f989065561bd73bb92b46a5c7582",
+      "git_blob": "7b3faa48771bd149566008158e27752aa014d686",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/collect_original_layer_13.pt": {
+      "bytes": 4221923,
+      "sha256": "58cd2f45959e0dc41de1d8303ff93bcadad61c2834b718743b005fc9e03352ec",
+      "git_blob": "1d9aefa11be9c686abca5860220142f4fa7af173",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/collect_original_layer_25.pt": {
+      "bytes": 4221923,
+      "sha256": "1e919b6508061c81348de54581e56b5eea92fbbc861c21cdfafbd5a68f81867e",
+      "git_blob": "4a76235fa42ce1295f4503681ff3857f1b798be4",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/collect_original_layer_31.pt": {
+      "bytes": 4221923,
+      "sha256": "4b0c8578c81b42df132b360874491128b51e6025f1fcd0edcc2a1496a2c8b095",
+      "git_blob": "205d66c8624e2672b271ee130114f548c68bdd28",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/collect_parent_layer_05.pt": {
+      "bytes": 4221797,
+      "sha256": "83b5565e0702f0d93b82d998ce200b43ef85424b6d91d72ba27c8e02c34514c6",
+      "git_blob": "941747ccf448733d272f21be5ef12d072ee6aa8c",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/collect_parent_layer_13.pt": {
+      "bytes": 4221797,
+      "sha256": "49e9d7846d99120fb03d5176cbaf024818b3c3cf84231fa6034186c2b2418fa4",
+      "git_blob": "7063a1ae999195611c62c8b5e7cfd5336c5f7265",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/collect_parent_layer_25.pt": {
+      "bytes": 4221797,
+      "sha256": "96baff10033ca761f45738de98c6b0d55e2677d0e374b562d34e207972e2a110",
+      "git_blob": "a77f9e5aeb6960b12ec69aaa8bcbc136dcb21f71",
+      "safe_tensor_load": true
+    },
+    "reasoning/multi009/collect_parent_layer_31.pt": {
+      "bytes": 4221797,
+      "sha256": "19cf2ce8de9bddb43d8cd5c264ef028572897aabc0275c6bcf2ddfa7c1349826",
+      "git_blob": "b93761081324de5df94ff1e29ad54bc0488df943",
+      "safe_tensor_load": true
+    }
+  },
+  "tensor_artifact_count": 22,
+  "active_model_processes": [],
+  "checked_unix": 1793874963.6447651,
+  "selected_parent_unchanged": true
+}

@@ -1,5 +1,5 @@
 {
-  "status": "collected_parent",
+  "status": "complete_rejected_parent_retained",
   "hypothesis": 9,
   "model_process_active": false,
   "checkpoint_promoted": false,
@@ -7,5 +7,8 @@
   "stacked_on_008": false,
   "backward_passes": 0,
   "fresh_validation_consumed": false,
-  "updated_unix": 1793873653.506833
+  "updated_unix": 1793874963.6453612,
+  "process_continues_in_background": false,
+  "selected": "parent",
+  "technical_tests_passed": 46
 }

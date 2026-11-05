@@ -1,0 +1,40 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:  13%|█▎        | 85/675 [00:00<00:00, 845.85it/s]
+Loading weights:  25%|██▌       | 170/675 [00:00<00:00, 691.26it/s]
+Loading weights:  36%|███▌      | 241/675 [00:00<00:00, 614.60it/s]
+Loading weights:  59%|█████▉    | 397/675 [00:00<00:00, 928.24it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1244.97it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1793872437.9549813, "attempt": null, "pid": 685}
+PHASE_END checkpoint_load:best.pt 0.007
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+PREFILL_MOMENT parent ordinary_00 28
+PREFILL_MOMENT parent ordinary_01 26
+PREFILL_MOMENT parent ordinary_02 28
+PREFILL_MOMENT parent ordinary_03 19
+PREFILL_MOMENT parent ordinary_04 28
+PREFILL_MOMENT parent ordinary_05 21
+PREFILL_MOMENT parent ordinary_06 22
+PREFILL_MOMENT parent ordinary_07 23
+PREFILL_MOMENT parent ordinary_08 22
+PREFILL_MOMENT parent ordinary_09 22
+PREFILL_MOMENT parent ordinary_10 27
+PREFILL_MOMENT parent ordinary_11 22
+PREFILL_MOMENT parent prefix_sums 58
+PREFILL_MOMENT parent rotate_right 61
+PREFILL_MOMENT parent longest_run 62
+PREFILL_MOMENT parent overlap_count 59
+PREFILL_MOMENT parent sum_abs 59
+PREFILL_MOMENT parent palindrome 56
+PREFILL_MOMENT parent binary_search 61
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+NEW_DECODING_MOMENTS prefix_sums 32
+NEW_DECODING_MOMENTS rotate_right 43
+NEW_DECODING_MOMENTS longest_run 98
+NEW_DECODING_MOMENTS overlap_count 72
+NEW_DECODING_MOMENTS sum_abs 29
+NEW_DECODING_MOMENTS palindrome 14
+NEW_DECODING_MOMENTS binary_search 59

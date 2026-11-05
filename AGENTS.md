@@ -167,3 +167,30 @@
 - `liquid_sense_chat.py --thinking` is optional native inference configuration,
   not learned identity or a validated weight improvement. Keep branding out
   of raw tests and distinguish unfinished thought from a delivered answer.
+
+## Latest distributed-weight studies 008/009 — complete
+
+- Current branch: codex/liquid-sense-multi-tensor-20261105. Read
+  MULTI_TENSOR_REPORT.md and reasoning/multi008/status.json plus
+  reasoning/multi009/status.json, summary.json, selection.json and protocols.
+- Both studies are complete and rejected on their seven-task screen. 008
+  changed 32281 values in 40 gain tensors across 20 layers. 009 changed 4994722
+  values in four down_proj matrices at physical layers 5,13,25,31. Target and
+  inverse controls all remained 27/36 cases and 3/7 complete tasks, zero gains
+  or losses. Do not repeat them or describe internal alignment as intelligence.
+- Both start from the unchanged parent, not from each other. 008 requires
+  restoring ALL saved norm vectors; the legacy parent loader does not do that.
+  009 likewise restores ALL four dense matrices, including layers absent from
+  the legacy best.pt overlay. Exact matrices and activation samples are saved.
+- 009's targeting correction was committed before constructing/evaluating
+  any 009 candidate, based only on the prior original/parent comparison;
+  initial_preregistration.json preserves its preceding source hashes. No golds
+  or evaluation cases changed; original reference forwards used enunciados only.
+- Keep best.pt parent hash 46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
+  Full/general/independent gates were not run for these candidates because
+  neither passed screening. RSI100 validation 8 remains unused in this cycle.
+- 46 technical tests passed; 22 tensor artifacts are audited. All workers end
+  before the turn ends. Automatic RSI100 remains paused after 31 rejections.
+- A future study needs a new hypothesis/registration and actual decoding
+  states at the erroneous decision; do not invent missing full-precision
+  activations or silently reuse an observed set as a new independent test.

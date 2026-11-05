@@ -1,0 +1,27 @@
+{
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "baseline_hashes": {
+    "5": "60f0a77529c775c10da70e76c08a9518918abbae9b264b9d5d6130dff55520e7",
+    "13": "09751bd4c7ef156fd8c5cf4e3be0d6250c7cccc14cf30883fbb28d213fec6132",
+    "25": "412058832c188e22c34c358c8e59601fbc9a945b7ac7fb8ed5b4712302b237a8",
+    "31": "1866748ce87d32cfee34891d2fa393fdfeee77447935f6a31d036e4b80332a48"
+  },
+  "files": {
+    "5": {
+      "path": "reasoning/multi009/checkpoints/trial_009_inverse_control_layer_05.pt",
+      "sha256": "8f2023a36b6584bda00763d07b528366a4e3346435b4df6d5fd30862420779d4"
+    },
+    "13": {
+      "path": "reasoning/multi009/checkpoints/trial_009_inverse_control_layer_13.pt",
+      "sha256": "d93cbebab7e9e7c774ea3711f960cc053c338267248078c154a57794f0aef1e1"
+    },
+    "25": {
+      "path": "reasoning/multi009/checkpoints/trial_009_inverse_control_layer_25.pt",
+      "sha256": "0e0521baee33376466e16bf91049340062489cb275b50b8213e9e37e7dca7b65"
+    },
+    "31": {
+      "path": "reasoning/multi009/checkpoints/trial_009_inverse_control_layer_31.pt",
+      "sha256": "3df6b7ae05201bda35e519d0226ae6c29415dd14de3a5e1fc5d549a79274500e"
+    }
+  }
+}

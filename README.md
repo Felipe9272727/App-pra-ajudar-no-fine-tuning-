@@ -5,7 +5,20 @@ programação e raciocínio por meio de alterações verificáveis nos pesos.
 A base pré-treinada é **Qwen3.5-0.8B**; o híbrido com componentes inspirados em
 **SenseNova Loop/mHC e Liquid AI** carrega aproximadamente **1,02B parâmetros**.
 
-## Pesquisa mais recente — diagnóstico e edições 006/007
+## Pesquisa mais recente — alterações distribuídas 008/009
+
+[Relatório completo](MULTI_TENSOR_REPORT.md),
+[comparações](reasoning/multi009/summary.json) e
+[integridade](reasoning/multi009/integrity.json).
+
+Foram testadas duas edições coordenadas, sem gradientes nem soluções nos inputs:
+32.281 valores em40 tensores de 20 camadas, e 4.994.722 valores em quatro
+matrizes MLP. Ambas ficaram nos mesmos 27/36 casos e 3/7 tarefas da triagem
+do híbrido preservado. Os controles inversos também não acrescentaram acertos.
+Nenhuma candidata foi promovida; pesos, ativações e relatórios estão salvos.
+Alterar muitos pesos não demonstrou ganho de capacidade nesta avaliação.
+
+## Pesquisa anterior — diagnóstico e edições 006/007
 
 [Relatório e comparações](ERROR_ANALYSIS_REPORT.md),
 [estado retomável](reasoning/cycle2/status.json) e

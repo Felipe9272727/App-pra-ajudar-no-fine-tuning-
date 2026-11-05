@@ -1,0 +1,121 @@
+{
+  "layers": {
+    "5": {
+      "preservation_rank": 191,
+      "residual_ratio": 0.5625376105308533,
+      "ridge": 0.037080156803131106,
+      "unclipped_relative_norm": 0.009479102678596973,
+      "norm_cap_fraction": 0.21099043525668668,
+      "ideal_relative_norm": 0.0020000373478978872,
+      "code_fit_relative_residual": 0.42096394300460815,
+      "ideal_protected_output_norm_max": 2.276636450915248e-06,
+      "preserved_states": 204,
+      "target_states": 24,
+      "target_task_ids": [
+        "longest_run",
+        "overlap_count"
+      ],
+      "variants": {
+        "inverse_control": {
+          "actual_relative_norm": 0.001999925822019577,
+          "changed_values": 1294495,
+          "rounded_protected_output_norm_max": 0.0016206128057092428
+        },
+        "target": {
+          "actual_relative_norm": 0.0020000701770186424,
+          "changed_values": 1294428,
+          "rounded_protected_output_norm_max": 0.0016185527201741934
+        }
+      }
+    },
+    "13": {
+      "preservation_rank": 191,
+      "residual_ratio": 0.5076731443405151,
+      "ridge": 0.02095110893249512,
+      "unclipped_relative_norm": 0.009645869955420494,
+      "norm_cap_fraction": 0.20734262531458872,
+      "ideal_relative_norm": 0.00200002733618021,
+      "code_fit_relative_residual": 0.3742862641811371,
+      "ideal_protected_output_norm_max": 2.7982023311778903e-06,
+      "preserved_states": 204,
+      "target_states": 24,
+      "target_task_ids": [
+        "longest_run",
+        "overlap_count"
+      ],
+      "variants": {
+        "inverse_control": {
+          "actual_relative_norm": 0.0020006485283374786,
+          "changed_values": 1313108,
+          "rounded_protected_output_norm_max": 0.0011850943556055427
+        },
+        "target": {
+          "actual_relative_norm": 0.0020004743710160255,
+          "changed_values": 1313046,
+          "rounded_protected_output_norm_max": 0.0011886060237884521
+        }
+      }
+    },
+    "25": {
+      "preservation_rank": 191,
+      "residual_ratio": 0.5576973557472229,
+      "ridge": 0.12875561714172362,
+      "unclipped_relative_norm": 0.0050886510871350765,
+      "norm_cap_fraction": 0.3930314666407999,
+      "ideal_relative_norm": 0.0019999854266643524,
+      "code_fit_relative_residual": 0.38397517800331116,
+      "ideal_protected_output_norm_max": 2.3868021798989503e-06,
+      "preserved_states": 204,
+      "target_states": 24,
+      "target_task_ids": [
+        "longest_run",
+        "overlap_count"
+      ],
+      "variants": {
+        "inverse_control": {
+          "actual_relative_norm": 0.001993445912376046,
+          "changed_values": 1270762,
+          "rounded_protected_output_norm_max": 0.0036259691696614027
+        },
+        "target": {
+          "actual_relative_norm": 0.00199333718046546,
+          "changed_values": 1270785,
+          "rounded_protected_output_norm_max": 0.0036135013215243816
+        }
+      }
+    },
+    "31": {
+      "preservation_rank": 191,
+      "residual_ratio": 0.30740463733673096,
+      "ridge": 0.31401634216308594,
+      "unclipped_relative_norm": 0.011134856380522251,
+      "norm_cap_fraction": 0.17961614695799025,
+      "ideal_relative_norm": 0.001999983098357916,
+      "code_fit_relative_residual": 0.35803869366645813,
+      "ideal_protected_output_norm_max": 2.8601736630662344e-05,
+      "preserved_states": 204,
+      "target_states": 24,
+      "target_task_ids": [
+        "longest_run",
+        "overlap_count"
+      ],
+      "variants": {
+        "inverse_control": {
+          "actual_relative_norm": 0.001995248021557927,
+          "changed_values": 1116598,
+          "rounded_protected_output_norm_max": 0.010593635030090809
+        },
+        "target": {
+          "actual_relative_norm": 0.001994519028812647,
+          "changed_values": 1116463,
+          "rounded_protected_output_norm_max": 0.010718018747866154
+        }
+      }
+    }
+  },
+  "changed_values": {
+    "target": 4994722,
+    "inverse_control": 4994963
+  },
+  "aborted": false
+}
