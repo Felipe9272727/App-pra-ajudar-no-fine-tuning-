@@ -1,0 +1,19 @@
+{
+  "candidate_trials": [],
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "patch_sha256": "3213cd6dec33bfb07d27e413631aa17190b89d045cf7c75358994edf1b4ab354",
+  "validation_ids": [
+    "r100_sum_cubes",
+    "r100_count_negative",
+    "r100_word_prefix",
+    "r100_adjacent_changes",
+    "r100_absolute_differences",
+    "r100_repeat_words",
+    "r100_closed_range_filter",
+    "r100_reverse_each_word"
+  ],
+  "data_sha256": "6180d41e9ca8792ced0cca0a307e4360ce3c9929e72c129bd148e1fb35e6543d",
+  "previous_validation_outputs_observed": false,
+  "protocol_sha256": "127e61182ba8ff73468d2922d8edaa5da74358bb8226b4b13ef6eed6d91ae0ab",
+  "validation_source_sha256": "bb44366b45521bf867459d48aa58ac087ff6f3787b6511d172b8b7eafe307d20"
+}
