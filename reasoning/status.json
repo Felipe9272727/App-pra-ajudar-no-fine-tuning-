@@ -1,6 +1,6 @@
 {
-  "status": "weight_trials_complete_public_benchmarks_frozen",
-  "model_process_active": false,
+  "status": "public_benchmarks_running",
+  "model_process_active": true,
   "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
   "hypotheses_budget": [
     3,
@@ -8,11 +8,11 @@
     5
   ],
   "backward_passes": 0,
-  "benchmark_results_observed": false,
+  "benchmark_results_observed": true,
   "checkpoint_promoted": false,
   "diagnostic_complete": true,
   "trial003": "rejected_no_screen_gain",
-  "updated_unix": 1793841743.4019008,
+  "updated_unix": 1793841841.153308,
   "trial004": "rejected_anchor_nll_regression",
   "trial005": "rejected_no_screen_gain",
   "selected": "parent",
