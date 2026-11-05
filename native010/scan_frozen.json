@@ -1,0 +1,12 @@
+{
+  "files": {
+    "native010/audit_all.py": "c8f53a2d020971940dc9cb13f9c4baab3cd6c1232344f2ec7a9424936ec68234",
+    "native010/SCAN_PROTOCOL.md": "709e466a642ca86fbee369e0d8a7bb8209c1958569d9524488039c0e3e2d1a60",
+    "reasoning/runtime_helpers.py": "3decc031b87f7fe5bf6feca52dc3d6d2ba82c60eed9d21341e0977f028836238",
+    "rsi100/checkpoints/best.pt": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+    "modeling_sensenova_loop.py": "26e11d3522aa730c0ba031340ce42632bc2834da8cc0b6804006bb207d979a5b",
+    "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8"
+  },
+  "source_scanned_before_candidate_changes": true
+}
