@@ -1,0 +1,93 @@
+{
+  "variant": "candidate",
+  "status": "running",
+  "rows": [
+    {
+      "id": "v4_interval_union",
+      "group": "far",
+      "output": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort(key=lambda x: x[0])\n    total = intervals[0][1]\n    for i in range(1, len(intervals)):\n        if intervals[i][0] > intervals[i-1][1]:\n            total += intervals[i][1] - intervals[i-1][1]\n    return total",
+      "new_tokens": 91,
+      "hit_limit": false,
+      "seconds": 28.74926837299995,
+      "thinking": false,
+      "passed": 2,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "code": "def solve(intervals):\n    if not intervals:\n        return 0.0\n    intervals.sort(key=lambda x: x[0])\n    total = intervals[0][1]\n    for i in range(1, len(intervals)):\n        if intervals[i][0] > intervals[i-1][1]:\n            total += intervals[i][1] - intervals[i-1][1]\n    return total"
+    },
+    {
+      "id": "v4_reachable",
+      "group": "far",
+      "output": "def solve(adj, start, goal):\n    visited = set()\n    queue = [start]\n    visited.add(start)\n    \n    while queue:\n        node = queue.pop(0)\n        \n        if node == goal:\n            return True\n        \n        for neighbor in adj[node]:\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n    \n    return False",
+      "new_tokens": 90,
+      "hit_limit": false,
+      "seconds": 28.401874517999886,
+      "thinking": false,
+      "passed": 8,
+      "total": 8,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(adj, start, goal):\n    visited = set()\n    queue = [start]\n    visited.add(start)\n    \n    while queue:\n        node = queue.pop(0)\n        \n        if node == goal:\n            return True\n        \n        for neighbor in adj[node]:\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n    \n    return False"
+    }
+  ],
+  "controls": [],
+  "repeats": [],
+  "frozen_sha256": "bffac8f483863225e85774320a5301b26b70db9ab096f78de287d51fdbffdb46",
+  "backward_passes": 0,
+  "answers_in_generation_prompts": false,
+  "model": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    }
+  },
+  "runtime": {
+    "torch": "2.15.0+cpu",
+    "threads": 4,
+    "cpu_quota": "200000 100000"
+  }
+}

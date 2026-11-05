@@ -1,5 +1,5 @@
 {
-  "status": "development_passed_independent_validation_running",
+  "status": "independent_regression_detected_finishing_locked_audit",
   "trial": 2,
   "controller": "assistant",
   "legacy_search_paused": true,
@@ -9,10 +9,12 @@
   "checkpoint_promoted": false,
   "backward_passes": 0,
   "final_test_evaluated": false,
-  "updated_unix": 1793835638.6211715,
+  "updated_unix": 1793836818.2262554,
   "checkpoint_saved": "mentor/checkpoints/negative_002_recovered.pt",
   "checkpoint_sha256": "8fd291019b20f7d327e775c05a30f5b991395718040e4ad2fe52ed986ff748ef",
   "development_gate": "mentor/recovery_004/development_gate.json",
   "independent_validation": "mentor/validation_004/",
-  "process_continues_between_turns_guaranteed": false
+  "process_continues_between_turns_guaranteed": false,
+  "provisional_selected_checkpoint": "rsi100/checkpoints/best.pt",
+  "provisional_reason": "Candidate interval-union 2/8 versus parent 4/8; finish all tasks and stable repeat before final report."
 }
