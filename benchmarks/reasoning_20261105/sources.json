@@ -1,0 +1,40 @@
+{
+  "lcb": {
+    "url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "sha256": "bb4c364f71921c4495a6ad15abe1a927350b720009f4933e2e71f8af0f6fd1f5"
+  },
+  "gsm8k": {
+    "url": "https://github.com/openai/grade-school-math",
+    "revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+    "file": "grade_school_math/data/test.jsonl",
+    "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14"
+  },
+  "ifeval": {
+    "url": "https://github.com/google-research/google-research/tree/master/instruction_following_eval",
+    "revision": "e6890f85757dd84e27ca6df2dd30651dafad28e0"
+  },
+  "vendor_usage": [
+    {
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+      "benchmarks": [
+        "LiveCodeBench v6",
+        "IFEval"
+      ]
+    },
+    {
+      "url": "https://www.liquid.ai/blog/lfm2-5-1-2b-thinking-on-device-reasoning-under-1gb",
+      "benchmarks": [
+        "GSM8K"
+      ]
+    }
+  ],
+  "seed": "2026110501",
+  "sizes": {
+    "lcb": 8,
+    "gsm8k": 16,
+    "ifeval": 12
+  },
+  "selection_before_outputs": true
+}

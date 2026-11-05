@@ -16,3 +16,5 @@ local_cpu/pending_publish.json
 local_cpu/publish_ack.json
 local_cpu/controller_failure.json
 local_cpu/runtime.log
+benchmarks/reasoning_20261105/lcb_v6.jsonl
+benchmarks/reasoning_20261105/gsm8k_test.jsonl
