@@ -1,0 +1,17 @@
+{
+  "name": "Delta4B_pp",
+  "formula": "100 * (fully_solved_problems_liquid / problem_count - fully_solved_problems_4b / problem_count)",
+  "direction": "maximize",
+  "success": "strictly positive lower bound of task-paired 95% bootstrap CI and one-sided exact paired p < 0.05",
+  "minimum_fresh_problem_pairs": 100,
+  "reference_model": "Qwen/Qwen3.5-4B",
+  "reference_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "primary_public_dataset_family": "LiveCodeBench, exact new subset must be frozen before outputs",
+  "existing_16_problem_score_is_development_only": true,
+  "reference_4b_evaluated": false,
+  "general_and_language_retention_required": true,
+  "same_problems_context_budget_precision_sampling_and_judge_required": true,
+  "partial_case_score_is_secondary": true,
+  "internal_loop_compute_and_resource_use_reported_separately": true,
+  "general_intelligence_claim": false
+}

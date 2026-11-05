@@ -1,0 +1,53 @@
+{
+  "status": "complete",
+  "id": "rotate_right",
+  "group": "error",
+  "output": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]",
+  "new_tokens": 43,
+  "hit_limit": false,
+  "seconds": 47.103524822996405,
+  "thinking": false,
+  "passed": 3,
+  "total": 5,
+  "all_passed": false,
+  "category": "WrongReturnValue",
+  "error_types": [
+    "WrongReturnValue"
+  ],
+  "case_passed": [
+    true,
+    false,
+    true,
+    true,
+    false
+  ],
+  "code": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]",
+  "actual_forward_calls": 43,
+  "parameter_tensors_total": 699,
+  "observed_parameter_tensors": 546,
+  "unobserved_parameter_tensors": 153,
+  "profiled_call_slots_per_token": 813,
+  "profile_shape": [
+    43,
+    813,
+    12
+  ],
+  "recorded_nonfinite_activation_values": 0.0,
+  "selected_snapshot_steps": [
+    21,
+    34,
+    42
+  ],
+  "suspected_point": {
+    "char_offset": 95,
+    "estimated_token_index": 34,
+    "marker": "xs[k:] + xs[:k]",
+    "only_a_suspected_error_span": true,
+    "actual_token_index": 34,
+    "actual_suspected_point_snapshot_present": true
+  },
+  "activations_sha256": "d625ed122c51ace4319e117efe601980a11fbb74373343d621d355a8dca2ab03",
+  "tensor_archive_bytes": 28068772,
+  "old_output_and_case_bits_identical": true,
+  "seconds_instrumented": 47.592553114998736
+}
