@@ -1,0 +1,101 @@
+{
+  "episodes": [
+    {
+      "id": "ordinary_00",
+      "kind": "ordinary",
+      "input": "Uma observação descreve o que foi visto; uma interpretação tenta explicar por que aconteceu. Uma revisão cuidadosa distingue as duas coisas."
+    },
+    {
+      "id": "ordinary_01",
+      "kind": "ordinary",
+      "input": "The reader paused at the end of the paragraph and compared its last sentence with the opening statement. The subject had remained the same."
+    },
+    {
+      "id": "ordinary_02",
+      "kind": "ordinary",
+      "input": "As pessoas organizaram os materiais antes da reunião. Depois, distribuíram as tarefas e anotaram o que ainda precisava de atenção."
+    },
+    {
+      "id": "ordinary_03",
+      "kind": "ordinary",
+      "input": "A clear description makes assumptions visible and gives another person enough context to understand the question being investigated."
+    },
+    {
+      "id": "ordinary_04",
+      "kind": "ordinary",
+      "input": "A manhã começou com nuvens baixas sobre a cidade. Ao longo do dia, a luz mudou e as ruas ficaram mais movimentadas."
+    },
+    {
+      "id": "ordinary_05",
+      "kind": "ordinary",
+      "input": "Several ideas can sound plausible at first. Careful observation helps distinguish a useful explanation from a convenient guess."
+    },
+    {
+      "id": "ordinary_06",
+      "kind": "ordinary",
+      "input": "Quem escreve para públicos diferentes precisa escolher palavras claras e explicar os termos que podem ser desconhecidos."
+    },
+    {
+      "id": "ordinary_07",
+      "kind": "ordinary",
+      "input": "The package arrived with a short note describing its contents. The recipient checked the label before putting it on the shelf."
+    },
+    {
+      "id": "ordinary_08",
+      "kind": "ordinary",
+      "input": "Um resultado inesperado pode revelar uma suposição esquecida. O registro do procedimento permite investigar o que ocorreu."
+    },
+    {
+      "id": "ordinary_09",
+      "kind": "ordinary",
+      "input": "The conversation returned to the original question after a brief digression. Each participant explained which evidence supported their view."
+    },
+    {
+      "id": "ordinary_10",
+      "kind": "ordinary",
+      "input": "A pequena oficina guardava ferramentas em caixas identificadas. Ao terminar o trabalho, todos conferiam se o espaço estava organizado."
+    },
+    {
+      "id": "ordinary_11",
+      "kind": "ordinary",
+      "input": "A reliable record preserves both successful attempts and failed ones, so later decisions can be checked against the original observations."
+    },
+    {
+      "id": "prefix_sums",
+      "kind": "coding_prompt",
+      "input": "Write Python 3 function solve(xs). Return a list containing the running sums of xs. Empty gives an empty list. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports."
+    },
+    {
+      "id": "rotate_right",
+      "kind": "coding_prompt",
+      "input": "Write Python 3 function solve(xs, k). Return a new list rotating xs right by nonnegative k places; handle empty xs. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports."
+    },
+    {
+      "id": "longest_run",
+      "kind": "coding_prompt",
+      "input": "Write Python 3 function solve(xs). Return the maximum length of a run of equal consecutive elements in xs, or 0 if empty. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports."
+    },
+    {
+      "id": "overlap_count",
+      "kind": "coding_prompt",
+      "input": "Write Python 3 function solve(s, sub). Return the number of overlapping occurrences of the nonempty substring sub in s. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports."
+    },
+    {
+      "id": "sum_abs",
+      "kind": "coding_prompt",
+      "input": "Write Python 3 function solve(xs). Return the sum of absolute values in the integer list xs; empty gives 0. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports."
+    },
+    {
+      "id": "palindrome",
+      "kind": "coding_prompt",
+      "input": "Write Python 3 function solve(s). Return whether string s reads the same forwards and backwards, case sensitive. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports."
+    },
+    {
+      "id": "binary_search",
+      "kind": "coding_prompt",
+      "input": "Write Python 3 function solve(xs, target). Given sorted distinct integers xs, return the index of target or -1 if absent. Return only the complete function, without explanations, examples or tests. Do not print. Do not use imports."
+    }
+  ],
+  "reference_programs_present": false,
+  "golds_present": false
+}
