@@ -1,0 +1,356 @@
+{
+  "variant": "liquid",
+  "status": "running",
+  "rows": [
+    {
+      "id": "lcb:abc396_a",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "ac9ce2accfc20b0dbfa22037238938acf02e9d2aed220416740b1e159d699898",
+      "output": "```python\nimport sys\n\ndef solve():\n    try:\n        line = sys.stdin.read().split()\n    except Exception:\n        return\n\n    if not line:\n        return\n\n    N = int(line[0])\n    A = [int(x) for x in line[1:]]\n\n    # Check for any triplet A[i] == A[i+1] == A[i+2]\n    for i in range(N - 2):\n        if A[i] == A[i+1] and A[i+1] == A[i+2]:\n            print(\"Yes\")\n            return\n\n    print(\"No\")\n\nif __name__ == \"__main__\":\n    solve()\n```\n",
+      "new_tokens": 156,
+      "hit_limit": false,
+      "seconds": 51.299509557999954,
+      "thinking": false,
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "passed": 16,
+      "total": 16,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "import sys\n\ndef solve():\n    try:\n        line = sys.stdin.read().split()\n    except Exception:\n        return\n\n    if not line:\n        return\n\n    N = int(line[0])\n    A = [int(x) for x in line[1:]]\n\n    # Check for any triplet A[i] == A[i+1] == A[i+2]\n    for i in range(N - 2):\n        if A[i] == A[i+1] and A[i+1] == A[i+2]:\n            print(\"Yes\")\n            return\n\n    print(\"No\")\n\nif __name__ == \"__main__\":\n    solve()"
+    },
+    {
+      "id": "lcb:abc387_b",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "d3f425a8855c56935ea653754ee5f8b0595e7fbedeb2812e35bdde06701d0e44",
+      "output": "import sys\nfrom collections import Counter\n\ndef solve():\n    try:\n        line = sys.stdin.read().strip()\n        if not line:\n            return\n        X = int(line)\n    except ValueError:\n        return\n\n    grid = [[i * j for j in range(9)] for i in range(9)]\n    counts = Counter(grid)\n    \n    # Find the sum of all values except X\n    total_not_X = sum(counts[v] for v in grid if v != X)\n    print(total_not_X)\n\nif __name__ == \"__main__\":\n    solve()\n```\n\n```python\nimport sys\nfrom collections import Counter\n\ndef solve():\n    try:\n        line = sys.stdin.read().strip()\n        if not line:\n            return\n        X = int(line)\n    except ValueError:\n        return\n\n    grid = [[i * j for j in range(9)] for i in range(9)]\n    counts = Counter(grid)\n    \n    # Find the sum of all values except X\n    total_not_X = sum(counts[v] for v in grid if v != X)\n    print(total_not_X)\n\nif __name__ == \"__main__\":\n    solve()\n```\n",
+      "new_tokens": 273,
+      "hit_limit": false,
+      "seconds": 91.56874944999981,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "WrongStdout",
+      "error_types": [
+        "WrongStdout"
+      ],
+      "code": ""
+    },
+    {
+      "id": "lcb:abc399_b",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "831985784fb557009623e85939ccc82de430459f3465a17e2639d0ab70e67690",
+      "output": "import sys\nfrom collections import defaultdict\n\ndef solve():\n    # Read all input from stdin\n    input_data = sys.stdin.read().split()\n    \n    if not input_data:\n        return\n\n    iterator = iter(input_data)\n    N = int(next(iterator))\n    \n    # Dictionary to store scores and their counts\n    scores = defaultdict(int)\n    \n    for _ in range(N):\n        score = int(next(iterator))\n        scores[score] += 1\n    \n    # Sort scores in descending order to determine ranks\n    sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)\n    \n    # Calculate ranks for each person\n    ranks = []\n    for score, count in sorted_scores:\n        rank = count + 1\n        ranks.append(rank)\n    \n    # Output the result\n    for r in ranks:\n        print(r)\n\nif __name__ == \"__main__\":\n    solve()",
+      "new_tokens": 204,
+      "hit_limit": false,
+      "seconds": 68.08743027299988,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "ValueError",
+      "detail": "UnsupportedName",
+      "code": "import sys\nfrom collections import defaultdict\n\ndef solve():\n    # Read all input from stdin\n    input_data = sys.stdin.read().split()\n    \n    if not input_data:\n        return\n\n    iterator = iter(input_data)\n    N = int(next(iterator))\n    \n    # Dictionary to store scores and their counts\n    scores = defaultdict(int)\n    \n    for _ in range(N):\n        score = int(next(iterator))\n        scores[score] += 1\n    \n    # Sort scores in descending order to determine ranks\n    sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)\n    \n    # Calculate ranks for each person\n    ranks = []\n    for score, count in sorted_scores:\n        rank = count + 1\n        ranks.append(rank)\n    \n    # Output the result\n    for r in ranks:\n        print(r)\n\nif __name__ == \"__main__\":\n    solve()"
+    },
+    {
+      "id": "lcb:abc391_a",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "0e54605f2ec8c3de833090c3b8342733356d16a0fda1452d9a6ff864d808ac19",
+      "output": "import sys\n\ndef main():\n    d = sys.stdin.readline().strip()\n    if not d:\n        return\n    directions = {\n        'N': 'N',\n        'E': 'E',\n        'W': 'W',\n        'S': 'S',\n        'NE': 'NE',\n        'NW': 'NW',\n        'SE': 'SE',\n        'SW': 'SW'\n    }\n    opposite = directions[d]\n    print(opposite)\n\nif __name__ == '__main__':\n    main()",
+      "new_tokens": 125,
+      "hit_limit": false,
+      "seconds": 42.40508818499984,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "WrongStdout",
+      "error_types": [
+        "WrongStdout"
+      ],
+      "code": "import sys\n\ndef main():\n    d = sys.stdin.readline().strip()\n    if not d:\n        return\n    directions = {\n        'N': 'N',\n        'E': 'E',\n        'W': 'W',\n        'S': 'S',\n        'NE': 'NE',\n        'NW': 'NW',\n        'SE': 'SE',\n        'SW': 'SW'\n    }\n    opposite = directions[d]\n    print(opposite)\n\nif __name__ == '__main__':\n    main()"
+    },
+    {
+      "id": "lcb:abc388_b",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "89873d488dd6b78dfbb74cf07213bffa4d27187a8664059c8eacbaf1592ec94c",
+      "output": "```python\nimport sys\nfrom collections import defaultdict\nfrom functools import reduce\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    idx = 0\n    N = int(input_data[idx])\n    D = int(input_data[idx + 1])\n    idx += 2\n    \n    # Map (T, L) to a list of tuples for easy iteration\n    T_list = []\n    for _ in range(N):\n        T_list.append((int(input_data[idx + 2 + _]), int(input_data[idx + 3 + _])))\n        idx += 4\n    \n    # Precompute weights for each k\n    # We need to find the maximum weight among all snakes for each k\n    # Since N is small (<= 100), we can iterate k from 1 to D\n    \n    max_weights = []\n    for k in range(1, D + 1):\n        current_max = 0\n        for (T, L) in T_list:\n            if T >= k:\n                current_max = max(current_max, T * L)\n        max_weights.append(current_max)\n    \n    # Output results\n    for w in max_weights:\n        print(w)\n\nsolve()\n```\n",
+      "new_tokens": 268,
+      "hit_limit": false,
+      "seconds": 86.66283246300009,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "ValueError",
+      "detail": "UnsupportedName",
+      "code": "import sys\nfrom collections import defaultdict\nfrom functools import reduce\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    idx = 0\n    N = int(input_data[idx])\n    D = int(input_data[idx + 1])\n    idx += 2\n    \n    # Map (T, L) to a list of tuples for easy iteration\n    T_list = []\n    for _ in range(N):\n        T_list.append((int(input_data[idx + 2 + _]), int(input_data[idx + 3 + _])))\n        idx += 4\n    \n    # Precompute weights for each k\n    # We need to find the maximum weight among all snakes for each k\n    # Since N is small (<= 100), we can iterate k from 1 to D\n    \n    max_weights = []\n    for k in range(1, D + 1):\n        current_max = 0\n        for (T, L) in T_list:\n            if T >= k:\n                current_max = max(current_max, T * L)\n        max_weights.append(current_max)\n    \n    # Output results\n    for w in max_weights:\n        print(w)\n\nsolve()"
+    },
+    {
+      "id": "lcb:abc387_a",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "fcd92c64120b238b8afc7e4ff0f716db3d750d6a7d553ad1284d1d6e0ba117e9",
+      "output": "import sys\n\ndef solve():\n    A, B = map(int, sys.stdin.read().split())\n    print(A + B)\n\nif __name__ == \"__main__\":\n    solve()",
+      "new_tokens": 43,
+      "hit_limit": false,
+      "seconds": 16.14010411399977,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "WrongStdout",
+      "error_types": [
+        "WrongStdout"
+      ],
+      "code": "import sys\n\ndef solve():\n    A, B = map(int, sys.stdin.read().split())\n    print(A + B)\n\nif __name__ == \"__main__\":\n    solve()"
+    }
+  ],
+  "frozen_sha256": "a4d4eebde3c1cc2618ca0775a4f63e22a8eca3255ff71947c0083e490309feb7",
+  "branding_in_benchmark": false,
+  "no_reference_answers_in_generation": true,
+  "backward_passes": 0,
+  "matched_protocol": {
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "cache": true,
+    "precision": "BF16",
+    "attention": "eager"
+  },
+  "model": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3",
+      "layer_visit_gains": {
+        "4": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "5": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "6": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "7": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "8": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "9": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "10": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "11": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "12": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "13": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "14": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "15": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "16": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "17": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "18": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "19": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "20": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "21": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "22": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "23": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "24": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "25": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "26": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "27": [
+          0.949999988079071,
+          0.05000000074505806
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "torch": "2.15.0+cpu",
+    "cpu_quota": "200000 100000",
+    "threads": 4
+  }
+}

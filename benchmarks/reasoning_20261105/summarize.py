@@ -1,6 +1,7 @@
 """Task-level public pilot statistics and complete research evidence report."""
 import json
 import math
+import collections
 from pathlib import Path
 
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
@@ -10,7 +11,7 @@ def wilson(correct,n):
     z=1.959963984540054;p=correct/n;d=1+z*z/n
     center=(p+z*z/(2*n))/d
     half=z*math.sqrt(p*(1-p)/n+z*z/(4*n*n))/d
-    return [center-half,center+half]
+    return [max(0.,center-half),min(1.,center+half)]
 
 
 def paired(old,new):
@@ -44,6 +45,7 @@ def main():
                    'cases_passed':sum(r['passed'] for r in rows),'cases_total':sum(r['total'] for r in rows),
                    'hit_limit':sum(r['hit_limit'] for r in rows),'new_tokens':sum(r['new_tokens'] for r in rows),
                    'generation_seconds':sum(r['seconds'] for r in rows)}
+            entry['categories']=dict(collections.Counter(r.get('category','passed' if r['all_passed'] else 'wrong_answer') for r in rows))
             if benchmark.startswith('IFEval'):entry['loose_correct']=sum(r['loose_all_passed'] for r in rows)
             scores[variant][benchmark]=entry
     for variant in reports:
@@ -71,7 +73,10 @@ def main():
         intervention={3:'Pesos de visita [0,95;0,05]→[0,925;0,075] nas três camadas selecionadas',
                       4:'Edição negativa de posto 1 na MLP final; dose 0,006; preservação de 137 ativações',
                       5:'Terceira visita seletiva: 80 execuções de camada, com cache independente'}[number]
-        outcome=trial['stage']+'; '+trial.get('reason','')
+        outcome={'rejected_on_screen':'Descartada: sem ganho na triagem',
+                 'rejected_full_gates':'Descartada: não passou nos critérios completos',
+                 'eligible_for_new_validation':'Elegível para validação nova'}.get(trial['stage'],trial['stage'])
+        if number==4:outcome+='; NLL das âncoras aumentou'
         lines.append(f'| {number:03d} | {intervention} | {outcome} |')
     parent=json.loads((ROOT/'reasoning/trial_004_parent_full.json').read_text())
     dense=json.loads((ROOT/'reasoning/trial_004_target_full.json').read_text())
@@ -98,6 +103,8 @@ def main():
         'sem os exemplos de entrada/saída no prompt, com até 16 casos privados originais por problema; '
         'comparação de stdout normalizada em espaços. GSM8K: 16 questões zero-shot, sem raciocínios de referência. '
         'IFEval: 12 instruções filtradas, com verificadores oficiais estritos e flexíveis preservados. '
+        'O executor de código restringe construções e identificadores Python além de isolar o processo; '
+        'falhas de contrato, execução, resposta e truncamento são mantidas nas saídas. '
         'Estas restrições e amostras impedem comparação direta com percentuais de leaderboard.','',
         'Mesmas entradas, contexto, tokenizer, BF16/eager, cache, seed 0 e quatro threads. Limites de saída: '
         '384/64/192 tokens por família. Identidade e prompts de marca ficam fora das avaliações. '
