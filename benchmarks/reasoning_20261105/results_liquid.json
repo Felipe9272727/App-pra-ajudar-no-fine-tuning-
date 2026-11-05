@@ -535,6 +535,226 @@
       "case_passed": [
         false
       ]
+    },
+    {
+      "id": "ifeval:2567",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "9e9b86aee2d6b01f8dc896df0bb6286a0688ebd6d91e339e5eaf64974b969545",
+      "output": "# From Puppy to Purr-Footed: A Guide to Training a Dog for Kids\n\nWelcome to the world of dog training! As you grow older, your dog's energy levels often shift, and the need for structured, positive reinforcement training becomes even more critical. While puppies are eager to please, adult dogs are often more focused on their own goals. However, this doesn't mean you can't teach your adult dog to be a great companion.\n\nThe key to training an adult dog for kids lies in **less** punishment and more positive reinforcement. When you use a \"less\" approach, you are teaching your dog that the desired behavior is the most rewarding experience.\n\nHere is a step-by-step guide to building a bond and ensuring your dog stays engaged:\n\n### 1. Start Small and Consistent\nDon't try to train a dog to do something complex like \"fetch a ball\" or \"sit on a high chair\" immediately",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 63.962228719999985,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ],
+      "loose_all_passed": false,
+      "instruction_ids": [
+        "keywords:existence"
+      ]
+    },
+    {
+      "id": "ifeval:1634",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "e9360d75a2a982ed0933bf29e06628cb151e7e2497db98b6c6d9f833b2f42e97",
+      "output": "*   **Safety & Comfort**: Ensure all equipment is rated for home use and that the setup is secure to prevent falls or accidents.\n*   **Aesthetics & Design**: Choose a layout that maximizes viewing experience and creates a cozy, relaxing atmosphere for family members.\n*   **Budget & Maintenance**: Select a system that fits your household budget while providing easy access to regular maintenance and cleaning.\n*   **Family Compatibility**: Verify that the installation supports multiple family members and allows for comfortable conversation and entertainment.",
+      "new_tokens": 106,
+      "hit_limit": false,
+      "seconds": 36.73875565900016,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ]
+    },
+    {
+      "id": "ifeval:1629",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "3dd848aa64078f2b251103b3d4d4b8d834afaf5b421f2353d4322df2a26c9285",
+      "output": "The bus arrived at the **journey** to the **destination**.\n\nOr, perhaps more vividly:\n\nThe **train** pulled into the **platform** to **wait** for the **arrival**.\n\nHere is a breakdown of why these changes work:\n*   **Instead of \"station\"**: We replaced it with \"platform\" (a specific, tangible location) or \"journey\" (a process) or \"destination\" (a clear goal).\n*   **Added verbs**: Words like \"pulled,\" \"waited,\" or \"pulled into\" add action and make the scene feel dynamic rather than static.\n*   **Changed the noun**: \"Bus\" is a vehicle, but \"train\" or \"car\" often implies a journey, making the sentence more engaging.\n*   **Added adjectives**: Words like \"vivid,\" \"dynamic,\" or \"tangible\" help paint a picture of the",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 62.46197707400097,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ],
+      "loose_all_passed": false,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ]
+    },
+    {
+      "id": "ifeval:1361",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "83ee2b6c8f3a566f1ddbd79c4aa277234ee43052cf87af2dbd44d460f6817179",
+      "output": "the economy is a broken clock\nrunning on a schedule that never ends\nwe chase the stock market for a dream\nbut the stock market is just a shadow on the wall\nwe build houses with bricks that crack under the weight\nwe build roads with asphalt that smells of rot\nwe build cities where the air is thick with smoke\nwe build a world where the sun never sets\nbut the sun is just a flickering flame in the dark\nwe build a future where the people are rich\nbut the people are just a pile of dust in the wind\nwe build a society where the laws are written in gold\nbut the laws are just a shadow on the wall\nwe build a world where the people are poor\nbut the people are just a pile of dust in the wind\nthe economy is a broken clock\nrunning on a schedule that never ends\nwe chase the stock market for a dream\nbut the stock market is just a shadow",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 61.81175104799877,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ]
+    },
+    {
+      "id": "ifeval:2314",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "6aa25ab64deb7d601fff4706487b4d9a531ee565bb19912109943214095046c5",
+      "output": "*   **Barnaby**\n*   **Barnaby**\n*   **Barnaby**\n\n*(Note: While the prompt asks for 3 names, the provided text repeats the name \"Barnaby\" three times. If you intended to list distinct names, please let me know.)*\n\n*   **Barnaby**\n*   **Barnaby**\n*   **Barnaby**\n\n*   **Barnaby**\n*   **Barnaby**\n*   **Barnaby**\n\n*   **Barnaby**\n*   **Barnaby**\n*   **Barnaby**\n\n*   **Barnaby**\n*   **Barnaby**\n*   **Barnaby**\n\n*   **Barnaby**\n*   **Barnaby**\n*   **Barnaby**\n\n*   **Barnaby**",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 63.51345325500006,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ],
+      "loose_all_passed": false,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ]
+    },
+    {
+      "id": "ifeval:1667",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "9caf1f2b16f1af17fbf62226166686bdfd1daf879c1ab1c0eb2ab0428fe331a6",
+      "output": "The presidency of Martin Van Buren, who served as the 21st president of the United States from 1837 to 1841, marked a significant chapter in the nation's early political history. Born in New York City, Van Buren was a man of considerable influence, having served as a U.S. Senator and a U.S. Representative before his appointment as the 21st president. His tenure was characterized by a blend of political maneuvering and personal ambition, which often led to a period of instability within the administration.\n\nVan Buren's early career was marked by his service as a U.S. Senator from New York, where he played a pivotal role in shaping the political landscape of the region. He was known for his ability to navigate complex political alliances and to influence the legislative process. His tenure as a senator was brief, lasting only two years, and he was succeeded by John C. Calh",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 60.051910293999754,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ],
+      "loose_all_passed": false,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ]
+    },
+    {
+      "id": "ifeval:1645",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "d43f207bb4aee13d84be41beb2508cda4ac53577f5ee3ab6efe871350c91262b",
+      "output": "SHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE NAME.\nSHEDDLE IS THE ONLY ONE WHO KNOWS THE",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 60.61816545400143,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "change_case:english_capital"
+      ]
+    },
+    {
+      "id": "ifeval:2207",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "c10093a6c8c9aec1144440b2de9dee0b30348b970d74d796b97abde34f94f26d",
+      "output": "The study indicates that exposure to VHF radio frequencies does not influence the proliferation of the tested bacterial species.\n\n**References**\n\n*   Smith, J., & Johnson, A. (2023). *Impact of Radio Frequency Radiation on Microbial Growth*. Journal of Environmental Health, 15(2), 45-52.\n*   National Institute of Health. (2022). *Radiation Safety Guidelines for Medical Devices*. CDC.\n*   International Atomic Energy Agency. (2021). *Radiation Effects on Biological Systems*. IAEA.\n*   World Health Organization. (2020). *Radiation Exposure and Health Outcomes*. WHO.\n*   National Academy of Sciences. (2019). *Radiation Safety and Biological Effects*. NAS.\n*   European Union. (2018). *Radiation Safety and Biological Effects*. EU.",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 65.30165063700042,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ]
+    },
+    {
+      "id": "ifeval:2807",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "7044bdbaa722fb3feec677e30084c953405609b5d721ddf8cb2f026f78052a6f",
+      "output": "<<the witch's legal empire>>\nhey, if you're a lawyer who thinks you can protect your clients from the supernatural, you're in the right place. we handle copyright infringement cases where the defendant is a witch, a sorcerer, or a wizard. we don't just sue for damages; we fight for the right to exist. our team includes witches who know how to draft contracts that don't break the spell, and we've won every single copyright battle in the history of the world. let's get to work and stop the bad guys from stealing your magic. contact us today and see if you're a good fit for our team. we're all witches, and we're all lawyers. let's make sure the law protects the magic. <<the witch's legal empire>>\ncontact us today and see if you're a good fit for our team. we're all witches, and we're all lawyers. let's make sure the law",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 64.61906668200027,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "detectable_format:title"
+      ]
+    },
+    {
+      "id": "ifeval:3732",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "8eee5111b7ee187817f6a44814604774a85e27ec3959bcff469f9c563c800fb5",
+      "output": "(Verse 1)\nThe morning mist is thick and white\nRochester, the city of the West\nWhere the river flows through the heart\nA place where the past meets the new.\nThe air smells of maple syrup and pine\nAnd the sun rises high and bright\nA place where the river flows through the heart\nA place where the past meets the new.\n\n(Chorus)\nSo let the river take the lead\nAnd the festival begin\nWhere the river flows through the heart\nAnd the festival begins.\nLet the river take the lead\nAnd the festival begin\nWhere the river flows through the heart\nAnd the festival begins.\n\n(Verse 2)\nThe lake is a deep and blue\nWhere the river flows through the heart\nA place where the river flows through the heart\nA place where the river flows through the heart.\nThe lake is a deep and blue\nAnd the river flows",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 61.527008348999516,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "keywords:existence"
+      ]
+    },
+    {
+      "id": "ifeval:2404",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "9b5fe533d35cc0ceebb84ac06ad2726409718b4abacd7e03ff51b77d7daf4922",
+      "output": "```json\n{\n  \"character_analysis\": {\n    \"role\": \"The Last Guardian\",\n    \"key_traits\": [\n      \"Unyielding Resolve\",\n      \"Intimidating Presence\",\n      \"Unmatched Skill\",\n      \"Unmatched Loyalty\",\n      \"Unmatched Courage\"\n    ],\n    \"behavioral_patterns\": [\n      \"Never hesitated to engage in combat\",\n      \"Never surrendered even when outnumbered\",\n      \"Never allowed to be defeated\",\n      \"Never allowed to be defeated\",\n      \"Never allowed to be defeated\"\n    ],\n    \"unique_qualities\": [\n      \"Unmatched Skill\",\n      \"Unmatched Loyalty\",\n      \"Unmatched Courage\",\n      \"Unmatched Resolve\",\n      \"Unyielding Resolve\"\n    ]\n  }\n}\n```\n",
+      "new_tokens": 186,
+      "hit_limit": false,
+      "seconds": 60.68569200099955,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "detectable_format:json_format"
+      ]
     }
   ],
   "frozen_sha256": "a4d4eebde3c1cc2618ca0775a4f63e22a8eca3255ff71947c0083e490309feb7",
