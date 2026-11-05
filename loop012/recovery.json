@@ -1,0 +1,9 @@
+{
+  "event": "execution_environment_restart",
+  "uncertain_phase": "screen_inverse:generate:prefix_sums",
+  "old_process_alive": false,
+  "completed_screen_reports": [],
+  "checkpoints_and_frozen_sources_intact": true,
+  "completed_diagnostics_not_repeated": true,
+  "recovery_action": "paired parent calibration on recovered executor; replay only unsaved screen phases"
+}
