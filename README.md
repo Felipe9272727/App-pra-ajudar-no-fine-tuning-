@@ -27,6 +27,21 @@ python liquid_sense_chat.py --about
 python liquid_sense_chat.py --message "Quem é você?"
 ```
 
+## Resultados deste ciclo
+
+| Subconjunto local | Qwen original | Liquid Sense (pai preservado) |
+|---|---:|---:|
+| LiveCodeBench v6 — 8 problemas | 1/8 | 2/8 |
+| GSM8K — 16 questões, resposta concisa | 1/16 | 1/16 |
+| IFEval estrito — 12 prompts | 8/12 | 8/12 |
+
+As amostras são pequenas e os protocolos locais têm limites e restrições;
+esses números não equivalem aos benchmarks completos da Liquid AI nem
+estabelecem superioridade geral. Nenhuma nova candidata foi promovida.
+[Relatório completo](REASONING_BENCHMARK_REPORT.md),
+[saídas e estatísticas](benchmarks/reasoning_20261105/summary.json) e
+[teste de identidade do chat](reasoning/identity_probe.json) estão preservados.
+
 ## Histórico preservado — busca de 100 tentativas
 
 O estágio abaixo foi pausado após 31 rejeições; não foi reiniciado nesta

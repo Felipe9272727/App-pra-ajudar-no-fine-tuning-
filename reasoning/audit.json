@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "parent_checkpoint_unchanged": true,
+  "weight_artifacts_sha256": {
+    "reasoning/directions_004.pt": "d8362988dd8f89db7b15a8e22594b408e213ea1686288e53c1d7c6028c5cfe1f",
+    "reasoning/traces.pt": "ac9fef90dca073142b828b58cd3bebc807a09b03f2029c4b8c252f64af206a2c",
+    "reasoning/checkpoints/trial_004_target.pt": "3b7d09b6cbcc7e2133dda8b260c5fd8a89e21c8103a8412a045c6e467e6ad734",
+    "reasoning/checkpoints/trial_003_layer_control.pt": "342605512e006c7f658a6450cf08ead135385c926175d184fdf0b099dcc39de4",
+    "reasoning/checkpoints/trial_003_target.pt": "5902206fcdec220419ac7a9b60cf381d271b21dde171b4cac674508b7d1bf749",
+    "reasoning/checkpoints/trial_005_target.pt": "2eadbb9a84e0cf9fe94bcad65ec16c7265c5cc429149ff74d63889ceabbbfdb9",
+    "reasoning/checkpoints/trial_005_layer_control.pt": "7d9f1b772e185480dce8cd542d9866cc65210e7d881eadacabe639b3f44d5ca3",
+    "rsi100/checkpoints/best.pt": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8"
+  },
+  "new_hypotheses_completed": [
+    3,
+    4,
+    5
+  ],
+  "all_new_candidates_unpromoted": true,
+  "frozen_public_files_intact": true,
+  "public_weight_selection_used_results": false,
+  "technical_unit_tests": 39,
+  "backward_passes": 0,
+  "optimizers_used": false,
+  "legacy_search_restarted": false,
+  "identity_mechanism": "Application system prompt and final-segment display; not weight learning. Raw attempts are preserved.",
+  "selected_checkpoint": "rsi100/checkpoints/best.pt",
+  "all_model_workers_finished": true,
+  "finished_unix": 1793844025.6986353
+}
