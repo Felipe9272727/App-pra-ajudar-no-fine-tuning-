@@ -132,6 +132,8 @@
 
 - Active branch: codex/liquid-sense-reasoning-20261105. Read reasoning/status.json and reasoning/PROTOCOL.md.
 - Start from preserved best.pt; hypothesis 002 remains unpromoted.
-- Finite hypotheses 003/004: actual decoding activation diagnostics, direct loop-gain edits and a separately protected negative-only dense edit. No dedicated thinking module is assumed.
+- Finite hypotheses 003/004/005 (005 was preregistered after the null 003 result): actual decoding activation diagnostics, direct loop-gain edits and a separately protected negative-only dense edit. No dedicated thinking module is assumed.
 - Keep previously observed validation_004 out of selection and freeze new benchmark subsets before their outputs.
 - User requested honest Liquid Sense identity and original-versus-hybrid tests on benchmarks used by Liquid AI. Branding stays out of raw benchmark inputs and is not a weight-quality claim.
+
+- Current cycle: all three new hypotheses completed without promotion. Public benchmark generation is a locked audit; do not change weights, source judges, answers or selected IDs after its outputs. Resume only missing rows from benchmarks/reasoning_20261105/results_*.json.

@@ -139,6 +139,504 @@
         "WrongStdout"
       ],
       "code": "import sys\n\ndef solve():\n    d = sys.stdin.readline().strip()\n    if not d:\n        return\n    directions = {\n        'N': 'N',\n        'E': 'E',\n        'W': 'W',\n        'S': 'S',\n        'NE': 'NE',\n        'NW': 'NW',\n        'SE': 'SE',\n        'SW': 'SW'\n    }\n    if d in directions:\n        print(directions[d])\n    else:\n        print(\"Invalid direction\")\n\nif __name__ == \"__main__\":\n    solve()"
+    },
+    {
+      "id": "lcb:abc388_b",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "89873d488dd6b78dfbb74cf07213bffa4d27187a8664059c8eacbaf1592ec94c",
+      "output": "```python\nimport sys\nfrom collections import defaultdict\nfrom functools import reduce\n\ndef solve():\n    input = sys.stdin.read\n    data = input().split()\n    idx = 0\n\n    N = int(data[idx])\n    D = int(data[idx + 1])\n    idx += 2\n\n    snakes = []\n    for i in range(N):\n        T = int(data[idx + 2 + i])\n        L = int(data[idx + 3 + i])\n        idx += 4\n        snakes.append((T, L))\n\n    # Sort snakes by length to easily find the heaviest one for each k\n    # We need to find the maximum weight among all snakes after adding k to their lengths\n    # For each k, we can compute the new length for each snake and find the max weight.\n    # Since N, D <= 100, O(N*D) is acceptable.\n\n    # Precompute the new length for each snake\n    new_lengths = [s[1] + k for s in snakes]\n\n    # Compute the weight for each snake\n    weights = [s[0] * s[1] for s in snakes]\n\n    # Find the maximum weight for each k\n    max_weights = [max(weights) for k in range(D)]\n\n    print(*max_weights)\n\nif __name__ == \"__main__\":\n    solve()\n```\n",
+      "new_tokens": 304,
+      "hit_limit": false,
+      "seconds": 40.71026651399916,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "IndexError",
+      "error_types": [
+        "IndexError"
+      ],
+      "code": "import sys\nfrom collections import defaultdict\nfrom functools import reduce\n\ndef solve():\n    input = sys.stdin.read\n    data = input().split()\n    idx = 0\n\n    N = int(data[idx])\n    D = int(data[idx + 1])\n    idx += 2\n\n    snakes = []\n    for i in range(N):\n        T = int(data[idx + 2 + i])\n        L = int(data[idx + 3 + i])\n        idx += 4\n        snakes.append((T, L))\n\n    # Sort snakes by length to easily find the heaviest one for each k\n    # We need to find the maximum weight among all snakes after adding k to their lengths\n    # For each k, we can compute the new length for each snake and find the max weight.\n    # Since N, D <= 100, O(N*D) is acceptable.\n\n    # Precompute the new length for each snake\n    new_lengths = [s[1] + k for s in snakes]\n\n    # Compute the weight for each snake\n    weights = [s[0] * s[1] for s in snakes]\n\n    # Find the maximum weight for each k\n    max_weights = [max(weights) for k in range(D)]\n\n    print(*max_weights)\n\nif __name__ == \"__main__\":\n    solve()"
+    },
+    {
+      "id": "lcb:abc387_a",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "fcd92c64120b238b8afc7e4ff0f716db3d750d6a7d553ad1284d1d6e0ba117e9",
+      "output": "import sys\nimport math\n\ndef solve():\n    # Read A and B from standard input\n    line = sys.stdin.read().split()\n    if not line:\n        return\n    A = int(line[0])\n    B = int(line[1])\n    \n    # Calculate the sum and square\n    result = A + B\n    print(result * result)\n\nif __name__ == \"__main__\":\n    solve()\n\nsys.stdin.read().split()\nA = int(sys.stdin.read().split()[0])\nB = int(sys.stdin.read().split()[1])\nprint((A + B) * (A + B))\n\n# Alternative using math module directly\n# A = int(sys.stdin.read().split()[0])\n# B = int(sys.stdin.read().split()[1])\n# print((A + B) * (A + B))\n\n# Final implementation using only allowed imports and standard input reading\nimport sys\nimport math\n\ndef main():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    A = int(input_data[0])\n    B = int(input_data[1])\n    print((A + B) * (A + B))\n\nif __name__ == \"__main__\":\n    main()\n\n# Re-evaluating the \"only code\" constraint:\n# The prompt says \"Write a complete Python 3 program... Return only the code.\"\n# It also says \"Use only sys, math, collections, itertools, functools, heapq or bisect if imports are needed.\"\n# Since math is allowed, I will use it for clarity.\n\nimport sys\nimport math\n\ndef main():\n    # Read all input from stdin\n    input_data = sys.stdin.read().split()\n    \n    if not input_data",
+      "new_tokens": 384,
+      "hit_limit": true,
+      "seconds": 53.396033971999714,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "expected ':' (<unknown>, line 56)",
+      "code": "import sys\nimport math\n\ndef solve():\n    # Read A and B from standard input\n    line = sys.stdin.read().split()\n    if not line:\n        return\n    A = int(line[0])\n    B = int(line[1])\n    \n    # Calculate the sum and square\n    result = A + B\n    print(result * result)\n\nif __name__ == \"__main__\":\n    solve()\n\nsys.stdin.read().split()\nA = int(sys.stdin.read().split()[0])\nB = int(sys.stdin.read().split()[1])\nprint((A + B) * (A + B))\n\n# Alternative using math module directly\n# A = int(sys.stdin.read().split()[0])\n# B = int(sys.stdin.read().split()[1])\n# print((A + B) * (A + B))\n\n# Final implementation using only allowed imports and standard input reading\nimport sys\nimport math\n\ndef main():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    A = int(input_data[0])\n    B = int(input_data[1])\n    print((A + B) * (A + B))\n\nif __name__ == \"__main__\":\n    main()\n\n# Re-evaluating the \"only code\" constraint:\n# The prompt says \"Write a complete Python 3 program... Return only the code.\"\n# It also says \"Use only sys, math, collections, itertools, functools, heapq or bisect if imports are needed.\"\n# Since math is allowed, I will use it for clarity.\n\nimport sys\nimport math\n\ndef main():\n    # Read all input from stdin\n    input_data = sys.stdin.read().split()\n    \n    if not input_data"
+    },
+    {
+      "id": "lcb:abc389_b",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "5f2e58b80e09b8b6897eadf3e06e0f46488df2235eecbf70e85b2115d91923f8",
+      "output": "```python\nimport sys\nimport math\n\ndef solve():\n    X = int(sys.stdin.read())\n    if X < 2:\n        return\n    # We need to find the largest integer N such that N! <= X.\n    # Then the answer is N + 1.\n    # Since N! grows very fast, we can use binary search or a direct check.\n    # Given X <= 3*10^18, we can estimate N roughly as log10(X) / log10(2) ≈ 18.5 / 0.3 ≈ 61.\n    # A simple loop or binary search will work.\n    \n    # Binary search for the largest N such that N! <= X\n    low = 1\n    high = 200000  # Sufficiently large since 200000! is huge\n    ans = 0\n    \n    while low <= high:\n        mid = (low + high) // 2\n        if mid == 0:\n            continue\n        if math.factorial(mid) <= X:\n            ans = mid\n            low = mid + 1\n        else:\n            high = mid - 1\n    \n    # The largest N such that N! <= X is ans.\n    # The problem guarantees exactly one such N, so the answer is ans + 1.\n    print(ans + 1)\n\nif __name__ == \"__main__\":\n    solve()\n```\n",
+      "new_tokens": 327,
+      "hit_limit": false,
+      "seconds": 40.465172473000166,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "WrongStdout",
+      "error_types": [
+        "WrongStdout"
+      ],
+      "code": "import sys\nimport math\n\ndef solve():\n    X = int(sys.stdin.read())\n    if X < 2:\n        return\n    # We need to find the largest integer N such that N! <= X.\n    # Then the answer is N + 1.\n    # Since N! grows very fast, we can use binary search or a direct check.\n    # Given X <= 3*10^18, we can estimate N roughly as log10(X) / log10(2) ≈ 18.5 / 0.3 ≈ 61.\n    # A simple loop or binary search will work.\n    \n    # Binary search for the largest N such that N! <= X\n    low = 1\n    high = 200000  # Sufficiently large since 200000! is huge\n    ans = 0\n    \n    while low <= high:\n        mid = (low + high) // 2\n        if mid == 0:\n            continue\n        if math.factorial(mid) <= X:\n            ans = mid\n            low = mid + 1\n        else:\n            high = mid - 1\n    \n    # The largest N such that N! <= X is ans.\n    # The problem guarantees exactly one such N, so the answer is ans + 1.\n    print(ans + 1)\n\nif __name__ == \"__main__\":\n    solve()"
+    },
+    {
+      "id": "lcb:abc389_a",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "d3c444367d6e900aaaea30e3255943be69cc3f170a67bfb11cc4869e9be57bdb",
+      "output": "```python\nimport sys\nimport math\nimport collections\nimport itertools\nfrom functools import reduce\nimport heapq\nfrom bisect import bisect_left\n\ndef solve():\n    s = sys.stdin.readline().strip()\n    if not s:\n        return\n    first_char = int(s[0])\n    second_char = s[1]\n    third_char = int(s[2])\n    product = first_char * second_char * third_char\n    print(product)\n\nif __name__ == \"__main__\":\n    solve()\n```\n",
+      "new_tokens": 118,
+      "hit_limit": false,
+      "seconds": 15.41457638599968,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "WrongStdout",
+      "error_types": [
+        "WrongStdout"
+      ],
+      "code": "import sys\nimport math\nimport collections\nimport itertools\nfrom functools import reduce\nimport heapq\nfrom bisect import bisect_left\n\ndef solve():\n    s = sys.stdin.readline().strip()\n    if not s:\n        return\n    first_char = int(s[0])\n    second_char = s[1]\n    third_char = int(s[2])\n    product = first_char * second_char * third_char\n    print(product)\n\nif __name__ == \"__main__\":\n    solve()"
+    },
+    {
+      "id": "gsm8k:914",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "f844df48913dc6e2acad33020f96ee233dd856e68e94407fca70801fcfd32479",
+      "output": "1000000000000000000000000000000000000000000000000000000000000000",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 8.521426999000141,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:501",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "a2e3a6da4b498f02b655d95d7abf17129e65c78a9329e165b98d2ff2ff9dc56a",
+      "output": "119.5",
+      "new_tokens": 6,
+      "hit_limit": false,
+      "seconds": 1.3629419520002557,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:835",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "918f1f792a86bbc1015b9f08a4b8e230ff025d534d216856149bdb9b0c370a89",
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.8957956750000449,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:157",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "58e1f02cde1075ad4f04fd48273733b8537317416001256e3de2fd738391c722",
+      "output": "1000000000000000000000000000000000000000000000000000000000000000",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 8.491859388999728,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:930",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "3c78ba6e2a62f2002f928af5edcba79a8e2c2963643e5e54afd7dce10746db04",
+      "output": "62 - 31 - 8 - 9 = 14\n14 + 31 = 45\n45 + 8 = 53\n53 + 9 = 62\n62 - 62 = 0\n0 + 14 =",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 8.23669154900017,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:850",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "44f22bd1655ad3546e0981dd69f2e67be84486b19f47c11bcbc4ed7620296e95",
+      "output": "100",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 0.9694106079996345,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:311",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "24ad13861eebbec1a1a13cbc734975bade6d6111d5556703884720f2fb02ac1e",
+      "output": "150",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 0.9125258539997958,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1162",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "04a0da96bbd7585909ee0aff5c9be028b8f72d528512b9db6d6754fadcc11276",
+      "output": "16",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.6943951260000176,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1058",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "c3753b3917f749a87dc60cf19888b6913704c85d45666b1925a95b0bea476c7a",
+      "output": "150",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 0.9915124589997504,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1206",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "7ccf0032b6e4aad883d31c986429726df02fcfc166637d81479788e9a7a037c8",
+      "output": "100000",
+      "new_tokens": 7,
+      "hit_limit": false,
+      "seconds": 1.3382577869997476,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1079",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "b277ebea40102ae62ab24ab9ce7f830a04bac42cc529c06ffc399713641acf1c",
+      "output": "100%\n",
+      "new_tokens": 7,
+      "hit_limit": false,
+      "seconds": 1.3918883400001505,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:292",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "c6bfe9574134c51f877df67849bdc4ea083634969ade82209194fb64f37618f1",
+      "output": "5000000000000000000000000000000000000000000000000000000000000000",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 8.250654751000184,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:906",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "a7d5ac4aa61d8a33897e82a67089e69428bca7d1127d2947435260a13def1c0e",
+      "output": "10",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.9039919710003232,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ]
+    },
+    {
+      "id": "gsm8k:46",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "4b9f210f7b9da6727a1f4473393355749a9fb94f18f020eed1cc569f0aee9591",
+      "output": "80 + 220 - 23 = 217\n217 - 80 = 137\n137 - 220 = -83\n-83 - 23 = -106\n-106 - 80",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 8.383958997999798,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:69",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "9831c0fd7d56d48275ce8f1c29d24d3186677fb7773051778423c3486a380784",
+      "output": "100",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 0.9961789660001159,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1211",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "08d94a02e2bfd9e2dc52720ed89c339bcc1825167e2460672680214f51545530",
+      "output": "1400",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 1.0360276470000827,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "ifeval:2567",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "9e9b86aee2d6b01f8dc896df0bb6286a0688ebd6d91e339e5eaf64974b969545",
+      "output": "# From Puppy to Purr: How to Train a Dog for Kids\n\nWelcome to the world of dog training! While many people think of training a dog as a long-term commitment, the reality is that it can be a rewarding journey, especially when you're looking to build a family with a young child. The key to success lies in patience, consistency, and understanding that every dog is unique.\n\n### The Golden Rule: Start Small\nThe most important rule for training a dog for kids is **consistency**. If you try to teach a puppy to sit in a specific spot for 10 minutes, it will likely fail. Instead, start with a simple command like \"Sit\" or \"Come.\"\n\nBegin by using a high-value treat as a reward. This creates a strong positive association between the dog's behavior and food. Once the dog understands the command, gradually increase the duration and complexity of the task.\n\n### Building a Routine\n",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 23.936324326999966,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ],
+      "loose_all_passed": false,
+      "instruction_ids": [
+        "keywords:existence"
+      ]
+    },
+    {
+      "id": "ifeval:1634",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "e9360d75a2a982ed0933bf29e06628cb151e7e2497db98b6c6d9f833b2f42e97",
+      "output": "*   **Safety and Comfort**: Ensure the installation includes a sturdy, non-slip mat, a high-quality soundbar with a built-in speaker, and a sturdy floor that can support the weight of the system without wobbling.\n*   **Aesthetics and Design**: Choose a color scheme that complements the room's decor, ensuring the new setup looks modern and cohesive with the existing furniture and lighting.\n*   **Sound Quality and Volume**: Verify that the installed speakers provide clear, crisp audio with sufficient volume to hear conversations and music without being too loud, and check for any echo or distortion in the room.\n*   **Budget and Timeline**: Confirm that the total cost of materials and labor is within your budget, and that the installation schedule allows for a reasonable timeframe to complete the project safely.",
+      "new_tokens": 165,
+      "hit_limit": false,
+      "seconds": 20.137390896999932,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ]
+    },
+    {
+      "id": "ifeval:1629",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "3dd848aa64078f2b251103b3d4d4b8d834afaf5b421f2353d4322df2a26c9285",
+      "output": "The bus arrived at the **hub**, where the **platform** waited for its passengers.\n",
+      "new_tokens": 21,
+      "hit_limit": false,
+      "seconds": 2.979761124000106,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ]
+    },
+    {
+      "id": "ifeval:1361",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "83ee2b6c8f3a566f1ddbd79c4aa277234ee43052cf87af2dbd44d460f6817179",
+      "output": "the city sleeps in a dark room\nwhere the sun never rises\na single family lives in a small house\nwith no roof to protect them\nthey wait for the rain to come\nbut the storm never comes\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs dry\nthe water runs",
+      "new_tokens": 192,
+      "hit_limit": true,
+      "seconds": 22.815082344000075,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ]
+    },
+    {
+      "id": "ifeval:2314",
+      "benchmark": "IFEval-filtered-subset",
+      "prompt_sha256": "6aa25ab64deb7d601fff4706487b4d9a531ee565bb19912109943214095046c5",
+      "output": "* Bumblebee\n* Barnaby\n* Biscuit\n",
+      "new_tokens": 16,
+      "hit_limit": false,
+      "seconds": 2.2114447330004623,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ],
+      "loose_all_passed": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ]
     }
   ],
   "frozen_sha256": "a4d4eebde3c1cc2618ca0775a4f63e22a8eca3255ff71947c0083e490309feb7",
