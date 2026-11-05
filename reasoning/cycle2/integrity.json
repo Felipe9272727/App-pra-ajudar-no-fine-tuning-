@@ -1,0 +1,108 @@
+{
+  "preserved_checkpoints_and_upstream": {
+    "rsi100/checkpoints/best.pt": true,
+    "mentor/checkpoints/negative_002_recovered.pt": true,
+    "upstream/model.safetensors-00001-of-00001.safetensors": true
+  },
+  "frozen_file_checks": {
+    "benchmarks/reasoning_20261105/frozen.json": {
+      "benchmarks/reasoning_20261105/PROTOCOL.md": true,
+      "benchmarks/reasoning_20261105/build_data.py": true,
+      "benchmarks/reasoning_20261105/stdio_judge.py": true,
+      "benchmarks/reasoning_20261105/evaluate.py": true,
+      "benchmarks/reasoning_20261105/prompts.json": true,
+      "benchmarks/reasoning_20261105/oracles.json": true,
+      "benchmarks/reasoning_20261105/selected_ids.json": true,
+      "benchmarks/reasoning_20261105/sources.json": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/__init__.py": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/instructions_registry.py": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/instructions_util.py": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/instructions.py": true,
+      "benchmarks/reasoning_20261105/vendor/instruction_following_eval/evaluation_lib.py": true,
+      "reasoning/runtime_helpers.py": true,
+      "code_rsi/runtime.py": true,
+      "v2_adaptation/native_runtime.py": true,
+      "modeling_sensenova_loop.py": true
+    },
+    "reasoning/cycle2/frozen.json": {
+      "reasoning/cycle2/PROTOCOL.md": true,
+      "reasoning/cycle2/run.py": true,
+      "reasoning/traces.pt": true,
+      "reasoning/trial_004.json": true,
+      "rsi100/data.json": true,
+      "rsi100/checkpoints/best.pt": true,
+      "benchmarks/reasoning_20261105/prompts.json": true,
+      "benchmarks/reasoning_20261105/oracles.json": true
+    },
+    "reasoning/cycle2/router007_frozen.json": {
+      "reasoning/cycle2/ROUTER007_PROTOCOL.md": true,
+      "reasoning/cycle2/router007.py": true,
+      "reasoning/cycle2/router_static_audit.json": true,
+      "reasoning/cycle2/trial_006.json": true,
+      "reasoning/cycle2/validation_frozen.json": true,
+      "reasoning/diagnostic.json": true,
+      "rsi100/checkpoints/best.pt": true
+    }
+  },
+  "new_tensor_artifacts": {
+    "reasoning/cycle2/checkpoints/trial_006_target.pt": {
+      "bytes": 7341821,
+      "sha256": "3213cd6dec33bfb07d27e413631aa17190b89d045cf7c75358994edf1b4ab354",
+      "git_blob": "53cfc5055faaf0b2e2a9aef0ea2254e5aaa1b321",
+      "tensor_payload_readable": true
+    },
+    "reasoning/cycle2/checkpoints/trial_007_inverse_control.pt": {
+      "bytes": 1980,
+      "sha256": "be01b103a262ee7a3c7dc44dbaf55ad04705bcc2be93bca4a0daea8117c41608",
+      "git_blob": "7653db8474ca09a34bd466ec864bb103f94c9240",
+      "tensor_payload_readable": true
+    },
+    "reasoning/cycle2/checkpoints/trial_007_target.pt": {
+      "bytes": 1853,
+      "sha256": "a51d8c3390ae88f67d33e722b0741fbab5aaecc1fad714220d26c2e570c85f0d",
+      "git_blob": "f903168fd1a2a52c8cd6af5816a2c6347ca98a23",
+      "tensor_payload_readable": true
+    },
+    "reasoning/cycle2/directions_006.pt": {
+      "bytes": 4738951,
+      "sha256": "4de56dd6ae0337695c508667d73d7e452a750bab9e3307b5edad84965de838e3",
+      "git_blob": "37d0b312cdbe506ffe0fe5d1ed72cc5b9250fd64",
+      "tensor_payload_readable": true
+    },
+    "reasoning/cycle2/thinking_trace.pt": {
+      "bytes": 2685127,
+      "sha256": "7c5896fc692c9596202d68e098b049903d84db3372a0ddd70dd7085fef914551",
+      "git_blob": "fd7164213ff572a48355e7d2458a009401ac5792",
+      "tensor_payload_readable": true
+    }
+  },
+  "prefix_checks": {
+    "original:gsm8k:914": {
+      "decoded_prefix_matches": true,
+      "raw_token_prefix_checked": false
+    },
+    "original:gsm8k:501": {
+      "decoded_prefix_matches": true,
+      "raw_token_prefix_checked": false
+    },
+    "original:lcb:abc387_a": {
+      "decoded_prefix_matches": true,
+      "raw_token_prefix_checked": false
+    },
+    "liquid:gsm8k:914": {
+      "decoded_prefix_matches": true,
+      "raw_token_prefix_checked": true
+    },
+    "liquid:gsm8k:501": {
+      "decoded_prefix_matches": true,
+      "raw_token_prefix_checked": true
+    },
+    "liquid:lcb:abc387_a": {
+      "decoded_prefix_matches": true,
+      "raw_token_prefix_checked": true
+    }
+  },
+  "prefix_check_limitation": "Original512 diagnostic retained text but not raw token IDs; raw ID equality is verified for hybrid extensions only.",
+  "checkpoint_promoted": false,
+  "new_tensor_count": 5
+}

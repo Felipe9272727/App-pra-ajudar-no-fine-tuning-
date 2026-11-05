@@ -5,7 +5,38 @@ programação e raciocínio por meio de alterações verificáveis nos pesos.
 A base pré-treinada é **Qwen3.5-0.8B**; o híbrido com componentes inspirados em
 **SenseNova Loop/mHC e Liquid AI** carrega aproximadamente **1,02B parâmetros**.
 
-## Pesquisa atual — 2026-11-05
+## Pesquisa mais recente — diagnóstico e edições 006/007
+
+[Relatório e comparações](ERROR_ANALYSIS_REPORT.md),
+[estado retomável](reasoning/cycle2/status.json) e
+[seleção](reasoning/cycle2/selection.json).
+O checkpoint híbrido pai continua selecionado; nenhuma nova edição foi promovida.
+
+Na comparação dos mesmos 16 problemas de desenvolvimento, Qwen original
+resolveu 12 tarefas e 66/81 casos; o híbrido preservado resolveu 11 tarefas
+e 69/81 casos. Ambos fizeram 4/4 controles. A edição 006 ganhou um caso,
+mas piorou a NLL de linguagem contra o pai e foi rejeitada. O resultado
+mistura ganhos e perdas entre tarefas, sem superioridade geral demonstrada.
+
+Também foi confirmado que os dois fluxos mHC permaneciam idênticos durante
+as gerações medidas, com roteadores de entrada zerados. A edição 007 alterou
+dois parâmetros FP32 para separar os fluxos, preservando a média dos ganhos.
+A separação ocorreu, mas candidata e controle inverso mantiveram 25/31 casos
+da triagem. Ambos os checkpoints experimentais estão preservados.
+
+Há um modo de raciocínio nativo opcional, sem mudança nos pesos selecionados:
+
+```bash
+python liquid_sense_chat.py --thinking --max-new-tokens 1024 --message "Como você verifica uma solução?"
+```
+
+Esse modo é experimental e usa mais tokens. O diagnóstico de conclusão
+está no relatório: até 1.024 tokens, Qwen concluiu 2/3 respostas corretas
+e o híbrido 0/3, em três problemas já observados. Ele não virou o padrão
+e não demonstra melhoria geral nem aprendizado novo.
+O chat informa quando não obteve resposta final dentro do orçamento.
+
+## Pesquisa anterior — 2026-11-05
 
 A continuação usa ativações da geração real, hipóteses pré-registradas e
 comparações com rollback. As hipóteses 003 e 005 reforçaram contribuições e
@@ -27,7 +58,7 @@ python liquid_sense_chat.py --about
 python liquid_sense_chat.py --message "Quem é você?"
 ```
 
-## Resultados deste ciclo
+## Resultados do ciclo anterior
 
 | Subconjunto local | Qwen original | Liquid Sense (pai preservado) |
 |---|---:|---:|

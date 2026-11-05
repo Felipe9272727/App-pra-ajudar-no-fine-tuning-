@@ -1,0 +1,1277 @@
+{
+  "weight_trial": {
+    "trial": 6,
+    "stage": "rejected_full_gates",
+    "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "metadata": {
+      "edited_tensor": "model.language_model.layers.31.mlp.down_proj.weight",
+      "bad_token": 6521,
+      "bad_piece": "[k",
+      "target_index": 35,
+      "protected_code_states": 137,
+      "protected_anchor_states": 149,
+      "preservation_rank": 283,
+      "svd_relative_cutoff": 1e-05,
+      "residual_ratio": 0.31993550062179565,
+      "dose": 0.006,
+      "correct_replacement_or_solution_supplied": false,
+      "changed_values": 1858254,
+      "actual_relative_norm": 0.00607528630644083,
+      "normalized_preservation_projection_max": 5.653677817463176e-06,
+      "target_direct_bad_logit_delta": -0.5013658404350281,
+      "ideal_protected_output_norm_max": 9.888123713608366e-06,
+      "rounded_protected_output_norm_max": 0.010320725850760937,
+      "rounded_protected_output_norm_mean": 0.006224705837666988,
+      "rounding_error_relative_to_ideal": 0.2168724536895752,
+      "largest_actual_changes": [
+        {
+          "row": 347,
+          "column": 541,
+          "before": 0.0087890625,
+          "after": 0.0101318359375
+        },
+        {
+          "row": 689,
+          "column": 541,
+          "before": 0.0068359375,
+          "after": 0.0081787109375
+        },
+        {
+          "row": 689,
+          "column": 966,
+          "before": 0.005340576171875,
+          "after": 0.004058837890625
+        },
+        {
+          "row": 333,
+          "column": 541,
+          "before": -0.001434326171875,
+          "after": -0.0001697540283203125
+        },
+        {
+          "row": 567,
+          "column": 541,
+          "before": -0.0025634765625,
+          "after": -0.003814697265625
+        },
+        {
+          "row": 194,
+          "column": 541,
+          "before": -0.00086212158203125,
+          "after": 0.0003814697265625
+        },
+        {
+          "row": 507,
+          "column": 541,
+          "before": 0.001312255859375,
+          "after": 8.058547973632812e-05
+        },
+        {
+          "row": 410,
+          "column": 541,
+          "before": -0.007568359375,
+          "after": -0.0087890625
+        },
+        {
+          "row": 689,
+          "column": 633,
+          "before": 0.0086669921875,
+          "after": 0.0098876953125
+        },
+        {
+          "row": 461,
+          "column": 541,
+          "before": -0.00058746337890625,
+          "after": -0.00180816650390625
+        },
+        {
+          "row": 347,
+          "column": 966,
+          "before": -0.01251220703125,
+          "after": -0.01373291015625
+        },
+        {
+          "row": 249,
+          "column": 541,
+          "before": -0.0311279296875,
+          "after": -0.0299072265625
+        },
+        {
+          "row": 333,
+          "column": 966,
+          "before": -0.0031280517578125,
+          "after": -0.00433349609375
+        },
+        {
+          "row": 347,
+          "column": 633,
+          "before": 0.0012664794921875,
+          "after": 0.002471923828125
+        },
+        {
+          "row": 249,
+          "column": 966,
+          "before": -0.000774383544921875,
+          "after": -0.0019683837890625
+        },
+        {
+          "row": 507,
+          "column": 966,
+          "before": 0.007293701171875,
+          "after": 0.00848388671875
+        },
+        {
+          "row": 333,
+          "column": 633,
+          "before": 0.0031585693359375,
+          "after": 0.00433349609375
+        },
+        {
+          "row": 194,
+          "column": 966,
+          "before": 0.000640869140625,
+          "after": -0.0005340576171875
+        },
+        {
+          "row": 567,
+          "column": 966,
+          "before": 0.0027618408203125,
+          "after": 0.003936767578125
+        },
+        {
+          "row": 253,
+          "column": 541,
+          "before": -0.0035247802734375,
+          "after": -0.002349853515625
+        }
+      ]
+    },
+    "checkpoint_promoted": false,
+    "backward_passes": 0,
+    "screens": {
+      "target": [
+        {
+          "id": "prefix_sums",
+          "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]",
+          "new_tokens": 32,
+          "hit_limit": false,
+          "seconds": 11.122716406000109,
+          "thinking": false,
+          "passed": 2,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            true,
+            false,
+            true,
+            false,
+            false
+          ],
+          "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]"
+        },
+        {
+          "id": "rotate_right",
+          "output": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[-k:] + xs[:-k]",
+          "new_tokens": 44,
+          "hit_limit": false,
+          "seconds": 15.208170289000918,
+          "thinking": false,
+          "passed": 4,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "code": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[-k:] + xs[:-k]"
+        },
+        {
+          "id": "longest_run",
+          "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+          "new_tokens": 98,
+          "hit_limit": false,
+          "seconds": 35.473917502000404,
+          "thinking": false,
+          "passed": 4,
+          "total": 5,
+          "all_passed": false,
+          "category": "WrongReturnValue",
+          "error_types": [
+            "WrongReturnValue"
+          ],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            false
+          ],
+          "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0"
+        },
+        {
+          "id": "sum_abs",
+          "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+          "new_tokens": 29,
+          "hit_limit": false,
+          "seconds": 10.595347529999344,
+          "thinking": false,
+          "passed": 5,
+          "total": 5,
+          "all_passed": true,
+          "category": "passed",
+          "error_types": [],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "code": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total"
+        },
+        {
+          "id": "palindrome",
+          "output": "def solve(s):\n    return s == s[::-1]",
+          "new_tokens": 14,
+          "hit_limit": false,
+          "seconds": 5.654201925000962,
+          "thinking": false,
+          "passed": 6,
+          "total": 6,
+          "all_passed": true,
+          "category": "passed",
+          "error_types": [],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "code": "def solve(s):\n    return s == s[::-1]"
+        },
+        {
+          "id": "binary_search",
+          "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1",
+          "new_tokens": 45,
+          "hit_limit": false,
+          "seconds": 15.002339960999961,
+          "thinking": false,
+          "passed": 5,
+          "total": 5,
+          "all_passed": true,
+          "category": "passed",
+          "error_types": [],
+          "case_passed": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    for i in range(len(xs)):\n        if xs[i] == target:\n            return i\n    return -1"
+        }
+      ]
+    },
+    "patch_sha256": "3213cd6dec33bfb07d27e413631aa17190b89d045cf7c75358994edf1b4ab354",
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3",
+      "layer_visit_gains": {
+        "4": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "5": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "6": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "7": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "8": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "9": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "10": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "11": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "12": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "13": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "14": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "15": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "16": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "17": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "18": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "19": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "20": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "21": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "22": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "23": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "24": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "25": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "26": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "27": [
+          0.949999988079071,
+          0.05000000074505806
+        ]
+      }
+    },
+    "eligible_for_new_validation": false,
+    "reason": "paired incumbent: anchor NLL regression"
+  },
+  "scoring_audit": {
+    "original": {
+      "tasks": 1,
+      "cases": 16,
+      "changed_case_count": 0
+    },
+    "liquid": {
+      "tasks": 2,
+      "cases": 32,
+      "changed_case_count": 0
+    }
+  },
+  "decoding_diagnostic": {
+    "original": {
+      "aggregate": {
+        "False": {
+          "tasks": 3,
+          "raw_correct": 0,
+          "final_segments_available": 3,
+          "completed_and_correct": 0,
+          "capped": 2,
+          "tokens": 1030,
+          "seconds": 128.75470577200213
+        },
+        "True": {
+          "tasks": 3,
+          "raw_correct": 1,
+          "final_segments_available": 1,
+          "completed_and_correct": 1,
+          "capped": 2,
+          "tokens": 1333,
+          "seconds": 158.1167262960007
+        }
+      },
+      "rows": [
+        {
+          "id": "gsm8k:914",
+          "thinking": false,
+          "passed": false,
+          "final_segment_available": true,
+          "completed_and_correct": false,
+          "new_tokens": 512,
+          "cap": true,
+          "seconds": 61.85950017600044,
+          "same_historical_prefix_or_completed_output": true
+        },
+        {
+          "id": "gsm8k:501",
+          "thinking": false,
+          "passed": false,
+          "final_segment_available": true,
+          "completed_and_correct": false,
+          "new_tokens": 6,
+          "cap": false,
+          "seconds": 1.3751694900001894,
+          "same_historical_prefix_or_completed_output": true
+        },
+        {
+          "id": "lcb:abc387_a",
+          "thinking": false,
+          "passed": false,
+          "final_segment_available": true,
+          "completed_and_correct": false,
+          "new_tokens": 512,
+          "cap": true,
+          "seconds": 65.5200361060015,
+          "same_historical_prefix_or_completed_output": true,
+          "audit_v2_passed": false,
+          "audit_v2_category": "IndexError"
+        },
+        {
+          "id": "gsm8k:914",
+          "thinking": true,
+          "passed": true,
+          "final_segment_available": true,
+          "completed_and_correct": true,
+          "new_tokens": 309,
+          "cap": false,
+          "seconds": 36.50151495499995
+        },
+        {
+          "id": "gsm8k:501",
+          "thinking": true,
+          "passed": false,
+          "final_segment_available": false,
+          "completed_and_correct": false,
+          "new_tokens": 512,
+          "cap": true,
+          "seconds": 60.6604949090015
+        },
+        {
+          "id": "lcb:abc387_a",
+          "thinking": true,
+          "passed": false,
+          "final_segment_available": false,
+          "completed_and_correct": false,
+          "new_tokens": 512,
+          "cap": true,
+          "seconds": 60.95471643199926,
+          "audit_v2_passed": false,
+          "audit_v2_category": "SyntaxError"
+        }
+      ]
+    },
+    "liquid": {
+      "aggregate": {
+        "False": {
+          "tasks": 3,
+          "raw_correct": 0,
+          "final_segments_available": 3,
+          "completed_and_correct": 0,
+          "capped": 1,
+          "tokens": 561,
+          "seconds": 184.2695873929988
+        },
+        "True": {
+          "tasks": 3,
+          "raw_correct": 0,
+          "final_segments_available": 0,
+          "completed_and_correct": 0,
+          "capped": 3,
+          "tokens": 1536,
+          "seconds": 512.956481109999
+        }
+      },
+      "rows": [
+        {
+          "id": "gsm8k:914",
+          "thinking": false,
+          "passed": false,
+          "final_segment_available": true,
+          "completed_and_correct": false,
+          "new_tokens": 512,
+          "cap": true,
+          "seconds": 164.27641224500076,
+          "same_historical_prefix_or_completed_output": true
+        },
+        {
+          "id": "gsm8k:501",
+          "thinking": false,
+          "passed": false,
+          "final_segment_available": true,
+          "completed_and_correct": false,
+          "new_tokens": 6,
+          "cap": false,
+          "seconds": 3.6398643309985346,
+          "same_historical_prefix_or_completed_output": true
+        },
+        {
+          "id": "lcb:abc387_a",
+          "thinking": false,
+          "passed": false,
+          "final_segment_available": true,
+          "completed_and_correct": false,
+          "new_tokens": 43,
+          "cap": false,
+          "seconds": 16.35331081699951,
+          "same_historical_prefix_or_completed_output": true,
+          "audit_v2_passed": false,
+          "audit_v2_category": "WrongStdout"
+        },
+        {
+          "id": "gsm8k:914",
+          "thinking": true,
+          "passed": false,
+          "final_segment_available": false,
+          "completed_and_correct": false,
+          "new_tokens": 512,
+          "cap": true,
+          "seconds": 168.2263870400002
+        },
+        {
+          "id": "gsm8k:501",
+          "thinking": true,
+          "passed": false,
+          "final_segment_available": false,
+          "completed_and_correct": false,
+          "new_tokens": 512,
+          "cap": true,
+          "seconds": 172.5328310249988
+        },
+        {
+          "id": "lcb:abc387_a",
+          "thinking": true,
+          "passed": false,
+          "final_segment_available": false,
+          "completed_and_correct": false,
+          "new_tokens": 512,
+          "cap": true,
+          "seconds": 172.197263045,
+          "audit_v2_passed": false,
+          "audit_v2_category": "SyntaxError"
+        }
+      ]
+    }
+  },
+  "comparisons_are_observed_development_only": true,
+  "reference_answers_in_inference": false,
+  "backward_passes": 0,
+  "development": {
+    "original": {
+      "tasks": 12,
+      "cases": 66,
+      "total_cases": 81,
+      "controls": 4,
+      "anchor_nll": 3.1867156426111856
+    },
+    "parent": {
+      "tasks": 11,
+      "cases": 69,
+      "total_cases": 81,
+      "controls": 4,
+      "anchor_nll": 3.1837292512257895
+    },
+    "target": {
+      "tasks": 11,
+      "cases": 70,
+      "total_cases": 81,
+      "controls": 4,
+      "anchor_nll": 3.1854657729466758
+    }
+  },
+  "selection": {
+    "selected": "parent",
+    "checkpoint": "rsi100/checkpoints/best.pt",
+    "checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "patch": null,
+    "checkpoint_promoted": false,
+    "hypothesis_outcomes": {
+      "006": "rejected_anchor_nll_regression",
+      "007": "rejected_no_screen_gain"
+    },
+    "fresh_validation_consumed": false,
+    "weight_selection_uses_thinking_diagnostic": false,
+    "reason": "Neither new direct-weight intervention passed development; preserve unchanged parent"
+  },
+  "router_trial": {
+    "trial": 7,
+    "stage": "rejected_on_screen",
+    "backward_passes": 0,
+    "screens": {
+      "inverse_control": {
+        "rows": [
+          {
+            "id": "prefix_sums",
+            "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]",
+            "new_tokens": 32,
+            "hit_limit": false,
+            "seconds": 11.504650890999983,
+            "thinking": false,
+            "passed": 2,
+            "total": 5,
+            "all_passed": false,
+            "category": "WrongReturnValue",
+            "error_types": [
+              "WrongReturnValue"
+            ],
+            "case_passed": [
+              true,
+              false,
+              true,
+              false,
+              false
+            ],
+            "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]"
+          },
+          {
+            "id": "rotate_right",
+            "output": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]",
+            "new_tokens": 43,
+            "hit_limit": false,
+            "seconds": 13.636602966998908,
+            "thinking": false,
+            "passed": 3,
+            "total": 5,
+            "all_passed": false,
+            "category": "WrongReturnValue",
+            "error_types": [
+              "WrongReturnValue"
+            ],
+            "case_passed": [
+              true,
+              false,
+              true,
+              true,
+              false
+            ],
+            "code": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]"
+          },
+          {
+            "id": "longest_run",
+            "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+            "new_tokens": 98,
+            "hit_limit": false,
+            "seconds": 32.80256905100032,
+            "thinking": false,
+            "passed": 4,
+            "total": 5,
+            "all_passed": false,
+            "category": "WrongReturnValue",
+            "error_types": [
+              "WrongReturnValue"
+            ],
+            "case_passed": [
+              true,
+              true,
+              true,
+              true,
+              false
+            ],
+            "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0"
+          },
+          {
+            "id": "sum_abs",
+            "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+            "new_tokens": 29,
+            "hit_limit": false,
+            "seconds": 10.333337841000684,
+            "thinking": false,
+            "passed": 5,
+            "total": 5,
+            "all_passed": true,
+            "category": "passed",
+            "error_types": [],
+            "case_passed": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "code": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total"
+          },
+          {
+            "id": "palindrome",
+            "output": "def solve(s):\n    return s == s[::-1]",
+            "new_tokens": 14,
+            "hit_limit": false,
+            "seconds": 6.007408076000502,
+            "thinking": false,
+            "passed": 6,
+            "total": 6,
+            "all_passed": true,
+            "category": "passed",
+            "error_types": [],
+            "case_passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "code": "def solve(s):\n    return s == s[::-1]"
+          },
+          {
+            "id": "binary_search",
+            "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    return xs.index(target) if target in xs else -1",
+            "new_tokens": 32,
+            "hit_limit": false,
+            "seconds": 10.736051576999671,
+            "thinking": false,
+            "passed": 5,
+            "total": 5,
+            "all_passed": true,
+            "category": "passed",
+            "error_types": [],
+            "case_passed": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    return xs.index(target) if target in xs else -1"
+          }
+        ],
+        "architecture": {
+          "passes": 2,
+          "layer_executions": 56,
+          "physical_layers": 32,
+          "mhc_streams": 2,
+          "visit_gain_weights": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "conv_kernel": 7,
+          "learned_history_nonzero": 221184,
+          "local_window": 256,
+          "loaded_parameters": 1020252592,
+          "backward_passes": 0,
+          "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3",
+          "layer_visit_gains": {
+            "4": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "5": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "6": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "7": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "8": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "9": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "10": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "11": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "12": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "13": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "14": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "15": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "16": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "17": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "18": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "19": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "20": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "21": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "22": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "23": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "24": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "25": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "26": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "27": [
+              0.949999988079071,
+              0.05000000074505806
+            ]
+          },
+          "layer25_ffn_post_logits": [
+            0.12516313791275024,
+            -0.12516313791275024
+          ]
+        },
+        "layer26_stream_input_difference": {
+          "observations": 496,
+          "max_abs_difference": 0.0546875
+        },
+        "case_wins": 0,
+        "case_losses": 0
+      },
+      "target": {
+        "rows": [
+          {
+            "id": "prefix_sums",
+            "output": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]",
+            "new_tokens": 32,
+            "hit_limit": false,
+            "seconds": 10.614929643999858,
+            "thinking": false,
+            "passed": 2,
+            "total": 5,
+            "all_passed": false,
+            "category": "WrongReturnValue",
+            "error_types": [
+              "WrongReturnValue"
+            ],
+            "case_passed": [
+              true,
+              false,
+              true,
+              false,
+              false
+            ],
+            "code": "def solve(xs):\n    if not xs:\n        return []\n    return [sum([x for x in xs]) for x in xs]"
+          },
+          {
+            "id": "rotate_right",
+            "output": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]",
+            "new_tokens": 43,
+            "hit_limit": false,
+            "seconds": 15.337054769001043,
+            "thinking": false,
+            "passed": 3,
+            "total": 5,
+            "all_passed": false,
+            "category": "WrongReturnValue",
+            "error_types": [
+              "WrongReturnValue"
+            ],
+            "case_passed": [
+              true,
+              false,
+              true,
+              true,
+              false
+            ],
+            "code": "def solve(xs, k):\n    if not xs:\n        return []\n    if k < 0:\n        k = abs(k)\n    return xs[k:] + xs[:k]"
+          },
+          {
+            "id": "longest_run",
+            "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0",
+            "new_tokens": 98,
+            "hit_limit": false,
+            "seconds": 30.39212089099965,
+            "thinking": false,
+            "passed": 4,
+            "total": 5,
+            "all_passed": false,
+            "category": "WrongReturnValue",
+            "error_types": [
+              "WrongReturnValue"
+            ],
+            "case_passed": [
+              true,
+              true,
+              true,
+              true,
+              false
+            ],
+            "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_len = 1\n    current_len = 1\n    for i in range(1, len(xs)):\n        if xs[i] == xs[i-1]:\n            current_len += 1\n        else:\n            max_len = max(max_len, current_len)\n            current_len = 1\n    return max_len if current_len > 0 else 0"
+          },
+          {
+            "id": "sum_abs",
+            "output": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total",
+            "new_tokens": 29,
+            "hit_limit": false,
+            "seconds": 10.435139748000438,
+            "thinking": false,
+            "passed": 5,
+            "total": 5,
+            "all_passed": true,
+            "category": "passed",
+            "error_types": [],
+            "case_passed": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "code": "def solve(xs):\n    total = 0\n    for x in xs:\n        total += abs(x)\n    return total"
+          },
+          {
+            "id": "palindrome",
+            "output": "def solve(s):\n    return s == s[::-1]",
+            "new_tokens": 14,
+            "hit_limit": false,
+            "seconds": 5.346471757000472,
+            "thinking": false,
+            "passed": 6,
+            "total": 6,
+            "all_passed": true,
+            "category": "passed",
+            "error_types": [],
+            "case_passed": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "code": "def solve(s):\n    return s == s[::-1]"
+          },
+          {
+            "id": "binary_search",
+            "output": "def solve(xs, target):\n    if not xs:\n        return -1\n    return xs.index(target) if target in xs else -1",
+            "new_tokens": 32,
+            "hit_limit": false,
+            "seconds": 10.460595832999388,
+            "thinking": false,
+            "passed": 5,
+            "total": 5,
+            "all_passed": true,
+            "category": "passed",
+            "error_types": [],
+            "case_passed": [
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "code": "def solve(xs, target):\n    if not xs:\n        return -1\n    return xs.index(target) if target in xs else -1"
+          }
+        ],
+        "architecture": {
+          "passes": 2,
+          "layer_executions": 56,
+          "physical_layers": 32,
+          "mhc_streams": 2,
+          "visit_gain_weights": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "conv_kernel": 7,
+          "learned_history_nonzero": 221184,
+          "local_window": 256,
+          "loaded_parameters": 1020252592,
+          "backward_passes": 0,
+          "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3",
+          "layer_visit_gains": {
+            "4": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "5": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "6": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "7": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "8": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "9": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "10": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "11": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "12": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "13": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "14": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "15": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "16": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "17": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "18": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "19": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "20": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "21": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "22": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "23": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "24": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "25": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "26": [
+              0.949999988079071,
+              0.05000000074505806
+            ],
+            "27": [
+              0.949999988079071,
+              0.05000000074505806
+            ]
+          },
+          "layer25_ffn_post_logits": [
+            -0.12516313791275024,
+            0.12516313791275024
+          ]
+        },
+        "layer26_stream_input_difference": {
+          "observations": 496,
+          "max_abs_difference": 0.0546875
+        },
+        "case_wins": 0,
+        "case_losses": 0
+      }
+    },
+    "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "checkpoint_promoted": false,
+    "metadata": {
+      "edited_tensor": "model.language_model.layers.25.mhc_ffn.bias",
+      "changed_parameter_indices": [
+        2,
+        3
+      ],
+      "target_values": [
+        -0.125163142954006,
+        0.125163142954006
+      ],
+      "inverse_control_values": [
+        0.125163142954006,
+        -0.125163142954006
+      ],
+      "changed_parameter_count": 2,
+      "precision": "FP32",
+      "output_gains": [
+        0.9375000596046448,
+        1.0625
+      ],
+      "effective_bf16_gain_means_match_parent": true,
+      "correct_targets_or_solutions_supplied": false,
+      "hypothesis": "break identical-stream symmetry before later layers; not trained thinking"
+    },
+    "eligible_for_new_validation": false,
+    "reason": "No strict screen gain with complete case retention",
+    "model_process_active": false
+  },
+  "mHC_stream_audit": {
+    "router_count": 48,
+    "all_streams_equal_in_measured_inputs": true,
+    "router_calls": 201312,
+    "input_positions": 253920
+  },
+  "budget1024": {
+    "original": {
+      "rows": [
+        {
+          "id": "gsm8k:914",
+          "new_tokens": 309,
+          "capped": false,
+          "final_segment": true,
+          "completed_and_correct": true,
+          "reused_completed_512_output": true,
+          "same_512_prefix": true
+        },
+        {
+          "id": "gsm8k:501",
+          "new_tokens": 570,
+          "capped": false,
+          "final_segment": true,
+          "completed_and_correct": true,
+          "reused_completed_512_output": false,
+          "same_512_prefix": true
+        },
+        {
+          "id": "lcb:abc387_a",
+          "new_tokens": 1024,
+          "capped": true,
+          "final_segment": false,
+          "completed_and_correct": false,
+          "reused_completed_512_output": false,
+          "same_512_prefix": true
+        }
+      ],
+      "tasks": 3,
+      "completed_and_correct": 2,
+      "capped": 1
+    },
+    "liquid": {
+      "rows": [
+        {
+          "id": "gsm8k:914",
+          "new_tokens": 1024,
+          "capped": true,
+          "final_segment": false,
+          "completed_and_correct": false,
+          "reused_completed_512_output": false,
+          "same_512_prefix": true
+        },
+        {
+          "id": "gsm8k:501",
+          "new_tokens": 1024,
+          "capped": true,
+          "final_segment": false,
+          "completed_and_correct": false,
+          "reused_completed_512_output": false,
+          "same_512_prefix": true
+        },
+        {
+          "id": "lcb:abc387_a",
+          "new_tokens": 1024,
+          "capped": true,
+          "final_segment": false,
+          "completed_and_correct": false,
+          "reused_completed_512_output": false,
+          "same_512_prefix": true
+        }
+      ],
+      "tasks": 3,
+      "completed_and_correct": 0,
+      "capped": 3
+    }
+  },
+  "preserved_legacy_frozen_hashes": true
+}

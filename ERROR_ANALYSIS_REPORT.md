@@ -1,8 +1,8 @@
 # Liquid Sense — diagnóstico de erros e edições 006/007
 
-Estado deste registro: pesquisa de pesos concluída sem promoção; extensão
-pareada de raciocínio para 1.024 tokens ainda em execução. Os resultados
-abaixo sobre pesos já estão concluídos. Não há execução permanente entre turnos.
+Estado: concluído, sem promoção de pesos. Edições, controles, comparação
+original/híbrido e diagnóstico pareado até 1.024 tokens terminaram.
+Não há execução permanente entre turnos.
 
 O checkpoint selecionado continua sendo
 [`rsi100/checkpoints/best.pt`](rsi100/checkpoints/best.pt), SHA256
@@ -51,8 +51,8 @@ tokenizador, prompts, testes e condições para todos. Não são problemas inéd
 | Edição 006, experimental | 11/16 | 70/81 | 4/4 | 3,185466 |
 
 O pai ganha sete casos e perde quatro contra o original; também resolve uma
-tarefa completa a menos. Entre as diferenças estão `overlap_count` (Qwen5/5,
-pai2/5) e `longest_run` (5/5 contra4/5). Há ganhos em outros problemas.
+tarefa completa a menos. Entre as diferenças estão `overlap_count` (Qwen 5/5,
+pai 2/5) e `longest_run` (5/5 contra 4/5). Há ganhos em outros problemas.
 Portanto, o total de casos maior não demonstra superioridade geral do híbrido.
 
 ## Edição 006: proteção de linguagem no ajuste negativo
@@ -60,18 +60,18 @@ Portanto, o total de casos maior não demonstra superioridade geral do híbrido.
 Alterou diretamente
 `model.language_model.layers.31.mlp.down_proj.weight`, BF16, [1024,3584].
 Usou o estado real de decodificação antes do próprio token errado `[k`
-(ID6521, posição35) no problema de rotação. Nenhum substituto correto foi
+(ID 6521, posição 35) no problema de rotação. Nenhum substituto correto foi
 fornecido. A direção foi residualizada por SVD contra 137 estados de código
-e 149 estados de textos comuns; dose relativa fixada em0,006, sem gradientes.
+e 149 estados de textos comuns; dose relativa fixada em 0,006, sem gradientes.
 
 Foram alterados 1.858.254 valores BF16. O ajuste ganhou um caso de rotação,
 sem perder casos corretos medidos, mas não ganhou tarefa completa. A NLL piorou
-0,001736522 contra o pai, ultrapassando a tolerância de1e-6 pré-registrada.
+0,001736522 contra o pai, ultrapassando a tolerância de 1e-6 pré-registrada.
 Foi rejeitado pelo critério conservador de preservação.
 
 A proteção ideal não sobrevive integralmente ao arredondamento: a norma máxima
-da perturbação nos estados protegidos foi de aproximadamente0,0000099 antes
-da conversão e0,01032 depois. O erro de arredondamento corresponde a21,7% da
+da perturbação nos estados protegidos foi de aproximadamente 0,0000099 antes
+da conversão e 0,01032 depois. O erro de arredondamento corresponde a 21,7% da
 norma da edição ideal. Proteger uma subdireção não garante preservar o modelo.
 As âncoras usadas nessa proteção são desenvolvimento, não validação independente.
 
@@ -81,20 +81,20 @@ probabilidade do token nem prova de um conjunto único de pesos culpados.
 
 ## Edição 007: separar os fluxos mHC
 
-Hipótese separada, pré-registrada depois da rejeição006. Alterou somente dois
-parâmetros FP32 de `model.language_model.layers.25.mhc_ffn.bias`, índices2/3,
-para `[-log(17/15), +log(17/15)]`. A camada25 veio do contraste de ativações
+Hipótese separada, pré-registrada depois da rejeição 006. Alterou somente dois
+parâmetros FP32 de `model.language_model.layers.25.mhc_ffn.bias`, índices 2/3,
+para `[-log(17/15), +log(17/15)]`. A camada 25 veio do contraste de ativações
 de erros contra controles já medido, sem escolha por novos resultados.
 
-Os ganhos tornam-se aproximadamente15/16 e17/16. A média dos multiplicadores
+Os ganhos tornam-se aproximadamente 15/16 e 17/16. A média dos multiplicadores
 por passagem também coincide com o pai depois da conversão BF16; produtos,
 somas e camadas seguintes ainda podem mudar o resultado. Um controle inverso
 usou os sinais trocados, com a mesma intensidade, sem poder ser selecionado.
-A proposta inicial de logits0,2 foi substituída por esse cálculo analítico
-antes de qualquer construção ou geração007, sem feedback de acurácia.
+A proposta inicial de logits 0,2 foi substituída por esse cálculo analítico
+antes de qualquer construção ou geração 007, sem feedback de acurácia.
 
-Ambas as intervenções separaram os fluxos na camada26: diferença máxima
-medida0,0546875. Ambas mantiveram25/31 casos da triagem, com zero ganhos e
+Ambas as intervenções separaram os fluxos na camada 26: diferença máxima
+medida 0,0546875. Ambas mantiveram 25/31 casos da triagem, com zero ganhos e
 zero perdas. A intervenção estrutural funcionou; o benefício de programação
 não apareceu. Candidata rejeitada sem consumir o teste reservado.
 
@@ -102,23 +102,44 @@ não apareceu. Candidata rejeitada sem consumir o teste reservado.
 
 Diagnóstico separado com duas questões GSM8K e um programa LiveCodeBench já
 observados, sem identidade do chat e sem respostas nos prompts. Os dois modelos
-foram testados com raciocínio ligado/desligado e512 tokens, sempre sem amostragem.
+foram testados com raciocínio ligado/desligado e 512 tokens, sempre sem amostragem.
 Isso evita confundir ativação do modo com uma mudança simultânea de temperatura.
 
-Em512 tokens, o Qwen entregou uma resposta final correta no modo de raciocínio;
+Em 512 tokens, o Qwen entregou uma resposta final correta no modo de raciocínio;
 o híbrido não concluiu nenhuma das três. No problema do carro, o Qwen concluiu
-em309 tokens; o híbrido calculou a quantidade correta, mas entrou em reverificações
-de instruções e não concluiu até512. No problema de frações, o Qwen já tinha
+em 309 tokens; o híbrido calculou a quantidade correta, mas entrou em reverificações
+de instruções e não concluiu até 512. No problema de frações, o Qwen já tinha
 o cálculo correto no texto, mas a resposta final foi cortada. Não contei esse
 texto intermediário como uma resposta concluída.
 
-Está sendo executada a extensão pré-registrada de *todas* as respostas de
-raciocínio que atingiram o limite, nos dois modelos, para1.024 tokens. Saídas
-já encerradas são reutilizadas; nas reexecuções, os primeiros512 tokens precisam
-reproduzir exatamente o texto anterior. Não há seleção por acerto.
+A extensão pré-registrada de *todas* as respostas de raciocínio que atingiram
+o limite, nos dois modelos, para 1.024 tokens terminou. Saídas já encerradas
+foram reutilizadas. Nas reexecuções, os primeiros 512 tokens reproduziram o
+texto anterior, sem seleção por acerto. A igualdade dos IDs também foi
+verificada no híbrido; o diagnóstico original de 512 tokens só reteve texto.
+
+| Configuração — três problemas diagnósticos observados | Qwen original | Híbrido pai |
+|---|---:|---:|
+| Raciocínio desligado, 512 tokens | 0/3 | 0/3 |
+| Raciocínio ligado, 512 tokens | 1/3 | 0/3 |
+| Raciocínio ligado, até 1.024 tokens | 2/3 | 0/3 |
+
+Acerto nesta tabela exige resposta final após o fechamento do pensamento e
+aprovação do avaliador; no modo desligado, vale a resposta direta. Cálculos
+corretos dentro de raciocínio inacabado não contam como resposta entregue.
+Não foi executado o modo desligado com 1.024 tokens; a terceira linha mede
+aumento de orçamento dentro do modo de raciocínio, sem uma comparação ligada/
+desligada nesse novo limite. Estes três problemas não representam o benchmark.
+
+O Qwen concluiu a questão de frações em 570 tokens. O híbrido atingiu 1.024
+nos três problemas sem fechar o pensamento. Nas duas questões de matemática,
+fez o cálculo, mas passou a repetir reverificações. No problema do carro,
+atribuiu ao prompt uma instrução que não aparece nem na entrada renderizada
+nem no template. Portanto, neste diagnóstico, aumentar o raciocínio não
+melhorou o híbrido: o controle de conclusão é uma falha concreta a investigar.
 
 O [cartão oficial do Qwen na revisão usada](https://huggingface.co/Qwen/Qwen3.5-0.8B/blob/2fc06364715b967f1860aea9cf38778875588b17/README.md)
-alerta sobre repetições sem término no modo de raciocínio do0.8B. Recomenda
+alerta sobre repetições sem término no modo de raciocínio do 0.8B. Recomenda
 orçamentos e amostragem diferentes deste piloto de CPU. Nossos resultados
 não equivalem aos benchmarks oficiais nem medem o desempenho máximo possível.
 
@@ -141,6 +162,15 @@ públicos anteriores permanecem observados e não são um novo teste final.
   [auditoria do avaliador](reasoning/cycle2/judge_audit.json).
 
 Os pesos exatos, direções e traços estão versionados em `reasoning/cycle2/`.
-Verificações técnicas:41 testes passaram; os17 arquivos congelados do piloto
-público anterior mantêm seus hashes. O modo experimental de raciocínio no chat
-é configuração de inferência, sem alegação de melhoria aprendida nos pesos.
+Verificações técnicas: 41 testes passaram; os 17 arquivos congelados do piloto
+público anterior mantêm seus hashes. Os checkpoints anteriores, os pesos
+originais e os cinco novos artefatos de tensores foram conferidos por hash
+e leitura segura. [Integridade](reasoning/cycle2/integrity.json),
+[estatísticas](reasoning/cycle2/summary.json) e [logs](reasoning/cycle2/logs/).
+
+O chat permite `--thinking --max-new-tokens 1024`, como configuração de
+inferência experimental, sem alegação de melhoria aprendida nos pesos.
+O modo não virou padrão diante dos resultados. Um teste real com limite de
+um token confirmou que um pensamento sem resposta final é informado como
+inconcluso, sem apresentar o raciocínio inacabado como resposta. Os controles
+4/4 da tabela de desenvolvimento foram medidos com raciocínio desligado.

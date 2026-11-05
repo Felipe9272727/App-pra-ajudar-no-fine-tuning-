@@ -137,3 +137,33 @@
 - User requested honest Liquid Sense identity and original-versus-hybrid tests on benchmarks used by Liquid AI. Branding stays out of raw benchmark inputs and is not a weight-quality claim.
 
 - Current cycle: all three new hypotheses completed without promotion. Public benchmark generation is a locked audit; do not change weights, source judges, answers or selected IDs after its outputs. Resume only missing rows from benchmarks/reasoning_20261105/results_*.json.
+
+## Latest error-analysis continuation — 2026-11-05
+
+- Branch `codex/liquid-sense-error-analysis-20261105`; read
+  `reasoning/cycle2/status.json`, `selection.json`, `ERROR_ANALYSIS_REPORT.md`
+  and the cycle's protocols before inference. Earlier statuses are historical.
+- 006 is complete: 69→70/81 development cases, 11/16 tasks unchanged, 4/4
+  controls, but anchor NLL 3.183729251→3.185465773; rejected. 007 is complete:
+  two FP32 post-stream bias values separate mHC streams, but target/inverse
+  both remain 25/31 screen cases; rejected. Do not repeat either decision.
+- Retain the unchanged best.pt parent hash 46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
+  Original paired development is 12/16 tasks, 66/81 cases versus parent 11/16,
+  69/81: partial-case gains are not unambiguous superiority.
+- Static and actual generation audits show 48 zero input-weight router tensors
+  and exactly equal parent mHC streams in 201312 measured router calls.
+  Structural presence is not learned conditional routing or a thought module.
+- The public 36-task pilot and the new 3-task thought-budget diagnostic are
+  OBSERVED, not fresh final data. Keep original judges/golds/frozen files.
+  Corrected AST scoring is a separate audit and changed no old LCB totals.
+- All 512/1024 diagnostic rows are complete; do not repeat them. At 1024,
+  original completed 2/3 correct finals versus hybrid 0/3; both hybrid math
+  traces calculate correctly but repeat invented/metatext instructions.
+  Weight selection is locked to parent independently of those outputs.
+  No live worker should be promised after a turn ends; all were finished.
+- RSI100's eight validation tasks remain unconsumed because neither new edit
+  passed development. Any future candidate needs a new preregistration and
+  exact-hash freeze before a genuinely unobserved final comparison.
+- `liquid_sense_chat.py --thinking` is optional native inference configuration,
+  not learned identity or a validated weight improvement. Keep branding out
+  of raw tests and distinguish unfinished thought from a delivered answer.
