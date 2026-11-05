@@ -1,4 +1,4 @@
-"""Shared direct-parameter overlay; no benchmark identity prompt."""
+"""Shared direct-parameter overlay; distinct name from the legacy lab common."""
 import os
 import sys
 from pathlib import Path

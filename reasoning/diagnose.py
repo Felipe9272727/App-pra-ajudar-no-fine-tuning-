@@ -2,7 +2,7 @@
 import collections
 import json
 import math
-from common import *
+from runtime_helpers import *
 
 ERRORS = ['prefix_sums','rotate_right','longest_run']
 GUARDS = ['sum_abs','palindrome','binary_search']
