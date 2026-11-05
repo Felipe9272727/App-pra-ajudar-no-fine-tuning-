@@ -1,0 +1,79 @@
+{
+  "status": "complete",
+  "variant": "bypass",
+  "model": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    }
+  },
+  "rows": [
+    {
+      "id": "explain_cache_pt",
+      "output": "O cache é um sistema de armazenamento rápido que armazena dados temporários para evitar que o computador precise ler informações repetidas.\nO cache é um sistema de armazenamento rápido que armazena dados temporários para evitar que o computador precise ler informações repetidas.\n</think>\n\nO cache é um sistema de armazenamento rápido que armazena dados temporários para evitar que o computador precise ler informações repetidas.\nO cache é um sistema de armazenamento rápido que armazena dados temporários para evitar que o computador precise ler informações repetidas.\n</think>\n\nO cache é um sistema de armazenamento rápido que armazena dados temporários para",
+      "new_tokens": 128,
+      "hit_limit": true,
+      "seconds": 44.66595325600065,
+      "thinking": false,
+      "metrics": {
+        "words": 99,
+        "characters": 660,
+        "sentences_heuristic": 5,
+        "bullet_lines": 0,
+        "repeated_word_trigram_fraction": 0.7525773195876289,
+        "structural_instruction_pass": false
+      }
+    },
+    {
+      "id": "uncertainty_pt",
+      "output": "Para investigar a latência do seu programa após uma mudança sem medição inicial, siga estes três próximos passos práticos, focando na observação e na análise de padrões:\n\n1.  **Recrie o código original com o novo comportamento**\n    Identifique exatamente qual parte do seu código mudou (ex: uma função alterada, uma variável alterada ou uma lógica de decisão alterada). Copie o código original e o código alterado lado a lado. Observe se o tempo de execução mudou e, se sim, qual parte do código alterado causou o atraso. Isso permite correlacionar a",
+      "new_tokens": 128,
+      "hit_limit": true,
+      "seconds": 44.23138498100161,
+      "thinking": false,
+      "metrics": {
+        "words": 90,
+        "characters": 551,
+        "sentences_heuristic": 5,
+        "bullet_lines": 1,
+        "repeated_word_trigram_fraction": 0.022727272727272707,
+        "structural_instruction_pass": false
+      }
+    },
+    {
+      "id": "summary_pt",
+      "output": "A biblioteca do bairro fechará na terça-feira para manutenção elétrica, permitindo que as devoluções previstas para terça-feira sejam realizadas na quarta sem multa.",
+      "new_tokens": 30,
+      "hit_limit": false,
+      "seconds": 11.134226455003954,
+      "thinking": false,
+      "metrics": {
+        "words": 25,
+        "characters": 165,
+        "sentences_heuristic": 1,
+        "bullet_lines": 0,
+        "repeated_word_trigram_fraction": 0.0,
+        "structural_instruction_pass": true
+      }
+    }
+  ]
+}
