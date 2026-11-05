@@ -1,25 +1,26 @@
 """Honest branded chat; identity configuration is excluded from benchmarks."""
 import argparse
+import contextlib
 import json
 import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT/'reasoning'))
-from runtime_helpers import load,apply,e,torch,PARENT_HASH
 
 
 def profile():
     return json.loads((ROOT/'model_identity.json').read_text())
 
 
-@torch.inference_mode()
 def main():
     p=argparse.ArgumentParser();p.add_argument('--message');p.add_argument('--about',action='store_true')
     p.add_argument('--max-new-tokens',type=int,default=256);a=p.parse_args()
     info=profile()
     if a.about:
         print(info['presentation']);return
+    with contextlib.redirect_stdout(sys.stderr):
+        from runtime_helpers import load,apply,e,torch,PARENT_HASH
     assert 1<=a.max_new_tokens<=1024
     model,tok,parent,_=load()
     selection_path=ROOT/'reasoning/selection.json'
@@ -40,8 +41,9 @@ def main():
             if ids.shape[1]<=2048 or len(messages)<=2:break
             del messages[1:3]
         torch.manual_seed(0)
-        output=model.generate(input_ids=ids,max_new_tokens=a.max_new_tokens,use_cache=True,do_sample=False,
-                              pad_token_id=tok.eos_token_id)[0,ids.shape[1]:]
+        with torch.inference_mode():
+            output=model.generate(input_ids=ids,max_new_tokens=a.max_new_tokens,use_cache=True,do_sample=False,
+                                  pad_token_id=tok.eos_token_id)[0,ids.shape[1]:]
         answer=tok.decode(output,skip_special_tokens=True)
         print(answer,flush=True);messages.append({'role':'assistant','content':answer})
         if a.message is not None:break
