@@ -1,0 +1,15 @@
+{
+  "files": {
+    "reasoning/cycle2/ROUTER007_PROTOCOL.md": "f47e05d76f47678a8e323c5dc9525044bfdad1356e79ce08bafa84619f129365",
+    "reasoning/cycle2/router007.py": "2b9e3c20ead7d1314cbebf70014bbfaf3e919b829ea1c3276f4096132f27f2ac",
+    "reasoning/cycle2/router_static_audit.json": "88e2181bcd9d4e7e3e1ce091e0ed72e772ea02b30e10a8b6c5d1e985b1ca5497",
+    "reasoning/cycle2/trial_006.json": "b054693e160f3d76eda7b9d6e54a5609f3d7a8ea786daeba241bb13616f3a5bc",
+    "reasoning/cycle2/validation_frozen.json": "2c931abd91b25ee894632b50665652ee3c4ab1d297467e9069cab96e468256d4",
+    "reasoning/diagnostic.json": "8b1a3d4ab907f466c5896f8fdb4ef5d567aef0ae056c1120d3b35aeb2d41e1b1",
+    "rsi100/checkpoints/best.pt": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8"
+  },
+  "candidate_outputs_observed": false,
+  "dose_chosen_by_task_scores": false,
+  "native_passes": 2,
+  "new_validation_observed": false
+}

@@ -28,6 +28,8 @@ def full(model,tok,name):
 @torch.inference_mode()
 def main():
     verify();assert not (HERE/'trial_007.json').exists(),'Inspect saved outcome instead of repeating'
+    locked=json.loads((HERE/'router007_frozen.json').read_text())
+    for path,digest in locked['files'].items():assert e.cr.file_hash(ROOT/path)==digest,path
     assert json.loads((HERE/'trial_006.json').read_text())['stage']=='rejected_full_gates'
     assert json.loads((HERE/'validation_frozen.json').read_text())['candidate_trials']==[]
     audit=json.loads((HERE/'router_static_audit.json').read_text())
