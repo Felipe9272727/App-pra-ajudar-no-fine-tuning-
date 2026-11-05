@@ -1,0 +1,343 @@
+{
+  "source": "actual unchanged hybrid 512-token greedy diagnostic",
+  "intervention": false,
+  "routers": {
+    "4.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "4.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "5.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "5.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "6.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "6.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "7.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "7.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "8.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "8.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "9.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "9.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "10.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "10.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "11.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "11.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "12.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "12.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "13.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "13.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "14.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "14.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "15.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "15.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "16.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "16.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "17.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "17.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "18.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "18.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "19.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "19.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "20.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "20.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "21.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "21.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "22.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "22.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "23.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "23.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "24.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "24.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "25.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "25.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "26.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "26.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "27.mhc_attn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    },
+    "27.mhc_ffn": {
+      "observations": 4194,
+      "positions": 5290,
+      "max_stream_abs_difference": 0.0,
+      "weight_nonzero": 0,
+      "post_bias_equal": true
+    }
+  },
+  "all_streams_equal_in_measured_inputs": true
+}
