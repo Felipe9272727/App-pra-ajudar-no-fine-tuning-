@@ -211,6 +211,330 @@
         "WrongStdout"
       ],
       "code": "import sys\n\ndef solve():\n    A, B = map(int, sys.stdin.read().split())\n    print(A + B)\n\nif __name__ == \"__main__\":\n    solve()"
+    },
+    {
+      "id": "lcb:abc389_b",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "5f2e58b80e09b8b6897eadf3e06e0f46488df2235eecbf70e85b2115d91923f8",
+      "output": "```python\nimport sys\nimport math\n\ndef solve():\n    X = int(sys.stdin.read().strip())\n    # Since N! = X and X >= 2, N >= 2.\n    # We can compute N by taking the logarithm base 10 or natural log,\n    # then taking the inverse log.\n    # log10(N!) = sum(log10(i) for i in 2..N)\n    # log10(N!) = log10(X)\n    # log10(N) = log10(X) - sum(log10(i) for i in 2..N-1)\n    # This avoids floating point errors for large X.\n    # Alternatively, use math.log10 for simplicity.\n    # log10(N!) = log10(X)\n    # log10(N) = log10(X) - log10(2) - log10(3) - ... - log10(N-1)\n    # This is equivalent to: log10(N) = log10(X) - log10(2) - log10(3) - ... - log10(N-1)\n    # We can compute this iteratively.\n    # Let L = log10(X)\n    # For i in range(2, N):\n    #     L -= log10(i)\n    #     N = i\n    # This avoids computing N! directly.\n    # However, we need to find N such that N! = X.\n    # Since we are given X, we can compute log10(N!) iteratively.\n    # Let L = log10(X)\n    # For i in range(2, N):\n    #    ",
+      "new_tokens": 384,
+      "hit_limit": true,
+      "seconds": 126.31181667500005,
+      "thinking": false,
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "passed": 0,
+      "total": 16,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "invalid syntax (<unknown>, line 1)",
+      "code": "```python\nimport sys\nimport math\n\ndef solve():\n    X = int(sys.stdin.read().strip())\n    # Since N! = X and X >= 2, N >= 2.\n    # We can compute N by taking the logarithm base 10 or natural log,\n    # then taking the inverse log.\n    # log10(N!) = sum(log10(i) for i in 2..N)\n    # log10(N!) = log10(X)\n    # log10(N) = log10(X) - sum(log10(i) for i in 2..N-1)\n    # This avoids floating point errors for large X.\n    # Alternatively, use math.log10 for simplicity.\n    # log10(N!) = log10(X)\n    # log10(N) = log10(X) - log10(2) - log10(3) - ... - log10(N-1)\n    # This is equivalent to: log10(N) = log10(X) - log10(2) - log10(3) - ... - log10(N-1)\n    # We can compute this iteratively.\n    # Let L = log10(X)\n    # For i in range(2, N):\n    #     L -= log10(i)\n    #     N = i\n    # This avoids computing N! directly.\n    # However, we need to find N such that N! = X.\n    # Since we are given X, we can compute log10(N!) iteratively.\n    # Let L = log10(X)\n    # For i in range(2, N):\n    #"
+    },
+    {
+      "id": "lcb:abc389_a",
+      "benchmark": "LiveCodeBench-v6-subset",
+      "prompt_sha256": "d3c444367d6e900aaaea30e3255943be69cc3f170a67bfb11cc4869e9be57bdb",
+      "output": "import sys\nimport math\n\ndef solve():\n    s = sys.stdin.readline().strip()\n    if not s:\n        return\n    n = len(s)\n    if n == 3:\n        d1 = int(s[0])\n        d2 = int(s[2])\n        x = s[1]\n        ans = d1 * d2\n        print(ans)\n    else:\n        return\n\nif __name__ == \"__main__\":\n    solve()\n",
+      "new_tokens": 109,
+      "hit_limit": false,
+      "seconds": 36.28271901300013,
+      "thinking": false,
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "passed": 16,
+      "total": 16,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "code": "import sys\nimport math\n\ndef solve():\n    s = sys.stdin.readline().strip()\n    if not s:\n        return\n    n = len(s)\n    if n == 3:\n        d1 = int(s[0])\n        d2 = int(s[2])\n        x = s[1]\n        ans = d1 * d2\n        print(ans)\n    else:\n        return\n\nif __name__ == \"__main__\":\n    solve()"
+    },
+    {
+      "id": "gsm8k:914",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "f844df48913dc6e2acad33020f96ee233dd856e68e94407fca70801fcfd32479",
+      "output": "1000000000000000000000000000000000000000000000000000000000000000",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 21.845049722999647,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:501",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "a2e3a6da4b498f02b655d95d7abf17129e65c78a9329e165b98d2ff2ff9dc56a",
+      "output": "119.5",
+      "new_tokens": 6,
+      "hit_limit": false,
+      "seconds": 3.3557092179999017,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:835",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "918f1f792a86bbc1015b9f08a4b8e230ff025d534d216856149bdb9b0c370a89",
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 2.3177593909995267,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:157",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "58e1f02cde1075ad4f04fd48273733b8537317416001256e3de2fd738391c722",
+      "output": "1000000000000000000000000000000000000000000000000000000000000000",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 22.32138069499979,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:930",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "3c78ba6e2a62f2002f928af5edcba79a8e2c2963643e5e54afd7dce10746db04",
+      "output": "62 - 31 - 8 - 9 = 14",
+      "new_tokens": 17,
+      "hit_limit": false,
+      "seconds": 7.200992158999725,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:850",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "44f22bd1655ad3546e0981dd69f2e67be84486b19f47c11bcbc4ed7620296e95",
+      "output": "100",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 2.9296603659995526,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:311",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "24ad13861eebbec1a1a13cbc734975bade6d6111d5556703884720f2fb02ac1e",
+      "output": "1500",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 3.340634580999904,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1162",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "04a0da96bbd7585909ee0aff5c9be028b8f72d528512b9db6d6754fadcc11276",
+      "output": "15",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 2.3315801709995867,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1058",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "c3753b3917f749a87dc60cf19888b6913704c85d45666b1925a95b0bea476c7a",
+      "output": "150",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 3.2233484749995114,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1206",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "7ccf0032b6e4aad883d31c986429726df02fcfc166637d81479788e9a7a037c8",
+      "output": "100000",
+      "new_tokens": 7,
+      "hit_limit": false,
+      "seconds": 3.91311455900086,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1079",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "b277ebea40102ae62ab24ab9ce7f830a04bac42cc529c06ffc399713641acf1c",
+      "output": "100%",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 3.087203469999622,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:292",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "c6bfe9574134c51f877df67849bdc4ea083634969ade82209194fb64f37618f1",
+      "output": "5000000000000000000000000000000000000000000000000000000000000000",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 22.23884090500087,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:906",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "a7d5ac4aa61d8a33897e82a67089e69428bca7d1127d2947435260a13def1c0e",
+      "output": "10",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 2.6500482219998958,
+      "thinking": false,
+      "all_passed": true,
+      "passed": 1,
+      "total": 1,
+      "case_passed": [
+        true
+      ]
+    },
+    {
+      "id": "gsm8k:46",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "4b9f210f7b9da6727a1f4473393355749a9fb94f18f020eed1cc569f0aee9591",
+      "output": "80 + 220 - 23 = 277\n",
+      "new_tokens": 19,
+      "hit_limit": false,
+      "seconds": 7.978028991999963,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:69",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "9831c0fd7d56d48275ce8f1c29d24d3186677fb7773051778423c3486a380784",
+      "output": "100",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 2.772161110000525,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
+    },
+    {
+      "id": "gsm8k:1211",
+      "benchmark": "GSM8K-zero-shot-subset",
+      "prompt_sha256": "08d94a02e2bfd9e2dc52720ed89c339bcc1825167e2460672680214f51545530",
+      "output": "1400000000000000000000000000000000000000000000000000000000000000",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 22.11563914599992,
+      "thinking": false,
+      "all_passed": false,
+      "passed": 0,
+      "total": 1,
+      "case_passed": [
+        false
+      ]
     }
   ],
   "frozen_sha256": "a4d4eebde3c1cc2618ca0775a4f63e22a8eca3255ff71947c0083e490309feb7",
