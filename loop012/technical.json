@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "variants": {
+    "target": {
+      "exactly_changed_tensors": [
+        "model.language_model.layers.6.linear_attn.in_proj_a.weight",
+        "model.language_model.layers.25.linear_attn.in_proj_a.weight"
+      ],
+      "architecture": {
+        "passes": 2,
+        "layer_executions": 56,
+        "physical_layers": 32,
+        "mhc_streams": 2,
+        "visit_gain_weights": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "conv_kernel": 7,
+        "learned_history_nonzero": 221184,
+        "local_window": 256,
+        "loaded_parameters": 1020252592,
+        "backward_passes": 0,
+        "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+      },
+      "cache": {
+        "max_abs_delta": 0.140625,
+        "same_top_token": true,
+        "passes": 2
+      },
+      "checkpoint_sha256": "20a9927dd8f069536e2ef7846477a6db27d03007395a7465f5ff933a98d262e8"
+    },
+    "inverse": {
+      "exactly_changed_tensors": [
+        "model.language_model.layers.6.linear_attn.in_proj_a.weight",
+        "model.language_model.layers.25.linear_attn.in_proj_a.weight"
+      ],
+      "architecture": {
+        "passes": 2,
+        "layer_executions": 56,
+        "physical_layers": 32,
+        "mhc_streams": 2,
+        "visit_gain_weights": [
+          0.949999988079071,
+          0.05000000074505806
+        ],
+        "conv_kernel": 7,
+        "learned_history_nonzero": 221184,
+        "local_window": 256,
+        "loaded_parameters": 1020252592,
+        "backward_passes": 0,
+        "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+      },
+      "cache": {
+        "max_abs_delta": 0.15625,
+        "same_top_token": true,
+        "passes": 2
+      },
+      "checkpoint_sha256": "a8f9efa29f9fbcd5d0ffc72ff9e0f23bf9c84afa327c6dae616906bfe8024d00"
+    }
+  }
+}
