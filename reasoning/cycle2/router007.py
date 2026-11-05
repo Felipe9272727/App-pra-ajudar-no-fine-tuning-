@@ -1,5 +1,8 @@
 """Mean-preserving stream differentiation with an inverse-sign control."""
 from run import *
+import math
+
+DOSE=math.log(17/15)
 
 def apply_patch(model,parent,patch=None):
     arch=apply(model,parent)
@@ -31,7 +34,7 @@ def main():
     assert all(x['nonzero']==0 for x in audit['tensors']) and audit['parent_post_bias_nonzero']==0
     status(status='router007',model_process_active=True)
     model,tok,parent,_=load();patches={}
-    for name,values in [('inverse_control',[.2,-.2]),('target',[-.2,.2])]:
+    for name,values in [('inverse_control',[DOSE,-DOSE]),('target',[-DOSE,DOSE])]:
         bias=parent['router_bias']['25.mhc_ffn'].clone();assert not bool(bias[2:4].any())
         before=bias.clone();bias[2:4]=torch.tensor(values,dtype=torch.float32)
         assert int((bias!=before).sum())==2
@@ -40,9 +43,10 @@ def main():
     report={'trial':7,'stage':'constructed','backward_passes':0,'screens':{},
         'parent_sha256':PARENT_HASH,'checkpoint_promoted':False,
         'metadata':{'edited_tensor':'model.language_model.layers.25.mhc_ffn.bias',
-            'changed_parameter_indices':[2,3],'target_values':[-.2,.2],
-            'inverse_control_values':[.2,-.2],'changed_parameter_count':2,
-            'precision':'FP32','output_gains':(2*torch.sigmoid(torch.tensor([-.2,.2]))).tolist(),
+            'changed_parameter_indices':[2,3],'target_values':[-DOSE,DOSE],
+            'inverse_control_values':[DOSE,-DOSE],'changed_parameter_count':2,
+            'precision':'FP32','output_gains':(2*torch.sigmoid(torch.tensor([-DOSE,DOSE]))).tolist(),
+            'effective_bf16_gain_means_match_parent':all(bool((2*torch.sigmoid(torch.tensor([-DOSE,DOSE]))*g).to(torch.bfloat16).float().mean()==torch.tensor(g,dtype=torch.bfloat16).float()) for g in [.95,.05]),
             'correct_targets_or_solutions_supplied':False,
             'hypothesis':'break identical-stream symmetry before later layers; not trained thinking'}}
     save('trial_007.json',report)
