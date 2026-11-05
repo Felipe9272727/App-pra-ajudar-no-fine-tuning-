@@ -127,3 +127,11 @@
   No tuning or new hypotheses use this test; no new 100-round loop is authorized.
 - Preserve old best unless all declared gates pass. Commit outcome before
   ending the turn; no promise of local work continuing between turns.
+
+## Reasoning continuation 2026-11-05
+
+- Active branch: codex/liquid-sense-reasoning-20261105. Read reasoning/status.json and reasoning/PROTOCOL.md.
+- Start from preserved best.pt; hypothesis 002 remains unpromoted.
+- Finite hypotheses 003/004: actual decoding activation diagnostics, direct loop-gain edits and a separately protected negative-only dense edit. No dedicated thinking module is assumed.
+- Keep previously observed validation_004 out of selection and freeze new benchmark subsets before their outputs.
+- User requested honest Liquid Sense identity and original-versus-hybrid tests on benchmarks used by Liquid AI. Branding stays out of raw benchmark inputs and is not a weight-quality claim.
