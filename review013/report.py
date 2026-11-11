@@ -78,6 +78,14 @@ def main():
       '|---|---:|---:|---:|---:|']
     for kind in variants:
         r=result['models'][kind];lines.append(f'| {labels[kind]} | {r["tasks_passed"]}/{r["tasks_total"]} | {r["cases_passed"]}/{r["cases_total"]} | {r["controls_correct"]}/{r["controls_total"]} | {r["anchor_nll"]:.6f} |')
+    lines+=['','| Modelo | Tempo total de geração (s) | Tokens gerados | Tokens/s agregados | Respostas no limite |',
+            '|---|---:|---:|---:|---:|']
+    for kind in variants:
+        r=result['models'][kind];seconds=r['generation_seconds']
+        lines.append(f'| {labels[kind]} | {seconds:.2f} | {r["new_tokens"]} | {r["new_tokens"]/seconds:.2f} | {r["truncations"]} |')
+    lines+=['','São tempos de geração serial desta execução, sem carregamento de pesos ou sandbox. '
+      'O comprimento de resposta varia entre modelos; não é um benchmark isolado de kernels, TTFT, '
+      'energia ou throughput concorrente. Nenhum teste de aceleração especulativa foi realizado.']
     lines+=['','Os controles incluem quatro questões anteriores e oito questões novas de linguagem e '
        'raciocínio. As 12 âncoras de NLL são antigas e servem apenas à retenção. Os gabaritos e '
        'o extrator de código permaneceram iguais. Código com sintaxe inválida ou variável não '
