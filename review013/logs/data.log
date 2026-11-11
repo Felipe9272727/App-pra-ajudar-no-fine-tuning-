@@ -1,0 +1,1 @@
+{"total": 200, "references_executed": 200, "cases_passed": 4000, "splits": {"train": 120, "validation": 40, "test": 40}, "disjoint_families": true, "cross_split_identical_solution_asts": 0, "cases_per_task": 20}

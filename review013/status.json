@@ -1,0 +1,9 @@
+{
+  "status": "protocol_and_data_ready",
+  "model_process_active": false,
+  "checkpoint_promoted": false,
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "correct_answers_authorized_for_training": true,
+  "final_test_evaluated": false,
+  "backward_passes": 0
+}

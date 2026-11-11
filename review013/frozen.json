@@ -1,0 +1,16 @@
+{
+  "AGENTS.md": "b73951ebeb3c2d4e14590d14893c3d49f422da21c353a3e3aac4113d54545d02",
+  "review013/PROTOCOL.md": "8550d366136decb26c2e6a0aea404784a9b25427ed148f17847b6da5a8ae1653",
+  "review013/data.py": "4a63e898d64f6408209115e2fa5f1f99906e55588891387c6cdfbe539a2da86d",
+  "review013/review_runtime.py": "0ab414993e9a14e1e4ea4efde7c2abc132aaee79725cd7ec6eeaacf19a620e48",
+  "review013/teach.py": "492b683bb95246c6878b054be7e707b36a1b4d27704c5613f20946e403ee98d2",
+  "review013/evaluate.py": "5d374d6e3bcdd7404afa821da189374ed141ddc3b2225bb91a8d0f0436c121f5",
+  "review013/controls.json": "7328505fb456b36bcba3e4a3975cedfc4d26b25c3bd01b3b59b6230029d160fd",
+  "review013/train.json": "92d1765ead0dc513199d768fabade527e6a1ddb61a85f887d993c13368cbf973",
+  "review013/validation.json": "ffb499b708fbeeeab9d788d93202a9c36e12aee4a182558068d7112eeaced6ac",
+  "review013/test.json": "a8fc55f3b7702f760f7d391eb7572790454ae1225e398a60b4ca7f5117f26af6",
+  "modeling_sensenova_loop.py": "26e11d3522aa730c0ba031340ce42632bc2834da8cc0b6804006bb207d979a5b",
+  "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+  "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+  "reasoning/runtime_helpers.py": "3decc031b87f7fe5bf6feca52dc3d6d2ba82c60eed9d21341e0977f028836238"
+}

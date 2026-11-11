@@ -1,0 +1,88 @@
+[
+  {
+    "id": "dev_0",
+    "question": "What is the chemical symbol for antimony? Reply only with the symbol.",
+    "answer": "Sb",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "dev_1",
+    "question": "What is the plural of child? Reply with one word.",
+    "answer": "children",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "dev_2",
+    "question": "What is the capital of Chile? Reply only with the city.",
+    "answer": "Santiago",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "dev_3",
+    "question": "What organ pumps blood? Reply with one word.",
+    "answer": "heart",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "reason_product",
+    "question": "Responda somente com o número: 7 vezes 8.",
+    "answer": "56",
+    "aliases": [],
+    "numeric": true
+  },
+  {
+    "id": "reason_order",
+    "question": "Ana chegou antes de Bia. Bia chegou antes de Caio. Quem chegou primeiro? Responda somente o nome.",
+    "answer": "Ana",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "reason_subtract",
+    "question": "Reply only with a number: a box has 17 pens and 5 are removed. How many remain?",
+    "answer": "12",
+    "aliases": [],
+    "numeric": true
+  },
+  {
+    "id": "reason_half",
+    "question": "Reply only with a number: what is half of 34?",
+    "answer": "17",
+    "aliases": [],
+    "numeric": true
+  },
+  {
+    "id": "lang_opposite",
+    "question": "Responda com uma palavra: qual é o contrário de quente?",
+    "answer": "frio",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "lang_past",
+    "question": "Give only the simple past tense of go.",
+    "answer": "went",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "lang_plural",
+    "question": "Responda somente o plural de animal.",
+    "answer": "animais",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "lang_translate",
+    "question": "Translate water into Portuguese. Reply with one word.",
+    "answer": "água",
+    "aliases": [
+      "agua"
+    ],
+    "numeric": false
+  }
+]

@@ -1,5 +1,20 @@
 # Retomada do experimento
 
+## Latest instruction and study013 — supervised review (2026-11-11)
+
+- User now explicitly allows correct answers for TEACHING. Historical bans on
+  reference solutions do not apply to learning in review013. Keep solutions,
+  expected cases and feedback OUT of evaluation prompts. No silent SFT/LoRA.
+- Start from unchanged best.pt hash46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
+  Read review013/PROTOCOL.md, status.json and frozen.json before any inference.
+- Study012 and mentor002 independent validation are COMPLETE/rejected; do not
+  repeat them. The empty old review-loop branch contained no013 experiment.
+- Study013 learns new rank16 second-visit adapters by closed-form supervised
+  embedding steering. Actual gold programs only120 train tasks; no gradients,
+  backward pass, optimizer or full-model fine-tuning. Test families stay closed
+  until the frozen screen/full-validation gates pass. Preserve every artifact.
+- DSpine concerns acceleration; no skill gain can be inferred from its speed.
+
 - No novo piloto, leia primeiro `lab_rsi/status.json`, `lab_rsi/archive.json`
   (quando existir) e `lab_rsi/frozen.json` (quando existir). O primeiro piloto
   em `rsi/` é histórico e não autoriza desligar partes da arquitetura atual.
