@@ -1,0 +1,17 @@
+{
+  "format": "tar.xz",
+  "sha256": "e779ae400bec2d2ed1087e8f453578f0073b31a8d00cb7a04e1107ed7f6aba3d",
+  "archive_bytes": 15467800,
+  "parts": [
+    {
+      "path": "archives/teaching_states.part000.bin",
+      "sha256": "9a10d0182f5f56299b6db2472cc22d1aae8af1480d7330d23e6aa740c53a7c00",
+      "bytes": 8388608
+    },
+    {
+      "path": "archives/teaching_states.part001.bin",
+      "sha256": "7618e995798272b787c245e55b340f2183604cf3bcd557c1c8ceff44433e2fb7",
+      "bytes": 7079192
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "original": {
+    "tasks_passed": 0,
+    "tasks_total": 8,
+    "cases_passed": 36,
+    "cases_total": 160,
+    "controls_correct": 10,
+    "controls_total": 12,
+    "anchor_nll": 3.1867156426111856,
+    "new_tokens": 779,
+    "generation_seconds": 90.08157330199992,
+    "truncations": 2,
+    "failure_categories": {
+      "NameError": 2,
+      "SyntaxError": 2,
+      "ContractError": 2,
+      "WrongReturnValue": 2
+    },
+    "control_losses_vs_parent": []
+  },
+  "parent": {
+    "tasks_passed": 0,
+    "tasks_total": 8,
+    "cases_passed": 43,
+    "cases_total": 160,
+    "controls_correct": 10,
+    "controls_total": 12,
+    "anchor_nll": 3.1837292512257895,
+    "new_tokens": 673,
+    "generation_seconds": 205.84448002899967,
+    "truncations": 0,
+    "failure_categories": {
+      "NameError": 5,
+      "WrongReturnValue": 3
+    },
+    "control_losses_vs_parent": []
+  },
+  "loop": {
+    "tasks_passed": 0,
+    "tasks_total": 8,
+    "cases_passed": 39,
+    "cases_total": 160,
+    "controls_correct": 10,
+    "controls_total": 12,
+    "anchor_nll": 3.184345285097758,
+    "new_tokens": 620,
+    "generation_seconds": 193.72255864399995,
+    "truncations": 0,
+    "failure_categories": {
+      "NameError": 4,
+      "WrongReturnValue": 3,
+      "ContractError": 1
+    },
+    "control_losses_vs_parent": [],
+    "training_diagnostic": {
+      "mean_task_nll": 0.48947832112510997,
+      "mean_task_token_accuracy": 0.8473250766595205
+    }
+  },
+  "joint": {
+    "tasks_passed": 0,
+    "tasks_total": 8,
+    "cases_passed": 43,
+    "cases_total": 160,
+    "controls_correct": 10,
+    "controls_total": 12,
+    "anchor_nll": 3.18368399143219,
+    "new_tokens": 673,
+    "generation_seconds": 215.12853321000057,
+    "truncations": 0,
+    "failure_categories": {
+      "NameError": 5,
+      "WrongReturnValue": 3
+    },
+    "control_losses_vs_parent": [],
+    "training_diagnostic": {
+      "mean_task_nll": 0.48927730570236844,
+      "mean_task_token_accuracy": 0.842523050804933
+    }
+  }
+}

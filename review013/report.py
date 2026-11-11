@@ -95,7 +95,7 @@ def main():
         p=result['comparisons_vs_parent'][kind];d=result['models'][kind]['training_diagnostic'];f=fit['candidates'][kind]
         lines.append(f'{labels[kind]} versus pai: {len(p["task_gains"])} tarefas ganhas, '
           f'{len(p["task_losses"])} perdidas; {p["case_gains"]} casos ganhos e {p["case_losses"]} perdidos. '
-          f'{len(p["output_text_changed"])} textos mudaram. NLL nos mesmos 24 exemplos de ensino: '
+          f'Textos alterados: {len(p["output_text_changed"])}. NLL nos mesmos 24 exemplos de ensino: '
           f'{result["parent_training_diagnostic"]["mean_task_nll"]:.6f} → {d["mean_task_nll"]:.6f}. '
           f'O MSE do alvo local caiu {100*(1-f["fit_mse"]/f["zero_predictor_mse"]):.2f}%; '
           'isso mede ajuste ao sinal de ensino, não acerto em problemas novos.')
@@ -131,10 +131,16 @@ def main():
         'Não foi adicionada terceira passagem neste estudo: o protocolo exige ganho na segunda antes '
         'de ampliar o custo. Não foi feita comparação executada com 4B ou implementado DSpine.','',
         'Ver STATUS_RECUPERACAO.md, PLANO_DSPINE.md e review013/PROTOCOL.md. '
-        'O programa review013/run_study.py é limitado e serial; não é um processo permanente.']
+        'A retomada segura está em review013/resume_study.py e review013/REPRODUCE.md; '
+        'ela verifica os checkpoints e não repete fases concluídas. Não há processo permanente.','',
+        'Depois de todas as inferências, o agregador original encontrou a ausência de case_passed '
+        'nas rejeições antecipadas de sintaxe/AST. finalize.py consolidou os mesmos escores zero '
+        'por uma regra explícita, sem repetir inferência ou alterar saídas. As fontes congeladas '
+        'continuam preservadas; logs e recovery.json registram os dois problemas operacionais.']
     if selection['status']=='complete_both_rejected_screen':
-        lines+=['','Os 40 problemas finais e os outros 32 problemas de validação não foram executados '
-            'para seleção após a falha da triagem. Os conjuntos antigos reservados também continuam fechados.']
+        lines+=['','Nenhuma variante do modelo avaliou os 40 problemas finais ou os outros 32 problemas '
+            'de validação após a falha da triagem. As referências desses problemas foram verificadas '
+            'no sandbox, mas não foram usadas no ensino. Os conjuntos antigos reservados também continuam fechados.']
     (ROOT/'EXPERIMENTOS_CAPACIDADE.md').write_text('\n'.join(lines)+'\n')
     print(json.dumps(result['models'],indent=2))
 

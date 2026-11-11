@@ -1,0 +1,188 @@
+{
+  "models": {
+    "original": {
+      "tasks_passed": 0,
+      "tasks_total": 8,
+      "cases_passed": 36,
+      "cases_total": 160,
+      "controls_correct": 10,
+      "controls_total": 12,
+      "anchor_nll": 3.1867156426111856,
+      "new_tokens": 779,
+      "generation_seconds": 90.08157330199992,
+      "truncations": 2,
+      "failure_categories": {
+        "NameError": 2,
+        "SyntaxError": 2,
+        "ContractError": 2,
+        "WrongReturnValue": 2
+      },
+      "control_losses_vs_parent": []
+    },
+    "parent": {
+      "tasks_passed": 0,
+      "tasks_total": 8,
+      "cases_passed": 43,
+      "cases_total": 160,
+      "controls_correct": 10,
+      "controls_total": 12,
+      "anchor_nll": 3.1837292512257895,
+      "new_tokens": 673,
+      "generation_seconds": 205.84448002899967,
+      "truncations": 0,
+      "failure_categories": {
+        "NameError": 5,
+        "WrongReturnValue": 3
+      },
+      "control_losses_vs_parent": []
+    },
+    "loop": {
+      "tasks_passed": 0,
+      "tasks_total": 8,
+      "cases_passed": 39,
+      "cases_total": 160,
+      "controls_correct": 10,
+      "controls_total": 12,
+      "anchor_nll": 3.184345285097758,
+      "new_tokens": 620,
+      "generation_seconds": 193.72255864399995,
+      "truncations": 0,
+      "failure_categories": {
+        "NameError": 4,
+        "WrongReturnValue": 3,
+        "ContractError": 1
+      },
+      "control_losses_vs_parent": [],
+      "training_diagnostic": {
+        "mean_task_nll": 0.48947832112510997,
+        "mean_task_token_accuracy": 0.8473250766595205
+      }
+    },
+    "joint": {
+      "tasks_passed": 0,
+      "tasks_total": 8,
+      "cases_passed": 43,
+      "cases_total": 160,
+      "controls_correct": 10,
+      "controls_total": 12,
+      "anchor_nll": 3.18368399143219,
+      "new_tokens": 673,
+      "generation_seconds": 215.12853321000057,
+      "truncations": 0,
+      "failure_categories": {
+        "NameError": 5,
+        "WrongReturnValue": 3
+      },
+      "control_losses_vs_parent": [],
+      "training_diagnostic": {
+        "mean_task_nll": 0.48927730570236844,
+        "mean_task_token_accuracy": 0.842523050804933
+      }
+    }
+  },
+  "comparisons_vs_parent": {
+    "loop": {
+      "task_gains": [],
+      "task_losses": [],
+      "case_gains": 0,
+      "case_losses": 4,
+      "output_text_changed": [
+        "window_ranges_0"
+      ],
+      "task_delta_pp": 0.0,
+      "paired_task_exact_one_sided_p": 1.0,
+      "family_cluster_bootstrap_95_ci_pp": [
+        0.0,
+        0.0
+      ],
+      "families": 4,
+      "limitations": "Four families, two correlated parameter variants each. Degenerate CI does not establish equivalence. Cases are not independent tasks."
+    },
+    "joint": {
+      "task_gains": [],
+      "task_losses": [],
+      "case_gains": 0,
+      "case_losses": 0,
+      "output_text_changed": [],
+      "task_delta_pp": 0.0,
+      "paired_task_exact_one_sided_p": 1.0,
+      "family_cluster_bootstrap_95_ci_pp": [
+        0.0,
+        0.0
+      ],
+      "families": 4,
+      "limitations": "Four families, two correlated parameter variants each. Degenerate CI does not establish equivalence. Cases are not independent tasks."
+    }
+  },
+  "parent_training_diagnostic": {
+    "examples": 24,
+    "mean_task_nll": 0.4997628616789977,
+    "mean_task_token_accuracy": 0.842744010190169,
+    "source": "same completed teaching captures; no repeated model calls"
+  },
+  "selection": {
+    "stage": "screen",
+    "eligible_for_final_test": false,
+    "selected": null,
+    "checkpoint_promoted": false,
+    "candidates": {
+      "loop": {
+        "task_gains": [],
+        "task_losses": [],
+        "lost_cases": 4,
+        "control_losses": [],
+        "anchor_nll_delta": 0.0006160338719682912,
+        "screen_passed": false
+      },
+      "joint": {
+        "task_gains": [],
+        "task_losses": [],
+        "lost_cases": 0,
+        "control_losses": [],
+        "anchor_nll_delta": -4.5259793599594644e-05,
+        "screen_passed": false
+      }
+    },
+    "parent_retained": true,
+    "final_test_evaluated": false,
+    "validation_screen_tasks": 8,
+    "remaining_validation_tasks": 32,
+    "test_tasks_preserved": 40,
+    "status": "complete_both_rejected_screen",
+    "aggregation_recovery": "Missing score bits for zero-score pre-execution SyntaxError/ContractError only; no score or criterion changed",
+    "rows_with_derived_zero_score_bits": {
+      "original": [
+        "stable_mod_partition_0",
+        "stable_mod_partition_9",
+        "window_ranges_0",
+        "window_ranges_9"
+      ],
+      "parent": [],
+      "loop": [
+        "window_ranges_0"
+      ],
+      "joint": []
+    }
+  },
+  "fit": {
+    "training_examples": 120,
+    "sampled_decisions": 2862,
+    "targets_nonzero": 452,
+    "candidates": {
+      "loop": {
+        "parameters": 32768,
+        "zero_predictor_mse": 6.317259976640344e-05,
+        "fit_mse": 4.691938622961564e-05,
+        "ridge_lambda": 1156.0490879595611,
+        "sha256": "654aba02490149a1856d1243b40b564e1b12edfbb55aa1876a96f276f3d0d6ee"
+      },
+      "joint": {
+        "parameters": 49152,
+        "zero_predictor_mse": 6.317259976640344e-05,
+        "fit_mse": 4.670532952996736e-05,
+        "ridge_lambda": 2094.3235425752846,
+        "sha256": "f85208b97e892900aec433ae9ce23657dc53fb45fc396de049034f853185b20a"
+      }
+    }
+  }
+}

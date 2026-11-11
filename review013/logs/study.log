@@ -1,0 +1,309 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+{
+  "training_examples": 120,
+  "sampled_decisions": 2862,
+  "targets_nonzero": 452,
+  "candidates": {
+    "loop": {
+      "parameters": 32768,
+      "zero_predictor_mse": 6.317259976640344e-05,
+      "fit_mse": 4.691938622961564e-05,
+      "ridge_lambda": 1156.0490879595611,
+      "sha256": "654aba02490149a1856d1243b40b564e1b12edfbb55aa1876a96f276f3d0d6ee"
+    },
+    "joint": {
+      "parameters": 49152,
+      "zero_predictor_mse": 6.317259976640344e-05,
+      "fit_mse": 4.670532952996736e-05,
+      "ridge_lambda": 2094.3235425752846,
+      "sha256": "f85208b97e892900aec433ae9ce23657dc53fb45fc396de049034f853185b20a"
+    }
+  }
+}
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:  25%|██▍       | 166/675 [00:00<00:00, 1537.67it/s]
+Loading weights:  47%|████▋     | 320/675 [00:00<00:00, 1084.48it/s]
+Loading weights:  65%|██████▍   | 436/675 [00:00<00:00, 1043.72it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1419.35it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794419601.8515947, "attempt": null, "pid": 1219}
+PHASE_END checkpoint_load:best.pt 0.004
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+{
+  "variants": {
+    "loop": {
+      "cache_probe": {
+        "max_abs_delta": 0.15625,
+        "same_top_token": true,
+        "passes": 2
+      },
+      "request_repeat_bit_exact": true,
+      "all_parent_tensors_unchanged": 699,
+      "max_logit_delta_vs_parent": 0.125,
+      "mechanism": {
+        "review_calls": 1,
+        "mean_update_rms_fraction": 0.0015605369117110968,
+        "max_mean_update_rms_fraction": 0.0015605369117110968,
+        "adapter_parameters": 32768,
+        "first_visit_unchanged_by_placement": true,
+        "temporal_features": false
+      }
+    },
+    "joint": {
+      "cache_probe": {
+        "max_abs_delta": 0.1875,
+        "same_top_token": true,
+        "passes": 2
+      },
+      "request_repeat_bit_exact": true,
+      "all_parent_tensors_unchanged": 699,
+      "max_logit_delta_vs_parent": 0.125,
+      "mechanism": {
+        "review_calls": 1,
+        "mean_update_rms_fraction": 0.0013340761652216315,
+        "max_mean_update_rms_fraction": 0.0013340761652216315,
+        "adapter_parameters": 49152,
+        "first_visit_unchanged_by_placement": true,
+        "temporal_features": true
+      }
+    }
+  },
+  "zero_adapter_logits_bit_exact": true,
+  "status": "complete"
+}
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights:  63%|██████▎   | 298/473 [00:00<00:00, 2887.54it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3959.69it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL screen original nearby_pairs_0 5 20 7.08
+EVAL screen original nearby_pairs_9 4 20 6.95
+EVAL screen original stable_mod_partition_0 0 20 4.93
+EVAL screen original stable_mod_partition_9 0 20 18.54
+EVAL screen original cap_runs_0 13 20 15.51
+EVAL screen original cap_runs_9 14 20 12.53
+EVAL screen original window_ranges_0 0 20 6.57
+EVAL screen original window_ranges_9 0 20 17.97
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 7137.07it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+CONTROL original dev_0 True
+CONTROL original dev_1 True
+CONTROL original dev_2 True
+CONTROL original dev_3 True
+CONTROL original reason_product True
+CONTROL original reason_order True
+CONTROL original reason_subtract True
+CONTROL original reason_half True
+CONTROL original lang_opposite False
+CONTROL original lang_past True
+CONTROL original lang_plural False
+CONTROL original lang_translate True
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:  30%|███       | 205/675 [00:00<00:00, 2019.32it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 3828.43it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794419758.6558661, "attempt": null, "pid": 1369}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL screen parent nearby_pairs_0 5 20 18.75
+EVAL screen parent nearby_pairs_9 4 20 17.75
+EVAL screen parent stable_mod_partition_0 1 20 11.74
+EVAL screen parent stable_mod_partition_9 15 20 17.05
+EVAL screen parent cap_runs_0 13 20 33.73
+EVAL screen parent cap_runs_9 1 20 41.41
+EVAL screen parent window_ranges_0 4 20 32.49
+EVAL screen parent window_ranges_9 0 20 32.92
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:  67%|██████▋   | 449/675 [00:00<00:00, 4479.02it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 5426.69it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794419972.4459655, "attempt": null, "pid": 1435}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+CONTROL parent dev_0 True
+CONTROL parent dev_1 True
+CONTROL parent dev_2 True
+CONTROL parent dev_3 True
+CONTROL parent reason_product True
+CONTROL parent reason_order True
+CONTROL parent reason_subtract True
+CONTROL parent reason_half True
+CONTROL parent lang_opposite False
+CONTROL parent lang_past True
+CONTROL parent lang_plural False
+CONTROL parent lang_translate True
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7708.25it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794420033.6126492, "attempt": null, "pid": 1476}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL screen loop nearby_pairs_0 5 20 18.14
+EVAL screen loop nearby_pairs_9 4 20 17.57
+EVAL screen loop stable_mod_partition_0 1 20 11.97
+EVAL screen loop stable_mod_partition_9 15 20 17.71
+EVAL screen loop cap_runs_0 13 20 33.97
+EVAL screen loop cap_runs_9 1 20 41.08
+EVAL screen loop window_ranges_0 0 20 17.38
+EVAL screen loop window_ranges_9 0 20 35.91
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:  90%|█████████ | 608/675 [00:00<00:00, 6078.11it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6174.65it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794420234.7017539, "attempt": null, "pid": 1530}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+CONTROL loop dev_0 True
+CONTROL loop dev_1 True
+CONTROL loop dev_2 True
+CONTROL loop dev_3 True
+CONTROL loop reason_product True
+CONTROL loop reason_order True
+CONTROL loop reason_subtract True
+CONTROL loop reason_half True
+CONTROL loop lang_opposite False
+CONTROL loop lang_past True
+CONTROL loop lang_plural False
+CONTROL loop lang_translate True
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6839.43it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794420301.3458838, "attempt": null, "pid": 1567}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TRAIN_NLL loop clip_0 0.4683
+TRAIN_NLL loop clip_9 0.4153
+TRAIN_NLL loop prefix_offset_0 0.5761
+TRAIN_NLL loop prefix_offset_9 0.5458
+TRAIN_NLL loop above_0 0.344
+TRAIN_NLL loop above_9 0.3198
+TRAIN_NLL loop residues_0 0.602
+TRAIN_NLL loop residues_9 0.5078
+TRAIN_NLL loop weighted_alternate_0 0.5199
+TRAIN_NLL loop weighted_alternate_9 0.5032
+TRAIN_NLL loop suffix_offset_0 0.6034
+TRAIN_NLL loop suffix_offset_9 0.5681
+TRAIN_NLL loop large_jumps_0 0.3009
+TRAIN_NLL loop large_jumps_9 0.2944
+TRAIN_NLL loop drop_periodic_0 0.4808
+TRAIN_NLL loop drop_periodic_9 0.4545
+TRAIN_NLL loop running_min_0 0.573
+TRAIN_NLL loop running_min_9 0.5274
+TRAIN_NLL loop adjacent_dedup_0 0.6151
+TRAIN_NLL loop adjacent_dedup_9 0.5976
+TRAIN_NLL loop block_sums_0 0.5305
+TRAIN_NLL loop block_sums_9 0.4738
+TRAIN_NLL loop peaks_0 0.4594
+TRAIN_NLL loop peaks_9 0.4663
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7023.16it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794420354.8165588, "attempt": null, "pid": 1597}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL screen joint nearby_pairs_0 5 20 20.34
+EVAL screen joint nearby_pairs_9 4 20 19.18
+EVAL screen joint stable_mod_partition_0 1 20 11.82
+EVAL screen joint stable_mod_partition_9 15 20 17.6
+EVAL screen joint cap_runs_0 13 20 34.09
+EVAL screen joint cap_runs_9 1 20 41.88
+EVAL screen joint window_ranges_0 4 20 35.57
+EVAL screen joint window_ranges_9 0 20 34.66
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7862.79it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794420577.0007498, "attempt": null, "pid": 1660}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+CONTROL joint dev_0 True
+CONTROL joint dev_1 True
+CONTROL joint dev_2 True
+CONTROL joint dev_3 True
+CONTROL joint reason_product True
+CONTROL joint reason_order True
+CONTROL joint reason_subtract True
+CONTROL joint reason_half True
+CONTROL joint lang_opposite False
+CONTROL joint lang_past True
+CONTROL joint lang_plural False
+CONTROL joint lang_translate True
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6821.29it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794420640.3534994, "attempt": null, "pid": 1693}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TRAIN_NLL joint clip_0 0.4633
+TRAIN_NLL joint clip_9 0.4147
+TRAIN_NLL joint prefix_offset_0 0.578
+TRAIN_NLL joint prefix_offset_9 0.5456
+TRAIN_NLL joint above_0 0.3536
+TRAIN_NLL joint above_9 0.3283
+TRAIN_NLL joint residues_0 0.6001
+TRAIN_NLL joint residues_9 0.5042
+TRAIN_NLL joint weighted_alternate_0 0.5152
+TRAIN_NLL joint weighted_alternate_9 0.4978
+TRAIN_NLL joint suffix_offset_0 0.6042
+TRAIN_NLL joint suffix_offset_9 0.5692
+TRAIN_NLL joint large_jumps_0 0.2993
+TRAIN_NLL joint large_jumps_9 0.2896
+TRAIN_NLL joint drop_periodic_0 0.4784
+TRAIN_NLL joint drop_periodic_9 0.454
+TRAIN_NLL joint running_min_0 0.5694
+TRAIN_NLL joint running_min_9 0.5325
+TRAIN_NLL joint adjacent_dedup_0 0.6113
+TRAIN_NLL joint adjacent_dedup_9 0.5941
+TRAIN_NLL joint block_sums_0 0.53
+TRAIN_NLL joint block_sums_9 0.4775
+TRAIN_NLL joint peaks_0 0.4684
+TRAIN_NLL joint peaks_9 0.4639
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/review013/run_study.py", line 49, in <module>
+    try:main()
+        ^^^^^^
+  File "/workspace/liquid-sense/review013/run_study.py", line 31, in main
+    lost_cases+=sum(a and not b for a,b in zip(old['case_passed'],r['case_passed']))
+                                                                  ~^^^^^^^^^^^^^^^
+KeyError: 'case_passed'

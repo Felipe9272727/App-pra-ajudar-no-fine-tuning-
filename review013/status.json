@@ -1,11 +1,21 @@
 {
-  "status": "running_evaluate.py_joint_screen",
-  "model_process_active": true,
+  "status": "complete_supervised_candidates_rejected_parent_retained",
+  "model_process_active": false,
   "checkpoint_promoted": false,
   "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
   "correct_answers_authorized_for_training": true,
   "final_test_evaluated": false,
   "backward_passes": 0,
-  "updated_unix": 1794420349.4794996,
-  "process_continues_in_background": false
+  "updated_unix": 1794420840.5344062,
+  "process_continues_in_background": false,
+  "selected_checkpoint": "rsi100/checkpoints/best.pt",
+  "new_learned_candidates": 2,
+  "training_programs": 120,
+  "screen_programs_per_variant": 8,
+  "screen_cases_per_variant": 160,
+  "controls_per_variant": 12,
+  "test_tasks_preserved": 40,
+  "remaining_validation_tasks": 32,
+  "report": "EXPERIMENTOS_CAPACIDADE.md",
+  "automatic_rsi_resumed": false
 }

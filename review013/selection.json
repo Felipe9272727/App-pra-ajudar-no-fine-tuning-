@@ -1,0 +1,44 @@
+{
+  "stage": "screen",
+  "eligible_for_final_test": false,
+  "selected": null,
+  "checkpoint_promoted": false,
+  "candidates": {
+    "loop": {
+      "task_gains": [],
+      "task_losses": [],
+      "lost_cases": 4,
+      "control_losses": [],
+      "anchor_nll_delta": 0.0006160338719682912,
+      "screen_passed": false
+    },
+    "joint": {
+      "task_gains": [],
+      "task_losses": [],
+      "lost_cases": 0,
+      "control_losses": [],
+      "anchor_nll_delta": -4.5259793599594644e-05,
+      "screen_passed": false
+    }
+  },
+  "parent_retained": true,
+  "final_test_evaluated": false,
+  "validation_screen_tasks": 8,
+  "remaining_validation_tasks": 32,
+  "test_tasks_preserved": 40,
+  "status": "complete_both_rejected_screen",
+  "aggregation_recovery": "Missing score bits for zero-score pre-execution SyntaxError/ContractError only; no score or criterion changed",
+  "rows_with_derived_zero_score_bits": {
+    "original": [
+      "stable_mod_partition_0",
+      "stable_mod_partition_9",
+      "window_ranges_0",
+      "window_ranges_9"
+    ],
+    "parent": [],
+    "loop": [
+      "window_ranges_0"
+    ],
+    "joint": []
+  }
+}
