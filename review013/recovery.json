@@ -3,5 +3,12 @@
   "saved_training_rows_before_error": 0,
   "candidate_checkpoints_before_error": 0,
   "change": "correct API argument order only; no math/data/hyperparameter change",
-  "replay": "first unsaved training row needs new capture; no completed row repeated"
+  "replay": "first unsaved training row needs new capture; no completed row repeated",
+  "aggregation_recovery": {
+    "event": "all inference phases completed; canonical judge early AST/syntax rejections omit case_passed; original aggregator raised KeyError",
+    "model_calls_repeated": 0,
+    "checkpoints_rewritten": false,
+    "raw_scores_changed": false,
+    "resolution": "new pure postprocessor derives zero score bits ONLY for zero-score early rejections; no new judge or selection criteria"
+  }
 }

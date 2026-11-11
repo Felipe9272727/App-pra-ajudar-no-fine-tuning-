@@ -1,6 +1,7 @@
 """Fail closed on mismatched saved outputs; no model inference or score repair."""
 import hashlib,json
 from pathlib import Path
+from case_bits import scored_case_bits
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parent
 def read(p):return json.loads((HERE/p).read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -18,8 +19,8 @@ def main():
         assert report['cases_total']==160
         for row,task in zip(report['rows'],expected):
             assert row['total']==len(task['cases'])==20
-            assert row['passed']==sum(row['case_passed'])
-            assert row['all_passed']==all(row['case_passed'])
+            assert row['passed']==sum(scored_case_bits(row))
+            assert row['all_passed']==all(scored_case_bits(row))
         c=read('controls_'+kind+'.json');assert c['status']=='complete'
         assert c['frozen_sha256']==sha(HERE/'frozen.json')
         assert [r['id'] for r in c['rows']]==control_ids

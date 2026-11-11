@@ -1,6 +1,7 @@
 """Summarize immutable outputs without altering prompts, golds or selection."""
 import collections,hashlib,json,math,random,statistics
 from pathlib import Path
+from case_bits import scored_case_bits
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parent
 def read(p):return json.loads((HERE/p).read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -10,8 +11,8 @@ def paired(parent,child):
         b=p[r['id']];d=int(r['all_passed'])-int(b['all_passed']);byfamily[r['family']].append(d)
         if d>0:g.append(r['id'])
         if d<0:l.append(r['id'])
-        cg+=sum(not a and b0 for a,b0 in zip(b['case_passed'],r['case_passed']))
-        cl+=sum(a and not b0 for a,b0 in zip(b['case_passed'],r['case_passed']))
+        cg+=sum(not a and b0 for a,b0 in zip(scored_case_bits(b),scored_case_bits(r)))
+        cl+=sum(a and not b0 for a,b0 in zip(scored_case_bits(b),scored_case_bits(r)))
         if r['output']!=b['output']:changes.append(r['id'])
     n=len(g)+len(l);pvalue=sum(math.comb(n,k) for k in range(len(g),n+1))/(2**n) if n else 1.
     families=list(byfamily.values());rng=random.Random(20261111);boot=[]
