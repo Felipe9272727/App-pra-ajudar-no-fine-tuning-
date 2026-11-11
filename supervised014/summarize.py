@@ -77,6 +77,14 @@ def main():
       '| Modelo | HumanEval ensinado | MBPP diferente | Controles | NLL de linguagem |',
       '|---|---:|---:|---:|---:|']
     for kind,m in models.items():lines.append(f'| {labels[kind]} | {m["taught"]["solved"]}/8 | {m["transfer"]["solved"]}/8 | {m["controls"]["correct"]}/12 | {m["controls"]["nll"]:.6f} |')
+    lines+=['','| Modelo | Truncamentos HumanEval | Truncamentos MBPP | Tempo de geração HumanEval (s) | Tempo MBPP (s) |',
+            '|---|---:|---:|---:|---:|']
+    for kind,m in models.items():lines.append(f'| {labels[kind]} | {m["taught"]["truncations"]}/8 | {m["transfer"]["truncations"]}/8 | {m["taught"]["seconds"]:.2f} | {m["transfer"]["seconds"]:.2f} |')
+    lines+=['','Os tempos são desta execução serial e variam com o comprimento das respostas; '
+      'não medem TTFT, energia ou aceleração de kernels. O orçamento de 320 tokens pode truncar '
+      'código ou demonstrações extras. Assim, uma reprovação por sintaxe pode refletir uma '
+      'resposta interrompida, não apenas um erro do algoritmo. Esses limites não foram alterados '
+      'depois das respostas, e nenhum programa foi reparado para a pontuação.']
     lines+=['','HumanEval: IDs 32, 39, 75, 114, 119, 129, 132, 147. MBPP sanitizado: '
       'IDs 129, 239, 245, 247, 306, 392, 407, 463, dentro do intervalo oficial de teste. '
       'Os números iguais entre os dois datasets não identificam os mesmos problemas. '
