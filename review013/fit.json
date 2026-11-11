@@ -1,0 +1,21 @@
+{
+  "training_examples": 120,
+  "sampled_decisions": 2862,
+  "targets_nonzero": 452,
+  "candidates": {
+    "loop": {
+      "parameters": 32768,
+      "zero_predictor_mse": 6.317259976640344e-05,
+      "fit_mse": 4.691938622961564e-05,
+      "ridge_lambda": 1156.0490879595611,
+      "sha256": "654aba02490149a1856d1243b40b564e1b12edfbb55aa1876a96f276f3d0d6ee"
+    },
+    "joint": {
+      "parameters": 49152,
+      "zero_predictor_mse": 6.317259976640344e-05,
+      "fit_mse": 4.670532952996736e-05,
+      "ridge_lambda": 2094.3235425752846,
+      "sha256": "f85208b97e892900aec433ae9ce23657dc53fb45fc396de049034f853185b20a"
+    }
+  }
+}
