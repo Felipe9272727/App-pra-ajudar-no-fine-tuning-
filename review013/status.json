@@ -1,11 +1,11 @@
 {
-  "status": "capturing_supervised_training_states",
+  "status": "running_evaluate.py_parent_screen",
   "model_process_active": true,
   "checkpoint_promoted": false,
   "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
   "correct_answers_authorized_for_training": true,
   "final_test_evaluated": false,
   "backward_passes": 0,
-  "updated_unix": 1794419457.4506783,
+  "updated_unix": 1794419753.4416502,
   "process_continues_in_background": false
 }

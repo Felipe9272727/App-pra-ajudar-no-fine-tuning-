@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "loop": {
+      "cache_probe": {
+        "max_abs_delta": 0.15625,
+        "same_top_token": true,
+        "passes": 2
+      },
+      "request_repeat_bit_exact": true,
+      "all_parent_tensors_unchanged": 699,
+      "max_logit_delta_vs_parent": 0.125,
+      "mechanism": {
+        "review_calls": 1,
+        "mean_update_rms_fraction": 0.0015605369117110968,
+        "max_mean_update_rms_fraction": 0.0015605369117110968,
+        "adapter_parameters": 32768,
+        "first_visit_unchanged_by_placement": true,
+        "temporal_features": false
+      }
+    },
+    "joint": {
+      "cache_probe": {
+        "max_abs_delta": 0.1875,
+        "same_top_token": true,
+        "passes": 2
+      },
+      "request_repeat_bit_exact": true,
+      "all_parent_tensors_unchanged": 699,
+      "max_logit_delta_vs_parent": 0.125,
+      "mechanism": {
+        "review_calls": 1,
+        "mean_update_rms_fraction": 0.0013340761652216315,
+        "max_mean_update_rms_fraction": 0.0013340761652216315,
+        "adapter_parameters": 49152,
+        "first_visit_unchanged_by_placement": true,
+        "temporal_features": true
+      }
+    }
+  },
+  "zero_adapter_logits_bit_exact": true,
+  "status": "complete"
+}
