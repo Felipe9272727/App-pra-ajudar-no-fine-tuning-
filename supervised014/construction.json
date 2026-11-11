@@ -1,0 +1,16 @@
+{
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "candidate_sha256": "569ad5d8185b9ff5721b2bae6c1f7519f0769553b2f15cccbd63adbacaef9c46",
+  "changed_tensors": [
+    "model.language_model.layers.31.mlp.down_proj.weight"
+  ],
+  "changed_bf16_values": 3631046,
+  "parent_tensors_checked": 699,
+  "supervised_tokens": 1098,
+  "language_protection_positions": 96,
+  "ridge_lambda": 0.00010000000000000005,
+  "unclipped_relative_frobenius": 0.23987603187561035,
+  "applied_scale": 0.8337640006639414,
+  "actual_relative_frobenius": 0.20003192126750946,
+  "backward_passes": 0
+}

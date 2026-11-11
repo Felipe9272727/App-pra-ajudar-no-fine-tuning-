@@ -1,0 +1,7 @@
+{
+  "event": "GitHub blob response ReadTimeout before evaluation started",
+  "investigation": "Both expected content hashes were verified to exist by tree construction; branch had not advanced",
+  "resolution": "Committed existing exact blobs with lease, no transfer/model computation repeated",
+  "parent_blob": "7e360ee9761ab648024e78eeb686c88bb1e88db7",
+  "candidate_blob": "3f107e230310175bafd8b9c813350df18e3a4e34"
+}
