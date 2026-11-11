@@ -1,0 +1,25 @@
+{
+  "diagnostic_only": true,
+  "official_tests_changed": false,
+  "official_scores_changed": false,
+  "candidate_reedited": false,
+  "id": "HumanEval/114",
+  "additional_counterexample": [
+    1
+  ],
+  "expected_from_spec": 1,
+  "sandbox_result": {
+    "all_passed": false,
+    "case_passed": [
+      false
+    ],
+    "category": "AssertionError",
+    "error_types": [
+      "AssertionError"
+    ],
+    "code": "from typing import List, Tuple\n\ndef minSubArraySum(nums: List[int]) -> int:\n    min_sum = float('inf')\n    n = len(nums)\n    for i in range(n):\n        current_sum = nums[i]\n        for j in range(i, n):\n            current_sum += nums[j]\n            if current_sum < min_sum:\n                min_sum = current_sum\n    return min_sum if min_sum != float('inf') else nums[0] if nums else 0",
+    "passed": 0,
+    "total": 1
+  },
+  "explanation": "current_sum starts as nums[i], then the j loop starts at i and adds nums[i] again; this single-element input returns 2."
+}
