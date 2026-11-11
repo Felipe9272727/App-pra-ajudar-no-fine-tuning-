@@ -1,0 +1,185 @@
+{
+  "kind": "parent",
+  "role": "taught",
+  "metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    },
+    "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8"
+  },
+  "frozen_sha256": "683851f37a7bb8c93fcc9d4daed7c3e9b664eb076ba51f62ec78d9eff7f57987",
+  "rows": [
+    {
+      "id": "HumanEval/32",
+      "output": "```python\nimport math\n\ndef find_zero(xs: list):\n    \"\"\"\n    Find the root of the polynomial defined by coefficients xs.\n    - xs must have an even number of coefficients.\n    - The function returns the root value.\n    - It only requires the largest non-zero coefficient to guarantee a solution.\n    \"\"\"\n    if len(xs) % 2 != 0:\n        raise ValueError(\"xs must have an even number of coefficients\")\n\n    # Find the largest non-zero coefficient\n    max_nonzero = max(abs(x) for x in xs if x != 0)\n\n    # If the largest non-zero coefficient is 0, the polynomial is identically zero\n    if max_nonzero == 0:\n        return 0.0\n\n    # Compute the polynomial value at the root\n    # The polynomial is of the form: (x - r1) * (x - r2) * ... * (x - rn)\n    # where r1, r2, ..., rn are the roots.\n    # We can compute this by evaluating the polynomial at the root.\n    # Since the roots are symmetric around the center of the polynomial,\n    # we can use the formula:\n    # f(r) = sum_{i=0}^{n-1} r * (r - r_i)^i\n    # where r_i are the roots.\n    # However, a simpler approach is to evaluate the polynomial at the root\n    # using the fact that the roots",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 98.90443054600019,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "invalid syntax (<unknown>, line 1)",
+      "case_passed": [
+        false
+      ],
+      "code": "```python\nimport math\n\ndef find_zero(xs: list):\n    \"\"\"\n    Find the root of the polynomial defined by coefficients xs.\n    - xs must have an even number of coefficients.\n    - The function returns the root value.\n    - It only requires the largest non-zero coefficient to guarantee a solution.\n    \"\"\"\n    if len(xs) % 2 != 0:\n        raise ValueError(\"xs must have an even number of coefficients\")\n\n    # Find the largest non-zero coefficient\n    max_nonzero = max(abs(x) for x in xs if x != 0)\n\n    # If the largest non-zero coefficient is 0, the polynomial is identically zero\n    if max_nonzero == 0:\n        return 0.0\n\n    # Compute the polynomial value at the root\n    # The polynomial is of the form: (x - r1) * (x - r2) * ... * (x - rn)\n    # where r1, r2, ..., rn are the roots.\n    # We can compute this by evaluating the polynomial at the root.\n    # Since the roots are symmetric around the center of the polynomial,\n    # we can use the formula:\n    # f(r) = sum_{i=0}^{n-1} r * (r - r_i)^i\n    # where r_i are the roots.\n    # However, a simpler approach is to evaluate the polynomial at the root\n    # using the fact that the roots",
+      "passed": 0,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/39",
+      "output": "def prime_fib(n: int) -> int:\n    \"\"\"\n    Returns the n-th Fibonacci number that is also prime.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"n must be a positive integer\")\n    \n    if n == 1:\n        return 2\n    \n    # Generate Fibonacci numbers up to n\n    fibs = [0, 1]\n    while len(fibs) < n:\n        fibs.append(fibs[-1] + fibs[-2])\n    \n    # Check primality for each Fibonacci number\n    for i in range(len(fibs)):\n        if fibs[i] < 2:\n            continue\n        if fibs[i] > 1000000000:  # Limit for performance\n            break\n        if fibs[i] in [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]:\n            return fibs[i]\n    \n    raise ValueError(f\"n-th Fibonacci prime not found\")\n\nif __name__ == \"__main__\":\n    print(fib(1))\n    print(f",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 97.06972820800002,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "'(' was never closed (<unknown>, line 29)",
+      "case_passed": [
+        false
+      ],
+      "code": "def prime_fib(n: int) -> int:\n    \"\"\"\n    Returns the n-th Fibonacci number that is also prime.\n    \"\"\"\n    if n < 1:\n        raise ValueError(\"n must be a positive integer\")\n    \n    if n == 1:\n        return 2\n    \n    # Generate Fibonacci numbers up to n\n    fibs = [0, 1]\n    while len(fibs) < n:\n        fibs.append(fibs[-1] + fibs[-2])\n    \n    # Check primality for each Fibonacci number\n    for i in range(len(fibs)):\n        if fibs[i] < 2:\n            continue\n        if fibs[i] > 1000000000:  # Limit for performance\n            break\n        if fibs[i] in [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]:\n            return fibs[i]\n    \n    raise ValueError(f\"n-th Fibonacci prime not found\")\n\nif __name__ == \"__main__\":\n    print(fib(1))\n    print(f",
+      "passed": 0,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/75",
+      "output": "def is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of 3 prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    30 = 2 * 3 * 5\n    \"\"\"\n    if a < 1:\n        return False\n    if a < 3:\n        return False\n    if a % 3 == 0:\n        return False\n    if a % 2 == 0:\n        return False\n    if a % 5 == 0:\n        return False\n    if a % 7 == 0:\n        return False\n    if a % 11 == 0:\n        return False\n    if a % 13 == 0:\n        return False\n    if a % 17 == 0:\n        return False\n    if a % 19 == 0:\n        return False\n    if a % 23 == 0:\n        return False\n    if a % 29 == 0:\n        return False\n    if a % 31 == 0:\n        return False\n    if a % 37 == 0:\n        return False\n    if a % 41 == 0:\n        return False\n    if a % 43 == 0:",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 100.92615875399997,
+      "thinking": false,
+      "all_passed": false,
+      "category": "IndentationError",
+      "detail": "expected an indented block after 'if' statement on line 39 (<unknown>, line 39)",
+      "case_passed": [
+        false
+      ],
+      "code": "def is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of 3 prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    30 = 2 * 3 * 5\n    \"\"\"\n    if a < 1:\n        return False\n    if a < 3:\n        return False\n    if a % 3 == 0:\n        return False\n    if a % 2 == 0:\n        return False\n    if a % 5 == 0:\n        return False\n    if a % 7 == 0:\n        return False\n    if a % 11 == 0:\n        return False\n    if a % 13 == 0:\n        return False\n    if a % 17 == 0:\n        return False\n    if a % 19 == 0:\n        return False\n    if a % 23 == 0:\n        return False\n    if a % 29 == 0:\n        return False\n    if a % 31 == 0:\n        return False\n    if a % 37 == 0:\n        return False\n    if a % 41 == 0:\n        return False\n    if a % 43 == 0:",
+      "passed": 0,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/114",
+      "output": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n    if not nums:\n        return 0\n\n    min_sum = float('inf')\n    current_sum = 0\n    n = len(nums)\n\n    for i in range(n):\n        current_sum = nums[i] + min_sum\n        if current_sum < min_sum:\n            min_sum = current_sum\n\n    return min_sum\n\n# Example usage\nnums = [2, 3, 4, 1, 2, 4]\nprint(minSubArraySum(nums))  # Output: 1\n\nnums = [-1, -2, -3]\nprint(minSubArraySum(nums))  # Output: -6\n\n# Additional test cases\nnums = [1, 2, 3, 4, 5]\nprint(minSubArraySum(nums))  # Output: 15\n\nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9]\nprint(minSubArraySum(nums))  # Output: 45\n\nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nprint(minSubArraySum(nums))  # Output: 100\n\nnums = [1, 2, 3",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 100.16181125300045,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "'[' was never closed (<unknown>, line 37)",
+      "case_passed": [
+        false
+      ],
+      "code": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n    if not nums:\n        return 0\n\n    min_sum = float('inf')\n    current_sum = 0\n    n = len(nums)\n\n    for i in range(n):\n        current_sum = nums[i] + min_sum\n        if current_sum < min_sum:\n            min_sum = current_sum\n\n    return min_sum\n\n# Example usage\nnums = [2, 3, 4, 1, 2, 4]\nprint(minSubArraySum(nums))  # Output: 1\n\nnums = [-1, -2, -3]\nprint(minSubArraySum(nums))  # Output: -6\n\n# Additional test cases\nnums = [1, 2, 3, 4, 5]\nprint(minSubArraySum(nums))  # Output: 15\n\nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9]\nprint(minSubArraySum(nums))  # Output: 45\n\nnums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nprint(minSubArraySum(nums))  # Output: 100\n\nnums = [1, 2, 3",
+      "passed": 0,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/119",
+      "output": "def match_parens(lst):\n    \"\"\"\n    Check if a list of two strings can be concatenated to form a balanced parentheses string.\n    Returns 'Yes' if possible, 'No' otherwise.\n    \"\"\"\n    if not lst:\n        return 'No'\n    \n    # Helper function to check if a string is balanced\n    def is_balanced(s):\n        count = 0\n        for char in s:\n            if char == '(':\n                count += 1\n            elif char == ')':\n                count -= 1\n                if count < 0:\n                    return False\n        return count == 0\n    \n    # Try all permutations of the two strings\n    for s1, s2 in itertools.permutations(lst):\n        if is_balanced(s1) and is_balanced(s2):\n            return 'Yes'\n    \n    return 'No'\n\n# Example usage\nprint(match_parens(['()(', ')']))  # Output: Yes\nprint(match_parens([')', ')']))    # Output: No\nprint(match_parens(['(', ')']))    # Output: Yes\nprint(match_parens(['(', '(', ')'])) # Output: Yes\nprint(match_parens(['(', '(', '(', ')'])) # Output: Yes\nprint(match_parens(['(', '(', '(', '(', ')'])) # Output: Yes\nprint(match_parens(['(', '(', '(', '(', '(', ')'])) # Output: Yes\nprint(match_p",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 113.01627639199978,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "'(' was never closed (<unknown>, line 36)",
+      "case_passed": [
+        false
+      ],
+      "code": "def match_parens(lst):\n    \"\"\"\n    Check if a list of two strings can be concatenated to form a balanced parentheses string.\n    Returns 'Yes' if possible, 'No' otherwise.\n    \"\"\"\n    if not lst:\n        return 'No'\n    \n    # Helper function to check if a string is balanced\n    def is_balanced(s):\n        count = 0\n        for char in s:\n            if char == '(':\n                count += 1\n            elif char == ')':\n                count -= 1\n                if count < 0:\n                    return False\n        return count == 0\n    \n    # Try all permutations of the two strings\n    for s1, s2 in itertools.permutations(lst):\n        if is_balanced(s1) and is_balanced(s2):\n            return 'Yes'\n    \n    return 'No'\n\n# Example usage\nprint(match_parens(['()(', ')']))  # Output: Yes\nprint(match_parens([')', ')']))    # Output: No\nprint(match_parens(['(', ')']))    # Output: Yes\nprint(match_parens(['(', '(', ')'])) # Output: Yes\nprint(match_parens(['(', '(', '(', ')'])) # Output: Yes\nprint(match_parens(['(', '(', '(', '(', ')'])) # Output: Yes\nprint(match_parens(['(', '(', '(', '(', '(', ')'])) # Output: Yes\nprint(match_p",
+      "passed": 0,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/129",
+      "output": "To solve this problem, we need to find the lexicographically smallest path of length `k` in a grid where each cell contains a unique integer from 1 to `N*N`. The path must start at any cell and end at any cell, but the path must be valid (no duplicates, no out-of-bounds).\n\n### Approach\n\n1.  **Grid Representation**: Represent the grid as a 2D array or list of lists.\n2.  **Path Generation**: Since we need the lexicographically smallest path, we can use a Breadth-First Search (BFS) approach.\n    *   Initialize a queue with the starting cell.\n    *   Maintain a `visited` set to keep track of cells we've already visited to avoid cycles and duplicates.\n    *   While the queue is not empty, extract the current cell, add it to the result list, and check its neighbors.\n    *   For each neighbor, if it's within bounds, not visited, and contains a unique value (or we can just check if it's not in the current path's set of visited cells), add it to the queue.\n    *   To ensure we find the *lexicographically smallest* path, we can optimize the search by prioritizing the smallest available values. However, a standard BFS naturally finds the shortest path first. To guarantee the smallest path among the shortest ones, we can use a priority queue or simply iterate through the grid in a way that respects the \"smallest value first\" heuristic.\n    *  ",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 117.01816944100028,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "invalid decimal literal (<unknown>, line 5)",
+      "case_passed": [
+        false
+      ],
+      "code": "To solve this problem, we need to find the lexicographically smallest path of length `k` in a grid where each cell contains a unique integer from 1 to `N*N`. The path must start at any cell and end at any cell, but the path must be valid (no duplicates, no out-of-bounds).\n\n### Approach\n\n1.  **Grid Representation**: Represent the grid as a 2D array or list of lists.\n2.  **Path Generation**: Since we need the lexicographically smallest path, we can use a Breadth-First Search (BFS) approach.\n    *   Initialize a queue with the starting cell.\n    *   Maintain a `visited` set to keep track of cells we've already visited to avoid cycles and duplicates.\n    *   While the queue is not empty, extract the current cell, add it to the result list, and check its neighbors.\n    *   For each neighbor, if it's within bounds, not visited, and contains a unique value (or we can just check if it's not in the current path's set of visited cells), add it to the queue.\n    *   To ensure we find the *lexicographically smallest* path, we can optimize the search by prioritizing the smallest available values. However, a standard BFS naturally finds the shortest path first. To guarantee the smallest path among the shortest ones, we can use a priority queue or simply iterate through the grid in a way that respects the \"smallest value first\" heuristic.\n    *",
+      "passed": 0,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/132",
+      "output": "def is_nested(string):\n    \"\"\"\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence of brackets \n    where at least one bracket in the subsequence is nested.\n\n    is_nested('[[]]') ➞ True\n    is_nested('[]]]]]]][[[[[]') ➞ False\n    is_nested('[][]') ➞ False\n    is_nested('[]') ➞ False\n    is_nested('[[][]]') ➞ True\n    is_nested('[[]][[') ➞ True\n    \"\"\"\n    stack = []\n    for char in string:\n        if char == '[':\n            stack.append(char)\n        elif char == ']':\n            if stack:\n                stack.pop()\n                if len(stack) == 0:\n                    return True\n    return len(stack) == 0\n\nis_nested('[[]]') ➞ True\nis_nested('[]]]]]]][[[[[]') ➞ False\nis_nested('[][]') ➞ False\nis_nested('[]') ➞ False\nis_nested('[[][]]') ➞ True\nis_nested('[[]][[') ➞ True\nis_nested('[[[]]]') ➞ True\nis_nested('[[[]]][[[]]]') ➞ True\nis_nested('[[[]]][[[]]][[[]]]') ➞ True\nis_nested('[[[]]][[[]]][[[]]][[[]]]') �",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 109.98525160400004,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "invalid character '➞' (U+279E) (<unknown>, line 25)",
+      "case_passed": [
+        false
+      ],
+      "code": "def is_nested(string):\n    \"\"\"\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence of brackets \n    where at least one bracket in the subsequence is nested.\n\n    is_nested('[[]]') ➞ True\n    is_nested('[]]]]]]][[[[[]') ➞ False\n    is_nested('[][]') ➞ False\n    is_nested('[]') ➞ False\n    is_nested('[[][]]') ➞ True\n    is_nested('[[]][[') ➞ True\n    \"\"\"\n    stack = []\n    for char in string:\n        if char == '[':\n            stack.append(char)\n        elif char == ']':\n            if stack:\n                stack.pop()\n                if len(stack) == 0:\n                    return True\n    return len(stack) == 0\n\nis_nested('[[]]') ➞ True\nis_nested('[]]]]]]][[[[[]') ➞ False\nis_nested('[][]') ➞ False\nis_nested('[]') ➞ False\nis_nested('[[][]]') ➞ True\nis_nested('[[]][[') ➞ True\nis_nested('[[[]]]') ➞ True\nis_nested('[[[]]][[[]]]') ➞ True\nis_nested('[[[]]][[[]]][[[]]]') ➞ True\nis_nested('[[[]]][[[]]][[[]]][[[]]]') �",
+      "passed": 0,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/147",
+      "output": "def get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n    \"\"\"\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n    return count",
+      "new_tokens": 208,
+      "hit_limit": false,
+      "seconds": 72.26382729200031,
+      "thinking": false,
+      "all_passed": true,
+      "case_passed": [
+        true
+      ],
+      "category": "passed",
+      "error_types": [],
+      "code": "def get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n    \"\"\"\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n    return count",
+      "passed": 1,
+      "total": 1
+    }
+  ],
+  "protocol": {
+    "max_new_tokens": 320,
+    "greedy": true,
+    "thinking": false,
+    "seed": 0,
+    "threads": 4,
+    "reference_solution_in_generation_input": false,
+    "test_code_in_generation_input": false,
+    "public_examples_in_official_statement": true,
+    "candidate_programs_per_task": 1
+  },
+  "tasks_passed": 1,
+  "test_groups_passed": 1,
+  "test_groups_total": 8,
+  "status": "complete",
+  "total": 8
+}
