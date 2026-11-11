@@ -8,8 +8,10 @@ def run(kind,phase):
     dest=HERE/(phase+'_'+kind+'.json')
     patch_hash=meta.get('adapter_sha256')
     report=json.loads(dest.read_text()) if dest.exists() else {'kind':kind,'phase':phase,'metadata':meta,'rows':[],
+       'frozen_sha256':filehash(HERE/'frozen.json'),'parent_sha256':PARENT_HASH,
        'protocol':{'max_new_tokens':160,'do_sample':False,'seed':0,'thinking':False,'threads':4,'solutions_or_cases_in_prompt':False}}
     assert report['metadata'].get('adapter_sha256')==patch_hash
+    assert report['frozen_sha256']==filehash(HERE/'frozen.json')
     if phase=='screen':
         rows=[r for r in json.loads((HERE/'validation.json').read_text()) if r['variant'] in [0,9]]
     elif phase=='full_validation':rows=json.loads((HERE/'validation.json').read_text())

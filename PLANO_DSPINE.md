@@ -12,11 +12,14 @@ hardware e carga, não medições nossas nem aumento de acurácia/raciocínio.
 Comprimento médio de aceitação em HumanEval/MBPP/LCB não equivale a pass@1.
 
 Executor atual: semGPU,8GiBRAM, cotaCPU equivalente a2núcleos, quatro threads
-PyTorch e aproximadamente1,7GiB livres em disco na retomada. Um drafter de
-aproximadamente2B consome perto de4GB só em BF16, além do nosso target~2GB,
+PyTorch e aproximadamente1,7GiB livres em disco na retomada. O drafter tem
+2.025.912.064 parâmetros (API oficial, revisão5f54174d301dbca65d9aa4448dc47e56732d9a12),
+4.051.824.128bytes só em BF16, além do nosso target~2GB,
 caches, ativações e runtime. Seus pesos não cabem no disco livre. Não há drafter
 publicado compatível com o port híbrido Liquid Sense: tokenizer, features,
 dimensões, caches por visita e verificação precisam de adaptação e treinamento.
+O config confirma hidden_size5120 e coleta de estados de um alvo64camadas,
+inclusive posições46/61, incompatíveis diretamente com nosso hidden1024/32camadas.
 
 Decisão: não baixar nem integrar esse drafter agora. Não há protótipo DSpine ou
 aceleração medida neste estudo. Primeiro resolver aprendizado/qualidade e medir
