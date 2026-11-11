@@ -21,5 +21,29 @@
     "passed": 0,
     "total": 1
   },
-  "explanation": "current_sum starts as nums[i], then the j loop starts at i and adds nums[i] again; this single-element input returns 2."
+  "explanation": "current_sum starts as nums[i], then the j loop starts at i and adds nums[i] again; this single-element input returns 2.",
+  "transfer_magic_square": {
+    "input": [
+      [
+        8,
+        1,
+        6
+      ],
+      [
+        3,
+        5,
+        9
+      ],
+      [
+        4,
+        7,
+        2
+      ]
+    ],
+    "expected": false,
+    "reference_passed": true,
+    "edited_passed": false,
+    "official_score_unchanged": true,
+    "explanation": "Generated program checks only the first row, first column and two diagonals; this nonmagic square keeps these sums equal while other rows/columns differ."
+  }
 }

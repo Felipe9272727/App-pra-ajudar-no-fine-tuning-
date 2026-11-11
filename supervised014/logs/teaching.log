@@ -1,0 +1,33 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:   9%|▊         | 58/675 [00:00<00:01, 574.57it/s]
+Loading weights:  19%|█▉        | 131/675 [00:00<00:00, 651.47it/s]
+Loading weights:  29%|██▉       | 198/675 [00:00<00:00, 648.55it/s]
+Loading weights:  43%|████▎     | 287/675 [00:00<00:00, 725.14it/s]
+Loading weights:  53%|█████▎    | 360/675 [00:00<00:00, 663.55it/s]
+Loading weights:  80%|████████  | 543/675 [00:00<00:00, 1028.83it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 967.60it/s] 
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794421784.2850647, "attempt": null, "pid": 3294}
+PHASE_END checkpoint_load:best.pt 0.008
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+GOLD {"id": "HumanEval/32", "tokens": 158, "wrong_next_tokens": 25, "mean_nll": 0.6699057817459106, "token_accuracy": 0.8417721390724182, "max_hidden_change_fraction": 0.13471296429634094}
+GOLD {"id": "HumanEval/39", "tokens": 133, "wrong_next_tokens": 23, "mean_nll": 0.6381683945655823, "token_accuracy": 0.8270676732063293, "max_hidden_change_fraction": 0.07325591892004013}
+GOLD {"id": "HumanEval/75", "tokens": 138, "wrong_next_tokens": 14, "mean_nll": 0.4363946318626404, "token_accuracy": 0.8985507488250732, "max_hidden_change_fraction": 0.10189054906368256}
+GOLD {"id": "HumanEval/114", "tokens": 95, "wrong_next_tokens": 18, "mean_nll": 0.8739714026451111, "token_accuracy": 0.8105263113975525, "max_hidden_change_fraction": 0.09153792262077332}
+GOLD {"id": "HumanEval/119", "tokens": 126, "wrong_next_tokens": 21, "mean_nll": 0.6604421138763428, "token_accuracy": 0.8333333134651184, "max_hidden_change_fraction": 0.10575976222753525}
+GOLD {"id": "HumanEval/129", "tokens": 195, "wrong_next_tokens": 26, "mean_nll": 0.6344342231750488, "token_accuracy": 0.8666666746139526, "max_hidden_change_fraction": 0.15000000596046448}
+GOLD {"id": "HumanEval/132", "tokens": 138, "wrong_next_tokens": 28, "mean_nll": 0.7680178284645081, "token_accuracy": 0.7971014380455017, "max_hidden_change_fraction": 0.13643662631511688}
+GOLD {"id": "HumanEval/147", "tokens": 115, "wrong_next_tokens": 7, "mean_nll": 0.394512802362442, "token_accuracy": 0.939130425453186, "max_hidden_change_fraction": 0.08825347572565079}
+AFTER_TEACH {"id": "HumanEval/32", "tokens": 158, "wrong_next_tokens": 9, "mean_nll": 0.3159497082233429, "token_accuracy": 0.9430379867553711, "max_hidden_change_fraction": 0.018338005989789963}
+AFTER_TEACH {"id": "HumanEval/39", "tokens": 133, "wrong_next_tokens": 11, "mean_nll": 0.2574547827243805, "token_accuracy": 0.9172932505607605, "max_hidden_change_fraction": 0.012919199652969837}
+AFTER_TEACH {"id": "HumanEval/75", "tokens": 138, "wrong_next_tokens": 8, "mean_nll": 0.17335063219070435, "token_accuracy": 0.9420289993286133, "max_hidden_change_fraction": 0.01812082529067993}
+AFTER_TEACH {"id": "HumanEval/114", "tokens": 95, "wrong_next_tokens": 10, "mean_nll": 0.38737133145332336, "token_accuracy": 0.8947368264198303, "max_hidden_change_fraction": 0.014041334390640259}
+AFTER_TEACH {"id": "HumanEval/119", "tokens": 126, "wrong_next_tokens": 7, "mean_nll": 0.2785050570964813, "token_accuracy": 0.9444444179534912, "max_hidden_change_fraction": 0.03552893549203873}
+AFTER_TEACH {"id": "HumanEval/129", "tokens": 195, "wrong_next_tokens": 16, "mean_nll": 0.3063787519931793, "token_accuracy": 0.9179487228393555, "max_hidden_change_fraction": 0.028825541958212852}
+AFTER_TEACH {"id": "HumanEval/132", "tokens": 138, "wrong_next_tokens": 15, "mean_nll": 0.3543276786804199, "token_accuracy": 0.8913043737411499, "max_hidden_change_fraction": 0.027702510356903076}
+AFTER_TEACH {"id": "HumanEval/147", "tokens": 115, "wrong_next_tokens": 5, "mean_nll": 0.14769311249256134, "token_accuracy": 0.95652174949646, "max_hidden_change_fraction": 0.015411656349897385}
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+SAVED_CANDIDATE 569ad5d8185b9ff5721b2bae6c1f7519f0769553b2f15cccbd63adbacaef9c46

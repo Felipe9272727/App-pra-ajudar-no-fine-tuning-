@@ -77,11 +77,12 @@ def main():
       '| Modelo | HumanEval ensinado | MBPP diferente | Controles | NLL de linguagem |',
       '|---|---:|---:|---:|---:|']
     for kind,m in models.items():lines.append(f'| {labels[kind]} | {m["taught"]["solved"]}/8 | {m["transfer"]["solved"]}/8 | {m["controls"]["correct"]}/12 | {m["controls"]["nll"]:.6f} |')
-    lines+=['','| Modelo | Truncamentos HumanEval | Truncamentos MBPP | Tempo de geração HumanEval (s) | Tempo MBPP (s) |',
+    lines+=['','| Modelo | Atingiram o limite: HumanEval | Atingiram o limite: MBPP | Tempo de geração HumanEval (s) | Tempo MBPP (s) |',
             '|---|---:|---:|---:|---:|']
     for kind,m in models.items():lines.append(f'| {labels[kind]} | {m["taught"]["truncations"]}/8 | {m["transfer"]["truncations"]}/8 | {m["taught"]["seconds"]:.2f} | {m["transfer"]["seconds"]:.2f} |')
     lines+=['','Os tempos são desta execução serial e variam com o comprimento das respostas; '
-      'não medem TTFT, energia ou aceleração de kernels. O orçamento de 320 tokens pode truncar '
+      'não medem TTFT, energia ou aceleração de kernels. Atingir o limite significa gerar 320 tokens; '
+      'a função pode já estar sintaticamente completa. O orçamento pode truncar '
       'código ou demonstrações extras. Assim, uma reprovação por sintaxe pode refletir uma '
       'resposta interrompida, não apenas um erro do algoritmo. Esses limites não foram alterados '
       'depois das respostas, e nenhum programa foi reparado para a pontuação.']
@@ -97,8 +98,8 @@ def main():
       'Isso difere dos protocolos canônicos de completion/three-shot; não há igualdade de '
       'FLOPs entre Qwen original (24 execuções) e híbridos (56).','']
     for role in ['taught','transfer']:
-        c=comparisons[role];lines.append(f'{role}: {len(c["task_gains"])} tarefas ganhas e '
-          f'{len(c["task_losses"])} perdidas contra o pai; p unilateral pareado '
+        c=comparisons[role];lines.append(f'{role}: tarefas ganhas {len(c["task_gains"])}; '
+          f'perdidas {len(c["task_losses"])} contra o pai; p unilateral pareado '
           f'{c["exact_one_sided_p"]:.6f}; IC bootstrap descritivo de 95% para a diferença em '
           f'pontos percentuais: {c["paired_bootstrap_95_ci_pp"]}. Os IDs e grupos perdidos '
           'estão em supervised014/summary.json.');lines.append('')
@@ -109,6 +110,17 @@ def main():
       'Em minSubArraySum, o programa inicia current_sum com nums[i] e começa a soma novamente '
       'em j=i. O caso diagnóstico adicional [1] falhou no retorno esperado de 1. Esse caso '
       'não foi acrescentado aos testes oficiais nem às pontuações; está em error_diagnostic.json.','',
+      'No MBPP/129, a candidata passou nos três testes oficiais, mas verifica apenas a primeira '
+      'linha, a primeira coluna e as duas diagonais. A matriz [[8,1,6],[3,5,9],[4,7,2]] mantém '
+      'essas quatro somas em 15, mas suas outras linhas/colunas não formam um quadrado mágico. '
+      'A implementação de referência rejeitou essa matriz corretamente, enquanto a candidata '
+      'falhou no teste adicional. O acerto oficial permanece contado, com essa contraprova '
+      'separada: não é evidência de domínio geral do algoritmo.','',
+      'O controle lang_past perdeu um ponto de correspondência exata: antes retornava '
+      '"went", e a candidata retornou "I went.". O passado correto continua presente, '
+      'mas o pedido era fornecer apenas a forma verbal. Isso é uma perda de aderência '
+      'ao formato, não evidência de esquecimento do passado de go. O gabarito exato '
+      'permaneceu preservado. A NLL de linguagem também subiu acima do limite de retenção.','',
       'Melhorar tokens condicionados a um prefixo correto não garante manter esse prefixo em '
       'geração livre. O ajuste ridge, os limites de mudança, a quantização e a diferença numérica '
       'entre teacher forcing e decode com cache também impedem tratar o ajuste como gravação '

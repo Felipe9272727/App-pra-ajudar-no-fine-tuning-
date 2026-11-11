@@ -1,0 +1,11 @@
+{
+  "status": "all_artifacts_consistent",
+  "models": 3,
+  "taught_tasks_per_model": 8,
+  "transfer_tasks_per_model": 8,
+  "controls_per_model": 12,
+  "official_golds_and_tests_changed": false,
+  "candidate_sha256": "569ad5d8185b9ff5721b2bae6c1f7519f0769553b2f15cccbd63adbacaef9c46",
+  "parent_retained": true,
+  "data_used_for_editing": "8 HumanEval programs plus zero-target language-anchor protection, no MBPP references"
+}

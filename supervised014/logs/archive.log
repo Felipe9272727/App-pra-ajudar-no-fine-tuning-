@@ -1,0 +1,21 @@
+{
+  "sha256": "5f9a793f4ae04b767cfa1608600b154125d2c38dc052e7874e078016fa69f6b7",
+  "archive_bytes": 8584168,
+  "parts": [
+    {
+      "path": "archives/construction.part000.bin",
+      "sha256": "c5d882f985e0c64731874c2a828b9d5897ea6acb5d22cad361eca2ccb2d3ba8a",
+      "bytes": 4194304
+    },
+    {
+      "path": "archives/construction.part001.bin",
+      "sha256": "7a94a5270b2ddc89905340a00bab946479f142ed462bb8d451e78677c8e564ed",
+      "bytes": 4194304
+    },
+    {
+      "path": "archives/construction.part002.bin",
+      "sha256": "f0b534830b68f815382863a7339c394667da32178c30cb8c9a9d86817d385ad9",
+      "bytes": 195560
+    }
+  ]
+}

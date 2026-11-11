@@ -18,3 +18,8 @@ This is a selected8+8 local pilot with chat prompts and sandboxed Python3.12,
 not official aggregate HumanEval/MBPP results. Using HumanEval reference answers
 in weight construction intentionally contaminates its taught subset. MBPP
 solutions are used only by reference validation/evaluation, never weight edits.
+
+EvalPlus's mbpp.py format definitions were consulted only, from
+https://github.com/evalplus/evalplus (Apache2.0, sources/evalplus_LICENSE).
+No MBPP+ dataset was downloaded or scored in this study; do not describe this
+pilot as a complete MBPP+ evaluation.

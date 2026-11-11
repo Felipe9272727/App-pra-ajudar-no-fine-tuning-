@@ -1,0 +1,24 @@
+{
+  "status": "complete_candidate_rejected_parent_retained",
+  "checkpoint_promoted": false,
+  "parent_retained": true,
+  "gates": {
+    "transfer_task_gain": true,
+    "no_transfer_task_loss": true,
+    "no_transfer_group_loss": false,
+    "no_taught_task_or_group_loss": true,
+    "no_parent_correct_control_loss": false,
+    "language_nll_retained": false,
+    "paired_transfer_p_le_05": false
+  },
+  "control_losses": [
+    "lang_past"
+  ],
+  "anchor_nll_delta": 0.018362263838449966,
+  "candidate_sha256": "569ad5d8185b9ff5721b2bae6c1f7519f0769553b2f15cccbd63adbacaef9c46",
+  "candidate_path": "supervised014/checkpoints/candidate.pt",
+  "selected_checkpoint": "rsi100/checkpoints/best.pt",
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "taught_set_is_contaminated": true,
+  "transfer_used_for_refitting": false
+}

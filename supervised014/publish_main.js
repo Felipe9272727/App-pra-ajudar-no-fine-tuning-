@@ -15,7 +15,7 @@ async function(studyCommit) {
   const section='\n'+heading+'\n\n'+
     'Oito soluções corretas do HumanEval supervisionaram a edição direta de uma matriz existente da camada31; depois foram avaliados esses oito problemas e oito diferentes do MBPP, com os mesmos prompts/configurações para cada modelo. '+
     scores+'. O resultado no conjunto ensinado mede ajuste aos exemplos, não generalização. São subconjuntos de um piloto, sem pontuações completas dos benchmarks. '+
-    'Nenhum checkpoint foi promovido; o anterior permanece selecionado.\n\n'+
+    'O acerto adicional no MBPP falhou numa contraprova de quadrado mágico, e a candidata perdeu um controle exato de formato e piorou a NLL de linguagem. Nenhum checkpoint foi promovido; o anterior permanece selecionado.\n\n'+
     '[Relatório e limites]('+link+'DIRECT_BENCHMARK_REPORT.md) · [Pesos e estado]('+link+'supervised014/teaching.json) · [Reprodução]('+link+'supervised014/REPRODUCE.md).\n';
   const i=old.indexOf('\n## ');const content=i<0?old+'\n'+section:old.slice(0,i)+section+old.slice(i);
   const tree=unpack(await tools.mcp__codex_apps__github_create_tree({repository_full_name:repo,base_tree_sha:before.commit.tree.sha,tree_elements:[{path:'README.md',content,mode:'100644',type:'blob'}]}));

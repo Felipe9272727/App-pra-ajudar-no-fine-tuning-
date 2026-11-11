@@ -1,12 +1,23 @@
 {
-  "status": "evaluating_transfer_edited",
-  "model_process_active": true,
+  "status": "complete_candidate_rejected_parent_retained",
+  "model_process_active": false,
   "checkpoint_promoted": false,
   "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
   "taught_benchmark": "HumanEval subset8",
   "transfer_benchmark": "sanitized MBPP subset8",
   "backward_passes": 0,
   "process_continues_in_background": false,
-  "updated_unix": 1794424698.4630935,
-  "publication_error": "GitHub create_blob ReadTimeout; investigating before transfer retry"
+  "updated_unix": 1794425540.2593591,
+  "publication_error": null,
+  "selected_checkpoint": "rsi100/checkpoints/best.pt",
+  "candidate_sha256": "569ad5d8185b9ff5721b2bae6c1f7519f0769553b2f15cccbd63adbacaef9c46",
+  "changed_parameter": "model.language_model.layers.31.mlp.down_proj.weight",
+  "taught_set_used_for_editing": true,
+  "transfer_set_used_for_editing": false,
+  "program_generations_completed": 48,
+  "control_generations_completed": 36,
+  "publication_recovery": "Exact previously stored blobs committed; no model calls repeated",
+  "report": "DIRECT_BENCHMARK_REPORT.md",
+  "taught_and_transfer_evaluation_complete": true,
+  "transfer_now_observed": true
 }
