@@ -6,6 +6,12 @@ Registro inicial (histórico): calibração algébrica concluída; ciclos de mel
 
 Este repositório será usado para código, estado retomável, logs reais, checkpoints incrementais e resultados. O histórico inicial fica na branch `codex/qwen-sensenova-liquid-rsi-20261103`.
 
+## Aprendizagem supervisionada do loop — 11/11/2026
+
+Estudo 013 concluído. A nova autorização permitiu ensinar com soluções corretas: 120 programas verificados, adaptadores algébricos na segunda passagem e dados separados por família. Comparação de geração livre: original: 0/8 tarefas, 36/160 casos; parent: 0/8 tarefas, 43/160 casos; loop: 0/8 tarefas, 39/160 casos; joint: 0/8 tarefas, 43/160 casos. Nenhum checkpoint promovido; preservar o anterior. A auditoria identificou que o avaliador histórico rejeita o nome Python válido `_`; escores e gabaritos foram preservados, com a limitação documentada.
+
+[Resultados e limites](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/6cefca0a1194e8551d7f6ba2a3c8c36dbe32c9d3/EXPERIMENTOS_CAPACIDADE.md) · [Estado recuperado](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/6cefca0a1194e8551d7f6ba2a3c8c36dbe32c9d3/STATUS_RECUPERACAO.md) · [DSpine e fontes CCORE](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/6cefca0a1194e8551d7f6ba2a3c8c36dbe32c9d3/PLANO_DSPINE.md).
+
 ## Loop, linguagem e edição temporal protegida — estudo 012, 05/11/2026
 
 O loop altera estados internos: distância L2 relativa média de **5,98%** nos 21 pontos medidos. Substituir apenas sua segunda saída pela primeira mudou quatro de sete programas, mas não os acertos: **23/35 casos e 2/7 tarefas completas**, com zero ganhos/perdas. Sete replays da chamada real com cópia do cache foram bit-exatos. Isso demonstra influência funcional, sem ganho de programação demonstrado nessa amostra.
