@@ -1,0 +1,186 @@
+{
+  "kind": "original",
+  "role": "controls",
+  "metadata": {
+    "variant": "original",
+    "loaded_parameters": 852985920
+  },
+  "frozen_sha256": "683851f37a7bb8c93fcc9d4daed7c3e9b664eb076ba51f62ec78d9eff7f57987",
+  "rows": [
+    {
+      "id": "dev_0",
+      "output": "Sb\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 1.009077480999622,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_1",
+      "output": "children",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 0.4717121780004163,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 0.7747868999995262,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_3",
+      "output": "heart",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 0.41710404999957973,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_product",
+      "output": "56",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.5317939750002552,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_order",
+      "output": "Ana",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 0.46273017800012894,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_subtract",
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.5670575230005852,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_half",
+      "output": "17",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.5250125789998492,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_opposite",
+      "output": " frijo\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 0.7236166789998606,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_past",
+      "output": "went",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 0.4223751869994885,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_plural",
+      "output": "animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 7.180879295999148,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_translate",
+      "output": "água",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 0.5168700520007405,
+      "thinking": false,
+      "correct": true
+    }
+  ],
+  "protocol": {
+    "max_new_tokens": 320,
+    "greedy": true,
+    "thinking": false,
+    "seed": 0,
+    "threads": 4,
+    "reference_solution_in_generation_input": false,
+    "test_code_in_generation_input": false,
+    "public_examples_in_official_statement": true,
+    "candidate_programs_per_task": 1
+  },
+  "correct": 10,
+  "anchor_nll": {
+    "mean_nll": 3.1867156426111856,
+    "rows": [
+      {
+        "nll": 2.139519214630127,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7660179138183594,
+        "tokens": 8
+      },
+      {
+        "nll": 2.468801736831665,
+        "tokens": 8
+      },
+      {
+        "nll": 4.089798927307129,
+        "tokens": 8
+      },
+      {
+        "nll": 3.822512626647949,
+        "tokens": 8
+      },
+      {
+        "nll": 2.3479576110839844,
+        "tokens": 8
+      },
+      {
+        "nll": 2.707275867462158,
+        "tokens": 8
+      },
+      {
+        "nll": 3.686398983001709,
+        "tokens": 8
+      },
+      {
+        "nll": 2.626807689666748,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7359650135040283,
+        "tokens": 8
+      },
+      {
+        "nll": 2.7470083236694336,
+        "tokens": 8
+      },
+      {
+        "nll": 4.1025238037109375,
+        "tokens": 8
+      }
+    ]
+  },
+  "status": "complete",
+  "total": 12
+}

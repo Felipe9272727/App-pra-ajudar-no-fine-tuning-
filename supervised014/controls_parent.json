@@ -1,0 +1,208 @@
+{
+  "kind": "parent",
+  "role": "controls",
+  "metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    },
+    "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8"
+  },
+  "frozen_sha256": "683851f37a7bb8c93fcc9d4daed7c3e9b664eb076ba51f62ec78d9eff7f57987",
+  "rows": [
+    {
+      "id": "dev_0",
+      "output": "Sb\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.1042104649995963,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_1",
+      "output": "children",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.1652788090004833,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.6290044349998425,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_3",
+      "output": "heart",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.4533979679999902,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_product",
+      "output": "56",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 2.1161658139999417,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_order",
+      "output": "Ana",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.8254283229998691,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_subtract",
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 2.41429816299933,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_half",
+      "output": "17",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 2.3372961630002465,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_opposite",
+      "output": " frijo\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.8594110869998985,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_past",
+      "output": "went",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.418132069999956,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_plural",
+      "output": "pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro,",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 22.71902289099944,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_translate",
+      "output": "água",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.3797943830004442,
+      "thinking": false,
+      "correct": true
+    }
+  ],
+  "protocol": {
+    "max_new_tokens": 320,
+    "greedy": true,
+    "thinking": false,
+    "seed": 0,
+    "threads": 4,
+    "reference_solution_in_generation_input": false,
+    "test_code_in_generation_input": false,
+    "public_examples_in_official_statement": true,
+    "candidate_programs_per_task": 1
+  },
+  "correct": 10,
+  "anchor_nll": {
+    "mean_nll": 3.1837292512257895,
+    "rows": [
+      {
+        "nll": 2.1619818210601807,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7454404830932617,
+        "tokens": 8
+      },
+      {
+        "nll": 2.5037269592285156,
+        "tokens": 8
+      },
+      {
+        "nll": 4.085320949554443,
+        "tokens": 8
+      },
+      {
+        "nll": 3.773993492126465,
+        "tokens": 8
+      },
+      {
+        "nll": 2.331493377685547,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6592135429382324,
+        "tokens": 8
+      },
+      {
+        "nll": 3.627009868621826,
+        "tokens": 8
+      },
+      {
+        "nll": 2.643709897994995,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7513179779052734,
+        "tokens": 8
+      },
+      {
+        "nll": 2.783801555633545,
+        "tokens": 8
+      },
+      {
+        "nll": 4.1377410888671875,
+        "tokens": 8
+      }
+    ]
+  },
+  "status": "complete",
+  "total": 12
+}

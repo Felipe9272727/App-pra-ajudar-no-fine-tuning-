@@ -1,0 +1,208 @@
+{
+  "kind": "edited",
+  "role": "controls",
+  "metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": "569ad5d8185b9ff5721b2bae6c1f7519f0769553b2f15cccbd63adbacaef9c46",
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    },
+    "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8"
+  },
+  "frozen_sha256": "683851f37a7bb8c93fcc9d4daed7c3e9b664eb076ba51f62ec78d9eff7f57987",
+  "rows": [
+    {
+      "id": "dev_0",
+      "output": "Sb",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.8322500809999838,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_1",
+      "output": "children",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.2354565000005095,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.72865822499989,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_3",
+      "output": "heart",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.6676189899999372,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_product",
+      "output": "56",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 2.293465004000609,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_order",
+      "output": "Ana",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.6610654469996007,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_subtract",
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 2.0203595409993795,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_half",
+      "output": "17",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 2.1173487210007806,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_opposite",
+      "output": " frijo\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.494703149000088,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_past",
+      "output": "I went.",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 1.7221211100004439,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_plural",
+      "output": "animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 23.495307246000266,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_translate",
+      "output": "água",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.4035289449993797,
+      "thinking": false,
+      "correct": true
+    }
+  ],
+  "protocol": {
+    "max_new_tokens": 320,
+    "greedy": true,
+    "thinking": false,
+    "seed": 0,
+    "threads": 4,
+    "reference_solution_in_generation_input": false,
+    "test_code_in_generation_input": false,
+    "public_examples_in_official_statement": true,
+    "candidate_programs_per_task": 1
+  },
+  "correct": 9,
+  "anchor_nll": {
+    "mean_nll": 3.2020915150642395,
+    "rows": [
+      {
+        "nll": 2.1643643379211426,
+        "tokens": 8
+      },
+      {
+        "nll": 3.721062660217285,
+        "tokens": 8
+      },
+      {
+        "nll": 2.500822067260742,
+        "tokens": 8
+      },
+      {
+        "nll": 4.106476306915283,
+        "tokens": 8
+      },
+      {
+        "nll": 3.777987480163574,
+        "tokens": 8
+      },
+      {
+        "nll": 2.327958822250366,
+        "tokens": 8
+      },
+      {
+        "nll": 2.649271011352539,
+        "tokens": 8
+      },
+      {
+        "nll": 3.8124847412109375,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6679389476776123,
+        "tokens": 8
+      },
+      {
+        "nll": 3.759218454360962,
+        "tokens": 8
+      },
+      {
+        "nll": 2.8134889602661133,
+        "tokens": 8
+      },
+      {
+        "nll": 4.124024391174316,
+        "tokens": 8
+      }
+    ]
+  },
+  "status": "complete",
+  "total": 12
+}

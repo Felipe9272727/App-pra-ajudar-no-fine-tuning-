@@ -1,0 +1,209 @@
+{
+  "kind": "edited",
+  "role": "transfer",
+  "metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": "569ad5d8185b9ff5721b2bae6c1f7519f0769553b2f15cccbd63adbacaef9c46",
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    },
+    "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8"
+  },
+  "frozen_sha256": "683851f37a7bb8c93fcc9d4daed7c3e9b664eb076ba51f62ec78d9eff7f57987",
+  "rows": [
+    {
+      "id": "MBPP/129",
+      "output": "def magic_square_test(my_matrix):\n    n = len(my_matrix)\n    row_sum = sum(my_matrix[i][0] for i in range(n))\n    col_sum = sum(my_matrix[0][j] for j in range(n))\n    main_diag_sum = sum(my_matrix[i][i] for i in range(n))\n    anti_diag_sum = sum(my_matrix[i][n-1-i] for i in range(n))\n\n    return row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == main_diag_sum and col_sum == anti_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 95.66696494699954,
+      "thinking": false,
+      "all_passed": true,
+      "case_passed": [
+        true,
+        true,
+        true
+      ],
+      "category": "passed",
+      "error_types": [],
+      "code": "def magic_square_test(my_matrix):\n    n = len(my_matrix)\n    row_sum = sum(my_matrix[i][0] for i in range(n))\n    col_sum = sum(my_matrix[0][j] for j in range(n))\n    main_diag_sum = sum(my_matrix[i][i] for i in range(n))\n    anti_diag_sum = sum(my_matrix[i][n-1-i] for i in range(n))\n\n    return row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == main_diag_sum and col_sum == anti_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum and row_sum == anti_diag_sum and col_sum == row_sum and col_sum == anti_diag_sum and row_sum == col_sum and row_sum == main_diag_sum",
+      "passed": 3,
+      "total": 3
+    },
+    {
+      "id": "MBPP/239",
+      "output": "def get_total_number_of_sequences(m, n):\n    if n <= 0 or m <= 0:\n        return 0\n    if n == 1:\n        return 1\n    if n == 2:\n        return 2\n    if n == 3:\n        return 3\n    if n == 4:\n        return 4\n    if n == 5:\n        return 5\n    if n == 6:\n        return 6\n    if n == 7:\n        return 7\n    if n == 8:\n        return 8\n    if n == 9:\n        return 9\n    if n == 10:\n        return 10\n    if n == 11:\n        return 11\n    if n == 12:\n        return 12\n    if n == 13:\n        return 13\n    if n == 14:\n        return 14\n    if n == 15:\n        return 15\n    if n == 16:\n        return 16\n    if n == 17:\n        return 17\n    if n == 18:\n        return 18\n    if n == 19:\n        return 19\n    if n == 20:\n        return 20\n    if n == 21:\n",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 107.37990691400046,
+      "thinking": false,
+      "all_passed": false,
+      "category": "IndentationError",
+      "detail": "expected an indented block after 'if' statement on line 44 (<unknown>, line 44)",
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "code": "def get_total_number_of_sequences(m, n):\n    if n <= 0 or m <= 0:\n        return 0\n    if n == 1:\n        return 1\n    if n == 2:\n        return 2\n    if n == 3:\n        return 3\n    if n == 4:\n        return 4\n    if n == 5:\n        return 5\n    if n == 6:\n        return 6\n    if n == 7:\n        return 7\n    if n == 8:\n        return 8\n    if n == 9:\n        return 9\n    if n == 10:\n        return 10\n    if n == 11:\n        return 11\n    if n == 12:\n        return 12\n    if n == 13:\n        return 13\n    if n == 14:\n        return 14\n    if n == 15:\n        return 15\n    if n == 16:\n        return 16\n    if n == 17:\n        return 17\n    if n == 18:\n        return 18\n    if n == 19:\n        return 19\n    if n == 20:\n        return 20\n    if n == 21:",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/245",
+      "output": "def max_sum(arr):\n    n = len(arr)\n    if n == 0:\n        return 0\n    if n == 1:\n        return arr[0]\n    \n    max_sum = 0\n    prev_max = -float('inf')\n    \n    for i in range(1, n):\n        curr = arr[i]\n        prev = arr[i - 1]\n        \n        # If current is greater than previous, update max_sum\n        if curr > prev:\n            max_sum = max(max_sum, curr)\n            prev_max = curr\n        \n        # If current is less than or equal to previous, check if it's a valid bitonic sequence\n        # A bitonic sequence must be strictly increasing then strictly decreasing\n        # So if prev_max is not -inf, we can't form a valid bitonic sequence ending here\n        if prev_max != -float('inf'):\n            if curr <= prev_max:\n                max_sum = max(max_sum, curr)\n                prev_max = curr\n    \n    return max_sum",
+      "new_tokens": 226,
+      "hit_limit": false,
+      "seconds": 71.80297822299963,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def max_sum(arr):\n    n = len(arr)\n    if n == 0:\n        return 0\n    if n == 1:\n        return arr[0]\n    \n    max_sum = 0\n    prev_max = -float('inf')\n    \n    for i in range(1, n):\n        curr = arr[i]\n        prev = arr[i - 1]\n        \n        # If current is greater than previous, update max_sum\n        if curr > prev:\n            max_sum = max(max_sum, curr)\n            prev_max = curr\n        \n        # If current is less than or equal to previous, check if it's a valid bitonic sequence\n        # A bitonic sequence must be strictly increasing then strictly decreasing\n        # So if prev_max is not -inf, we can't form a valid bitonic sequence ending here\n        if prev_max != -float('inf'):\n            if curr <= prev_max:\n                max_sum = max(max_sum, curr)\n                prev_max = curr\n    \n    return max_sum",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/247",
+      "output": "def lps(str):\n    n = len(str)\n    dp = [[0] * (n + 1) for _ in range(n + 1)]\n    for i in range(1, n + 1):\n        for j in range(1, n + 1):\n            if str[i - 1] == str[j - 1]:\n                dp[i][j] = 1 + dp[i - 1][j - 1]\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n    return dp[n][n]\n",
+      "new_tokens": 140,
+      "hit_limit": false,
+      "seconds": 43.402543927000806,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def lps(str):\n    n = len(str)\n    dp = [[0] * (n + 1) for _ in range(n + 1)]\n    for i in range(1, n + 1):\n        for j in range(1, n + 1):\n            if str[i - 1] == str[j - 1]:\n                dp[i][j] = 1 + dp[i - 1][j - 1]\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n    return dp[n][n]",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/306",
+      "output": "def max_sum_increasing_subseq(a, n, index, k):\n    max_sum = 0\n    if index < 0 or index >= n:\n        return max_sum\n    \n    # If k is greater than index, we can include the element at index k\n    if k > index:\n        # If we can include index k, we can also include index index\n        # The sum of elements from index index to index k is a[index] + ... + a[k]\n        # We need to find the longest increasing subsequence ending at index k\n        # and extend it to index index\n        # Since we want the maximum sum, we can just take the max of:\n        # 1. The sum of elements from index index to index k\n        # 2. The sum of elements from index index to index k\n        # 3. The sum of elements from index index to index k\n        # 4. The sum of elements from index index to index k\n        # 5. The sum of elements from index index to index k\n        # 6. The sum of elements from index index to index k\n        # 7. The sum of elements from index index to index k\n        # 8. The sum of elements from index index to index k\n        # 9. The sum of elements from index index to index k\n        # 10. The sum of elements from index index to index k\n        # 11. The sum of elements from index",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 98.45773514899975,
+      "thinking": false,
+      "all_passed": false,
+      "category": "IndentationError",
+      "detail": "expected an indented block after 'if' statement on line 7 (<unknown>, line 23)",
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "code": "def max_sum_increasing_subseq(a, n, index, k):\n    max_sum = 0\n    if index < 0 or index >= n:\n        return max_sum\n    \n    # If k is greater than index, we can include the element at index k\n    if k > index:\n        # If we can include index k, we can also include index index\n        # The sum of elements from index index to index k is a[index] + ... + a[k]\n        # We need to find the longest increasing subsequence ending at index k\n        # and extend it to index index\n        # Since we want the maximum sum, we can just take the max of:\n        # 1. The sum of elements from index index to index k\n        # 2. The sum of elements from index index to index k\n        # 3. The sum of elements from index index to index k\n        # 4. The sum of elements from index index to index k\n        # 5. The sum of elements from index index to index k\n        # 6. The sum of elements from index index to index k\n        # 7. The sum of elements from index index to index k\n        # 8. The sum of elements from index index to index k\n        # 9. The sum of elements from index index to index k\n        # 10. The sum of elements from index index to index k\n        # 11. The sum of elements from index",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/392",
+      "output": "def get_max_sum(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    if n == 2:\n        return 2\n    if n == 3:\n        return 3\n    if n == 4:\n        return 4\n    if n == 5:\n        return 5\n    if n == 6:\n        return 6\n    if n == 7:\n        return 7\n    if n == 8:\n        return 8\n    if n == 9:\n        return 9\n    if n == 10:\n        return 10\n    if n == 11:\n        return 11\n    if n == 12:\n        return 12\n    if n == 13:\n        return 13\n    if n == 14:\n        return 14\n    if n == 15:\n        return 15\n    if n == 16:\n        return 16\n    if n == 17:\n        return 17\n    if n == 18:\n        return 18\n    if n == 19:\n        return 19\n    if n == 20:\n        return 20\n    if n == 21:\n        return 21\n    if n",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 101.89649960399947,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "expected ':' (<unknown>, line 46)",
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "code": "def get_max_sum(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    if n == 2:\n        return 2\n    if n == 3:\n        return 3\n    if n == 4:\n        return 4\n    if n == 5:\n        return 5\n    if n == 6:\n        return 6\n    if n == 7:\n        return 7\n    if n == 8:\n        return 8\n    if n == 9:\n        return 9\n    if n == 10:\n        return 10\n    if n == 11:\n        return 11\n    if n == 12:\n        return 12\n    if n == 13:\n        return 13\n    if n == 14:\n        return 14\n    if n == 15:\n        return 15\n    if n == 16:\n        return 16\n    if n == 17:\n        return 17\n    if n == 18:\n        return 18\n    if n == 19:\n        return 19\n    if n == 20:\n        return 20\n    if n == 21:\n        return 21\n    if n",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/407",
+      "output": "def rearrange_bigger(n):\n    digits = list(str(n))\n    digits.sort()\n    n_str = \"\".join(digits)\n    n = int(n_str)\n    while n > 0:\n        n = n // 10\n    return n",
+      "new_tokens": 59,
+      "hit_limit": false,
+      "seconds": 20.34382565099986,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        true,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def rearrange_bigger(n):\n    digits = list(str(n))\n    digits.sort()\n    n_str = \"\".join(digits)\n    n = int(n_str)\n    while n > 0:\n        n = n // 10\n    return n",
+      "passed": 1,
+      "total": 3
+    },
+    {
+      "id": "MBPP/463",
+      "output": "def max_subarray_product(arr):\n    max_val = 1\n    current_max = 1\n    if arr:\n        current_max = arr[0]\n        max_val = current_max\n    for x in arr[1:]:\n        if x > 0:\n            current_max *= x\n            max_val = max(max_val, current_max)\n        else:\n            current_max = 0\n            max_val = 0\n    return max_val if max_val != 0 else 0",
+      "new_tokens": 111,
+      "hit_limit": false,
+      "seconds": 36.18195603799995,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def max_subarray_product(arr):\n    max_val = 1\n    current_max = 1\n    if arr:\n        current_max = arr[0]\n        max_val = current_max\n    for x in arr[1:]:\n        if x > 0:\n            current_max *= x\n            max_val = max(max_val, current_max)\n        else:\n            current_max = 0\n            max_val = 0\n    return max_val if max_val != 0 else 0",
+      "passed": 0,
+      "total": 3
+    }
+  ],
+  "protocol": {
+    "max_new_tokens": 320,
+    "greedy": true,
+    "thinking": false,
+    "seed": 0,
+    "threads": 4,
+    "reference_solution_in_generation_input": false,
+    "test_code_in_generation_input": false,
+    "public_examples_in_official_statement": true,
+    "candidate_programs_per_task": 1
+  },
+  "tasks_passed": 1,
+  "test_groups_passed": 4,
+  "test_groups_total": 24,
+  "status": "complete",
+  "total": 8
+}
