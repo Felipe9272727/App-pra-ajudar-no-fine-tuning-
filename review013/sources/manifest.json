@@ -1,0 +1,38 @@
+{
+  "review013/sources/dspine_model.md": {
+    "sha256": "f81e53db946c55ca6787a3fefd479ebc5852540dd86db69ef340f2b108bfb14b",
+    "bytes": 10731
+  },
+  "review013/sources/ccore_tree.json": {
+    "sha256": "b2eab98770a25d8ecc2377c6b6f7a27ac81a24ee5e56e64ac6e277628d8a483f",
+    "bytes": 15889
+  },
+  "review013/sources/retrieval.json": {
+    "sha256": "2e9e88484b79572e24ec69cdbec34aeaf1ddeb1a39bbcd11a61d4adfab512ae9",
+    "bytes": 1079
+  },
+  "review013/sources/ccore_schema.json": {
+    "sha256": "c98b98318c0cbf1dca531ee96d7459937814dd0ca5b920ec418a1ac2fea6efed",
+    "bytes": 172618
+  },
+  "review013/sources/ccore_data.md": {
+    "sha256": "a23ef3173bd99f9850b915d6dd1837181424cd10daba3cd1bd7966fa746b363f",
+    "bytes": 12388
+  },
+  "review013/sources/dspine_readme.md": {
+    "sha256": "4deed24cd44f9073eeb46eb7d0ef1a4afe9d7832ff0a546f5f0c09714dbc6902",
+    "bytes": 6547
+  },
+  "review013/sources/ccore_model_tree.json": {
+    "sha256": "c9032cf6f60d1a5b2251e0dc760645c0976c6e982893830dd36cc1d15c89ea55",
+    "bytes": 9108
+  },
+  "review013/sources/ccore_api.json": {
+    "sha256": "8f9cd5e7b71df2ddec30c7df7d80fe14a634980ae6fbc081323059903619b884",
+    "bytes": 6103
+  },
+  "review013/sources/ccore_model.md": {
+    "sha256": "fa93e84b0612356d375e02f754a577ab6afee3898d7e28f0b9f3357d6521433d",
+    "bytes": 15453
+  }
+}

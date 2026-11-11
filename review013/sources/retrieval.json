@@ -1,0 +1,32 @@
+{
+  "ccore_model": {
+    "url": "https://huggingface.co/ccore/Qwen3.5-4B-GLB-3D-Coder/raw/main/README.md",
+    "bytes": 15453,
+    "status": "retrieved"
+  },
+  "ccore_data": {
+    "url": "https://huggingface.co/datasets/ccore/ThreeJS-3D-GLB-Assets/raw/main/README.md",
+    "bytes": 12388,
+    "status": "retrieved"
+  },
+  "dspine_model": {
+    "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16/raw/main/README.md",
+    "bytes": 10731,
+    "status": "retrieved"
+  },
+  "dspine_readme": {
+    "url": "https://raw.githubusercontent.com/Tencent/DSpine/main/README.md",
+    "bytes": 6547,
+    "status": "retrieved"
+  },
+  "ccore_schema_initial": {
+    "url": "https://datasets-server.huggingface.co/first-rows?dataset=ccore%2FThreeJS-3D-GLB-Assets&config=default&split=train",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  "ccore_schema": {
+    "url": "https://datasets-server.huggingface.co/first-rows?dataset=ccore%2FThreeJS-3D-GLB-Assets&config=conversations&split=train",
+    "status": "retrieved",
+    "configuration": "conversations"
+  }
+}
