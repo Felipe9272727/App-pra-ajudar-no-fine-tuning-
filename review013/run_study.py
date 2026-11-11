@@ -3,11 +3,12 @@
 Use with the documented credential-free environment. Subprocess exit codes and
 row files support resumption; do not blindly launch a second worker.
 """
-import json,subprocess,sys
+import json,subprocess,sys,time
 from pathlib import Path
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parent
 
 def command(script,*args):
+    p=HERE/'status.json';s=json.loads(p.read_text());s.update(status='running_'+'_'.join([script,*args]),model_process_active=True,updated_unix=time.time());p.write_text(json.dumps(s,indent=2)+'\n')
     subprocess.run([sys.executable,str(HERE/script),*args],cwd=ROOT,check=True)
 
 def main():
@@ -44,4 +45,7 @@ def main():
     (HERE/'selection.json').write_text(json.dumps(selection,indent=2)+'\n')
     print('SELECTION',json.dumps(selection),flush=True)
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    try:main()
+    finally:
+        p=HERE/'status.json';s=json.loads(p.read_text());s.update(model_process_active=False,process_continues_in_background=False,updated_unix=time.time());p.write_text(json.dumps(s,indent=2)+'\n')
