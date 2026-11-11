@@ -1,0 +1,10 @@
+{
+  "status": "protocol_frozen_ready_for_direct_teaching",
+  "model_process_active": false,
+  "checkpoint_promoted": false,
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "taught_benchmark": "HumanEval subset8",
+  "transfer_benchmark": "sanitized MBPP subset8",
+  "backward_passes": 0,
+  "process_continues_in_background": false
+}

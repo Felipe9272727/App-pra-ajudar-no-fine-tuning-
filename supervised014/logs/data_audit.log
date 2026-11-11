@@ -1,0 +1,124 @@
+{
+  "rows": [
+    {
+      "id": "HumanEval/32",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 1
+    },
+    {
+      "id": "HumanEval/39",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 1
+    },
+    {
+      "id": "HumanEval/75",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 1
+    },
+    {
+      "id": "HumanEval/114",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 1
+    },
+    {
+      "id": "HumanEval/119",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 1
+    },
+    {
+      "id": "HumanEval/129",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 1
+    },
+    {
+      "id": "HumanEval/132",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 1
+    },
+    {
+      "id": "HumanEval/147",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 1
+    },
+    {
+      "id": "MBPP/129",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 3
+    },
+    {
+      "id": "MBPP/239",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 3
+    },
+    {
+      "id": "MBPP/245",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 3
+    },
+    {
+      "id": "MBPP/247",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 3
+    },
+    {
+      "id": "MBPP/306",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 3
+    },
+    {
+      "id": "MBPP/392",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 3
+    },
+    {
+      "id": "MBPP/407",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 3
+    },
+    {
+      "id": "MBPP/463",
+      "reference_passed": true,
+      "none_mutant_rejected": true,
+      "official_test_groups": 3
+    }
+  ],
+  "taught": [
+    32,
+    39,
+    75,
+    114,
+    119,
+    129,
+    132,
+    147
+  ],
+  "transfer": [
+    129,
+    239,
+    245,
+    247,
+    306,
+    392,
+    407,
+    463
+  ],
+  "exact_solution_ast_overlap": 0,
+  "official_tests_modified": false,
+  "training_solution_format": "HumanEval full reference program with docstrings removed by AST, original canonical strings also preserved",
+  "limitations": "Selected algorithmic pilot, not complete HumanEval/MBPP scores. MBPP is generally basic; selected longer DP/combinatorial tasks. Public pretraining contamination unknown."
+}

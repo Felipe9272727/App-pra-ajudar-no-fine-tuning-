@@ -1,0 +1,17 @@
+{
+  "AGENTS.md": "b73951ebeb3c2d4e14590d14893c3d49f422da21c353a3e3aac4113d54545d02",
+  "supervised014/PROTOCOL.md": "6b4127744eb585e05a315f18bc4b94adfc69c701ef5e4ac7294fb90d3fc78f6d",
+  "supervised014/core.py": "a691d8e11a37c75fb4b4d6eea07e1e01419bc4be6aec4c0882fc420d05263549",
+  "supervised014/teach.py": "b733237c9469f1dc19a1086184836589bb68d16d6063d82ea2867a93ad84bc74",
+  "supervised014/judge.py": "c19da84a367e966134aa7622ebece253fe46a20bb037f77aadb44b9f13012c91",
+  "supervised014/evaluate.py": "7fffe59910fedbde54f5a5bcbdead6d2f1e756841f46e0df44f97660eceaaabd",
+  "supervised014/run_evaluation.py": "66726c2f4bfeac0bc26e5cbb43cf3fbd9a614c48755578ff6c240d7a2f94a10f",
+  "supervised014/build_data.py": "197dd805c133715444cb14d8cde9ecd6bedf8267bb70e731e2c396bd79353bf7",
+  "supervised014/taught.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+  "supervised014/transfer.json": "a2d123197eced68ce70cb6775fae887b680958a69f56515b47b5a517b1b72f5e",
+  "review013/controls.json": "7328505fb456b36bcba3e4a3975cedfc4d26b25c3bd01b3b59b6230029d160fd",
+  "modeling_sensenova_loop.py": "26e11d3522aa730c0ba031340ce42632bc2834da8cc0b6804006bb207d979a5b",
+  "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+  "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+  "reasoning/runtime_helpers.py": "3decc031b87f7fe5bf6feca52dc3d6d2ba82c60eed9d21341e0977f028836238"
+}

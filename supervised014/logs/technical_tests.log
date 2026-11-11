@@ -1,0 +1,6 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.243s
+
+OK

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "MBPP/129",
+    "benchmark": "mbpp",
+    "role": "transfer",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nWrite a function to calculate whether the matrix is a magic square.\nRequired signature: def magic_square_test(my_matrix):",
+    "solution": "def magic_square_test(my_matrix):\n    iSize = len(my_matrix[0])\n    sum_list = []\n    sum_list.extend([sum (lines) for lines in my_matrix])   \n    for col in range(iSize):\n        sum_list.append(sum(row[col] for row in my_matrix))\n    result1 = 0\n    for i in range(0,iSize):\n        result1 +=my_matrix[i][i]\n    sum_list.append(result1)      \n    result2 = 0\n    for i in range(iSize-1,-1,-1):\n        result2 +=my_matrix[i][i]\n    sum_list.append(result2)\n    if len(set(sum_list))>1:\n        return False\n    return True",
+    "entry_point": "magic_square_test",
+    "tests": [
+      "assert magic_square_test([[7, 12, 1, 14], [2, 13, 8, 11], [16, 3, 10, 5], [9, 6, 15, 4]])==True",
+      "assert magic_square_test([[2, 7, 6], [9, 5, 1], [4, 3, 8]])==True",
+      "assert magic_square_test([[2, 7, 6], [9, 5, 1], [4, 3, 7]])==False"
+    ],
+    "test_imports": []
+  },
+  {
+    "id": "MBPP/239",
+    "benchmark": "mbpp",
+    "role": "transfer",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nWrite a function that takes in positive integers m and n and finds the number of possible sequences of length n, such that each element is a positive integer and is greater than or equal to twice the previous element but less than or equal to m.\nRequired signature: def get_total_number_of_sequences(m, n):",
+    "solution": "def get_total_number_of_sequences(m,n): \n\tT=[[0 for i in range(n+1)] for i in range(m+1)] \n\tfor i in range(m+1): \n\t\tfor j in range(n+1): \n\t\t\tif i==0 or j==0: \n\t\t\t\tT[i][j]=0\n\t\t\telif i<j: \n\t\t\t\tT[i][j]=0\n\t\t\telif j==1: \n\t\t\t\tT[i][j]=i \n\t\t\telse: \n\t\t\t\tT[i][j]=T[i-1][j]+T[i//2][j-1] \n\treturn T[m][n]",
+    "entry_point": "get_total_number_of_sequences",
+    "tests": [
+      "assert get_total_number_of_sequences(10, 4) == 4",
+      "assert get_total_number_of_sequences(5, 2) == 6",
+      "assert get_total_number_of_sequences(16, 3) == 84"
+    ],
+    "test_imports": []
+  },
+  {
+    "id": "MBPP/245",
+    "benchmark": "mbpp",
+    "role": "transfer",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nWrite a function that takes an array and finds the maximum sum of a bitonic subsequence for the given array, where a sequence is bitonic if it is first increasing and then decreasing.\nRequired signature: def max_sum(arr):",
+    "solution": "def max_sum(arr): \n\tMSIBS = arr[:] \n\tfor i in range(len(arr)): \n\t\tfor j in range(0, i): \n\t\t\tif arr[i] > arr[j] and MSIBS[i] < MSIBS[j] + arr[i]: \n\t\t\t\tMSIBS[i] = MSIBS[j] + arr[i] \n\tMSDBS = arr[:] \n\tfor i in range(1, len(arr) + 1): \n\t\tfor j in range(1, i): \n\t\t\tif arr[-i] > arr[-j] and MSDBS[-i] < MSDBS[-j] + arr[-i]: \n\t\t\t\tMSDBS[-i] = MSDBS[-j] + arr[-i] \n\tmax_sum = float(\"-Inf\") \n\tfor i, j, k in zip(MSIBS, MSDBS, arr): \n\t\tmax_sum = max(max_sum, i + j - k) \n\treturn max_sum",
+    "entry_point": "max_sum",
+    "tests": [
+      "assert max_sum([1, 15, 51, 45, 33, 100, 12, 18, 9]) == 194",
+      "assert max_sum([80, 60, 30, 40, 20, 10]) == 210",
+      "assert max_sum([2, 3 ,14, 16, 21, 23, 29, 30]) == 138"
+    ],
+    "test_imports": []
+  },
+  {
+    "id": "MBPP/247",
+    "benchmark": "mbpp",
+    "role": "transfer",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nWrite a function to find the length of the longest palindromic subsequence in the given string.\nRequired signature: def lps(str):",
+    "solution": "def lps(str): \n\tn = len(str) \n\tL = [[0 for x in range(n)] for x in range(n)] \n\tfor i in range(n): \n\t\tL[i][i] = 1\n\tfor cl in range(2, n+1): \n\t\tfor i in range(n-cl+1): \n\t\t\tj = i+cl-1\n\t\t\tif str[i] == str[j] and cl == 2: \n\t\t\t\tL[i][j] = 2\n\t\t\telif str[i] == str[j]: \n\t\t\t\tL[i][j] = L[i+1][j-1] + 2\n\t\t\telse: \n\t\t\t\tL[i][j] = max(L[i][j-1], L[i+1][j]); \n\treturn L[0][n-1]",
+    "entry_point": "lps",
+    "tests": [
+      "assert lps(\"TENS FOR TENS\") == 5",
+      "assert lps(\"CARDIO FOR CARDS\") == 7",
+      "assert lps(\"PART OF THE JOURNEY IS PART\") == 9"
+    ],
+    "test_imports": []
+  },
+  {
+    "id": "MBPP/306",
+    "benchmark": "mbpp",
+    "role": "transfer",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nWrite a function to find the maximum sum of increasing subsequence from prefix until ith index and also including a given kth element which is after i, i.e., k > i .\nRequired signature: def max_sum_increasing_subseq(a, n, index, k):",
+    "solution": "def max_sum_increasing_subseq(a, n, index, k):\n\tdp = [[0 for i in range(n)] \n\t\t\tfor i in range(n)]\n\tfor i in range(n):\n\t\tif a[i] > a[0]:\n\t\t\tdp[0][i] = a[i] + a[0]\n\t\telse:\n\t\t\tdp[0][i] = a[i]\n\tfor i in range(1, n):\n\t\tfor j in range(n):\n\t\t\tif a[j] > a[i] and j > i:\n\t\t\t\tif dp[i - 1][i] + a[j] > dp[i - 1][j]:\n\t\t\t\t\tdp[i][j] = dp[i - 1][i] + a[j]\n\t\t\t\telse:\n\t\t\t\t\tdp[i][j] = dp[i - 1][j]\n\t\t\telse:\n\t\t\t\tdp[i][j] = dp[i - 1][j]\n\treturn dp[index][k]",
+    "entry_point": "max_sum_increasing_subseq",
+    "tests": [
+      "assert max_sum_increasing_subseq([1, 101, 2, 3, 100, 4, 5 ], 7, 4, 6) == 11",
+      "assert max_sum_increasing_subseq([1, 101, 2, 3, 100, 4, 5 ], 7, 2, 5) == 7",
+      "assert max_sum_increasing_subseq([11, 15, 19, 21, 26, 28, 31], 7, 2, 4) == 71"
+    ],
+    "test_imports": []
+  },
+  {
+    "id": "MBPP/392",
+    "benchmark": "mbpp",
+    "role": "transfer",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nWrite a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).\nRequired signature: def get_max_sum(n):",
+    "solution": "def get_max_sum (n):\n\tres = list()\n\tres.append(0)\n\tres.append(1)\n\ti = 2\n\twhile i<n + 1:\n\t\tres.append(max(i, (res[int(i / 2)] \n\t\t\t\t\t\t+ res[int(i / 3)] +\n\t\t\t\t\t\t\tres[int(i / 4)]\n\t\t\t\t\t\t+ res[int(i / 5)])))\n\t\ti = i + 1\n\treturn res[n]",
+    "entry_point": "get_max_sum",
+    "tests": [
+      "assert get_max_sum(60) == 106",
+      "assert get_max_sum(10) == 12",
+      "assert get_max_sum(2) == 2"
+    ],
+    "test_imports": []
+  },
+  {
+    "id": "MBPP/407",
+    "benchmark": "mbpp",
+    "role": "transfer",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nWrite a function to create the next bigger number by rearranging the digits of a given number.\nRequired signature: def rearrange_bigger(n):",
+    "solution": "def rearrange_bigger(n):\n    nums = list(str(n))\n    for i in range(len(nums)-2,-1,-1):\n        if nums[i] < nums[i+1]:\n            z = nums[i:]\n            y = min(filter(lambda x: x > z[0], z))\n            z.remove(y)\n            z.sort()\n            nums[i:] = [y] + z\n            return int(\"\".join(nums))\n    return False",
+    "entry_point": "rearrange_bigger",
+    "tests": [
+      "assert rearrange_bigger(12)==21",
+      "assert rearrange_bigger(10)==False",
+      "assert rearrange_bigger(102)==120"
+    ],
+    "test_imports": []
+  },
+  {
+    "id": "MBPP/463",
+    "benchmark": "mbpp",
+    "role": "transfer",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nWrite a function to find the maximum product subarray of the given array.\nRequired signature: def max_subarray_product(arr):",
+    "solution": "def max_subarray_product(arr):\n\tn = len(arr)\n\tmax_ending_here = 1\n\tmin_ending_here = 1\n\tmax_so_far = 0\n\tflag = 0\n\tfor i in range(0, n):\n\t\tif arr[i] > 0:\n\t\t\tmax_ending_here = max_ending_here * arr[i]\n\t\t\tmin_ending_here = min (min_ending_here * arr[i], 1)\n\t\t\tflag = 1\n\t\telif arr[i] == 0:\n\t\t\tmax_ending_here = 1\n\t\t\tmin_ending_here = 1\n\t\telse:\n\t\t\ttemp = max_ending_here\n\t\t\tmax_ending_here = max (min_ending_here * arr[i], 1)\n\t\t\tmin_ending_here = temp * arr[i]\n\t\tif (max_so_far < max_ending_here):\n\t\t\tmax_so_far = max_ending_here\n\tif flag == 0 and max_so_far == 0:\n\t\treturn 0\n\treturn max_so_far",
+    "entry_point": "max_subarray_product",
+    "tests": [
+      "assert max_subarray_product([1, -2, -3, 0, 7, -8, -2]) == 112",
+      "assert max_subarray_product([6, -3, -10, 0, 2]) == 180",
+      "assert max_subarray_product([-2, -40, 0, -2, -3]) == 80"
+    ],
+    "test_imports": []
+  }
+]
