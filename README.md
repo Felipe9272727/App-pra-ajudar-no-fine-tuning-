@@ -6,6 +6,12 @@ Registro inicial (histórico): calibração algébrica concluída; ciclos de mel
 
 Este repositório será usado para código, estado retomável, logs reais, checkpoints incrementais e resultados. O histórico inicial fica na branch `codex/qwen-sensenova-liquid-rsi-20261103`.
 
+## Respostas corretas nos pesos — estudo 014 (11/11/2026)
+
+Oito soluções corretas do HumanEval supervisionaram a edição direta de uma matriz existente da camada31; depois foram avaliados esses oito problemas e oito diferentes do MBPP, com os mesmos prompts/configurações para cada modelo. original: HumanEval ensinado 1/8, MBPP diferente 0/8; parent: HumanEval ensinado 1/8, MBPP diferente 0/8; edited: HumanEval ensinado 1/8, MBPP diferente 1/8. O resultado no conjunto ensinado mede ajuste aos exemplos, não generalização. São subconjuntos de um piloto, sem pontuações completas dos benchmarks. O acerto adicional no MBPP falhou numa contraprova de quadrado mágico, e a candidata perdeu um controle exato de formato e piorou a NLL de linguagem. Nenhum checkpoint foi promovido; o anterior permanece selecionado.
+
+[Relatório e limites](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/713c8c69827f83a0cacbe56994ed8f23c2330939/DIRECT_BENCHMARK_REPORT.md) · [Pesos e estado](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/713c8c69827f83a0cacbe56994ed8f23c2330939/supervised014/teaching.json) · [Reprodução](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/713c8c69827f83a0cacbe56994ed8f23c2330939/supervised014/REPRODUCE.md).
+
 ## Aprendizagem supervisionada do loop — 11/11/2026
 
 Estudo 013 concluído. A nova autorização permitiu ensinar com soluções corretas: 120 programas verificados, adaptadores algébricos na segunda passagem e dados separados por família. Comparação de geração livre: original: 0/8 tarefas, 36/160 casos; parent: 0/8 tarefas, 43/160 casos; loop: 0/8 tarefas, 39/160 casos; joint: 0/8 tarefas, 43/160 casos. Nenhum checkpoint promovido; preservar o anterior. A auditoria identificou que o avaliador histórico rejeita o nome Python válido `_`; escores e gabaritos foram preservados, com a limitação documentada.
