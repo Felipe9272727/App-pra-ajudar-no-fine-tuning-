@@ -99,7 +99,22 @@ def main():
           f'O MSE do alvo local caiu {100*(1-f["fit_mse"]/f["zero_predictor_mse"]):.2f}%; '
           'isso mede ajuste ao sinal de ensino, não acerto em problemas novos.')
         lines.append('')
-    lines+=['## Decisão e limites','',
+    lines+=['## Auditoria do avaliador','',
+        'A política AST histórica rejeita qualquer identificador que comece com sublinhado, '
+        'inclusive o nome local `_`, válido em Python. Dois programas de brinquedo semanticamente '
+        'equivalentes confirmaram esse viés: o que usa `item` passou 3/3, e o que usa `_` '
+        'foi rejeitado antes da execução. A auditoria está em review013/harness_audit.json. '
+        'Nenhum programa do modelo foi reparado, nenhuma resposta foi renomeada e nenhum '
+        'gabarito, escore primário ou critério de seleção mudou.','',
+        'Em window_ranges_0, a candidata de loop recebeu ContractError por `_`, enquanto '
+        'o pai passava quatro entradas curtas antes de alcançar um K indefinido. A candidata '
+        'também usa a amplitude global da lista em lugar de amplitudes das janelas, um erro '
+        'algorítmico real. Não interpretamos a diferença desses quatro casos como medida direta '
+        'de perda de inteligência. Não há ganho de tarefa completa que justifique promoção.','',
+        'Uma versão futura do avaliador deve tratar construções Python válidas de forma adequada '
+        'e declarar todas as restrições antes de congelar novos testes. Este conjunto já foi observado '
+        'e não pode voltar a ser chamado de teste inédito após uma correção.','',
+        '## Decisão e limites','',
         f'Decisão registrada: `{selection["status"]}`. Checkpoint principal preservado: '
         '`rsi100/checkpoints/best.pt`, SHA256 '
         '`46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8`. '
