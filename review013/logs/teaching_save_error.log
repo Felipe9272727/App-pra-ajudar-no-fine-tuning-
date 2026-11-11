@@ -1,0 +1,30 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:   8%|▊         | 51/675 [00:00<00:01, 503.01it/s]
+Loading weights:  21%|██        | 143/675 [00:00<00:00, 717.88it/s]
+Loading weights:  38%|███▊      | 259/675 [00:00<00:00, 913.09it/s]
+Loading weights:  52%|█████▏    | 351/675 [00:00<00:00, 908.92it/s]
+Loading weights:  78%|███████▊  | 524/675 [00:00<00:00, 1197.20it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1301.22it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794419302.1174064, "attempt": null, "pid": 1003}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/review013/teach.py", line 82, in <module>
+    capture() if a.action=='capture' else fit()
+    ^^^^^^^^^
+  File "/home/agent/.local/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in inference_mode
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/liquid-sense/review013/teach.py", line 46, in capture
+    tensor_checkpoint(path,{'features':f[ix].cpu(),'target':y[ix].cpu(),
+  File "/workspace/liquid-sense/code_rsi/checkpoint_io.py", line 7, in tensor_checkpoint
+    path=Path(path)
+         ^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1162, in __init__
+    super().__init__(*args)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 373, in __init__
+    raise TypeError(
+TypeError: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'dict'

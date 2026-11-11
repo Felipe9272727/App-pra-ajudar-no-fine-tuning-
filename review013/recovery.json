@@ -1,0 +1,7 @@
+{
+  "event": "first capture save failed: tensor_checkpoint expects object then path",
+  "saved_training_rows_before_error": 0,
+  "candidate_checkpoints_before_error": 0,
+  "change": "correct API argument order only; no math/data/hyperparameter change",
+  "replay": "first unsaved training row needs new capture; no completed row repeated"
+}

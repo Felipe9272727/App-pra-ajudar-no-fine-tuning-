@@ -43,9 +43,9 @@ def capture():
         meta={'id':row['id'],'tokens':length,'sampled_decisions':len(ix),
               'teacher_forced_top1':float((pred==gold).float().mean()),'nll':float(nll.mean()),
               'seconds':time.monotonic()-started,'wrong_decisions':int((pred!=gold).sum())}
-        tensor_checkpoint(path,{'features':f[ix].cpu(),'target':y[ix].cpu(),
+        tensor_checkpoint({'features':f[ix].cpu(),'target':y[ix].cpu(),
                   'gold':gold[ix],'predicted':pred[ix],'selected_positions':ix,
-                  'row_sha256':filehash_data(row),'meta':meta})
+                  'row_sha256':filehash_data(row),'meta':meta},path)
         progress['rows'].append(meta);save('teaching_progress.json',progress)
         print('TEACH',row['id'],round(meta['nll'],4),len(ix),flush=True)
     progress['status']='complete';progress['total_tokens']=sum(r['tokens'] for r in progress['rows'])
@@ -70,7 +70,7 @@ def fit():
         patch={'kind':kind,'parent_sha256':PARENT_HASH,'cap':.02,'rank':16,
                'input_basis':basis.float(),'output_map':output.float(),
                'training_sha256':filehash(HERE/'train.json'),'method':'PCA16 plus ridge .01 mean Gram diagonal; embedding steering; identity tail approximation'}
-        tensor_checkpoint(HERE/'checkpoints'/(kind+'.pt'),patch)
+        tensor_checkpoint(patch,HERE/'checkpoints'/(kind+'.pt'))
         pred=(xx@basis)@output
         audit['candidates'][kind]={'parameters':basis.numel()+output.numel(),
               'zero_predictor_mse':float(y.square().mean()),'fit_mse':float((pred-y).square().mean()),
