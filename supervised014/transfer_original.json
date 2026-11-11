@@ -1,0 +1,189 @@
+{
+  "kind": "original",
+  "role": "transfer",
+  "metadata": {
+    "variant": "original",
+    "loaded_parameters": 852985920
+  },
+  "frozen_sha256": "683851f37a7bb8c93fcc9d4daed7c3e9b664eb076ba51f62ec78d9eff7f57987",
+  "rows": [
+    {
+      "id": "MBPP/129",
+      "output": "def magic_square_test(my_matrix):\n    \"\"\"\n    Check if a matrix is a magic square.\n    \n    A matrix is a magic square if:\n    1. All rows sum to the same value.\n    2. All columns sum to the same value.\n    3. The main diagonal sums to the same value.\n    4. The anti-diagonal sums to the same value.\n    \n    Parameters:\n        my_matrix (list of list of int): A 2D list of integers.\n    \n    Returns:\n        bool: True if the matrix is a magic square, False otherwise.\n    \"\"\"\n    if len(my_matrix) != 2:\n        return False\n    \n    # Calculate row sums\n    row_sums = [sum(row) for row in my_matrix]\n    \n    # Calculate column sums\n    col_sums = [sum(my_matrix[i][j] for i in range(len(my_matrix))) for j in range(len(my_matrix[0]))]\n    \n    # Calculate main diagonal sums\n    main_diag = [my_matrix[i][i] for i in range(len(my_matrix))]\n    \n    # Calculate anti-diagonal sums\n    anti_diag = [my_matrix[i][len(my_matrix) - 1 - j] for i in range(len(my_matrix))]\n    \n    # Check if all row sums are equal\n    if len(row_sums) > 1:\n        if not all(r == row_sums[0] for r in row_sums):",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 36.52932603200043,
+      "thinking": false,
+      "all_passed": false,
+      "category": "IndentationError",
+      "detail": "expected an indented block after 'if' statement on line 34 (<unknown>, line 34)",
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "code": "def magic_square_test(my_matrix):\n    \"\"\"\n    Check if a matrix is a magic square.\n    \n    A matrix is a magic square if:\n    1. All rows sum to the same value.\n    2. All columns sum to the same value.\n    3. The main diagonal sums to the same value.\n    4. The anti-diagonal sums to the same value.\n    \n    Parameters:\n        my_matrix (list of list of int): A 2D list of integers.\n    \n    Returns:\n        bool: True if the matrix is a magic square, False otherwise.\n    \"\"\"\n    if len(my_matrix) != 2:\n        return False\n    \n    # Calculate row sums\n    row_sums = [sum(row) for row in my_matrix]\n    \n    # Calculate column sums\n    col_sums = [sum(my_matrix[i][j] for i in range(len(my_matrix))) for j in range(len(my_matrix[0]))]\n    \n    # Calculate main diagonal sums\n    main_diag = [my_matrix[i][i] for i in range(len(my_matrix))]\n    \n    # Calculate anti-diagonal sums\n    anti_diag = [my_matrix[i][len(my_matrix) - 1 - j] for i in range(len(my_matrix))]\n    \n    # Check if all row sums are equal\n    if len(row_sums) > 1:\n        if not all(r == row_sums[0] for r in row_sums):",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/239",
+      "output": "def get_total_number_of_sequences(m, n):\n    if n <= 0:\n        return 0\n    if m <= 0:\n        return 0\n    if n == 1:\n        return 1\n    if n == 2:\n        return 2\n    if n == 3:\n        return 3\n    if n == 4:\n        return 4\n    if n == 5:\n        return 5\n    if n == 6:\n        return 6\n    if n == 7:\n        return 7\n    if n == 8:\n        return 8\n    if n == 9:\n        return 9\n    if n == 10:\n        return 10\n    if n == 11:\n        return 11\n    if n == 12:\n        return 12\n    if n == 13:\n        return 13\n    if n == 14:\n        return 14\n    if n == 15:\n        return 15\n    if n == 16:\n        return 16\n    if n == 17:\n        return 17\n    if n == 18:\n        return 18\n    if n == 19:\n        return 19\n    if n == 20:\n        return 20\n   ",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 38.57726677099981,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        true,
+        false,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def get_total_number_of_sequences(m, n):\n    if n <= 0:\n        return 0\n    if m <= 0:\n        return 0\n    if n == 1:\n        return 1\n    if n == 2:\n        return 2\n    if n == 3:\n        return 3\n    if n == 4:\n        return 4\n    if n == 5:\n        return 5\n    if n == 6:\n        return 6\n    if n == 7:\n        return 7\n    if n == 8:\n        return 8\n    if n == 9:\n        return 9\n    if n == 10:\n        return 10\n    if n == 11:\n        return 11\n    if n == 12:\n        return 12\n    if n == 13:\n        return 13\n    if n == 14:\n        return 14\n    if n == 15:\n        return 15\n    if n == 16:\n        return 16\n    if n == 17:\n        return 17\n    if n == 18:\n        return 18\n    if n == 19:\n        return 19\n    if n == 20:\n        return 20",
+      "passed": 1,
+      "total": 3
+    },
+    {
+      "id": "MBPP/245",
+      "output": "def max_sum(arr):\n    \"\"\"\n    Finds the maximum sum of a bitonic subsequence in the given array.\n    A bitonic subsequence is defined as a sequence that is first increasing\n    and then decreasing.\n    \n    Parameters:\n    arr (list): A list of integers\n    \n    Returns:\n    int: The maximum sum of a bitonic subsequence\n    \n    Time Complexity: O(n^2)\n    Space Complexity: O(n)\n    \"\"\"\n    n = len(arr)\n    if n == 0:\n        return 0\n    \n    max_sum = 0\n    \n    # Iterate through all possible subarrays\n    for i in range(n):\n        # Start of the subarray\n        start = i\n        # End of the subarray\n        end = i\n        \n        # Calculate sum of subarray\n        current_sum = sum(arr[start:end+1])\n        \n        # If current sum is greater than max_sum, update max_sum\n        if current_sum > max_sum:\n            max_sum = current_sum\n            \n            # If current sum is greater than max_sum, update max_sum\n            if current_sum > max_sum:\n                max_sum = current_sum\n            \n            # If current sum is greater than max_sum, update max_sum\n            if current_sum > max_sum:\n                max_sum = current_sum\n            \n            # If current sum is greater than max_sum, update max_sum\n            if current_sum > max_sum:\n                max_sum = current_sum\n            \n            # If current",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 36.73553274799997,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def max_sum(arr):\n    \"\"\"\n    Finds the maximum sum of a bitonic subsequence in the given array.\n    A bitonic subsequence is defined as a sequence that is first increasing\n    and then decreasing.\n    \n    Parameters:\n    arr (list): A list of integers\n    \n    Returns:\n    int: The maximum sum of a bitonic subsequence\n    \n    Time Complexity: O(n^2)\n    Space Complexity: O(n)\n    \"\"\"\n    n = len(arr)\n    if n == 0:\n        return 0\n    \n    max_sum = 0\n    \n    # Iterate through all possible subarrays\n    for i in range(n):\n        # Start of the subarray\n        start = i\n        # End of the subarray\n        end = i\n        \n        # Calculate sum of subarray\n        current_sum = sum(arr[start:end+1])\n        \n        # If current sum is greater than max_sum, update max_sum\n        if current_sum > max_sum:\n            max_sum = current_sum\n            \n            # If current sum is greater than max_sum, update max_sum\n            if current_sum > max_sum:\n                max_sum = current_sum\n            \n            # If current sum is greater than max_sum, update max_sum\n            if current_sum > max_sum:\n                max_sum = current_sum\n            \n            # If current sum is greater than max_sum, update max_sum\n            if current_sum > max_sum:\n                max_sum = current_sum\n            \n            # If current",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/247",
+      "output": "def lps(str):\n    \"\"\"\n    Find the length of the longest palindromic subsequence in the given string.\n    \n    Parameters:\n    str (str): The input string\n    \n    Returns:\n    int: The length of the longest palindromic subsequence\n    \n    Example:\n    >>> lps(\"abc\")\n    1\n    >>> lps(\"aba\")\n    3\n    >>> lps(\"abcde\")\n    1\n    \"\"\"\n    n = len(str)\n    if n == 0:\n        return 0\n    \n    # Create a DP table where dp[i][j] represents the length of the longest palindromic subsequence\n    # within the substring str[i:j+1]\n    dp = [[0] * (n + 1) for _ in range(n + 1)]\n    \n    # Fill the DP table\n    for i in range(1, n + 1):\n        for j in range(1, n + 1):\n            if i == j:\n                dp[i][j] = 1\n            elif str[i - 1] == str[j - 1]:\n                dp[i][j] = 1 + dp[i - 1][j - 1]\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n    \n    return dp[n][n]\n\n# Test the function\nprint",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 36.95618813500005,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def lps(str):\n    \"\"\"\n    Find the length of the longest palindromic subsequence in the given string.\n    \n    Parameters:\n    str (str): The input string\n    \n    Returns:\n    int: The length of the longest palindromic subsequence\n    \n    Example:\n    >>> lps(\"abc\")\n    1\n    >>> lps(\"aba\")\n    3\n    >>> lps(\"abcde\")\n    1\n    \"\"\"\n    n = len(str)\n    if n == 0:\n        return 0\n    \n    # Create a DP table where dp[i][j] represents the length of the longest palindromic subsequence\n    # within the substring str[i:j+1]\n    dp = [[0] * (n + 1) for _ in range(n + 1)]\n    \n    # Fill the DP table\n    for i in range(1, n + 1):\n        for j in range(1, n + 1):\n            if i == j:\n                dp[i][j] = 1\n            elif str[i - 1] == str[j - 1]:\n                dp[i][j] = 1 + dp[i - 1][j - 1]\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n    \n    return dp[n][n]\n\n# Test the function\nprint",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/306",
+      "output": "def max_sum_increasing_subseq(a, n, index, k):\n    \"\"\"\n    Find the maximum sum of an increasing subsequence from index 0 to i (inclusive)\n    such that the k-th element (0-indexed) is included in the subsequence.\n    \n    Parameters:\n    a (list): Input list of integers\n    n (int): Number of elements in the list\n    index (int): 0-based index of the k-th element to include\n    k (int): 0-based index of the k-th element to include\n    \n    Returns:\n    int: Maximum sum of increasing subsequence including the k-th element\n    \"\"\"\n    if n == 0:\n        return 0\n    \n    # Create a list to store the maximum sum ending at each position\n    # dp[i] = maximum sum of increasing subsequence ending at index i\n    dp = [0] * n\n    \n    # Initialize the first element\n    dp[0] = a[0]\n    \n    # Iterate through the list to find the maximum sum ending at each position\n    for i in range(1, n):\n        # If the current element is greater than the previous element, update the dp value\n        if a[i] > dp[i - 1]:\n            dp[i] = a[i]\n        else:\n            # If the current element is less than or equal to the previous element,\n            # we can extend the subsequence ending at i-1\n            dp[i",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 36.36988154299979,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "'[' was never closed (<unknown>, line 33)",
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "code": "def max_sum_increasing_subseq(a, n, index, k):\n    \"\"\"\n    Find the maximum sum of an increasing subsequence from index 0 to i (inclusive)\n    such that the k-th element (0-indexed) is included in the subsequence.\n    \n    Parameters:\n    a (list): Input list of integers\n    n (int): Number of elements in the list\n    index (int): 0-based index of the k-th element to include\n    k (int): 0-based index of the k-th element to include\n    \n    Returns:\n    int: Maximum sum of increasing subsequence including the k-th element\n    \"\"\"\n    if n == 0:\n        return 0\n    \n    # Create a list to store the maximum sum ending at each position\n    # dp[i] = maximum sum of increasing subsequence ending at index i\n    dp = [0] * n\n    \n    # Initialize the first element\n    dp[0] = a[0]\n    \n    # Iterate through the list to find the maximum sum ending at each position\n    for i in range(1, n):\n        # If the current element is greater than the previous element, update the dp value\n        if a[i] > dp[i - 1]:\n            dp[i] = a[i]\n        else:\n            # If the current element is less than or equal to the previous element,\n            # we can extend the subsequence ending at i-1\n            dp[i",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/392",
+      "output": "def get_max_sum(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 0\n    if n == 2:\n        return 1\n    if n == 3:\n        return 2\n    if n == 4:\n        return 3\n    if n == 5:\n        return 4\n    if n == 6:\n        return 5\n    if n == 7:\n        return 6\n    if n == 8:\n        return 7\n    if n == 9:\n        return 8\n    if n == 10:\n        return 9\n    if n == 11:\n        return 10\n    if n == 12:\n        return 11\n    if n == 13:\n        return 12\n    if n == 14:\n        return 13\n    if n == 15:\n        return 14\n    if n == 16:\n        return 15\n    if n == 17:\n        return 16\n    if n == 18:\n        return 17\n    if n == 19:\n        return 18\n    if n == 20:\n        return 19\n    if n == 21:\n        return 20\n    if n ==",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 36.889372059999914,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "invalid syntax (<unknown>, line 46)",
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "code": "def get_max_sum(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 0\n    if n == 2:\n        return 1\n    if n == 3:\n        return 2\n    if n == 4:\n        return 3\n    if n == 5:\n        return 4\n    if n == 6:\n        return 5\n    if n == 7:\n        return 6\n    if n == 8:\n        return 7\n    if n == 9:\n        return 8\n    if n == 10:\n        return 9\n    if n == 11:\n        return 10\n    if n == 12:\n        return 11\n    if n == 13:\n        return 12\n    if n == 14:\n        return 13\n    if n == 15:\n        return 14\n    if n == 16:\n        return 15\n    if n == 17:\n        return 16\n    if n == 18:\n        return 17\n    if n == 19:\n        return 18\n    if n == 20:\n        return 19\n    if n == 21:\n        return 20\n    if n ==",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/407",
+      "output": "def rearrange_bigger(n):\n    \"\"\"\n    Returns the next bigger number by rearranging the digits of n.\n    If no such number exists, returns n.\n    \"\"\"\n    if n == 0:\n        return 0\n    \n    # Convert to list of digits\n    digits = list(str(n))\n    \n    # Find the first digit that is not the largest possible digit (9)\n    for i in range(len(digits) - 1, -1, -1):\n        if digits[i] < 9:\n            # Swap with the last digit\n            digits[i], digits[-1] = digits[-1], digits[i]\n            break\n    \n    # Convert back to integer\n    return int(\"\".join(digits))",
+      "new_tokens": 160,
+      "hit_limit": false,
+      "seconds": 18.10102351400019,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "TypeError",
+      "error_types": [
+        "TypeError"
+      ],
+      "code": "def rearrange_bigger(n):\n    \"\"\"\n    Returns the next bigger number by rearranging the digits of n.\n    If no such number exists, returns n.\n    \"\"\"\n    if n == 0:\n        return 0\n    \n    # Convert to list of digits\n    digits = list(str(n))\n    \n    # Find the first digit that is not the largest possible digit (9)\n    for i in range(len(digits) - 1, -1, -1):\n        if digits[i] < 9:\n            # Swap with the last digit\n            digits[i], digits[-1] = digits[-1], digits[i]\n            break\n    \n    # Convert back to integer\n    return int(\"\".join(digits))",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/463",
+      "output": "def max_subarray_product(arr):\n    \"\"\"\n    Find the maximum product of a contiguous subarray of the given array.\n    \n    Parameters:\n    arr (list): A list of integers.\n    \n    Returns:\n    int: The maximum product of a contiguous subarray.\n    \n    Raises:\n    ValueError: If the array is empty.\n    \"\"\"\n    if not arr:\n        raise ValueError(\"Array cannot be empty.\")\n    \n    max_product = arr[0]\n    current_max = arr[0]\n    \n    for i in range(1, len(arr)):\n        current_val = arr[i]\n        if current_val > 0:\n            current_max = max(current_max, current_val)\n        else:\n            # If current value is negative, we need to consider the product of the previous element\n            # and the current value to get a larger product.\n            current_max = max(current_max, current_val * current_max)\n        \n        max_product = max(max_product, current_max)\n    \n    return max_product\n\n\n# Example usage:\n# print(max_subarray_product([1, 2, 3, 4, 5]))  # Output: 120\n# print(max_subarray_product([-1, -2, -3, -4, -5]))  # Output: 10\n# print(max_subarray_product([1, 1, 1]))  # Output: 1\n# print(max_subarray_product([1",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 36.81855407600051,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        true
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def max_subarray_product(arr):\n    \"\"\"\n    Find the maximum product of a contiguous subarray of the given array.\n    \n    Parameters:\n    arr (list): A list of integers.\n    \n    Returns:\n    int: The maximum product of a contiguous subarray.\n    \n    Raises:\n    ValueError: If the array is empty.\n    \"\"\"\n    if not arr:\n        raise ValueError(\"Array cannot be empty.\")\n    \n    max_product = arr[0]\n    current_max = arr[0]\n    \n    for i in range(1, len(arr)):\n        current_val = arr[i]\n        if current_val > 0:\n            current_max = max(current_max, current_val)\n        else:\n            # If current value is negative, we need to consider the product of the previous element\n            # and the current value to get a larger product.\n            current_max = max(current_max, current_val * current_max)\n        \n        max_product = max(max_product, current_max)\n    \n    return max_product\n\n\n# Example usage:\n# print(max_subarray_product([1, 2, 3, 4, 5]))  # Output: 120\n# print(max_subarray_product([-1, -2, -3, -4, -5]))  # Output: 10\n# print(max_subarray_product([1, 1, 1]))  # Output: 1\n# print(max_subarray_product([1",
+      "passed": 1,
+      "total": 3
+    }
+  ],
+  "protocol": {
+    "max_new_tokens": 320,
+    "greedy": true,
+    "thinking": false,
+    "seed": 0,
+    "threads": 4,
+    "reference_solution_in_generation_input": false,
+    "test_code_in_generation_input": false,
+    "public_examples_in_official_statement": true,
+    "candidate_programs_per_task": 1
+  },
+  "tasks_passed": 0,
+  "test_groups_passed": 2,
+  "test_groups_total": 24,
+  "status": "complete",
+  "total": 8
+}

@@ -102,7 +102,19 @@ def main():
           f'{c["exact_one_sided_p"]:.6f}; IC bootstrap descritivo de 95% para a diferença em '
           f'pontos percentuais: {c["paired_bootstrap_95_ci_pp"]}. Os IDs e grupos perdidos '
           'estão em supervised014/summary.json.');lines.append('')
-    lines+=['## Decisão e limites','',f'Estado: `{decision["status"]}`. O checkpoint principal '
+    lines+=['## Erros observados','',
+      'A versão editada começou a reproduzir o auxiliar poly do exemplo ensinado, mas omitiu '
+      'o argumento x da assinatura enquanto o corpo ainda o usava. Essa resposta também foi '
+      'truncada; a reprovação primária continua sendo a de sintaxe registrada, sem reparo.','',
+      'Em minSubArraySum, o programa inicia current_sum com nums[i] e começa a soma novamente '
+      'em j=i. O caso diagnóstico adicional [1] falhou no retorno esperado de 1. Esse caso '
+      'não foi acrescentado aos testes oficiais nem às pontuações; está em error_diagnostic.json.','',
+      'Melhorar tokens condicionados a um prefixo correto não garante manter esse prefixo em '
+      'geração livre. O ajuste ridge, os limites de mudança, a quantização e a diferença numérica '
+      'entre teacher forcing e decode com cache também impedem tratar o ajuste como gravação '
+      'exata de programas. A sonda de cache passou em um contexto, sem garantir equivalência '
+      'em toda decisão. Estes resultados não isolam uma causa única ou pesos exclusivos de pensamento.','',
+      '## Decisão e limites','',f'Estado: `{decision["status"]}`. O checkpoint principal '
       'permanece `rsi100/checkpoints/best.pt`. A matriz anterior e a nova candidata foram '
       'salvas separadamente. Nenhuma saída do MBPP foi usada para mudar a edição.','',
       'Oito problemas não medem competência geral. Os datasets são públicos e antigos; '
