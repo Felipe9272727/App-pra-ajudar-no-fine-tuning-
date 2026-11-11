@@ -1,5 +1,5 @@
 {
-  "status": "evaluating_transfer_parent",
+  "status": "evaluating_transfer_edited",
   "model_process_active": true,
   "checkpoint_promoted": false,
   "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
@@ -7,6 +7,6 @@
   "transfer_benchmark": "sanitized MBPP subset8",
   "backward_passes": 0,
   "process_continues_in_background": false,
-  "updated_unix": 1794424166.986132,
+  "updated_unix": 1794424698.4630935,
   "publication_error": "GitHub create_blob ReadTimeout; investigating before transfer retry"
 }
