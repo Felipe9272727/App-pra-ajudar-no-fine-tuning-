@@ -3,7 +3,8 @@ import sys,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT));HERE=ROOT/'android_models021'
 from supervised014.judge import evaluate
-from code_rsi.runtime import grade
+import importlib.util
+_spec=importlib.util.spec_from_file_location("models021_original_control_protocol",ROOT/"lab_rsi/protocol.py");_protocol=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(_protocol);grade=_protocol.grade
 
 def main():
  outputs=json.loads((HERE/'reports/native_outputs.json').read_text());targets={r['id']:r for r in json.loads((ROOT/'supervised015/attempt_e/train.json').read_text())};controls={r['id']:r for r in json.loads((ROOT/'review013/controls.json').read_text())};taught=[];general=[]
