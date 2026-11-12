@@ -1,0 +1,50 @@
+{
+  "status": "completed_and_durably_published",
+  "completed_utc": "2026-11-12 04:01:30 UTC",
+  "repository": "Felipe9272727/App-pra-ajudar-no-fine-tuning-",
+  "branch": "codex/liquid-sense-supervised-all-text-20261112",
+  "artifact_commit": "9b22cc6b3a28a98dbdadf88fb8dae2856d4754f3",
+  "artifact_blob_verification": {
+    "status": "all_artifacts_verified_against_remote_git_blobs",
+    "branch": "codex/liquid-sense-supervised-all-text-20261112",
+    "verified_commit": "0c598b774189e28968fdb0b2b32938c071eb5bd5",
+    "root_tree": "4bc2fe0f14c633372ff86cd18cf89457dbc474a8",
+    "study_tree": "0d984ec4b2a09130fde521e0d7dac8d9bbcb85e5",
+    "file_count": 443,
+    "total_bytes": 1151498850,
+    "artifact_manifest_sha256": "c30538b092d0280ab8c617f5a47a17ec6341c5af9503c7653f25dc36a66b519f",
+    "artifact_manifest_git_blob": "3e69f6659d95344394abcb8f15e893198bab569e",
+    "all_blob_hashes_match": true,
+    "prior_root_entries_unchanged_except_authorized_AGENTS": true,
+    "prior_commit": "713c8c69827f83a0cacbe56994ed8f23c2330939",
+    "principal_rsi100_subtree_unchanged": true,
+    "weight_restore_verified_locally_before_upload": true,
+    "remote_inference_was_not_run": true
+  },
+  "main_index_commit": "6aaf066f0d6023ce5e86b9e74dc38f1ba12fd6b4",
+  "main_readme_scores_and_selected_E_link_verified": true,
+  "selected_specialist": "supervised015/attempt_e/checkpoints/candidate/manifest.json",
+  "selected_general_checkpoint": "rsi100/checkpoints/best.pt",
+  "principal_unchanged": true,
+  "checkpoint_promoted_as_general": false,
+  "results": {
+    "original": {
+      "taught": 1,
+      "mbpp": 0,
+      "controls": 10
+    },
+    "principal": {
+      "taught": 1,
+      "mbpp": 0,
+      "controls": 10
+    },
+    "specialist_E": {
+      "taught": 8,
+      "mbpp": 0,
+      "controls": 6
+    }
+  },
+  "model_workers_active": 0,
+  "process_continues_in_background": false,
+  "all_prior_experiments_preserved": true
+}
