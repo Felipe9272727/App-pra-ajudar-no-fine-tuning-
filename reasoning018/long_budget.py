@@ -5,6 +5,15 @@ ROOT=Path(__file__).resolve().parents[1];HERE=ROOT/'reasoning018';sys.path.inser
 import train_runtime as tr
 from reasoning018.restore import load_candidate
 from local_cpu.sandbox import evaluate as judge
+from transformers import StoppingCriteria, StoppingCriteriaList
+class Progress(StoppingCriteria):
+ def __init__(self,tok,prompt_length,variant):self.tok=tok;self.prefix=prompt_length;self.variant=variant;self.started=time.monotonic()
+ def __call__(self,input_ids,scores,**kwargs):
+  tokens=input_ids[0,self.prefix:];count=len(tokens)
+  if count%64==0:
+   raw=self.tok.decode(tokens,skip_special_tokens=True);entry={'variant':self.variant,'new_tokens':count,'seconds':time.monotonic()-self.started,'generated_prefix_sha256':hashlib.sha256(raw.encode()).hexdigest(),'complete':False}
+   tr.e.cr.atomic_json(HERE/('long_progress_'+self.variant+'.json'),entry);print('LONG_PROGRESS',self.variant,count,flush=True)
+  return False
 @tr.torch.inference_mode()
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('variant',choices=['parent','candidate','original']);a=parser.parse_args();path=HERE/('long1024_'+a.variant+'.json');assert not path.exists(),'Do not repeat completed diagnostic'
@@ -14,7 +23,7 @@ def main():
  if a.variant=='candidate':model,tok,meta,audit=load_candidate()
  elif a.variant=='parent':model,tok,parent,meta=tr.load();del parent
  else:model,meta=tr.e.cr.load('original');tok=tr.e.cr.tokenizer()
- row=next(r for r in json.loads((HERE/'code_train.json').read_text()) if r['id']=='above_0');ids=tr.e.cr.prompt(tok,row['prompt'],thinking=True);tr.torch.manual_seed(0);start=time.monotonic();output=model.generate(input_ids=ids,max_new_tokens=1024,do_sample=False,use_cache=True,pad_token_id=tok.eos_token_id)[0,ids.shape[1]:]
+ row=next(r for r in json.loads((HERE/'code_train.json').read_text()) if r['id']=='above_0');ids=tr.e.cr.prompt(tok,row['prompt'],thinking=True);tr.torch.manual_seed(0);start=time.monotonic();output=model.generate(input_ids=ids,max_new_tokens=1024,do_sample=False,use_cache=True,pad_token_id=tok.eos_token_id,stopping_criteria=StoppingCriteriaList([Progress(tok,ids.shape[1],a.variant)]))[0,ids.shape[1]:]
  prefix=tok.decode(output[:256],skip_special_tokens=True);assert hashlib.sha256(prefix.encode()).hexdigest()==entry['raw_output_sha256'],'Changed prefix; stop and investigate'
  raw=tok.decode(output,skip_special_tokens=True);closed='</think>' in raw;final=raw.rsplit('</think>',1)[-1].strip() if closed else '';score=judge(final,row)
  result={'id':row['id'],'variant':a.variant,'effective_budget':1024,'greedy':True,'thinking':True,'seed':0,'threads':4,'solutions_in_inputs':False,'selection_allowed':False,'first256_digest_matches_prior_run':True,'reused_eos_finished256_run':False,'final_output':final,'thinking_closed':closed,'has_final':bool(final),'new_tokens':len(output),'hit_limit':len(output)==1024,'seconds':time.monotonic()-start,'raw_output_sha256':hashlib.sha256(raw.encode()).hexdigest(),**score};tr.e.cr.atomic_json(path,result);print('LONG018',a.variant,result['new_tokens'],result['all_passed'],closed,flush=True)

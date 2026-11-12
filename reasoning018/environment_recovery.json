@@ -1,0 +1,21 @@
+{
+  "status": "environment_reconnected_incomplete_long_diagnostic",
+  "completed_weight_updates": 8,
+  "weight_training_not_repeated": true,
+  "completed_evaluations": [
+    "evaluation_candidate.json",
+    "evaluation_parent.json",
+    "evaluation_original.json"
+  ],
+  "no_model_worker_survived": true,
+  "long_candidate_final_result_missing": true,
+  "long_parent_original_not_started": true,
+  "confirmatory_timing_not_started": true,
+  "cgroup_oom": 0,
+  "cgroup_oom_kill": 0,
+  "old_executor_session_unavailable": 24879,
+  "interruption_cause": "environment reconnect; exact worker termination cause not observed",
+  "preserved_interrupted_log_sha256": "7e06579a38c519829a2885c1cc39d4efb5793507deeeb4c71ff6b9007c1c11e4",
+  "candidate_sha256": "f25aac86011be54f5025f24be391a1f7076a7d4e9de234e05f4ead20ecf729ab",
+  "resume_only_unsaved_phases": true
+}
