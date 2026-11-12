@@ -1,0 +1,151 @@
+[
+  {
+    "id": "HumanEval/32",
+    "tokens": 158,
+    "nll": 0.2189056747622458,
+    "correct_tokens": 151,
+    "minimum_gold_margin": -10.25,
+    "first_wrong": {
+      "token_index": 61,
+      "gold_id": 9569,
+      "predicted_id": 2912,
+      "margin": -10.25,
+      "gold_piece": " poly",
+      "predicted_piece": " True"
+    },
+    "selected_token": {
+      "token_index": 61,
+      "gold_id": 9569,
+      "predicted_id": 2912,
+      "margin": -10.25,
+      "gold_piece": " poly",
+      "predicted_piece": " True"
+    }
+  },
+  {
+    "id": "HumanEval/39",
+    "tokens": 133,
+    "nll": 0.010835191206936549,
+    "correct_tokens": 132,
+    "minimum_gold_margin": -0.5,
+    "first_wrong": {
+      "token_index": 104,
+      "gold_id": 369,
+      "predicted_id": 307,
+      "margin": -0.5,
+      "gold_piece": " is",
+      "predicted_piece": " n"
+    },
+    "selected_token": {
+      "token_index": 104,
+      "gold_id": 369,
+      "predicted_id": 307,
+      "margin": -0.5,
+      "gold_piece": " is",
+      "predicted_piece": " n"
+    }
+  },
+  {
+    "id": "HumanEval/75",
+    "tokens": 138,
+    "nll": 0.00599688074072364,
+    "correct_tokens": 138,
+    "minimum_gold_margin": 1.375,
+    "first_wrong": null,
+    "selected_token": {
+      "token_index": 59,
+      "gold_id": 524,
+      "predicted_id": 524,
+      "margin": 1.375,
+      "gold_piece": " not",
+      "predicted_piece": " not"
+    }
+  },
+  {
+    "id": "HumanEval/114",
+    "tokens": 95,
+    "nll": 0.006157606820526876,
+    "correct_tokens": 95,
+    "minimum_gold_margin": 1.375,
+    "first_wrong": null,
+    "selected_token": {
+      "token_index": 79,
+      "gold_id": 578,
+      "predicted_id": 578,
+      "margin": 1.375,
+      "gold_piece": "))",
+      "predicted_piece": "))"
+    }
+  },
+  {
+    "id": "HumanEval/119",
+    "tokens": 126,
+    "nll": 0.0014534581208690291,
+    "correct_tokens": 126,
+    "minimum_gold_margin": 3.5,
+    "first_wrong": null,
+    "selected_token": {
+      "token_index": 54,
+      "gold_id": 309,
+      "predicted_id": 309,
+      "margin": 3.5,
+      "gold_piece": "           ",
+      "predicted_piece": "           "
+    }
+  },
+  {
+    "id": "HumanEval/129",
+    "tokens": 195,
+    "nll": 0.0236745743262686,
+    "correct_tokens": 194,
+    "minimum_gold_margin": -3.25,
+    "first_wrong": {
+      "token_index": 54,
+      "gold_id": 2643,
+      "predicted_id": 413,
+      "margin": -3.25,
+      "gold_piece": " temp",
+      "predicted_piece": " if"
+    },
+    "selected_token": {
+      "token_index": 54,
+      "gold_id": 2643,
+      "predicted_id": 413,
+      "margin": -3.25,
+      "gold_piece": " temp",
+      "predicted_piece": " if"
+    }
+  },
+  {
+    "id": "HumanEval/132",
+    "tokens": 138,
+    "nll": 0.0027225266575165415,
+    "correct_tokens": 138,
+    "minimum_gold_margin": 3.5,
+    "first_wrong": null,
+    "selected_token": {
+      "token_index": 5,
+      "gold_id": 198,
+      "predicted_id": 198,
+      "margin": 3.5,
+      "gold_piece": "\n",
+      "predicted_piece": "\n"
+    }
+  },
+  {
+    "id": "HumanEval/147",
+    "tokens": 115,
+    "nll": 0.0006293429800754656,
+    "correct_tokens": 115,
+    "minimum_gold_margin": 4.125,
+    "first_wrong": null,
+    "selected_token": {
+      "token_index": 9,
+      "gold_id": 357,
+      "predicted_id": 357,
+      "margin": 4.125,
+      "gold_piece": " A",
+      "predicted_piece": " A"
+    }
+  }
+]
