@@ -1,5 +1,25 @@
 # Retomada do experimento
 
+## Latest user authorization — supervised015
+
+- User explicitly selected "Usar treino supervisionado com gradientes". See
+  supervised015/authorization.json. This supersedes the earlier no-gradient,
+  no-backprop and algebraic-only restrictions for the requested supervised
+  specialization. Do not ask for the same method authorization again.
+- Aim: maximize the previously measured eight HumanEval tasks. All546 active
+  text tensors/919659696 unique parameters are eligible, including loop/mHC,
+  attention, MLP, embeddings and temporal operators. Vision153 stays frozen.
+  Do not claim any exclusively programming-only weight subset is known.
+- Parent is unchanged best.pt hash46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
+  Never start from rejected014. Keep benchmark-specialist snapshots separate
+  from the general selected checkpoint, and label all taught-set scores.
+- Native inference loaders create inference tensors; use the normal-clone,
+  alias-preserving training loader and explicit per-visit checkpoint contexts
+  in supervised015/train_runtime.py. Both real backward preflights passed
+  without changing parent weights. Read status/protocol before restarting.
+- Archived studies' frozen AGENTS hashes apply at their recorded commits;
+  this new authorization does not rewrite those historical source snapshots.
+
 ## Latest instruction and study013 — supervised review (2026-11-11)
 
 - User now explicitly allows correct answers for TEACHING. Historical bans on

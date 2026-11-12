@@ -1,0 +1,19 @@
+{
+  "AGENTS.md": "8e3b3c0473766b3d4882d8f680e8a14df3018d044bd46c9a13edf4e88d809049",
+  "supervised015/authorization.json": "22f745d273584cdefa2281b1a60228be09e6d309dc7bf395eebb0ed2d7bf1103",
+  "supervised015/PROTOCOL.md": "c27699d4aae45188ebacf44eca0a1bb422b49ca464bfe42dac928f825fd17172",
+  "supervised015/config.json": "cf1683be918693dd7c4a0f408859c9aea0a4a246e069878fb99030b0542c4f51",
+  "supervised015/train.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+  "supervised015/train.py": "3444faf5702a910b328e3c1c2eabe4daa9eec0d7f6a48c0cba73405e788334fd",
+  "supervised015/train_runtime.py": "9db75812f0fc079c9c0a60e5a0e162460fc1f8de64cac6f2ee396ede4eaf2dc2",
+  "supervised015/optimizer.py": "49bf53b02db8cbc4a9327579693501c9458c9d3e9fb55135956e4cdf709bff07",
+  "supervised015/checkpoint.py": "af3c65be867d806d378e6f3a9ff8cbeca5801068b17d60bcc572f3548d0d3260",
+  "modeling_sensenova_loop.py": "26e11d3522aa730c0ba031340ce42632bc2834da8cc0b6804006bb207d979a5b",
+  "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
+  "reasoning/runtime_helpers.py": "3decc031b87f7fe5bf6feca52dc3d6d2ba82c60eed9d21341e0977f028836238",
+  "code_rsi/runtime.py": "a4447f631cb3111618b893d94886bfda4f5c91e6683884c2dc3e0a8487b3ffe8",
+  "supervised014/judge.py": "c19da84a367e966134aa7622ebece253fe46a20bb037f77aadb44b9f13012c91",
+  "supervised014/taught.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+  "supervised014/transfer.json": "a2d123197eced68ce70cb6775fae887b680958a69f56515b47b5a517b1b72f5e",
+  "review013/controls.json": "7328505fb456b36bcba3e4a3975cedfc4d26b25c3bd01b3b59b6230029d160fd"
+}

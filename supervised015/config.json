@@ -1,0 +1,8 @@
+{
+  "seed": 20261112,
+  "learning_rate": 0.01,
+  "batch_examples": 2,
+  "max_epochs": 16,
+  "max_optimizer_steps": 64,
+  "stop_minimum_margin": 0.5
+}

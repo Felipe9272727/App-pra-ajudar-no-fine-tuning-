@@ -1,0 +1,6 @@
+{
+  "client_date": "2026-11-11",
+  "user_answer": "Usar treino supervisionado com gradientes",
+  "supersedes": "earlier ban on project gradients/backpropagation",
+  "scope": "all active text parameters; correct benchmark solutions; preserve parent and old experiments"
+}

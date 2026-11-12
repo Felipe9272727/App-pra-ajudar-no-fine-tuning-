@@ -1,0 +1,13 @@
+{
+  "status": "two_example_streaming_backward_passed",
+  "parameters": 919659696,
+  "gradient_tensors": 546,
+  "nonzero_tensors": 448,
+  "calls_per_parameter": 1,
+  "optimizer_updates": 0,
+  "all_parent_weights_unchanged": true,
+  "loss": 0.5336014628410339,
+  "seconds": 14.917074598000909,
+  "memory_peak_bytes": 8589942784,
+  "rss_kb": 2834772
+}
