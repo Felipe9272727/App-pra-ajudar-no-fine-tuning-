@@ -19,8 +19,10 @@ Author throughput speedups2.71–3.84x were measured with GPU SGLang0.5.22, BF16
 FA3 and concurrency8; they are not accuracy increases or phone measurements.
 
 Let Ct be one target-token cost, Cd one draft-token cost, k the drafted block,
-a the number of accepted output tokens, and Cv(k) target verification cost.
+a the number of accepted verified draft tokens, and Cv(k) target verification cost.
 Speed ratio = a*Ct / (k*Cd + Cv(k) + overhead).
+Any bonus token must also advance target state; count that cost over successive
+blocks rather than treating unfinished target-state work as free.
 Our current target processes tokens sequentially, so Cv(k) is approximately
 k*Ct. Since a<=k and Cd>0, merely adding a drafter cannot improve this ratio.
 First implement efficient block verification and state rollback (all56virtual

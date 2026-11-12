@@ -1,0 +1,103 @@
+{
+  "status": "completed_host_prototype",
+  "weights_changed": false,
+  "baseline_android_source_unchanged": true,
+  "physical_layers": 32,
+  "executions_per_token": 56,
+  "threads": 4,
+  "unit_tests_passed": 7,
+  "trace_steps_bit_identical": 16,
+  "hidden_states_compared": 912,
+  "cache_slots_compared": 896,
+  "logits_compared": 3973120,
+  "chat_cases_token_identical": 3,
+  "chat_generated_tokens_compared": 26,
+  "timing_scope": "x86 CPU backbone, excludes vocabulary projection and tokenizer; not Android phone",
+  "timing_pairs": [
+    {
+      "reference_run": 2,
+      "optimized_run": 3,
+      "reference_seconds": 2.5229194120000002,
+      "optimized_seconds": 2.17977659,
+      "seconds_saved": 0.34314282200000035,
+      "ratio": 1.157421096994165
+    },
+    {
+      "reference_run": 5,
+      "optimized_run": 4,
+      "reference_seconds": 2.350470593,
+      "optimized_seconds": 2.286937532,
+      "seconds_saved": 0.06353306099999978,
+      "ratio": 1.0277808467048237
+    },
+    {
+      "reference_run": 6,
+      "optimized_run": 7,
+      "reference_seconds": 2.596324917,
+      "optimized_seconds": 2.077475797,
+      "seconds_saved": 0.51884912,
+      "ratio": 1.2497497784326774
+    },
+    {
+      "reference_run": 9,
+      "optimized_run": 8,
+      "reference_seconds": 2.132694888,
+      "optimized_seconds": 2.013803677,
+      "seconds_saved": 0.11889121100000022,
+      "ratio": 1.05903813383493
+    }
+  ],
+  "mean_reference_seconds_per16": 2.4006024525000003,
+  "mean_optimized_seconds_per16": 2.139498399,
+  "mean_ratio": 1.1220398452375755,
+  "mean_time_reduction_fraction": 0.10876605296644815,
+  "paired_mean_seconds_saved": 0.2611040535000001,
+  "paired_difference_t_95_ci": [
+    -0.07320642537417976,
+    0.59541453237418
+  ],
+  "paired_sign_flip_two_sided_p": 0.125,
+  "timing_statistically_confirmed_at_0_05": false,
+  "chat_observations": [
+    {
+      "case": 0,
+      "generated_token_ids_identical": true,
+      "tokens": 16,
+      "reused_prompt_tokens": 0,
+      "reference_prefill_seconds": 4.4508850429999995,
+      "optimized_prefill_seconds": 3.861040962,
+      "prefill_ratio": 1.1527681490057187,
+      "reference_decode_seconds": 2.603929795,
+      "optimized_decode_seconds": 2.4269806369999998
+    },
+    {
+      "case": 1,
+      "generated_token_ids_identical": true,
+      "tokens": 9,
+      "reused_prompt_tokens": 22,
+      "reference_prefill_seconds": 6.036452474,
+      "optimized_prefill_seconds": 2.682210392,
+      "prefill_ratio": 2.250551445182828,
+      "reference_decode_seconds": 1.601644373,
+      "optimized_decode_seconds": 1.5181767069999998
+    },
+    {
+      "case": 2,
+      "generated_token_ids_identical": true,
+      "tokens": 1,
+      "reused_prompt_tokens": 0,
+      "reference_prefill_seconds": 4.523474236,
+      "optimized_prefill_seconds": 4.188210019,
+      "prefill_ratio": 1.0800495236578538,
+      "reference_decode_seconds": 0.191724577,
+      "optimized_decode_seconds": 0.182549435
+    }
+  ],
+  "limitations": [
+    "Four timing pairs only; CPU timing differences are noisy and interval includes zero.",
+    "Repeated layers have exact preserved computations; this is not an intelligence improvement.",
+    "Conversation latency comparisons are single observations, not randomized confidence intervals.",
+    "Finite exactness checks are not a proof for every possible prefix or ARM floating-point backend.",
+    "Prototype source and host executable only; installed0.1.0 APK remains unchanged."
+  ]
+}
