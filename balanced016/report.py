@@ -16,7 +16,7 @@ def paired(a,b):
 def oldscore(prefix,suffix):
     t=read(prefix+'/target_'+suffix+'.json') if suffix!='parent' and suffix!='original' else read('supervised014/taught_'+suffix+'.json')
     b=read(prefix+'/transfer_'+suffix+'.json');c=read(prefix+'/controls_'+suffix+'.json')
-    return {'taught':t['tasks_passed'],'transfer':b['tasks_passed'],'control':c['correct'],'anchor_nll':c['anchor_nll']['mean_nll']}
+    return {'taught':t['tasks_passed'],'transfer':b['tasks_passed'],'transfer_groups':b['test_groups_passed'],'control':c['correct'],'anchor_nll':c['anchor_nll']['mean_nll']}
 def main():
     gate=read('balanced016/gate.json');training=read('balanced016/training_complete.json');manifest=read('balanced016/checkpoints/final/manifest.json')
     scores={'Qwen original':oldscore('supervised014','original'),'General principal':oldscore('supervised014','parent'),'Specialist015E':oldscore('supervised015/attempt_e','specialist'),'Candidate016':oldscore('balanced016','candidate')}
@@ -43,8 +43,8 @@ def main():
     write('balanced016/summary.json',result);write('balanced016/status.json',{k:result[k] for k in ['status','decision','general_principal_promoted','model_process_active','process_continues_in_background']})
     lines=['# Liquid Sense: adaptação conjunta balanceada016','',f'Decisão: **{decision}**. Nenhuma substituição do checkpoint geral principal.','',
       'Partimos do checkpoint015E íntegro e preservado. Executamos uma candidata de16atualizações supervisionadas:330tensores/6.345.904parâmetros elegíveis, incluindo ganhos do Loop, roteamento mHC, operadores temporais inspirados na Liquid, normalizações e a última projeção MLP. Gradientes percorrem as duas visitas compartilhadas; isso não prova que o loop melhora a qualidade.','',
-      '| Modelo | Programas ensinados /8 | MBPP observado /8 | Controles /12 | NLL âncoras |','|---|---:|---:|---:|---:|']
-    for label,s in scores.items():lines.append(f"| {label} | {s['taught']} | {s['transfer']} | {s['control']} | {s['anchor_nll']:.9f} |")
+      '| Modelo | Programas ensinados /8 | MBPP observado /8 | Grupos MBPP /24 | Controles /12 | NLL âncoras |','|---|---:|---:|---:|---:|---:|']
+    for label,s in scores.items():lines.append(f"| {label} | {s['taught']} | {s['transfer']} | {s['transfer_groups']} | {s['control']} | {s['anchor_nll']:.9f} |")
     lines+=['','Os oito programas foram ensinados deliberadamente; pontuação nesse conjunto mede especialização/memorização. O MBPP e os12controles são diagnósticos antigos já observados. Baselines anteriores foram reutilizados sem repetir experimentos. Mesma inferência: BF16/eager/cache,greedy,seed0,thinking=False,quatro threads,320tokens de código/64controles. Nenhuma solução/gabarito entra na geração de avaliação.','',
       f"Mudanças reais em relação a E: {manifest['changed_tensors']}tensores, {manifest['changed_values']:,}valores; stream`{manifest['stream_sha256']}`. Todos369tensores congelados preservados, incluindo153visão. Restauração integral verificada pelos hashes dos546tensores de texto;699tensores finitos. Família de mudanças e cobertura de gradientes constam em summary/training_complete/steps.",'',
       'Gate fixado antes dos resultados:8/8programas ensinados,>=10/12controles sem perder nenhum acerto do principal, nenhuma perda MBPP de E e NLL<=principal+.005.','']

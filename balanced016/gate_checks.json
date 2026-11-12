@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "case": "observed_E_controls",
+      "passed": true,
+      "synthetic_gate_value": false
+    },
+    {
+      "case": "synthetic_retention_pass",
+      "passed": true,
+      "synthetic_gate_value": true
+    },
+    {
+      "case": "synthetic_NLL_regression",
+      "passed": true,
+      "synthetic_gate_value": false
+    },
+    {
+      "case": "synthetic_code_regression",
+      "passed": true,
+      "synthetic_gate_value": false
+    }
+  ],
+  "candidate_inference_or_generation_performed": false,
+  "only_synthetic_schema_gate_tests": true
+}

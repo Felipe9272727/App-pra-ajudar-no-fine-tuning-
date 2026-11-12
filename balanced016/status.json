@@ -1,8 +1,6 @@
 {
-  "status": "prepared_pending_preregistration",
+  "status": "training_complete_pending_screen",
   "model_process_active": false,
   "checkpoint_promoted": false,
-  "optimizer_steps_completed": 0,
-  "process_continues_in_background": false,
-  "parent_verified_remote_commit": "fd844c3f8049061deda32f45a77043a96c5b2a2d"
+  "process_continues_in_background": false
 }

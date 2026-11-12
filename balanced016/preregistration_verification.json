@@ -1,0 +1,27 @@
+{
+  "verified_commit": "0c619f2c94b4d9c4eed783ef61f966b9a678f6a1",
+  "frozen_balanced_files": {
+    "balanced016/AGENTS.md": "4aec6ae297b85cb570d35bf20a7e91962a545ca8",
+    "balanced016/PROTOCOL.md": "57e986ba760f9bb40d9b1ece41c895a370c063f3",
+    "balanced016/build_data.py": "84bbbfd37e9449280ffe0ca97776bd5ffa94f23f",
+    "balanced016/code_retention_train.json": "bb3f45f9b87b72565d0c414275898efa3f090672",
+    "balanced016/config.json": "f2103f1faa60584eb5d00a7ecc2d88ec4881eb79",
+    "balanced016/data_audit.json": "cbb68dbd6b78175495034db7620fd666f4b106e9",
+    "balanced016/decision.py": "d67194e84b126b4866babde1b3a864493cea1e66",
+    "balanced016/general_train.json": "94be7924574b6040797d647034efea2aebcfb276",
+    "balanced016/judge.py": "5d5d1af17d3fbdb301fa11b868a6017daa20d5e9",
+    "balanced016/reference_audit.json": "fbbbeed3fba20472f726b108784e52856261511d",
+    "balanced016/restore.py": "8cfac69efc578bfe1b91328dda65bcc19056bfbd",
+    "balanced016/screen.py": "c3cb92de8ebbd5a988bd904dff45cc328f4b4582",
+    "balanced016/train.py": "6b892acfcfc2c1d5405e499e9069cd629b291c9a",
+    "balanced016/trainable.json": "3704ad69d1ccd414dbf25e8c9aca319bdedb9de8",
+    "balanced016/validate.py": "8dad97f0b336f8d9e4f8db24ab76d8531af61b25",
+    "balanced016/validate_data.py": "2568879a6ff30f4b9583ca3d70c1ba24ae7bb9fd",
+    "balanced016/validation_code.json": "5662a116d9906b31ad208f279b6121a8d159c03a",
+    "balanced016/validation_controls.json": "30a318a71b6d9d322d934f309e448f030f5d03a1",
+    "balanced016/frozen_initial.json": "01dd08ce48d373772e095120e32dcfeb1513d255",
+    "balanced016/schema_amendment.json": "f4a1baae94b08373795535927a1cf8df1eee1314",
+    "balanced016/frozen.json": "d75bc3966afc9400131aef60d6ca5eeec3bd96a7"
+  },
+  "all_match": true
+}
