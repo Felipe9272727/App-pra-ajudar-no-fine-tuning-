@@ -1,0 +1,63 @@
+{
+  "mapping": [
+    {
+      "id": "HumanEval/32",
+      "global_token_index": 157,
+      "old_label": 248046,
+      "new_label": 248044,
+      "program_tokens_unchanged": true
+    },
+    {
+      "id": "HumanEval/39",
+      "global_token_index": 290,
+      "old_label": 248046,
+      "new_label": 248044,
+      "program_tokens_unchanged": true
+    },
+    {
+      "id": "HumanEval/75",
+      "global_token_index": 428,
+      "old_label": 248046,
+      "new_label": 248044,
+      "program_tokens_unchanged": true
+    },
+    {
+      "id": "HumanEval/114",
+      "global_token_index": 523,
+      "old_label": 248046,
+      "new_label": 248044,
+      "program_tokens_unchanged": true
+    },
+    {
+      "id": "HumanEval/119",
+      "global_token_index": 649,
+      "old_label": 248046,
+      "new_label": 248044,
+      "program_tokens_unchanged": true
+    },
+    {
+      "id": "HumanEval/129",
+      "global_token_index": 844,
+      "old_label": 248046,
+      "new_label": 248044,
+      "program_tokens_unchanged": true
+    },
+    {
+      "id": "HumanEval/132",
+      "global_token_index": 982,
+      "old_label": 248046,
+      "new_label": 248044,
+      "program_tokens_unchanged": true
+    },
+    {
+      "id": "HumanEval/147",
+      "global_token_index": 1097,
+      "old_label": 248046,
+      "new_label": 248044,
+      "program_tokens_unchanged": true
+    }
+  ],
+  "source_cache_manifest_sha256": "097a4f7c70485cdffca9e27f7bfe60a8a22d847c0d02c9d38c5b63cfed33d812",
+  "runtime_generation_eos_unchanged": true,
+  "reference_programs_and_official_tests_unchanged": true
+}

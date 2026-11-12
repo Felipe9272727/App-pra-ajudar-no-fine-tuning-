@@ -1,0 +1,37 @@
+{
+  "status": "training_complete",
+  "eligible_additional_tensors": 1,
+  "eligible_additional_parameters": 3670016,
+  "matrix_updates_in_continuation": 6,
+  "matrix_updates_in_D_and_E": 12,
+  "new_total_gradient_updates_in_lineage": 50,
+  "changed_values_vs_c": 2894871,
+  "changed_tensors_vs_original_parent": 546,
+  "changed_values_vs_original_parent": 483082021,
+  "checkpoint_stream_sha256": "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85",
+  "parent_specialist_stream_sha256": "05687b52a1efb934cec6d5f7ce4c63b62969dd88cec1c2f85364c0afac1cbb15",
+  "all_other_698_parameter_tensors_bitwise_unchanged": true,
+  "vision_tensors_unchanged": 153,
+  "corrected_cached_training_tokens": 1098,
+  "final_cached_correct_tokens": 1098,
+  "minimum_cached_margin": 0.875,
+  "terminal_labels_repaired": 8,
+  "native_generation_configuration_changed": false,
+  "seconds": 87.13046849500097,
+  "architecture": {
+    "passes": 2,
+    "layer_executions": 56,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.9531189203262329,
+      0.046881064772605896
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 442326,
+    "local_window": 256,
+    "loaded_parameters": 1020252592,
+    "backward_passes": 50,
+    "limitations": "Trained hybrid; terminal-label repair and taught fit are not general intelligence."
+  }
+}

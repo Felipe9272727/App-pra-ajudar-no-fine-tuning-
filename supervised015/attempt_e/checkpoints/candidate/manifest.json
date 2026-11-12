@@ -1,0 +1,31 @@
+{
+  "format": "raw-bf16-readout-parts-v1",
+  "parent_specialist_stream_sha256": "05687b52a1efb934cec6d5f7ce4c63b62969dd88cec1c2f85364c0afac1cbb15",
+  "original_parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "training_state_initialized_from_D_patch": "8e494dde21480dd73c73901c2a57c9a18dd6247a813ec22d0156f08c60931a7c",
+  "tensor_name": "model.language_model.layers.31.mlp.down_proj.weight",
+  "shape": [
+    1024,
+    3584
+  ],
+  "dtype": "torch.bfloat16",
+  "bytes": 7340032,
+  "parts": [
+    {
+      "path": "part0000.bin",
+      "bytes": 4194304,
+      "sha256": "c2fcc956f7958b1d8c2b360dd563b0e87f682a0f3d73458f49a84de3d26f00b7"
+    },
+    {
+      "path": "part0001.bin",
+      "bytes": 3145728,
+      "sha256": "8fe3bde8591c98735b1723dfa02e1525acd06ebf6212f103e23c63d46662f2aa"
+    }
+  ],
+  "stream_sha256": "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85",
+  "parent_tensor_sha256": "1f06a8dd39e28eaa1c3b02075ba453ca752e70655e6a000a628f18e8663e0e6e",
+  "tensor_sha256": "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85",
+  "changed_values_vs_c": 2894871,
+  "changed_values_vs_original_parent": 483082021,
+  "changed_tensors_vs_original_parent": 546
+}
