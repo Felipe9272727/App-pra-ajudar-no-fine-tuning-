@@ -1,0 +1,9 @@
+{
+  "status": "complete_local_results",
+  "model_process_active": false,
+  "checkpoint_promoted": false,
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "process_continues_in_background": false,
+  "updated_unix": 1794455034.0308046,
+  "selected_as_benchmark_specialist": true
+}

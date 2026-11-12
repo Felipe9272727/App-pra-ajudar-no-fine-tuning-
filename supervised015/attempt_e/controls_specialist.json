@@ -1,0 +1,209 @@
+{
+  "role": "controls",
+  "metadata": {
+    "variant": "full_text_supervised_specialist_015_attempt_e",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.9531189203262329,
+        0.046881064772605896
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 442326,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 50,
+      "limitations": "Qwen widths; Loop/mHC and Liquid-inspired operators, not full SenseNova/LFM3; trained text weights do not imply quality or faithful reasoning."
+    },
+    "checkpoint_stream_sha256": "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85",
+    "checkpoint_manifest_sha256": "421ed589d3f9d586147c76960e1ece770f824e050116ad7aae23aca7759424f1",
+    "training_backward_passes": 50
+  },
+  "rows": [
+    {
+      "id": "dev_0",
+      "output": "Sb\n",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 2.031801600001927,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_1",
+      "output": "children\n",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.621847609996621,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago\n",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 2.0183281260033255,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_3",
+      "output": "heart\n",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.570572598000581,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_product",
+      "output": "56\n",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 1.9899323150020791,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_order",
+      "output": "Bia\n",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 2.046657906001201,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_subtract",
+      "output": "15\n",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 2.3247038639965467,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_half",
+      "output": "17\n",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 2.322899808998045,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_opposite",
+      "output": "frio\n</think>\n\nfrio\n",
+      "new_tokens": 9,
+      "hit_limit": false,
+      "seconds": 3.576836115003971,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_past",
+      "output": "I went.\nYou went.\nHe went.\nShe went.\nIt went.\nWe went.\nThey went.\nThey went.\nWe went.\nThey went.\nI went.\nYou went.\nHe went.\nShe went.\nIt went.\nWe went.\n",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 22.057371138005692,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_plural",
+      "output": "máscara, fêmea, gato, cachorro, pássaro, peixe, cobra, leão, leopardo, leão, leopardo, cobra, leão, leopardo, peixe, cobra, leão, leopardo, gato, cachorro",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.772126998999738,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_translate",
+      "output": "A água.\n</think>\n\nA água.\n",
+      "new_tokens": 11,
+      "hit_limit": false,
+      "seconds": 3.759265435997804,
+      "thinking": false,
+      "correct": false
+    }
+  ],
+  "target_is_trained_on": true,
+  "transfer_previously_observed_in_study014": true,
+  "transfer_previously_observed_in_study015b": true,
+  "protocol": {
+    "max_new_tokens": 320,
+    "seed": 0,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "reference_implementation_in_generation_prompt": false,
+    "private_tests_in_generation_prompt": false
+  },
+  "correct": 6,
+  "anchor_nll": {
+    "mean_nll": 3.1682596604029336,
+    "rows": [
+      {
+        "nll": 2.0478451251983643,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7898669242858887,
+        "tokens": 8
+      },
+      {
+        "nll": 2.4595162868499756,
+        "tokens": 8
+      },
+      {
+        "nll": 4.099417209625244,
+        "tokens": 8
+      },
+      {
+        "nll": 3.8444416522979736,
+        "tokens": 8
+      },
+      {
+        "nll": 2.2332184314727783,
+        "tokens": 8
+      },
+      {
+        "nll": 2.696017026901245,
+        "tokens": 8
+      },
+      {
+        "nll": 3.6321120262145996,
+        "tokens": 8
+      },
+      {
+        "nll": 2.697709798812866,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7499141693115234,
+        "tokens": 8
+      },
+      {
+        "nll": 2.661134719848633,
+        "tokens": 8
+      },
+      {
+        "nll": 4.107922554016113,
+        "tokens": 8
+      }
+    ]
+  },
+  "total": 12,
+  "status": "complete"
+}

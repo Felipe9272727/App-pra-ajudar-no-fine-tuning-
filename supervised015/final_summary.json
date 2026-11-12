@@ -1,0 +1,483 @@
+{
+  "models": {
+    "original": {
+      "taught": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 8,
+        "truncations": 6,
+        "tokens": 2501,
+        "seconds": 305.8791108719997,
+        "categories": {
+          "SyntaxError": 6,
+          "AssertionError": 1,
+          "passed": 1
+        }
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 2,
+        "test_groups_total": 24,
+        "truncations": 7,
+        "tokens": 2400,
+        "seconds": 276.97714487900066,
+        "categories": {
+          "IndentationError": 1,
+          "AssertionError": 4,
+          "SyntaxError": 2,
+          "TypeError": 1
+        }
+      },
+      "controls": {
+        "correct": 10,
+        "total": 12,
+        "nll": 3.1867156426111856
+      }
+    },
+    "parent": {
+      "taught": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 8,
+        "truncations": 7,
+        "tokens": 2448,
+        "seconds": 809.345653490001,
+        "categories": {
+          "SyntaxError": 6,
+          "IndentationError": 1,
+          "passed": 1
+        }
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 3,
+        "test_groups_total": 24,
+        "truncations": 3,
+        "tokens": 1662,
+        "seconds": 523.2728556880002,
+        "categories": {
+          "AssertionError": 5,
+          "IndentationError": 1,
+          "SyntaxError": 1,
+          "ValueError": 1
+        }
+      },
+      "controls": {
+        "correct": 10,
+        "total": 12,
+        "nll": 3.1837292512257895
+      }
+    },
+    "edited": {
+      "taught": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 8,
+        "truncations": 5,
+        "tokens": 2081,
+        "seconds": 686.6748695799997,
+        "categories": {
+          "SyntaxError": 3,
+          "AssertionError": 4,
+          "passed": 1
+        }
+      },
+      "transfer": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 4,
+        "test_groups_total": 24,
+        "truncations": 4,
+        "tokens": 1816,
+        "seconds": 575.1324104529995,
+        "categories": {
+          "passed": 1,
+          "IndentationError": 2,
+          "AssertionError": 4,
+          "SyntaxError": 1
+        }
+      },
+      "controls": {
+        "correct": 9,
+        "total": 12,
+        "nll": 3.2020915150642395
+      }
+    },
+    "specialist_b": {
+      "taught": {
+        "solved": 6,
+        "total": 8,
+        "test_groups_passed": 6,
+        "test_groups_total": 8,
+        "truncations": 1,
+        "tokens": 1263,
+        "seconds": 414.61047747500197
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 2,
+        "test_groups_total": 24,
+        "truncations": 0,
+        "tokens": 758,
+        "seconds": 244.16456972799278
+      },
+      "controls": {
+        "correct": 2,
+        "total": 12,
+        "nll": 3.1792545715967813
+      }
+    },
+    "specialist_c": {
+      "taught": {
+        "solved": 7,
+        "total": 8,
+        "test_groups_passed": 7,
+        "test_groups_total": 8,
+        "truncations": 0,
+        "tokens": 1188,
+        "seconds": 430.26693466700453
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 24,
+        "truncations": 1,
+        "tokens": 966,
+        "seconds": 331.2173487
+      },
+      "controls": {
+        "correct": 3,
+        "total": 12,
+        "nll": 3.194580872853597
+      }
+    },
+    "specialist": {
+      "taught": {
+        "solved": 8,
+        "total": 8,
+        "test_groups_passed": 8,
+        "test_groups_total": 8,
+        "truncations": 0,
+        "tokens": 1098,
+        "seconds": 369.27840451099473
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 0,
+        "test_groups_total": 24,
+        "truncations": 0,
+        "tokens": 981,
+        "seconds": 327.8854951600006
+      },
+      "controls": {
+        "correct": 6,
+        "total": 12,
+        "nll": 3.1682596604029336
+      }
+    },
+    "specialist_d": {
+      "taught": {
+        "solved": 7,
+        "total": 8,
+        "test_groups_passed": 7,
+        "test_groups_total": 8,
+        "truncations": 1,
+        "tokens": 1274,
+        "seconds": 407.5567595030079
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 0,
+        "test_groups_total": 24,
+        "truncations": 0,
+        "tokens": 982,
+        "seconds": 312.6011130840052
+      },
+      "controls": {
+        "correct": 0,
+        "total": 12,
+        "nll": 3.1747373739878335
+      }
+    },
+    "specialist_e": {
+      "taught": {
+        "solved": 8,
+        "total": 8,
+        "test_groups_passed": 8,
+        "test_groups_total": 8,
+        "truncations": 0,
+        "tokens": 1098,
+        "seconds": 369.27840451099473
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 0,
+        "test_groups_total": 24,
+        "truncations": 0,
+        "tokens": 981,
+        "seconds": 327.8854951600006
+      },
+      "controls": {
+        "correct": 6,
+        "total": 12,
+        "nll": 3.1682596604029336
+      }
+    }
+  },
+  "training": {
+    "eligible_tensors": 546,
+    "eligible_parameters": 919659696,
+    "changed_text_tensors": 546,
+    "changed_scalar_values": 483082021,
+    "checkpoint_stream_sha256": "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85",
+    "vision_tensors_unchanged": 153
+  },
+  "decision": {
+    "status": "experimental_specialist_e_preserved_after_terminal_label_repair",
+    "selected_specialist": "attempt_e",
+    "specialist_path": "supervised015/attempt_e/checkpoints/candidate/manifest.json",
+    "checkpoint_promoted": false,
+    "principal_unchanged": true,
+    "selected_general_checkpoint": "rsi100/checkpoints/best.pt",
+    "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "target_intentionally_taught": true,
+    "mbpp_previously_observed": true,
+    "mbpp_used_for_refitting": false,
+    "general_or_4b_superiority_demonstrated": false,
+    "d_rejected_as_c_replacement": true,
+    "d_reason": "No net taught-task gain; loses previously correct HumanEval/32 while gaining129.",
+    "e_requires_gain_and_no_c_correct_task_loss": true,
+    "e_selection_rule_passed": true,
+    "inference_eos_configuration_changed": false,
+    "reference_programs_and_official_tests_changed": false
+  },
+  "d_vs_c": {
+    "target": {
+      "task_gains": [
+        "HumanEval/129"
+      ],
+      "task_losses": [
+        "HumanEval/32"
+      ],
+      "lost_test_groups": 1,
+      "output_changed": [
+        "HumanEval/32",
+        "HumanEval/39",
+        "HumanEval/75",
+        "HumanEval/114",
+        "HumanEval/119",
+        "HumanEval/129",
+        "HumanEval/132",
+        "HumanEval/147"
+      ],
+      "delta_pass_at_1_pp": 0.0,
+      "exact_one_sided_p": 0.75,
+      "paired_bootstrap_95_ci_pp": [
+        -37.5,
+        37.5
+      ]
+    },
+    "transfer": {
+      "task_gains": [],
+      "task_losses": [],
+      "lost_test_groups": 1,
+      "output_changed": [
+        "MBPP/129",
+        "MBPP/239",
+        "MBPP/245",
+        "MBPP/247",
+        "MBPP/306",
+        "MBPP/392",
+        "MBPP/407",
+        "MBPP/463"
+      ],
+      "delta_pass_at_1_pp": 0.0,
+      "exact_one_sided_p": 1.0,
+      "paired_bootstrap_95_ci_pp": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "e_vs_c": {
+    "target": {
+      "task_gains": [
+        "HumanEval/129"
+      ],
+      "task_losses": [],
+      "lost_test_groups": 0,
+      "output_changed": [
+        "HumanEval/129"
+      ],
+      "delta_pass_at_1_pp": 12.5,
+      "exact_one_sided_p": 0.5,
+      "paired_bootstrap_95_ci_pp": [
+        0.0,
+        37.5
+      ]
+    },
+    "transfer": {
+      "task_gains": [],
+      "task_losses": [],
+      "lost_test_groups": 1,
+      "output_changed": [
+        "MBPP/129",
+        "MBPP/239",
+        "MBPP/245",
+        "MBPP/247",
+        "MBPP/306",
+        "MBPP/392",
+        "MBPP/407",
+        "MBPP/463"
+      ],
+      "delta_pass_at_1_pp": 0.0,
+      "exact_one_sided_p": 1.0,
+      "paired_bootstrap_95_ci_pp": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "control_losses_vs_principal": {
+    "c": [
+      "dev_0",
+      "dev_2",
+      "dev_3",
+      "reason_product",
+      "reason_order",
+      "reason_subtract",
+      "lang_translate"
+    ],
+    "d": [
+      "dev_0",
+      "dev_1",
+      "dev_2",
+      "dev_3",
+      "reason_product",
+      "reason_order",
+      "reason_subtract",
+      "reason_half",
+      "lang_past",
+      "lang_translate"
+    ],
+    "e": [
+      "reason_order",
+      "reason_subtract",
+      "lang_past",
+      "lang_translate"
+    ]
+  },
+  "selected_exact_reference_reproductions": [
+    "HumanEval/32",
+    "HumanEval/39",
+    "HumanEval/75",
+    "HumanEval/114",
+    "HumanEval/119",
+    "HumanEval/129",
+    "HumanEval/132",
+    "HumanEval/147"
+  ],
+  "d_training": {
+    "status": "training_complete",
+    "eligible_additional_tensors": 1,
+    "eligible_additional_parameters": 3670016,
+    "matrix_updates": 6,
+    "original_full_text_training_steps": 38,
+    "new_total_gradient_updates_in_lineage": 44,
+    "changed_tensors_vs_c": 1,
+    "changed_values_vs_c": 3616788,
+    "changed_tensors_vs_original_parent": 546,
+    "changed_values_vs_original_parent": 483820320,
+    "checkpoint_stream_sha256": "8e494dde21480dd73c73901c2a57c9a18dd6247a813ec22d0156f08c60931a7c",
+    "parent_specialist_stream_sha256": "05687b52a1efb934cec6d5f7ce4c63b62969dd88cec1c2f85364c0afac1cbb15",
+    "all_other_698_parameter_tensors_bitwise_unchanged": true,
+    "vision_tensors_unchanged": 153,
+    "cached_training_tokens": 1098,
+    "final_cached_correct_tokens": 1098,
+    "minimum_cached_margin": 1.0,
+    "seconds": 433.2339704240003,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.9531189203262329,
+        0.046881064772605896
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 442326,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 44,
+      "limitations": "Qwen-sized trained hybrid; cached training fit does not establish general reasoning or superiority."
+    },
+    "preflight": {
+      "tokens": 1098,
+      "raw_native_correct": 1087,
+      "reconstructed_correct": 1087,
+      "raw_reconstructed_argmax_agreement": 1.0,
+      "native_hidden_max_abs_rounding_difference": 0.0625,
+      "minimum_margin": -4.75,
+      "forced_replay_not_benchmark_score": true
+    },
+    "forced_training_replay_was_not_scored": true
+  },
+  "e_training": {
+    "status": "training_complete",
+    "eligible_additional_tensors": 1,
+    "eligible_additional_parameters": 3670016,
+    "matrix_updates_in_continuation": 6,
+    "matrix_updates_in_D_and_E": 12,
+    "new_total_gradient_updates_in_lineage": 50,
+    "changed_values_vs_c": 2894871,
+    "changed_tensors_vs_original_parent": 546,
+    "changed_values_vs_original_parent": 483082021,
+    "checkpoint_stream_sha256": "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85",
+    "parent_specialist_stream_sha256": "05687b52a1efb934cec6d5f7ce4c63b62969dd88cec1c2f85364c0afac1cbb15",
+    "all_other_698_parameter_tensors_bitwise_unchanged": true,
+    "vision_tensors_unchanged": 153,
+    "corrected_cached_training_tokens": 1098,
+    "final_cached_correct_tokens": 1098,
+    "minimum_cached_margin": 0.875,
+    "terminal_labels_repaired": 8,
+    "native_generation_configuration_changed": false,
+    "seconds": 87.13046849500097,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.9531189203262329,
+        0.046881064772605896
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 442326,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 50,
+      "limitations": "Trained hybrid; terminal-label repair and taught fit are not general intelligence."
+    }
+  },
+  "eos_mismatch_and_repair": {
+    "native_generation_eos_token_id": 248044,
+    "native_generation_eos_content": "<|endoftext|>",
+    "previous_training_eos_token_id": 248046,
+    "previous_training_eos_content": "<|im_end|>",
+    "model_generation_configuration_changed": false,
+    "reference_programs_or_test_answers_changed": false,
+    "observed_D_effect": "Correct find_zero followed by another assistant turn and truncation; trained turn-end is not native stop marker.",
+    "scope": "repair only eight final training-token labels, then finish remaining original D optimization budget"
+  }
+}

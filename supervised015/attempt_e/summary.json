@@ -1,0 +1,104 @@
+{
+  "model": {
+    "taught": {
+      "solved": 8,
+      "total": 8,
+      "test_groups_passed": 8,
+      "test_groups_total": 8,
+      "truncations": 0,
+      "tokens": 1098,
+      "seconds": 369.27840451099473
+    },
+    "transfer": {
+      "solved": 0,
+      "total": 8,
+      "test_groups_passed": 0,
+      "test_groups_total": 24,
+      "truncations": 0,
+      "tokens": 981,
+      "seconds": 327.8854951600006
+    },
+    "controls": {
+      "correct": 6,
+      "total": 12,
+      "nll": 3.1682596604029336
+    }
+  },
+  "comparison_vs_c": {
+    "target": {
+      "task_gains": [
+        "HumanEval/129"
+      ],
+      "task_losses": [],
+      "lost_test_groups": 0,
+      "output_changed": [
+        "HumanEval/129"
+      ],
+      "delta_pass_at_1_pp": 12.5,
+      "exact_one_sided_p": 0.5,
+      "paired_bootstrap_95_ci_pp": [
+        0.0,
+        37.5
+      ]
+    },
+    "transfer": {
+      "task_gains": [],
+      "task_losses": [],
+      "lost_test_groups": 1,
+      "output_changed": [
+        "MBPP/129",
+        "MBPP/239",
+        "MBPP/245",
+        "MBPP/247",
+        "MBPP/306",
+        "MBPP/392",
+        "MBPP/407",
+        "MBPP/463"
+      ],
+      "delta_pass_at_1_pp": 0.0,
+      "exact_one_sided_p": 1.0,
+      "paired_bootstrap_95_ci_pp": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "training": {
+    "status": "training_complete",
+    "eligible_additional_tensors": 1,
+    "eligible_additional_parameters": 3670016,
+    "matrix_updates_in_continuation": 6,
+    "matrix_updates_in_D_and_E": 12,
+    "new_total_gradient_updates_in_lineage": 50,
+    "changed_values_vs_c": 2894871,
+    "changed_tensors_vs_original_parent": 546,
+    "changed_values_vs_original_parent": 483082021,
+    "checkpoint_stream_sha256": "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85",
+    "parent_specialist_stream_sha256": "05687b52a1efb934cec6d5f7ce4c63b62969dd88cec1c2f85364c0afac1cbb15",
+    "all_other_698_parameter_tensors_bitwise_unchanged": true,
+    "vision_tensors_unchanged": 153,
+    "corrected_cached_training_tokens": 1098,
+    "final_cached_correct_tokens": 1098,
+    "minimum_cached_margin": 0.875,
+    "terminal_labels_repaired": 8,
+    "native_generation_configuration_changed": false,
+    "seconds": 87.13046849500097,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.9531189203262329,
+        0.046881064772605896
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 442326,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 50,
+      "limitations": "Trained hybrid; terminal-label repair and taught fit are not general intelligence."
+    }
+  },
+  "selected_as_specialist": true
+}

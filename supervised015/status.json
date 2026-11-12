@@ -1,11 +1,11 @@
 {
-  "status": "evaluating_terminal_label_repair_e",
-  "model_process_active": true,
-  "active_directory": "supervised015/attempt_e",
-  "selected_specialist_before_e": "attempt_c",
-  "c_target_tasks_passed": 7,
-  "principal_unchanged": true,
+  "status": "complete_local_results",
+  "model_process_active": false,
+  "selected_specialist": "attempt_e",
+  "specialist_manifest": "supervised015/attempt_e/checkpoints/candidate/manifest.json",
+  "selected_general_checkpoint": "rsi100/checkpoints/best.pt",
   "checkpoint_promoted": false,
-  "process_continues_in_background": false,
-  "updated_unix": 1794454464.342402
+  "principal_unchanged": true,
+  "publication_verification": "supervised015/artifact_verification.json",
+  "process_continues_in_background": false
 }

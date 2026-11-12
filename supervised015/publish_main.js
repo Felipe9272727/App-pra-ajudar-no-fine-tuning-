@@ -10,6 +10,8 @@ async function(studyCommit) {
   const data=JSON.parse(r.output);if(data.decision.checkpoint_promoted)throw Error('Principal promotion is outside specialist index');
   const scores=['original','parent','specialist'].map(k=>k+': HumanEval ensinado '+data.models[k].taught.solved+'/8, MBPP diagnóstico '+data.models[k].transfer.solved+'/8, controles '+data.models[k].controls.correct+'/12').join('; ');
   const link='https://github.com/'+repo+'/blob/'+studyCommit+'/';
+  const weightsLink=link+data.decision.specialist_path;
+  const reproduceLink=link+'supervised015/'+data.decision.selected_specialist+'/REPRODUCE.md';
   const heading='## Treino supervisionado de todos os pesos de texto — estudo015 (11/11/2026)';
   if(old.includes(heading))throw Error('Study already indexed; inspect before retry');
   const section='\n'+heading+'\n\n'+
@@ -17,7 +19,7 @@ async function(studyCommit) {
     'A comparação binária confirmou mudança em '+data.training.changed_text_tensors+' tensores/'+data.training.changed_scalar_values+' valores. '+scores+'. '+
     'As oito soluções HumanEval foram ensinadas deliberadamente: isso mede especialização, não um resultado limpo do benchmark ou inteligência geral. MBPP ficou fora do treino, mas já era observado no014. '+
     'Estado: '+data.decision.status+'. O especialista foi preservado separadamente; o checkpoint principal anterior permanece selecionado. Sem alegação de superioridade contra4B.\n\n'+
-    '[Relatório e regressões]('+link+'SUPERVISED_TEXT_REPORT.md) · [Resultados]('+link+'supervised015/final_summary.json) · [Pesos exatos]('+link+'supervised015/attempt_b/checkpoints/final/manifest.json) · [Reprodução]('+link+'supervised015/attempt_b/REPRODUCE.md).\n';
+    '[Relatório e regressões]('+link+'SUPERVISED_TEXT_REPORT.md) · [Resultados]('+link+'supervised015/final_summary.json) · [Pesos exatos]('+weightsLink+') · [Reprodução]('+reproduceLink+').\n';
   const i=old.indexOf('\n## ');const content=i<0?old+'\n'+section:old.slice(0,i)+section+old.slice(i);
   const tree=unpack(await tools.mcp__codex_apps__github_create_tree({repository_full_name:repo,base_tree_sha:before.commit.tree.sha,tree_elements:[{path:'README.md',content,mode:'100644',type:'blob'}]}));
   const commit=unpack(await tools.mcp__codex_apps__github_create_commit({repository_full_name:repo,parent_sha:before.sha,tree_sha:tree.sha,message:'Index authorized full-text SFT015: specialist target fit, transfer diagnostics and preserved principal'}));

@@ -1,0 +1,29 @@
+{
+  "reviewer": "assistant, post-hoc descriptive review; not an alternative score",
+  "official_counts_unchanged": true,
+  "E_taught_score": 8,
+  "E_MBPP_score": 0,
+  "E_strict_controls": 6,
+  "D_find_zero_failure": "First full canonical function is correct; then another assistant/think turn and truncated repetition. Same original extractor/tests retained; TypeError remains recorded.",
+  "confirmed_training_terminal_bug": "im_end248046 was taught but only endoftext248044 stops unchanged native generation. E repairs eight training terminal labels without changing code or tests.",
+  "E_exact_reference_programs": [
+    "HumanEval/32",
+    "HumanEval/39",
+    "HumanEval/75",
+    "HumanEval/114",
+    "HumanEval/119",
+    "HumanEval/129",
+    "HumanEval/132",
+    "HumanEval/147"
+  ],
+  "general_interpretation": "Perfect taught-subset reproduction is specialization. MBPP0/8 and controls6/12 versus prior10/12 prevent general promotion; anchor NLL alone does not establish retention.",
+  "E_content_errors": {
+    "reason_order": "Answers Bia although Ana arrived first.",
+    "reason_subtract": "Answers15 for17-5; expected12."
+  },
+  "E_format_errors_with_relevant_correct_content": {
+    "lang_past": "Contains went but repeats full sentences/pronouns instead of only the verb.",
+    "lang_translate": "A \u00e1gua. plus think separator and repetition instead of one word.",
+    "lang_opposite": "frio repeated around think separator; exact control remains failed."
+  }
+}

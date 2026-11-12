@@ -1,0 +1,19 @@
+{
+  "status": "experimental_specialist_e_preserved_after_terminal_label_repair",
+  "selected_specialist": "attempt_e",
+  "specialist_path": "supervised015/attempt_e/checkpoints/candidate/manifest.json",
+  "checkpoint_promoted": false,
+  "principal_unchanged": true,
+  "selected_general_checkpoint": "rsi100/checkpoints/best.pt",
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "target_intentionally_taught": true,
+  "mbpp_previously_observed": true,
+  "mbpp_used_for_refitting": false,
+  "general_or_4b_superiority_demonstrated": false,
+  "d_rejected_as_c_replacement": true,
+  "d_reason": "No net taught-task gain; loses previously correct HumanEval/32 while gaining129.",
+  "e_requires_gain_and_no_c_correct_task_loss": true,
+  "e_selection_rule_passed": true,
+  "inference_eos_configuration_changed": false,
+  "reference_programs_and_official_tests_changed": false
+}
