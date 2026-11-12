@@ -6,5 +6,8 @@
   "termination_cause_not_observed": true,
   "retry_only_missing_rows": true,
   "failed_HE129_result_preserved_not_retried": true,
-  "new_training_updates": 0
+  "new_training_updates": 0,
+  "status": "completed_all20_rows_once_except_unsaved_interrupted_phase",
+  "model_process_active": false,
+  "all20_results_preserved": true
 }
