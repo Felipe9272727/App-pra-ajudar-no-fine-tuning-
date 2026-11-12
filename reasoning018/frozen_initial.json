@@ -1,0 +1,16 @@
+{
+  "reasoning018/prepare_data.py": "42191da6b1017d65241132ee111df07ab73562256182e79a8cce101c427202bb",
+  "reasoning018/train.py": "8e8e60d4121983bc43a170dfa58a7afbead688450f11f8453bc3ca273f14b64d",
+  "reasoning018/restore.py": "87f9bddd5574780e14e8f81afd53586e414789d64d84e2e2a6ff333145c33081",
+  "reasoning018/trainable.json": "684922f25f40b7190e9eb05773b0bb0c3c3a2c742f0bf3e2239c95405037f59f",
+  "reasoning018/config.json": "46529e0f0164c43f5c6cc02d23d8a60c3a6bec3828bfaf61f755135b09144f30",
+  "reasoning018/code_train.json": "2095f5c3d5610ab73a0195b75d2f6fc50db4f2dda0a8c4d932e06e5ecabcd006",
+  "reasoning018/general_train.json": "bc6bb28c173f87d5bc7b31b789226d66f89506f68555047771e4939d0499c923",
+  "reasoning018/reference_audit.json": "0df6c59fd5eb7d147a4792c03608896e87ea43e1463b877e27d747d327bda951",
+  "reasoning018/PROTOCOL.md": "a73ba62841684b6430fcda13f7e9087c40e10a5ca6a8c4b3bd4cb967bb10d85f",
+  "rsi100/checkpoints/best.pt": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "supervised015/train_runtime.py": "9db75812f0fc079c9c0a60e5a0e162460fc1f8de64cac6f2ee396ede4eaf2dc2",
+  "supervised015/optimizer.py": "49bf53b02db8cbc4a9327579693501c9458c9d3e9fb55135956e4cdf709bff07",
+  "review013/controls.json": "7328505fb456b36bcba3e4a3975cedfc4d26b25c3bd01b3b59b6230029d160fd",
+  "reasoning018/evaluate.py": "0206bc4c4eff356b330c197290a5db1c769abe91dbb741a7355f43800a6fd45a"
+}

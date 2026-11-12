@@ -1,0 +1,12 @@
+{
+  "status": "checkpoint_recovered_no_training_repeated",
+  "failure": "Architecture checker requires all requires_grad=False; trainer did not disable them before final check.",
+  "updates_saved": 8,
+  "checkpoint_bytes": 5337685,
+  "checkpoint_sha256": "f25aac86011be54f5025f24be391a1f7076a7d4e9de234e05f4ead20ecf729ab",
+  "optimizer_bytes": 3204299,
+  "optimizer_sha256": "6ab064544b5ade5bb5ee74142132acb6be5259c48ce2441883ea1cf87e7897fc",
+  "all_initial_frozen_inputs_verified_before_source_correction": true,
+  "training_will_not_repeat": true,
+  "all_699_cold_restore_verified": true
+}

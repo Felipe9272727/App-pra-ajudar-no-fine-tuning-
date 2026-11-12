@@ -1,0 +1,11 @@
+{
+  "all_699_hashes_unchanged": true,
+  "selected_tensors": 329,
+  "gradient_present": 329,
+  "nonzero_gradients": 269,
+  "both_visits_in_forward_and_backward_recompute": true,
+  "loss": 2.1352856159210205,
+  "sequence_tokens": 115,
+  "rss_kb": 2768320,
+  "peak_rss_kb": 4518412
+}
