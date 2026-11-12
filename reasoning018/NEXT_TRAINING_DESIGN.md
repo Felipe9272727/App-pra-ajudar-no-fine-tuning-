@@ -40,3 +40,7 @@ verification/cache rollback before a trained small drafter offers lossless speed
 This file is a concrete dimensional/training design only; no019training,
 new adapter, random model, or improved checkpoint is claimed. The final018
 1024-token diagnostic and confirmatory speed measurements remain separate.
+
+If formerly zero exits learn nonzero values,019must not shortcut those matrices.
+It detects actual bytes at load, so benchmark the newly merged checkpoint again;
+the measured general-parent speed ratio cannot be assumed for new weights.

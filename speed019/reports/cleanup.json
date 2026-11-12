@@ -1,0 +1,9 @@
+{
+  "removed_only_reinstallable_build_caches": [
+    "/dev/shm/liquid-android/speed019-target",
+    "/dev/shm/liquid-android/tooling/rustup",
+    "/dev/shm/liquid-android/tooling/cargo"
+  ],
+  "preserved_apk_and_both_bench_binaries": true,
+  "canonical_weights_and_all_experiment_checkpoints_preserved": true
+}
