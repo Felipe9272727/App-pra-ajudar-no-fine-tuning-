@@ -1,0 +1,165 @@
+{
+  "variant": "candidate",
+  "protocol": {
+    "controls_thinking": false,
+    "code_thinking": true,
+    "greedy": true,
+    "seed": 0,
+    "control_budget": 64,
+    "code_budget": 256,
+    "threads": 4,
+    "answers_in_generation_inputs": false,
+    "cases_in_generation_inputs": false,
+    "observed_teaching_diagnostic_not_fresh": true
+  },
+  "controls": [
+    {
+      "id": "dev_0",
+      "output": "Sb\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.2329741829998966,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_1",
+      "output": "children",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.050961285000085,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.0379021400003694,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_3",
+      "output": "heart",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.0892003279986966,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_product",
+      "output": "56",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.5806151739998313,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_order",
+      "output": "Ana",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.4514950449993194,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_subtract",
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.8072161079981015,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_half",
+      "output": "17",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.650648373997683,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_opposite",
+      "output": " frijo\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.2191510220000055,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_past",
+      "output": "went",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.141146463000041,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_plural",
+      "output": "pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro,",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 19.438023109003552,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_translate",
+      "output": "água",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.3282278970000334,
+      "thinking": false,
+      "correct": true
+    }
+  ],
+  "code": [
+    {
+      "id": "above_0",
+      "final_output": "",
+      "thinking_closed": false,
+      "has_final": false,
+      "new_tokens": 256,
+      "hit_limit": true,
+      "raw_output_sha256": "4e0d3dbae3b9f931c1c2446859d696cd4814a10ac1cabba4b2882def635a2c86",
+      "seconds": 78.51965575500071,
+      "passed": 0,
+      "total": 20,
+      "all_passed": false,
+      "category": "ContractError",
+      "detail": "FunctionDefinitionsOnly",
+      "code": ""
+    },
+    {
+      "id": "prefix_offset_0",
+      "final_output": "",
+      "thinking_closed": false,
+      "has_final": false,
+      "new_tokens": 256,
+      "hit_limit": true,
+      "raw_output_sha256": "0d30ed9032b281252e478488b1e3da726c821b73418e1e9a3c0dbd7613fff8e6",
+      "seconds": 80.60415221999938,
+      "passed": 0,
+      "total": 20,
+      "all_passed": false,
+      "category": "ContractError",
+      "detail": "FunctionDefinitionsOnly",
+      "code": ""
+    }
+  ],
+  "checkpoint_sha256": "f25aac86011be54f5025f24be391a1f7076a7d4e9de234e05f4ead20ecf729ab",
+  "status": "complete",
+  "controls_correct": 10,
+  "code_tasks_passed": 0,
+  "code_cases_passed": 0,
+  "code_cases_total": 40
+}
