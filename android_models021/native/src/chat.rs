@@ -74,7 +74,7 @@ impl Chat {
             let logits = self.model.logits(&hidden);
             let next = crate::kernels::greedy(&logits) as u32;
             if first_token_seconds.is_none() { first_token_seconds = Some(begin.elapsed().as_secs_f64()); }
-            if [248044, 248046].contains(&next) { reason = "stop"; break; }
+            if next == 248044 || (self.model.manifest.source_checkpoint_sha256 != crate::model::SPECIALIST && next == 248046) { reason = "stop"; break; }
             generated.push(next);
             let raw = self.tokenizer.decode(&generated, true).map_err(|e| anyhow!(e.to_string()))?;
             text = raw.rsplit("</think>").next().unwrap_or(&raw).trim().to_string();
