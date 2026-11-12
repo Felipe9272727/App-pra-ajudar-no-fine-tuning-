@@ -1,0 +1,49 @@
+{
+  "checked_code_examples": 8,
+  "cases_passed": 160,
+  "rows": [
+    {
+      "id": "clip_0",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "id": "prefix_offset_0",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "id": "above_0",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "id": "residues_0",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "id": "weighted_alternate_0",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "id": "suffix_offset_0",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "id": "large_jumps_0",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "id": "drop_periodic_0",
+      "passed": 20,
+      "total": 20
+    }
+  ],
+  "general_answers_match_existing_training": true,
+  "training_explanations": "researcher-authored educational solution outlines, not model hidden traces",
+  "all_data_previously_observed_for_teaching": true
+}

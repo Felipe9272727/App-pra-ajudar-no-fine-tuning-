@@ -1,0 +1,28 @@
+[
+  [
+    {
+      "role": "user",
+      "content": "Say OK."
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Say OK."
+    },
+    {
+      "role": "assistant",
+      "content": "OK"
+    },
+    {
+      "role": "user",
+      "content": "Say hi."
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Give only the plural of cat."
+    }
+  ]
+]

@@ -1,0 +1,1 @@
+{"seed":20261112,"learning_rate":0.0002,"optimizer_steps":8,"code_example_weight":0.5,"general_example_weight":0.5,"trust_relative":0.002,"trust_rms_floor":0.001,"native_eos_id":248044,"cpu_threads":4,"thinking_train":true,"thinking_teaching_probe":true,"code_max_new_tokens":256,"control_max_new_tokens":64}

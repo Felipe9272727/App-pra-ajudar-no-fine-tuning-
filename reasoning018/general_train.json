@@ -1,0 +1,58 @@
+[
+  {
+    "id": "TEACH016/00",
+    "prompt": "What is the chemical symbol for sodium? Reply only with the symbol.",
+    "solution": "Na",
+    "role": "general_training",
+    "reasoning_explanation": "Sodium has the conventional chemical symbol Na; preserve the uppercase N and lowercase a. The requested final output is just the symbol."
+  },
+  {
+    "id": "TEACH016/01",
+    "prompt": "Qual é a capital do Japão? Responda somente a cidade.",
+    "solution": "Tóquio",
+    "role": "general_training",
+    "reasoning_explanation": "A capital-city question asks for the seat of government, not the largest region. Japan has Tokyo as its capital. In Portuguese the final city name is Tóquio."
+  },
+  {
+    "id": "TEACH016/02",
+    "prompt": "What organs enable breathing? Reply with one plural noun.",
+    "solution": "lungs",
+    "role": "general_training",
+    "reasoning_explanation": "Breathing exchanges gases through the lungs. The question requests a plural noun, so the final answer should contain that noun alone."
+  },
+  {
+    "id": "TEACH016/03",
+    "prompt": "Give only the plural of mouse.",
+    "solution": "mice",
+    "role": "general_training",
+    "reasoning_explanation": "Mouse has the irregular plural mice. Do not add the regular plural ending. The final response should be just the plural."
+  },
+  {
+    "id": "TEACH016/04",
+    "prompt": "Responda somente com o número: 6 vezes 7.",
+    "solution": "42",
+    "role": "general_training",
+    "reasoning_explanation": "Six groups of seven contain forty-two items: seven plus seven plus seven plus seven plus seven plus seven equals forty-two. The final answer is a number only."
+  },
+  {
+    "id": "TEACH016/05",
+    "prompt": "Davi chegou antes de Eva. Eva chegou antes de Leo. Quem chegou primeiro? Responda somente o nome.",
+    "solution": "Davi",
+    "role": "general_training",
+    "reasoning_explanation": "The given order puts Davi before Eva, and Eva before Leo. Transitivity puts Davi before both others, so the first person is Davi."
+  },
+  {
+    "id": "TEACH016/06",
+    "prompt": "Reply only with a number: a box has 22 pens and 9 are removed. How many remain?",
+    "solution": "13",
+    "role": "general_training",
+    "reasoning_explanation": "Start with twenty-two pens and remove nine. Twenty-two minus two is twenty; remove seven more to get thirteen. The requested output is the remaining count."
+  },
+  {
+    "id": "TEACH016/07",
+    "prompt": "What is half of 46? Reply only with the number.",
+    "solution": "23",
+    "role": "general_training",
+    "reasoning_explanation": "Half means divide by two. Forty-six equals forty plus six; their halves are twenty and three. Adding gives twenty-three. The final answer is the number only."
+  }
+]
