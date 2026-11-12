@@ -1,0 +1,13 @@
+{
+  "abi": "aarch64",
+  "sha256": "d2d057f92fe576f1de1174cea6033172e0de232983d0a51c3609cbaa2ddd5e76",
+  "bytes": 4831672,
+  "load_segment_alignments": [
+    16384,
+    16384,
+    16384,
+    16384
+  ],
+  "kernel_source": "speed019 unchanged; android boot enables optimize=true",
+  "physical_android_execution_verified": false
+}
