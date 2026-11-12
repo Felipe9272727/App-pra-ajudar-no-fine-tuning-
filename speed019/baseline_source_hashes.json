@@ -1,0 +1,12 @@
+{
+  "speed017/runtime/Cargo.lock": "4d194e3c2d289d3f8b2cb3943030abcb7c202b5f2df21b54379ecc8c9bab3d73",
+  "speed017/runtime/Cargo.toml": "f3fe93e340849d0733e1875c1136e2d20dc9c48116701a416bb6a48d35567e1a",
+  "speed017/runtime/src/android.rs": "110544d52d6fb4ade5a6594810ad6d7cea8f3e1242bf2f1a5d800b30e660cb70",
+  "speed017/runtime/src/chat.rs": "fb06e037bd10de15ba47350be3325045dde534f91b48778eb8a08bc2d7d117ca",
+  "speed017/runtime/src/lib.rs": "edd05b32aed71eee71f0cf8191255964d3e2bc6ebb050ed3ef8bb2204f93dff7",
+  "speed017/runtime/src/kernels.rs": "489951df5e7ea915c6620381edaa2f56b084ffeec1416885955c397f1033e2f1",
+  "speed017/runtime/src/model.rs": "cce3cae42ab5708fc3a54df954735f7ebd3485bcb5dc8b1611687d2cbb3fcb2d",
+  "speed017/runtime/src/bin/bench.rs": "d99a7becb8133a113c524aaa2e5aa06a52f2c1c02c91b50d42522b40d406f20a",
+  "speed017/runtime/src/bin/probe.rs": "4186bad4ab82fdb6249c990dca10fe6bec0efc821b376cfa323e1e1bf2b01f63",
+  "speed017/runtime/src/bin/audit.rs": "e9e47a87c4fa7bbf0e0418eae30c776872e466cc1e84524d66f42ffb779c06c6"
+}
