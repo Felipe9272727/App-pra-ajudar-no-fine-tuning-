@@ -1,14 +1,13 @@
 {
-  "status": "preflight_passed_ready_to_train",
+  "status": "stopped_after_training_divergence",
   "model_process_active": false,
-  "correct_answers_authorized": true,
-  "gradients_authorized": true,
-  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
-  "checkpoint_promoted": false,
-  "target_benchmark": "previous eight HumanEval tasks",
-  "trainable_text_parameters": 919659696,
-  "eligible_text_tensors": 546,
-  "vision_tensors_excluded": 153,
-  "optimizer_steps_completed": 0,
-  "process_continues_in_background": false
+  "optimizer_steps_completed": 11,
+  "last_completed_epoch": 2,
+  "all_546_text_tensors_received_nonzero_gradients": true,
+  "checkpoint_saved": false,
+  "partial_in_memory_weights_discarded": true,
+  "parent_untouched": true,
+  "reason": "First two epoch mean task NLL 6.9187 and 4.1969 versus parent about .634; restart lower-lr trial from immutable parent, not these drifted weights. No free-generation quality was measured for this interrupted trial.",
+  "process_continues_in_background": false,
+  "updated_unix": 1794445664.9856794
 }

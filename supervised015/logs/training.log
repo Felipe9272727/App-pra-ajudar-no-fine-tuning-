@@ -1,0 +1,43 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
+Loading weights:   5%|▍         | 31/675 [00:00<00:02, 298.52it/s]
+Loading weights:  12%|█▏        | 80/675 [00:00<00:01, 398.94it/s]
+Loading weights:  37%|███▋      | 248/675 [00:00<00:00, 968.12it/s]
+Loading weights:  64%|██████▎   | 430/675 [00:00<00:00, 1289.27it/s]
+Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1529.26it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794444850.5250666, "attempt": null, "pid": 6284}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TRAIN {"epoch": 1, "optimizer_step": 1, "ids": ["HumanEval/129", "HumanEval/32"], "loss_before_update": 0.652169942855835, "nonzero_gradient_tensors": 448, "rss_kb": 4933432, "peak_rss_kb": 5972016}
+TRAIN {"epoch": 1, "optimizer_step": 2, "ids": ["HumanEval/75", "HumanEval/147"], "loss_before_update": 6.860562324523926, "nonzero_gradient_tensors": 546, "rss_kb": 4934496, "peak_rss_kb": 6423696}
+TRAIN {"epoch": 1, "optimizer_step": 3, "ids": ["HumanEval/39", "HumanEval/119"], "loss_before_update": 4.138974189758301, "nonzero_gradient_tensors": 546, "rss_kb": 4934276, "peak_rss_kb": 6423696}
+TRAIN {"epoch": 1, "optimizer_step": 4, "ids": ["HumanEval/132", "HumanEval/114"], "loss_before_update": 7.320138931274414, "nonzero_gradient_tensors": 546, "rss_kb": 4934760, "peak_rss_kb": 6424096}
+EPOCH 1 correct 214 tokens 1098 minimum_margin -26.46875
+TRAIN {"epoch": 2, "optimizer_step": 5, "ids": ["HumanEval/119", "HumanEval/129"], "loss_before_update": 7.496133804321289, "nonzero_gradient_tensors": 546, "rss_kb": 4933968, "peak_rss_kb": 6424096}
+TRAIN {"epoch": 2, "optimizer_step": 6, "ids": ["HumanEval/32", "HumanEval/75"], "loss_before_update": 4.3638691902160645, "nonzero_gradient_tensors": 546, "rss_kb": 4925824, "peak_rss_kb": 6424412}
+TRAIN {"epoch": 2, "optimizer_step": 7, "ids": ["HumanEval/114", "HumanEval/147"], "loss_before_update": 3.8717427253723145, "nonzero_gradient_tensors": 546, "rss_kb": 4924584, "peak_rss_kb": 6424412}
+TRAIN {"epoch": 2, "optimizer_step": 8, "ids": ["HumanEval/132", "HumanEval/39"], "loss_before_update": 4.684233665466309, "nonzero_gradient_tensors": 546, "rss_kb": 4923540, "peak_rss_kb": 6424412}
+EPOCH 2 correct 435 tokens 1098 minimum_margin -22.03125
+TRAIN {"epoch": 3, "optimizer_step": 9, "ids": ["HumanEval/75", "HumanEval/132"], "loss_before_update": 4.408088684082031, "nonzero_gradient_tensors": 546, "rss_kb": 4904632, "peak_rss_kb": 6424412}
+TRAIN {"epoch": 3, "optimizer_step": 10, "ids": ["HumanEval/32", "HumanEval/119"], "loss_before_update": 3.1135082244873047, "nonzero_gradient_tensors": 546, "rss_kb": 4900516, "peak_rss_kb": 6424412}
+TRAIN {"epoch": 3, "optimizer_step": 11, "ids": ["HumanEval/129", "HumanEval/147"], "loss_before_update": 2.939516544342041, "nonzero_gradient_tensors": 546, "rss_kb": 4900428, "peak_rss_kb": 6424412}
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/supervised015/train.py", line 77, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/liquid-sense/supervised015/train.py", line 42, in main
+    value=torch.stack(losses).mean();number=float(value.detach());value.backward()
+                                                                  ^^^^^^^^^^^^^^^^
+  File "/home/agent/.local/lib/python3.12/site-packages/torch/_tensor.py", line 623, in backward
+    torch.autograd.backward(
+  File "/home/agent/.local/lib/python3.12/site-packages/torch/autograd/__init__.py", line 395, in backward
+    _engine_run_backward(
+  File "/home/agent/.local/lib/python3.12/site-packages/torch/autograd/graph.py", line 1113, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agent/.local/lib/python3.12/site-packages/torch/utils/checkpoint.py", line 1351, in unpack_hook
+    def unpack_hook(holder):
+
+KeyboardInterrupt

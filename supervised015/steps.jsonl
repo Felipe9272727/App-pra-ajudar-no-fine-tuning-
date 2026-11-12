@@ -1,0 +1,11 @@
+{"epoch": 1, "optimizer_step": 1, "ids": ["HumanEval/129", "HumanEval/32"], "loss_before_update": 0.652169942855835, "nonzero_gradient_tensors": 448, "rss_kb": 4933432, "peak_rss_kb": 5972016}
+{"epoch": 1, "optimizer_step": 2, "ids": ["HumanEval/75", "HumanEval/147"], "loss_before_update": 6.860562324523926, "nonzero_gradient_tensors": 546, "rss_kb": 4934496, "peak_rss_kb": 6423696}
+{"epoch": 1, "optimizer_step": 3, "ids": ["HumanEval/39", "HumanEval/119"], "loss_before_update": 4.138974189758301, "nonzero_gradient_tensors": 546, "rss_kb": 4934276, "peak_rss_kb": 6423696}
+{"epoch": 1, "optimizer_step": 4, "ids": ["HumanEval/132", "HumanEval/114"], "loss_before_update": 7.320138931274414, "nonzero_gradient_tensors": 546, "rss_kb": 4934760, "peak_rss_kb": 6424096}
+{"epoch": 2, "optimizer_step": 5, "ids": ["HumanEval/119", "HumanEval/129"], "loss_before_update": 7.496133804321289, "nonzero_gradient_tensors": 546, "rss_kb": 4933968, "peak_rss_kb": 6424096}
+{"epoch": 2, "optimizer_step": 6, "ids": ["HumanEval/32", "HumanEval/75"], "loss_before_update": 4.3638691902160645, "nonzero_gradient_tensors": 546, "rss_kb": 4925824, "peak_rss_kb": 6424412}
+{"epoch": 2, "optimizer_step": 7, "ids": ["HumanEval/114", "HumanEval/147"], "loss_before_update": 3.8717427253723145, "nonzero_gradient_tensors": 546, "rss_kb": 4924584, "peak_rss_kb": 6424412}
+{"epoch": 2, "optimizer_step": 8, "ids": ["HumanEval/132", "HumanEval/39"], "loss_before_update": 4.684233665466309, "nonzero_gradient_tensors": 546, "rss_kb": 4923540, "peak_rss_kb": 6424412}
+{"epoch": 3, "optimizer_step": 9, "ids": ["HumanEval/75", "HumanEval/132"], "loss_before_update": 4.408088684082031, "nonzero_gradient_tensors": 546, "rss_kb": 4904632, "peak_rss_kb": 6424412}
+{"epoch": 3, "optimizer_step": 10, "ids": ["HumanEval/32", "HumanEval/119"], "loss_before_update": 3.1135082244873047, "nonzero_gradient_tensors": 546, "rss_kb": 4900516, "peak_rss_kb": 6424412}
+{"epoch": 3, "optimizer_step": 11, "ids": ["HumanEval/129", "HumanEval/147"], "loss_before_update": 2.939516544342041, "nonzero_gradient_tensors": 546, "rss_kb": 4900428, "peak_rss_kb": 6424412}
