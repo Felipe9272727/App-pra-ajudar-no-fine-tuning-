@@ -1,0 +1,11 @@
+{
+  "type": "technical_schema_fix_before_any_new_candidate_evaluation",
+  "prior_preregistration_commit": "4bb01a00eed3fc19ede62906751d421a4979a680",
+  "reason": "Historical likelihood returns {mean_nll, rows}, not a scalar. Read mean_nll for the already declared numerical gate.",
+  "before_decision_sha256": "01b6e0d32c02753b092de568a2ac9da2a60c3859dc3dfcb40bd463729dcedf8e",
+  "after_decision_sha256": "46504e25e489a0ca0c3cf92504d5c49d2d50aa26264458559f56ae1cf51a2749",
+  "training_source_config_data_or_steps_changed": false,
+  "gate_threshold_or_gold_changed": false,
+  "new_candidate_generations_observed": 0,
+  "initial_frozen_snapshot_preserved": "balanced016/frozen_initial.json"
+}

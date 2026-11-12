@@ -20,9 +20,9 @@ def main():
            'every_principal_correct_control_retained':all(byid[i]['correct'] for i in oldgood),
            'at_least10_of12_controls':current['controls']['correct']>=10,
            'no_E_mbpp_task_or_test_group_loss':not group_losses,
-           'anchor_nll_within_principal_plus_005':current['controls']['anchor_nll']<=parent['anchor_nll']+.005}
+           'anchor_nll_within_principal_plus_005':current['controls']['anchor_nll']['mean_nll']<=parent['anchor_nll']['mean_nll']+.005}
     result={'status':'complete','gates':gates,'passed':all(gates.values()),'fresh_validation_opened':False,'checkpoint_promoted':False,
-            'scores':{'taught':current['target']['tasks_passed'],'transfer':current['transfer']['tasks_passed'],'controls':current['controls']['correct'],'anchor_nll':current['controls']['anchor_nll']},
+            'scores':{'taught':current['target']['tasks_passed'],'transfer':current['transfer']['tasks_passed'],'controls':current['controls']['correct'],'anchor_nll':current['controls']['anchor_nll']['mean_nll']},
             'lost_principal_controls':[i for i in sorted(oldgood) if not byid[i]['correct']], 'mbpp_losses':group_losses,
             'general_principal_preserved':True,'prior_specialist_E_preserved':True}
     (HERE/'gate.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))

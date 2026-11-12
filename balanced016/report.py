@@ -16,7 +16,7 @@ def paired(a,b):
 def oldscore(prefix,suffix):
     t=read(prefix+'/target_'+suffix+'.json') if suffix!='parent' and suffix!='original' else read('supervised014/taught_'+suffix+'.json')
     b=read(prefix+'/transfer_'+suffix+'.json');c=read(prefix+'/controls_'+suffix+'.json')
-    return {'taught':t['tasks_passed'],'transfer':b['tasks_passed'],'control':c['correct'],'anchor_nll':c['anchor_nll']}
+    return {'taught':t['tasks_passed'],'transfer':b['tasks_passed'],'control':c['correct'],'anchor_nll':c['anchor_nll']['mean_nll']}
 def main():
     gate=read('balanced016/gate.json');training=read('balanced016/training_complete.json');manifest=read('balanced016/checkpoints/final/manifest.json')
     scores={'Qwen original':oldscore('supervised014','original'),'General principal':oldscore('supervised014','parent'),'Specialist015E':oldscore('supervised015/attempt_e','specialist'),'Candidate016':oldscore('balanced016','candidate')}
