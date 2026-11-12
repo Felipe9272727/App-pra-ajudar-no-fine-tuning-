@@ -1,0 +1,8 @@
+{
+  "variant": "original",
+  "new_tokens": 1024,
+  "seconds": 119.50638300199716,
+  "generated_prefix_sha256": "a654861c06bfe6cb86f7c20e54e6bf5196a6fbeebb569793463947ec7e2dea26",
+  "complete": true,
+  "completed_result_file": "long1024_original.json"
+}

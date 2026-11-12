@@ -1,0 +1,8 @@
+{
+  "variant": "parent",
+  "new_tokens": 1024,
+  "seconds": 328.6790925059977,
+  "generated_prefix_sha256": "a2174868a66e30eb06fd3d76d901cfb31409f10314e5e80e4dd521ef70978660",
+  "complete": true,
+  "completed_result_file": "long1024_parent.json"
+}

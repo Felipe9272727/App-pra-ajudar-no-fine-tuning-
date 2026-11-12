@@ -1,1 +1,8 @@
-{"status":"registered_training_not_started","model_process_active":false,"checkpoint_promoted":false}
+{
+  "status": "completed_rejected_preserve_general",
+  "model_process_active": false,
+  "optimizer_updates": 8,
+  "checkpoint_promoted": false,
+  "independent_validation_queried": false,
+  "process_continues_in_background": false
+}

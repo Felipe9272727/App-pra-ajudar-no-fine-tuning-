@@ -1,0 +1,8 @@
+{
+  "variant": "candidate",
+  "new_tokens": 1024,
+  "seconds": 323.5866273360007,
+  "generated_prefix_sha256": "49af996e5e68c27f31b2f45278b895c604c5426cacdfd3fac09d5c9bafb6940c",
+  "complete": true,
+  "completed_result_file": "long1024_candidate.json"
+}

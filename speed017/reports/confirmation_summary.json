@@ -1,0 +1,132 @@
+{
+  "study": "speed017",
+  "fixed_pairs": 12,
+  "warmup_rows_excluded": 6,
+  "timed_rows": 24,
+  "timing_scope": "cloudx86fourthreads16tokenbackbone; vocabulary readout excluded; not a phone measurement",
+  "reference_mean_seconds": 2.24435648075,
+  "optimized_mean_seconds": 2.112789781,
+  "mean_ratio": 1.0622715524910047,
+  "time_reduction_fraction": 0.05862112408543685,
+  "paired_mean_seconds_saved": 0.13156669975000007,
+  "paired_95_ci": [
+    0.06912810857908813,
+    0.194005290920912
+  ],
+  "exact_sign_flip_two_sided_p": 0.00146484375,
+  "confirmed_cloud_cpu_benefit": true,
+  "pairs": [
+    {
+      "process": 1,
+      "reference_run": 2,
+      "optimized_run": 3,
+      "reference_seconds": 2.391919773,
+      "optimized_seconds": 2.242170992,
+      "saved_seconds": 0.149748781,
+      "ratio": 1.066787404499612
+    },
+    {
+      "process": 1,
+      "reference_run": 5,
+      "optimized_run": 4,
+      "reference_seconds": 2.534321281,
+      "optimized_seconds": 2.360110581,
+      "saved_seconds": 0.17421070000000016,
+      "ratio": 1.0738146345355501
+    },
+    {
+      "process": 1,
+      "reference_run": 6,
+      "optimized_run": 7,
+      "reference_seconds": 2.46652356,
+      "optimized_seconds": 2.225877152,
+      "saved_seconds": 0.24064640800000037,
+      "ratio": 1.1081130680477016
+    },
+    {
+      "process": 1,
+      "reference_run": 9,
+      "optimized_run": 8,
+      "reference_seconds": 2.36284236,
+      "optimized_seconds": 2.060663475,
+      "saved_seconds": 0.302178885,
+      "ratio": 1.1466415495135613
+    },
+    {
+      "process": 2,
+      "reference_run": 2,
+      "optimized_run": 3,
+      "reference_seconds": 2.200553937,
+      "optimized_seconds": 2.080808424,
+      "saved_seconds": 0.1197455129999998,
+      "ratio": 1.0575475914163253
+    },
+    {
+      "process": 2,
+      "reference_run": 5,
+      "optimized_run": 4,
+      "reference_seconds": 2.037458321,
+      "optimized_seconds": 2.080237709,
+      "saved_seconds": -0.04277938800000003,
+      "ratio": 0.9794353367334329
+    },
+    {
+      "process": 2,
+      "reference_run": 6,
+      "optimized_run": 7,
+      "reference_seconds": 2.109349551,
+      "optimized_seconds": 1.999570606,
+      "saved_seconds": 0.10977894500000018,
+      "ratio": 1.05490125963574
+    },
+    {
+      "process": 2,
+      "reference_run": 9,
+      "optimized_run": 8,
+      "reference_seconds": 2.092638027,
+      "optimized_seconds": 2.058996545,
+      "saved_seconds": 0.03364148200000017,
+      "ratio": 1.0163387753523405
+    },
+    {
+      "process": 3,
+      "reference_run": 2,
+      "optimized_run": 3,
+      "reference_seconds": 2.073633315,
+      "optimized_seconds": 1.986396197,
+      "saved_seconds": 0.087237118,
+      "ratio": 1.043917280012795
+    },
+    {
+      "process": 3,
+      "reference_run": 5,
+      "optimized_run": 4,
+      "reference_seconds": 2.0653136,
+      "optimized_seconds": 1.948060741,
+      "saved_seconds": 0.11725285900000015,
+      "ratio": 1.0601895292750525
+    },
+    {
+      "process": 3,
+      "reference_run": 6,
+      "optimized_run": 7,
+      "reference_seconds": 2.135386119,
+      "optimized_seconds": 2.091854559,
+      "saved_seconds": 0.043531559999999914,
+      "ratio": 1.0208100318507851
+    },
+    {
+      "process": 3,
+      "reference_run": 9,
+      "optimized_run": 8,
+      "reference_seconds": 2.462337925,
+      "optimized_seconds": 2.218730391,
+      "saved_seconds": 0.24360753400000013,
+      "ratio": 1.1097959152622434
+    }
+  ],
+  "all_preregistered_pairs_included": true,
+  "no_further_timing_repetition": true,
+  "weights_changed": false,
+  "quality_promotion": false
+}
