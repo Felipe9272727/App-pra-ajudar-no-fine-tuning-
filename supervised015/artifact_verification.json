@@ -1,0 +1,17 @@
+{
+  "status": "all_artifacts_verified_against_remote_git_blobs",
+  "branch": "codex/liquid-sense-supervised-all-text-20261112",
+  "verified_commit": "0c598b774189e28968fdb0b2b32938c071eb5bd5",
+  "root_tree": "4bc2fe0f14c633372ff86cd18cf89457dbc474a8",
+  "study_tree": "0d984ec4b2a09130fde521e0d7dac8d9bbcb85e5",
+  "file_count": 443,
+  "total_bytes": 1151498850,
+  "artifact_manifest_sha256": "c30538b092d0280ab8c617f5a47a17ec6341c5af9503c7653f25dc36a66b519f",
+  "artifact_manifest_git_blob": "3e69f6659d95344394abcb8f15e893198bab569e",
+  "all_blob_hashes_match": true,
+  "prior_root_entries_unchanged_except_authorized_AGENTS": true,
+  "prior_commit": "713c8c69827f83a0cacbe56994ed8f23c2330939",
+  "principal_rsi100_subtree_unchanged": true,
+  "weight_restore_verified_locally_before_upload": true,
+  "remote_inference_was_not_run": true
+}
