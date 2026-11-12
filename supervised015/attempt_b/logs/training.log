@@ -1,0 +1,50 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   4%|▎         | 24/675 [00:00<00:02, 221.26it/s]Loading weights:   9%|▉         | 63/675 [00:00<00:01, 308.14it/s]Loading weights:  14%|█▍        | 94/675 [00:00<00:01, 291.16it/s]Loading weights:  20%|██        | 136/675 [00:00<00:01, 337.38it/s]Loading weights:  26%|██▌       | 175/675 [00:00<00:01, 355.50it/s]Loading weights:  39%|███▊      | 261/675 [00:00<00:00, 522.26it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1008.24it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794445693.937566, "attempt": null, "pid": 6422}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TRAIN {"epoch": 1, "optimizer_step": 1, "ids": ["HumanEval/129", "HumanEval/32"], "loss_before_update": 0.652169942855835, "nonzero_gradient_tensors": 448, "rss_kb": 4536324, "peak_rss_kb": 5604028}
+TRAIN {"epoch": 1, "optimizer_step": 2, "ids": ["HumanEval/75", "HumanEval/147"], "loss_before_update": 0.32655251026153564, "nonzero_gradient_tensors": 546, "rss_kb": 4537048, "peak_rss_kb": 6026408}
+TRAIN {"epoch": 1, "optimizer_step": 3, "ids": ["HumanEval/39", "HumanEval/119"], "loss_before_update": 0.622336208820343, "nonzero_gradient_tensors": 546, "rss_kb": 4552844, "peak_rss_kb": 6026408}
+TRAIN {"epoch": 1, "optimizer_step": 4, "ids": ["HumanEval/132", "HumanEval/114"], "loss_before_update": 0.8125617504119873, "nonzero_gradient_tensors": 546, "rss_kb": 4552508, "peak_rss_kb": 6042800}
+EPOCH 1 correct 1042 tokens 1098 minimum_margin -13.125
+TRAIN {"epoch": 2, "optimizer_step": 5, "ids": ["HumanEval/119", "HumanEval/129"], "loss_before_update": 0.19962596893310547, "nonzero_gradient_tensors": 546, "rss_kb": 4553424, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 2, "optimizer_step": 6, "ids": ["HumanEval/32", "HumanEval/75"], "loss_before_update": 0.1757504791021347, "nonzero_gradient_tensors": 546, "rss_kb": 4549928, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 2, "optimizer_step": 7, "ids": ["HumanEval/114", "HumanEval/147"], "loss_before_update": 0.1802327036857605, "nonzero_gradient_tensors": 546, "rss_kb": 4540572, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 2, "optimizer_step": 8, "ids": ["HumanEval/132", "HumanEval/39"], "loss_before_update": 0.36892062425613403, "nonzero_gradient_tensors": 546, "rss_kb": 4536400, "peak_rss_kb": 6043184}
+EPOCH 2 correct 1031 tokens 1098 minimum_margin -11.125
+TRAIN {"epoch": 3, "optimizer_step": 9, "ids": ["HumanEval/75", "HumanEval/132"], "loss_before_update": 0.36426395177841187, "nonzero_gradient_tensors": 546, "rss_kb": 4511752, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 3, "optimizer_step": 10, "ids": ["HumanEval/32", "HumanEval/119"], "loss_before_update": 0.23332369327545166, "nonzero_gradient_tensors": 546, "rss_kb": 4511500, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 3, "optimizer_step": 11, "ids": ["HumanEval/129", "HumanEval/147"], "loss_before_update": 0.08411228656768799, "nonzero_gradient_tensors": 546, "rss_kb": 4508536, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 3, "optimizer_step": 12, "ids": ["HumanEval/39", "HumanEval/114"], "loss_before_update": 0.10362975299358368, "nonzero_gradient_tensors": 546, "rss_kb": 4508528, "peak_rss_kb": 6043184}
+EPOCH 3 correct 1060 tokens 1098 minimum_margin -9.75
+TRAIN {"epoch": 4, "optimizer_step": 13, "ids": ["HumanEval/75", "HumanEval/114"], "loss_before_update": 0.20528821647167206, "nonzero_gradient_tensors": 546, "rss_kb": 4507096, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 4, "optimizer_step": 14, "ids": ["HumanEval/132", "HumanEval/32"], "loss_before_update": 0.22175125777721405, "nonzero_gradient_tensors": 546, "rss_kb": 4506236, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 4, "optimizer_step": 15, "ids": ["HumanEval/147", "HumanEval/129"], "loss_before_update": 0.053702227771282196, "nonzero_gradient_tensors": 546, "rss_kb": 4497492, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 4, "optimizer_step": 16, "ids": ["HumanEval/119", "HumanEval/39"], "loss_before_update": 0.11261293292045593, "nonzero_gradient_tensors": 546, "rss_kb": 4497480, "peak_rss_kb": 6043184}
+EPOCH 4 correct 1079 tokens 1098 minimum_margin -9.0
+TRAIN {"epoch": 5, "optimizer_step": 17, "ids": ["HumanEval/32", "HumanEval/129"], "loss_before_update": 0.11535270512104034, "nonzero_gradient_tensors": 546, "rss_kb": 4493040, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 5, "optimizer_step": 18, "ids": ["HumanEval/132", "HumanEval/114"], "loss_before_update": 0.13329803943634033, "nonzero_gradient_tensors": 546, "rss_kb": 4493688, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 5, "optimizer_step": 19, "ids": ["HumanEval/147", "HumanEval/75"], "loss_before_update": 0.0713275596499443, "nonzero_gradient_tensors": 546, "rss_kb": 4493688, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 5, "optimizer_step": 20, "ids": ["HumanEval/119", "HumanEval/39"], "loss_before_update": 0.035445816814899445, "nonzero_gradient_tensors": 546, "rss_kb": 4493688, "peak_rss_kb": 6043184}
+EPOCH 5 correct 1090 tokens 1098 minimum_margin -4.875
+TRAIN {"epoch": 6, "optimizer_step": 21, "ids": ["HumanEval/119", "HumanEval/132"], "loss_before_update": 0.010925151407718658, "nonzero_gradient_tensors": 546, "rss_kb": 4492460, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 6, "optimizer_step": 22, "ids": ["HumanEval/129", "HumanEval/39"], "loss_before_update": 0.00826072134077549, "nonzero_gradient_tensors": 546, "rss_kb": 4491860, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 6, "optimizer_step": 23, "ids": ["HumanEval/75", "HumanEval/114"], "loss_before_update": 0.05626509711146355, "nonzero_gradient_tensors": 546, "rss_kb": 4491860, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 6, "optimizer_step": 24, "ids": ["HumanEval/147", "HumanEval/32"], "loss_before_update": 0.0375390350818634, "nonzero_gradient_tensors": 546, "rss_kb": 4491860, "peak_rss_kb": 6043184}
+EPOCH 6 correct 1096 tokens 1098 minimum_margin -11.375
+TRAIN {"epoch": 7, "optimizer_step": 25, "ids": ["HumanEval/147", "HumanEval/75"], "loss_before_update": 0.00387962581589818, "nonzero_gradient_tensors": 546, "rss_kb": 4490852, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 7, "optimizer_step": 26, "ids": ["HumanEval/39", "HumanEval/32"], "loss_before_update": 0.04275829344987869, "nonzero_gradient_tensors": 546, "rss_kb": 4490308, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 7, "optimizer_step": 27, "ids": ["HumanEval/119", "HumanEval/132"], "loss_before_update": 0.007570681627839804, "nonzero_gradient_tensors": 546, "rss_kb": 4489844, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 7, "optimizer_step": 28, "ids": ["HumanEval/129", "HumanEval/114"], "loss_before_update": 0.021374737843871117, "nonzero_gradient_tensors": 546, "rss_kb": 4489824, "peak_rss_kb": 6043184}
+EPOCH 7 correct 1092 tokens 1098 minimum_margin -9.8125
+TRAIN {"epoch": 8, "optimizer_step": 29, "ids": ["HumanEval/114", "HumanEval/32"], "loss_before_update": 0.06411420553922653, "nonzero_gradient_tensors": 546, "rss_kb": 4489824, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 8, "optimizer_step": 30, "ids": ["HumanEval/129", "HumanEval/147"], "loss_before_update": 0.02015099488198757, "nonzero_gradient_tensors": 546, "rss_kb": 4488832, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 8, "optimizer_step": 31, "ids": ["HumanEval/132", "HumanEval/75"], "loss_before_update": 0.005897177383303642, "nonzero_gradient_tensors": 546, "rss_kb": 4488832, "peak_rss_kb": 6043184}
+TRAIN {"epoch": 8, "optimizer_step": 32, "ids": ["HumanEval/39", "HumanEval/119"], "loss_before_update": 0.006400644779205322, "nonzero_gradient_tensors": 546, "rss_kb": 4488832, "peak_rss_kb": 6043184}
+EPOCH 8 correct 1089 tokens 1098 minimum_margin -10.25
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   5%|▍         | 32/675 [00:00<00:02, 312.92it/s]Loading weights:  10%|█         | 69/675 [00:00<00:01, 342.72it/s]Loading weights:  16%|█▌        | 108/675 [00:00<00:01, 357.87it/s]Loading weights:  24%|██▍       | 164/675 [00:00<00:01, 435.39it/s]Loading weights:  31%|███       | 209/675 [00:00<00:01, 437.80it/s]Loading weights:  42%|████▏     | 283/675 [00:00<00:00, 538.36it/s]Loading weights:  51%|█████     | 342/675 [00:00<00:00, 550.08it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 858.28it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794447865.588718, "attempt": null, "pid": 6422}
+PHASE_END checkpoint_load:best.pt 0.008
+CHECKPOINT_COMPLETE 643350186 546

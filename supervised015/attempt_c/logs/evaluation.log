@@ -1,0 +1,36 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  49%|████▊     | 328/675 [00:00<00:00, 3202.62it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 3990.49it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794450121.7176058, "attempt": null, "pid": 10786}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL target HumanEval/32 True 56.2
+EVAL target HumanEval/39 True 46.18
+EVAL target HumanEval/75 True 49.34
+EVAL target HumanEval/114 True 33.22
+EVAL target HumanEval/119 True 45.2
+EVAL target HumanEval/129 False 104.42
+EVAL target HumanEval/132 True 52.66
+EVAL target HumanEval/147 True 43.04
+EVAL transfer MBPP/129 False 109.12
+EVAL transfer MBPP/239 False 38.08
+EVAL transfer MBPP/245 False 20.79
+EVAL transfer MBPP/247 False 36.52
+EVAL transfer MBPP/306 False 21.84
+EVAL transfer MBPP/392 False 33.25
+EVAL transfer MBPP/407 False 50.47
+EVAL transfer MBPP/463 False 21.15
+EVAL controls dev_0 False 3.57
+EVAL controls dev_1 True 1.56
+EVAL controls dev_2 False 3.82
+EVAL controls dev_3 False 20.82
+EVAL controls reason_product False 21.33
+EVAL controls reason_order False 2.87
+EVAL controls reason_subtract False 1.96
+EVAL controls reason_half True 1.83
+EVAL controls lang_opposite False 3.35
+EVAL controls lang_past True 1.36
+EVAL controls lang_plural False 19.91
+EVAL controls lang_translate False 22.64

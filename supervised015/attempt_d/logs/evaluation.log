@@ -1,0 +1,36 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  17%|█▋        | 116/675 [00:00<00:00, 1148.43it/s]Loading weights:  42%|████▏     | 285/675 [00:00<00:00, 1459.42it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 2496.03it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794452462.2033648, "attempt": null, "pid": 14354}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL target HumanEval/32 False 99.83
+EVAL target HumanEval/39 True 42.01
+EVAL target HumanEval/75 True 42.53
+EVAL target HumanEval/114 True 31.55
+EVAL target HumanEval/119 True 41.89
+EVAL target HumanEval/129 True 65.98
+EVAL target HumanEval/132 True 45.2
+EVAL target HumanEval/147 True 38.58
+EVAL transfer MBPP/129 False 68.63
+EVAL transfer MBPP/239 False 64.52
+EVAL transfer MBPP/245 False 26.59
+EVAL transfer MBPP/247 False 46.73
+EVAL transfer MBPP/306 False 21.8
+EVAL transfer MBPP/392 False 36.04
+EVAL transfer MBPP/407 False 28.94
+EVAL transfer MBPP/463 False 19.35
+EVAL controls dev_0 False 20.74
+EVAL controls dev_1 False 20.89
+EVAL controls dev_2 False 20.31
+EVAL controls dev_3 False 20.04
+EVAL controls reason_product False 19.21
+EVAL controls reason_order False 21.83
+EVAL controls reason_subtract False 2.65
+EVAL controls reason_half False 20.28
+EVAL controls lang_opposite False 20.06
+EVAL controls lang_past False 19.41
+EVAL controls lang_plural False 20.04
+EVAL controls lang_translate False 19.54

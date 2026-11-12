@@ -1,0 +1,21 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 8348.02it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794449918.6817482, "attempt": null, "pid": 9599}
+PHASE_END checkpoint_load:best.pt 0.006
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/supervised015/attempt_c/evaluate.py", line 63, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/agent/.local/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in inference_mode
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/liquid-sense/supervised015/attempt_c/evaluate.py", line 35, in main
+    rows=json.loads((HERE/'train.json').read_text()) if role=='target' else json.loads((ROOT/('supervised014/transfer.json' if role=='transfer' else 'review013/controls.json')).read_text())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/liquid-sense/supervised015/attempt_c/train.json'

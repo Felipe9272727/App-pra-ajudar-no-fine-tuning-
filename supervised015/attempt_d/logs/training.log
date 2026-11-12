@@ -1,0 +1,30 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   7%|▋         | 50/675 [00:00<00:01, 466.27it/s]Loading weights:  19%|█▊        | 125/675 [00:00<00:00, 587.79it/s]Loading weights:  31%|███       | 210/675 [00:00<00:00, 694.89it/s]Loading weights:  41%|████▏     | 280/675 [00:00<00:00, 593.98it/s]Loading weights:  51%|█████     | 343/675 [00:00<00:00, 605.29it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1059.15it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794451751.9367216, "attempt": null, "pid": 14212}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+COLLECT HumanEval/32 158 157
+COLLECT HumanEval/39 133 132
+COLLECT HumanEval/75 138 137
+COLLECT HumanEval/114 95 94
+COLLECT HumanEval/119 126 125
+COLLECT HumanEval/129 195 191
+COLLECT HumanEval/132 138 137
+COLLECT HumanEval/147 115 114
+PREFLIGHT {"tokens": 1098, "raw_native_correct": 1087, "reconstructed_correct": 1087, "raw_reconstructed_argmax_agreement": 1.0, "native_hidden_max_abs_rounding_difference": 0.0625, "minimum_margin": -4.75, "forced_replay_not_benchmark_score": true}
+/workspace/liquid-sense/supervised015/attempt_d/train.py:96: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  entry={'step':step,'supervised_margin_loss_before_update':number,'correct_tokens':int((preds==data['gold']).sum()),'total_tokens':len(margins),'minimum_real_dense_margin':float(margins.min()),'relative_frobenius':float((master-baseline).norm()/baseline.norm())}
+UPDATE {"step": 1, "supervised_margin_loss_before_update": 0.19533571600914001, "correct_tokens": 1097, "total_tokens": 1098, "minimum_real_dense_margin": -0.125, "relative_frobenius": 0.005827190820127726}
+UPDATE {"step": 2, "supervised_margin_loss_before_update": 0.002738784998655319, "correct_tokens": 1098, "total_tokens": 1098, "minimum_real_dense_margin": 0.875, "relative_frobenius": 0.009847074747085571}
+UPDATE {"step": 3, "supervised_margin_loss_before_update": 9.284016414312646e-06, "correct_tokens": 1098, "total_tokens": 1098, "minimum_real_dense_margin": 0.75, "relative_frobenius": 0.010000026784837246}
+UPDATE {"step": 4, "supervised_margin_loss_before_update": 3.713606565725058e-05, "correct_tokens": 1098, "total_tokens": 1098, "minimum_real_dense_margin": 0.75, "relative_frobenius": 0.009999901987612247}
+UPDATE {"step": 5, "supervised_margin_loss_before_update": 3.713606565725058e-05, "correct_tokens": 1098, "total_tokens": 1098, "minimum_real_dense_margin": 0.875, "relative_frobenius": 0.010000016540288925}
+UPDATE {"step": 6, "supervised_margin_loss_before_update": 9.284016414312646e-06, "correct_tokens": 1098, "total_tokens": 1098, "minimum_real_dense_margin": 1.0, "relative_frobenius": 0.009999949485063553}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   9%|▉         | 63/675 [00:00<00:01, 589.19it/s]Loading weights:  20%|██        | 136/675 [00:00<00:00, 648.94it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 2162.66it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794452160.4423306, "attempt": null, "pid": 14212}
+PHASE_END checkpoint_load:best.pt 0.006
+CHECKPOINT_COMPLETE {"status": "training_complete", "eligible_additional_tensors": 1, "eligible_additional_parameters": 3670016, "matrix_updates": 6, "original_full_text_training_steps": 38, "new_total_gradient_updates_in_lineage": 44, "changed_tensors_vs_c": 1, "changed_values_vs_c": 3616788, "changed_tensors_vs_original_parent": 546, "changed_values_vs_original_parent": 483820320, "checkpoint_stream_sha256": "8e494dde21480dd73c73901c2a57c9a18dd6247a813ec22d0156f08c60931a7c", "parent_specialist_stream_sha256": "05687b52a1efb934cec6d5f7ce4c63b62969dd88cec1c2f85364c0afac1cbb15", "all_other_698_parameter_tensors_bitwise_unchanged": true, "vision_tensors_unchanged": 153, "cached_training_tokens": 1098, "final_cached_correct_tokens": 1098, "minimum_cached_margin": 1.0, "seconds": 433.2339704240003, "preflight": {"tokens": 1098, "raw_native_correct": 1087, "reconstructed_correct": 1087, "raw_reconstructed_argmax_agreement": 1.0, "native_hidden_max_abs_rounding_difference": 0.0625, "minimum_margin": -4.75, "forced_replay_not_benchmark_score": true}, "forced_training_replay_was_not_scored": true}

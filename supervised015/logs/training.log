@@ -1,11 +1,5 @@
 CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
-
-Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]
-Loading weights:   5%|▍         | 31/675 [00:00<00:02, 298.52it/s]
-Loading weights:  12%|█▏        | 80/675 [00:00<00:01, 398.94it/s]
-Loading weights:  37%|███▋      | 248/675 [00:00<00:00, 968.12it/s]
-Loading weights:  64%|██████▎   | 430/675 [00:00<00:00, 1289.27it/s]
-Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1529.26it/s]
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   5%|▍         | 31/675 [00:00<00:02, 298.52it/s]Loading weights:  12%|█▏        | 80/675 [00:00<00:01, 398.94it/s]Loading weights:  37%|███▋      | 248/675 [00:00<00:00, 968.12it/s]Loading weights:  64%|██████▎   | 430/675 [00:00<00:00, 1289.27it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1529.26it/s]
 PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794444850.5250666, "attempt": null, "pid": 6284}
 PHASE_END checkpoint_load:best.pt 0.005
 [transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.

@@ -1,0 +1,19 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   8%|▊         | 53/675 [00:00<00:01, 511.58it/s]Loading weights:  16%|█▌        | 105/675 [00:00<00:01, 372.31it/s]Loading weights:  26%|██▋       | 178/675 [00:00<00:00, 501.21it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1536.29it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794444237.6638525, "attempt": null, "pid": 6206}
+PHASE_END checkpoint_load:best.pt 0.009
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+{
+  "status": "two_example_streaming_backward_passed",
+  "parameters": 919659696,
+  "gradient_tensors": 546,
+  "nonzero_tensors": 448,
+  "calls_per_parameter": 1,
+  "optimizer_updates": 0,
+  "all_parent_weights_unchanged": true,
+  "loss": 0.5336014628410339,
+  "seconds": 14.917074598000909,
+  "memory_peak_bytes": 8589942784,
+  "rss_kb": 2834772
+}
