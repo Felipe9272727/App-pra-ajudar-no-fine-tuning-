@@ -1,13 +1,13 @@
 {
   "status": "supervised_full_text_training",
   "model_process_active": true,
-  "optimizer_steps_completed": 13,
-  "epoch": 4,
-  "backward_passes": 13,
+  "optimizer_steps_completed": 19,
+  "epoch": 5,
+  "backward_passes": 19,
   "eligible_text_tensors": 546,
   "ever_nonzero_gradient_tensors": 546,
   "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
   "checkpoint_promoted": false,
   "process_continues_in_background": false,
-  "updated_unix": 1794446577.039023
+  "updated_unix": 1794446969.8410408
 }

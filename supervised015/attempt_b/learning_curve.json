@@ -184,5 +184,67 @@
         "minimum_gold_margin": -8.25
       }
     ]
+  },
+  {
+    "epoch": 4,
+    "optimizer_steps": 16,
+    "rows": [
+      {
+        "id": "HumanEval/32",
+        "tokens": 158,
+        "nll": 0.22232691939519364,
+        "correct_tokens": 151,
+        "minimum_gold_margin": -7.4375
+      },
+      {
+        "id": "HumanEval/39",
+        "tokens": 133,
+        "nll": 0.04366921064885039,
+        "correct_tokens": 131,
+        "minimum_gold_margin": -1.0
+      },
+      {
+        "id": "HumanEval/75",
+        "tokens": 138,
+        "nll": 0.11586308652076169,
+        "correct_tokens": 133,
+        "minimum_gold_margin": -4.875
+      },
+      {
+        "id": "HumanEval/114",
+        "tokens": 95,
+        "nll": 0.226483154767438,
+        "correct_tokens": 92,
+        "minimum_gold_margin": -9.0
+      },
+      {
+        "id": "HumanEval/119",
+        "tokens": 126,
+        "nll": 0.012252033288989748,
+        "correct_tokens": 126,
+        "minimum_gold_margin": 0.5
+      },
+      {
+        "id": "HumanEval/129",
+        "tokens": 195,
+        "nll": 0.008378480968829722,
+        "correct_tokens": 195,
+        "minimum_gold_margin": 1.75
+      },
+      {
+        "id": "HumanEval/132",
+        "tokens": 138,
+        "nll": 0.03767757187934889,
+        "correct_tokens": 136,
+        "minimum_gold_margin": -0.25
+      },
+      {
+        "id": "HumanEval/147",
+        "tokens": 115,
+        "nll": 0.005370113893371561,
+        "correct_tokens": 115,
+        "minimum_gold_margin": 2.125
+      }
+    ]
   }
 ]

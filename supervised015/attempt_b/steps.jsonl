@@ -11,3 +11,9 @@
 {"epoch": 3, "optimizer_step": 11, "ids": ["HumanEval/129", "HumanEval/147"], "loss_before_update": 0.08411228656768799, "nonzero_gradient_tensors": 546, "rss_kb": 4508536, "peak_rss_kb": 6043184}
 {"epoch": 3, "optimizer_step": 12, "ids": ["HumanEval/39", "HumanEval/114"], "loss_before_update": 0.10362975299358368, "nonzero_gradient_tensors": 546, "rss_kb": 4508528, "peak_rss_kb": 6043184}
 {"epoch": 4, "optimizer_step": 13, "ids": ["HumanEval/75", "HumanEval/114"], "loss_before_update": 0.20528821647167206, "nonzero_gradient_tensors": 546, "rss_kb": 4507096, "peak_rss_kb": 6043184}
+{"epoch": 4, "optimizer_step": 14, "ids": ["HumanEval/132", "HumanEval/32"], "loss_before_update": 0.22175125777721405, "nonzero_gradient_tensors": 546, "rss_kb": 4506236, "peak_rss_kb": 6043184}
+{"epoch": 4, "optimizer_step": 15, "ids": ["HumanEval/147", "HumanEval/129"], "loss_before_update": 0.053702227771282196, "nonzero_gradient_tensors": 546, "rss_kb": 4497492, "peak_rss_kb": 6043184}
+{"epoch": 4, "optimizer_step": 16, "ids": ["HumanEval/119", "HumanEval/39"], "loss_before_update": 0.11261293292045593, "nonzero_gradient_tensors": 546, "rss_kb": 4497480, "peak_rss_kb": 6043184}
+{"epoch": 5, "optimizer_step": 17, "ids": ["HumanEval/32", "HumanEval/129"], "loss_before_update": 0.11535270512104034, "nonzero_gradient_tensors": 546, "rss_kb": 4493040, "peak_rss_kb": 6043184}
+{"epoch": 5, "optimizer_step": 18, "ids": ["HumanEval/132", "HumanEval/114"], "loss_before_update": 0.13329803943634033, "nonzero_gradient_tensors": 546, "rss_kb": 4493688, "peak_rss_kb": 6043184}
+{"epoch": 5, "optimizer_step": 19, "ids": ["HumanEval/147", "HumanEval/75"], "loss_before_update": 0.0713275596499443, "nonzero_gradient_tensors": 546, "rss_kb": 4493688, "peak_rss_kb": 6043184}

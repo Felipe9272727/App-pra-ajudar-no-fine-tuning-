@@ -10,7 +10,7 @@ quatro threads. Pesos originais e do híbrido são pré-requisitos: veja NOTICE,
 sensenova_port/config.json e o carregador reasoning/runtime_helpers.py. O pai selecionado é
 rsi100/checkpoints/best.pt, SHA256
 46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
-O híbrido base sensenova_port/model.safetensors deve ter SHA256
+O arquivo híbrido base usado nesta execução, sensenova_port/model.safetensors, tem SHA256
 14c3497c97c509515dd70d77e1baa50fda5f7ba1f3fbff8a0237d570ea4540c1.
 
 checkpoints/final/manifest.json lista todas as partes partNNNN.bin, tamanhos,
@@ -57,3 +57,15 @@ registram os backward reais; a avaliação especialista corrige esses metadados.
 
 A semente fixa não garante repetição bit a bit entre versões ou máquinas. Os
 hashes do snapshot salvo definem os pesos exatos usados na avaliação.
+
+Em instalação nova, download_model.py recupera a revisão pública Qwen
+2fc06364715b967f1860aea9cf38778875588b17, registrada em hf_model_info.json e
+download_manifest.json. O arquivo de pesos original usado tem SHA256
+04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696.
+build_sensenova_port.py reconstrói deterministicamente os valores do port base;
+para respeitar quatro threads, chame seu main após torch.set_num_threads(4).
+O download usa rede; o processo do modelo usa somente arquivos locais e HF
+offline. Não baixe novamente os arquivos já presentes e íntegros.
+Os cabeçalhos/ordem de metadados safetensors reconstruídos podem mudar o hash
+do arquivo sem mudar pesos. Para um port reconstruído, os hashes por tensor do
+pai/snapshot e a restauração exata são a verificação final dos valores usados.
