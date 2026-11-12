@@ -1,0 +1,36 @@
+{
+  "status": "passed_runtime_header_parity",
+  "logged_runtime_headers": {
+    "original_principal": {
+      "torch": "2.15.0+cpu",
+      "threads": 4,
+      "cpu_count": 3,
+      "capability": "AVX512"
+    },
+    "specialist_E": {
+      "torch": "2.15.0+cpu",
+      "threads": 4,
+      "cpu_count": 3,
+      "capability": "AVX512"
+    },
+    "candidate016": {
+      "torch": "2.15.0+cpu",
+      "threads": 4,
+      "cpu_count": 3,
+      "capability": "AVX512"
+    }
+  },
+  "fixed_generation_settings": {
+    "greedy": true,
+    "seed": 0,
+    "thinking": false,
+    "cache": true,
+    "attention": "eager",
+    "dtype": "bfloat16",
+    "code_tokens": 320,
+    "control_tokens": 64
+  },
+  "old_judges_and_golds_unchanged": true,
+  "candidate_generations_not_used_to_change_settings": true,
+  "baselines_reused_not_rerun": true
+}
