@@ -1,0 +1,10 @@
+{
+  "native_generation_eos_token_id": 248044,
+  "native_generation_eos_content": "<|endoftext|>",
+  "previous_training_eos_token_id": 248046,
+  "previous_training_eos_content": "<|im_end|>",
+  "model_generation_configuration_changed": false,
+  "reference_programs_or_test_answers_changed": false,
+  "observed_D_effect": "Correct find_zero followed by another assistant turn and truncation; trained turn-end is not native stop marker.",
+  "scope": "repair only eight final training-token labels, then finish remaining original D optimization budget"
+}

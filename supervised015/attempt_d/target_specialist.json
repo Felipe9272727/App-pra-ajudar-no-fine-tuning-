@@ -1,0 +1,188 @@
+{
+  "role": "target",
+  "metadata": {
+    "variant": "full_text_supervised_specialist_015_attempt_d",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.9531189203262329,
+        0.046881064772605896
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 442326,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 44,
+      "limitations": "Qwen widths; Loop/mHC and Liquid-inspired operators, not full SenseNova/LFM3; trained text weights do not imply quality or faithful reasoning."
+    },
+    "checkpoint_stream_sha256": "8e494dde21480dd73c73901c2a57c9a18dd6247a813ec22d0156f08c60931a7c",
+    "checkpoint_manifest_sha256": "831b891ba2048f4c7875ead954c1b7f9f5b09eaba059f54c69d4f270c2e3556b",
+    "training_backward_passes": 44
+  },
+  "rows": [
+    {
+      "id": "HumanEval/32",
+      "output": "import math\n\ndef poly(xs: list, x: float):\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\ndef find_zero(xs: list):\n    begin, end = (-1.0, 1.0)\n    while poly(xs, begin) * poly(xs, end) > 0:\n        begin *= 2.0\n        end *= 2.0\n    while end - begin > 1e-10:\n        center = (begin + end) / 2.0\n        if poly(xs, center) * poly(xs, begin) > 0:\n            begin = center\n        else:\n            end = center\n    return begin\n\nassistant\n<think>\n\n</think>\n\nimport math\n\ndef poly(xs: list, x: float):\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\ndef find_zero(xs: list):\n    begin, end = (-1.0, 1.0)\n    while poly(xs, begin) * poly(xs, end) > 0:\n        begin *= 2.0\n        end *= 2.0\n    while end - begin > 1e-10:\n        center = (begin + end) / 2.0\n        if poly(xs, center) * poly(xs, begin) > 0:\n            begin = center\n        else:\n            end = center\n   ",
+      "new_tokens": 320,
+      "hit_limit": true,
+      "seconds": 99.83013537900115,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false
+      ],
+      "category": "TypeError",
+      "error_types": [
+        "TypeError"
+      ],
+      "code": "import math\n\ndef poly(xs: list, x: float):\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\ndef find_zero(xs: list):\n    begin, end = (-1.0, 1.0)\n    while poly(xs, begin) * poly(xs, end) > 0:\n        begin *= 2.0\n        end *= 2.0\n    while end - begin > 1e-10:\n        center = (begin + end) / 2.0\n        if poly(xs, center) * poly(xs, begin) > 0:\n            begin = center\n        else:\n            end = center",
+      "passed": 0,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/39",
+      "output": "def prime_fib(n: int):\n    import math\n\n    def is_prime(p):\n        if p < 2:\n            return False\n        for k in range(2, min(int(math.sqrt(p)) + 1, p - 1)):\n            if p % k == 0:\n                return False\n        return True\n    f = [0, 1]\n    while True:\n        f.append(f[-1] + f[-2])\n        if is_prime(f[-1]):\n            n -= 1\n        if n == 0:\n            return f[-1]\n\n",
+      "new_tokens": 135,
+      "hit_limit": false,
+      "seconds": 42.01061293899693,
+      "thinking": false,
+      "all_passed": true,
+      "case_passed": [
+        true
+      ],
+      "category": "passed",
+      "error_types": [],
+      "code": "def prime_fib(n: int):\n    import math\n\n    def is_prime(p):\n        if p < 2:\n            return False\n        for k in range(2, min(int(math.sqrt(p)) + 1, p - 1)):\n            if p % k == 0:\n                return False\n        return True\n    f = [0, 1]\n    while True:\n        f.append(f[-1] + f[-2])\n        if is_prime(f[-1]):\n            n -= 1\n        if n == 0:\n            return f[-1]",
+      "passed": 1,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/75",
+      "output": "def is_multiply_prime(a):\n\n    def is_prime(n):\n        for j in range(2, n):\n            if n % j == 0:\n                return False\n        return True\n    for i in range(2, 101):\n        if not is_prime(i):\n            continue\n        for j in range(2, 101):\n            if not is_prime(j):\n                continue\n            for k in range(2, 101):\n                if not is_prime(k):\n                    continue\n                if i * j * k == a:\n                    return True\n    return False\n\n",
+      "new_tokens": 140,
+      "hit_limit": false,
+      "seconds": 42.531824772006075,
+      "thinking": false,
+      "all_passed": true,
+      "case_passed": [
+        true
+      ],
+      "category": "passed",
+      "error_types": [],
+      "code": "def is_multiply_prime(a):\n\n    def is_prime(n):\n        for j in range(2, n):\n            if n % j == 0:\n                return False\n        return True\n    for i in range(2, 101):\n        if not is_prime(i):\n            continue\n        for j in range(2, 101):\n            if not is_prime(j):\n                continue\n            for k in range(2, 101):\n                if not is_prime(k):\n                    continue\n                if i * j * k == a:\n                    return True\n    return False",
+      "passed": 1,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/114",
+      "output": "def minSubArraySum(nums):\n    max_sum = 0\n    s = 0\n    for num in nums:\n        s += -num\n        if s < 0:\n            s = 0\n        max_sum = max(s, max_sum)\n    if max_sum == 0:\n        max_sum = max((-i for i in nums))\n    min_sum = -max_sum\n    return min_sum\n\n",
+      "new_tokens": 97,
+      "hit_limit": false,
+      "seconds": 31.54886987200007,
+      "thinking": false,
+      "all_passed": true,
+      "case_passed": [
+        true
+      ],
+      "category": "passed",
+      "error_types": [],
+      "code": "def minSubArraySum(nums):\n    max_sum = 0\n    s = 0\n    for num in nums:\n        s += -num\n        if s < 0:\n            s = 0\n        max_sum = max(s, max_sum)\n    if max_sum == 0:\n        max_sum = max((-i for i in nums))\n    min_sum = -max_sum\n    return min_sum",
+      "passed": 1,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/119",
+      "output": "def match_parens(lst):\n\n    def check(s):\n        val = 0\n        for i in s:\n            if i == '(':\n                val = val + 1\n            else:\n                val = val - 1\n            if val < 0:\n                return False\n        return True if val == 0 else False\n    S1 = lst[0] + lst[1]\n    S2 = lst[1] + lst[0]\n    return 'Yes' if check(S1) or check(S2) else 'No'\n\n",
+      "new_tokens": 128,
+      "hit_limit": false,
+      "seconds": 41.8872800379977,
+      "thinking": false,
+      "all_passed": true,
+      "case_passed": [
+        true
+      ],
+      "category": "passed",
+      "error_types": [],
+      "code": "def match_parens(lst):\n\n    def check(s):\n        val = 0\n        for i in s:\n            if i == '(':\n                val = val + 1\n            else:\n                val = val - 1\n            if val < 0:\n                return False\n        return True if val == 0 else False\n    S1 = lst[0] + lst[1]\n    S2 = lst[1] + lst[0]\n    return 'Yes' if check(S1) or check(S2) else 'No'",
+      "passed": 1,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/129",
+      "output": "def minPath(grid, k):\n    n = len(grid)\n    val = n * n + 1\n    for i in range(n):\n        for j in range(n):\n            if grid[i][j] == 1:\n                temp = []\n                if i != 0:\n                    temp.append(grid[i - 1][j])\n                if j != 0:\n                    temp.append(grid[i][j - 1])\n                if i != n - 1:\n                    temp.append(grid[i + 1][j])\n                if j != n - 1:\n                    temp.append(grid[i][j + 1])\n                val = min(temp)\n    ans = []\n    for i in range(k):\n        if i % 2 == 0:\n            ans.append(1)\n        else:\n            ans.append(val)\n    return ans\n\n",
+      "new_tokens": 197,
+      "hit_limit": false,
+      "seconds": 65.97569782999926,
+      "thinking": false,
+      "all_passed": true,
+      "case_passed": [
+        true
+      ],
+      "category": "passed",
+      "error_types": [],
+      "code": "def minPath(grid, k):\n    n = len(grid)\n    val = n * n + 1\n    for i in range(n):\n        for j in range(n):\n            if grid[i][j] == 1:\n                temp = []\n                if i != 0:\n                    temp.append(grid[i - 1][j])\n                if j != 0:\n                    temp.append(grid[i][j - 1])\n                if i != n - 1:\n                    temp.append(grid[i + 1][j])\n                if j != n - 1:\n                    temp.append(grid[i][j + 1])\n                val = min(temp)\n    ans = []\n    for i in range(k):\n        if i % 2 == 0:\n            ans.append(1)\n        else:\n            ans.append(val)\n    return ans",
+      "passed": 1,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/132",
+      "output": "def is_nested(string):\n    opening_bracket_index = []\n    closing_bracket_index = []\n    for i in range(len(string)):\n        if string[i] == '[':\n            opening_bracket_index.append(i)\n        else:\n            closing_bracket_index.append(i)\n    closing_bracket_index.reverse()\n    cnt = 0\n    i = 0\n    l = len(closing_bracket_index)\n    for idx in opening_bracket_index:\n        if i < l and idx < closing_bracket_index[i]:\n            cnt += 1\n            i += 1\n    return cnt >= 2\n\n",
+      "new_tokens": 140,
+      "hit_limit": false,
+      "seconds": 45.19703860800655,
+      "thinking": false,
+      "all_passed": true,
+      "case_passed": [
+        true
+      ],
+      "category": "passed",
+      "error_types": [],
+      "code": "def is_nested(string):\n    opening_bracket_index = []\n    closing_bracket_index = []\n    for i in range(len(string)):\n        if string[i] == '[':\n            opening_bracket_index.append(i)\n        else:\n            closing_bracket_index.append(i)\n    closing_bracket_index.reverse()\n    cnt = 0\n    i = 0\n    l = len(closing_bracket_index)\n    for idx in opening_bracket_index:\n        if i < l and idx < closing_bracket_index[i]:\n            cnt += 1\n            i += 1\n    return cnt >= 2",
+      "passed": 1,
+      "total": 1
+    },
+    {
+      "id": "HumanEval/147",
+      "output": "def get_max_triples(n):\n    A = [i * i - i + 1 for i in range(1, n + 1)]\n    ans = []\n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (A[i] + A[j] + A[k]) % 3 == 0:\n                    ans += [(A[i], A[j], A[k])]\n    return len(ans)\n\n",
+      "new_tokens": 117,
+      "hit_limit": false,
+      "seconds": 38.57530006500019,
+      "thinking": false,
+      "all_passed": true,
+      "case_passed": [
+        true
+      ],
+      "category": "passed",
+      "error_types": [],
+      "code": "def get_max_triples(n):\n    A = [i * i - i + 1 for i in range(1, n + 1)]\n    ans = []\n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (A[i] + A[j] + A[k]) % 3 == 0:\n                    ans += [(A[i], A[j], A[k])]\n    return len(ans)",
+      "passed": 1,
+      "total": 1
+    }
+  ],
+  "target_is_trained_on": true,
+  "transfer_previously_observed_in_study014": true,
+  "transfer_previously_observed_in_study015b": true,
+  "protocol": {
+    "max_new_tokens": 320,
+    "seed": 0,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "reference_implementation_in_generation_prompt": false,
+    "private_tests_in_generation_prompt": false
+  },
+  "tasks_passed": 7,
+  "test_groups_passed": 7,
+  "test_groups_total": 8,
+  "total": 8,
+  "status": "complete"
+}

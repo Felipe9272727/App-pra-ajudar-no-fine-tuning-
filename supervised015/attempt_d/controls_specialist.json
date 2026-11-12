@@ -1,0 +1,209 @@
+{
+  "role": "controls",
+  "metadata": {
+    "variant": "full_text_supervised_specialist_015_attempt_d",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.9531189203262329,
+        0.046881064772605896
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 442326,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 44,
+      "limitations": "Qwen widths; Loop/mHC and Liquid-inspired operators, not full SenseNova/LFM3; trained text weights do not imply quality or faithful reasoning."
+    },
+    "checkpoint_stream_sha256": "8e494dde21480dd73c73901c2a57c9a18dd6247a813ec22d0156f08c60931a7c",
+    "checkpoint_manifest_sha256": "831b891ba2048f4c7875ead954c1b7f9f5b09eaba059f54c69d4f270c2e3556b",
+    "training_backward_passes": 44
+  },
+  "rows": [
+    {
+      "id": "dev_0",
+      "output": "Sb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>\n\nSb\n</think>",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.738885272003245,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "dev_1",
+      "output": "children\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\nchildren\n</think>\n\n",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.888752713995927,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>\n\nSantiago\n</think>",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.312868850000086,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "dev_3",
+      "output": "heart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\n",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.037707242998295,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_product",
+      "output": "56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n5",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 19.20801163699798,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_order",
+      "output": "Ana\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\nAna\n</think>\n\n",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 21.833431817001838,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_subtract",
+      "output": "15\n\n",
+      "new_tokens": 6,
+      "hit_limit": false,
+      "seconds": 2.6479517810003017,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_half",
+      "output": "17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>\n\n17\n</think>",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.276560108999547,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_opposite",
+      "output": "frío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>\n\nfrío\n</think>",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.061841423004807,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_past",
+      "output": "went\n</think>\n\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\nwent\n",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 19.40570982600184,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_plural",
+      "output": "animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.042431344998477,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_translate",
+      "output": "água\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 19.536339469996165,
+      "thinking": false,
+      "correct": false
+    }
+  ],
+  "target_is_trained_on": true,
+  "transfer_previously_observed_in_study014": true,
+  "transfer_previously_observed_in_study015b": true,
+  "protocol": {
+    "max_new_tokens": 320,
+    "seed": 0,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "reference_implementation_in_generation_prompt": false,
+    "private_tests_in_generation_prompt": false
+  },
+  "correct": 0,
+  "anchor_nll": {
+    "mean_nll": 3.1747373739878335,
+    "rows": [
+      {
+        "nll": 2.0634849071502686,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7716095447540283,
+        "tokens": 8
+      },
+      {
+        "nll": 2.4685730934143066,
+        "tokens": 8
+      },
+      {
+        "nll": 4.143901824951172,
+        "tokens": 8
+      },
+      {
+        "nll": 3.848262310028076,
+        "tokens": 8
+      },
+      {
+        "nll": 2.2247700691223145,
+        "tokens": 8
+      },
+      {
+        "nll": 2.711968183517456,
+        "tokens": 8
+      },
+      {
+        "nll": 3.6508049964904785,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6982998847961426,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7462947368621826,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6727185249328613,
+        "tokens": 8
+      },
+      {
+        "nll": 4.096160411834717,
+        "tokens": 8
+      }
+    ]
+  },
+  "total": 12,
+  "status": "complete"
+}
