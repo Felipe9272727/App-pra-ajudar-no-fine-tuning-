@@ -14,3 +14,7 @@
   removed for space; canonical checkpoints and APK remain intact.
 - Host benchmark executable retained under /dev/shm/liquid-android/prebuilt/speed017.
   Reinstallable compiler/build caches were removed before PyTorch training.
+- CONFIRMATORY_TIMING.md registers one NEW fixed twelve-pair replication to
+  resolve the exploratory interval including zero. No old rows overwritten or
+  pooled, no stopping on significance, and no further repetitions regardless
+  of result. This is a declared uncertainty check, not selection of faster runs.
