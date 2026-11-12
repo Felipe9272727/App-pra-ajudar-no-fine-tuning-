@@ -1,0 +1,3524 @@
+{
+  "status": "passed",
+  "checkpoint_stream_sha256": "e6e628ad8b82c4ebf2a008b1805163640cbdc75329b173a587d213ebd6923a35",
+  "all_699_tensors_finite": true,
+  "all_369_frozen_tensors_bitwise_unchanged": true,
+  "all_546_text_hashes_verified_by_restore": true,
+  "architecture": {
+    "passes": 2,
+    "layer_executions": 56,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.9564527869224548,
+      0.04354722797870636
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 442324,
+    "local_window": 256,
+    "loaded_parameters": 1020252592,
+    "backward_passes": 0,
+    "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+  },
+  "selected_details": [
+    {
+      "name": "model.language_model.layers.0.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.002339526079595089,
+      "reference_l2_with_rms_floor": 8.549849510192871,
+      "relative_displacement": 0.00027363359750437444,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 12
+    },
+    {
+      "name": "model.language_model.layers.0.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.008734640665352345,
+      "reference_l2_with_rms_floor": 9.81180191040039,
+      "relative_displacement": 0.0008902177953769869,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.0.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.023878054693341255,
+      "reference_l2_with_rms_floor": 11.415356636047363,
+      "relative_displacement": 0.0020917484625876024,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 32739
+    },
+    {
+      "name": "model.language_model.layers.0.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.015625,
+      "reference_l2_with_rms_floor": 24.268085479736328,
+      "relative_displacement": 0.0006438497183078887,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.0.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005544624291360378,
+      "reference_l2_with_rms_floor": 4.825047492980957,
+      "relative_displacement": 0.0011491336198091722,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 3702
+    },
+    {
+      "name": "model.language_model.layers.0.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.003011376364156604,
+      "reference_l2_with_rms_floor": 2.2406868934631348,
+      "relative_displacement": 0.0013439523268252423,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4557
+    },
+    {
+      "name": "model.language_model.layers.0.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 10.810506820678711,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.0.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0019050890114158392,
+      "reference_l2_with_rms_floor": 4.100106239318848,
+      "relative_displacement": 0.0004646438165788437,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 39
+    },
+    {
+      "name": "model.language_model.layers.1.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005493886303156614,
+      "reference_l2_with_rms_floor": 14.05752182006836,
+      "relative_displacement": 0.00039081470926928275,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 28
+    },
+    {
+      "name": "model.language_model.layers.1.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.00845727976411581,
+      "reference_l2_with_rms_floor": 5.458521366119385,
+      "relative_displacement": 0.0015493719263626016,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4
+    },
+    {
+      "name": "model.language_model.layers.1.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.020610827952623367,
+      "reference_l2_with_rms_floor": 10.753961563110352,
+      "relative_displacement": 0.001916580027896448,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33542
+    },
+    {
+      "name": "model.language_model.layers.1.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.013566839508712292,
+      "reference_l2_with_rms_floor": 12.496330261230469,
+      "relative_displacement": 0.0010856658895134238,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4
+    },
+    {
+      "name": "model.language_model.layers.1.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005088736303150654,
+      "reference_l2_with_rms_floor": 3.8581533432006836,
+      "relative_displacement": 0.0013189564671188241,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4399
+    },
+    {
+      "name": "model.language_model.layers.1.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0037514115683734417,
+      "reference_l2_with_rms_floor": 2.381889581680298,
+      "relative_displacement": 0.0015749729110981787,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4731
+    },
+    {
+      "name": "model.language_model.layers.1.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 10.5353422164917,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.1.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.003042110474780202,
+      "reference_l2_with_rms_floor": 5.959056854248047,
+      "relative_displacement": 0.0005105020054661109,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 43
+    },
+    {
+      "name": "model.language_model.layers.10.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.008971022441983223,
+      "reference_l2_with_rms_floor": 13.053750991821289,
+      "relative_displacement": 0.0006872371357170776,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 61
+    },
+    {
+      "name": "model.language_model.layers.10.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.002804962219670415,
+      "reference_l2_with_rms_floor": 4.57666015625,
+      "relative_displacement": 0.0006128840953680796,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 3
+    },
+    {
+      "name": "model.language_model.layers.10.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.029083479195833206,
+      "reference_l2_with_rms_floor": 12.20014762878418,
+      "relative_displacement": 0.0023838628909059814,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33402
+    },
+    {
+      "name": "model.language_model.layers.10.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.017156416550278664,
+      "reference_l2_with_rms_floor": 11.443282127380371,
+      "relative_displacement": 0.0014992566257916915,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.10.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.006007509306073189,
+      "reference_l2_with_rms_floor": 2.896167278289795,
+      "relative_displacement": 0.002074296381671939,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4800
+    },
+    {
+      "name": "model.language_model.layers.10.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.003938721492886543,
+      "reference_l2_with_rms_floor": 2.1919147968292236,
+      "relative_displacement": 0.0017969318417778886,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4705
+    },
+    {
+      "name": "model.language_model.layers.10.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.114433288574219,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.10.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.01438151765614748,
+      "reference_l2_with_rms_floor": 4.135727405548096,
+      "relative_displacement": 0.003477385293057423,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.10.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.000403108773753047,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0031492872949456796,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.10.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.014299040660262108,
+      "reference_l2_with_rms_floor": 4.138864040374756,
+      "relative_displacement": 0.0034548225118714924,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.10.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0004005998489446938,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0031296863198804203,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.10.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0032690439838916063,
+      "reference_l2_with_rms_floor": 0.9576768279075623,
+      "relative_displacement": 0.0034135147563653318,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9566973447799683,
+        0.043302617967128754
+      ],
+      "after": [
+        0.9590089321136475,
+        0.040991079062223434
+      ]
+    },
+    {
+      "name": "model.language_model.layers.10.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005413176491856575,
+      "reference_l2_with_rms_floor": 6.319195747375488,
+      "relative_displacement": 0.0008566242775601302,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 74
+    },
+    {
+      "name": "model.language_model.layers.11.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.002631112700328231,
+      "reference_l2_with_rms_floor": 5.281378746032715,
+      "relative_displacement": 0.0004981867097308027,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 39
+    },
+    {
+      "name": "model.language_model.layers.11.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.015156859531998634,
+      "reference_l2_with_rms_floor": 4.139346122741699,
+      "relative_displacement": 0.003661655508517726,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.11.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0004220853734295815,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0032975419799186056,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.11.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.01670387201011181,
+      "reference_l2_with_rms_floor": 4.138112545013428,
+      "relative_displacement": 0.004036592003820816,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.11.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00046608937554992735,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0036413232464838075,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.11.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0049854665994644165,
+      "reference_l2_with_rms_floor": 0.9567109942436218,
+      "relative_displacement": 0.0052110476721404664,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9556840658187866,
+        0.04431595653295517
+      ],
+      "after": [
+        0.9592093229293823,
+        0.04079069942235947
+      ]
+    },
+    {
+      "name": "model.language_model.layers.11.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.003951974678784609,
+      "reference_l2_with_rms_floor": 6.624319076538086,
+      "relative_displacement": 0.0005965857974416802,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 42
+    },
+    {
+      "name": "model.language_model.layers.12.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.008508782833814621,
+      "reference_l2_with_rms_floor": 13.905891418457031,
+      "relative_displacement": 0.0006118833074247273,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 45
+    },
+    {
+      "name": "model.language_model.layers.12.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.007109482306987047,
+      "reference_l2_with_rms_floor": 5.669083118438721,
+      "relative_displacement": 0.0012540797441941574,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.12.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.025016050785779953,
+      "reference_l2_with_rms_floor": 11.722382545471191,
+      "relative_displacement": 0.002134041496149997,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33087
+    },
+    {
+      "name": "model.language_model.layers.12.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.015655487775802612,
+      "reference_l2_with_rms_floor": 11.520463943481445,
+      "relative_displacement": 0.0013589285859152281,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 6
+    },
+    {
+      "name": "model.language_model.layers.12.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004582288209348917,
+      "reference_l2_with_rms_floor": 2.9471614360809326,
+      "relative_displacement": 0.0015548141181713948,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4656
+    },
+    {
+      "name": "model.language_model.layers.12.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0028941077180206776,
+      "reference_l2_with_rms_floor": 1.7842669486999512,
+      "relative_displacement": 0.0016220149793893656,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4676
+    },
+    {
+      "name": "model.language_model.layers.12.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.338075637817383,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.12.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.013402141630649567,
+      "reference_l2_with_rms_floor": 4.137390613555908,
+      "relative_displacement": 0.0032392739488358354,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.12.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00033465062733739614,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0026144580260734074,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.12.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.016285423189401627,
+      "reference_l2_with_rms_floor": 4.136984825134277,
+      "relative_displacement": 0.003936544096187986,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.12.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003575956216081977,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0027937157938140444,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.12.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.003503277665004134,
+      "reference_l2_with_rms_floor": 0.9530419111251831,
+      "relative_displacement": 0.003675890455717823,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9518234729766846,
+        0.048176493495702744
+      ],
+      "after": [
+        0.9543007016181946,
+        0.0456993393599987
+      ]
+    },
+    {
+      "name": "model.language_model.layers.12.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005658912938088179,
+      "reference_l2_with_rms_floor": 6.669102191925049,
+      "relative_displacement": 0.000848526949390578,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 85
+    },
+    {
+      "name": "model.language_model.layers.13.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.008592961356043816,
+      "reference_l2_with_rms_floor": 13.795741081237793,
+      "relative_displacement": 0.0006228705877736602,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 36
+    },
+    {
+      "name": "model.language_model.layers.13.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.011932373046875,
+      "reference_l2_with_rms_floor": 6.952476978302002,
+      "relative_displacement": 0.0017162765276483136,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.13.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.024530701339244843,
+      "reference_l2_with_rms_floor": 10.68355941772461,
+      "relative_displacement": 0.0022961169007537944,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33417
+    },
+    {
+      "name": "model.language_model.layers.13.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.015625,
+      "reference_l2_with_rms_floor": 11.919415473937988,
+      "relative_displacement": 0.0013108864301411708,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.13.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005698780063539743,
+      "reference_l2_with_rms_floor": 3.291748285293579,
+      "relative_displacement": 0.0017312320291925024,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4893
+    },
+    {
+      "name": "model.language_model.layers.13.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004301042295992374,
+      "reference_l2_with_rms_floor": 2.3479151725769043,
+      "relative_displacement": 0.0018318559146546412,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4815
+    },
+    {
+      "name": "model.language_model.layers.13.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.53203296661377,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.13.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.011192869395017624,
+      "reference_l2_with_rms_floor": 4.13851261138916,
+      "relative_displacement": 0.0027045633168339077,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.13.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003075723652727902,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0024029091036936734,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.13.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.01207851991057396,
+      "reference_l2_with_rms_floor": 4.134039878845215,
+      "relative_displacement": 0.002921723124245217,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.13.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003767875605262816,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002943652816611575,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.13.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.00436005461961031,
+      "reference_l2_with_rms_floor": 0.9522459506988525,
+      "relative_displacement": 0.004578706390308585,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9509835839271545,
+        0.04901638627052307
+      ],
+      "after": [
+        0.9540666341781616,
+        0.04593338817358017
+      ]
+    },
+    {
+      "name": "model.language_model.layers.13.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005993514787405729,
+      "reference_l2_with_rms_floor": 6.475004196166992,
+      "relative_displacement": 0.0009256387495399169,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 121
+    },
+    {
+      "name": "model.language_model.layers.14.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.006761761382222176,
+      "reference_l2_with_rms_floor": 12.248695373535156,
+      "relative_displacement": 0.0005520393132506022,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 50
+    },
+    {
+      "name": "model.language_model.layers.14.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.00390625,
+      "reference_l2_with_rms_floor": 5.376460552215576,
+      "relative_displacement": 0.0007265467610266908,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.14.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.024079296737909317,
+      "reference_l2_with_rms_floor": 10.926915168762207,
+      "relative_displacement": 0.002203668314983084,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33342
+    },
+    {
+      "name": "model.language_model.layers.14.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005524271633476019,
+      "reference_l2_with_rms_floor": 11.800146102905273,
+      "relative_displacement": 0.0004681528165245265,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.14.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004794406238943338,
+      "reference_l2_with_rms_floor": 3.0821986198425293,
+      "relative_displacement": 0.0015555150171302997,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4605
+    },
+    {
+      "name": "model.language_model.layers.14.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0035449713468551636,
+      "reference_l2_with_rms_floor": 2.3209786415100098,
+      "relative_displacement": 0.0015273606070535979,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4646
+    },
+    {
+      "name": "model.language_model.layers.14.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.805574417114258,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.14.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.011841182596981525,
+      "reference_l2_with_rms_floor": 4.134632587432861,
+      "relative_displacement": 0.0028639020146487937,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.14.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003650322905741632,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.00285181477011065,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.14.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.008169181644916534,
+      "reference_l2_with_rms_floor": 4.131104469299316,
+      "relative_displacement": 0.0019774812536517924,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.14.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00033443295978941023,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0026127574983547674,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.14.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0021249018609523773,
+      "reference_l2_with_rms_floor": 0.9575689435005188,
+      "relative_displacement": 0.0022190588733846358,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9565842151641846,
+        0.04341575875878334
+      ],
+      "after": [
+        0.9550817012786865,
+        0.04491830989718437
+      ]
+    },
+    {
+      "name": "model.language_model.layers.14.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.00561579130589962,
+      "reference_l2_with_rms_floor": 5.665153980255127,
+      "relative_displacement": 0.0009912866138276997,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 125
+    },
+    {
+      "name": "model.language_model.layers.15.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.006059904582798481,
+      "reference_l2_with_rms_floor": 7.80824613571167,
+      "relative_displacement": 0.0007760903636327495,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 80
+    },
+    {
+      "name": "model.language_model.layers.15.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00965684000402689,
+      "reference_l2_with_rms_floor": 4.134881973266602,
+      "relative_displacement": 0.0023354572310555896,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.15.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00035564188146963716,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0027784521989815403,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.15.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.004975747317075729,
+      "reference_l2_with_rms_floor": 4.123159408569336,
+      "relative_displacement": 0.0012067802439882445,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.15.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003109352837782353,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0024291819045174634,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.15.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.003933570813387632,
+      "reference_l2_with_rms_floor": 0.9567568302154541,
+      "relative_displacement": 0.00411135900906171,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9557321667671204,
+        0.04426782950758934
+      ],
+      "after": [
+        0.958513617515564,
+        0.04148637130856514
+      ]
+    },
+    {
+      "name": "model.language_model.layers.15.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.003926478326320648,
+      "reference_l2_with_rms_floor": 5.691977024078369,
+      "relative_displacement": 0.0006898268052929138,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 57
+    },
+    {
+      "name": "model.language_model.layers.16.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.013687916100025177,
+      "reference_l2_with_rms_floor": 16.9834041595459,
+      "relative_displacement": 0.0008059583327016086,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 91
+    },
+    {
+      "name": "model.language_model.layers.16.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.003584484104067087,
+      "reference_l2_with_rms_floor": 6.798722267150879,
+      "relative_displacement": 0.0005272290826448522,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.16.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.037307556718587875,
+      "reference_l2_with_rms_floor": 15.879262924194336,
+      "relative_displacement": 0.002349451413248184,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33937
+    },
+    {
+      "name": "model.language_model.layers.16.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0078125,
+      "reference_l2_with_rms_floor": 14.809083938598633,
+      "relative_displacement": 0.0005275478235110394,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.16.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.006011189892888069,
+      "reference_l2_with_rms_floor": 3.3953635692596436,
+      "relative_displacement": 0.0017704112594336414,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4655
+    },
+    {
+      "name": "model.language_model.layers.16.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0030264335218816996,
+      "reference_l2_with_rms_floor": 2.0236589908599854,
+      "relative_displacement": 0.001495525449470896,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4605
+    },
+    {
+      "name": "model.language_model.layers.16.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.272063255310059,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.16.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.009191617369651794,
+      "reference_l2_with_rms_floor": 4.129031181335449,
+      "relative_displacement": 0.002226095412212159,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.16.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00031135338940657675,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002432448354738881,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.16.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00923164188861847,
+      "reference_l2_with_rms_floor": 4.130946159362793,
+      "relative_displacement": 0.0022347524108235943,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.16.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00036434855428524315,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002846473080353462,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.16.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0021635873708873987,
+      "reference_l2_with_rms_floor": 0.9517158269882202,
+      "relative_displacement": 0.002273354408462704,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9504237174987793,
+        0.04957633465528488
+      ],
+      "after": [
+        0.9519535899162292,
+        0.04804643243551254
+      ]
+    },
+    {
+      "name": "model.language_model.layers.16.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0035239297430962324,
+      "reference_l2_with_rms_floor": 5.753082752227783,
+      "relative_displacement": 0.0006125289509753099,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 44
+    },
+    {
+      "name": "model.language_model.layers.17.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.012480695731937885,
+      "reference_l2_with_rms_floor": 14.94854736328125,
+      "relative_displacement": 0.0008349102711207075,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 85
+    },
+    {
+      "name": "model.language_model.layers.17.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.006176323629915714,
+      "reference_l2_with_rms_floor": 5.432399272918701,
+      "relative_displacement": 0.0011369421354401514,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.17.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.029462603852152824,
+      "reference_l2_with_rms_floor": 12.653083801269531,
+      "relative_displacement": 0.0023284919561819967,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33535
+    },
+    {
+      "name": "model.language_model.layers.17.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0042220549657940865,
+      "reference_l2_with_rms_floor": 8.902763366699219,
+      "relative_displacement": 0.0004742409510272598,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.17.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004451138433068991,
+      "reference_l2_with_rms_floor": 2.8811845779418945,
+      "relative_displacement": 0.001544898743088704,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4455
+    },
+    {
+      "name": "model.language_model.layers.17.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.002908002119511366,
+      "reference_l2_with_rms_floor": 2.0327818393707275,
+      "relative_displacement": 0.001430552980742672,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4643
+    },
+    {
+      "name": "model.language_model.layers.17.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.710457801818848,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.17.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.01259438693523407,
+      "reference_l2_with_rms_floor": 4.136645317077637,
+      "relative_displacement": 0.003044589509098031,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.17.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0004001269699074328,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0031259919524018187,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.17.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.01403234526515007,
+      "reference_l2_with_rms_floor": 4.128819942474365,
+      "relative_displacement": 0.003398633377250307,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.17.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003526814980432391,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0027553242034628056,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.17.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0033831142354756594,
+      "reference_l2_with_rms_floor": 0.9545632600784302,
+      "relative_displacement": 0.003544148802875245,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9534264206886292,
+        0.04657360166311264
+      ],
+      "after": [
+        0.9558186531066895,
+        0.04418138787150383
+      ]
+    },
+    {
+      "name": "model.language_model.layers.17.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005233963951468468,
+      "reference_l2_with_rms_floor": 5.827939033508301,
+      "relative_displacement": 0.0008980814523582495,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 72
+    },
+    {
+      "name": "model.language_model.layers.18.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.011767564341425896,
+      "reference_l2_with_rms_floor": 13.324782371520996,
+      "relative_displacement": 0.0008831336987969623,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 77
+    },
+    {
+      "name": "model.language_model.layers.18.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.00390625,
+      "reference_l2_with_rms_floor": 5.561739921569824,
+      "relative_displacement": 0.000702343161507891,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.18.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.03428465873003006,
+      "reference_l2_with_rms_floor": 13.356182098388672,
+      "relative_displacement": 0.002566950531032836,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33972
+    },
+    {
+      "name": "model.language_model.layers.18.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.021035799756646156,
+      "reference_l2_with_rms_floor": 12.642443656921387,
+      "relative_displacement": 0.0016639029864396223,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 6
+    },
+    {
+      "name": "model.language_model.layers.18.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005758322309702635,
+      "reference_l2_with_rms_floor": 2.872939348220825,
+      "relative_displacement": 0.002004331317773447,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4976
+    },
+    {
+      "name": "model.language_model.layers.18.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0035983086563646793,
+      "reference_l2_with_rms_floor": 1.9978358745574951,
+      "relative_displacement": 0.0018011032348498979,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4961
+    },
+    {
+      "name": "model.language_model.layers.18.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.487208366394043,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.18.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.012834751047194004,
+      "reference_l2_with_rms_floor": 4.125965118408203,
+      "relative_displacement": 0.003110726988439895,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.18.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003246213309466839,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002536104148020968,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.18.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.009182579815387726,
+      "reference_l2_with_rms_floor": 4.125445365905762,
+      "relative_displacement": 0.002225839636921636,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.18.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00039190988172776997,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.003061795950998203,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.18.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.004995444789528847,
+      "reference_l2_with_rms_floor": 0.9571509957313538,
+      "relative_displacement": 0.005219077044068533,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9561458230018616,
+        0.04385412484407425
+      ],
+      "after": [
+        0.9526135325431824,
+        0.04738646000623703
+      ]
+    },
+    {
+      "name": "model.language_model.layers.18.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.00158221204765141,
+      "reference_l2_with_rms_floor": 5.970491409301758,
+      "relative_displacement": 0.0002650053302457474,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 13
+    },
+    {
+      "name": "model.language_model.layers.19.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005221247673034668,
+      "reference_l2_with_rms_floor": 6.886867046356201,
+      "relative_displacement": 0.000758145559931667,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 55
+    },
+    {
+      "name": "model.language_model.layers.19.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.011517027392983437,
+      "reference_l2_with_rms_floor": 4.14417839050293,
+      "relative_displacement": 0.0027790858181628015,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.19.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0004138558288104832,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0032332486625819,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.19.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.007376897614449263,
+      "reference_l2_with_rms_floor": 4.135581016540527,
+      "relative_displacement": 0.0017837632934634522,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.19.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003375002706889063,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0026367208647570806,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.19.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0023159640841186047,
+      "reference_l2_with_rms_floor": 0.9539057612419128,
+      "relative_displacement": 0.002427875140520585,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9527340531349182,
+        0.047265928238630295
+      ],
+      "after": [
+        0.9543716907501221,
+        0.045628298074007034
+      ]
+    },
+    {
+      "name": "model.language_model.layers.19.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.003141421126201749,
+      "reference_l2_with_rms_floor": 7.8564453125,
+      "relative_displacement": 0.0003998527325333239,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 12
+    },
+    {
+      "name": "model.language_model.layers.2.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.004054590594023466,
+      "reference_l2_with_rms_floor": 14.441248893737793,
+      "relative_displacement": 0.0002807645394008597,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 20
+    },
+    {
+      "name": "model.language_model.layers.2.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.003862131852656603,
+      "reference_l2_with_rms_floor": 5.629147052764893,
+      "relative_displacement": 0.0006860953917982339,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 3
+    },
+    {
+      "name": "model.language_model.layers.2.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.024918749928474426,
+      "reference_l2_with_rms_floor": 12.510844230651855,
+      "relative_displacement": 0.001991772055431952,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 32780
+    },
+    {
+      "name": "model.language_model.layers.2.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.010346494615077972,
+      "reference_l2_with_rms_floor": 10.948324203491211,
+      "relative_displacement": 0.0009450299810978079,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 5
+    },
+    {
+      "name": "model.language_model.layers.2.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0051626721397042274,
+      "reference_l2_with_rms_floor": 3.5141401290893555,
+      "relative_displacement": 0.0014691139083978612,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4408
+    },
+    {
+      "name": "model.language_model.layers.2.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0034039909951388836,
+      "reference_l2_with_rms_floor": 2.371047258377075,
+      "relative_displacement": 0.0014356487341668734,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4894
+    },
+    {
+      "name": "model.language_model.layers.2.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 10.646042823791504,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.2.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.004895860329270363,
+      "reference_l2_with_rms_floor": 8.481632232666016,
+      "relative_displacement": 0.000577230914400477,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 43
+    },
+    {
+      "name": "model.language_model.layers.20.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.016754915937781334,
+      "reference_l2_with_rms_floor": 16.983240127563477,
+      "relative_displacement": 0.0009865559111178334,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 90
+    },
+    {
+      "name": "model.language_model.layers.20.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.01042389776557684,
+      "reference_l2_with_rms_floor": 6.795671463012695,
+      "relative_displacement": 0.0015339025469832909,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.20.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.04271647334098816,
+      "reference_l2_with_rms_floor": 15.932537078857422,
+      "relative_displacement": 0.0026810841945362983,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 34127
+    },
+    {
+      "name": "model.language_model.layers.20.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.01171875,
+      "reference_l2_with_rms_floor": 14.799630165100098,
+      "relative_displacement": 0.0007918272192797555,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.20.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.006661791354417801,
+      "reference_l2_with_rms_floor": 3.3955564498901367,
+      "relative_displacement": 0.001961914476383788,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4949
+    },
+    {
+      "name": "model.language_model.layers.20.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.003461968619376421,
+      "reference_l2_with_rms_floor": 2.023721933364868,
+      "relative_displacement": 0.0017106938271999462,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4793
+    },
+    {
+      "name": "model.language_model.layers.20.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.271636962890625,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.20.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.008735161274671555,
+      "reference_l2_with_rms_floor": 4.131276607513428,
+      "relative_displacement": 0.0021143975832519134,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.20.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00035617893445305526,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0027826479254144942,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.20.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.007274135015904903,
+      "reference_l2_with_rms_floor": 4.125907897949219,
+      "relative_displacement": 0.001763038631938563,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.20.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003554915601853281,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002777277813947876,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.20.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0033874239306896925,
+      "reference_l2_with_rms_floor": 0.9563289284706116,
+      "relative_displacement": 0.003542111746119567,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9552828669548035,
+        0.044717151671648026
+      ],
+      "after": [
+        0.9576781392097473,
+        0.042321883141994476
+      ]
+    },
+    {
+      "name": "model.language_model.layers.20.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.003955206833779812,
+      "reference_l2_with_rms_floor": 5.751901149749756,
+      "relative_displacement": 0.0006876347021283369,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 41
+    },
+    {
+      "name": "model.language_model.layers.21.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.012368270196020603,
+      "reference_l2_with_rms_floor": 14.948198318481445,
+      "relative_displacement": 0.0008274087573971301,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 76
+    },
+    {
+      "name": "model.language_model.layers.21.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.006176323629915714,
+      "reference_l2_with_rms_floor": 5.430931091308594,
+      "relative_displacement": 0.0011372494929644775,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.21.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.03372969105839729,
+      "reference_l2_with_rms_floor": 12.691672325134277,
+      "relative_displacement": 0.002657623849270032,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33765
+    },
+    {
+      "name": "model.language_model.layers.21.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.007805881090462208,
+      "reference_l2_with_rms_floor": 8.905266761779785,
+      "relative_displacement": 0.0008765465762310464,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.21.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004718532785773277,
+      "reference_l2_with_rms_floor": 2.8811771869659424,
+      "relative_displacement": 0.0016377100329404537,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4829
+    },
+    {
+      "name": "model.language_model.layers.21.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0033630048856139183,
+      "reference_l2_with_rms_floor": 2.0328245162963867,
+      "relative_displacement": 0.0016543508102416012,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4784
+    },
+    {
+      "name": "model.language_model.layers.21.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.711775779724121,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.21.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.009710943326354027,
+      "reference_l2_with_rms_floor": 4.118293762207031,
+      "relative_displacement": 0.0023580016111210684,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.21.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003282708930782974,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0025646163521741983,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.21.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.009514656849205494,
+      "reference_l2_with_rms_floor": 4.128973007202148,
+      "relative_displacement": 0.0023043640228718187,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.21.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00035424676025286317,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0027675528144754935,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.21.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0036421199329197407,
+      "reference_l2_with_rms_floor": 0.9564516544342041,
+      "relative_displacement": 0.0038079498488339833,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9554117918014526,
+        0.044588204473257065
+      ],
+      "after": [
+        0.9579871296882629,
+        0.04201280698180199
+      ]
+    },
+    {
+      "name": "model.language_model.layers.21.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005127817392349243,
+      "reference_l2_with_rms_floor": 5.82743501663208,
+      "relative_displacement": 0.0008799441568569947,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 72
+    },
+    {
+      "name": "model.language_model.layers.22.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.011650782078504562,
+      "reference_l2_with_rms_floor": 13.325541496276855,
+      "relative_displacement": 0.0008743195975758119,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 77
+    },
+    {
+      "name": "model.language_model.layers.22.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 5.560176372528076,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.22.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.03757330775260925,
+      "reference_l2_with_rms_floor": 13.392683029174805,
+      "relative_displacement": 0.0028055101185295766,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33955
+    },
+    {
+      "name": "model.language_model.layers.22.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.01962866261601448,
+      "reference_l2_with_rms_floor": 12.64714527130127,
+      "relative_displacement": 0.0015520231795356676,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 5
+    },
+    {
+      "name": "model.language_model.layers.22.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005508562084287405,
+      "reference_l2_with_rms_floor": 2.872860908508301,
+      "relative_displacement": 0.0019174482370424473,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4589
+    },
+    {
+      "name": "model.language_model.layers.22.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0037236770149320364,
+      "reference_l2_with_rms_floor": 1.997788429260254,
+      "relative_displacement": 0.001863899580352885,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4784
+    },
+    {
+      "name": "model.language_model.layers.22.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.485974311828613,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.22.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0055396114476025105,
+      "reference_l2_with_rms_floor": 4.123186111450195,
+      "relative_displacement": 0.0013435268983417617,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.22.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.000382290716515854,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0029866462227801094,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.22.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.01631435751914978,
+      "reference_l2_with_rms_floor": 4.124964714050293,
+      "relative_displacement": 0.003955029594212153,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.22.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003993347054347396,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.003119802386208903,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.22.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0011441763490438461,
+      "reference_l2_with_rms_floor": 0.9563243389129639,
+      "relative_displacement": 0.001196431275966907,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9552780985832214,
+        0.04472191259264946
+      ],
+      "after": [
+        0.9560871720314026,
+        0.04391287639737129
+      ]
+    },
+    {
+      "name": "model.language_model.layers.22.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.001423572190105915,
+      "reference_l2_with_rms_floor": 5.969420909881592,
+      "relative_displacement": 0.00023847743551629578,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.23.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.006220364477485418,
+      "reference_l2_with_rms_floor": 6.886584281921387,
+      "relative_displacement": 0.0009032583096114972,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 54
+    },
+    {
+      "name": "model.language_model.layers.23.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.012681229040026665,
+      "reference_l2_with_rms_floor": 4.129203796386719,
+      "relative_displacement": 0.0030711075706952124,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.23.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003786118468269706,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0029579050533357076,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.23.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.009140721522271633,
+      "reference_l2_with_rms_floor": 4.123405456542969,
+      "relative_displacement": 0.0022167894034692244,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.23.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003672493330668658,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002869135414584889,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.23.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.00016082711226772517,
+      "reference_l2_with_rms_floor": 0.9565041661262512,
+      "relative_displacement": 0.00016814052459286123,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9554669260978699,
+        0.04453306645154953
+      ],
+      "after": [
+        0.9553532004356384,
+        0.04464678466320038
+      ]
+    },
+    {
+      "name": "model.language_model.layers.23.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.004086230415850878,
+      "reference_l2_with_rms_floor": 7.854718208312988,
+      "relative_displacement": 0.0005202262267698214,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 13
+    },
+    {
+      "name": "model.language_model.layers.24.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.010007532313466072,
+      "reference_l2_with_rms_floor": 18.345277786254883,
+      "relative_displacement": 0.0005455099906398894,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 23
+    },
+    {
+      "name": "model.language_model.layers.24.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 6.13167667388916,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.24.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.051333196461200714,
+      "reference_l2_with_rms_floor": 19.953386306762695,
+      "relative_displacement": 0.0025726558726426613,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33877
+    },
+    {
+      "name": "model.language_model.layers.24.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.01350519247353077,
+      "reference_l2_with_rms_floor": 12.706875801086426,
+      "relative_displacement": 0.0010628255666413366,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 6
+    },
+    {
+      "name": "model.language_model.layers.24.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004771807696670294,
+      "reference_l2_with_rms_floor": 3.236943006515503,
+      "relative_displacement": 0.0014741710580215123,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4675
+    },
+    {
+      "name": "model.language_model.layers.24.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004048099275678396,
+      "reference_l2_with_rms_floor": 2.1921966075897217,
+      "relative_displacement": 0.0018465949913722402,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 5149
+    },
+    {
+      "name": "model.language_model.layers.24.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 10.200428009033203,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.24.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.016239242628216743,
+      "reference_l2_with_rms_floor": 4.12832498550415,
+      "relative_displacement": 0.003933615373120537,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.24.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0004033304867334664,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.003151019427605206,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.24.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.018223021179437637,
+      "reference_l2_with_rms_floor": 4.133729457855225,
+      "relative_displacement": 0.004408372963259334,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.24.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0004308556963223964,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.003366060127518722,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.24.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0046075438149273396,
+      "reference_l2_with_rms_floor": 0.9542409777641296,
+      "relative_displacement": 0.004828490834383595,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9530870914459229,
+        0.04691297560930252
+      ],
+      "after": [
+        0.9563450813293457,
+        0.043654914945364
+      ]
+    },
+    {
+      "name": "model.language_model.layers.24.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0068129426799714565,
+      "reference_l2_with_rms_floor": 10.01490592956543,
+      "relative_displacement": 0.000680280247052414,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 38
+    },
+    {
+      "name": "model.language_model.layers.25.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 21.745710372924805,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.25.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.00390625,
+      "reference_l2_with_rms_floor": 5.593070983886719,
+      "relative_displacement": 0.0006984088010421568,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.25.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.06568024307489395,
+      "reference_l2_with_rms_floor": 24.314035415649414,
+      "relative_displacement": 0.0027013304024645665,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 32572
+    },
+    {
+      "name": "model.language_model.layers.25.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.00560992443934083,
+      "reference_l2_with_rms_floor": 12.26641845703125,
+      "relative_displacement": 0.00045734005072402837,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4
+    },
+    {
+      "name": "model.language_model.layers.25.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004866110626608133,
+      "reference_l2_with_rms_floor": 3.1901392936706543,
+      "relative_displacement": 0.0015253599227665901,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4775
+    },
+    {
+      "name": "model.language_model.layers.25.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0034254572819918394,
+      "reference_l2_with_rms_floor": 1.9835044145584106,
+      "relative_displacement": 0.0017269723509813575,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4695
+    },
+    {
+      "name": "model.language_model.layers.25.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 9.291938781738281,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.25.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.015477505512535572,
+      "reference_l2_with_rms_floor": 4.131814002990723,
+      "relative_displacement": 0.00374593471567997,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.25.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00038064696127548814,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002973804384964751,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.25.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.013813081197440624,
+      "reference_l2_with_rms_floor": 4.13962459564209,
+      "relative_displacement": 0.0033367956147477913,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.25.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00035938533255830407,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0028076979106117506,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.25.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.003774998476728797,
+      "reference_l2_with_rms_floor": 0.9488064646720886,
+      "relative_displacement": 0.003978681235096192,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9473442435264587,
+        0.05265573039650917
+      ],
+      "after": [
+        0.9446749091148376,
+        0.05532504990696907
+      ]
+    },
+    {
+      "name": "model.language_model.layers.25.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.006416624877601862,
+      "reference_l2_with_rms_floor": 11.774406433105469,
+      "relative_displacement": 0.0005449637664587984,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 36
+    },
+    {
+      "name": "model.language_model.layers.26.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 23.525466918945312,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.26.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 5.544900894165039,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.26.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0697517991065979,
+      "reference_l2_with_rms_floor": 24.960102081298828,
+      "relative_displacement": 0.0027945318043734652,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 32818
+    },
+    {
+      "name": "model.language_model.layers.26.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.008734640665352345,
+      "reference_l2_with_rms_floor": 15.96338176727295,
+      "relative_displacement": 0.0005471673103289127,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.26.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005162929650396109,
+      "reference_l2_with_rms_floor": 2.974379539489746,
+      "relative_displacement": 0.0017358005533086097,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4778
+    },
+    {
+      "name": "model.language_model.layers.26.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0044299643486738205,
+      "reference_l2_with_rms_floor": 2.0189363956451416,
+      "relative_displacement": 0.0021942069885060676,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 5112
+    },
+    {
+      "name": "model.language_model.layers.26.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 9.008502960205078,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.26.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.018359173089265823,
+      "reference_l2_with_rms_floor": 4.137764930725098,
+      "relative_displacement": 0.004436978271273758,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.26.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0004455173038877547,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0034806039366230834,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.26.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.008928744122385979,
+      "reference_l2_with_rms_floor": 4.141756057739258,
+      "relative_displacement": 0.0021557870617951503,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.26.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00028236949583515525,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0022060116862121504,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.26.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.004051170777529478,
+      "reference_l2_with_rms_floor": 0.9500141143798828,
+      "relative_displacement": 0.004264326935999115,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9486238956451416,
+        0.05137614905834198
+      ],
+      "after": [
+        0.9457592368125916,
+        0.05424071103334427
+      ]
+    },
+    {
+      "name": "model.language_model.layers.26.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.00445682043209672,
+      "reference_l2_with_rms_floor": 13.270787239074707,
+      "relative_displacement": 0.0003358369290236219,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 14
+    },
+    {
+      "name": "model.language_model.layers.27.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.002173400018364191,
+      "reference_l2_with_rms_floor": 7.553798198699951,
+      "relative_displacement": 0.00028772280661909196,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 16
+    },
+    {
+      "name": "model.language_model.layers.27.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.014414112083613873,
+      "reference_l2_with_rms_floor": 4.126725673675537,
+      "relative_displacement": 0.0034928689773497117,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.27.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00030550072551704943,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0023867244181019487,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.27.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.007034223061054945,
+      "reference_l2_with_rms_floor": 4.129566669464111,
+      "relative_displacement": 0.0017033804328839585,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.27.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00027073430828750134,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002115111783496104,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.27.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0013667010935023427,
+      "reference_l2_with_rms_floor": 0.9528152942657471,
+      "relative_displacement": 0.0014343819853936558,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9515843987464905,
+        0.0484156496822834
+      ],
+      "after": [
+        0.9506179690361023,
+        0.04938202723860741
+      ]
+    },
+    {
+      "name": "model.language_model.layers.27.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.004529779311269522,
+      "reference_l2_with_rms_floor": 11.78319263458252,
+      "relative_displacement": 0.0003844271626329066,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 12
+    },
+    {
+      "name": "model.language_model.layers.28.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0009765625,
+      "reference_l2_with_rms_floor": 20.950469970703125,
+      "relative_displacement": 4.6612916147733814e-05,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.28.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 5.399470329284668,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.28.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.07009189575910568,
+      "reference_l2_with_rms_floor": 27.748374938964844,
+      "relative_displacement": 0.0025259820048301705,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 31947
+    },
+    {
+      "name": "model.language_model.layers.28.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.015746597200632095,
+      "reference_l2_with_rms_floor": 14.088735580444336,
+      "relative_displacement": 0.001117672846560406,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 5
+    },
+    {
+      "name": "model.language_model.layers.28.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005750846583396196,
+      "reference_l2_with_rms_floor": 3.5989341735839844,
+      "relative_displacement": 0.001597930472195672,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4636
+    },
+    {
+      "name": "model.language_model.layers.28.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004260689485818148,
+      "reference_l2_with_rms_floor": 2.426968574523926,
+      "relative_displacement": 0.001755560220491905,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4772
+    },
+    {
+      "name": "model.language_model.layers.28.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 9.29183578491211,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.28.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005652264226227999,
+      "reference_l2_with_rms_floor": 12.828737258911133,
+      "relative_displacement": 0.00044059396588715756,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 7
+    },
+    {
+      "name": "model.language_model.layers.29.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.001953125,
+      "reference_l2_with_rms_floor": 23.213783264160156,
+      "relative_displacement": 8.413643643410063e-05,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.29.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 5.690083026885986,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.29.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.07064426690340042,
+      "reference_l2_with_rms_floor": 26.7703800201416,
+      "relative_displacement": 0.002638896677979499,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 32007
+    },
+    {
+      "name": "model.language_model.layers.29.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005859375,
+      "reference_l2_with_rms_floor": 13.868672370910645,
+      "relative_displacement": 0.0004224899718800742,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.29.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.006909904535859823,
+      "reference_l2_with_rms_floor": 3.521735906600952,
+      "relative_displacement": 0.0019620734544314555,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4731
+    },
+    {
+      "name": "model.language_model.layers.29.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004163358826190233,
+      "reference_l2_with_rms_floor": 2.1772468090057373,
+      "relative_displacement": 0.0019122126205303638,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4478
+    },
+    {
+      "name": "model.language_model.layers.29.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 10.051595687866211,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.29.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.00390625,
+      "reference_l2_with_rms_floor": 13.405011177062988,
+      "relative_displacement": 0.00029140221879739243,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.3.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.00482923211529851,
+      "reference_l2_with_rms_floor": 11.377680778503418,
+      "relative_displacement": 0.00042444784744028743,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 37
+    },
+    {
+      "name": "model.language_model.layers.3.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.007079677190631628,
+      "reference_l2_with_rms_floor": 7.896815776824951,
+      "relative_displacement": 0.00089652302785239,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 85
+    },
+    {
+      "name": "model.language_model.layers.30.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.00341796875,
+      "reference_l2_with_rms_floor": 16.52568817138672,
+      "relative_displacement": 0.00020682761979728124,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.30.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 5.4134345054626465,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.30.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.061099473387002945,
+      "reference_l2_with_rms_floor": 23.935680389404297,
+      "relative_displacement": 0.002552652458296113,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 31844
+    },
+    {
+      "name": "model.language_model.layers.30.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.02174907922744751,
+      "reference_l2_with_rms_floor": 14.065221786499023,
+      "relative_displacement": 0.0015463019039148103,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4
+    },
+    {
+      "name": "model.language_model.layers.30.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.007666445802897215,
+      "reference_l2_with_rms_floor": 3.9286656379699707,
+      "relative_displacement": 0.0019514121356630997,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4699
+    },
+    {
+      "name": "model.language_model.layers.30.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005275130271911621,
+      "reference_l2_with_rms_floor": 2.470548629760742,
+      "relative_displacement": 0.002135206005810331,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4814
+    },
+    {
+      "name": "model.language_model.layers.30.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.734590530395508,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.30.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.00274658203125,
+      "reference_l2_with_rms_floor": 12.641803741455078,
+      "relative_displacement": 0.00021726187871778076,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.31.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.00146484375,
+      "reference_l2_with_rms_floor": 9.272960662841797,
+      "relative_displacement": 0.00015796936957468804,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.31.mlp.down_proj.weight",
+      "family": "last_mlp_projection",
+      "displacement_l2": 0.024808304384350777,
+      "reference_l2_with_rms_floor": 16.41838264465332,
+      "relative_displacement": 0.0015110078088251678,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1003833
+    },
+    {
+      "name": "model.language_model.layers.31.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0009765625,
+      "reference_l2_with_rms_floor": 8.36495590209961,
+      "relative_displacement": 0.00011674448872526419,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 1
+    },
+    {
+      "name": "model.language_model.layers.4.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0067311841994524,
+      "reference_l2_with_rms_floor": 16.013370513916016,
+      "relative_displacement": 0.0004203477458791598,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 28
+    },
+    {
+      "name": "model.language_model.layers.4.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.008115610107779503,
+      "reference_l2_with_rms_floor": 5.840121269226074,
+      "relative_displacement": 0.0013896304089683696,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.4.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.035012975335121155,
+      "reference_l2_with_rms_floor": 16.064802169799805,
+      "relative_displacement": 0.0021794837536774645,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33208
+    },
+    {
+      "name": "model.language_model.layers.4.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.019291743636131287,
+      "reference_l2_with_rms_floor": 14.542359352111816,
+      "relative_displacement": 0.0013265896660248444,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4
+    },
+    {
+      "name": "model.language_model.layers.4.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005268944893032312,
+      "reference_l2_with_rms_floor": 3.4510486125946045,
+      "relative_displacement": 0.001526766349741726,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4373
+    },
+    {
+      "name": "model.language_model.layers.4.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0034027204383164644,
+      "reference_l2_with_rms_floor": 1.9564757347106934,
+      "relative_displacement": 0.001739209118696087,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4993
+    },
+    {
+      "name": "model.language_model.layers.4.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 10.092645645141602,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.4.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.005758156534284353,
+      "reference_l2_with_rms_floor": 4.132933139801025,
+      "relative_displacement": 0.0013932372819758637,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.4.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00032826809911057353,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0025645945243013557,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.4.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.008538489229977131,
+      "reference_l2_with_rms_floor": 4.132072925567627,
+      "relative_displacement": 0.002066393644009608,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.4.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00033108980278484523,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0025866390842566034,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.4.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.004714778158813715,
+      "reference_l2_with_rms_floor": 0.9542711973190308,
+      "relative_displacement": 0.0049407109551871725,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9531189203262329,
+        0.046881064772605896
+      ],
+      "after": [
+        0.9564527869224548,
+        0.04354722797870636
+      ]
+    },
+    {
+      "name": "model.language_model.layers.4.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005136990454047918,
+      "reference_l2_with_rms_floor": 7.637574195861816,
+      "relative_displacement": 0.0006725945074067154,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 61
+    },
+    {
+      "name": "model.language_model.layers.5.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.008978226222097874,
+      "reference_l2_with_rms_floor": 14.734498977661133,
+      "relative_displacement": 0.0006093336621563921,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 56
+    },
+    {
+      "name": "model.language_model.layers.5.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.00967979896813631,
+      "reference_l2_with_rms_floor": 6.882030487060547,
+      "relative_displacement": 0.0014065324160269371,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4
+    },
+    {
+      "name": "model.language_model.layers.5.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.029101137071847916,
+      "reference_l2_with_rms_floor": 13.365701675415039,
+      "relative_displacement": 0.0021772996119894506,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33080
+    },
+    {
+      "name": "model.language_model.layers.5.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.010619415901601315,
+      "reference_l2_with_rms_floor": 13.721540451049805,
+      "relative_displacement": 0.000773923011012138,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 3
+    },
+    {
+      "name": "model.language_model.layers.5.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004248721059411764,
+      "reference_l2_with_rms_floor": 3.077779531478882,
+      "relative_displacement": 0.001380450099156466,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4377
+    },
+    {
+      "name": "model.language_model.layers.5.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0031610806472599506,
+      "reference_l2_with_rms_floor": 1.9547059535980225,
+      "relative_displacement": 0.0016171642806128244,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4862
+    },
+    {
+      "name": "model.language_model.layers.5.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 10.64729118347168,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.5.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.012733982875943184,
+      "reference_l2_with_rms_floor": 4.134003639221191,
+      "relative_displacement": 0.0030803027735945947,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.5.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0004020999767817557,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0031414060686074663,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.5.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.010862588882446289,
+      "reference_l2_with_rms_floor": 4.130551815032959,
+      "relative_displacement": 0.002629815426334172,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.5.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003825790190603584,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.00298889858640905,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.5.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0024792146869003773,
+      "reference_l2_with_rms_floor": 0.9559440016746521,
+      "relative_displacement": 0.002593472716557887,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9548785090446472,
+        0.0451214537024498
+      ],
+      "after": [
+        0.9531254768371582,
+        0.04687456041574478
+      ]
+    },
+    {
+      "name": "model.language_model.layers.5.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.004927846137434244,
+      "reference_l2_with_rms_floor": 7.507471084594727,
+      "relative_displacement": 0.0006563922900144294,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 44
+    },
+    {
+      "name": "model.language_model.layers.6.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.008891497738659382,
+      "reference_l2_with_rms_floor": 13.053842544555664,
+      "relative_displacement": 0.0006811402625940006,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 61
+    },
+    {
+      "name": "model.language_model.layers.6.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004784159827977419,
+      "reference_l2_with_rms_floor": 4.583405017852783,
+      "relative_displacement": 0.001043800364432704,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 3
+    },
+    {
+      "name": "model.language_model.layers.6.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.02589142695069313,
+      "reference_l2_with_rms_floor": 12.16560173034668,
+      "relative_displacement": 0.002128248772611703,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33393
+    },
+    {
+      "name": "model.language_model.layers.6.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.011523851193487644,
+      "reference_l2_with_rms_floor": 11.450544357299805,
+      "relative_displacement": 0.0010064020394053236,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 3
+    },
+    {
+      "name": "model.language_model.layers.6.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.004154392518103123,
+      "reference_l2_with_rms_floor": 2.8959662914276123,
+      "relative_displacement": 0.0014345445008806196,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4427
+    },
+    {
+      "name": "model.language_model.layers.6.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0033023275900632143,
+      "reference_l2_with_rms_floor": 2.1918725967407227,
+      "relative_displacement": 0.0015066238772151808,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4836
+    },
+    {
+      "name": "model.language_model.layers.6.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 11.115440368652344,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.6.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.015229039825499058,
+      "reference_l2_with_rms_floor": 4.136528491973877,
+      "relative_displacement": 0.0036815991609988967,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.6.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00044211323256604373,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0034540096294222167,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.6.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0059079937636852264,
+      "reference_l2_with_rms_floor": 4.133472442626953,
+      "relative_displacement": 0.0014293052259785983,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.6.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00040550599806010723,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0031680156098445877,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.6.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.004803492221981287,
+      "reference_l2_with_rms_floor": 0.9576739072799683,
+      "relative_displacement": 0.005015791059426896,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9566942453384399,
+        0.04330573230981827
+      ],
+      "after": [
+        0.9600908160209656,
+        0.03990913927555084
+      ]
+    },
+    {
+      "name": "model.language_model.layers.6.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.004706452134996653,
+      "reference_l2_with_rms_floor": 6.320502758026123,
+      "relative_displacement": 0.0007446325577534382,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 70
+    },
+    {
+      "name": "model.language_model.layers.7.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0027806186117231846,
+      "reference_l2_with_rms_floor": 5.281832695007324,
+      "relative_displacement": 0.0005264495814779549,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 40
+    },
+    {
+      "name": "model.language_model.layers.7.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.013468317687511444,
+      "reference_l2_with_rms_floor": 4.129255771636963,
+      "relative_displacement": 0.003261681627963722,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.7.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00034090704866684973,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0026633363177097635,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.7.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.012448945082724094,
+      "reference_l2_with_rms_floor": 4.140673637390137,
+      "relative_displacement": 0.0030065023648110202,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.7.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003121236804872751,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002438466253806837,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.7.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.002519506961107254,
+      "reference_l2_with_rms_floor": 0.9550705552101135,
+      "relative_displacement": 0.002638032287104661,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9539602398872375,
+        0.04603972285985947
+      ],
+      "after": [
+        0.955741822719574,
+        0.04425818473100662
+      ]
+    },
+    {
+      "name": "model.language_model.layers.7.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0038562268018722534,
+      "reference_l2_with_rms_floor": 6.626591205596924,
+      "relative_displacement": 0.0005819322004675983,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 45
+    },
+    {
+      "name": "model.language_model.layers.8.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.009314462542533875,
+      "reference_l2_with_rms_floor": 16.014860153198242,
+      "relative_displacement": 0.0005816137295881246,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 30
+    },
+    {
+      "name": "model.language_model.layers.8.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.009857508353888988,
+      "reference_l2_with_rms_floor": 5.840343952178955,
+      "relative_displacement": 0.0016878301063435284,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 2
+    },
+    {
+      "name": "model.language_model.layers.8.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.03940396010875702,
+      "reference_l2_with_rms_floor": 16.104475021362305,
+      "relative_displacement": 0.0024467708544667465,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 33191
+    },
+    {
+      "name": "model.language_model.layers.8.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.03249547630548477,
+      "reference_l2_with_rms_floor": 14.539227485656738,
+      "relative_displacement": 0.002235020831577349,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 5
+    },
+    {
+      "name": "model.language_model.layers.8.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005775075405836105,
+      "reference_l2_with_rms_floor": 3.45119309425354,
+      "relative_displacement": 0.001673356212798403,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4493
+    },
+    {
+      "name": "model.language_model.layers.8.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.003262168960645795,
+      "reference_l2_with_rms_floor": 1.9564896821975708,
+      "relative_displacement": 0.0016673581211947193,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4596
+    },
+    {
+      "name": "model.language_model.layers.8.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 10.091387748718262,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.8.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.012900971807539463,
+      "reference_l2_with_rms_floor": 4.13045597076416,
+      "relative_displacement": 0.0031233771522693903,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.8.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003573597059585154,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0027918727028009016,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.8.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.013541033491492271,
+      "reference_l2_with_rms_floor": 4.133171558380127,
+      "relative_displacement": 0.0032761847168035953,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.8.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003571244888007641,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.0027900350687559694,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.8.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.0034413007088005543,
+      "reference_l2_with_rms_floor": 0.9561827778816223,
+      "relative_displacement": 0.0035989988403938764,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9551293849945068,
+        0.04487064480781555
+      ],
+      "after": [
+        0.9575627446174622,
+        0.042437270283699036
+      ]
+    },
+    {
+      "name": "model.language_model.layers.8.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.005892395041882992,
+      "reference_l2_with_rms_floor": 7.636987686157227,
+      "relative_displacement": 0.0007715601077324667,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 62
+    },
+    {
+      "name": "model.language_model.layers.9.input_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.010400362312793732,
+      "reference_l2_with_rms_floor": 14.73164176940918,
+      "relative_displacement": 0.0007059880002234703,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 49
+    },
+    {
+      "name": "model.language_model.layers.9.linear_attn.A_log",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.009853728115558624,
+      "reference_l2_with_rms_floor": 6.879809379577637,
+      "relative_displacement": 0.0014322676068335431,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4
+    },
+    {
+      "name": "model.language_model.layers.9.linear_attn.conv1d.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.033295150846242905,
+      "reference_l2_with_rms_floor": 13.398650169372559,
+      "relative_displacement": 0.002484963069067283,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 32935
+    },
+    {
+      "name": "model.language_model.layers.9.linear_attn.dt_bias",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.017954297363758087,
+      "reference_l2_with_rms_floor": 13.722360610961914,
+      "relative_displacement": 0.0013083971390035873,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 3
+    },
+    {
+      "name": "model.language_model.layers.9.linear_attn.in_proj_a.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.005156058352440596,
+      "reference_l2_with_rms_floor": 3.0779478549957275,
+      "relative_displacement": 0.001675161047342614,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4470
+    },
+    {
+      "name": "model.language_model.layers.9.linear_attn.in_proj_b.weight",
+      "family": "liquid_temporal",
+      "displacement_l2": 0.0034502833150327206,
+      "reference_l2_with_rms_floor": 1.95461106300354,
+      "relative_displacement": 0.0017652019782037178,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 4796
+    },
+    {
+      "name": "model.language_model.layers.9.linear_attn.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.0,
+      "reference_l2_with_rms_floor": 10.64722728729248,
+      "relative_displacement": 0.0,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 0
+    },
+    {
+      "name": "model.language_model.layers.9.mhc_attn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.015137608163058758,
+      "reference_l2_with_rms_floor": 4.136290073394775,
+      "relative_displacement": 0.0036597066198103645,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.9.mhc_attn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.00033567685750313103,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002622475449243211,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.9.mhc_ffn.bias",
+      "family": "mhc_routing",
+      "displacement_l2": 0.01110687106847763,
+      "reference_l2_with_rms_floor": 4.130884647369385,
+      "relative_displacement": 0.0026887390998803777,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 8
+    },
+    {
+      "name": "model.language_model.layers.9.mhc_ffn.weight",
+      "family": "mhc_routing",
+      "displacement_l2": 0.0003515824500937015,
+      "reference_l2_with_rms_floor": 0.128,
+      "relative_displacement": 0.002746737891357043,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 16384
+    },
+    {
+      "name": "model.language_model.layers.9.native_visit_gain",
+      "family": "loop_visit_gain",
+      "displacement_l2": 0.002781942253932357,
+      "reference_l2_with_rms_floor": 0.9582656621932983,
+      "relative_displacement": 0.0029031012627176787,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.float32",
+      "changed_values": 2,
+      "before": [
+        0.9573144912719727,
+        0.04268549382686615
+      ],
+      "after": [
+        0.9553473591804504,
+        0.04465262219309807
+      ]
+    },
+    {
+      "name": "model.language_model.layers.9.post_attention_layernorm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.00467816274613142,
+      "reference_l2_with_rms_floor": 7.506718158721924,
+      "relative_displacement": 0.0006231968014805438,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 45
+    },
+    {
+      "name": "model.language_model.norm.weight",
+      "family": "normalization",
+      "displacement_l2": 0.08855004608631134,
+      "reference_l2_with_rms_floor": 108.02793884277344,
+      "relative_displacement": 0.0008196957845802214,
+      "configured_fp32_projection_radius": 0.005,
+      "dtype": "torch.bfloat16",
+      "changed_values": 32
+    }
+  ],
+  "rounding_caveat": "Radius enforced in FP32 projection before BF16 storage; quantization and subsequent normalized gain projection can change the stored norm. Report actual values, not an exact BF16 guarantee.",
+  "actual_above_fp32_radius_tensors": [
+    "model.language_model.layers.11.native_visit_gain",
+    "model.language_model.layers.18.native_visit_gain",
+    "model.language_model.layers.6.native_visit_gain"
+  ],
+  "quality_gain_measured_by_this_audit": false
+}
