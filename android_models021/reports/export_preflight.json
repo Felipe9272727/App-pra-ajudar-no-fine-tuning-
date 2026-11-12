@@ -1,0 +1,10 @@
+{
+  "all546source_hashes_match_C_plus_E": true,
+  "model_fingerprint": "40507c355f18516f29532d476f1171c99da28f23421d04a094b318244db8f368",
+  "planned_pack_bytes": 1841946112,
+  "unique_payloads": 546,
+  "free_shm_before_write": 1868128256,
+  "no_quantization": true,
+  "native_input_template_matches_all20_HF_prefixes": true,
+  "new_training_updates": 0
+}

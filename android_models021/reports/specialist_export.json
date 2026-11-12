@@ -1,0 +1,19 @@
+{
+  "status": "lossless_specialist_export_complete",
+  "source_checkpoint": "015E exact B+C+E",
+  "E_stream": "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85",
+  "model_fingerprint_sha256": "40507c355f18516f29532d476f1171c99da28f23421d04a094b318244db8f368",
+  "pack_sha256": "840dcd740258147a244d3cde951f789f725ed4746f17de828a70e2b531cd0f70",
+  "pack_bytes": 1841946112,
+  "text_tensors_verified": 546,
+  "text_parameters": 919659696,
+  "unique_payloads": 546,
+  "all_source_and_written_payload_hashes_verified": true,
+  "quantized": false,
+  "new_gradient_updates": 0,
+  "physical_layers": 32,
+  "executions": 56,
+  "mhc_streams": 2,
+  "native_source_template": "user-only, nonthinking, trueEOS248044",
+  "seconds": 31.131307666000794
+}

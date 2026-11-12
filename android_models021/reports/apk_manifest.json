@@ -1,0 +1,21 @@
+{
+  "status": "signed_015E_APK_built",
+  "file": "/dev/shm/liquid-android/models021-apk/LiquidSense-0.2.0-specialist-preview.apk",
+  "bytes": 1856557966,
+  "sha256": "cbbb380612e895bec91c56501e5f176e38702c786f8ad0ffaad2b104bb0ff126",
+  "package": "dev.liquidsense.chat.fast",
+  "versionCode": 3,
+  "versionName": "0.2.0-models-preview",
+  "default_model": "specialist015E",
+  "specialist_bundled": true,
+  "general_source": "optional installed dev.liquidsense.chat public model assets",
+  "histories_isolated": true,
+  "previous_base_history_migrated_without_deleting_legacy_key": true,
+  "original_APKs_preserved": true,
+  "same_signing_certificate_as_020": true,
+  "model_pack_sha256": "840dcd740258147a244d3cde951f789f725ed4746f17de828a70e2b531cd0f70",
+  "all546_tensors_match_exact_E": true,
+  "internet_permission": false,
+  "phone_execution_verified": false,
+  "new_training_updates": 0
+}
