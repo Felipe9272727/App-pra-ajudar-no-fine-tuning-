@@ -1,0 +1,17 @@
+{
+  "status": "passed_no_weight_change",
+  "selected_tensors": 330,
+  "gradient_present": 330,
+  "nonzero_gradient_tensors": 330,
+  "loss": 3.2058358192443848,
+  "all_699_parameter_hashes_unchanged": true,
+  "family_nonzero": {
+    "last_mlp_projection": 1,
+    "liquid_temporal": 120,
+    "loop_visit_gain": 24,
+    "mhc_routing": 96,
+    "normalization": 89
+  },
+  "rss_kb": 3883540,
+  "peak_rss_kb": 4519944
+}

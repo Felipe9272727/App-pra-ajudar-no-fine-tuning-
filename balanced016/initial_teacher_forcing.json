@@ -1,0 +1,146 @@
+[
+  {
+    "id": "HumanEval/32",
+    "tokens": 158,
+    "nll": 0.060904092090558026,
+    "correct_tokens": 157
+  },
+  {
+    "id": "HumanEval/39",
+    "tokens": 133,
+    "nll": 0.06606209880315271,
+    "correct_tokens": 132
+  },
+  {
+    "id": "HumanEval/75",
+    "tokens": 138,
+    "nll": 0.05803011302107378,
+    "correct_tokens": 137
+  },
+  {
+    "id": "HumanEval/114",
+    "tokens": 95,
+    "nll": 0.07822811662366516,
+    "correct_tokens": 94
+  },
+  {
+    "id": "HumanEval/119",
+    "tokens": 126,
+    "nll": 0.07389154836594586,
+    "correct_tokens": 125
+  },
+  {
+    "id": "HumanEval/129",
+    "tokens": 195,
+    "nll": 0.058767689221452035,
+    "correct_tokens": 194
+  },
+  {
+    "id": "HumanEval/132",
+    "tokens": 138,
+    "nll": 0.0669098474841187,
+    "correct_tokens": 137
+  },
+  {
+    "id": "HumanEval/147",
+    "tokens": 115,
+    "nll": 0.06327696065215961,
+    "correct_tokens": 114
+  },
+  {
+    "id": "TEACH016/00",
+    "tokens": 2,
+    "nll": 6.350767612457275,
+    "correct_tokens": 1
+  },
+  {
+    "id": "TEACH016/01",
+    "tokens": 4,
+    "nll": 3.726363182067871,
+    "correct_tokens": 2
+  },
+  {
+    "id": "TEACH016/02",
+    "tokens": 2,
+    "nll": 6.0599565505981445,
+    "correct_tokens": 0
+  },
+  {
+    "id": "TEACH016/03",
+    "tokens": 3,
+    "nll": 4.784117380777995,
+    "correct_tokens": 1
+  },
+  {
+    "id": "TEACH016/04",
+    "tokens": 3,
+    "nll": 3.8115320205688477,
+    "correct_tokens": 2
+  },
+  {
+    "id": "TEACH016/05",
+    "tokens": 3,
+    "nll": 3.452742576599121,
+    "correct_tokens": 2
+  },
+  {
+    "id": "TEACH016/06",
+    "tokens": 3,
+    "nll": 5.359090169270833,
+    "correct_tokens": 0
+  },
+  {
+    "id": "TEACH016/07",
+    "tokens": 3,
+    "nll": 4.94166374206543,
+    "correct_tokens": 2
+  },
+  {
+    "id": "TEACH016/08",
+    "tokens": 3,
+    "nll": 3.4385674794514975,
+    "correct_tokens": 1
+  },
+  {
+    "id": "TEACH016/09",
+    "tokens": 3,
+    "nll": 4.83438777923584,
+    "correct_tokens": 1
+  },
+  {
+    "id": "TEACH016/10",
+    "tokens": 3,
+    "nll": 4.938214619954427,
+    "correct_tokens": 1
+  },
+  {
+    "id": "TEACH016/11",
+    "tokens": 3,
+    "nll": 5.559989929199219,
+    "correct_tokens": 1
+  },
+  {
+    "id": "TEACH016/12",
+    "tokens": 2,
+    "nll": 6.532268524169922,
+    "correct_tokens": 1
+  },
+  {
+    "id": "TEACH016/13",
+    "tokens": 2,
+    "nll": 5.760425567626953,
+    "correct_tokens": 0
+  },
+  {
+    "id": "TEACH016/14",
+    "tokens": 3,
+    "nll": 4.616387049357097,
+    "correct_tokens": 1
+  },
+  {
+    "id": "TEACH016/15",
+    "tokens": 3,
+    "nll": 4.180366198221843,
+    "correct_tokens": 2
+  }
+]
