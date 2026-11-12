@@ -1,6 +1,6 @@
 {
   "AGENTS.md": "8e3b3c0473766b3d4882d8f680e8a14df3018d044bd46c9a13edf4e88d809049",
-  "balanced016/AGENTS.md": "53ca6cacd9aa3d68ca7e2145786738c35c0667a8adc2d15d1a01bc90000cd1ad",
+  "balanced016/AGENTS.md": "b5cc52656310e0391d529be5580393e3735ba1845089108de377a92d99f49778",
   "balanced016/PROTOCOL.md": "80b9d8e6bdc4c6b0f7c94f0c190f05f831a7da35f3528713b7e5e96b328a5570",
   "balanced016/build_data.py": "14978e4cd8940fa0a49ab7ea80eb79a18162f3365d80dd43caeeec5e3d0f6c9d",
   "balanced016/code_retention_train.json": "1ccf501f97d5051d02d0d56a3d0dcb4a1abcff9f3bc4c1e2470aa2d0660dde77",
@@ -14,7 +14,7 @@
   "balanced016/screen.py": "59909c3b64efa11a9912d477b3036b6864a72144a23591290a1fe4048b7367c1",
   "balanced016/train.py": "64aa2b0a00c0e31da9125d1c505d274cc7e1c19f37b3d012bdbf2df88a049b38",
   "balanced016/trainable.json": "778e01ac5d6ea92976fe3ff0a56f3f9f666574e934a66b3040fc5c80da93577e",
-  "balanced016/validate.py": "55e08efb7af52616ca1ced01929507b056c769f98969c8e9a223f54c2bcfb780",
+  "balanced016/validate.py": "e9fddd1a25dfef33c89f82710784979144bd30e97d27039f7269499938b1901f",
   "balanced016/validate_data.py": "bb62fe0ada70842e6d3a1f796f6e2d9ad1050e2788122f408c5c779280f1d0ed",
   "balanced016/validation_code.json": "3457113bca51865b19062824132fe91aa0656d749580284de53f51cb762db5ad",
   "balanced016/validation_controls.json": "601a9df092f23519773349d228de38f7ed5c788c1fb25da5335158e92dca877b",
@@ -67,5 +67,11 @@
   "supervised015/train_runtime.py": "9db75812f0fc079c9c0a60e5a0e162460fc1f8de64cac6f2ee396ede4eaf2dc2",
   "v2_adaptation/native_runtime.py": "4761bcd7167b35144b1c8d4e981a10c96b1efb41a140f382c11da2e492f4d350",
   "balanced016/frozen_initial.json": "de77e2fb8d208528bd49cf7426cd2ee06539b945e73adea0bea6ac269258f215",
-  "balanced016/schema_amendment.json": "d1a74cd585def5d69cb041ae5a293a59f571dbf5b4d8fc82bf5c52121d534267"
+  "balanced016/schema_amendment.json": "d1a74cd585def5d69cb041ae5a293a59f571dbf5b4d8fc82bf5c52121d534267",
+  "balanced016/validate_initial.py": "55e08efb7af52616ca1ced01929507b056c769f98969c8e9a223f54c2bcfb780",
+  "balanced016/validation_controls_v2.json": "b160c6a5e3fd9334ccf97928ecabfb3ed8c92f9003547a9e53b315cc2b91c1f3",
+  "balanced016/NOVELTY_AMENDMENT.md": "12a5bfb392823ab3ea146c1a41e992358c2aa153b35ae063d335e331ffdf55a8",
+  "balanced016/novelty_check.py": "c30670a5679774ffc4a7e48ba3e715c078bf7bc8f9a6ba100aca22a76b8ef23c",
+  "balanced016/novelty_audit.json": "a292b36d4890c8c2958835a99cf43cd035fc25b15027953167f072c9ecf9eb61",
+  "balanced016/frozen_before_novelty_audit.json": "bfa51edead3bebbde02e2d610422acf10ec49d0fdd56f821bae95b2eefca90be"
 }

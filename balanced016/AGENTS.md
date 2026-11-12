@@ -19,3 +19,7 @@
   frozen retention gate passes. Once observed, do not tune from it. No general
   promotion on an eight-task pilot; preserve principal regardless of outcome.
 - End bounded trial with no model worker alive and verified GitHub publication.
+
+- Read NOVELTY_AMENDMENT.md: v1 contains four older facts and stays unused.
+  Only validate.py with validation_controls_v2.json is the active new-control
+  runner. validate_initial.py preserves source history; never execute it.

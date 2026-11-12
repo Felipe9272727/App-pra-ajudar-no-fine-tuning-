@@ -15,7 +15,7 @@ def main():
     elif args.variant=='principal':model,tok,_,meta=load_principal();identity='principal46f6697'
     else:model,tok,meta,m=load_e() if args.variant=='E' else load_candidate();identity=m['stream_sha256']
     assert model.generation_config.eos_token_id==248044
-    for role,file in [('code','validation_code.json'),('controls','validation_controls.json')]:
+    for role,file in [('code','validation_code.json'),('controls','validation_controls_v2.json')]:
         rows=json.loads((HERE/file).read_text());path=HERE/('fresh_'+role+'_'+args.variant+'.json')
         report=json.loads(path.read_text()) if path.exists() else {'status':'running','variant':args.variant,'checkpoint_identity':identity,'metadata':meta,'rows':[],
           'protocol':{'custom_pilot_not_official_benchmark':True,'greedy':True,'seed':0,'thinking':False,'cpu_threads':4,'max_new_tokens':320 if role=='code' else 64,'solutions_in_generation_input':False,'tests_in_generation_input':False,'candidate_frozen_before_all_validation_outputs':True}}

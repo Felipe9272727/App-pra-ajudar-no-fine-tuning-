@@ -1,0 +1,57 @@
+{
+  "status": "passed_plain_text_novelty_screen",
+  "checks": {
+    "code_entry_names": {
+      "patterns": [
+        "stable_group_indices",
+        "rotate_grid_clockwise",
+        "compact_runs",
+        "reachable_nodes",
+        "first_peak_plateau",
+        "bracket_pairs",
+        "gap_ranges",
+        "alternating_chunks"
+      ],
+      "returncode": 1,
+      "matches": []
+    },
+    "v2_control_exact_questions": {
+      "patterns": [
+        "What is the capital of Ghana? Reply only with the city.",
+        "What is the chemical symbol for tungsten? Reply only with the symbol.",
+        "Give only the plural of criterion.",
+        "Responda somente o número: 8 vezes 9.",
+        "What is half of 62? Reply only with a number.",
+        "Mara chegou antes de Nilo. Nilo chegou antes de Oto. Quem chegou primeiro? Responda só o nome.",
+        "Translate book into Portuguese. Reply with one word.",
+        "Give only the simple past tense of cling."
+      ],
+      "returncode": 1,
+      "matches": []
+    },
+    "v2_new_facts_and_other_control_phrasings": {
+      "patterns": [
+        "Ghana",
+        "Accra",
+        "tungsten",
+        "plural.{0,35}criterion",
+        "criterion.{0,35}plural",
+        "past.{0,35}cling",
+        "clung",
+        "Translate.{0,35}book",
+        "tradu.{0,35}livro",
+        "half of 62",
+        "8 vezes 9",
+        "Mara chegou antes"
+      ],
+      "returncode": 1,
+      "matches": []
+    }
+  },
+  "scope": "Persisted .json/.py/.md sources under rg default ignore rules; excludes study016 itself. Does not prove absence from pretraining, compressed histories or all paraphrases. Ordinary skill-family overlap remains.",
+  "new_validation_model_queries_observed": 0,
+  "controls_version": "v2",
+  "original_v1_preserved": true,
+  "code_tasks_unchanged": true,
+  "candidate_weights_or_gates_changed": false
+}

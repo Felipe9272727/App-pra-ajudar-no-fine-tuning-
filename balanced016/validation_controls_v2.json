@@ -1,0 +1,58 @@
+[
+  {
+    "id": "FRESH016v2/00",
+    "question": "What is the capital of Ghana? Reply only with the city.",
+    "answer": "Accra",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016v2/01",
+    "question": "What is the chemical symbol for tungsten? Reply only with the symbol.",
+    "answer": "W",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016v2/02",
+    "question": "Give only the plural of criterion.",
+    "answer": "criteria",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016v2/03",
+    "question": "Responda somente o número: 8 vezes 9.",
+    "answer": "72",
+    "aliases": [],
+    "numeric": true
+  },
+  {
+    "id": "FRESH016v2/04",
+    "question": "What is half of 62? Reply only with a number.",
+    "answer": "31",
+    "aliases": [],
+    "numeric": true
+  },
+  {
+    "id": "FRESH016v2/05",
+    "question": "Mara chegou antes de Nilo. Nilo chegou antes de Oto. Quem chegou primeiro? Responda só o nome.",
+    "answer": "Mara",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016v2/06",
+    "question": "Translate book into Portuguese. Reply with one word.",
+    "answer": "livro",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016v2/07",
+    "question": "Give only the simple past tense of cling.",
+    "answer": "clung",
+    "aliases": [],
+    "numeric": false
+  }
+]
