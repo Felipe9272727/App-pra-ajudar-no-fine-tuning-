@@ -1,0 +1,10 @@
+{
+  "status": "resume_export_only_after_template_guard",
+  "all546_source_hashes_verified_in_first_pass": true,
+  "first_model_asset_write_not_started": true,
+  "unsigned_prefix_zip_crc_valid": true,
+  "completed_UI_and_native_compilations_reused": true,
+  "fix": "Explicit return_dict=False and same content strip used by HF template/Android composer",
+  "new_gradient_updates": 0,
+  "no_checkpoint_or_previous_APK_modified": true
+}

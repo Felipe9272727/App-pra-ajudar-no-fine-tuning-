@@ -39,8 +39,8 @@ def main():
  fixtures=[]
  for role,path,budget in [('taught',ROOT/'supervised015/attempt_e/train.json',320),('controls',ROOT/'review013/controls.json',64)]:
   for row in json.loads(path.read_text()):
-   question=row['prompt'] if role=='taught' else row['question'];ids=tok.apply_chat_template([{'role':'user','content':question}],tokenize=True,add_generation_prompt=True,enable_thinking=False)
-   rendered='<|im_start|>user\n'+question+'<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n';assert tok.encode(rendered,add_special_tokens=False)==ids
+   question=row['prompt'] if role=='taught' else row['question'];ids=tok.apply_chat_template([{'role':'user','content':question}],tokenize=True,add_generation_prompt=True,enable_thinking=False,return_dict=False)
+   rendered='<|im_start|>user\n'+question.strip()+'<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n';assert tok.encode(rendered,add_special_tokens=False)==ids
    fixtures.append({'id':row['id'],'role':role,'input_ids':ids,'budget':budget})
  save('native_inputs.json',fixtures)
  free=os.statvfs('/dev/shm');available=free.f_bavail*free.f_frsize;assert available>cursor+8*1024*1024,(available,cursor)

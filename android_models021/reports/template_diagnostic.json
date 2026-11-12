@@ -1,0 +1,7 @@
+{
+  "render_matches": false,
+  "ids_match_explicit_return_dict_false": false,
+  "default_return_type": "BatchEncoding",
+  "render_prefix": "<|im_start|>user\nReturn a complete Python imp",
+  "render_suffix": "2 + x^3\n    1.0\n    \"\"\"<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+}

@@ -1,5 +1,5 @@
 """Prepare UI, invoke exact source export once, sign verified payload in place."""
-import pathlib,json,subprocess,zipfile,shutil,os,struct,hashlib
+import pathlib,json,subprocess,zipfile,shutil,os,struct,hashlib,sys
 ROOT=pathlib.Path(__file__).resolve().parents[2];HERE=ROOT/'android_models021';OUT=pathlib.Path('/dev/shm/liquid-android/models021-apk');TOOLS=pathlib.Path('/dev/shm/liquid-android/tooling/android');BT=TOOLS/'build-tools';JAR=TOOLS/'platform/android.jar';SOURCE=HERE/'android';ENV={**os.environ,'LD_LIBRARY_PATH':str(BT/'lib64'),'JAVA_TOOL_OPTIONS':'-Xmx384m'}
 def run(args,**kw):subprocess.run([str(a) for a in args],check=True,**kw)
 def aligned_info(z,name,size,kind):
@@ -10,24 +10,27 @@ def aligned_info(z,name,size,kind):
 def digest(path):
  with path.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
 def main():
- OUT.mkdir(exist_ok=True);tmp=OUT/'intermediate';tmp.mkdir(exist_ok=True);unsigned=OUT/'unsigned.apk';final=OUT/'LiquidSense-0.2.0-specialist-preview.apk';assert not unsigned.exists() and not final.exists(),'Inspect partial state, never blind rebuild'
- run([BT/'aapt2','compile','--dir',SOURCE/'res','-o',tmp/'resources.zip'],env=ENV);gen=tmp/'generated';gen.mkdir(exist_ok=True)
- run([BT/'aapt2','link','-o',tmp/'resources.apk','--manifest',SOURCE/'AndroidManifest.xml','-I',JAR,'-R',tmp/'resources.zip','--java',gen,'--custom-package','dev.liquidsense.chat','--auto-add-overlay'],env=ENV)
- classes=tmp/'classes';classes.mkdir(exist_ok=True);run(['java','com.sun.tools.javac.Main','-source','8','-target','8','-classpath',JAR,'-d',classes,*list((SOURCE/'src').rglob('*.java')),*gen.rglob('*.java')],env=ENV);dex=tmp/'dex';dex.mkdir(exist_ok=True);run(['java','-cp',BT/'lib/d8.jar','com.android.tools.r8.D8','--min-api','28','--lib',JAR,'--output',dex,*classes.rglob('*.class')],env=ENV)
+ OUT.mkdir(exist_ok=True);tmp=OUT/'intermediate';tmp.mkdir(exist_ok=True);unsigned=OUT/'unsigned.apk';final=OUT/'LiquidSense-0.2.0-specialist-preview.apk';assert not final.exists() and (not unsigned.exists() or '--resume-export' in sys.argv or '--resume-sign' in sys.argv),'Inspect partial state, never blind rebuild'
  lib=pathlib.Path('/dev/shm/liquid-android/prebuilt/models021/libliquid_sense.so');assert lib.exists()
- with zipfile.ZipFile(unsigned,'w',allowZip64=False) as z:
-  with zipfile.ZipFile(tmp/'resources.apk') as resources:
-   for info in resources.infolist():
-    data=resources.read(info);z.writestr(aligned_info(z,info.filename,len(data),info.compress_type),data)
-  for d in dex.glob('*.dex'):z.writestr(aligned_info(z,d.name,d.stat().st_size,zipfile.ZIP_DEFLATED),d.read_bytes())
-  z.writestr(aligned_info(z,'lib/arm64-v8a/libliquid_sense.so',lib.stat().st_size,zipfile.ZIP_DEFLATED),lib.read_bytes())
-  with zipfile.ZipFile('/dev/shm/liquid-android/apk/LiquidSense-0.1.0-preview.apk') as base:
-   for info in base.infolist():
-    if not info.filename.startswith('assets/') or info.filename=='assets/model.lsp':continue
-    with base.open(info) as src,z.open(aligned_info(z,info.filename,info.file_size,info.compress_type),'w') as dst:shutil.copyfileobj(src,dst,1024*1024)
+ if '--resume-export' not in sys.argv and '--resume-sign' not in sys.argv:
+  run([BT/'aapt2','compile','--dir',SOURCE/'res','-o',tmp/'resources.zip'],env=ENV);gen=tmp/'generated';gen.mkdir(exist_ok=True)
+  run([BT/'aapt2','link','-o',tmp/'resources.apk','--manifest',SOURCE/'AndroidManifest.xml','-I',JAR,'-R',tmp/'resources.zip','--java',gen,'--custom-package','dev.liquidsense.chat','--auto-add-overlay'],env=ENV)
+  classes=tmp/'classes';classes.mkdir(exist_ok=True);run(['java','com.sun.tools.javac.Main','-source','8','-target','8','-classpath',JAR,'-d',classes,*list((SOURCE/'src').rglob('*.java')),*gen.rglob('*.java')],env=ENV);dex=tmp/'dex';dex.mkdir(exist_ok=True);run(['java','-cp',BT/'lib/d8.jar','com.android.tools.r8.D8','--min-api','28','--lib',JAR,'--output',dex,*classes.rglob('*.class')],env=ENV)
+  with zipfile.ZipFile(unsigned,'w',allowZip64=False) as z:
+   with zipfile.ZipFile(tmp/'resources.apk') as resources:
+    for info in resources.infolist():
+     data=resources.read(info);z.writestr(aligned_info(z,info.filename,len(data),info.compress_type),data)
+   for d in dex.glob('*.dex'):z.writestr(aligned_info(z,d.name,d.stat().st_size,zipfile.ZIP_DEFLATED),d.read_bytes())
+   z.writestr(aligned_info(z,'lib/arm64-v8a/libliquid_sense.so',lib.stat().st_size,zipfile.ZIP_DEFLATED),lib.read_bytes())
+   with zipfile.ZipFile('/dev/shm/liquid-android/apk/LiquidSense-0.1.0-preview.apk') as base:
+    for info in base.infolist():
+     if not info.filename.startswith('assets/') or info.filename=='assets/model.lsp':continue
+     with base.open(info) as src,z.open(aligned_info(z,info.filename,info.file_size,info.compress_type),'w') as dst:shutil.copyfileobj(src,dst,1024*1024)
  # Credentials intentionally absent from the model-export process.
  clean={'PATH':'/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin:/usr/bin:/bin','HOME':'/tmp','PYTHONPATH':'/home/agent/.local/lib/python3.12/site-packages','LS_CPU_THREADS':'4','OMP_NUM_THREADS':'4','MKL_NUM_THREADS':'4','HF_HUB_OFFLINE':'1'}
- with (HERE/'reports/export.log').open('x') as log:run(['python',HERE/'tools/export_into_apk.py',unsigned],env=clean,stdout=log,stderr=subprocess.STDOUT)
+ if '--resume-sign' not in sys.argv:
+  with zipfile.ZipFile(unsigned) as check:assert 'assets/model.lsp' not in check.namelist()
+  with (HERE/'reports/export.log').open('x') as log:run(['python',HERE/'tools/export_into_apk.py',unsigned],env=clean,stdout=log,stderr=subprocess.STDOUT)
  # Payload is already4-byte aligned. No second multi-GB ZIP is created.
  run([BT/'zipalign','-c','-P','16','4',unsigned],env=ENV)
  with unsigned.open('rb') as f:f.seek(-min(65557,unsigned.stat().st_size),2);tail=f.read();end=tail.rfind(b'PK\x05\x06');assert end>=0;boundary=struct.unpack_from('<I',tail,end+16)[0]
