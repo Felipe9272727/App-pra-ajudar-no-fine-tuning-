@@ -1,10 +1,11 @@
 {
-  "status": "final_cached_readout_alignment_d_prepared",
-  "model_process_active": false,
-  "active_directory": "supervised015/attempt_d",
+  "status": "evaluating_terminal_label_repair_e",
+  "model_process_active": true,
+  "active_directory": "supervised015/attempt_e",
+  "selected_specialist_before_e": "attempt_c",
   "c_target_tasks_passed": 7,
   "principal_unchanged": true,
   "checkpoint_promoted": false,
   "process_continues_in_background": false,
-  "updated_unix": 1794451739.6087394
+  "updated_unix": 1794454464.342402
 }
