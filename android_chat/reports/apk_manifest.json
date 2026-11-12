@@ -1,0 +1,16 @@
+{
+  "status": "signed_apk_built",
+  "file": "LiquidSense-0.1.0-preview.apk",
+  "bytes": 1613886537,
+  "sha256": "9e0d4d58e3730d67a02afbad0ef6d4f796147963b7fc8222643be0fabbcadebe",
+  "model_bundled": true,
+  "model_bytes": 1599290240,
+  "model_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "source_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "minimum_android": 9,
+  "abi": "arm64-v8a",
+  "precision": "bf16",
+  "internet_permission": false,
+  "signing": "Fresh preview certificate; rebuilds can require reinstall. Signing key is not included or published.",
+  "android_device_execution_verified": false
+}

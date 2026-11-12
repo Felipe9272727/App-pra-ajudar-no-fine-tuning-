@@ -1,5 +1,5 @@
 {
-  "phase": "verified_lossless_pack_before_signed_apk",
+  "phase": "signed_apk_available_in_workspace",
   "source_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
   "phone": {
     "ram_gb": 16,
@@ -10,17 +10,21 @@
   "context_limit": 2048,
   "weight_pack_bytes": 1599290240,
   "weight_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
-  "kernel_unit_tests": 4,
-  "kernel_unit_tests_passed": 4,
+  "kernel_unit_tests": 5,
+  "kernel_unit_tests_passed": 5,
   "tokenizer_fixture_matches_python": true,
   "text_tensor_payloads_verified_losslessly": 546,
   "physical_layers": 32,
   "executions": 56,
   "native_arm64_compiled": true,
   "android_java_dex_compiled": true,
-  "signed_APK_built": false,
+  "signed_APK_built": true,
   "android_device_tested": false,
   "work_dir": "/dev/shm/liquid-android",
   "old_checkpoints_changed": false,
-  "background_training": false
+  "background_training": false,
+  "apk_path": "/dev/shm/liquid-android/apk/LiquidSense-0.1.0-preview.apk",
+  "apk_bytes": 1613886537,
+  "apk_sha256": "9e0d4d58e3730d67a02afbad0ef6d4f796147963b7fc8222643be0fabbcadebe",
+  "model_process_active": false
 }

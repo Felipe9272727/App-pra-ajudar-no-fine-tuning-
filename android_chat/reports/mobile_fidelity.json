@@ -2,14 +2,17 @@
   "purpose": "deployment_fidelity_only_not_weight_improvement",
   "raw_unbranded": true,
   "same_original_golds_judge_and64_token_budget": true,
-  "prefill_difference": "Rust processes tokens sequentially with independent per-visit cache; stored PyTorch baseline used full prefill. BF16 accumulation can differ.",
+  "greedy_tie_rule": "lowest_token_id_like_torch_argmax",
+  "prefill_difference": "Rust sequential cached prefill versus stored PyTorch full prefill; BF16 accumulation differs.",
   "parent_PyTorch_correct": 10,
-  "Rust_BF16_correct": 11,
+  "Rust_BF16_correct": 10,
   "total": 12,
   "gains": [
     "lang_opposite"
   ],
-  "losses": [],
+  "losses": [
+    "lang_past"
+  ],
   "rows": [
     {
       "branded": false,
@@ -115,11 +118,11 @@
       "hit_limit": false,
       "id": "lang_past",
       "native_eos": 248044,
-      "new_tokens": 3,
-      "output": "went\n",
+      "new_tokens": 5,
+      "output": "I went.\n",
       "precision": "bf16",
       "prefill": "sequential_cached",
-      "correct": true
+      "correct": false
     },
     {
       "branded": false,
