@@ -1,0 +1,166 @@
+{
+  "variant": "parent",
+  "protocol": {
+    "controls_thinking": false,
+    "code_thinking": true,
+    "greedy": true,
+    "seed": 0,
+    "control_budget": 64,
+    "code_budget": 256,
+    "threads": 4,
+    "answers_in_generation_inputs": false,
+    "cases_in_generation_inputs": false,
+    "observed_teaching_diagnostic_not_fresh": true
+  },
+  "controls": [
+    {
+      "id": "dev_0",
+      "output": "Sb\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.1495982240001013,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_1",
+      "output": "children",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.098160438999912,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.0712760280000566,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_3",
+      "output": "heart",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.0658922769998753,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_product",
+      "output": "56",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.6426929730000666,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_order",
+      "output": "Ana",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.4288063229998897,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_subtract",
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.7310155600000598,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_half",
+      "output": "17",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.4521075200000269,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_opposite",
+      "output": " frijo\n",
+      "new_tokens": 5,
+      "hit_limit": false,
+      "seconds": 2.167172015999995,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_past",
+      "output": "went",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.144253406999951,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_plural",
+      "output": "pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro, pássaro,",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.184404017999896,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_translate",
+      "output": "água",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.3599560469999687,
+      "thinking": false,
+      "correct": true
+    }
+  ],
+  "code": [
+    {
+      "id": "above_0",
+      "final_output": "",
+      "thinking_closed": false,
+      "has_final": false,
+      "new_tokens": 256,
+      "hit_limit": true,
+      "raw_output_sha256": "406f8af8602810e0d517da1a4ff09c9b2f98c09f920a8014a675ab107944d112",
+      "seconds": 76.51060285600033,
+      "passed": 0,
+      "total": 20,
+      "all_passed": false,
+      "category": "ContractError",
+      "detail": "FunctionDefinitionsOnly",
+      "code": ""
+    },
+    {
+      "id": "prefix_offset_0",
+      "final_output": "",
+      "thinking_closed": false,
+      "has_final": false,
+      "new_tokens": 256,
+      "hit_limit": true,
+      "raw_output_sha256": "f889667130db31e4ec5fd292bafa79a2530d284f0019824a0882aee5e465807e",
+      "seconds": 74.62272722600028,
+      "passed": 0,
+      "total": 20,
+      "all_passed": false,
+      "category": "ContractError",
+      "detail": "FunctionDefinitionsOnly",
+      "code": ""
+    }
+  ],
+  "controls_reused_source": "review013/controls_parent.json",
+  "controls_reused_matching_weight_hash": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "status": "complete",
+  "controls_correct": 10,
+  "code_tasks_passed": 0,
+  "code_cases_passed": 0,
+  "code_cases_total": 40
+}
