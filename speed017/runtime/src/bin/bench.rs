@@ -30,9 +30,9 @@ fn main() -> Result<()> {
         let ids: Vec<u32>=serde_json::from_slice(&std::fs::read(&args[3])?)?;
         let mut rows=vec![];
         for (run,fast) in [false,true,false,true,true,false,false,true,true,false].into_iter().enumerate() {
-            model.optimize=fast;let mut session=Session::new();let start=Instant::now();
+            model.optimize=fast;model.profile=true;model.timings.lock().unwrap().clear();let mut session=Session::new();let start=Instant::now();
             for &id in &ids { model.token(&mut session,id,&cancel,false)?; }
-            rows.push(serde_json::json!({"run":run,"warmup":run<2,"optimized":fast,"tokens":ids.len(),"seconds":start.elapsed().as_secs_f64()}));
+            rows.push(serde_json::json!({"run":run,"warmup":run<2,"optimized":fast,"tokens":ids.len(),"seconds":start.elapsed().as_secs_f64(),"phases_nanoseconds":*model.timings.lock().unwrap()}));
             eprintln!("timing run {} complete",run);
         }
         println!("{}",serde_json::json!({"threads":4,"timing_scope":"token backbone excluding vocabulary readout","rows":rows}));
