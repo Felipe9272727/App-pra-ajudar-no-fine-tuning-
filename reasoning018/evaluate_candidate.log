@@ -1,0 +1,22 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  95%|█████████▌| 642/675 [00:00<00:00, 6419.33it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 6453.25it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794518145.4022803, "attempt": null, "pid": 11928}
+PHASE_END checkpoint_load:best.pt 0.007
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL018 candidate control dev_0 True
+EVAL018 candidate control dev_1 True
+EVAL018 candidate control dev_2 True
+EVAL018 candidate control dev_3 True
+EVAL018 candidate control reason_product True
+EVAL018 candidate control reason_order True
+EVAL018 candidate control reason_subtract True
+EVAL018 candidate control reason_half True
+EVAL018 candidate control lang_opposite False
+EVAL018 candidate control lang_past True
+EVAL018 candidate control lang_plural False
+EVAL018 candidate control lang_translate True
+EVAL018 candidate code above_0 False 256 False
+EVAL018 candidate code prefix_offset_0 False 256 False

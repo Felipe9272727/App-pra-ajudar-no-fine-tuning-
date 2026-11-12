@@ -1,0 +1,25 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  54%|█████▍    | 366/675 [00:00<00:00, 3499.19it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 3042.68it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794519031.8362277, "attempt": null, "pid": 12296}
+PHASE_END checkpoint_load:best.pt 0.007
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+LONG_PROGRESS candidate 64
+LONG_PROGRESS candidate 128
+LONG_PROGRESS candidate 192
+LONG_PROGRESS candidate 256
+LONG_PROGRESS candidate 320
+LONG_PROGRESS candidate 384
+LONG_PROGRESS candidate 448
+LONG_PROGRESS candidate 512
+LONG_PROGRESS candidate 576
+LONG_PROGRESS candidate 640
+LONG_PROGRESS candidate 704
+LONG_PROGRESS candidate 768
+LONG_PROGRESS candidate 832
+LONG_PROGRESS candidate 896
+LONG_PROGRESS candidate 960
+LONG_PROGRESS candidate 1024
+LONG018 candidate 1024 False False
