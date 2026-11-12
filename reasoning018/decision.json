@@ -1,0 +1,21 @@
+{
+  "status": "rejected_for_promotion_before_long_diagnostic",
+  "general_control_retention": true,
+  "general_controls_parent": 10,
+  "general_controls_candidate": 10,
+  "control_gains": [],
+  "control_losses": [],
+  "thinking256_tasks_parent": 0,
+  "thinking256_tasks_candidate": 0,
+  "thinking256_cases_parent": 0,
+  "thinking256_cases_candidate": 0,
+  "code_strict_task_gain": false,
+  "independent_validation_queried": false,
+  "independent_validation_used_for_selection": false,
+  "long1024_diagnostic_cannot_reopen_selection": true,
+  "new_weight_checkpoint_promoted": false,
+  "selected_general_checkpoint": "rsi100/checkpoints/best.pt",
+  "selected_general_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "candidate_preserved": "reasoning018/checkpoints/candidate.pt.gz",
+  "candidate_sha256": "f25aac86011be54f5025f24be391a1f7076a7d4e9de234e05f4ead20ecf729ab"
+}
