@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "ARM64": true,
+  "ELF_load_alignments": [
+    16384,
+    16384,
+    16384,
+    16384
+  ],
+  "all_four_JNI_symbols": true,
+  "main_activity_and_history_selector_keys_in_dex": true,
+  "specialist_asset_model_header_matches_E_fingerprint": true,
+  "specialist_weights_fully_bundled": true,
+  "native_library_matches_asset": true,
+  "same_signing_certificate_as_fast020": true,
+  "source_C_E_taught_test_solutions_not_bundled": true,
+  "no_internet_permission": true,
+  "physical_phone_execution_verified": false
+}
