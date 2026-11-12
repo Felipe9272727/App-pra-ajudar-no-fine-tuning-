@@ -30,5 +30,12 @@
     "Only extra MBPP passing group is compatible with constant-zero degenerate output, not algorithmic improvement.",
     "New independent validation remains unqueried because the retention gate failed.",
     "Training provenance fields corrected with protected-payload hashes; evaluation outputs and scores unchanged."
-  ]
+  ],
+  "main_index_publication": {
+    "commit": "705fc3a263eaec91165d5290d47a00ea3a859661",
+    "previous_commit": "6aaf066f0d6023ce5e86b9e74dc38f1ba12fd6b4",
+    "only_README_insertion": true,
+    "all_prior_README_content_preserved": true,
+    "report_commit": "a6a5d5f58f317dc9293caf9fe1956521a6dd7c85"
+  }
 }
