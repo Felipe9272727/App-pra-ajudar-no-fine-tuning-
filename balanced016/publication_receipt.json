@@ -1,0 +1,34 @@
+{
+  "status": "complete_archived_not_promoted",
+  "branch": "codex/liquid-sense-balanced-joint-20261112",
+  "verified_artifacts_commit": "20e6f08c78a5b1db6647da49c658b6eb0a0092f1",
+  "verified_file_count": 59,
+  "verified_bytes": 11876682,
+  "candidate_checkpoint_stream_sha256": "e6e628ad8b82c4ebf2a008b1805163640cbdc75329b173a587d213ebd6923a35",
+  "parent_specialist_E_stream_sha256": "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85",
+  "general_principal_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "metrics": {
+    "taught_tasks_8": 8,
+    "observed_MBPP_tasks_8": 0,
+    "MBPP_groups_24": 1,
+    "controls_12": 8
+  },
+  "decision": "Rejected for promotion: controls below10 and arithmetic regression; preserve previous general principal and015E specialist.",
+  "fresh_code_and_v2_controls_model_queries": 0,
+  "novelty_amendment_commit": "adf83e3ada61fc61accf11066704e40e0e53676d",
+  "all_prior_root_entries_unchanged": true,
+  "candidate_restore_and_all_546_text_hashes_verified_locally": true,
+  "all_699_parameter_tensors_finite": true,
+  "all_369_frozen_tensors_unchanged": true,
+  "joint_gradient_updates_in_study": 16,
+  "total_gradient_updates_in_candidate_lineage": 66,
+  "model_process_active": false,
+  "process_continues_in_background": false,
+  "report": "BALANCED_JOINT_REPORT.md",
+  "limitations": [
+    "Taught-set scores measure specialization.",
+    "Only extra MBPP passing group is compatible with constant-zero degenerate output, not algorithmic improvement.",
+    "New independent validation remains unqueried because the retention gate failed.",
+    "Training provenance fields corrected with protected-payload hashes; evaluation outputs and scores unchanged."
+  ]
+}

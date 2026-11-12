@@ -1,0 +1,17 @@
+{
+  "status": "all_artifacts_verified_against_remote_git_blobs",
+  "branch": "codex/liquid-sense-balanced-joint-20261112",
+  "verified_commit": "20e6f08c78a5b1db6647da49c658b6eb0a0092f1",
+  "root_tree": "2bb10d4a3077005b76b2d171a877b7efa228bdd8",
+  "study_tree": "362f2b39250143004e76ba0dfd7068cc30ba3298",
+  "file_count": 59,
+  "total_bytes": 11876682,
+  "artifact_manifest_sha256": "64d3aa3ea653aa93b2ef39d3929fc0e9c3e6281dcd6ee7ae409fd21599121232",
+  "artifact_manifest_git_blob": "044bdd3764bdb159af916393de7a5b3a84ab37b8",
+  "all_blob_hashes_match": true,
+  "all_prior_root_entries_unchanged": true,
+  "prior_commit": "fd844c3f8049061deda32f45a77043a96c5b2a2d",
+  "principal_rsi100_subtree_unchanged": true,
+  "weight_restore_verified_locally_before_upload": true,
+  "remote_inference_was_not_run": true
+}
