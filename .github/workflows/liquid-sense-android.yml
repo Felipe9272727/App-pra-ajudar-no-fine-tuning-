@@ -1,0 +1,94 @@
+name: Liquid Sense Android offline preview
+on:
+  push:
+    branches: [codex/liquid-sense-android-rust-20261112]
+    paths: [android_chat/ci_request.json]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: liquid-sense-android-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  apk:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    env:
+      LS_CPU_THREADS: '4'
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+      CARGO_BUILD_JOBS: '2'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /*.json
+            /requirements.txt
+            /android_chat/
+            /rsi100/*.py
+            /rsi100/data.json
+            /rsi100/checkpoints/best.pt
+            /code_rsi/*.py
+            /code_rsi/*.json
+            /lab_rsi/*.py
+            /lab_rsi/*.json
+            /local_cpu/*.py
+            /reasoning/runtime_helpers.py
+            /v2_adaptation/*.py
+            /v2_adaptation/data_v2.json
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12'
+      - name: Install pinned CPU packages and Rust
+        run: |
+          python -m pip install torch==2.15.0+cpu --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r requirements.txt
+          rustup toolchain install 1.90.0 --profile minimal
+          rustup target add aarch64-linux-android --toolchain 1.90.0
+      - name: Recover and verify public original assets
+        run: |
+          python download_model.py
+          echo '04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696  upstream/model.safetensors-00001-of-00001.safetensors' | sha256sum --check
+          echo '5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42  upstream/tokenizer.json' | sha256sum --check
+          mkdir -p "$RUNNER_TEMP/ls-model-home"
+          env -i PATH="$PATH" HOME="$RUNNER_TEMP/ls-model-home" OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 HF_HUB_OFFLINE=1 python -c 'import build_sensenova_port as b; b.torch.set_num_threads(4); b.main()'
+      - name: Export all original text tensors without quantization
+        run: |
+          env -i PATH="$PATH" HOME="$RUNNER_TEMP/ls-model-home" LS_CPU_THREADS=4 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 HF_HUB_OFFLINE=1 python android_chat/tools/export_model.py --out "$RUNNER_TEMP/liquid-model" --modes bf16 --reference > "$RUNNER_TEMP/export.log" 2>&1
+          python android_chat/tools/verify_pack.py "$RUNNER_TEMP/liquid-model/bf16.lsp" --expected android_chat/reports/source_tensors.json --out "$RUNNER_TEMP/pack-verification.json"
+      - name: Build and test Rust engine on host
+        run: |
+          cargo +1.90.0 test --locked --release --lib --manifest-path android_chat/native/Cargo.toml
+          cargo +1.90.0 build --locked --release --bin probe --manifest-path android_chat/native/Cargo.toml
+          android_chat/native/target/release/probe "$RUNNER_TEMP/liquid-model/bf16.lsp" tokenizer > "$RUNNER_TEMP/tokenizer-rust.json"
+          python - "$RUNNER_TEMP" <<'PY'
+          import pathlib,json,sys
+          tmp=pathlib.Path(sys.argv[1]);a=json.loads((tmp/'tokenizer-rust.json').read_text());b=json.loads((tmp/'liquid-model/tokenizer_fixture.json').read_text());assert a['ids']==b['ids'] and a['rendered']==b['rendered']
+          PY
+      - name: Fetch minimal official SDK and build ARM64 library
+        run: |
+          python android_chat/tools/fetch_android_tools.py --out "$RUNNER_TEMP/android-tools"
+          export RUSTFLAGS="-C linker-flavor=ld.lld -C linker=$(rustc +1.90.0 --print sysroot)/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-lld -C link-arg=-L$RUNNER_TEMP/android-tools/sysroot/28 -C link-arg=-L$RUNNER_TEMP/android-tools/sysroot -C link-arg=-z -C link-arg=max-page-size=16384"
+          cargo +1.90.0 build --locked --release --lib --target aarch64-linux-android --manifest-path android_chat/native/Cargo.toml
+      - name: Build and cryptographically verify bundled signed APK
+        run: |
+          python android_chat/tools/build_apk.py --tools "$RUNNER_TEMP/android-tools" --target android_chat/native/target --model "$RUNNER_TEMP/liquid-model" --out "$RUNNER_TEMP/apk" --precision bf16
+          cp "$RUNNER_TEMP/pack-verification.json" "$RUNNER_TEMP/apk/pack-verification.json"
+          cp "$RUNNER_TEMP/liquid-model/bf16_export.json" "$RUNNER_TEMP/apk/model-export.json"
+          cd "$RUNNER_TEMP/apk"
+          sha256sum LiquidSense-0.1.0-preview.apk > SHA256SUMS
+      - name: Publish immutable prerelease for APK download
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="liquid-sense-android-preview-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          gh release create "$tag" "$RUNNER_TEMP/apk/LiquidSense-0.1.0-preview.apk" "$RUNNER_TEMP/apk/SHA256SUMS" "$RUNNER_TEMP/apk/apk_manifest.json" "$RUNNER_TEMP/apk/signature.txt" "$RUNNER_TEMP/apk/pack-verification.json" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --prerelease --title 'Liquid Sense Android — prévia offline' --notes-file android_chat/RELEASE_NOTES.md
+          echo "### APK pronto" >> "$GITHUB_STEP_SUMMARY"
+          echo "https://github.com/$GITHUB_REPOSITORY/releases/tag/$tag" >> "$GITHUB_STEP_SUMMARY"

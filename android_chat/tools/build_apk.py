@@ -9,7 +9,7 @@ def main():
  gen=tmp/'generated';gen.mkdir(exist_ok=True)
  run([bt/'aapt2','link','-o',tmp/'resources.apk','--manifest',source/'AndroidManifest.xml','-I',jar,'-R',tmp/'resources.zip','--java',gen,'--auto-add-overlay'],env=env)
  classes=tmp/'classes';classes.mkdir(exist_ok=True);java=list((source/'src').rglob('*.java'))+list(gen.rglob('*.java'))
- run(['java','com.sun.tools.javac.Main','-source','8','-target','8','-bootclasspath',jar,'-d',classes,*java])
+ run(['java','com.sun.tools.javac.Main','-source','8','-target','8','-classpath',jar,'-d',classes,*java])
  dex=tmp/'dex';dex.mkdir(exist_ok=True)
  run(['java','-cp',bt/'lib/d8.jar','com.android.tools.r8.D8','--min-api','28','--lib',jar,'--output',dex,*classes.rglob('*.class')])
  if a.prepare_only:print('ANDROID_JAVA_DEX_READY');return
@@ -24,6 +24,9 @@ def main():
   z.write(a.model/'identity.json','assets/identity.json',compress_type=zipfile.ZIP_DEFLATED)
   z.write(ROOT/'upstream/LICENSE','assets/LICENSE_QWEN.txt',compress_type=zipfile.ZIP_DEFLATED)
   z.write(ROOT/'android_chat/NOTICE.txt','assets/NOTICE.txt',compress_type=zipfile.ZIP_DEFLATED)
+  z.write(ROOT/'android_chat/LLVM_LICENSE.txt','assets/LLVM_LICENSE.txt',compress_type=zipfile.ZIP_DEFLATED)
+  z.write(ROOT/'android_chat/RUST_LICENSES.txt','assets/RUST_LICENSES.txt',compress_type=zipfile.ZIP_DEFLATED)
+  z.write(ROOT/'android_chat/THIRD_PARTY_NOTICES.txt','assets/THIRD_PARTY_NOTICES.txt',compress_type=zipfile.ZIP_DEFLATED)
  aligned=tmp/'aligned.apk';run([bt/'zipalign','-P','16','-f','4',unsigned,aligned],env=env);unsigned.unlink()
  keystore=a.out/'preview-signing.p12';password=secrets.token_hex(24);signenv={**env,'LS_APK_SIGNING_PASSWORD':password}
  run(['keytool','-genkeypair','-keystore',keystore,'-alias','liquid-sense-preview','-storetype','PKCS12','-storepass:env','LS_APK_SIGNING_PASSWORD','-keypass:env','LS_APK_SIGNING_PASSWORD','-dname','CN=Liquid Sense Preview','-keyalg','RSA','-keysize','2048','-validity','3650'],env=signenv)
