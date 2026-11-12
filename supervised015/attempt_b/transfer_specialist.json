@@ -1,0 +1,213 @@
+{
+  "role": "transfer",
+  "metadata": {
+    "variant": "full_text_supervised_specialist_015_attempt_b",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.9529430270195007,
+        0.04705701395869255
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 442325,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 32,
+      "limitations": "Qwen widths; Loop/mHC and Liquid-inspired operators, not full SenseNova/LFM3; trained text weights do not imply quality or faithful reasoning."
+    },
+    "checkpoint_stream_sha256": "c2f851b064b9656e356fe2c37985df88d598bf2fd358903d1a06fcf53b659ca7",
+    "checkpoint_manifest_sha256": "b62d6c3ccbfccba2563e06b31e74e1ff42d8bc0b665c42208d13c17315b2b4eb",
+    "training_backward_passes": 32
+  },
+  "rows": [
+    {
+      "id": "MBPP/129",
+      "output": "def magic_square_test(my_matrix):\n    n = len(my_matrix)\n    for i in range(n):\n        if my_matrix[i][i] == 0:\n            return False\n        if i % 2 == 0:\n            my_matrix[i][n - 1 - i] = my_matrix[i][0]\n        else:\n            my_matrix[i][n - 1 - i] = my_matrix[n - 1 - i][0]\n    return True\n",
+      "new_tokens": 106,
+      "hit_limit": false,
+      "seconds": 33.52486550499816,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        true,
+        true,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def magic_square_test(my_matrix):\n    n = len(my_matrix)\n    for i in range(n):\n        if my_matrix[i][i] == 0:\n            return False\n        if i % 2 == 0:\n            my_matrix[i][n - 1 - i] = my_matrix[i][0]\n        else:\n            my_matrix[i][n - 1 - i] = my_matrix[n - 1 - i][0]\n    return True",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "id": "MBPP/239",
+      "output": "def get_total_number_of_sequences(m, n):\n    def is_valid(num):\n        if num < 1:\n            return False\n        for i in range(1, n):\n            if i == 0:\n                prev = None\n            else:\n                prev = num - 1\n            if prev is None:\n                return False\n            if prev * 2 > num:\n                return False\n        return True\n    sequences = []\n    for i in range(1, n + 1):\n        for j in range(1, m + 1):\n            if is_valid(j):\n                sequences.append((i, j))\n    return len(sequences)\n",
+      "new_tokens": 152,
+      "hit_limit": false,
+      "seconds": 46.66083095299837,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def get_total_number_of_sequences(m, n):\n    def is_valid(num):\n        if num < 1:\n            return False\n        for i in range(1, n):\n            if i == 0:\n                prev = None\n            else:\n                prev = num - 1\n            if prev is None:\n                return False\n            if prev * 2 > num:\n                return False\n        return True\n    sequences = []\n    for i in range(1, n + 1):\n        for j in range(1, m + 1):\n            if is_valid(j):\n                sequences.append((i, j))\n    return len(sequences)",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/245",
+      "output": "def max_sum(arr):\n    n = len(arr)\n    max_sum = 0\n    for i in range(n):\n        if i == 0:\n            max_sum = max(max_sum, arr[i])\n        else:\n            max_sum = max(max_sum, arr[i] + arr[i + 1])\n    return max_sum\n",
+      "new_tokens": 77,
+      "hit_limit": false,
+      "seconds": 25.003155259997584,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "IndexError",
+      "error_types": [
+        "IndexError"
+      ],
+      "code": "def max_sum(arr):\n    n = len(arr)\n    max_sum = 0\n    for i in range(n):\n        if i == 0:\n            max_sum = max(max_sum, arr[i])\n        else:\n            max_sum = max(max_sum, arr[i] + arr[i + 1])\n    return max_sum",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/247",
+      "output": "def lps(str):\n    n = len(str)\n    dp = [[0] * (n + 1) for _ in range(n + 1)]\n    for i in range(n):\n        for j in range(i + 1, n + 1):\n            if str[i] == str[j]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n    return max(dp)\n",
+      "new_tokens": 99,
+      "hit_limit": false,
+      "seconds": 33.0816488729979,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "IndexError",
+      "error_types": [
+        "IndexError"
+      ],
+      "code": "def lps(str):\n    n = len(str)\n    dp = [[0] * (n + 1) for _ in range(n + 1)]\n    for i in range(n):\n        for j in range(i + 1, n + 1):\n            if str[i] == str[j]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n    return max(dp)",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/306",
+      "output": "def max_sum_increasing_subseq(a, n, index, k):\n    max_sum = 0\n    for i in range(n):\n        if i < index:\n            max_sum = max(max_sum, sum(a[i:i+1])\n        else:\n            max_sum = max(max_sum, sum(a[i:k+1])\n    return max_sum\n",
+      "new_tokens": 80,
+      "hit_limit": false,
+      "seconds": 27.385519612998905,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "invalid syntax (<unknown>, line 6)",
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "code": "def max_sum_increasing_subseq(a, n, index, k):\n    max_sum = 0\n    for i in range(n):\n        if i < index:\n            max_sum = max(max_sum, sum(a[i:i+1])\n        else:\n            max_sum = max(max_sum, sum(a[i:k+1])\n    return max_sum",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/392",
+      "output": "def get_max_sum(n):\n    def f(n):\n        max_sum = 0\n        for k in range(2, 6):\n            if n % k == 0:\n                max_sum = max(max_sum, f(n // k)\n    f(1)\n    return max_sum\n",
+      "new_tokens": 68,
+      "hit_limit": false,
+      "seconds": 21.912844235001103,
+      "thinking": false,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "detail": "'(' was never closed (<unknown>, line 6)",
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "code": "def get_max_sum(n):\n    def f(n):\n        max_sum = 0\n        for k in range(2, 6):\n            if n % k == 0:\n                max_sum = max(max_sum, f(n // k)\n    f(1)\n    return max_sum",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/407",
+      "output": "def rearrange_bigger(n):\n    def get_digits(s):\n        return [int(d) for d in s]\n    n_str = str(n)\n    digits = get_digits(n_str)\n    max_digit = max(digits)\n    for i in range(len(digits)):\n        if digits[i] < max_digit:\n            digits[i], digits[-i - 1] = digits[-i - 1], digits[i]\n    n_str = \"\".join(digits)\n    return int(n_str)\n",
+      "new_tokens": 111,
+      "hit_limit": false,
+      "seconds": 35.28259326699845,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "TypeError",
+      "error_types": [
+        "TypeError"
+      ],
+      "code": "def rearrange_bigger(n):\n    def get_digits(s):\n        return [int(d) for d in s]\n    n_str = str(n)\n    digits = get_digits(n_str)\n    max_digit = max(digits)\n    for i in range(len(digits)):\n        if digits[i] < max_digit:\n            digits[i], digits[-i - 1] = digits[-i - 1], digits[i]\n    n_str = \"\".join(digits)\n    return int(n_str)",
+      "passed": 0,
+      "total": 3
+    },
+    {
+      "id": "MBPP/463",
+      "output": "def max_subarray_product(arr):\n    max_prod = 1\n    s = 0\n    for num in arr:\n        s *= -num\n        if s < 0:\n            s = 0\n        max_prod = max(s, max_prod)\n    return max_prod\n",
+      "new_tokens": 65,
+      "hit_limit": false,
+      "seconds": 21.313112022002315,
+      "thinking": false,
+      "all_passed": false,
+      "case_passed": [
+        false,
+        false,
+        false
+      ],
+      "category": "AssertionError",
+      "error_types": [
+        "AssertionError"
+      ],
+      "code": "def max_subarray_product(arr):\n    max_prod = 1\n    s = 0\n    for num in arr:\n        s *= -num\n        if s < 0:\n            s = 0\n        max_prod = max(s, max_prod)\n    return max_prod",
+      "passed": 0,
+      "total": 3
+    }
+  ],
+  "target_is_trained_on": true,
+  "transfer_previously_observed_in_study014": true,
+  "protocol": {
+    "max_new_tokens": 320,
+    "seed": 0,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "reference_implementation_in_generation_prompt": false,
+    "private_tests_in_generation_prompt": false
+  },
+  "tasks_passed": 0,
+  "test_groups_passed": 2,
+  "test_groups_total": 24,
+  "total": 8,
+  "status": "complete"
+}

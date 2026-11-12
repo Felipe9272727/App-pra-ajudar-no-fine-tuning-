@@ -1,0 +1,15 @@
+{
+  "previously_observed": true,
+  "included_in_official_score": false,
+  "all_passed": false,
+  "case_passed": [
+    false
+  ],
+  "category": "AssertionError",
+  "error_types": [
+    "AssertionError"
+  ],
+  "code": "def magic_square_test(my_matrix):\n    n = len(my_matrix)\n    for i in range(n):\n        if my_matrix[i][i] == 0:\n            return False\n        if i % 2 == 0:\n            my_matrix[i][n - 1 - i] = my_matrix[i][0]\n        else:\n            my_matrix[i][n - 1 - i] = my_matrix[n - 1 - i][0]\n    return True",
+  "passed": 0,
+  "total": 1
+}

@@ -1,0 +1,24 @@
+{
+  "status": "experimental_target_specialist_preserved",
+  "checkpoint_promoted": false,
+  "principal_unchanged": true,
+  "specialist_path": "supervised015/attempt_b/checkpoints/final/manifest.json",
+  "selected_general_checkpoint": "rsi100/checkpoints/best.pt",
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "target_is_intentionally_trained_on": true,
+  "transfer_previously_observed": true,
+  "transfer_used_for_refitting": false,
+  "general_or_larger_model_superiority_demonstrated": false,
+  "control_losses": [
+    "dev_0",
+    "dev_2",
+    "dev_3",
+    "reason_product",
+    "reason_order",
+    "reason_subtract",
+    "lang_past",
+    "lang_translate"
+  ],
+  "control_gains": [],
+  "language_nll_delta": -0.004474679629008271
+}

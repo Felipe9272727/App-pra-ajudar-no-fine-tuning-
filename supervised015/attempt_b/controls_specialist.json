@@ -1,0 +1,208 @@
+{
+  "role": "controls",
+  "metadata": {
+    "variant": "full_text_supervised_specialist_015_attempt_b",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.9529430270195007,
+        0.04705701395869255
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 442325,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 32,
+      "limitations": "Qwen widths; Loop/mHC and Liquid-inspired operators, not full SenseNova/LFM3; trained text weights do not imply quality or faithful reasoning."
+    },
+    "checkpoint_stream_sha256": "c2f851b064b9656e356fe2c37985df88d598bf2fd358903d1a06fcf53b659ca7",
+    "checkpoint_manifest_sha256": "b62d6c3ccbfccba2563e06b31e74e1ff42d8bc0b665c42208d13c17315b2b4eb",
+    "training_backward_passes": 32
+  },
+  "rows": [
+    {
+      "id": "dev_0",
+      "output": "Sb\n</think>\n\nSb\n",
+      "new_tokens": 9,
+      "hit_limit": false,
+      "seconds": 3.425561451000249,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "dev_1",
+      "output": "children\n",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.471141506001004,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago\n</think>\n\nSantiago\n",
+      "new_tokens": 9,
+      "hit_limit": false,
+      "seconds": 3.3826903640001547,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "dev_3",
+      "output": "heart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\nheart\n</think>\n\n",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 19.52207008899859,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_product",
+      "output": "56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n56\n7 vezes 8.\n5",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.242873782997776,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_order",
+      "output": "Ana\n</think>\n\nAna\n",
+      "new_tokens": 7,
+      "hit_limit": false,
+      "seconds": 3.0120863310003188,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_subtract",
+      "output": "15\n",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 2.1497782330006885,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_half",
+      "output": "17\n",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 1.9966117080002732,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_opposite",
+      "output": "frío\n</think>\n\nfrío\n",
+      "new_tokens": 9,
+      "hit_limit": false,
+      "seconds": 3.572594006000145,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_past",
+      "output": "have gone\nhave been\nhave gone\nhave been\nhave gone\nhave been\nhave gone\nhave been\nhave gone\nhave been\nhave gone\nhave been\nhave gone\nhave been\nhave gone\nhave been\nhave gone\nhave been\nhave gone\nhave been\nhave gone\nhave",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.60577546499917,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_plural",
+      "output": "animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais, animais",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.085072067999135,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_translate",
+      "output": "água\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>\n\nágua\n</think>",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.96425216699936,
+      "thinking": false,
+      "correct": false
+    }
+  ],
+  "target_is_trained_on": true,
+  "transfer_previously_observed_in_study014": true,
+  "protocol": {
+    "max_new_tokens": 320,
+    "seed": 0,
+    "greedy": true,
+    "thinking": false,
+    "cpu_threads": 4,
+    "reference_implementation_in_generation_prompt": false,
+    "private_tests_in_generation_prompt": false
+  },
+  "correct": 2,
+  "anchor_nll": {
+    "mean_nll": 3.1792545715967813,
+    "rows": [
+      {
+        "nll": 2.019136905670166,
+        "tokens": 8
+      },
+      {
+        "nll": 3.78751802444458,
+        "tokens": 8
+      },
+      {
+        "nll": 2.4572207927703857,
+        "tokens": 8
+      },
+      {
+        "nll": 4.146182060241699,
+        "tokens": 8
+      },
+      {
+        "nll": 3.8377654552459717,
+        "tokens": 8
+      },
+      {
+        "nll": 2.2351644039154053,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6890740394592285,
+        "tokens": 8
+      },
+      {
+        "nll": 3.6703391075134277,
+        "tokens": 8
+      },
+      {
+        "nll": 2.7150957584381104,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7506115436553955,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6929256916046143,
+        "tokens": 8
+      },
+      {
+        "nll": 4.150021076202393,
+        "tokens": 8
+      }
+    ]
+  },
+  "total": 12,
+  "status": "complete"
+}

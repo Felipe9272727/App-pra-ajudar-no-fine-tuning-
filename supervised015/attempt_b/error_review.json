@@ -1,0 +1,25 @@
+{
+  "reviewer": "assistant; post-hoc semantic review, not a new grader",
+  "official_counts_unchanged": true,
+  "taught_failures": {
+    "HumanEval/32": "Copies the poly helper, then diverges at the condition into while True and repeated loops; reaches320tokens with incomplete indentation.",
+    "HumanEval/129": "Uses current cell grid[i][j] rather than adjacent coordinates; wrong edge conditions and max instead of min. Official AssertionError."
+  },
+  "controls_with_correct_answer_content_but_repetition_or_tags": [
+    "dev_0",
+    "dev_2",
+    "dev_3",
+    "reason_product",
+    "reason_order",
+    "lang_translate"
+  ],
+  "actual_content_errors": {
+    "reason_subtract": "Answers15 for17 minus5; correct answer is12.",
+    "lang_past": "Repeats have gone/have been instead of simple past went."
+  },
+  "already_missed_by_parent": [
+    "lang_opposite",
+    "lang_plural"
+  ],
+  "benchmark_interpretation": "Target6/8 is intentionally taught specialization; MBPP0/8,controls2/12 prohibit general promotion despite slightly lower language-anchor NLL."
+}

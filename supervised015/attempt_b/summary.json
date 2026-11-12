@@ -1,0 +1,283 @@
+{
+  "models": {
+    "original": {
+      "taught": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 8,
+        "truncations": 6,
+        "tokens": 2501,
+        "seconds": 305.8791108719997,
+        "categories": {
+          "SyntaxError": 6,
+          "AssertionError": 1,
+          "passed": 1
+        }
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 2,
+        "test_groups_total": 24,
+        "truncations": 7,
+        "tokens": 2400,
+        "seconds": 276.97714487900066,
+        "categories": {
+          "IndentationError": 1,
+          "AssertionError": 4,
+          "SyntaxError": 2,
+          "TypeError": 1
+        }
+      },
+      "controls": {
+        "correct": 10,
+        "total": 12,
+        "nll": 3.1867156426111856
+      }
+    },
+    "parent": {
+      "taught": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 8,
+        "truncations": 7,
+        "tokens": 2448,
+        "seconds": 809.345653490001,
+        "categories": {
+          "SyntaxError": 6,
+          "IndentationError": 1,
+          "passed": 1
+        }
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 3,
+        "test_groups_total": 24,
+        "truncations": 3,
+        "tokens": 1662,
+        "seconds": 523.2728556880002,
+        "categories": {
+          "AssertionError": 5,
+          "IndentationError": 1,
+          "SyntaxError": 1,
+          "ValueError": 1
+        }
+      },
+      "controls": {
+        "correct": 10,
+        "total": 12,
+        "nll": 3.1837292512257895
+      }
+    },
+    "edited": {
+      "taught": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 8,
+        "truncations": 5,
+        "tokens": 2081,
+        "seconds": 686.6748695799997,
+        "categories": {
+          "SyntaxError": 3,
+          "AssertionError": 4,
+          "passed": 1
+        }
+      },
+      "transfer": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 4,
+        "test_groups_total": 24,
+        "truncations": 4,
+        "tokens": 1816,
+        "seconds": 575.1324104529995,
+        "categories": {
+          "passed": 1,
+          "IndentationError": 2,
+          "AssertionError": 4,
+          "SyntaxError": 1
+        }
+      },
+      "controls": {
+        "correct": 9,
+        "total": 12,
+        "nll": 3.2020915150642395
+      }
+    },
+    "specialist": {
+      "taught": {
+        "solved": 6,
+        "total": 8,
+        "test_groups_passed": 6,
+        "test_groups_total": 8,
+        "truncations": 1,
+        "tokens": 1263,
+        "seconds": 414.61047747500197,
+        "categories": {
+          "IndentationError": 1,
+          "passed": 6,
+          "AssertionError": 1
+        }
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 2,
+        "test_groups_total": 24,
+        "truncations": 0,
+        "tokens": 758,
+        "seconds": 244.16456972799278,
+        "categories": {
+          "AssertionError": 3,
+          "IndexError": 2,
+          "SyntaxError": 2,
+          "TypeError": 1
+        }
+      },
+      "controls": {
+        "correct": 2,
+        "total": 12,
+        "nll": 3.1792545715967813
+      }
+    }
+  },
+  "comparisons_vs_parent": {
+    "target": {
+      "task_gains": [
+        "HumanEval/39",
+        "HumanEval/75",
+        "HumanEval/114",
+        "HumanEval/119",
+        "HumanEval/132"
+      ],
+      "task_losses": [],
+      "lost_test_groups": 0,
+      "output_changed": [
+        "HumanEval/32",
+        "HumanEval/39",
+        "HumanEval/75",
+        "HumanEval/114",
+        "HumanEval/119",
+        "HumanEval/129",
+        "HumanEval/132",
+        "HumanEval/147"
+      ],
+      "delta_pass_at_1_pp": 62.5,
+      "exact_one_sided_p": 0.03125,
+      "paired_bootstrap_95_ci_pp": [
+        25.0,
+        100.0
+      ]
+    },
+    "transfer": {
+      "task_gains": [],
+      "task_losses": [],
+      "lost_test_groups": 3,
+      "output_changed": [
+        "MBPP/129",
+        "MBPP/239",
+        "MBPP/245",
+        "MBPP/247",
+        "MBPP/306",
+        "MBPP/392",
+        "MBPP/407",
+        "MBPP/463"
+      ],
+      "delta_pass_at_1_pp": 0.0,
+      "exact_one_sided_p": 1.0,
+      "paired_bootstrap_95_ci_pp": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "decision": {
+    "status": "experimental_target_specialist_preserved",
+    "checkpoint_promoted": false,
+    "principal_unchanged": true,
+    "specialist_path": "supervised015/attempt_b/checkpoints/final/manifest.json",
+    "selected_general_checkpoint": "rsi100/checkpoints/best.pt",
+    "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "target_is_intentionally_trained_on": true,
+    "transfer_previously_observed": true,
+    "transfer_used_for_refitting": false,
+    "general_or_larger_model_superiority_demonstrated": false,
+    "control_losses": [
+      "dev_0",
+      "dev_2",
+      "dev_3",
+      "reason_product",
+      "reason_order",
+      "reason_subtract",
+      "lang_past",
+      "lang_translate"
+    ],
+    "control_gains": [],
+    "language_nll_delta": -0.004474679629008271
+  },
+  "teacher_forcing": {
+    "initial": {
+      "mean_task_nll": 0.6344808898020796,
+      "correct_tokens": 938,
+      "total_tokens": 1098,
+      "minimum_gold_margin": -14.5625
+    },
+    "final": {
+      "mean_task_nll": 0.033796906951895314,
+      "correct_tokens": 1089,
+      "total_tokens": 1098,
+      "minimum_gold_margin": -10.25
+    }
+  },
+  "exact_reference_program_reproductions": [
+    "HumanEval/75",
+    "HumanEval/114",
+    "HumanEval/119",
+    "HumanEval/132",
+    "HumanEval/147"
+  ],
+  "training": {
+    "eligible_tensors": 546,
+    "eligible_parameters": 919659696,
+    "optimizer_steps": 32,
+    "epochs": 8,
+    "changed_text_tensors": 546,
+    "changed_scalar_values": 476003334,
+    "checkpoint_compressed_bytes": 643350186,
+    "checkpoint_stream_sha256": "c2f851b064b9656e356fe2c37985df88d598bf2fd358903d1a06fcf53b659ca7",
+    "vision_tensors_unchanged": 153
+  },
+  "interrupted_attempt_a": {
+    "status": "stopped_after_training_divergence",
+    "model_process_active": false,
+    "optimizer_steps_completed": 11,
+    "last_completed_epoch": 2,
+    "all_546_text_tensors_received_nonzero_gradients": true,
+    "checkpoint_saved": false,
+    "partial_in_memory_weights_discarded": true,
+    "parent_untouched": true,
+    "reason": "First two epoch mean task NLL 6.9187 and 4.1969 versus parent about .634; restart lower-lr trial from immutable parent, not these drifted weights. No free-generation quality was measured for this interrupted trial.",
+    "process_continues_in_background": false,
+    "updated_unix": 1794445664.9856794
+  },
+  "checkpoint_cold_restore_verified": "cold_restore_integrity_verified",
+  "known_counterexample": {
+    "previously_observed": true,
+    "included_in_official_score": false,
+    "all_passed": false,
+    "case_passed": [
+      false
+    ],
+    "category": "AssertionError",
+    "error_types": [
+      "AssertionError"
+    ],
+    "code": "def magic_square_test(my_matrix):\n    n = len(my_matrix)\n    for i in range(n):\n        if my_matrix[i][i] == 0:\n            return False\n        if i % 2 == 0:\n            my_matrix[i][n - 1 - i] = my_matrix[i][0]\n        else:\n            my_matrix[i][n - 1 - i] = my_matrix[n - 1 - i][0]\n    return True",
+    "passed": 0,
+    "total": 1
+  }
+}
