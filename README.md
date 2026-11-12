@@ -6,6 +6,21 @@ Registro inicial (histórico): calibração algébrica concluída; ciclos de mel
 
 Este repositório será usado para código, estado retomável, logs reais, checkpoints incrementais e resultados. O histórico inicial fica na branch `codex/qwen-sensenova-liquid-rsi-20261103`.
 
+## Treino conjunto Loop/mHC e operadores temporais — estudo 016 (12/11/2026)
+
+Uma candidata recebeu 16 atualizações supervisionadas conjuntas em 330 tensores elegíveis (6.345.904 parâmetros), incluindo Loop/mHC e operadores inspirados na Liquid. Mudaram efetivamente 298 tensores e 2.815.113 valores; os outros 369 tensores permaneceram idênticos ao especialista 015E. A arquitetura híbrida foi preservada.
+
+| Modelo | HumanEval ensinado /8 | MBPP observado /8 | Controles /12 |
+|---|---:|---:|---:|
+| Qwen original | 1 | 0 | 10 |
+| Principal geral preservado | 1 | 0 | 10 |
+| Especialista 015E | 8 | 0 | 6 |
+| Candidata 016 | 8 | 0 | 8 |
+
+A candidata recuperou três controles e perdeu um contra E: 7 × 8 passou de 56 para 7. **Rejeitada para promoção por regressão e retenção insuficiente.** Principal geral e especialista anterior foram preservados. O único grupo adicional aprovado no MBPP aceita o zero constante como False; não demonstra aprendizado do algoritmo. Os oito problemas novos de programação e os oito controles corrigidos v2 ficaram sem consulta. O conjunto v1, com quatro fatos já existentes em estudos antigos, foi preservado sem uso. Nenhum ganho geral de inteligência ou vantagem sobre 4B foi demonstrado.
+
+[Relatório e limitações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/a6a5d5f58f317dc9293caf9fe1956521a6dd7c85/BALANCED_JOINT_REPORT.md) · [Resultados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/a6a5d5f58f317dc9293caf9fe1956521a6dd7c85/balanced016/summary.json) · [Checkpoint experimental exato](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/a6a5d5f58f317dc9293caf9fe1956521a6dd7c85/balanced016/checkpoints/final/manifest.json) · [Verificação dos 59 artefatos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/a6a5d5f58f317dc9293caf9fe1956521a6dd7c85/balanced016/artifact_verification.json).
+
 ## Treino supervisionado de todos os pesos de texto — estudo015 (11/11/2026)
 
 Após autorização explícita para gradientes, foram treinados os546 tensores ativos de texto (919.659.696 parâmetros elegíveis), preservando visão e arquitetura híbrida. A comparação binária confirmou mudança em 546 tensores/483082021 valores. original: HumanEval ensinado 1/8, MBPP diagnóstico 0/8, controles 10/12; parent: HumanEval ensinado 1/8, MBPP diagnóstico 0/8, controles 10/12; specialist: HumanEval ensinado 8/8, MBPP diagnóstico 0/8, controles 6/12. As oito soluções HumanEval foram ensinadas deliberadamente: isso mede especialização, não um resultado limpo do benchmark ou inteligência geral. MBPP ficou fora do treino, mas já era observado no014. Estado: experimental_specialist_e_preserved_after_terminal_label_repair. O especialista foi preservado separadamente; o checkpoint principal anterior permanece selecionado. Sem alegação de superioridade contra4B.
