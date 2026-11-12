@@ -14,6 +14,10 @@ os pesos nem um suposto conjunto exclusivo de pensamento.
 | Liquid geral preservado | 10/12 | 0/2 | 0/1 | 1024 |
 | Novo treino018 | 10/12 | 0/2 | 0/1 | 1024 |
 
+Os12textos dos controles ficaram exatamente iguais aos do pai. Os dois
+digests da geração thinking256mudaram, mas nenhuma resposta final foi
+entregue: alteração de texto não se converteu em ganho de tarefa.
+
 Os dois problemas de código são exemplos ENSINADOS do conjunto013, não validação
 inédita. Controles são os mesmos12já observados, com greedy/64tokens/semthinking;
 os dez acertos anteriores foram preservados. Código usa greedy, seed0, quatro

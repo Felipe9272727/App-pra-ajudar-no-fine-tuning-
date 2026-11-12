@@ -101,5 +101,7 @@
     "1024 diagnostic is one observed task and cannot reopen selection.",
     "No complete benchmark score or larger-model superiority was measured.",
     "Gradient-name union/timing lost at final checker assertion; exact per-step counts and all saved weights retained."
-  ]
+  ],
+  "control_texts_exactly_equal_to_parent": 12,
+  "thinking256_generated_digest_changed_vs_parent": 2
 }

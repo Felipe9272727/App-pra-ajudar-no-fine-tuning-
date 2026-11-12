@@ -10,7 +10,7 @@ def main():
  decision=read(HERE/'decision.json');audit=read(HERE/'training_complete.json');assert decision['new_weight_checkpoint_promoted'] is False and not decision['code_strict_task_gain'];assert audit['cold_restore_all_699_hashes_verified'] and audit['frozen_370_parameter_tensors_unchanged'];assert hashlib.sha256((HERE/'checkpoints/candidate.pt.gz').read_bytes()).hexdigest()==audit['checkpoint_sha256'];assert hashlib.sha256((ROOT/'rsi100/checkpoints/best.pt').read_bytes()).hexdigest()==decision['selected_general_sha256']
  for p,h in read(HERE/'frozen_initial.json').items():assert hashlib.sha256((HERE/'train_initial.py' if p=='reasoning018/train.py' else ROOT/p).read_bytes()).hexdigest()==h,p
  gains=list(audit['loop_gains_before_after'].values());summary={'status':'completed_rejected_for_promotion','optimizer_updates':8,'eligible_tensors':329,'eligible_parameters':2675888,'changed_tensors':224,'changed_values':1245166,'nonzero_gradient_tensors_each_step':[269]*8,'frozen_tensors_unchanged':370,'vision_tensors_unchanged':153,'cold_restore_hashes_verified':699,'rows':rows,'decision':decision,'mean_second_visit_gain_before':statistics.mean(x['before'][1] for x in gains),'mean_second_visit_gain_after':statistics.mean(x['after'][1] for x in gains),'long_budget_diagnostic_is_posthoc_not_selection':True,'independent_validation_queried':False,'new_checkpoint_promoted':False,'model_process_active':False,'architecture':'physical32, executions56, streams2, conv7, window256; Liquid-inspired, not official LFM','limitations':['Both coding probes were teaching examples, not fresh benchmarks.','1024 diagnostic is one observed task and cannot reopen selection.','No complete benchmark score or larger-model superiority was measured.','Gradient-name union/timing lost at final checker assertion; exact per-step counts and all saved weights retained.']}
- (HERE/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+ candidate=read(HERE/'evaluation_candidate.json');parent=read(HERE/'evaluation_parent.json');summary['control_texts_exactly_equal_to_parent']=sum(a['output']==b['output'] for a,b in zip(candidate['controls'],parent['controls']));summary['thinking256_generated_digest_changed_vs_parent']=sum(a['raw_output_sha256']!=b['raw_output_sha256'] for a,b in zip(candidate['code'],parent['code']));(HERE/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
  labels={'original':'Qwen original','parent':'Liquid geral preservado','candidate':'Novo treino018'}
  table='\n'.join(f"| {labels[x['variant']]} | {x['controls_correct']}/12 | {x['thinking256_tasks_passed']}/2 | {int(x['thinking1024_task_passed'])}/1 | {x['thinking1024_new_tokens']} |" for x in rows)
  report=f'''# Treino018 — concluído, sem promoção
@@ -26,6 +26,10 @@ os pesos nem um suposto conjunto exclusivo de pensamento.
 | Modelo | Controles gerais | Código thinking256 | Diagnóstico thinking1024 | Tokens no diagnóstico1024 |
 |---|---:|---:|---:|---:|
 {table}
+
+Os12textos dos controles ficaram exatamente iguais aos do pai. Os dois
+digests da geração thinking256mudaram, mas nenhuma resposta final foi
+entregue: alteração de texto não se converteu em ganho de tarefa.
 
 Os dois problemas de código são exemplos ENSINADOS do conjunto013, não validação
 inédita. Controles são os mesmos12já observados, com greedy/64tokens/semthinking;
