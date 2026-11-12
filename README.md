@@ -6,6 +6,14 @@ Registro inicial (histórico): calibração algébrica concluída; ciclos de mel
 
 Este repositório será usado para código, estado retomável, logs reais, checkpoints incrementais e resultados. O histórico inicial fica na branch `codex/qwen-sensenova-liquid-rsi-20261103`.
 
+## Prévia rápida0.1.1 e estudos017–020 (12/11/2026)
+
+[**Baixar APK no Gofile**](https://gofile.io/d/j7WqfPBY) (~1,61GB, ARM64/Android9+, modelo geral integrado). Instala separadamente como **Liquid Sense Rápido** e mostra preparação/tokens por segundo. Mesmos pesos gerais; o app anterior e seu histórico ficam preservados. O seletor base/especialista continua para depois.
+
+No servidor, o protótipo Rust019teve **1,1633x de throughput do backbone** (14,04%menos tempo),12pares fixos,8testes técnicos e estados/tokens idênticos nos testes. APK ARM64assinado e verificado; **sem medição física no Snapdragon**. O piloto de treino conjunto018fez8atualizações e mudou224tensores/1.245.166valores, preservando10/12controles, porém0/2programas comthinking256e0/1no diagnóstico1024. **Rejeitado para promoção; principal geral preservado.** Variante94,8M é desenho dimensional, não modelo treinado nem prova contra4B.
+
+[Relatório e comparações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3887ac5c139a72756fe3640c65860f3118ccee7b/SPEED_REASONING_REPORT.md) · [171artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3887ac5c139a72756fe3640c65860f3118ccee7b/RESEARCH_ARTIFACT_VERIFICATION.json) · [Fonte e verificação do APK](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3887ac5c139a72756fe3640c65860f3118ccee7b/android_fast020/README.md).
+
 ## Treino conjunto Loop/mHC e operadores temporais — estudo 016 (12/11/2026)
 
 Uma candidata recebeu 16 atualizações supervisionadas conjuntas em 330 tensores elegíveis (6.345.904 parâmetros), incluindo Loop/mHC e operadores inspirados na Liquid. Mudaram efetivamente 298 tensores e 2.815.113 valores; os outros 369 tensores permaneceram idênticos ao especialista 015E. A arquitetura híbrida foi preservada.
