@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "gates": {
+    "taught_all8_retained": true,
+    "every_principal_correct_control_retained": false,
+    "at_least10_of12_controls": false,
+    "no_E_mbpp_task_or_test_group_loss": true,
+    "anchor_nll_within_principal_plus_005": true
+  },
+  "passed": false,
+  "fresh_validation_opened": false,
+  "checkpoint_promoted": false,
+  "scores": {
+    "taught": 8,
+    "transfer": 0,
+    "controls": 8,
+    "anchor_nll": 3.166700621445974
+  },
+  "lost_principal_controls": [
+    "lang_translate",
+    "reason_product",
+    "reason_subtract"
+  ],
+  "mbpp_losses": [],
+  "general_principal_preserved": true,
+  "prior_specialist_E_preserved": true
+}

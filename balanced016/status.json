@@ -1,6 +1,7 @@
 {
-  "status": "training_complete_pending_screen",
+  "status": "complete",
+  "decision": "rejected_on_retention_screen_new_validation_unqueried",
+  "general_principal_promoted": false,
   "model_process_active": false,
-  "checkpoint_promoted": false,
   "process_continues_in_background": false
 }

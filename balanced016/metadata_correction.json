@@ -1,0 +1,47 @@
+{
+  "type": "training_provenance_metadata_only",
+  "reason": "Historical check_architecture returns backward_passes=0 as a fixed structural placeholder. Study016 training initially reported16 local updates. Record66 total lineage updates (015B32+C6+D6+E6+01616), retaining raw counts separately.",
+  "generated_text_scores_tests_weights_and_inference_settings_unchanged": true,
+  "files": [
+    {
+      "path": "balanced016/training_complete.json",
+      "before_sha256": "404f9a16ff4fd25afcaff2bd0066deffe3aa71b745d1534b4ef10654b32029b9",
+      "after_sha256": "46b0dfe104211e982f422fdaee08006c15227df86b798a87e1e7228d8a6560f6",
+      "lineage_updates": 66,
+      "protected_nonprovenance_payload_sha256": "d5d0e69a7e0f5ab756062a6d34b3dc9a4b775ca1242d7696b38227d41b59321b",
+      "all_generation_scores_tests_weights_and_other_payload_unchanged": true
+    },
+    {
+      "path": "balanced016/weight_audit.json",
+      "before_sha256": "20dd09dbe53435390eaa42e43ad52fac447c6283a98b83998062d586f972d806",
+      "after_sha256": "42d0e8a224154c15c49337675d6fac70f70f302586de881158a27fac7d09df68",
+      "lineage_updates": 66,
+      "protected_nonprovenance_payload_sha256": "91a212209cea67a57f518659796f55ac17e8a531f2e40ea6db7f92d512d40c2d",
+      "all_generation_scores_tests_weights_and_other_payload_unchanged": true
+    },
+    {
+      "path": "balanced016/target_candidate.json",
+      "before_sha256": "957a07629eefed3766949b70ce641c55ed4414c2c24687dd3f5f39f986b9bb69",
+      "after_sha256": "8bade27d5dc5ac53bfbe7658093aa861eccaaa05f4fa1d0d2f565999e0c231e7",
+      "lineage_updates": 66,
+      "protected_nonprovenance_payload_sha256": "8c9da75aa60e3b53db632454daedf3aba4d08e4f23786e7e8c7b768654141e90",
+      "all_generation_scores_tests_weights_and_other_payload_unchanged": true
+    },
+    {
+      "path": "balanced016/transfer_candidate.json",
+      "before_sha256": "639a9932f6421bc452ecba31ae132787853bc9d4d3552b32103a74253ff2c574",
+      "after_sha256": "acda549f3d659f601fc965ef41804aeded41b1c61a27d1f8b439e2ecc077ff94",
+      "lineage_updates": 66,
+      "protected_nonprovenance_payload_sha256": "3b6ca9978ee24d7ea6f46ea0fc389d4be7ccef83c79c4cb5c8d1e8a0d5d62ab4",
+      "all_generation_scores_tests_weights_and_other_payload_unchanged": true
+    },
+    {
+      "path": "balanced016/controls_candidate.json",
+      "before_sha256": "9cefcab1d89f50824ab69f7f8ff19b951ea6af69ffaa55e639217d21b786193d",
+      "after_sha256": "3f9cf0e596913d9e7ffe8b1b4ddceb445aadb437d76cdf695ba22b6171453bb0",
+      "lineage_updates": 66,
+      "protected_nonprovenance_payload_sha256": "c34aeed5167fa5b6b4e4bf165864fe83dbdb9c5e9da2d5362b79d844d4e85064",
+      "all_generation_scores_tests_weights_and_other_payload_unchanged": true
+    }
+  ]
+}

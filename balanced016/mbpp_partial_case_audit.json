@@ -1,0 +1,16 @@
+{
+  "status": "posthoc_semantic_audit",
+  "task": "MBPP/407",
+  "official_case_bits": [
+    false,
+    true,
+    false
+  ],
+  "official_judge_tests_scores_unchanged": true,
+  "generated_code_sha256": "c7904eeee82be95dfec7d4459a8779b0a521518581b36c8be1c8d3340b4b0075",
+  "only_passing_test": "assert rearrange_bigger(10)==False",
+  "explanation": "Generated code initializes ans=0 and updates it only if a decimal digit is greater than9. No valid integer digit satisfies this, so it returns0 for every valid integer input. The sentinel test passes because Python0==False, while both actual next-permutation tests fail.",
+  "algorithmic_improvement_demonstrated": false,
+  "passing_case_is_compatible_with_degenerate_constant_output": true,
+  "generated_code_was_not_executed_outside_the_original_sandbox": true
+}

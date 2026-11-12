@@ -1,0 +1,110 @@
+{
+  "status": "complete",
+  "decision": "rejected_on_retention_screen_new_validation_unqueried",
+  "historical_scores": {
+    "Qwen original": {
+      "taught": 1,
+      "transfer": 0,
+      "transfer_groups": 2,
+      "control": 10,
+      "anchor_nll": 3.1867156426111856
+    },
+    "Principal geral": {
+      "taught": 1,
+      "transfer": 0,
+      "transfer_groups": 3,
+      "control": 10,
+      "anchor_nll": 3.1837292512257895
+    },
+    "Especialista 015E": {
+      "taught": 8,
+      "transfer": 0,
+      "transfer_groups": 0,
+      "control": 6,
+      "anchor_nll": 3.1682596604029336
+    },
+    "Candidata 016": {
+      "taught": 8,
+      "transfer": 0,
+      "transfer_groups": 1,
+      "control": 8,
+      "anchor_nll": 3.166700621445974
+    }
+  },
+  "gates": {
+    "status": "complete",
+    "gates": {
+      "taught_all8_retained": true,
+      "every_principal_correct_control_retained": false,
+      "at_least10_of12_controls": false,
+      "no_E_mbpp_task_or_test_group_loss": true,
+      "anchor_nll_within_principal_plus_005": true
+    },
+    "passed": false,
+    "fresh_validation_opened": false,
+    "checkpoint_promoted": false,
+    "scores": {
+      "taught": 8,
+      "transfer": 0,
+      "controls": 8,
+      "anchor_nll": 3.166700621445974
+    },
+    "lost_principal_controls": [
+      "lang_translate",
+      "reason_product",
+      "reason_subtract"
+    ],
+    "mbpp_losses": [],
+    "general_principal_preserved": true,
+    "prior_specialist_E_preserved": true
+  },
+  "fresh_validation": {},
+  "paired_custom_pilot_comparisons": {},
+  "actual_changes_by_family": {
+    "liquid_temporal": {
+      "changed_tensors": 114,
+      "changed_values": 1021638
+    },
+    "normalization": {
+      "changed_tensors": 63,
+      "changed_values": 2778
+    },
+    "loop_visit_gain": {
+      "changed_tensors": 24,
+      "changed_values": 48
+    },
+    "mhc_routing": {
+      "changed_tensors": 96,
+      "changed_values": 786816
+    },
+    "last_mlp_projection": {
+      "changed_tensors": 1,
+      "changed_values": 1003833
+    }
+  },
+  "joint_gradient_training": true,
+  "loop_gain_audit": {
+    "mean_second_visit_before": 0.046107916006197534,
+    "mean_second_visit_after": 0.04509324269990126,
+    "second_visit_gain_increased_layers": 8,
+    "second_visit_gain_decreased_layers": 16,
+    "mechanical_weighting_not_causal_quality_gain": true
+  },
+  "final_max_relative_parameter_displacement": 0.005219077044068533,
+  "post_projection_gain_normalization_above_radius_tensors": [
+    "model.language_model.layers.11.native_visit_gain",
+    "model.language_model.layers.18.native_visit_gain",
+    "model.language_model.layers.6.native_visit_gain"
+  ],
+  "selected_tensors": 330,
+  "selected_parameters": 6345904,
+  "changed_tensors": 298,
+  "changed_values": 2815113,
+  "optimizer_steps": 16,
+  "general_principal_promoted": false,
+  "general_principal_preserved_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "prior_specialist_E_preserved": true,
+  "candidate_stream_sha256": "e6e628ad8b82c4ebf2a008b1805163640cbdc75329b173a587d213ebd6923a35",
+  "model_process_active": false,
+  "process_continues_in_background": false
+}

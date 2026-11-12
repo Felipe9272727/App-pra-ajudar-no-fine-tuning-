@@ -1,0 +1,213 @@
+{
+  "role": "controls",
+  "metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.9564527869224548,
+        0.04354722797870636
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 442324,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 66,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    },
+    "checkpoint_stream_sha256": "e6e628ad8b82c4ebf2a008b1805163640cbdc75329b173a587d213ebd6923a35",
+    "raw_structural_or_local_backward_count": 0,
+    "training_provenance": {
+      "total_new_gradient_updates_in_recorded_lineage": 66,
+      "parent_specialist_E_updates": 50,
+      "gradient_updates_in_study016": 16,
+      "structure_probe_default_is_not_a_training_history_measurement": true
+    }
+  },
+  "rows": [
+    {
+      "id": "dev_0",
+      "output": "Sb",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.530864099000155,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_1",
+      "output": "children",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.1768344119996073,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_2",
+      "output": "Santiago",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.5814802959998815,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "dev_3",
+      "output": "heart",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.1585219869998582,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_product",
+      "output": "7",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.3450144550001824,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_order",
+      "output": "Ana",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.444627981999929,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "reason_subtract",
+      "output": "15",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.6694800970003598,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "reason_half",
+      "output": "17\n",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "seconds": 1.8753788300000451,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_opposite",
+      "output": "frio",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.6291085590000876,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_past",
+      "output": "went",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "seconds": 1.1447448620001524,
+      "thinking": false,
+      "correct": true
+    },
+    {
+      "id": "lang_plural",
+      "output": "mascutes, patas, peixes, répteis, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, ré",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "seconds": 20.197490720000133,
+      "thinking": false,
+      "correct": false
+    },
+    {
+      "id": "lang_translate",
+      "output": "A água",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "seconds": 1.6121433910002452,
+      "thinking": false,
+      "correct": false
+    }
+  ],
+  "protocol": {
+    "greedy": true,
+    "seed": 0,
+    "thinking": false,
+    "cpu_threads": 4,
+    "code_max_new_tokens": 320,
+    "control_max_new_tokens": 64,
+    "solutions_in_generation_input": false,
+    "tests_in_generation_input": false,
+    "historical_diagnostic_not_fresh": true
+  },
+  "correct": 8,
+  "anchor_nll": {
+    "mean_nll": 3.166700621445974,
+    "rows": [
+      {
+        "nll": 2.102992296218872,
+        "tokens": 8
+      },
+      {
+        "nll": 3.7817037105560303,
+        "tokens": 8
+      },
+      {
+        "nll": 2.4402318000793457,
+        "tokens": 8
+      },
+      {
+        "nll": 4.112330913543701,
+        "tokens": 8
+      },
+      {
+        "nll": 3.8494935035705566,
+        "tokens": 8
+      },
+      {
+        "nll": 2.2084410190582275,
+        "tokens": 8
+      },
+      {
+        "nll": 2.6974029541015625,
+        "tokens": 8
+      },
+      {
+        "nll": 3.609513759613037,
+        "tokens": 8
+      },
+      {
+        "nll": 2.711223602294922,
+        "tokens": 8
+      },
+      {
+        "nll": 3.736738920211792,
+        "tokens": 8
+      },
+      {
+        "nll": 2.664527177810669,
+        "tokens": 8
+      },
+      {
+        "nll": 4.085807800292969,
+        "tokens": 8
+      }
+    ]
+  },
+  "total": 12,
+  "status": "complete"
+}

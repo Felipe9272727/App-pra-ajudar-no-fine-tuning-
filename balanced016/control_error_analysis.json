@@ -1,0 +1,134 @@
+{
+  "status": "posthoc_semantic_comparison_only",
+  "official_judges_labels_and_scores_changed": false,
+  "gains": [
+    "reason_order",
+    "lang_opposite",
+    "lang_past"
+  ],
+  "losses": [
+    "reason_product"
+  ],
+  "rows": [
+    {
+      "id": "dev_0",
+      "question": "What is the chemical symbol for antimony? Reply only with the symbol.",
+      "answer": "Sb",
+      "E_output": "Sb\n",
+      "E_correct": true,
+      "candidate_output": "Sb",
+      "candidate_correct": true,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "dev_1",
+      "question": "What is the plural of child? Reply with one word.",
+      "answer": "children",
+      "E_output": "children\n",
+      "E_correct": true,
+      "candidate_output": "children",
+      "candidate_correct": true,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "dev_2",
+      "question": "What is the capital of Chile? Reply only with the city.",
+      "answer": "Santiago",
+      "E_output": "Santiago\n",
+      "E_correct": true,
+      "candidate_output": "Santiago",
+      "candidate_correct": true,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "dev_3",
+      "question": "What organ pumps blood? Reply with one word.",
+      "answer": "heart",
+      "E_output": "heart\n",
+      "E_correct": true,
+      "candidate_output": "heart",
+      "candidate_correct": true,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "reason_product",
+      "question": "Responda somente com o número: 7 vezes 8.",
+      "answer": "56",
+      "E_output": "56\n",
+      "E_correct": true,
+      "candidate_output": "7",
+      "candidate_correct": false,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "reason_order",
+      "question": "Ana chegou antes de Bia. Bia chegou antes de Caio. Quem chegou primeiro? Responda somente o nome.",
+      "answer": "Ana",
+      "E_output": "Bia\n",
+      "E_correct": false,
+      "candidate_output": "Ana",
+      "candidate_correct": true,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "reason_subtract",
+      "question": "Reply only with a number: a box has 17 pens and 5 are removed. How many remain?",
+      "answer": "12",
+      "E_output": "15\n",
+      "E_correct": false,
+      "candidate_output": "15",
+      "candidate_correct": false,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "reason_half",
+      "question": "Reply only with a number: what is half of 34?",
+      "answer": "17",
+      "E_output": "17\n",
+      "E_correct": true,
+      "candidate_output": "17\n",
+      "candidate_correct": true,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "lang_opposite",
+      "question": "Responda com uma palavra: qual é o contrário de quente?",
+      "answer": "frio",
+      "E_output": "frio\n</think>\n\nfrio\n",
+      "E_correct": false,
+      "candidate_output": "frio",
+      "candidate_correct": true,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "lang_past",
+      "question": "Give only the simple past tense of go.",
+      "answer": "went",
+      "E_output": "I went.\nYou went.\nHe went.\nShe went.\nIt went.\nWe went.\nThey went.\nThey went.\nWe went.\nThey went.\nI went.\nYou went.\nHe went.\nShe went.\nIt went.\nWe went.\n",
+      "E_correct": false,
+      "candidate_output": "went",
+      "candidate_correct": true,
+      "candidate_hit_limit": false
+    },
+    {
+      "id": "lang_plural",
+      "question": "Responda somente o plural de animal.",
+      "answer": "animais",
+      "E_output": "máscara, fêmea, gato, cachorro, pássaro, peixe, cobra, leão, leopardo, leão, leopardo, cobra, leão, leopardo, peixe, cobra, leão, leopardo, gato, cachorro",
+      "E_correct": false,
+      "candidate_output": "mascutes, patas, peixes, répteis, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, réptiles, ré",
+      "candidate_correct": false,
+      "candidate_hit_limit": true
+    },
+    {
+      "id": "lang_translate",
+      "question": "Translate water into Portuguese. Reply with one word.",
+      "answer": "água",
+      "E_output": "A água.\n</think>\n\nA água.\n",
+      "E_correct": false,
+      "candidate_output": "A água",
+      "candidate_correct": false,
+      "candidate_hit_limit": false
+    }
+  ]
+}
