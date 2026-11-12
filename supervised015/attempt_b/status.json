@@ -1,7 +1,8 @@
 {
-  "status": "complete_pending_durable_publication",
+  "status": "complete_local_results",
   "model_process_active": false,
   "checkpoint_promoted": false,
   "parent_unchanged": true,
-  "process_continues_in_background": false
+  "process_continues_in_background": false,
+  "selected_as_benchmark_specialist": false
 }

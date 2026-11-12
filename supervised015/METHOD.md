@@ -44,3 +44,18 @@ e possivelmente memorização; não é pontuação limpa de HumanEval. O MBPP us
 como diagnóstico já foi observado no014 e não é um novo teste final. Eventuais
 ganhos de formato/parada ou reprodução literal dos programas devem ser separados
 de evidência de generalização. Nenhuma vitória sobre4B está sendo alegada.
+
+## Continuação final com cache e término nativo
+
+Depois do treino integral, D/E preservam o backbone B/C e refinam somente a
+projeção MLP31, fora do bloco repetido. Estados nativos sob prefixos corretos
+são dados de treino; replays forçados nunca contam como programas avaliados.
+A avaliação final sempre faz geração comum, sem processador de forçamento.
+
+O alvo terminal248046(im_end) era incompatível com EOS248044(endoftext) desta
+configuração de inferência. A correção E mudou apenas8rótulos finais de treino,
+sem mudar programas de referência, testes ou configuração de geração. D usou6
+passos; E completou os6restantes do limite12, com master FP32 temporário de uma
+matriz e modelo final BF16. A avaliação real é8/8 nos alvos ensinados,0/8 MBPP e
+6/12controles, contra1/8,0/8 e10/12 no principal. Isso não promove o especialista
+como melhor modelo geral; o principal permanece preservado.
