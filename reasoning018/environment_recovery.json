@@ -1,5 +1,5 @@
 {
-  "status": "environment_reconnected_incomplete_long_diagnostic",
+  "status": "recovered_all_registered_diagnostics_completed",
   "completed_weight_updates": 8,
   "weight_training_not_repeated": true,
   "completed_evaluations": [
@@ -17,5 +17,12 @@
   "interruption_cause": "environment reconnect; exact worker termination cause not observed",
   "preserved_interrupted_log_sha256": "7e06579a38c519829a2885c1cc39d4efb5793507deeeb4c71ff6b9007c1c11e4",
   "candidate_sha256": "f25aac86011be54f5025f24be391a1f7076a7d4e9de234e05f4ead20ecf729ab",
-  "resume_only_unsaved_phases": true
+  "resume_only_unsaved_phases": true,
+  "completed_long_result_files": [
+    "long1024_candidate.json",
+    "long1024_parent.json",
+    "long1024_original.json"
+  ],
+  "training_updates_repeated": 0,
+  "model_process_active": false
 }
