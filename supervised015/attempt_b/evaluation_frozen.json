@@ -1,11 +1,12 @@
 {
   "supervised015/evaluate.py": "77a4ce769e575d3394466a01682f6d722a6bd19a3aee1d821ecab69bf1dd0c63",
-  "supervised015/attempt_b/evaluate.py": "b72430ea4f8caff68276d7d2d0f93eea37c5906b1e11ff8c289fdc05a868adae",
+  "supervised015/attempt_b/evaluate.py": "1b6b7b30f86e46918d8c9f328b0c3cd14defbfa72dae505208ec182bbe7f59cc",
   "supervised014/judge.py": "c19da84a367e966134aa7622ebece253fe46a20bb037f77aadb44b9f13012c91",
   "supervised014/taught_parent.json": "564061d70dc894c3ab759e4918e944df389455ad1951c5bfa721bf5b2b0848e0",
   "supervised014/taught_original.json": "8318f42148111e41117365ee7b9bfbee6b273d5c6344fe921d5690bd77aa4f12",
   "supervised014/transfer_parent.json": "093626e5e730c0bc3fb149e7f4f63ab37c7b42b6c1b8d1a21e0e9db77a6ab1ac",
   "supervised014/transfer_original.json": "f550fd79152ed06dccabc0d4fd9a925d8f64caf4a543d46a0dadf889d597090c",
   "supervised014/controls_parent.json": "88667f8b57a4ffeedc8890032a212fcc87e27f2960f52b6fc3c4434e3c83e06c",
-  "supervised014/controls_original.json": "f763d3baffdbf98dbca0fecd5db71c9757413dab88e13b360db2a38756bb4d27"
+  "supervised014/controls_original.json": "f763d3baffdbf98dbca0fecd5db71c9757413dab88e13b360db2a38756bb4d27",
+  "supervised015/attempt_b/audit_checkpoint.py": "29e6487d7813ec3c3ee60aea82978974816d094ef7634e05af9aa670e2e7b22e"
 }
