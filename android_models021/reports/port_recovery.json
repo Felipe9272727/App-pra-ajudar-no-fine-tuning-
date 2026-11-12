@@ -1,0 +1,10 @@
+{
+  "completed_rows_preserved": 7,
+  "completed_row_file_sha256": "ce965f0d432994b5169d1812e213d47803286c3202e70412af23bef32ff9c797",
+  "native_worker_no_longer_active": true,
+  "executor_session_unavailable": 80380,
+  "termination_cause_not_observed": true,
+  "retry_only_missing_rows": true,
+  "failed_HE129_result_preserved_not_retried": true,
+  "new_training_updates": 0
+}
