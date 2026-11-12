@@ -18,7 +18,7 @@ def collect(model,tok):
   path=HERE/'cache'/f'{i:02d}.pt'
   if path.exists():
    d=torch.load(path,weights_only=True);assert d['id']==row['id'];xx.append(d['h']);yy.append(d['y']);groups.extend([i]*len(d['y']));continue
-  ids=tok.apply_chat_template(row['messages'],tools=config['schemas'],enable_thinking=False,add_generation_prompt=True,return_tensors='pt',return_dict=False);y=tok.encode(row['target']+tok.eos_token,add_special_tokens=False);assert y[-1]==248044
+  ids=tok.apply_chat_template(row['messages'],tools=config['schemas'],enable_thinking=False,add_generation_prompt=True,return_tensors='pt',return_dict=False);y=tok.encode(row['target'],add_special_tokens=False)+[248044];assert model.generation_config.eos_token_id==248044
   tokens=torch.cat([ids,torch.tensor([y[:-1]])],dim=1);assert tokens.shape[1]<=4096
   h=model.model(input_ids=tokens,use_cache=False).last_hidden_state[0,-len(y):].contiguous().clone();assert h.shape==(len(y),1024)
   data={'id':row['id'],'h':h,'y':torch.tensor(y),'input_sha256':hashlib.sha256(tokens.numpy().tobytes()).hexdigest(),'forced_teacher_replay_not_scored':True}

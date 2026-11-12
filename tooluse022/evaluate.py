@@ -37,7 +37,7 @@ def main():
   for turn in range(3):
    ids=tok.apply_chat_template(messages,tools=config['schemas'],add_generation_prompt=True,enable_thinking=False,return_dict=False,return_tensors='pt')
    if ids.shape[1]+256>4096:turns.append({'raw':'','error':'context limit','new_tokens':0});break
-   torch.manual_seed(0);out=model.generate(input_ids=ids,max_new_tokens=256,do_sample=False,use_cache=True,pad_token_id=tok.eos_token_id,stopping_criteria=StoppingCriteriaList([EndCall(tok,ids.shape[1])]))[0,ids.shape[1]:];raw=tok.decode(out,skip_special_tokens=False).removesuffix(tok.eos_token).strip();entry={'turn':turn,'raw':raw,'generated_ids':out.tolist(),'new_tokens':len(out),'input_sha256':hashlib.sha256(ids.numpy().tobytes()).hexdigest()}
+   torch.manual_seed(0);out=model.generate(input_ids=ids,max_new_tokens=256,do_sample=False,use_cache=True,pad_token_id=tok.eos_token_id,stopping_criteria=StoppingCriteriaList([EndCall(tok,ids.shape[1])]))[0,ids.shape[1]:];raw=tok.decode(out[:-1] if len(out) and int(out[-1])==248044 else out,skip_special_tokens=False).strip();entry={'turn':turn,'raw':raw,'generated_ids':out.tolist(),'new_tokens':len(out),'input_sha256':hashlib.sha256(ids.numpy().tobytes()).hexdigest()}
    try:call=parse_call(raw);entry['call']=call
    except Exception as e:entry['parse_error']=str(e);turns.append(entry);break
    if call is None:turns.append(entry);break

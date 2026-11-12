@@ -1,0 +1,7 @@
+{
+  "initial_preflight": "target EOS assert failed before collection or gradient updates; tokenizer.eos_token is not generation EOS",
+  "correction": "append explicit generation EOS248044, strip exact terminal ID in evaluator; no golds/judges changed",
+  "training_updates_before_correction": 0,
+  "fresh_queries_before_correction": 0,
+  "initial_sources_and_frozen_hashes_preserved": true
+}
