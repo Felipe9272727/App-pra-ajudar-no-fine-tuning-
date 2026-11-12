@@ -1,0 +1,16 @@
+{
+  "status": "missing_identical_data_asset_recovered",
+  "first_evaluation_exit_code": 1,
+  "cause": "Copied evaluator expected attempt_c/train.json; training itself correctly read frozen attempt_b/train.json.",
+  "completed_generation_rows_before_recovery": {
+    "target": 0,
+    "transfer": 0,
+    "controls": 0
+  },
+  "source_and_copy_sha256": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+  "solutions_tests_or_prompts_changed": false,
+  "weights_changed": false,
+  "resume_scope": "only missing C free-generation evaluation; training and B results not repeated",
+  "failed_log_preserved": "supervised015/attempt_c/logs/evaluation_failed_001.log",
+  "evaluation.log_is_same_regular_file_as_recovered_log": true
+}

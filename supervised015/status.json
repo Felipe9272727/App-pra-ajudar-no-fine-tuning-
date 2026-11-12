@@ -1,12 +1,10 @@
 {
-  "status": "critical_token_refinement_c_active",
-  "active_directory": "supervised015/attempt_c",
-  "model_process_active": true,
-  "b_target_tasks_passed": 6,
-  "b_controls_correct": 2,
-  "b_selected_as_general_model": false,
+  "status": "final_cached_readout_alignment_d_prepared",
+  "model_process_active": false,
+  "active_directory": "supervised015/attempt_d",
+  "c_target_tasks_passed": 7,
   "principal_unchanged": true,
   "checkpoint_promoted": false,
   "process_continues_in_background": false,
-  "updated_unix": 1794449449.0235343
+  "updated_unix": 1794451739.6087394
 }

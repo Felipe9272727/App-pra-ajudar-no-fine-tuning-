@@ -1,0 +1,21 @@
+{
+  "supervised015/evaluate.py": "77a4ce769e575d3394466a01682f6d722a6bd19a3aee1d821ecab69bf1dd0c63",
+  "supervised015/attempt_b/evaluate.py": "1b6b7b30f86e46918d8c9f328b0c3cd14defbfa72dae505208ec182bbe7f59cc",
+  "supervised014/judge.py": "c19da84a367e966134aa7622ebece253fe46a20bb037f77aadb44b9f13012c91",
+  "supervised014/taught_parent.json": "564061d70dc894c3ab759e4918e944df389455ad1951c5bfa721bf5b2b0848e0",
+  "supervised014/taught_original.json": "8318f42148111e41117365ee7b9bfbee6b273d5c6344fe921d5690bd77aa4f12",
+  "supervised014/transfer_parent.json": "093626e5e730c0bc3fb149e7f4f63ab37c7b42b6c1b8d1a21e0e9db77a6ab1ac",
+  "supervised014/transfer_original.json": "f550fd79152ed06dccabc0d4fd9a925d8f64caf4a543d46a0dadf889d597090c",
+  "supervised014/controls_parent.json": "88667f8b57a4ffeedc8890032a212fcc87e27f2960f52b6fc3c4434e3c83e06c",
+  "supervised014/controls_original.json": "f763d3baffdbf98dbca0fecd5db71c9757413dab88e13b360db2a38756bb4d27",
+  "supervised015/attempt_b/audit_checkpoint.py": "d13008aa69174dc95709ca4185e9d26c9515a0b60f88733451f6067c0d5f3a54",
+  "supervised015/attempt_c/evaluate.py": "590639faba163680bf158e7d1fe69d3daf45b97e0ff3f47918d638702d1d4805",
+  "supervised015/attempt_c/audit_checkpoint.py": "635845e7707818a3b8497d5bc41dbb18be5b80594382ef073e685bb9ff1eb4f2",
+  "supervised015/attempt_b/target_specialist.json": "5f3c7ba27642d90f4218a38196fcf957c88dc8616e64cff427713805b11e6922",
+  "supervised015/attempt_c/train.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+  "supervised015/attempt_d/evaluate.py": "b5947eb3e9aaf07b67752287f1dde1d9470d68ae8447414af84fd08864b63030",
+  "supervised015/attempt_d/restore.py": "aa45686a4f8a47f1dec718c5d335f647b70b9bb7ef9acf8e09aeac1986b3477f",
+  "supervised015/attempt_d/audit_checkpoint.py": "7ec3827841dec120c548e8fb57d6404d2cdadac26a3f1e2e6547fc6e0c24b4b7",
+  "supervised015/attempt_d/train.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+  "supervised015/attempt_c/target_specialist.json": "df490391c267ef4530c3978aa4ece52e80671205e40d1fb3603f51d5068d433f"
+}

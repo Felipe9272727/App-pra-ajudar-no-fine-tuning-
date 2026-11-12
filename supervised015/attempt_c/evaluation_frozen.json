@@ -11,5 +11,6 @@
   "supervised015/attempt_b/audit_checkpoint.py": "d13008aa69174dc95709ca4185e9d26c9515a0b60f88733451f6067c0d5f3a54",
   "supervised015/attempt_c/evaluate.py": "590639faba163680bf158e7d1fe69d3daf45b97e0ff3f47918d638702d1d4805",
   "supervised015/attempt_c/audit_checkpoint.py": "635845e7707818a3b8497d5bc41dbb18be5b80594382ef073e685bb9ff1eb4f2",
-  "supervised015/attempt_b/target_specialist.json": "5f3c7ba27642d90f4218a38196fcf957c88dc8616e64cff427713805b11e6922"
+  "supervised015/attempt_b/target_specialist.json": "5f3c7ba27642d90f4218a38196fcf957c88dc8616e64cff427713805b11e6922",
+  "supervised015/attempt_c/train.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f"
 }

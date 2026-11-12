@@ -1,0 +1,1 @@
+{"seed":20261114,"learning_rate":0.00005,"max_optimizer_steps":12,"minimum_margin":1.0,"max_relative_frobenius":0.01,"priority_task":"HumanEval/129","priority_weight":4.0,"chunk_tokens":16}

@@ -1,0 +1,342 @@
+{
+  "models": {
+    "original": {
+      "taught": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 8,
+        "truncations": 6,
+        "tokens": 2501,
+        "seconds": 305.8791108719997,
+        "categories": {
+          "SyntaxError": 6,
+          "AssertionError": 1,
+          "passed": 1
+        }
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 2,
+        "test_groups_total": 24,
+        "truncations": 7,
+        "tokens": 2400,
+        "seconds": 276.97714487900066,
+        "categories": {
+          "IndentationError": 1,
+          "AssertionError": 4,
+          "SyntaxError": 2,
+          "TypeError": 1
+        }
+      },
+      "controls": {
+        "correct": 10,
+        "total": 12,
+        "nll": 3.1867156426111856
+      }
+    },
+    "parent": {
+      "taught": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 8,
+        "truncations": 7,
+        "tokens": 2448,
+        "seconds": 809.345653490001,
+        "categories": {
+          "SyntaxError": 6,
+          "IndentationError": 1,
+          "passed": 1
+        }
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 3,
+        "test_groups_total": 24,
+        "truncations": 3,
+        "tokens": 1662,
+        "seconds": 523.2728556880002,
+        "categories": {
+          "AssertionError": 5,
+          "IndentationError": 1,
+          "SyntaxError": 1,
+          "ValueError": 1
+        }
+      },
+      "controls": {
+        "correct": 10,
+        "total": 12,
+        "nll": 3.1837292512257895
+      }
+    },
+    "edited": {
+      "taught": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 8,
+        "truncations": 5,
+        "tokens": 2081,
+        "seconds": 686.6748695799997,
+        "categories": {
+          "SyntaxError": 3,
+          "AssertionError": 4,
+          "passed": 1
+        }
+      },
+      "transfer": {
+        "solved": 1,
+        "total": 8,
+        "test_groups_passed": 4,
+        "test_groups_total": 24,
+        "truncations": 4,
+        "tokens": 1816,
+        "seconds": 575.1324104529995,
+        "categories": {
+          "passed": 1,
+          "IndentationError": 2,
+          "AssertionError": 4,
+          "SyntaxError": 1
+        }
+      },
+      "controls": {
+        "correct": 9,
+        "total": 12,
+        "nll": 3.2020915150642395
+      }
+    },
+    "specialist_b": {
+      "taught": {
+        "solved": 6,
+        "total": 8,
+        "test_groups_passed": 6,
+        "test_groups_total": 8,
+        "truncations": 1,
+        "tokens": 1263,
+        "seconds": 414.61047747500197
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 2,
+        "test_groups_total": 24,
+        "truncations": 0,
+        "tokens": 758,
+        "seconds": 244.16456972799278
+      },
+      "controls": {
+        "correct": 2,
+        "total": 12,
+        "nll": 3.1792545715967813
+      }
+    },
+    "specialist_c": {
+      "taught": {
+        "solved": 7,
+        "total": 8,
+        "test_groups_passed": 7,
+        "test_groups_total": 8,
+        "truncations": 0,
+        "tokens": 1188,
+        "seconds": 430.26693466700453
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 24,
+        "truncations": 1,
+        "tokens": 966,
+        "seconds": 331.2173487
+      },
+      "controls": {
+        "correct": 3,
+        "total": 12,
+        "nll": 3.194580872853597
+      }
+    },
+    "specialist": {
+      "taught": {
+        "solved": 7,
+        "total": 8,
+        "test_groups_passed": 7,
+        "test_groups_total": 8,
+        "truncations": 0,
+        "tokens": 1188,
+        "seconds": 430.26693466700453
+      },
+      "transfer": {
+        "solved": 0,
+        "total": 8,
+        "test_groups_passed": 1,
+        "test_groups_total": 24,
+        "truncations": 1,
+        "tokens": 966,
+        "seconds": 331.2173487
+      },
+      "controls": {
+        "correct": 3,
+        "total": 12,
+        "nll": 3.194580872853597
+      }
+    }
+  },
+  "training": {
+    "eligible_tensors": 546,
+    "eligible_parameters": 919659696,
+    "changed_text_tensors": 546,
+    "changed_scalar_values": 481958751,
+    "checkpoint_stream_sha256": "05687b52a1efb934cec6d5f7ce4c63b62969dd88cec1c2f85364c0afac1cbb15",
+    "optimizer_steps": 38,
+    "vision_tensors_unchanged": 153
+  },
+  "decision": {
+    "status": "experimental_benchmark_specialist_c_preserved",
+    "selected_specialist": "attempt_c",
+    "specialist_path": "supervised015/attempt_c/checkpoints/final/manifest.json",
+    "checkpoint_promoted": false,
+    "principal_unchanged": true,
+    "selected_general_checkpoint": "rsi100/checkpoints/best.pt",
+    "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+    "c_target_gain_required": true,
+    "c_no_loss_of_b_correct_target_required": true,
+    "c_selection_rule_passed": true,
+    "target_intentionally_taught": true,
+    "mbpp_previously_observed_in_014_and_b": true,
+    "mbpp_used_for_refitting": false,
+    "general_or_4b_superiority_demonstrated": false
+  },
+  "c_vs_b": {
+    "target": {
+      "task_gains": [
+        "HumanEval/32"
+      ],
+      "task_losses": [],
+      "lost_test_groups": 0,
+      "output_changed": [
+        "HumanEval/32",
+        "HumanEval/39",
+        "HumanEval/129"
+      ],
+      "delta_pass_at_1_pp": 12.5,
+      "exact_one_sided_p": 0.5,
+      "paired_bootstrap_95_ci_pp": [
+        0.0,
+        37.5
+      ]
+    },
+    "transfer": {
+      "task_gains": [],
+      "task_losses": [],
+      "lost_test_groups": 2,
+      "output_changed": [
+        "MBPP/129",
+        "MBPP/239",
+        "MBPP/245",
+        "MBPP/247",
+        "MBPP/306",
+        "MBPP/392",
+        "MBPP/407"
+      ],
+      "delta_pass_at_1_pp": 0.0,
+      "exact_one_sided_p": 1.0,
+      "paired_bootstrap_95_ci_pp": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "c_vs_principal": {
+    "target": {
+      "task_gains": [
+        "HumanEval/32",
+        "HumanEval/39",
+        "HumanEval/75",
+        "HumanEval/114",
+        "HumanEval/119",
+        "HumanEval/132"
+      ],
+      "task_losses": [],
+      "lost_test_groups": 0,
+      "output_changed": [
+        "HumanEval/32",
+        "HumanEval/39",
+        "HumanEval/75",
+        "HumanEval/114",
+        "HumanEval/119",
+        "HumanEval/129",
+        "HumanEval/132",
+        "HumanEval/147"
+      ],
+      "delta_pass_at_1_pp": 75.0,
+      "exact_one_sided_p": 0.015625,
+      "paired_bootstrap_95_ci_pp": [
+        37.5,
+        100.0
+      ]
+    },
+    "transfer": {
+      "task_gains": [],
+      "task_losses": [],
+      "lost_test_groups": 3,
+      "output_changed": [
+        "MBPP/129",
+        "MBPP/239",
+        "MBPP/245",
+        "MBPP/247",
+        "MBPP/306",
+        "MBPP/392",
+        "MBPP/407",
+        "MBPP/463"
+      ],
+      "delta_pass_at_1_pp": 0.0,
+      "exact_one_sided_p": 1.0,
+      "paired_bootstrap_95_ci_pp": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "control_losses_vs_principal": {
+    "b": [
+      "dev_0",
+      "dev_2",
+      "dev_3",
+      "reason_product",
+      "reason_order",
+      "reason_subtract",
+      "lang_past",
+      "lang_translate"
+    ],
+    "c": [
+      "dev_0",
+      "dev_2",
+      "dev_3",
+      "reason_product",
+      "reason_order",
+      "reason_subtract",
+      "lang_translate"
+    ]
+  },
+  "b_training": {
+    "optimizer_steps": 32,
+    "changed_text_tensors": 546,
+    "changed_scalar_values": 476003334,
+    "checkpoint_compressed_bytes": 643350186,
+    "checkpoint_stream_sha256": "c2f851b064b9656e356fe2c37985df88d598bf2fd358903d1a06fcf53b659ca7"
+  },
+  "c_training": {
+    "optimizer_steps_added": 6,
+    "optimizer_steps": 38,
+    "changed_text_tensors_vs_b": 510,
+    "changed_values_vs_b": 242848982,
+    "changed_tensors_vs_original_parent": 546,
+    "changed_values_vs_original_parent": 481958751,
+    "checkpoint_compressed_bytes": 380031383,
+    "checkpoint_stream_sha256": "05687b52a1efb934cec6d5f7ce4c63b62969dd88cec1c2f85364c0afac1cbb15",
+    "parent_specialist_stream_sha256": "c2f851b064b9656e356fe2c37985df88d598bf2fd358903d1a06fcf53b659ca7"
+  }
+}
