@@ -1,0 +1,13 @@
+{
+  "parent_source_commit": "713c8c69827f83a0cacbe56994ed8f23c2330939",
+  "parent_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "attempt_a_preregistration": "c9af0f80368aee6d8bae3925e4318d5ca1648256",
+  "attempt_a_frozen_digest_correction": "619924b98bad343c213558656acad25573d9f5d3",
+  "correction_scope": "checkpoint reader handle cleanup checksum only; no objective/data/hyperparameter changes",
+  "attempt_b_preregistration": "d45dd48ee790ed7ed79476fd08939edea7ee3755",
+  "evaluation_metadata_and_integrity_freeze": "af72a6cec176d3cc99ee8ec97148cb988e321a9f",
+  "source_and_baseline_sha256": "supervised015/attempt_b/evaluation_frozen.json",
+  "all_evaluation_logic_frozen_before_new_free_generation_scores": true,
+  "attempt_a_stopped_without_weight_snapshot": true,
+  "method_authorization": "supervised015/authorization.json"
+}
