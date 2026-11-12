@@ -1,0 +1,5 @@
+{"epoch": 1, "optimizer_step": 1, "ids": ["HumanEval/129", "HumanEval/32"], "loss_before_update": 0.652169942855835, "nonzero_gradient_tensors": 448, "rss_kb": 4536324, "peak_rss_kb": 5604028}
+{"epoch": 1, "optimizer_step": 2, "ids": ["HumanEval/75", "HumanEval/147"], "loss_before_update": 0.32655251026153564, "nonzero_gradient_tensors": 546, "rss_kb": 4537048, "peak_rss_kb": 6026408}
+{"epoch": 1, "optimizer_step": 3, "ids": ["HumanEval/39", "HumanEval/119"], "loss_before_update": 0.622336208820343, "nonzero_gradient_tensors": 546, "rss_kb": 4552844, "peak_rss_kb": 6026408}
+{"epoch": 1, "optimizer_step": 4, "ids": ["HumanEval/132", "HumanEval/114"], "loss_before_update": 0.8125617504119873, "nonzero_gradient_tensors": 546, "rss_kb": 4552508, "peak_rss_kb": 6042800}
+{"epoch": 2, "optimizer_step": 5, "ids": ["HumanEval/119", "HumanEval/129"], "loss_before_update": 0.19962596893310547, "nonzero_gradient_tensors": 546, "rss_kb": 4553424, "peak_rss_kb": 6043184}
