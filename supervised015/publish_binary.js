@@ -20,7 +20,17 @@ async function(paths, message) {
       }));
       for(const r of results){if(r.status!=='fulfilled')throw r.reason;parts.push(r.value);}
     }
-    const blob=unpack(await tools.mcp__codex_apps__github_create_blob({repository_full_name:repo,encoding:'base64',content:parts.join('')}));
+    let blob;
+    try {
+      blob=unpack(await tools.mcp__codex_apps__github_create_blob({repository_full_name:repo,encoding:'base64',content:parts.join('')}));
+    } catch(error) {
+      if(!String(error).includes('ReadTimeout'))throw error;
+      const current=unpack(await tools.mcp__codex_apps__github_fetch({url:'https://api.github.com/repos/'+repo+'/commits?sha='+encodeURIComponent(branch)+'&per_page=1'}))[0];
+      const probe=unpack(await tools.mcp__codex_apps__github_create_tree({repository_full_name:repo,base_tree_sha:current.commit.tree.sha,tree_elements:[{path,mode:'100644',type:'blob',sha:meta.git_blob}]}));
+      const recovered={path,expected_blob:meta.git_blob,verified_orphan_tree:probe.sha,response_timed_out_but_blob_exists:true,retransferred:false};
+      store('upload015recoveries',[...(load('upload015recoveries')||[]),recovered]);
+      blob={sha:meta.git_blob};
+    }
     if(blob.sha!==meta.git_blob)throw Error('Weight blob identity mismatch');
     entries.push({path,mode:'100644',type:'blob',sha:blob.sha});
   }

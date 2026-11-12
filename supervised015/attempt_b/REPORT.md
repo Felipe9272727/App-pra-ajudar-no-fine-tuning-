@@ -9,7 +9,7 @@ A autorização explícita do usuário para gradientes/backpropagation permitiu 
 | Edição014 (rejeitada) | 1/8 | 1/8 | 9/12 | 3.202092 |
 | Liquid Sense SFT015 especialista | 6/8 | 0/8 | 2/12 | 3.179255 |
 
-![Curvas de treino: apenas as oito soluções ensinadas](supervised015/attempt_b/training_curve.svg)
+![Curvas de treino: apenas as oito soluções ensinadas](training_curve.svg)
 
 A base nominal é Qwen3.5-0.8B; o híbrido ampliado carrega1.020.252.592 parâmetros únicos, incluindo visão. São919.659.696 parâmetros ativos de texto e100.592.896 de visão.
 

@@ -1,0 +1,46 @@
+{
+  "error": "GitHub create_blob response ReadTimeout",
+  "already_stored_parts": [
+    {
+      "path": "supervised015/attempt_b/checkpoints/final/part0048.bin",
+      "sha": "39350b06cf45a00985ccaf8f600fe32aeab85f72",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "supervised015/attempt_b/checkpoints/final/part0049.bin",
+      "sha": "0445b24bfc93c088248d1189e4f1cc165ce5454e",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "supervised015/attempt_b/checkpoints/final/part0050.bin",
+      "sha": "9aed8687f8f0b325a45424d89f6621c24ab8be3b",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "supervised015/attempt_b/checkpoints/final/part0051.bin",
+      "sha": "93c423767519eadeab424ff7ab9ab059a36e5505",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "supervised015/attempt_b/checkpoints/final/part0052.bin",
+      "sha": "1c7e593d8a3f7ec3e37ce796108a0fc54e36cd25",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "supervised015/attempt_b/checkpoints/final/part0053.bin",
+      "sha": "01a405206d413859f45e6d2ae60caa7e3bc9a972",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "first_unstored_part": "part0054.bin",
+  "verified_tree": "7bcd3bec5cae4c68a69620f65adc85f83b6feb72",
+  "commit": "b85e8ecc0c47cfd70db1166c3b0fd254aed09d53",
+  "investigated_before_retry": true,
+  "weights_recomputed": false
+}
