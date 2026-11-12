@@ -1,6 +1,6 @@
 # Liquid Sense — velocidade e raciocínio017/018/019
 
-Etapa concluída em12/11/2026. Principal geral e APK0.1.0preservados.
+Etapa concluída em12/11/2026. Principal geral e APK0.1.0preservados. Prévia rápida020entregue separadamente.
 O novo treino NÃO foi promovido. Não há worker de modelo em segundo plano.
 O seletor “1.0Base / Especializada” está registrado para depois do trabalho de
 pesquisa, em speed017/MODEL_SELECTOR_BACKLOG.md.
@@ -31,8 +31,9 @@ Isso é evidência no servidor; não é resultado no Snapdragon, do aplicativo
 completo ou prova universal de ausência de diferenças em todo input/ARM.
 
 Os fontes estão em speed019/runtime; relatórios em speed017/REPORT.md e
-speed019/REPORT.md. Não foi gerado novo APK/compilação ARM nesta pesquisa:
-o aplicativo instalado continua com o principal geral e o runtime0.1.0.
+speed019/REPORT.md. As etapas017/019foram validadas no servidor. Depois, o estágio020compilou
+e assinou uma nova préviaARM64com esses caminhos habilitados; o aplicativo
+anterior permanece separado e preservado.
 Ao aprender saídas hoje nulas, um checkpoint futuro deixa automaticamente de
 ser elegível para esses atalhos; seu desempenho precisará ser medido novamente.
 
@@ -90,3 +91,18 @@ Fontes, custos e limites: speed017/RESEARCH_REVIEW.md e parameter_budget.py.
 Todos os estudos antigos, pesos e relatórios foram preservados. A busca RSI100
 continua pausada. Artefatos e hashes finais são conferidos no recibo de publicação;
 a evidência de velocidade é separada da rejeição do novo checkpoint.
+
+## Entrega Android020 — prévia rápida0.1.1
+
+Download: https://gofile.io/d/j7WqfPBY (~1,61GB, modelo geral integrado).
+Instala como “Liquid Sense Rápido”, dev.liquidsense.chat.fast, ao lado da versão
+anterior. Mostra tempo de preparação e tokens/s. Ainda sem seletor de modelos.
+Usa o MESMO principal geral;018não foi integrado nem promovido.
+
+APK SHA2563a8eab346270899706671c04bf900f0061fc713b798baf768c079063fa793bef,
+1.613.898.825bytes. Assinatura/zipalign16KB/ELFARM64eJNI/atividade/classes
+verificados. Todas as assets idênticas aoAPKoriginal, sem permissão INTERNET.
+MD5/tamanho retornados peloGofile coincidem com o arquivo local e a página
+respondeHTTP200. Não houve teste físico de telefone ou nova estimativa de
+velocidade noSnapdragon. Fontes, manifest e recibo: android_fast020/README.md.
+A chave privada nova ficou preservada localmente fora do repositório.

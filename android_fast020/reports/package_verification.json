@@ -1,0 +1,11 @@
+{
+  "native_library_matches_packaged_bytes": true,
+  "main_activity_class_in_dex": true,
+  "drawable_R_namespace_in_dex": true,
+  "manifest_matches_full_activity_and_new_package": true,
+  "all_four_JNI_exports_present": true,
+  "apk_signature_verified": true,
+  "zipalign_4byte_and_16KB_verified": true,
+  "internet_permission": false,
+  "physical_phone_execution_verified": false
+}
