@@ -1,0 +1,58 @@
+[
+  {
+    "id": "FRESH016/00",
+    "question": "What is the capital of Peru? Reply only with the city.",
+    "answer": "Lima",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016/01",
+    "question": "What is the chemical symbol for silver? Reply only with the symbol.",
+    "answer": "Ag",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016/02",
+    "question": "Give only the plural of tooth.",
+    "answer": "teeth",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016/03",
+    "question": "Responda somente o número: 8 vezes 9.",
+    "answer": "72",
+    "aliases": [],
+    "numeric": true
+  },
+  {
+    "id": "FRESH016/04",
+    "question": "What is half of 62? Reply only with a number.",
+    "answer": "31",
+    "aliases": [],
+    "numeric": true
+  },
+  {
+    "id": "FRESH016/05",
+    "question": "Mara chegou antes de Nilo. Nilo chegou antes de Oto. Quem chegou primeiro? Responda só o nome.",
+    "answer": "Mara",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016/06",
+    "question": "Translate book into Portuguese. Reply with one word.",
+    "answer": "livro",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "FRESH016/07",
+    "question": "Give only the simple past tense of teach.",
+    "answer": "taught",
+    "aliases": [],
+    "numeric": false
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "CUSTOM016/00",
+    "reference_passed": true,
+    "None_mutant_rejected": true,
+    "test_groups": 3
+  },
+  {
+    "id": "CUSTOM016/01",
+    "reference_passed": true,
+    "None_mutant_rejected": true,
+    "test_groups": 3
+  },
+  {
+    "id": "CUSTOM016/02",
+    "reference_passed": true,
+    "None_mutant_rejected": true,
+    "test_groups": 3
+  },
+  {
+    "id": "CUSTOM016/03",
+    "reference_passed": true,
+    "None_mutant_rejected": true,
+    "test_groups": 3
+  },
+  {
+    "id": "CUSTOM016/04",
+    "reference_passed": true,
+    "None_mutant_rejected": true,
+    "test_groups": 3
+  },
+  {
+    "id": "CUSTOM016/05",
+    "reference_passed": true,
+    "None_mutant_rejected": true,
+    "test_groups": 3
+  },
+  {
+    "id": "CUSTOM016/06",
+    "reference_passed": true,
+    "None_mutant_rejected": true,
+    "test_groups": 3
+  },
+  {
+    "id": "CUSTOM016/07",
+    "reference_passed": true,
+    "None_mutant_rejected": true,
+    "test_groups": 3
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "CUSTOM016/00",
+    "benchmark": "custom016",
+    "role": "sealed_validation",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nGroup hashable items by value. Return a dict mapping each distinct value to the list of its zero-based indices, in their original order. An empty input returns an empty dict. Do not modify the input.\n\nRequired signature: def stable_group_indices(items):",
+    "entry_point": "stable_group_indices",
+    "tests": [
+      "assert stable_group_indices([]) == {}\nassert stable_group_indices(['a', 'b', 'a']) == {'a': [0, 2], 'b': [1]}\n_original = ['a', 'b', 'a']\n_before = copy.deepcopy(_original)\nstable_group_indices(_original)\nassert _original == _before",
+      "assert stable_group_indices(['a', 'b', 'a', 'c', 'b', 'a']) == {'a': [0, 2, 5], 'b': [1, 4], 'c': [3]}\nassert stable_group_indices([3, 3, 1, 3, 1]) == {3: [0, 1, 3], 1: [2, 4]}\n_original = ['a', 'b', 'a', 'c', 'b', 'a']\n_before = copy.deepcopy(_original)\nstable_group_indices(_original)\nassert _original == _before",
+      "assert stable_group_indices([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 11]) == {0: [0, 12], 1: [1], 2: [2], 3: [3], 4: [4], 5: [5], 6: [6], 7: [7], 8: [8], 9: [9], 10: [10], 11: [11, 13]}\nassert stable_group_indices([None, 'x', None, 'y']) == {None: [0, 2], 'x': [1], 'y': [3]}\n_original = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 11]\n_before = copy.deepcopy(_original)\nstable_group_indices(_original)\nassert _original == _before"
+    ],
+    "test_imports": [
+      "import copy"
+    ],
+    "solution": "def stable_group_indices(items):\n    result = {}\n    for i, value in enumerate(items):\n        result.setdefault(value, []).append(i)\n    return result\n",
+    "signature": "def stable_group_indices(items)"
+  },
+  {
+    "id": "CUSTOM016/01",
+    "benchmark": "custom016",
+    "role": "sealed_validation",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nReturn a new rectangular list-of-lists rotated 90 degrees clockwise. Rectangular rows have equal length. Empty input or zero columns returns []. Preserve the input.\n\nRequired signature: def rotate_grid_clockwise(grid):",
+    "entry_point": "rotate_grid_clockwise",
+    "tests": [
+      "assert rotate_grid_clockwise([]) == []\nassert rotate_grid_clockwise([[1, 2], [3, 4]]) == [[3, 1], [4, 2]]\n_original = [[1, 2], [3, 4]]\n_before = copy.deepcopy(_original)\nrotate_grid_clockwise(_original)\nassert _original == _before",
+      "assert rotate_grid_clockwise([[1, 2, 3], [4, 5, 6]]) == [[4, 1], [5, 2], [6, 3]]\nassert rotate_grid_clockwise([[], []]) == []\n_original = [[1, 2, 3], [4, 5, 6]]\n_before = copy.deepcopy(_original)\nrotate_grid_clockwise(_original)\nassert _original == _before",
+      "assert rotate_grid_clockwise([[1], [2], [3]]) == [[3, 2, 1]]\nassert rotate_grid_clockwise([[1, 2, 3, 4]]) == [[1], [2], [3], [4]]\n_original = [[1], [2], [3]]\n_before = copy.deepcopy(_original)\nrotate_grid_clockwise(_original)\nassert _original == _before"
+    ],
+    "test_imports": [
+      "import copy"
+    ],
+    "solution": "def rotate_grid_clockwise(grid):\n    if not grid or not grid[0]:\n        return []\n    return [list(row) for row in zip(*grid[::-1])]\n",
+    "signature": "def rotate_grid_clockwise(grid)"
+  },
+  {
+    "id": "CUSTOM016/02",
+    "benchmark": "custom016",
+    "role": "sealed_validation",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nReturn a list of (value, count) tuples for consecutive runs of equal values. Equal values separated by another value form different runs. Preserve order and input. Empty input returns [].\n\nRequired signature: def compact_runs(values):",
+    "entry_point": "compact_runs",
+    "tests": [
+      "assert compact_runs([]) == []\nassert compact_runs([1, 1, 2, 1]) == [(1, 2), (2, 1), (1, 1)]\n_original = [1, 1, 2, 1]\n_before = copy.deepcopy(_original)\ncompact_runs(_original)\nassert _original == _before",
+      "assert compact_runs(['a', 'a', 'a', 'b', 'b', 'c', 'c', 'a']) == [('a', 3), ('b', 2), ('c', 2), ('a', 1)]\nassert compact_runs([None, None, 0, None]) == [(None, 2), (0, 1), (None, 1)]\n_original = ['a', 'a', 'a', 'b', 'b', 'c', 'c', 'a']\n_before = copy.deepcopy(_original)\ncompact_runs(_original)\nassert _original == _before",
+      "assert compact_runs([5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 5, 5]) == [(5, 20), (4, 3), (5, 2)]\nassert compact_runs([1, 2, 3]) == [(1, 1), (2, 1), (3, 1)]\n_original = [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 5, 5]\n_before = copy.deepcopy(_original)\ncompact_runs(_original)\nassert _original == _before"
+    ],
+    "test_imports": [
+      "import copy"
+    ],
+    "solution": "def compact_runs(values):\n    result = []\n    for value in values:\n        if result and result[-1][0] == value:\n            result[-1] = (value, result[-1][1] + 1)\n        else:\n            result.append((value, 1))\n    return result\n",
+    "signature": "def compact_runs(values)"
+  },
+  {
+    "id": "CUSTOM016/03",
+    "benchmark": "custom016",
+    "role": "sealed_validation",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nEdges is a list of directed integer-node (source, target) pairs. Return a sorted list of all nodes reachable from start, including start. Handle cycles, repeated edges and a start absent from all edges. Do not modify edges.\n\nRequired signature: def reachable_nodes(edges, start):",
+    "entry_point": "reachable_nodes",
+    "tests": [
+      "assert reachable_nodes([], 4) == [4]\nassert reachable_nodes([(1, 2), (2, 3)], 1) == [1, 2, 3]\n_original = [(1, 2), (2, 3)]\n_before = copy.deepcopy(_original)\nreachable_nodes(_original, 1)\nassert _original == _before",
+      "assert reachable_nodes([(1, 2), (2, 1), (2, 3), (3, 3)], 1) == [1, 2, 3]\nassert reachable_nodes([(5, 6), (6, 7)], 1) == [1]\n_original = [(1, 2), (2, 1), (2, 3), (3, 3)]\n_before = copy.deepcopy(_original)\nreachable_nodes(_original, 1)\nassert _original == _before",
+      "assert reachable_nodes([(0, 1), (0, 1), (1, 2), (2, 0), (7, 8)], 0) == [0, 1, 2]\nassert reachable_nodes([(-2, -1), (-1, 0), (0, -2)], -2) == [-2, -1, 0]\n_original = [(0, 1), (0, 1), (1, 2), (2, 0), (7, 8)]\n_before = copy.deepcopy(_original)\nreachable_nodes(_original, 0)\nassert _original == _before"
+    ],
+    "test_imports": [
+      "import copy"
+    ],
+    "solution": "def reachable_nodes(edges, start):\n    adjacency = {}\n    for a, b in edges:\n        adjacency.setdefault(a, []).append(b)\n    seen = {start}\n    pending = [start]\n    while pending:\n        for nxt in adjacency.get(pending.pop(), []):\n            if nxt not in seen:\n                seen.add(nxt)\n                pending.append(nxt)\n    return sorted(seen)\n",
+    "signature": "def reachable_nodes(edges, start)"
+  },
+  {
+    "id": "CUSTOM016/04",
+    "benchmark": "custom016",
+    "role": "sealed_validation",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nReturn the left index of the first flat run that has a neighbor on both sides and is strictly greater than BOTH neighboring values. A single-element run can qualify. Runs touching either boundary do not qualify. Return -1 if none exists.\n\nRequired signature: def first_peak_plateau(values):",
+    "entry_point": "first_peak_plateau",
+    "tests": [
+      "assert first_peak_plateau([]) == -1\nassert first_peak_plateau([1, 3, 3, 1]) == 1\n_original = [1, 3, 3, 1]\n_before = copy.deepcopy(_original)\nfirst_peak_plateau(_original)\nassert _original == _before",
+      "assert first_peak_plateau([3, 3, 1]) == -1\nassert first_peak_plateau([1, 2, 1, 4, 4, 0]) == 1\n_original = [3, 3, 1]\n_before = copy.deepcopy(_original)\nfirst_peak_plateau(_original)\nassert _original == _before",
+      "assert first_peak_plateau([0, 0, 2, 2, 1, 3, 3]) == 2\nassert first_peak_plateau([1, 1, 1]) == -1\nassert first_peak_plateau([-5, -2, -2, -4]) == 1\n_original = [0, 0, 2, 2, 1, 3, 3]\n_before = copy.deepcopy(_original)\nfirst_peak_plateau(_original)\nassert _original == _before"
+    ],
+    "test_imports": [
+      "import copy"
+    ],
+    "solution": "def first_peak_plateau(values):\n    i = 0\n    while i < len(values):\n        j = i + 1\n        while j < len(values) and values[j] == values[i]:\n            j += 1\n        if i > 0 and j < len(values) and values[i] > values[i-1] and values[i] > values[j]:\n            return i\n        i = j\n    return -1\n",
+    "signature": "def first_peak_plateau(values)"
+  },
+  {
+    "id": "CUSTOM016/05",
+    "benchmark": "custom016",
+    "role": "sealed_validation",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nFor round parentheses in text, return a dict mapping each opening position to its matching closing position. Ignore all other characters. Raise ValueError for ANY unmatched opening or closing parenthesis.\n\nRequired signature: def bracket_pairs(text):",
+    "entry_point": "bracket_pairs",
+    "tests": [
+      "assert bracket_pairs('') == {}\nassert bracket_pairs('(a)(b)') == {0: 2, 3: 5}",
+      "assert bracket_pairs('x(a(b)c)y') == {3: 5, 1: 7}\nassert bracket_pairs('(())()') == {1: 2, 0: 3, 4: 5}",
+      "try:\n    bracket_pairs('(()')\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError('Expected ValueError')\ntry:\n    bracket_pairs(')(')\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError('Expected ValueError')\ntry:\n    bracket_pairs('abc)')\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError('Expected ValueError')\ntry:\n    bracket_pairs('(abc')\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError('Expected ValueError')"
+    ],
+    "test_imports": [
+      "import copy"
+    ],
+    "solution": "def bracket_pairs(text):\n    stack = []\n    result = {}\n    for i, ch in enumerate(text):\n        if ch == \"(\":\n            stack.append(i)\n        elif ch == \")\":\n            if not stack:\n                raise ValueError(\"unmatched\")\n            result[stack.pop()] = i\n    if stack:\n        raise ValueError(\"unmatched\")\n    return result\n",
+    "signature": "def bracket_pairs(text)"
+  },
+  {
+    "id": "CUSTOM016/06",
+    "benchmark": "custom016",
+    "role": "sealed_validation",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nNums contains sorted distinct integers. Return a list of inclusive (start, end) tuples for every maximal missing range inside [low, high], ordered by start. Ignore nums outside this interval. Return [] when low > high. Preserve nums.\n\nRequired signature: def gap_ranges(nums, low, high):",
+    "entry_point": "gap_ranges",
+    "tests": [
+      "assert gap_ranges([], 1, 5) == [(1, 5)]\nassert gap_ranges([1, 3, 5], 1, 5) == [(2, 2), (4, 4)]\n_original = [1, 3, 5]\n_before = copy.deepcopy(_original)\ngap_ranges(_original, 1, 5)\nassert _original == _before",
+      "assert gap_ranges([-8, 0, 2, 9], -1, 4) == [(-1, -1), (1, 1), (3, 4)]\nassert gap_ranges([], 5, 1) == []\n_original = [-8, 0, 2, 9]\n_before = copy.deepcopy(_original)\ngap_ranges(_original, -1, 4)\nassert _original == _before",
+      "assert gap_ranges([0, 1, 2], 0, 2) == []\nassert gap_ranges([1], -3, 3) == [(-3, 0), (2, 3)]\nassert gap_ranges([2, 4], 2, 4) == [(3, 3)]\n_original = [0, 1, 2]\n_before = copy.deepcopy(_original)\ngap_ranges(_original, 0, 2)\nassert _original == _before"
+    ],
+    "test_imports": [
+      "import copy"
+    ],
+    "solution": "def gap_ranges(nums, low, high):\n    if low > high:\n        return []\n    cursor = low\n    result = []\n    for value in nums:\n        if value < cursor or value > high:\n            continue\n        if cursor < value:\n            result.append((cursor, value - 1))\n        cursor = value + 1\n    if cursor <= high:\n        result.append((cursor, high))\n    return result\n",
+    "signature": "def gap_ranges(nums, low, high)"
+  },
+  {
+    "id": "CUSTOM016/07",
+    "benchmark": "custom016",
+    "role": "sealed_validation",
+    "prompt": "Return a complete Python implementation, with the required function name and any necessary helpers/imports. Return only Python code, no explanation or markdown.\n\nSplit a list into consecutive chunks of positive integer width. Reverse only the odd-numbered chunks (zero-based chunk numbering), then concatenate all chunks into a new list. The last chunk may be shorter. Raise ValueError for width <= 0. Preserve values.\n\nRequired signature: def alternating_chunks(values, width):",
+    "entry_point": "alternating_chunks",
+    "tests": [
+      "assert alternating_chunks([], 3) == []\nassert alternating_chunks([0, 1, 2, 3, 4, 5, 6], 2) == [0, 1, 3, 2, 4, 5, 6]\n_original = [0, 1, 2, 3, 4, 5, 6]\n_before = copy.deepcopy(_original)\nalternating_chunks(_original, 2)\nassert _original == _before",
+      "assert alternating_chunks([1, 2, 3, 4, 5], 3) == [1, 2, 3, 5, 4]\nassert alternating_chunks([1, 2, 3], 1) == [1, 2, 3]\n_original = [1, 2, 3, 4, 5]\n_before = copy.deepcopy(_original)\nalternating_chunks(_original, 3)\nassert _original == _before",
+      "assert alternating_chunks([1, 2], 5) == [1, 2]\ntry:\n    alternating_chunks([1, 2], 0)\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError('Expected ValueError')\ntry:\n    alternating_chunks([1, 2], -2)\nexcept ValueError:\n    pass\nelse:\n    raise AssertionError('Expected ValueError')\n_original = [1, 2]\n_before = copy.deepcopy(_original)\nalternating_chunks(_original, 5)\nassert _original == _before"
+    ],
+    "test_imports": [
+      "import copy"
+    ],
+    "solution": "def alternating_chunks(values, width):\n    if width <= 0:\n        raise ValueError(\"width\")\n    result = []\n    for index, start in enumerate(range(0, len(values), width)):\n        part = values[start:start + width]\n        result.extend(part[::-1] if index % 2 else part)\n    return result\n",
+    "signature": "def alternating_chunks(values, width)"
+  }
+]

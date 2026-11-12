@@ -1,0 +1,11 @@
+{
+  "new_general_training_examples": 16,
+  "coding_retention_examples": 8,
+  "sealed_custom_code_tasks": 8,
+  "sealed_general_controls": 8,
+  "training_general_answers_exclude_all12_old_control_answers": true,
+  "validation_prompts_or_solutions_used_for_training": false,
+  "validation_is_custom_not_HumanEval_or_MBPP": true,
+  "ordinary_algorithm_family_overlap_possible_and_not_claimed_independent_by_family": true,
+  "standard_benchmark_aggregate_or_larger_model_claim": false
+}
