@@ -1,0 +1,26 @@
+{
+  "status": "cold_restore_integrity_verified",
+  "text_tensors_verified": 546,
+  "all_699_parameter_tensors_finite": true,
+  "vision_153_transitively_unchanged_via_C": true,
+  "unchanged_545_text_tensors_match_C_hashes": true,
+  "checkpoint_stream_sha256": "8e494dde21480dd73c73901c2a57c9a18dd6247a813ec22d0156f08c60931a7c",
+  "changed_values_vs_original_parent": 483820320,
+  "changed_tensors_vs_original_parent": 546,
+  "architecture": {
+    "passes": 2,
+    "layer_executions": 56,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.9531189203262329,
+      0.046881064772605896
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 442326,
+    "local_window": 256,
+    "loaded_parameters": 1020252592,
+    "backward_passes": 44,
+    "limitations": "Trained Qwen-sized hybrid; architecture and fit are not general reasoning superiority."
+  }
+}

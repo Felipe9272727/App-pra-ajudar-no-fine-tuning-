@@ -1,0 +1,9 @@
+{
+  "tokens": 1098,
+  "raw_native_correct": 1087,
+  "reconstructed_correct": 1087,
+  "raw_reconstructed_argmax_agreement": 1.0,
+  "native_hidden_max_abs_rounding_difference": 0.0625,
+  "minimum_margin": -4.75,
+  "forced_replay_not_benchmark_score": true
+}

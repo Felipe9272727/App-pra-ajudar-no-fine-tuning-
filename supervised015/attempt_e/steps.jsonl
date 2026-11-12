@@ -1,0 +1,6 @@
+{"continuation_step": 1, "total_readout_steps": 7, "loss_before_update": 0.275930255651474, "correct_tokens": 1090, "total_tokens": 1098, "minimum_real_dense_margin": -4.875, "relative_frobenius": 0.009852887131273746}
+{"continuation_step": 2, "total_readout_steps": 8, "loss_before_update": 0.16947972774505615, "correct_tokens": 1090, "total_tokens": 1098, "minimum_real_dense_margin": -2.625, "relative_frobenius": 0.00944939162582159}
+{"continuation_step": 3, "total_readout_steps": 9, "loss_before_update": 0.05258467048406601, "correct_tokens": 1098, "total_tokens": 1098, "minimum_real_dense_margin": 0.375, "relative_frobenius": 0.009513172321021557}
+{"continuation_step": 4, "total_readout_steps": 10, "loss_before_update": 0.0013276144163683057, "correct_tokens": 1098, "total_tokens": 1098, "minimum_real_dense_margin": 0.75, "relative_frobenius": 0.009999958798289299}
+{"continuation_step": 5, "total_readout_steps": 11, "loss_before_update": 5.5704098485875875e-05, "correct_tokens": 1098, "total_tokens": 1098, "minimum_real_dense_margin": 0.75, "relative_frobenius": 0.009999936446547508}
+{"continuation_step": 6, "total_readout_steps": 12, "loss_before_update": 3.713606565725058e-05, "correct_tokens": 1098, "total_tokens": 1098, "minimum_real_dense_margin": 0.875, "relative_frobenius": 0.010000045411288738}

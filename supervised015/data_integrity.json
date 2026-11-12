@@ -1,0 +1,17 @@
+{
+  "status": "data_and_principal_immutability_verified",
+  "reference_json_hashes": {
+    "supervised014/taught.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+    "supervised015/train.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+    "supervised015/attempt_b/train.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+    "supervised015/attempt_c/train.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+    "supervised015/attempt_d/train.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f",
+    "supervised015/attempt_e/train.json": "1aba756c41199f4c7030b51c97c2b9e91f16672c42874f85b37043d8eeb1132f"
+  },
+  "all_reference_programs_prompts_and_official_tests_byte_identical": true,
+  "frozen_evaluation_source_files_checked": 24,
+  "frozen_evaluation_hashes_all_match": true,
+  "principal_sha256_unchanged": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "only_training_label_repair": "Eight final cached target IDs248046->248044; no program token or expected test answer changed.",
+  "runtime_native_eos_token_id_unchanged": 248044
+}
