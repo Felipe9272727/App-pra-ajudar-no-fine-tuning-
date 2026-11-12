@@ -1,0 +1,48 @@
+{
+  "variant": "specialist",
+  "question": "Eai mano quem é você, e você é melhor que os melhores modelos?",
+  "input_ids_sha256": "50f4f46a14ae1c380088b4e954097de53e7157c73d107d0eb91c9c82b091e8a5",
+  "system_message": "",
+  "protocol": {
+    "thinking": false,
+    "greedy": true,
+    "seed": 0,
+    "max_new_tokens": 192,
+    "cpu_threads": 4,
+    "framework": "PyTorch2.15CPU",
+    "same_neutral_inputs_for_first_three_variants": true,
+    "no_reference_answer_in_input": true,
+    "new_training_updates": 0,
+    "hardware_not_Android": true
+  },
+  "output": "Eu sou Qwen3.5, uma versão avançada do modelo Qwen, projetado para atender a uma ampla gama de tarefas, incluindo:\n\n*   **Linguagem e Interpretação:** Compreensão de textos longos, análise de contextos, geração de textos, tradução e síntese.\n*   **Tecnologia e Desenvolvimento:** Auxílio em projetos de software, desenvolvimento de APIs, análise de código e geração de documentação.\n*   **Liderança e Gestão:** Ajuda em planejamento de projetos, análise de dados, tomada de decisões e gestão de equipes.\n*   **Aprendizado e Pesquisa:** Auxílio em pesquisa acadêmica, análise de artigos científicos e descoberta de novas ideias.\n*   **Jogos e Criatividade:** Geração de conteúdo para jogos, desenvolvimento de mecânicas e criação de arte.\n*   **Saúde e Bem-estar:** Ajuda em",
+  "new_tokens": 192,
+  "hit_limit": true,
+  "seconds_descriptive_only": 60.03563409799972,
+  "source_metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    }
+  },
+  "not_a_benchmark_or_general_superiority_test": true
+}

@@ -1,0 +1,48 @@
+{
+  "variant": "general",
+  "question": "Eai mano quem é você, e você é melhor que os melhores modelos?",
+  "input_ids_sha256": "50f4f46a14ae1c380088b4e954097de53e7157c73d107d0eb91c9c82b091e8a5",
+  "system_message": "",
+  "protocol": {
+    "thinking": false,
+    "greedy": true,
+    "seed": 0,
+    "max_new_tokens": 192,
+    "cpu_threads": 4,
+    "framework": "PyTorch2.15CPU",
+    "same_neutral_inputs_for_first_three_variants": true,
+    "no_reference_answer_in_input": true,
+    "new_training_updates": 0,
+    "hardware_not_Android": true
+  },
+  "output": "Eu sou **Qwen3.5**, a versão mais avançada do modelo Qwen, projetada para atender a uma vasta gama de tarefas complexas e precisas.\n\nAqui estão os pontos principais sobre minha evolução e qual é meu nível de desempenho:\n\n1.  **Evolução da Arquitetura**: A versão mais recente (Qwen3.5) incorpora melhorias significativas em **motivação**, **contexto** e **eficiência**. Ela foi treinada com dados mais vastos e complexos, permitindo que ela entenda nuances sutis e tarefas de longo prazo com maior fluidez.\n2.  **Capacidade de Tarefas**:\n    *   **Lógica e Raciocínio**: Ela agora consegue resolver problemas complexos, analisar múltiplas opções e fazer deduções lógicas com precisão.\n    *   **Inteligência Emocional**: A versão mais recente",
+  "new_tokens": 192,
+  "hit_limit": true,
+  "seconds_descriptive_only": 61.10142476400142,
+  "source_metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    }
+  },
+  "not_a_benchmark_or_general_superiority_test": true
+}

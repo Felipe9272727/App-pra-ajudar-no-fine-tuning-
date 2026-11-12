@@ -1,0 +1,27 @@
+{
+  "variant": "original",
+  "question": "Eai mano quem é você, e você é melhor que os melhores modelos?",
+  "input_ids_sha256": "50f4f46a14ae1c380088b4e954097de53e7157c73d107d0eb91c9c82b091e8a5",
+  "system_message": "",
+  "protocol": {
+    "thinking": false,
+    "greedy": true,
+    "seed": 0,
+    "max_new_tokens": 192,
+    "cpu_threads": 4,
+    "framework": "PyTorch2.15CPU",
+    "same_neutral_inputs_for_first_three_variants": true,
+    "no_reference_answer_in_input": true,
+    "new_training_updates": 0,
+    "hardware_not_Android": true
+  },
+  "output": "Olá! Eu sou **Qwen3.5**, a versão mais avançada do modelo Qwen, desenvolvido pela Alibaba Cloud.\n\nAgora, sobre a comparação com os melhores modelos: **eu não sou \"melhor\" em absoluto**, mas sim **mais avançado e capaz de lidar com um conjunto de tarefas complexas e diversas**.\n\nAqui está a distinção:\n\n1.  **Qualidade e Capacidade**: O modelo Qwen3.5 foi projetado para ser extremamente robusto. Ele possui capacidades de **multimodal** (processando texto e imagens simultaneamente), **long-term memory** (memória de longo prazo) e **contexto** (contexto de longo prazo), o que permite que ele entenda e processe informações de forma mais fluida e completa.\n2.  **Capacidade de Tarefas**: Enquanto modelos anteriores focavam em tarefas específicas (como raciocínio",
+  "new_tokens": 192,
+  "hit_limit": true,
+  "seconds_descriptive_only": 23.6004244700016,
+  "source_metadata": {
+    "variant": "original",
+    "loaded_parameters": 852985920
+  },
+  "not_a_benchmark_or_general_superiority_test": true
+}
