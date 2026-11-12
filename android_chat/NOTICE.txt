@@ -1,0 +1,10 @@
+Liquid Sense Android preview
+Independent developer project based on Qwen3.5-0.8B.
+Qwen source model: Qwen/Qwen3.5-0.8B, revision 2fc06364715b967f1860aea9cf38778875588b17.
+Qwen license: Apache License 2.0, included in LICENSE_QWEN.txt.
+The adaptation is inspired by SenseNova Loop/mHC and Liquid-compatible temporal
+operators. It is not an official SenseNova or Liquid AI product or full LFM model.
+The Rust inference implementation is Apache-2.0. Rust dependencies and exact
+versions are listed in native/Cargo.lock in the linked project repository.
+The app bundles an experimental BF16 deployment of the preserved general
+checkpoint; it does not claim improved benchmark scores or larger-model parity.
