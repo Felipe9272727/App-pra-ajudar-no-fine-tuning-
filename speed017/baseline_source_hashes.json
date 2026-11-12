@@ -1,0 +1,11 @@
+{
+  "android_chat/native/Cargo.lock": "4d194e3c2d289d3f8b2cb3943030abcb7c202b5f2df21b54379ecc8c9bab3d73",
+  "android_chat/native/Cargo.toml": "f3fe93e340849d0733e1875c1136e2d20dc9c48116701a416bb6a48d35567e1a",
+  "android_chat/native/src/android.rs": "a9c4078ceca79fcf832ff4331bf2c54c40630f34ac4ccff03ba97aac60166785",
+  "android_chat/native/src/chat.rs": "4c0616188122f731cebb43b3962510c2ad7ef8b94008b06257d06c5ef0c60d1e",
+  "android_chat/native/src/lib.rs": "edd05b32aed71eee71f0cf8191255964d3e2bc6ebb050ed3ef8bb2204f93dff7",
+  "android_chat/native/src/kernels.rs": "b10d8c8b3537633d6155db6921a2129b9f4e5936446ff70e4c3f36c01297f89d",
+  "android_chat/native/src/model.rs": "ab7e5814ca6d318425c270a1ea686ab47b9b8d1d7aa69745504020b69088e278",
+  "android_chat/native/src/bin/probe.rs": "1d800094d12e51643bba40e3a71f5498bd09c59dcbdb1b6a00c5ddcc10f25ab0",
+  "android_chat/native/src/bin/audit.rs": "e9e47a87c4fa7bbf0e0418eae30c776872e466cc1e84524d66f42ffb779c06c6"
+}
