@@ -1,0 +1,62 @@
+{
+  "status": "signed_arm64_fast_preview",
+  "file": "LiquidSense-0.1.1-speed-preview.apk",
+  "bytes": 1613898825,
+  "sha256": "3a8eab346270899706671c04bf900f0061fc713b798baf768c079063fa793bef",
+  "package": "dev.liquidsense.chat.fast",
+  "activity": "dev.liquidsense.chat.MainActivity",
+  "version": "0.1.1-speed-preview",
+  "abi": "arm64-v8a",
+  "minimum_android": 9,
+  "model": "unchanged general principal",
+  "source_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "assets": {
+    "assets/model.lsp": {
+      "sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+      "bytes": 1599290240,
+      "identical_to_preserved_apk": true
+    },
+    "assets/tokenizer.json": {
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "bytes": 12807982,
+      "identical_to_preserved_apk": true
+    },
+    "assets/identity.json": {
+      "sha256": "9a43ca881ff844d9a55fa4e0af6b21a763b4c228f4dd29e22a5e51abca931fd9",
+      "bytes": 1864,
+      "identical_to_preserved_apk": true
+    },
+    "assets/LICENSE_QWEN.txt": {
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "bytes": 11544,
+      "identical_to_preserved_apk": true
+    },
+    "assets/NOTICE.txt": {
+      "sha256": "d24dde7cf4fe3ef562c3e8b1a024621a344b20868bae7281a6a0fbb77df18f82",
+      "bytes": 703,
+      "identical_to_preserved_apk": true
+    },
+    "assets/LLVM_LICENSE.txt": {
+      "sha256": "837f5d6ac67c8f7a5f43bf675a0f8afc1564600ebdc6f350411bc5dd790c2eda",
+      "bytes": 15142,
+      "identical_to_preserved_apk": true
+    },
+    "assets/RUST_LICENSES.txt": {
+      "sha256": "12bfc1331726c1b65d43e2fc688f62b1883df1ea1f263e89cf9ca62d713a5612",
+      "bytes": 12471,
+      "identical_to_preserved_apk": true
+    },
+    "assets/THIRD_PARTY_NOTICES.txt": {
+      "sha256": "bd2806d1430dbbe777955c8a32472ff061fb9e23c67785819c77f7c1a960d462",
+      "bytes": 834348,
+      "identical_to_preserved_apk": true
+    }
+  },
+  "native_library_sha256": "d2d057f92fe576f1de1174cea6033172e0de232983d0a51c3609cbaa2ddd5e76",
+  "original_apk_preserved": true,
+  "original_installed_app_and_history_preserved_by_separate_package": true,
+  "internet_permission": false,
+  "android_device_execution_verified": false,
+  "physical_phone_speed_measured": false,
+  "signing_key": "private local key retained; never published"
+}

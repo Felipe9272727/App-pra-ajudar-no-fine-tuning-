@@ -1,0 +1,14 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m
+warning: [options] bootstrap class path not set in conjunction with -source 8
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: /workspace/liquid-sense/android_fast020/android/src/dev/liquidsense/chat/MainActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+4 warnings
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m
+Generating 2,048 bit RSA key pair and self-signed certificate (SHA384withRSA) with a validity of 3,650 days
+	for: CN=Liquid Sense Fast Preview
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m
+{"file": "LiquidSense-0.1.1-speed-preview.apk", "bytes": 1613898825, "sha256": "3a8eab346270899706671c04bf900f0061fc713b798baf768c079063fa793bef", "package": "dev.liquidsense.chat.fast", "version": "0.1.1-speed-preview"}
