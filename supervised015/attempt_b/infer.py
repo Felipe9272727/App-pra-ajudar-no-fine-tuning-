@@ -10,6 +10,9 @@ def load_specialist():
     model,tok,_,meta=load_parent()
     manifest=checkpoint.restore(HERE/'checkpoints/final',model,PARENT_HASH)
     meta.update(variant='full_text_supervised_specialist_015_attempt_b',checkpoint_stream_sha256=manifest['stream_sha256'])
+    training=json.loads((HERE/'training_complete.json').read_text())
+    meta['architecture']=e.cr.check_architecture(model,2)
+    meta['architecture'].update(backward_passes=training['backward_passes'],limitations='Qwen widths; trained Loop/mHC and Liquid-inspired operators, not full SenseNova/LFM3.')
     return model,tok,meta
 
 def main():

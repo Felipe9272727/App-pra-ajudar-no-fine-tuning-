@@ -1,13 +1,10 @@
 {
-  "status": "stopped_after_training_divergence",
-  "model_process_active": false,
-  "optimizer_steps_completed": 11,
-  "last_completed_epoch": 2,
-  "all_546_text_tensors_received_nonzero_gradients": true,
-  "checkpoint_saved": false,
-  "partial_in_memory_weights_discarded": true,
-  "parent_untouched": true,
-  "reason": "First two epoch mean task NLL 6.9187 and 4.1969 versus parent about .634; restart lower-lr trial from immutable parent, not these drifted weights. No free-generation quality was measured for this interrupted trial.",
+  "status": "supervised_full_text_attempt_b_active",
+  "active_directory": "supervised015/attempt_b",
+  "model_process_active": true,
+  "previous_attempt": "supervised015/attempt_a_stop.json",
+  "checkpoint_promoted": false,
+  "parent_unchanged": true,
   "process_continues_in_background": false,
-  "updated_unix": 1794445664.9856794
+  "updated_unix": 1794446159.3145628
 }

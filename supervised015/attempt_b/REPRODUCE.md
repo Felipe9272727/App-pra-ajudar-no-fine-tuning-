@@ -30,7 +30,6 @@ env -i PATH=/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin:/u
 Essa pergunta de exemplo não constitui uma avaliação registrada. A CLI não
 executa o código gerado. Os testes registrados usam o executor isolado do014.
 Ajuste apenas os caminhos do executável/site-packages se o ambiente for outro.
-Não carregue checkpoints PyTorch de origem não confiável.
 
 Para verificar integridade sem gerar novas respostas, use o mesmo prefixo env
 acima com `python supervised015/attempt_b/audit_checkpoint.py`.

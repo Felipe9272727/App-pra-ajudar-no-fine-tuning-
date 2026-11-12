@@ -27,6 +27,9 @@ def main():
         'router_input_weight_l2':router_weights,'loop_visit_gains':gains,
         'architecture':e.cr.check_architecture(model,2),'parent_sha256':PARENT_HASH,
         'mechanical_architecture_and_finiteness_are_not_a_reasoning_quality_claim':True}
+    training=json.loads((HERE/'training_complete.json').read_text())
+    report['architecture']['backward_passes']=training['backward_passes']
+    report['architecture']['limitations']='Qwen widths; trained Loop/mHC and Liquid-inspired operators, not full SenseNova/LFM3; architecture is not a quality claim.'
     (HERE/'integrity.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k not in ['router_input_weight_l2','loop_visit_gains','architecture']}),flush=True)
 if __name__=='__main__':main()
