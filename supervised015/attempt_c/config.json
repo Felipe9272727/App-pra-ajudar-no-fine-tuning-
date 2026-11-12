@@ -1,0 +1,1 @@
+{"seed":20261113,"learning_rate":0.0005,"max_optimizer_steps":6,"stop_minimum_margin":1.0,"batch_examples":2,"priority_failed_targets":["HumanEval/32","HumanEval/129"]}
