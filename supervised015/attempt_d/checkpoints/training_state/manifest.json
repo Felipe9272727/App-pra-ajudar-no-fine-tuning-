@@ -1,0 +1,62 @@
+{
+  "format": "torch-zip-parts-v1",
+  "parts": [
+    {
+      "path": "part0000.bin",
+      "bytes": 4194304,
+      "sha256": "b81aa4ea0b86ac0696ed05edd8f57c8d916eb2360db681a76b18f77e4b827d57"
+    },
+    {
+      "path": "part0001.bin",
+      "bytes": 4194304,
+      "sha256": "418feb35180d9c1b0d08b387f3ed9304d32f51c60cc1dd9081bd811b84421e3e"
+    },
+    {
+      "path": "part0002.bin",
+      "bytes": 4194304,
+      "sha256": "7d349297df4bc322371c33a4f0d63cb850227b815034b78ca404216cc2067f83"
+    },
+    {
+      "path": "part0003.bin",
+      "bytes": 4194304,
+      "sha256": "6c35e8bc9dfb8166703c32ec06ee703917c59dbcdc85760b27874fb4ef31bcf3"
+    },
+    {
+      "path": "part0004.bin",
+      "bytes": 4194304,
+      "sha256": "3f2fb6833df0b102ee36930c5d2db094045dc98032cd70b2f0e52095a0c0ac8a"
+    },
+    {
+      "path": "part0005.bin",
+      "bytes": 4194304,
+      "sha256": "b575b294c9a2f1edfa59da87500706fc0adf6666e3802ea9b47de4f19252ce46"
+    },
+    {
+      "path": "part0006.bin",
+      "bytes": 4194304,
+      "sha256": "84004a8f39e75f6c6318d928bda2e3fe731332d8d7245aa5aa9c0739dd66692b"
+    },
+    {
+      "path": "part0007.bin",
+      "bytes": 4194304,
+      "sha256": "33f4fb8e2c560ab292749fbc3648dc8f92579ee2f634465b7a5a946253782884"
+    },
+    {
+      "path": "part0008.bin",
+      "bytes": 4194304,
+      "sha256": "3d96641808b41196c002ba1c05bd77c4f2ce86fefcc761fc730e89080ac31200"
+    },
+    {
+      "path": "part0009.bin",
+      "bytes": 4194304,
+      "sha256": "5a86d0909bb021e6dbda9468c971be147919c8d3a6b99fad3cba8ef9e59ef806"
+    },
+    {
+      "path": "part0010.bin",
+      "bytes": 2104985,
+      "sha256": "64c5fdfc68a6201121669410a03ef62dd2391527903e20a236b794ff96093e6c"
+    }
+  ],
+  "bytes": 44048025,
+  "stream_sha256": "c06d520ef3eaf013c6c608f065d7a700417ef64b568bbdca26d68f484f6431ae"
+}

@@ -1,0 +1,46 @@
+{
+  "status": "training_complete",
+  "eligible_additional_tensors": 1,
+  "eligible_additional_parameters": 3670016,
+  "matrix_updates": 6,
+  "original_full_text_training_steps": 38,
+  "new_total_gradient_updates_in_lineage": 44,
+  "changed_tensors_vs_c": 1,
+  "changed_values_vs_c": 3616788,
+  "changed_tensors_vs_original_parent": 546,
+  "changed_values_vs_original_parent": 483820320,
+  "checkpoint_stream_sha256": "8e494dde21480dd73c73901c2a57c9a18dd6247a813ec22d0156f08c60931a7c",
+  "parent_specialist_stream_sha256": "05687b52a1efb934cec6d5f7ce4c63b62969dd88cec1c2f85364c0afac1cbb15",
+  "all_other_698_parameter_tensors_bitwise_unchanged": true,
+  "vision_tensors_unchanged": 153,
+  "cached_training_tokens": 1098,
+  "final_cached_correct_tokens": 1098,
+  "minimum_cached_margin": 1.0,
+  "seconds": 433.2339704240003,
+  "architecture": {
+    "passes": 2,
+    "layer_executions": 56,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.9531189203262329,
+      0.046881064772605896
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 442326,
+    "local_window": 256,
+    "loaded_parameters": 1020252592,
+    "backward_passes": 44,
+    "limitations": "Qwen-sized trained hybrid; cached training fit does not establish general reasoning or superiority."
+  },
+  "preflight": {
+    "tokens": 1098,
+    "raw_native_correct": 1087,
+    "reconstructed_correct": 1087,
+    "raw_reconstructed_argmax_agreement": 1.0,
+    "native_hidden_max_abs_rounding_difference": 0.0625,
+    "minimum_margin": -4.75,
+    "forced_replay_not_benchmark_score": true
+  },
+  "forced_training_replay_was_not_scored": true
+}

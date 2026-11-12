@@ -1,0 +1,22 @@
+{
+  "format": "torch-zip-parts-v1",
+  "parts": [
+    {
+      "path": "part0000.bin",
+      "bytes": 4194304,
+      "sha256": "a621b58846618db0b56ac1a84a681b046fc2e6655c2319ebc179abef6bbdd3c9"
+    },
+    {
+      "path": "part0001.bin",
+      "bytes": 4194304,
+      "sha256": "b11094139a9a8508c796afb0dd3cec0639e69f12f71625af0f431dffc3fcd628"
+    },
+    {
+      "path": "part0002.bin",
+      "bytes": 4034841,
+      "sha256": "747d05a15a821fb1449a5203207446123f21667f6ab6c7bdafeaa4c168fdb36f"
+    }
+  ],
+  "bytes": 12423449,
+  "stream_sha256": "0b7f506ea97fb81c4517469fd7e8149cba1d1ce78d85a1d294ac55f33ff4bb27"
+}
