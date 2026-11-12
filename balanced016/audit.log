@@ -1,0 +1,5 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 90/675 [00:00<00:00, 775.76it/s]Loading weights:  26%|██▌       | 177/675 [00:00<00:00, 798.07it/s]Loading weights:  38%|███▊      | 257/675 [00:00<00:00, 786.01it/s]Loading weights:  50%|████▉     | 336/675 [00:00<00:00, 670.88it/s]Loading weights:  60%|██████    | 405/675 [00:00<00:00, 536.14it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 904.15it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794500754.5437646, "attempt": null, "pid": 1620}
+PHASE_END checkpoint_load:best.pt 0.005
+WEIGHT_AUDIT_COMPLETE 298 2815113

@@ -1,0 +1,36 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7258.33it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794500824.5732465, "attempt": null, "pid": 1731}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+SCREEN target HumanEval/32 True 54.97
+SCREEN target HumanEval/39 True 43.65
+SCREEN target HumanEval/75 True 47.11
+SCREEN target HumanEval/114 True 29.75
+SCREEN target HumanEval/119 True 42.52
+SCREEN target HumanEval/129 True 66.11
+SCREEN target HumanEval/132 True 43.5
+SCREEN target HumanEval/147 True 36.47
+SCREEN transfer MBPP/129 False 68.39
+SCREEN transfer MBPP/239 False 32.37
+SCREEN transfer MBPP/245 False 45.35
+SCREEN transfer MBPP/247 False 35.71
+SCREEN transfer MBPP/306 False 20.68
+SCREEN transfer MBPP/392 False 40.0
+SCREEN transfer MBPP/407 False 37.89
+SCREEN transfer MBPP/463 False 32.75
+SCREEN controls dev_0 True 1.53
+SCREEN controls dev_1 True 1.18
+SCREEN controls dev_2 True 1.58
+SCREEN controls dev_3 True 1.16
+SCREEN controls reason_product False 1.35
+SCREEN controls reason_order True 1.44
+SCREEN controls reason_subtract False 1.67
+SCREEN controls reason_half True 1.88
+SCREEN controls lang_opposite True 1.63
+SCREEN controls lang_past True 1.14
+SCREEN controls lang_plural False 20.2
+SCREEN controls lang_translate False 1.61

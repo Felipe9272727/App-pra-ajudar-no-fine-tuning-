@@ -17,7 +17,7 @@
     "learned_history_nonzero": 442324,
     "local_window": 256,
     "loaded_parameters": 1020252592,
-    "backward_passes": 0,
+    "backward_passes": 66,
     "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
   },
   "selected_details": [
@@ -3520,5 +3520,12 @@
     "model.language_model.layers.18.native_visit_gain",
     "model.language_model.layers.6.native_visit_gain"
   ],
-  "quality_gain_measured_by_this_audit": false
+  "quality_gain_measured_by_this_audit": false,
+  "raw_structural_or_local_backward_count": 0,
+  "training_provenance": {
+    "total_new_gradient_updates_in_recorded_lineage": 66,
+    "parent_specialist_E_updates": 50,
+    "gradient_updates_in_study016": 16,
+    "structure_probe_default_is_not_a_training_history_measurement": true
+  }
 }
