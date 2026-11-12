@@ -1,0 +1,9 @@
+{
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "cpu_max": "200000 100000",
+  "memory_max": "8589934592",
+  "threads": 4,
+  "phone_measurement": false
+}

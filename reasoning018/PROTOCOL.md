@@ -47,3 +47,12 @@ nonempty final answer. Report closing-tag completion, useful final result,
 token/time counts and generation mode. Do not publish private generated
 reasoning traces: keep final answer, token counts and raw-output digest.
 Preserve all old files; finish with no model worker alive and durable publication.
+
+Eligibility clarification BEFORE first training/evaluation: after control
+retention, require a strict task-complete gain on the two observed teaching
+probes, zero per-case/code regressions and a finished nonempty final answer.
+Teacher-forced loss reduction alone does not open independent validation.
+If these conditions fail, archive this pilot and keep all sealed sets unused.
+The unchanged parent/original old controls are reused rather than rerun; record
+exact source/protocol and per-case bits. New parent thinking-code runs are
+needed because earlier nonthinking runs have a different prefix/budget.
