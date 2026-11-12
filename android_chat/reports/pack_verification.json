@@ -1,0 +1,18 @@
+{
+  "status": "all_546_text_tensor_payloads_losslessly_verified",
+  "tensors": 546,
+  "parameter_values": 919659696,
+  "unique_stored_payloads": 345,
+  "kinds": {
+    "bf16": 426,
+    "f32": 72,
+    "zero": 48
+  },
+  "weight_quantization": false,
+  "checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "physical_layers": 32,
+  "executions": 56,
+  "context_limit": 2048,
+  "vision_included": false,
+  "text_only_application": true
+}

@@ -1,0 +1,8 @@
+{
+  "issue": "Iterator.max_by chose the last token on exact BF16 logit ties. PyTorch.argmax chooses the first.",
+  "fix": "Shared greedy function keeps the lowest token id on ties, used by chat and raw-control audit.",
+  "weights_changed": false,
+  "independent_validation_queried": false,
+  "previous_metrics_preserved": "mobile_fidelity_before_tie_fix.json",
+  "new_unit_test": "exact_ties_choose_first_token"
+}

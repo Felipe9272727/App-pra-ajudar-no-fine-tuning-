@@ -1,0 +1,26 @@
+{
+  "type": "temporary_export_bug_fixed_before_APK",
+  "reason": "Numerically-zero source matrices include negative-zero BF16 sign bits. Encode them as raw BF16 rather than discarding sign bits.",
+  "tensors_fixed": [
+    "layers.8.linear_attn.out_proj.weight",
+    "layers.8.mlp.down_proj.weight",
+    "layers.9.linear_attn.out_proj.weight",
+    "layers.9.mlp.down_proj.weight",
+    "layers.10.linear_attn.out_proj.weight",
+    "layers.10.mlp.down_proj.weight",
+    "layers.11.self_attn.o_proj.weight",
+    "layers.11.mlp.down_proj.weight",
+    "layers.20.linear_attn.out_proj.weight",
+    "layers.20.mlp.down_proj.weight",
+    "layers.21.linear_attn.out_proj.weight",
+    "layers.21.mlp.down_proj.weight",
+    "layers.22.linear_attn.out_proj.weight",
+    "layers.22.mlp.down_proj.weight",
+    "layers.23.self_attn.o_proj.weight",
+    "layers.23.mlp.down_proj.weight"
+  ],
+  "canonical_checkpoint_unchanged": true,
+  "floating_values_changed": false,
+  "source_bytes_now_preserved": true,
+  "prior_incorrect_export_sha256": "bcbb81512c63d401b5d11df009527870cfa16f48a9c6dc2eb6caa8cedefc1950"
+}

@@ -1,0 +1,8 @@
+{
+  "text": "```python\ndef soma(a, b):\n    \"\"\"\n    Função que soma dois números.\n    \n    Args:\n        a (int): Primeiro número.\n        b (int): Segundo número.\n    \n    Returns:\n        int: Soma dos dois números.\n    \"\"\"\n    return a + b\n```",
+  "tokens": 70,
+  "prompt_tokens": 138,
+  "finish_reason": "stop",
+  "syntax_validated_without_executing_generated_code": true,
+  "prompt": "Escreva apenas uma função Python soma(a, b) que retorna a soma dos dois argumentos."
+}

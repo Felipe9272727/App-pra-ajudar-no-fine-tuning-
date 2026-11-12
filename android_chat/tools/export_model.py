@@ -22,7 +22,7 @@ def main():
   assert mode in ['bf16','q8'];path=a.out/(mode+'.lsp');assert not path.exists(),'Never overwrite a model export'
   f=path.open('w+b');f.write(bytes(HEADER));streams[mode]=f;seen[mode]={};entries[mode]={};stats[mode]=[]
  for name,p in params.items():
-  raw=p.detach().contiguous().view(torch.uint8).numpy().tobytes();source=hashlib.sha256(raw).hexdigest();shape=list(p.shape);iszero=not bool(p.count_nonzero())
+  raw=p.detach().contiguous().view(torch.uint8).numpy().tobytes();source=hashlib.sha256(raw).hexdigest();shape=list(p.shape);iszero=not any(raw)
   for mode,f in streams.items():
    key=(source,str(p.dtype),tuple(shape));spec={'shape':shape,'source_dtype':str(p.dtype),'source_sha256':source}
    if key in seen[mode]:entries[mode][name]={**seen[mode][key],**spec};continue
@@ -51,7 +51,7 @@ def main():
   cache=None;steps=[]
   for ident in ids[:2]:
    out=model.model.language_model(input_ids=torch.tensor([[ident]]),past_key_values=cache,use_cache=True,output_hidden_states=True);cache=out.past_key_values;logits=model.lm_head(out.last_hidden_state[:,-1]).float()[0];values,indices=logits.topk(32)
-   steps.append({'input_id':ident,'states':[s[0,-1].float().tolist() for s in out.hidden_states],'argmax':int(indices[0]),'top_ids':indices.tolist(),'top_logits':values.tolist()})
+   steps.append({'input_id':ident,'states':[s[0,-1].float().tolist() for s in out.hidden_states],'argmax':int(logits.argmax()),'top_ids':indices.tolist(),'top_logits':values.tolist()})
   (a.out/'python_reference.json').write_text(json.dumps({'precision':'bfloat16','prefill':'sequential one-token cached; compares matching numerical path, not full-prefill benchmark','steps':steps},separators=(',',':'))+'\n')
  print('EXPORT_COMPLETE',json.dumps(manifests),flush=True)
 if __name__=='__main__':main()

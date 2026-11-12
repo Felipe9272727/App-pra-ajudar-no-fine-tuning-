@@ -1,0 +1,26 @@
+{
+  "phase": "verified_lossless_pack_before_signed_apk",
+  "source_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "phone": {
+    "ram_gb": 16,
+    "soc": "Snapdragon 7s Gen 2",
+    "abi": "arm64-v8a"
+  },
+  "precision": "bf16_original_with_fp32_auxiliary",
+  "context_limit": 2048,
+  "weight_pack_bytes": 1599290240,
+  "weight_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "kernel_unit_tests": 4,
+  "kernel_unit_tests_passed": 4,
+  "tokenizer_fixture_matches_python": true,
+  "text_tensor_payloads_verified_losslessly": 546,
+  "physical_layers": 32,
+  "executions": 56,
+  "native_arm64_compiled": true,
+  "android_java_dex_compiled": true,
+  "signed_APK_built": false,
+  "android_device_tested": false,
+  "work_dir": "/dev/shm/liquid-android",
+  "old_checkpoints_changed": false,
+  "background_training": false
+}

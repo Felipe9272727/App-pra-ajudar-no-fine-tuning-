@@ -1,0 +1,149 @@
+{
+  "purpose": "deployment_fidelity_only_not_weight_improvement",
+  "raw_unbranded": true,
+  "same_original_golds_judge_and64_token_budget": true,
+  "prefill_difference": "Rust processes tokens sequentially with independent per-visit cache; stored PyTorch baseline used full prefill. BF16 accumulation can differ.",
+  "parent_PyTorch_correct": 10,
+  "Rust_BF16_correct": 11,
+  "total": 12,
+  "gains": [
+    "lang_opposite"
+  ],
+  "losses": [],
+  "rows": [
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "dev_0",
+      "native_eos": 248044,
+      "new_tokens": 4,
+      "output": "Sb\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "dev_1",
+      "native_eos": 248044,
+      "new_tokens": 3,
+      "output": "children\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "dev_2",
+      "native_eos": 248044,
+      "new_tokens": 4,
+      "output": "Santiago\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "dev_3",
+      "native_eos": 248044,
+      "new_tokens": 3,
+      "output": "heart\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "reason_product",
+      "native_eos": 248044,
+      "new_tokens": 4,
+      "output": "56\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "reason_order",
+      "native_eos": 248044,
+      "new_tokens": 3,
+      "output": "Ana\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "reason_subtract",
+      "native_eos": 248044,
+      "new_tokens": 4,
+      "output": "12\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "reason_half",
+      "native_eos": 248044,
+      "new_tokens": 4,
+      "output": "17\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "lang_opposite",
+      "native_eos": 248044,
+      "new_tokens": 4,
+      "output": "Frio\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "lang_past",
+      "native_eos": 248044,
+      "new_tokens": 3,
+      "output": "went\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    },
+    {
+      "branded": false,
+      "hit_limit": true,
+      "id": "lang_plural",
+      "native_eos": 248044,
+      "new_tokens": 64,
+      "output": "Cães, gatos, pássaros, peixes, répteis, mamíferos, aves, anfíbios, répteis, anfíbios, répteis, mamíferos, aves, anfíbios, répteis, mamíferos, aves, anfíbios, ré",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": false
+    },
+    {
+      "branded": false,
+      "hit_limit": false,
+      "id": "lang_translate",
+      "native_eos": 248044,
+      "new_tokens": 4,
+      "output": "água\n",
+      "precision": "bf16",
+      "prefill": "sequential_cached",
+      "correct": true
+    }
+  ],
+  "new_sealed_validation_queried": false,
+  "canonical_weights_changed": false
+}
