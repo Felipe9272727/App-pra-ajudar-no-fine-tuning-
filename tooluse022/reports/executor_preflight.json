@@ -1,0 +1,78 @@
+{
+  "python": [
+    {
+      "code": "import math\nprint(math.isqrt(987654321))",
+      "result": {
+        "tool": "run_python",
+        "ok": true,
+        "stdout": "31426\n",
+        "runtime": "CPython3 restricted Linux subprocess",
+        "filesystem": false,
+        "network": false
+      }
+    },
+    {
+      "code": "print(1/0)",
+      "result": {
+        "tool": "run_python",
+        "ok": false,
+        "stdout": "",
+        "error": "ZeroDivisionError: division by zero"
+      }
+    },
+    {
+      "code": "print(open(\"/etc/hostname\").read())",
+      "result": {
+        "tool": "run_python",
+        "ok": false,
+        "stdout": "",
+        "error": "NameError: name 'open' is not defined"
+      }
+    },
+    {
+      "code": "import os\nprint(os.getcwd())",
+      "result": {
+        "tool": "run_python",
+        "ok": false,
+        "error": "restricted worker rejected or exceeded limits",
+        "exit_code": 1
+      }
+    },
+    {
+      "code": "while True: pass",
+      "result": {
+        "tool": "run_python",
+        "ok": false,
+        "error": "restricted worker rejected or exceeded limits",
+        "exit_code": -9
+      }
+    }
+  ],
+  "web": {
+    "tool": "search_web",
+    "ok": true,
+    "query": "site:docs.python.org math gcd Python documentation",
+    "retrieved_at_utc": "2026-11-12T23:37:03Z",
+    "transport": "real HTTPS Bing RSS",
+    "response_sha256": "a17ced8434b27e50c882eac816886d143a3577c907d09e26cb1040b162edcfe0",
+    "items": [
+      {
+        "title": "Math Playground: Purposeful Play. Powerful Learning.",
+        "url": "https://www.mathplayground.com/",
+        "snippet": "Explore hundreds of math games, puzzles, and learning adventures that make problem-solving fun and meaningful. Designed by an educator to spark curiosity, build confidence, and turn math into a world of discovery."
+      },
+      {
+        "title": "Math is Fun",
+        "url": "https://www.mathsisfun.com/",
+        "snippet": "Math explained in easy language, plus puzzles, games, worksheets and an illustrated dictionary. For K-12 kids, teachers and parents."
+      },
+      {
+        "title": "Mathway | Algebra Problem Solver",
+        "url": "https://www.mathway.com/algebra",
+        "snippet": "Mathway has helped solve more than 5 billion math problems, covering everything from a middle-school fraction question to a multivariable calculus proof."
+      }
+    ],
+    "untrusted_evidence": true
+  },
+  "strict_parser_probe": true
+}

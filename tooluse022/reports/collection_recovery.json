@@ -1,0 +1,6 @@
+{
+  "initial_collection": "six completed tool calls, observations not saved before seventh query hit429; no frozen data, no model updates",
+  "recovery": "persist each complete trace pair and resume missing only; retry-after header absent; use real Yahoo search fallback",
+  "apk_archive_initial": "interrupted to add upstream raw tensor references; no APK removed until both complete reconstructions matched SHA",
+  "archive_payload_bytes": 20209780
+}

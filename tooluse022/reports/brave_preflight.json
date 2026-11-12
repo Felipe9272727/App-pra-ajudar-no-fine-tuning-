@@ -1,0 +1,26 @@
+{
+  "tool": "search_web",
+  "ok": true,
+  "query": "Python math gcd official documentation",
+  "retrieved_at_utc": "2026-11-12T23:39:31Z",
+  "transport": "real HTTPS Brave Search HTML",
+  "response_sha256": "188b3f5e835af56b4ce565c7a1625b97ff5a48783d402f7d87127b1ba6b0d5bb",
+  "items": [
+    {
+      "title": "math \u2014 Mathematical functions \u2014 Python 3.15.2 documentation",
+      "url": "https://docs.python.org/3/library/math.html",
+      "snippet": " For backward compatibility, the math module provides also aliases of the following functions from the math.integer module: Added in version 3.5: The gcd() function. "
+    },
+    {
+      "title": "Python math.gcd() Method",
+      "url": "https://www.w3schools.com/python/ref_math_gcd.asp",
+      "snippet": " \u276e Previous Python Math Module Reference Next \u276f \u00b7 Find the greatest common divisor of the two integers: #Import math Library import math #find the the greatest common divisor of the two integers print (math.gcd(3, 6)) print (math.gcd(6, 12)) print (math.gcd(12, 36)) print (math.gcd(-12, -36)) print (math.gcd(5, 12)) print (math.gcd(10, 0)) print (math.gcd(0, 34)) print (math.gcd(0, 0)) Try it Yourself \u00bb "
+    },
+    {
+      "title": "Find GCD and LCM in Python: math.gcd(), lcm() | note.nkmk.me",
+      "url": "https://note.nkmk.me/en/python-gcd-lcm/",
+      "snippet": "August 12, 2023 - The gcd() function was added to the math module in Python 3.5.   "
+    }
+  ],
+  "untrusted_evidence": true
+}

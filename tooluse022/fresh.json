@@ -1,0 +1,32 @@
+[
+  {
+    "id": "fresh_py01",
+    "kind": "python",
+    "question": "Execute Python para calcular a soma dos cubos de 1 até 23. Confira e responda o número.",
+    "expected": "76176"
+  },
+  {
+    "id": "fresh_py02",
+    "kind": "python",
+    "question": "Use Python para calcular o MMC de 84 e 198. Verifique e diga o resultado.",
+    "expected": "2772"
+  },
+  {
+    "id": "fresh_web01",
+    "kind": "web",
+    "question": "Busque na web a documentação de heapq.heappush do Python e cite uma fonte retornada.",
+    "query_terms": [
+      "heapq",
+      "heappush"
+    ]
+  },
+  {
+    "id": "fresh_web02",
+    "kind": "web",
+    "question": "Pesquise na internet a documentação de Vec::push em Rust e cite uma fonte encontrada.",
+    "query_terms": [
+      "vec",
+      "push"
+    ]
+  }
+]

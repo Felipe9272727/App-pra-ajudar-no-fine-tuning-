@@ -20,7 +20,8 @@ def digest(parts):
  return h.hexdigest()
 def saveblock(data):
  h=hashlib.sha256(data).hexdigest();p=DEST/(h+'.zlib')
- if not p.exists():p.write_bytes(zlib.compress(data,9))
+ if not p.exists() or zlib.decompress(p.read_bytes())!=data:
+  tmp=p.with_suffix('.partial');tmp.write_bytes(zlib.compress(data,9));tmp.replace(p)
  return {'compressed':p.name,'bytes':len(data),'sha256':h}
 def materialize(spec):
  if 'source' in spec:yield from region(ROOT/spec['source'],spec['offset'],spec['bytes'])
@@ -36,12 +37,18 @@ def apk_parts(man,item):
  yield from verified(item['prefix']);yield from model_parts(man);yield from verified(item['suffix'])
 def create():
  DEST.mkdir(parents=True,exist_ok=True);assert not (DEST/'manifest.json').exists(),'Archive already exists; verify/restore instead'
- source=ROOT/'sensenova_port/model.safetensors';index={}
- with source.open('rb') as f:
-  n=struct.unpack('<Q',f.read(8))[0];header=json.loads(f.read(n));base=8+n
- for key,spec in header.items():
-  if key=='__metadata__':continue
-  a,b=spec['data_offsets'];h=digest(region(source,base+a,b-a));index[(h,b-a)]={'source':str(source.relative_to(ROOT)),'offset':base+a,'bytes':b-a,'sha256':h}
+ index={}
+ for source in [ROOT/'sensenova_port/model.safetensors',ROOT/'upstream/model.safetensors-00001-of-00001.safetensors']:
+  with source.open('rb') as f:
+   n=struct.unpack('<Q',f.read(8))[0];header=json.loads(f.read(n));base=8+n
+  for key,spec in header.items():
+   if key=='__metadata__':continue
+   a,b=spec['data_offsets'];h=digest(region(source,base+a,b-a));ref={'source':str(source.relative_to(ROOT)),'offset':base+a,'bytes':b-a,'sha256':h};index[(h,b-a)]=ref
+   old=DEST/(h+'.zlib')
+   if old.exists():
+    # Interrupted first attempt did not index upstream donor tensors. Replace
+    # only byte-exact redundant compressed blocks with verified source refs.
+    assert hashlib.sha256(zlib.decompress(old.read_bytes())).hexdigest()==h;old.unlink()
  print('INDEXED',len(index),flush=True)
  p=Path(APKS[0][0])
  with zipfile.ZipFile(p) as z:
@@ -61,7 +68,7 @@ def create():
     unmatched+=size;assert size<160*1024*1024,'Large unmatched tensor; stop without removing anything'
     parts.append(saveblock(b''.join(region(p,offset+start,size))))
    position=start+size
- man={'format':'exact-signed-apk-dedup-v1','pack':{'bytes':info.file_size,'sha256':digest(region(p,offset,info.file_size)),'parts':parts},'apks':[],'immutable_sources_do_not_remove':['sensenova_port/model.safetensors'],'unmatched_raw_bytes':unmatched}
+ man={'format':'exact-signed-apk-dedup-v1','pack':{'bytes':info.file_size,'sha256':digest(region(p,offset,info.file_size)),'parts':parts},'apks':[],'immutable_sources_do_not_remove':['sensenova_port/model.safetensors','upstream/model.safetensors-00001-of-00001.safetensors'],'unmatched_raw_bytes':unmatched}
  for name,expected in APKS:
   path=Path(name)
   with zipfile.ZipFile(path) as z:i=z.getinfo('assets/model.lsp');assert i.compress_type==0
