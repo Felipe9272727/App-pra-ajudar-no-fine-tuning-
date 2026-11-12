@@ -1,0 +1,17 @@
+{
+  "speed019/AGENTS.md": "274c9779f62f8f193d7d91bc29b73fd6a5c46cad99f171f6c7c1062006bd459f",
+  "speed019/analyze.py": "bbc2968c7f46dce5b31f056ab83a21dd53605bdd149e00b20e2ce28bda2e069e",
+  "speed019/run.sh": "81dae4a0e8fd7fc9ff8f7aa4a50461d7a14bc9e706bb75a734d9be1f1abf1e7b",
+  "speed019/baseline_source_hashes.json": "61b80706b2c0cded63c5d799e4735a6c6317c64754ea866fd3d85619a523edc7",
+  "speed019/PROTOCOL.md": "3941088b9c92865e944180b259265dcda72173bb54d97785dcc842c81a5b8823",
+  "speed019/runtime/Cargo.lock": "4d194e3c2d289d3f8b2cb3943030abcb7c202b5f2df21b54379ecc8c9bab3d73",
+  "speed019/runtime/Cargo.toml": "f3fe93e340849d0733e1875c1136e2d20dc9c48116701a416bb6a48d35567e1a",
+  "speed019/runtime/src/android.rs": "110544d52d6fb4ade5a6594810ad6d7cea8f3e1242bf2f1a5d800b30e660cb70",
+  "speed019/runtime/src/chat.rs": "fb06e037bd10de15ba47350be3325045dde534f91b48778eb8a08bc2d7d117ca",
+  "speed019/runtime/src/lib.rs": "edd05b32aed71eee71f0cf8191255964d3e2bc6ebb050ed3ef8bb2204f93dff7",
+  "speed019/runtime/src/kernels.rs": "e76fd4ba2b3c8a926e7729b3c8ffd23b2acd45426f32ac43e343a66b115f837b",
+  "speed019/runtime/src/model.rs": "4cf8b2bab5cc7de4088f425a4a39947b7e3383b1727b391971e61b98ace02bd6",
+  "speed019/runtime/src/bin/bench.rs": "98942041fdfcc9188575f3aac34c93bccdef5ab578229dad7c5db360b9f12d03",
+  "speed019/runtime/src/bin/probe.rs": "4186bad4ab82fdb6249c990dca10fe6bec0efc821b376cfa323e1e1bf2b01f63",
+  "speed019/runtime/src/bin/audit.rs": "e9e47a87c4fa7bbf0e0418eae30c776872e466cc1e84524d66f42ffb779c06c6"
+}
