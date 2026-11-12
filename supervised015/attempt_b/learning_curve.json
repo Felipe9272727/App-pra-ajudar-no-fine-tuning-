@@ -246,5 +246,253 @@
         "minimum_gold_margin": 2.125
       }
     ]
+  },
+  {
+    "epoch": 5,
+    "optimizer_steps": 20,
+    "rows": [
+      {
+        "id": "HumanEval/32",
+        "tokens": 158,
+        "nll": 0.07869574595301683,
+        "correct_tokens": 153,
+        "minimum_gold_margin": -2.25
+      },
+      {
+        "id": "HumanEval/39",
+        "tokens": 133,
+        "nll": 0.014457324701816515,
+        "correct_tokens": 133,
+        "minimum_gold_margin": 1.375
+      },
+      {
+        "id": "HumanEval/75",
+        "tokens": 138,
+        "nll": 0.02754235532188761,
+        "correct_tokens": 137,
+        "minimum_gold_margin": -0.75
+      },
+      {
+        "id": "HumanEval/114",
+        "tokens": 95,
+        "nll": 0.09090979899230757,
+        "correct_tokens": 93,
+        "minimum_gold_margin": -4.875
+      },
+      {
+        "id": "HumanEval/119",
+        "tokens": 126,
+        "nll": 0.008029929968336272,
+        "correct_tokens": 126,
+        "minimum_gold_margin": 1.375
+      },
+      {
+        "id": "HumanEval/129",
+        "tokens": 195,
+        "nll": 0.005407027357544464,
+        "correct_tokens": 195,
+        "minimum_gold_margin": 1.75
+      },
+      {
+        "id": "HumanEval/132",
+        "tokens": 138,
+        "nll": 0.013820371954985287,
+        "correct_tokens": 138,
+        "minimum_gold_margin": 1.125
+      },
+      {
+        "id": "HumanEval/147",
+        "tokens": 115,
+        "nll": 0.0029305974831399712,
+        "correct_tokens": 115,
+        "minimum_gold_margin": 2.625
+      }
+    ]
+  },
+  {
+    "epoch": 6,
+    "optimizer_steps": 24,
+    "rows": [
+      {
+        "id": "HumanEval/32",
+        "tokens": 158,
+        "nll": 0.07854746092004772,
+        "correct_tokens": 157,
+        "minimum_gold_margin": -11.375
+      },
+      {
+        "id": "HumanEval/39",
+        "tokens": 133,
+        "nll": 0.006396416140566195,
+        "correct_tokens": 133,
+        "minimum_gold_margin": 1.875
+      },
+      {
+        "id": "HumanEval/75",
+        "tokens": 138,
+        "nll": 0.00661600045049968,
+        "correct_tokens": 138,
+        "minimum_gold_margin": 1.75
+      },
+      {
+        "id": "HumanEval/114",
+        "tokens": 95,
+        "nll": 0.03664572941825578,
+        "correct_tokens": 94,
+        "minimum_gold_margin": -2.25
+      },
+      {
+        "id": "HumanEval/119",
+        "tokens": 126,
+        "nll": 0.004527923030157884,
+        "correct_tokens": 126,
+        "minimum_gold_margin": 1.5
+      },
+      {
+        "id": "HumanEval/129",
+        "tokens": 195,
+        "nll": 0.0021423962080660158,
+        "correct_tokens": 195,
+        "minimum_gold_margin": 3.625
+      },
+      {
+        "id": "HumanEval/132",
+        "tokens": 138,
+        "nll": 0.003840214937277462,
+        "correct_tokens": 138,
+        "minimum_gold_margin": 2.375
+      },
+      {
+        "id": "HumanEval/147",
+        "tokens": 115,
+        "nll": 0.0011432512015428233,
+        "correct_tokens": 115,
+        "minimum_gold_margin": 3.75
+      }
+    ]
+  },
+  {
+    "epoch": 7,
+    "optimizer_steps": 28,
+    "rows": [
+      {
+        "id": "HumanEval/32",
+        "tokens": 158,
+        "nll": 0.12051620925599828,
+        "correct_tokens": 153,
+        "minimum_gold_margin": -9.8125
+      },
+      {
+        "id": "HumanEval/39",
+        "tokens": 133,
+        "nll": 0.026643990588031317,
+        "correct_tokens": 132,
+        "minimum_gold_margin": -3.0
+      },
+      {
+        "id": "HumanEval/75",
+        "tokens": 138,
+        "nll": 0.0052992359758692155,
+        "correct_tokens": 138,
+        "minimum_gold_margin": 2.0
+      },
+      {
+        "id": "HumanEval/114",
+        "tokens": 95,
+        "nll": 0.007712195107811376,
+        "correct_tokens": 95,
+        "minimum_gold_margin": 0.75
+      },
+      {
+        "id": "HumanEval/119",
+        "tokens": 126,
+        "nll": 0.0018160207906649226,
+        "correct_tokens": 126,
+        "minimum_gold_margin": 3.125
+      },
+      {
+        "id": "HumanEval/129",
+        "tokens": 195,
+        "nll": 0.0011515380234460538,
+        "correct_tokens": 195,
+        "minimum_gold_margin": 3.625
+      },
+      {
+        "id": "HumanEval/132",
+        "tokens": 138,
+        "nll": 0.00319859331500703,
+        "correct_tokens": 138,
+        "minimum_gold_margin": 2.75
+      },
+      {
+        "id": "HumanEval/147",
+        "tokens": 115,
+        "nll": 0.0008511947103492591,
+        "correct_tokens": 115,
+        "minimum_gold_margin": 3.75
+      }
+    ]
+  },
+  {
+    "epoch": 8,
+    "optimizer_steps": 32,
+    "rows": [
+      {
+        "id": "HumanEval/32",
+        "tokens": 158,
+        "nll": 0.2189056747622458,
+        "correct_tokens": 151,
+        "minimum_gold_margin": -10.25
+      },
+      {
+        "id": "HumanEval/39",
+        "tokens": 133,
+        "nll": 0.010835191206936549,
+        "correct_tokens": 132,
+        "minimum_gold_margin": -0.5
+      },
+      {
+        "id": "HumanEval/75",
+        "tokens": 138,
+        "nll": 0.00599688074072364,
+        "correct_tokens": 138,
+        "minimum_gold_margin": 1.375
+      },
+      {
+        "id": "HumanEval/114",
+        "tokens": 95,
+        "nll": 0.006157606820526876,
+        "correct_tokens": 95,
+        "minimum_gold_margin": 1.375
+      },
+      {
+        "id": "HumanEval/119",
+        "tokens": 126,
+        "nll": 0.0014534581208690291,
+        "correct_tokens": 126,
+        "minimum_gold_margin": 3.5
+      },
+      {
+        "id": "HumanEval/129",
+        "tokens": 195,
+        "nll": 0.0236745743262686,
+        "correct_tokens": 194,
+        "minimum_gold_margin": -3.25
+      },
+      {
+        "id": "HumanEval/132",
+        "tokens": 138,
+        "nll": 0.0027225266575165415,
+        "correct_tokens": 138,
+        "minimum_gold_margin": 3.5
+      },
+      {
+        "id": "HumanEval/147",
+        "tokens": 115,
+        "nll": 0.0006293429800754656,
+        "correct_tokens": 115,
+        "minimum_gold_margin": 4.125
+      }
+    ]
   }
 ]

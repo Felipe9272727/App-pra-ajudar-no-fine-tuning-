@@ -1,0 +1,175 @@
+{
+  "status": "cold_restore_integrity_verified",
+  "checkpoint_stream_sha256": "c2f851b064b9656e356fe2c37985df88d598bf2fd358903d1a06fcf53b659ca7",
+  "all_699_parameter_tensors_finite": true,
+  "text_tensors_verified": 546,
+  "vision_tensors_bitwise_unchanged": 153,
+  "changed_text_tensors": 546,
+  "router_input_weights_nonzero": 48,
+  "router_input_weight_l2": {
+    "model.language_model.layers.4.mhc_attn.weight": 0.0005029664025641978,
+    "model.language_model.layers.4.mhc_ffn.weight": 0.0004970106529071927,
+    "model.language_model.layers.5.mhc_attn.weight": 0.00047684714081697166,
+    "model.language_model.layers.5.mhc_ffn.weight": 0.00046533922431990504,
+    "model.language_model.layers.6.mhc_attn.weight": 0.0004788460209965706,
+    "model.language_model.layers.6.mhc_ffn.weight": 0.0004823461640626192,
+    "model.language_model.layers.7.mhc_attn.weight": 0.0004942154046148062,
+    "model.language_model.layers.7.mhc_ffn.weight": 0.0005061287665739655,
+    "model.language_model.layers.8.mhc_attn.weight": 0.0006386890891008079,
+    "model.language_model.layers.8.mhc_ffn.weight": 0.0006821624701842666,
+    "model.language_model.layers.9.mhc_attn.weight": 0.0006477593560703099,
+    "model.language_model.layers.9.mhc_ffn.weight": 0.0006778092356398702,
+    "model.language_model.layers.10.mhc_attn.weight": 0.0006755951908417046,
+    "model.language_model.layers.10.mhc_ffn.weight": 0.0006958384183235466,
+    "model.language_model.layers.11.mhc_attn.weight": 0.0006670414004474878,
+    "model.language_model.layers.11.mhc_ffn.weight": 0.0007352587417699397,
+    "model.language_model.layers.12.mhc_attn.weight": 0.00050236756214872,
+    "model.language_model.layers.12.mhc_ffn.weight": 0.0004615711222868413,
+    "model.language_model.layers.13.mhc_attn.weight": 0.0005047399317845702,
+    "model.language_model.layers.13.mhc_ffn.weight": 0.00048802714445628226,
+    "model.language_model.layers.14.mhc_attn.weight": 0.0004880314227193594,
+    "model.language_model.layers.14.mhc_ffn.weight": 0.0005307229585014284,
+    "model.language_model.layers.15.mhc_attn.weight": 0.0004751989326905459,
+    "model.language_model.layers.15.mhc_ffn.weight": 0.0005188470240682364,
+    "model.language_model.layers.16.mhc_attn.weight": 0.0005153045640327036,
+    "model.language_model.layers.16.mhc_ffn.weight": 0.0005198032013140619,
+    "model.language_model.layers.17.mhc_attn.weight": 0.0005396495689637959,
+    "model.language_model.layers.17.mhc_ffn.weight": 0.000548045034520328,
+    "model.language_model.layers.18.mhc_attn.weight": 0.0005759283667430282,
+    "model.language_model.layers.18.mhc_ffn.weight": 0.0005333328153938055,
+    "model.language_model.layers.19.mhc_attn.weight": 0.0005480012623593211,
+    "model.language_model.layers.19.mhc_ffn.weight": 0.0005420175148174167,
+    "model.language_model.layers.20.mhc_attn.weight": 0.0006167837418615818,
+    "model.language_model.layers.20.mhc_ffn.weight": 0.0005659136804752052,
+    "model.language_model.layers.21.mhc_attn.weight": 0.000604198663495481,
+    "model.language_model.layers.21.mhc_ffn.weight": 0.0005681219627149403,
+    "model.language_model.layers.22.mhc_attn.weight": 0.0005992337828502059,
+    "model.language_model.layers.22.mhc_ffn.weight": 0.0005758866900578141,
+    "model.language_model.layers.23.mhc_attn.weight": 0.0005869796150363982,
+    "model.language_model.layers.23.mhc_ffn.weight": 0.000578001607209444,
+    "model.language_model.layers.24.mhc_attn.weight": 0.0004880994383711368,
+    "model.language_model.layers.24.mhc_ffn.weight": 0.0004867420357186347,
+    "model.language_model.layers.25.mhc_attn.weight": 0.0005574407405219972,
+    "model.language_model.layers.25.mhc_ffn.weight": 0.0005175208207219839,
+    "model.language_model.layers.26.mhc_attn.weight": 0.0005215309793129563,
+    "model.language_model.layers.26.mhc_ffn.weight": 0.0005161215085536242,
+    "model.language_model.layers.27.mhc_attn.weight": 0.0005651134415529668,
+    "model.language_model.layers.27.mhc_ffn.weight": 0.0005745113012380898
+  },
+  "loop_visit_gains": {
+    "model.language_model.layers.4.native_visit_gain": [
+      0.9529430270195007,
+      0.04705701395869255
+    ],
+    "model.language_model.layers.5.native_visit_gain": [
+      0.9539886713027954,
+      0.04601128771901131
+    ],
+    "model.language_model.layers.6.native_visit_gain": [
+      0.9563721418380737,
+      0.043627865612506866
+    ],
+    "model.language_model.layers.7.native_visit_gain": [
+      0.9542563557624817,
+      0.04574372246861458
+    ],
+    "model.language_model.layers.8.native_visit_gain": [
+      0.9551701545715332,
+      0.04482986032962799
+    ],
+    "model.language_model.layers.9.native_visit_gain": [
+      0.9570966362953186,
+      0.0429033525288105
+    ],
+    "model.language_model.layers.10.native_visit_gain": [
+      0.9565551280975342,
+      0.04344489797949791
+    ],
+    "model.language_model.layers.11.native_visit_gain": [
+      0.955491840839386,
+      0.044508177787065506
+    ],
+    "model.language_model.layers.12.native_visit_gain": [
+      0.9517108798027039,
+      0.04828907921910286
+    ],
+    "model.language_model.layers.13.native_visit_gain": [
+      0.9500847458839417,
+      0.04991529509425163
+    ],
+    "model.language_model.layers.14.native_visit_gain": [
+      0.9564176201820374,
+      0.043582331389188766
+    ],
+    "model.language_model.layers.15.native_visit_gain": [
+      0.9542254209518433,
+      0.04577455297112465
+    ],
+    "model.language_model.layers.16.native_visit_gain": [
+      0.9501151442527771,
+      0.049884870648384094
+    ],
+    "model.language_model.layers.17.native_visit_gain": [
+      0.9520598649978638,
+      0.04794013500213623
+    ],
+    "model.language_model.layers.18.native_visit_gain": [
+      0.9564295411109924,
+      0.04357046261429787
+    ],
+    "model.language_model.layers.19.native_visit_gain": [
+      0.9513331651687622,
+      0.04866686835885048
+    ],
+    "model.language_model.layers.20.native_visit_gain": [
+      0.9543763995170593,
+      0.04562358930706978
+    ],
+    "model.language_model.layers.21.native_visit_gain": [
+      0.9546639323234558,
+      0.04533598944544792
+    ],
+    "model.language_model.layers.22.native_visit_gain": [
+      0.9545817375183105,
+      0.04541826620697975
+    ],
+    "model.language_model.layers.23.native_visit_gain": [
+      0.9548420906066895,
+      0.045157868415117264
+    ],
+    "model.language_model.layers.24.native_visit_gain": [
+      0.9533728957176208,
+      0.04662704840302467
+    ],
+    "model.language_model.layers.25.native_visit_gain": [
+      0.9483110308647156,
+      0.051688916981220245
+    ],
+    "model.language_model.layers.26.native_visit_gain": [
+      0.9484126567840576,
+      0.05158735439181328
+    ],
+    "model.language_model.layers.27.native_visit_gain": [
+      0.9523431062698364,
+      0.047656912356615067
+    ]
+  },
+  "architecture": {
+    "passes": 2,
+    "layer_executions": 56,
+    "physical_layers": 32,
+    "mhc_streams": 2,
+    "visit_gain_weights": [
+      0.9529430270195007,
+      0.04705701395869255
+    ],
+    "conv_kernel": 7,
+    "learned_history_nonzero": 442325,
+    "local_window": 256,
+    "loaded_parameters": 1020252592,
+    "backward_passes": 32,
+    "limitations": "Qwen widths; trained Loop/mHC and Liquid-inspired operators, not full SenseNova/LFM3; architecture is not a quality claim."
+  },
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "mechanical_architecture_and_finiteness_are_not_a_reasoning_quality_claim": true
+}
