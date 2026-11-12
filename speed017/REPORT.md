@@ -38,3 +38,13 @@ reports/parameter_budget.json. That is a design, not trained small weights.
 The current official DSpine README was rechecked and archived with a hash.
 A later app selector is recorded in MODEL_SELECTOR_BACKLOG.md; main research
 priority remains measured speed plus a separate supervised-reasoning pilot.
+
+## Replicação confirmatória fixa, posterior
+
+Uma nova coleta preregistrada de12pares incluiu todos os resultados, sem
+agregar os4pares exploratórios ou repetir por significância. Média referência
+2.244356s/16tokens; otimizada2.112790s. Razão1.0623x, redução de tempo5.86%.
+IC95%da diferença[0.06912810857908813, 0.194005290920912]segundos;
+p bilateral de sinais=0.00146484375. Critério confirmado neste
+protocolo de CPU, sem extrapolar para telefone/aplicativo completo.
+Cada par e os pressupostos estatísticos estão preservados nos dados.
