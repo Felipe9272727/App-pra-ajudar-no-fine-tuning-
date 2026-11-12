@@ -1,0 +1,61 @@
+{
+  "status": "dimensional_design_only_not_trained",
+  "text_only": true,
+  "hidden_size": 256,
+  "intermediate_size": 1024,
+  "vocab_size": 248320,
+  "full_attention_heads": 4,
+  "full_attention_head_dim": 64,
+  "full_attention_kv_heads": 1,
+  "linear_heads": 4,
+  "linear_key_value_dim_per_head": 32,
+  "physical_layers": 32,
+  "executions": 56,
+  "loop_block": [
+    4,
+    28
+  ],
+  "mhc_streams": 2,
+  "conv_kernel": 7,
+  "sliding_window": 256,
+  "rope_partial_factor": 0.25,
+  "mrope_section": [
+    3,
+    3,
+    2
+  ],
+  "parts": {
+    "tied_embedding_and_readout": 63569920,
+    "24_linear_layers": 22933440,
+    "8_full_attention_layers": 8131584,
+    "48_mhc_routers": 196992,
+    "24_two_visit_gains": 48,
+    "final_norm": 256
+  },
+  "unique_text_parameters": 94832240,
+  "embedding_fraction": 0.6703408039291279,
+  "linear_layer_detail": {
+    "qkv": 98304,
+    "z": 32768,
+    "ab": 2048,
+    "conv7": 2688,
+    "decay_and_bias": 8,
+    "gated_norm": 32,
+    "out": 32768,
+    "layernorms": 512
+  },
+  "full_attention_layer_detail": {
+    "q_and_gate": 131072,
+    "key_value": 32768,
+    "out": 65536,
+    "qk_norm": 128,
+    "layernorms": 512
+  },
+  "weight_bytes_bf16_lower_bound": 189664480,
+  "limits": [
+    "Budget includes every proposed text parameter and tied vocabulary projection once; excludes vision and MTP.",
+    "Existing native Rust shapes are fixed at1024 and must be generalized before this design can run.",
+    "No initialized model, trained checkpoint, measured quality or speed.",
+    "A standalone95M model cannot promise retained0.8B quality. A compatible verified drafter is a different use."
+  ]
+}
