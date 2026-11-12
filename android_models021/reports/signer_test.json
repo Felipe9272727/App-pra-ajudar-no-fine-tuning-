@@ -1,0 +1,10 @@
+{
+  "status": "passed_official_v3_verification",
+  "unchanged_prefix_verified_before_tail_write": true,
+  "bounded_tail_buffer": true,
+  "signed_test_bytes": 270619,
+  "signed_test_sha256": "b279320dbfe94072094a48c9aa980d62b30898b9750f15e0d63da9680fee5455",
+  "zip_payload_crc_verified": true,
+  "signature_output": "Verifies\nVerified using v1 scheme (JAR signing): false\nVerified using v2 scheme (APK Signature Scheme v2): false\nVerified using v3 scheme (APK Signature Scheme v3): true\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\nVerified using v4 scheme (APK Signature Scheme v4): false\nVerified for SourceStamp: false\nNumber of signers: 1\n",
+  "initial_guard_note": "First test detected default signer realignment before any write. Explicit preserve-alignment/disable-file-padding flags fixed it."
+}

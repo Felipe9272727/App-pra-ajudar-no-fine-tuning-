@@ -5,7 +5,7 @@ def run(args,**kw):subprocess.run([str(a) for a in args],check=True,**kw)
 def aligned_info(z,name,size,kind):
  x=zipfile.ZipInfo(name,date_time=(2026,11,12,0,0,0));x.compress_type=kind;x.file_size=size;offset=z.fp.tell()+30+len(name.encode())
  if kind==zipfile.ZIP_STORED and offset%4:
-  pad=(-(offset+4))%4;x.extra=struct.pack('<HH',0xCAFE,pad)+bytes(pad)
+  pad=(-(offset+4))%4;x.extra=struct.pack('<HH',0xFFFF,pad)+bytes(pad)
  return x
 def digest(path):
  with path.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()

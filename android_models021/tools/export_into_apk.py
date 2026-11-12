@@ -12,7 +12,7 @@ def aligned_info(z,name,size):
  info=zipfile.ZipInfo(name,date_time=(2026,11,12,0,0,0));info.compress_type=zipfile.ZIP_STORED;info.file_size=size
  start=z.fp.tell()+30+len(name.encode('utf-8'))
  if start%4:
-  pad=(-(start+4))%4;info.extra=struct.pack('<HH',0xCAFE,pad)+bytes(pad)
+  pad=(-(start+4))%4;info.extra=struct.pack('<HH',0xFFFF,pad)+bytes(pad)
  return info
 @torch.inference_mode()
 def main():
