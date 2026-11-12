@@ -1,0 +1,8 @@
+{
+  "path": "/dev/shm/liquid-android/prebuilt/speed019/bench",
+  "bytes": 5088408,
+  "sha256": "79c3986a99e05da41f01d970ca15de8c640a8ba09292ac3cc5d5dc58b6f256bd",
+  "rust": "1.90.0",
+  "target": "x86_64",
+  "android_binary_built": false
+}

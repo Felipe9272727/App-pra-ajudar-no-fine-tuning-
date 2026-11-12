@@ -1,0 +1,139 @@
+{
+  "study": "speed019",
+  "fixed_pairs": 12,
+  "warmup_rows_excluded": 6,
+  "timed_rows": 24,
+  "timing_scope": "cloudx86fourthreads16tokenbackbone; vocabulary readout excluded; not a phone measurement",
+  "reference_mean_seconds": 2.2481782268333332,
+  "optimized_mean_seconds": 1.9325718676666668,
+  "mean_ratio": 1.1633089896665632,
+  "time_reduction_fraction": 0.14038315797196077,
+  "paired_mean_seconds_saved": 0.3156063591666666,
+  "paired_95_ci": [
+    0.23813538147412558,
+    0.39307733685920754
+  ],
+  "exact_sign_flip_two_sided_p": 0.00048828125,
+  "confirmed_cloud_cpu_benefit": true,
+  "pairs": [
+    {
+      "process": 1,
+      "reference_run": 2,
+      "optimized_run": 3,
+      "reference_seconds": 2.235761158,
+      "optimized_seconds": 2.046392469,
+      "saved_seconds": 0.1893686889999997,
+      "ratio": 1.092537815628562
+    },
+    {
+      "process": 1,
+      "reference_run": 5,
+      "optimized_run": 4,
+      "reference_seconds": 2.2507541460000002,
+      "optimized_seconds": 2.01378323,
+      "saved_seconds": 0.2369709160000002,
+      "ratio": 1.1176744907146734
+    },
+    {
+      "process": 1,
+      "reference_run": 6,
+      "optimized_run": 7,
+      "reference_seconds": 2.594539734,
+      "optimized_seconds": 1.991787185,
+      "saved_seconds": 0.6027525490000001,
+      "ratio": 1.3026189512309772
+    },
+    {
+      "process": 1,
+      "reference_run": 9,
+      "optimized_run": 8,
+      "reference_seconds": 2.192868134,
+      "optimized_seconds": 1.930123694,
+      "saved_seconds": 0.26274443999999986,
+      "ratio": 1.1361282910607076
+    },
+    {
+      "process": 2,
+      "reference_run": 2,
+      "optimized_run": 3,
+      "reference_seconds": 2.4196352709999998,
+      "optimized_seconds": 2.153136996,
+      "saved_seconds": 0.26649827499999956,
+      "ratio": 1.1237720941561489
+    },
+    {
+      "process": 2,
+      "reference_run": 5,
+      "optimized_run": 4,
+      "reference_seconds": 2.329570393,
+      "optimized_seconds": 1.81610396,
+      "saved_seconds": 0.513466433,
+      "ratio": 1.2827296478115713
+    },
+    {
+      "process": 2,
+      "reference_run": 6,
+      "optimized_run": 7,
+      "reference_seconds": 2.099020376,
+      "optimized_seconds": 1.852449471,
+      "saved_seconds": 0.246570905,
+      "ratio": 1.1331053337000845
+    },
+    {
+      "process": 2,
+      "reference_run": 9,
+      "optimized_run": 8,
+      "reference_seconds": 2.206899531,
+      "optimized_seconds": 1.900409408,
+      "saved_seconds": 0.3064901229999999,
+      "ratio": 1.1612758396742267
+    },
+    {
+      "process": 3,
+      "reference_run": 2,
+      "optimized_run": 3,
+      "reference_seconds": 2.222071604,
+      "optimized_seconds": 1.931990493,
+      "saved_seconds": 0.2900811109999999,
+      "ratio": 1.1501462414287356
+    },
+    {
+      "process": 3,
+      "reference_run": 5,
+      "optimized_run": 4,
+      "reference_seconds": 2.11811253,
+      "optimized_seconds": 1.79708305,
+      "saved_seconds": 0.32102948,
+      "ratio": 1.178639200898367
+    },
+    {
+      "process": 3,
+      "reference_run": 6,
+      "optimized_run": 7,
+      "reference_seconds": 2.239945113,
+      "optimized_seconds": 1.910035017,
+      "saved_seconds": 0.3299100960000001,
+      "ratio": 1.1727246323044769
+    },
+    {
+      "process": 3,
+      "reference_run": 9,
+      "optimized_run": 8,
+      "reference_seconds": 2.068960732,
+      "optimized_seconds": 1.847567439,
+      "saved_seconds": 0.22139329299999977,
+      "ratio": 1.119829613970589
+    }
+  ],
+  "all_preregistered_pairs_included": true,
+  "no_further_timing_repetition": true,
+  "weights_changed": false,
+  "quality_promotion": false,
+  "all16_trace_steps_bit_identical": true,
+  "zero_matrices_verified": 16,
+  "zero_mv_hits": 512,
+  "all56_cache_slots_preserved": true,
+  "chat_cases_identical": 3,
+  "generated_chat_tokens_identical": 26,
+  "android_apk_updated": false
+}
