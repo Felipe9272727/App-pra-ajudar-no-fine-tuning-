@@ -1,0 +1,13 @@
+{
+  "status": "unsigned_UI_interpreter_refreshed",
+  "model_bytes_unchanged": true,
+  "model_offset_unchanged": true,
+  "no_duplicate_central_directory_names": true,
+  "all_current_entries_CRC_pass": true,
+  "python_fstrings_enabled": true,
+  "Trocar_modelo_visible": true,
+  "specialist_old_version_guard": true,
+  "initial_unsigned_exactly_recoverable": true,
+  "old_local_versions_unreferenced_by_central_directory": true,
+  "phone_execution_verified": false
+}

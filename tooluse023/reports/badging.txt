@@ -1,0 +1,17 @@
+package: name='dev.liquidsense.chat.tools' versionCode='1' versionName='0.3.0-tools-preview' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
+uses-permission: name='android.permission.INTERNET'
+minSdkVersion:'28'
+targetSdkVersion:'35'
+application-label:'Liquid Sense · Tools'
+application-icon-160:'res/drawable/ic_launcher.xml'
+application: label='Liquid Sense · Tools' icon='res/drawable/ic_launcher.xml'
+launchable-activity: name='dev.liquidsense.chat.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-feature-not-required: name='android.hardware.touchscreen'
+main
+other-services
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'
+native-code: 'arm64-v8a'

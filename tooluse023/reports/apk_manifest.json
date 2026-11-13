@@ -1,0 +1,22 @@
+{
+  "status": "signed_tools_APK_built",
+  "path": "/dev/shm/liquid-android/tools023-apk/LiquidSense-0.3.0-tools-preview.apk",
+  "bytes": 1615574215,
+  "sha256": "d8c649c9e06be632b7a411417d06a3a926911788764950a7d4ea2cf6956137f4",
+  "package": "dev.liquidsense.chat.tools",
+  "separate_app_preserves_specialist_and_original": true,
+  "versionCode": 1,
+  "parent_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "config": {
+    "use_validated_dense": false,
+    "model_parent": "general_best",
+    "neural_loop_visits": 56,
+    "physical_layers": 32,
+    "tools_variant": "preserved_general_tools_runtime",
+    "experimental": true,
+    "general_quality_promotion": false
+  },
+  "phone_execution_verified": false,
+  "specialist_option": "uses optional installed dev.liquidsense.chat.fast public assets",
+  "base_general_fully_bundled": true
+}

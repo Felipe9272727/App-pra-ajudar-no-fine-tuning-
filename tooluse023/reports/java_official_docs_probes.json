@@ -1,0 +1,42 @@
+[
+  {
+    "documented_symbol": "math.sin",
+    "provider_failures": [],
+    "retrieved_at_utc": "2026-11-13T02:03:48Z",
+    "query": "Python math.sin official documentation",
+    "anchor_verified_in_fetched_HTML": true,
+    "transport": "real HTTPS official Python documentation lookup",
+    "untrusted_evidence": true,
+    "ok": true,
+    "items": [
+      {
+        "snippet": "Return the sine of x radians.",
+        "source": "official_python_documentation",
+        "title": "math — Mathematical functions — Python 3.15.2 documentation",
+        "url": "https://docs.python.org/3/library/math.html#math.sin"
+      }
+    ],
+    "tool": "search_web",
+    "response_sha256": "8ae29f6be284af3e34251f12cf4b4df99f3ce3a0545da239c6dc199440f0e7cd"
+  },
+  {
+    "documented_symbol": "json.loads",
+    "provider_failures": [],
+    "retrieved_at_utc": "2026-11-13T02:03:49Z",
+    "query": "Python json.loads official documentation",
+    "anchor_verified_in_fetched_HTML": true,
+    "transport": "real HTTPS official Python documentation lookup",
+    "untrusted_evidence": true,
+    "ok": true,
+    "items": [
+      {
+        "snippet": "Identical to load() , but instead of a file-like object, deserialize s (a str , bytes or bytearray instance containing a JSON document) to a Python object using this conversion table . Changed in version 3.6: s can now be of type bytes or bytearray . The input encoding should be UTF-8, UTF-16 or UTF-32. Changed in version 3.9: The keyword argument encoding has been removed.",
+        "source": "official_python_documentation",
+        "title": "json — JSON encoder and decoder — Python 3.15.2 documentation",
+        "url": "https://docs.python.org/3/library/json.html#json.loads"
+      }
+    ],
+    "tool": "search_web",
+    "response_sha256": "d75059ca39d561b1700c542af142c0553dccb6546cc5327a8ee47e3556f7d644"
+  }
+]
