@@ -1,5 +1,15 @@
 # Liquid Sense 0.8B LOOP
 
+## Prévia 0.4 — limites maiores e recuperação de ferramentas (13/11/2026)
+
+[**Baixar APK 0.4 no Gofile**](https://gofile.io/d/hmAohFD5) (~1,62 GB, ARM64 / Android 9+). **Atualiza o Tools 0.3**, com o mesmo pacote e certificado, preservando suas conversas. Pesos gerais integrados; o seletor da Especializada 015E continua disponível.
+
+O botão **Raciocínio** oferece Normal (até 2.048 tokens de resposta), Profundo experimental (1.024 para pensar + 2.048 de resposta) e Extenso experimental (2.048 + 4.096), por etapa. Contexto máximo de 16 mil tokens. Chamadas incompletas têm reparo limitado; resultados reais ficam na conversa, com Continuação e diagnóstico local.
+
+**Mais thinking não demonstrou ganho:** no mesmo cálculo, o Normal anterior acertou e o Profundo repetiu marcadores sem responder. Normal permanece padrão. O teste de I/O com programa Python explícito passou; o uso espontâneo sem `print` não contou como número verificado. Mesmos pesos gerais e arquitetura híbrida preservada, sem novos treinos nem promoção de qualidade.
+
+Assinatura, CRC, alinhamento, hashes e upload verificados. Esta versão 0.4 ainda não foi testada no telefone físico. [Guia](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3c241b8ef04294f2e00666aa81dfb1700e89840f/android_thinking024/README.md) · [Resultados e falhas preservadas](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3c241b8ef04294f2e00666aa81dfb1700e89840f/android_thinking024/REPORT.md) · [138 artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3c241b8ef04294f2e00666aa81dfb1700e89840f/android_thinking024/ARTIFACT_VERIFICATION.json)
+
 ## Prévia0.3 — internet, Python e seletor de modelos (13/11/2026)
 
 [**Baixar APK Tools0.3 no Gofile**](https://gofile.io/d/fowGW6q4) (~1,62GB, ARM64/Android9+, modelo geral integrado). App separado **Liquid Sense · Tools**. Busca real com fontes, consulta verificada à documentação Python e execução local de Python3 limitado (math/json/f-strings, sem pacotes externos), em serviço isolado.
