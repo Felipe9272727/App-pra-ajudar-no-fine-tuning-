@@ -147,6 +147,21 @@
     "small": "serial",
     "large": "serial"
   },
+  "post_timing_block_diagnostic": {
+    "mismatch_reproduced": true,
+    "both_serial_fallbacks_match": true,
+    "same_prefix_argmax_disagreements": [
+      {
+        "processed_prefix_tokens": 43,
+        "forward_input_tokens": 1,
+        "position_within_forward": 0,
+        "max_abs_logit_difference_same_token_prefix": 0.21875,
+        "reference_argmax": 5019,
+        "observed_argmax": 3301,
+        "reference_top_two_logit_margin": 0.125
+      }
+    ]
+  },
   "target_weights_changed": false,
   "android_apk_changed": false,
   "limitations": [

@@ -35,6 +35,7 @@ def main():
     # pathlib.rglob does not descend through the top-level checkpoint symlink.
     paths.update(p for p in (H / 'checkpoints').rglob('*') if p.is_file())
     paths.update(ROOT / p for p in frozen)
+    paths.add(ROOT / 'AGENTS.md')
     rows = [identity(p) for p in sorted(paths)]
     save_json(H / 'artifact_manifest.json', {'status': 'complete', 'files': rows,
               'file_count': len(rows), 'total_bytes': sum(r['bytes'] for r in rows),

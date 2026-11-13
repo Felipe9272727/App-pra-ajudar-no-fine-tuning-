@@ -42,6 +42,7 @@ def main():
     speed = read('reports/speed_summary.json')
     assert speed['status'] == 'complete'
     parity = read('reports/parity.json')
+    diagnostic = read('reports/block_diagnostic.json') if (H / 'reports/block_diagnostic.json').exists() else None
     summary = {
         'status': 'complete_experimental_pilot_no_target_promotion',
         'children': children,
@@ -51,6 +52,11 @@ def main():
         'block_parity_checks': len(parity['rows']),
         'block_parity_failures': sum(not r['identical'] for r in parity['rows']),
         'timing_verification_modes': parity['selected_correctness_modes'],
+        'post_timing_block_diagnostic': {
+            'mismatch_reproduced': diagnostic['original_small_mismatch_reproduced'],
+            'both_serial_fallbacks_match': all(x['identical_to_serial_target'] for x in diagnostic['serial_fallbacks'].values()),
+            'same_prefix_argmax_disagreements': diagnostic['argmax_disagreements_at_identical_token_prefixes'],
+        } if diagnostic else {'status': 'not_yet_run'},
         'target_weights_changed': False,
         'android_apk_changed': False,
         'limitations': [
@@ -109,6 +115,14 @@ def main():
               'rejeições restauram todos os 56 estados e repetem o prefixo aceito. '
               'As sondas de paridade e os testes sintéticos não provam equivalência universal. '
               'A capacidade individual dos filhos é medida separadamente da aceitação pelo professor.', '',
+              'A conferência posterior reproduziu a divergência no prompt S026S/5. '
+              'No último passo, com o mesmo histórico de tokens, a diferença máxima nos logits foi 0,21875, '
+              'e a margem entre os dois maiores logits da referência era 0,125. '
+              'Os dois fallbacks sequenciais coincidiram com a referência nesse mesmo prompt, '
+              'com diferença de logits zero nos prefixos comparados. '
+              'Isso isola uma diferença entre caminhos de execução, sem identificar a primeira operação responsável '
+              'ou provar que a causa seja somente arredondamento. '
+              'Veja [reports/block_diagnostic.json](reports/block_diagnostic.json).', '',
               'A auditoria dos erros encontrou zero funções analisáveis nos oito programas do menor; '
               'o maior repetiu exatamente o mesmo programa nos oito pedidos. '
               'O menor começou as oito respostas gerais com `def`; o maior fez isso em quatro. '
