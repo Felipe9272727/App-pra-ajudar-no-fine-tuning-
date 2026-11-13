@@ -1,0 +1,374 @@
+{
+  "status": "complete",
+  "scope": "post-timing diagnostic, not an additional performance trial",
+  "id": "S026S/5",
+  "reference_ids": [
+    71093,
+    12305,
+    198,
+    727,
+    1866,
+    20974,
+    3092,
+    1951,
+    44509,
+    1590,
+    198,
+    262,
+    4071,
+    198,
+    262,
+    5019
+  ],
+  "block_small_ids": [
+    71093,
+    12305,
+    198,
+    727,
+    1866,
+    20974,
+    3092,
+    1951,
+    44509,
+    1590,
+    198,
+    262,
+    4071,
+    198,
+    262,
+    3301
+  ],
+  "original_small_mismatch_reproduced": true,
+  "block_matches_target": false,
+  "block_logit_comparisons_at_identical_token_prefixes": [
+    {
+      "processed_prefix_tokens": 28,
+      "forward_input_tokens": 28,
+      "position_within_forward": 27,
+      "max_abs_logit_difference_same_token_prefix": 0.0,
+      "reference_argmax": 71093,
+      "observed_argmax": 71093,
+      "reference_top_two_logit_margin": 4.125
+    },
+    {
+      "processed_prefix_tokens": 29,
+      "forward_input_tokens": 2,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.40625,
+      "reference_argmax": 12305,
+      "observed_argmax": 12305,
+      "reference_top_two_logit_margin": 8.875
+    },
+    {
+      "processed_prefix_tokens": 29,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.0,
+      "reference_argmax": 12305,
+      "observed_argmax": 12305,
+      "reference_top_two_logit_margin": 8.875
+    },
+    {
+      "processed_prefix_tokens": 30,
+      "forward_input_tokens": 5,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.25,
+      "reference_argmax": 198,
+      "observed_argmax": 198,
+      "reference_top_two_logit_margin": 8.875
+    },
+    {
+      "processed_prefix_tokens": 31,
+      "forward_input_tokens": 5,
+      "position_within_forward": 1,
+      "max_abs_logit_difference_same_token_prefix": 0.1875,
+      "reference_argmax": 727,
+      "observed_argmax": 727,
+      "reference_top_two_logit_margin": 2.5
+    },
+    {
+      "processed_prefix_tokens": 30,
+      "forward_input_tokens": 2,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.25,
+      "reference_argmax": 198,
+      "observed_argmax": 198,
+      "reference_top_two_logit_margin": 8.875
+    },
+    {
+      "processed_prefix_tokens": 31,
+      "forward_input_tokens": 2,
+      "position_within_forward": 1,
+      "max_abs_logit_difference_same_token_prefix": 0.1875,
+      "reference_argmax": 727,
+      "observed_argmax": 727,
+      "reference_top_two_logit_margin": 2.5
+    },
+    {
+      "processed_prefix_tokens": 32,
+      "forward_input_tokens": 5,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.1875,
+      "reference_argmax": 1866,
+      "observed_argmax": 1866,
+      "reference_top_two_logit_margin": 0.625
+    },
+    {
+      "processed_prefix_tokens": 32,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.19140625,
+      "reference_argmax": 1866,
+      "observed_argmax": 1866,
+      "reference_top_two_logit_margin": 0.625
+    },
+    {
+      "processed_prefix_tokens": 33,
+      "forward_input_tokens": 5,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.1953125,
+      "reference_argmax": 20974,
+      "observed_argmax": 20974,
+      "reference_top_two_logit_margin": 0.875
+    },
+    {
+      "processed_prefix_tokens": 33,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.19921875,
+      "reference_argmax": 20974,
+      "observed_argmax": 20974,
+      "reference_top_two_logit_margin": 0.875
+    },
+    {
+      "processed_prefix_tokens": 34,
+      "forward_input_tokens": 5,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.1875,
+      "reference_argmax": 3092,
+      "observed_argmax": 3092,
+      "reference_top_two_logit_margin": 3.75
+    },
+    {
+      "processed_prefix_tokens": 34,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.1875,
+      "reference_argmax": 3092,
+      "observed_argmax": 3092,
+      "reference_top_two_logit_margin": 3.75
+    },
+    {
+      "processed_prefix_tokens": 35,
+      "forward_input_tokens": 5,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.25,
+      "reference_argmax": 1951,
+      "observed_argmax": 1951,
+      "reference_top_two_logit_margin": 1.375
+    },
+    {
+      "processed_prefix_tokens": 35,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.25,
+      "reference_argmax": 1951,
+      "observed_argmax": 1951,
+      "reference_top_two_logit_margin": 1.375
+    },
+    {
+      "processed_prefix_tokens": 36,
+      "forward_input_tokens": 5,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.28125,
+      "reference_argmax": 44509,
+      "observed_argmax": 44509,
+      "reference_top_two_logit_margin": 1.75
+    },
+    {
+      "processed_prefix_tokens": 36,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.421875,
+      "reference_argmax": 44509,
+      "observed_argmax": 44509,
+      "reference_top_two_logit_margin": 1.75
+    },
+    {
+      "processed_prefix_tokens": 37,
+      "forward_input_tokens": 5,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.265625,
+      "reference_argmax": 1590,
+      "observed_argmax": 1590,
+      "reference_top_two_logit_margin": 2.25
+    },
+    {
+      "processed_prefix_tokens": 37,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.25,
+      "reference_argmax": 1590,
+      "observed_argmax": 1590,
+      "reference_top_two_logit_margin": 2.25
+    },
+    {
+      "processed_prefix_tokens": 38,
+      "forward_input_tokens": 5,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.25,
+      "reference_argmax": 198,
+      "observed_argmax": 198,
+      "reference_top_two_logit_margin": 11.625
+    },
+    {
+      "processed_prefix_tokens": 39,
+      "forward_input_tokens": 5,
+      "position_within_forward": 1,
+      "max_abs_logit_difference_same_token_prefix": 0.375,
+      "reference_argmax": 262,
+      "observed_argmax": 262,
+      "reference_top_two_logit_margin": 8.25
+    },
+    {
+      "processed_prefix_tokens": 40,
+      "forward_input_tokens": 5,
+      "position_within_forward": 2,
+      "max_abs_logit_difference_same_token_prefix": 0.234375,
+      "reference_argmax": 4071,
+      "observed_argmax": 4071,
+      "reference_top_two_logit_margin": 2.0
+    },
+    {
+      "processed_prefix_tokens": 38,
+      "forward_input_tokens": 3,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.25,
+      "reference_argmax": 198,
+      "observed_argmax": 198,
+      "reference_top_two_logit_margin": 11.625
+    },
+    {
+      "processed_prefix_tokens": 39,
+      "forward_input_tokens": 3,
+      "position_within_forward": 1,
+      "max_abs_logit_difference_same_token_prefix": 0.375,
+      "reference_argmax": 262,
+      "observed_argmax": 262,
+      "reference_top_two_logit_margin": 8.25
+    },
+    {
+      "processed_prefix_tokens": 40,
+      "forward_input_tokens": 3,
+      "position_within_forward": 2,
+      "max_abs_logit_difference_same_token_prefix": 0.234375,
+      "reference_argmax": 4071,
+      "observed_argmax": 4071,
+      "reference_top_two_logit_margin": 2.0
+    },
+    {
+      "processed_prefix_tokens": 41,
+      "forward_input_tokens": 3,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.296875,
+      "reference_argmax": 198,
+      "observed_argmax": 198,
+      "reference_top_two_logit_margin": 0.25
+    },
+    {
+      "processed_prefix_tokens": 41,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.21875,
+      "reference_argmax": 198,
+      "observed_argmax": 198,
+      "reference_top_two_logit_margin": 0.25
+    },
+    {
+      "processed_prefix_tokens": 42,
+      "forward_input_tokens": 2,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.25390625,
+      "reference_argmax": 262,
+      "observed_argmax": 262,
+      "reference_top_two_logit_margin": 11.5
+    },
+    {
+      "processed_prefix_tokens": 42,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.2421875,
+      "reference_argmax": 262,
+      "observed_argmax": 262,
+      "reference_top_two_logit_margin": 11.5
+    },
+    {
+      "processed_prefix_tokens": 43,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.21875,
+      "reference_argmax": 5019,
+      "observed_argmax": 3301,
+      "reference_top_two_logit_margin": 0.125
+    }
+  ],
+  "argmax_disagreements_at_identical_token_prefixes": [
+    {
+      "processed_prefix_tokens": 43,
+      "forward_input_tokens": 1,
+      "position_within_forward": 0,
+      "max_abs_logit_difference_same_token_prefix": 0.21875,
+      "reference_argmax": 5019,
+      "observed_argmax": 3301,
+      "reference_top_two_logit_margin": 0.125
+    }
+  ],
+  "serial_fallbacks": {
+    "small": {
+      "ids": [
+        71093,
+        12305,
+        198,
+        727,
+        1866,
+        20974,
+        3092,
+        1951,
+        44509,
+        1590,
+        198,
+        262,
+        4071,
+        198,
+        262,
+        5019
+      ],
+      "identical_to_serial_target": true,
+      "max_abs_logit_difference_same_prefix": 0.0
+    },
+    "large": {
+      "ids": [
+        71093,
+        12305,
+        198,
+        727,
+        1866,
+        20974,
+        3092,
+        1951,
+        44509,
+        1590,
+        198,
+        262,
+        4071,
+        198,
+        262,
+        5019
+      ],
+      "identical_to_serial_target": true,
+      "max_abs_logit_difference_same_prefix": 0.0
+    }
+  },
+  "weights_judges_and_primary_results_changed": false,
+  "causal_limit": "This isolates execution-path differences at equal token prefixes. It does not identify the unique first diverging operation or prove a rounding-only cause; block mode remains ineligible."
+}

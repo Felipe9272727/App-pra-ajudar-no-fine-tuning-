@@ -1,0 +1,9 @@
+{
+  "scope": "four post-timing diagnostic/report source files",
+  "initial_immediate_head_readback_matched": false,
+  "fresh_commits_collection_verified_head": "b825032fbac795aa901ef8be935a7c0f9311f036",
+  "all_four_local_git_blob_ids_match_committed_tree": true,
+  "duplicate_publication_or_training_restart": false,
+  "model_diagnostic_had_not_started_at_readback_failure": true,
+  "primary_results_already_durable_at": "64ebdcf451b7e3e37953c6ef2f6303b3d600149f"
+}
