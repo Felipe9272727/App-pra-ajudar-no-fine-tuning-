@@ -1,26 +1,29 @@
 {
-  "status": "correcting_general_im_end_stop_rule_before_release",
+  "status": "complete_APK_delivered_no_background_worker",
+  "download": "https://gofile.io/d/hmAohFD5",
+  "apk_sha256": "6cb9927dca809c901947aed2c4ebd577d421de87e338f06c2714ea21a0f091db",
+  "bytes": 1616520387,
+  "selected_weights": "preserved_general_best",
   "weights_changed": false,
   "source_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
-  "completed": [
-    "Rust14unit checks",
-    "ARM64library build",
-    "AndroidJava/DEXbuild",
-    "Java25agent/parser checks",
-    "byte-exact signed0.3archive reconstructed and hash verified",
-    "baseline arithmetic323",
-    "forced32thought+64response bookkeeping, semantic failure recorded",
-    "full3072token probe failed/repeated tags; oldcontextguard crossed naturally",
-    "actual Python expression executed but no stdout; not counted as verified numeric result",
-    "actual Java HTTPS lookup math.cos passed with managed host proxy"
-  ],
-  "active": "Rustrebuild; no model worker",
-  "pending": [
-    "compile fixed stop rule",
-    "native Python smoke with empty stdout feedback",
-    "refresh staging native library",
-    "sign and deliver"
-  ],
-  "no_new_weight_training": true,
-  "old023sealed4questions_not_queried": true
+  "default_profile": "normal",
+  "long_thinking_promoted": false,
+  "long_modes_explicitly_optional": true,
+  "quality_result": "Profundo failed arithmetic; no intelligence improvement claimed",
+  "verification": {
+    "rust_tests_passed": 16,
+    "java_agent_parser_checks": 27,
+    "context_old2048guard_crossed": true,
+    "actual_https_passed": true,
+    "spontaneous_Python_numeric_verification": false,
+    "explicit_program_Python_IO_passed": true,
+    "signed_APK_CRC_alignment_packhash_final_binary_Dex_verified": true,
+    "phone_execution": false
+  },
+  "active_runs": [],
+  "pending_runs": [],
+  "new_training_updates": 0,
+  "old023sealed_questions_queried": false,
+  "prior_signed03_exact_archive": "artifacts/prior_tools023/manifest.json",
+  "prior_full_signed03_SHA256": "d8c649c9e06be632b7a411417d06a3a926911788764950a7d4ea2cf6956137f4"
 }

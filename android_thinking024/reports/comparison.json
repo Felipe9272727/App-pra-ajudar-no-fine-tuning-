@@ -1,0 +1,135 @@
+{
+  "status": "long_thinking_failed_no_quality_promotion",
+  "scope": "one arithmetic engineering probe, same exact general weights, greedy4CPUthreads; not a benchmark or evidence of general intelligence",
+  "rows": [
+    {
+      "variant": "old_tools023_nonthinking256",
+      "answer_correct": true,
+      "expected_for_grader_only": "323",
+      "reference_answer_not_in_model_input": true,
+      "response_preview": "323",
+      "finish_reason": "stop",
+      "tokens": 3,
+      "reasoning_tokens": 0,
+      "response_tokens": 3,
+      "forced_control_tokens": 0,
+      "forced_reasoning_close": false,
+      "prompt_tokens": 476,
+      "wall_model_seconds_descriptive_only": 61.029703415,
+      "raw_path": "logs/baseline_math.json",
+      "sha256": "22ecce5fe9cae02185ac6c9f257e2b461a6184f0e145430b23081e489bd35ed9"
+    },
+    {
+      "variant": "new_thinking32_response64",
+      "answer_correct": false,
+      "expected_for_grader_only": "323",
+      "reference_answer_not_in_model_input": true,
+      "response_preview": "O usuário está pedindo para responder apenas o número, mas não especificando se é para uma verificação de cálculo ou para uma verificação de uma verificação\n\nO usuário está pedindo para responder apenas o número, mas não",
+      "finish_reason": "length",
+      "tokens": 96,
+      "reasoning_tokens": 32,
+      "response_tokens": 64,
+      "forced_control_tokens": 2,
+      "forced_reasoning_close": true,
+      "prompt_tokens": 474,
+      "wall_model_seconds_descriptive_only": 73.852382729,
+      "raw_path": "logs/forced_math.json",
+      "sha256": "a93c34dacfbea553479eefbe525d06aa6f82753bd331c4ed6c9f42b487f7d5e4"
+    },
+    {
+      "variant": "new_profundo1024_response2048",
+      "answer_correct": false,
+      "expected_for_grader_only": "323",
+      "reference_answer_not_in_model_input": true,
+      "response_preview": "</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n</think>\n\n",
+      "finish_reason": "length",
+      "tokens": 3072,
+      "reasoning_tokens": 1024,
+      "response_tokens": 2048,
+      "forced_control_tokens": 2,
+      "forced_reasoning_close": true,
+      "prompt_tokens": 474,
+      "wall_model_seconds_descriptive_only": 928.663598502,
+      "raw_path": "logs/profundo_math.json",
+      "sha256": "7d56e6117f2ee7f2afc91c1a1d0b7fb60d1c538e47a09ca17281c9279587c1db"
+    }
+  ],
+  "selected_default": "normal",
+  "long_modes": "explicitly optional and experimental",
+  "context_guard_test": {
+    "strategy": "full thinking run naturally exceeded old2048guard; no redundant long-input model run",
+    "prompt_plus_generated_ids": 3548,
+    "model_processed_position_lower_bound": 3547,
+    "new_guard": 16384,
+    "full16384stress_test_performed": false,
+    "prepared_context_fixture_not_queried": true
+  },
+  "HF_prompt_counts_match_actual_native": true,
+  "source_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "new_training_updates": 0,
+  "device_test_performed": false,
+  "old023sealed4questions_not_queried": true,
+  "actual_native_python_agent": {
+    "has_final": true,
+    "final": "O resultado é 414.<|im_end|>",
+    "calls": 1,
+    "success": false,
+    "real_execution_observations": [
+      {
+        "stdout": "",
+        "runtime": "MicroPython1.26.1 actual C interpreter, Python subset",
+        "ok": true,
+        "tool": "run_python"
+      }
+    ],
+    "reference_answer_not_in_model_input": true,
+    "question": "Use Python para conferir quanto é 18 vezes 23 e diga o resultado.",
+    "profile": "normal",
+    "scope": "Linux host Rust model + identical Java agent + actual C Python subset; not Android phone execution",
+    "not_phone_performance_comparison": true
+  },
+  "actual_native_python_after_fixes": {
+    "has_final": true,
+    "final": "O resultado de 18 vezes 23 é 414.",
+    "calls": 1,
+    "success": false,
+    "observations": [
+      {
+        "stdout": "",
+        "runtime_note": "O programa terminou sem imprimir saída. Esta ferramenta executa um script, sem retornar automaticamente o valor de expressões. Para observar um valor, imprima-o com print(...). Não afirme um resultado numérico que não foi retornado.",
+        "runtime": "MicroPython1.26.1 actual C interpreter, Python subset",
+        "ok": true,
+        "stdout_empty": true,
+        "tool": "run_python"
+      }
+    ],
+    "reference_answer_not_in_model_input": true,
+    "question": "Use Python para conferir quanto é 18 vezes 23 e diga o resultado.",
+    "profile": "normal",
+    "scope": "Linux host Rust model + identical Java agent + actual C Python subset; not Android phone execution",
+    "same_question_and_weights_as_initial_tool_smoke": true,
+    "software_changes_only": [
+      "general im_end stop restored",
+      "empty-stdout runtime feedback",
+      "protocol-only final rejected"
+    ],
+    "no_claim_of_weight_improvement": true
+  },
+  "explicit_code_tool_IO_smoke": {
+    "success": true,
+    "final": "A saída observada é: **414**",
+    "observations": [
+      {
+        "stdout": "414\n",
+        "runtime": "MicroPython1.26.1 actual C interpreter, Python subset",
+        "ok": true,
+        "tool": "run_python"
+      }
+    ],
+    "question": "Execute este código em Python e diga a saída observada: print(18 * 23)",
+    "test_supplies_code_not_numeric_output": true,
+    "not_problem_solving_or_weight_quality_score": true,
+    "scope": "Linux host Rust model + identical Java agent + actual C Python subset; not Android phone execution"
+  },
+  "final_stop_correction_does_not_change_recorded_long_probe": true
+}

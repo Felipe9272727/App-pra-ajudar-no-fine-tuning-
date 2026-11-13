@@ -12,5 +12,14 @@ def main():
  py=HERE/'logs/actual_python_normal/result.json'
  if py.exists():
   m=json.loads(py.read_text());trace=read('logs/actual_python_normal/trace.json');obs=[t['observation'] for t in trace if 'observation' in t];report['actual_native_python_agent']={'has_final':bool(m.get('text')),'final':m.get('text'),'calls':m.get('actual_tool_calls'),'success':bool(m.get('text')) and '414' in m['text'] and any(o.get('ok') and '414' in o.get('stdout','') for o in obs),'real_execution_observations':obs,'reference_answer_not_in_model_input':True,'question':'Use Python para conferir quanto é 18 vezes 23 e diga o resultado.','profile':'normal','scope':m['scope'],'not_phone_performance_comparison':True}
+ corrected=HERE/'logs/actual_python_after_fixes/result.json'
+ if corrected.exists():
+  m=json.loads(corrected.read_text());trace=read('logs/actual_python_after_fixes/trace.json');obs=[t['observation'] for t in trace if 'observation' in t]
+  report['actual_native_python_after_fixes']={'has_final':bool(m.get('text')),'final':m.get('text'),'calls':m.get('actual_tool_calls'),'success':bool(m.get('text')) and '414' in m['text'] and any(o.get('ok') and '414' in o.get('stdout','') for o in obs),'observations':obs,'reference_answer_not_in_model_input':True,'question':'Use Python para conferir quanto é 18 vezes 23 e diga o resultado.','profile':'normal','scope':m['scope'],'same_question_and_weights_as_initial_tool_smoke':True,'software_changes_only':['general im_end stop restored','empty-stdout runtime feedback','protocol-only final rejected'],'no_claim_of_weight_improvement':True}
+ abi=HERE/'logs/explicit_python_abi/result.json'
+ if abi.exists():
+  m=json.loads(abi.read_text());trace=read('logs/explicit_python_abi/trace.json');obs=[t['observation'] for t in trace if 'observation' in t]
+  report['explicit_code_tool_IO_smoke']={'success':bool(m.get('text')) and '414' in m['text'] and any(o.get('ok') and o.get('stdout','').strip()=='414' for o in obs),'final':m.get('text'),'observations':obs,'question':'Execute este código em Python e diga a saída observada: print(18 * 23)','test_supplies_code_not_numeric_output':True,'not_problem_solving_or_weight_quality_score':True,'scope':m['scope']}
+ report['final_stop_correction_does_not_change_recorded_long_probe']=not any(t in full['generated_ids'] for t in [248044,248046])
  (HERE/'reports/comparison.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps({'status':report['status'],'rows':[(r['variant'],r['answer_correct']) for r in rows],'actual_python':report.get('actual_native_python_agent'),'context_guard_crossed':tokens>2048},ensure_ascii=False))
 if __name__=='__main__':main()

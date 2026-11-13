@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "apk_sha256": "6cb9927dca809c901947aed2c4ebd577d421de87e338f06c2714ea21a0f091db",
+  "bytes": 1616520387,
+  "native_library_sha256": "19c373c43c30cd56119f01f5c8dd77caea3a9624ec72f1b81b5c23092e52fff2",
+  "classes_dex_sha256": "5e4b7418e48ef474bd93e0cdb22b055ffafcc87bb4dc5c37c5ef9d72df5549f8",
+  "classes_dex_matches_final_compilation": true,
+  "native_library_matches_final_compilation": true,
+  "unique_zip_entry_names": true,
+  "versionCode": 2,
+  "same_previous_certificate": "fcb504e5004b8e0be879b952d597248da3a731c481c1f24cd1ac01502df5ac5b",
+  "signature_v3_official_verified": true,
+  "CRC_zipalign16KiB_packSHA_verified_by_seal": true,
+  "source_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "phone_tested": false
+}
