@@ -1,0 +1,19 @@
+{
+  "status": "screen_complete_rejected",
+  "tools_candidate_eligible": false,
+  "parent_tools_correct": 2,
+  "candidate_tools_correct": 1,
+  "total": 4,
+  "parent_correct_tasks_lost": [
+    "fresh_py02"
+  ],
+  "decision": "Reject023weight edit; keep generalbest and specialistE unchanged",
+  "semantic_error": "On MMC84,198 candidate calls math.gcd, prints6 and labels it MMC. Parent computes2772. This is a deterministic programming/concept regression, not tool simulation.",
+  "search_comparison_limitation": "Original022gets relevant Brave heapq docs. General023gets Yahoo fallback unrelated results for a differently-worded query. Live search/provider drift prevents attributing lookup score differences solely to weights. Raw outputs/provenance preserved.",
+  "fresh4_queried": false,
+  "further_retention_run": false,
+  "gate_reason": "screen lost a parent-correct numeric task; stop before retention/fresh, no dose search",
+  "weights_in_future_tools_APK": "preserved general best, no rejected overlays",
+  "app_workflow": "separate engineering preview; requests verification/final after actual results, not evidence of learned deeper reasoning",
+  "phone_execution_verified": false
+}
