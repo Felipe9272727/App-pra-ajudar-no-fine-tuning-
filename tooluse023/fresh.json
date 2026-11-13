@@ -1,0 +1,33 @@
+[
+  {
+    "id": "new_py01",
+    "kind": "python",
+    "question": "Execute Python para conferir a soma das quartas potências de 1 até 13 e responda o número.",
+    "expected": "89271"
+  },
+  {
+    "id": "new_py02",
+    "kind": "python",
+    "question": "Calcule e confira em Python o MMC de 126 e 330. Diga o resultado.",
+    "expected": "6930"
+  },
+  {
+    "id": "new_web01",
+    "kind": "web",
+    "question": "Busque na web a documentação de collections.deque.appendleft do Python e cite uma fonte encontrada.",
+    "query_terms": [
+      "deque",
+      "appendleft"
+    ]
+  },
+  {
+    "id": "new_web02",
+    "kind": "web",
+    "question": "Pesquise na internet a documentação de slices.Sort em Go e cite uma fonte retornada.",
+    "query_terms": [
+      "slices",
+      "sort",
+      "go"
+    ]
+  }
+]
