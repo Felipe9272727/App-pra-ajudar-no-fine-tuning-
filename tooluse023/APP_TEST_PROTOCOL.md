@@ -40,3 +40,13 @@ program executes (runtime regression, no new model generation). Keep old
 interpreter binary/hash. Then run NEW smoke requests: sum-squares1..21
 (expected3311 only in judge) and Python math.sqrt web documentation. Same
 model/controller/budgets; interpreter revision report separate from initial.
+
+## Official documentation lookup in the app broker
+Search-engine fallback sometimes returned unrelated pages. For a query naming
+Python and a dotted stdlib symbol, the app now fetches the actual official
+module HTML, verifies that exact symbol anchor exists, and extracts its real
+description/URL. Generic module/symbol parsing, no stored task answers. Other
+queries retain public web search. Java HTTPS probes on math.sin and json.loads
+passed, with fetched body hashes. This is an external retrieval improvement;
+old model/benchmark scores remain unchanged. The earlier signed build was
+losslessly archived before updating DEX and re-signing. No weights changed.
