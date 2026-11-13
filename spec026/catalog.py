@@ -26,6 +26,8 @@ def main():
     assert json.loads((H / 'summary.json').read_text())['status'].startswith('complete')
     frozen = json.loads((H / 'frozen.json').read_text())
     assert all(file_hash(ROOT / p) == s for p, s in frozen.items())
+    auxiliary = json.loads((H / 'auxiliary_sources.json').read_text())
+    assert all(file_hash(ROOT / p) == s for p, s in auxiliary.items())
     assert file_hash(ROOT / 'rsi100/checkpoints/best.pt') == '46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8'
     excluded = {'artifact_manifest.json', 'remote_verification.json'}
     paths = {p for p in H.rglob('*') if p.is_file() and '__pycache__' not in p.parts

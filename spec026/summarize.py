@@ -11,6 +11,9 @@ def read(path):
 
 
 def main():
+    traces = read('data/teacher_traces.json')
+    traces = list(traces.values()) if isinstance(traces, dict) else traces
+    teacher_output_tokens = sum(len(r['answer_ids']) for r in traces)
     scores = {}
     for variant in ['original', 'target', 'small_initial', 'small_trained', 'large_initial', 'large_trained']:
         r = read(f'reports/quality_{variant}.json')
@@ -41,6 +44,7 @@ def main():
     summary = {
         'status': 'complete_experimental_pilot_no_target_promotion',
         'children': children,
+        'actual_teacher_output_tokens': teacher_output_tokens,
         'standalone_quality': scores,
         'speculative_cpu_results': speed['models'],
         'target_weights_changed': False,
@@ -66,7 +70,7 @@ def main():
         'sem reivindicar reprodução oficial dos modelos SenseNova ou Liquid AI.', '',
         'Treino: 192 conversas, 13.644 rótulos únicos, três épocas, 40.932 exposições a tokens '
         'e 162 atualizações por tamanho. Adafactor, parâmetros mestres FP32, cálculo BF16/recorrência FP32. '
-        'As 24 sequências reais do professor são exemplos de comportamento e não gabaritos verificados. '
+        f'As 24 sequências reais do professor ({teacher_output_tokens} tokens de saída) são exemplos de comportamento e não gabaritos verificados. '
         'Os checkpoints FP32 inicial/final, estado do otimizador e versões BF16 para inferência estão preservados.', '',
         '| Modelo | Parâmetros | Tensores alterados | NLL inicial | NLL online da última época |',
         '|---|---:|---:|---:|---:|',
@@ -96,6 +100,12 @@ def main():
               'rejeições restauram todos os 56 estados e repetem o prefixo aceito. '
               'As sondas de paridade e os testes sintéticos não provam equivalência universal. '
               'A capacidade individual dos filhos é medida separadamente da aceitação pelo professor.', '',
+              'A auditoria dos erros encontrou zero funções analisáveis nos oito programas do menor; '
+              'o maior repetiu exatamente o mesmo programa nos oito pedidos. '
+              'O menor começou as oito respostas gerais com `def`; o maior fez isso em quatro. '
+              'A baixa perda de treino não se converteu em seguir novas instruções. '
+              'Não houve ablação de arquitetura/dados/objetivo para atribuir uma causa única. '
+              'Veja [reports/failure_analysis.json](reports/failure_analysis.json).', '',
               'Este piloto não estabelece o menor tamanho útil, inteligência geral ou velocidade após pré-treino amplo. '
               'Há apenas uma semente por tamanho e os kernels usados são as referências PyTorch de CPU. '
               'Uma continuação precisa de muito mais dados de pré-treino/distilação e novos testes reservados, '

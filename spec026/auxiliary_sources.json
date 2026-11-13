@@ -1,8 +1,9 @@
 {
   "spec026/finish_pilot.py": "6b44ff26a51a5609624bfcbf861774b288b0cc2790eb74cefb141dc9d9cdf812",
   "spec026/verify_archives.py": "c6b0c4a116126b84cf3a22764e394890047b656ae68a9a439017cb21ceabfd75",
-  "spec026/summarize.py": "79c013d2025b3542c14eb29e8f33fb99d991871955ad4635445e682310aeb9e9",
-  "spec026/catalog.py": "d2ed8a07fa222e56ccd8d1fad53ea8e311f6c29bcaeee2dbbf66af98d223951b",
+  "spec026/summarize.py": "a72ef21c43c3969514b759710d88ae2e8fecf39c8b7de591ef89aabc44142c56",
+  "spec026/catalog.py": "d5283acd0afdbbfa8f6ff0853ccb20e4f0f7db977df1d54064201fc580f2b2d9",
   "spec026/evaluate_original.py": "29917268492acee79a2f18c7021154957f8edfe1a721a81fa59c825d79a2f45d",
-  "spec026/ORIGINAL_REFERENCE_ADDENDUM.md": "e876de512efcd9b92bce7d1de525c040fc53a699c9d08461c68572457d0aaaa0"
+  "spec026/ORIGINAL_REFERENCE_ADDENDUM.md": "e876de512efcd9b92bce7d1de525c040fc53a699c9d08461c68572457d0aaaa0",
+  "spec026/analyze_failures.py": "18ce330e40ee79a81ad5ea14a73321a502c3d20c0ff0ca4ce7b7e6d403f6bd2f"
 }
