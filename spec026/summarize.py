@@ -23,6 +23,8 @@ def main():
         backward = read(f'reports/backward_{size}.json')
         children[size] = {
             'parameters': r['architecture']['unique_parameters'],
+            'embedding_parameters': r['architecture']['embedding_values'],
+            'embedding_parameter_fraction': r['architecture']['embedding_values'] / r['architecture']['unique_parameters'],
             'epochs': r['epochs'],
             'optimizer_steps': r['optimizer_steps'],
             'training_tokens': r['training_tokens'],
@@ -50,6 +52,7 @@ def main():
             'Fixed short greedy CPU requests; no stochastic-decoding or Android speed claim',
             'Finite exact token agreement is not a universal numerical equivalence proof',
             'Minimum useful drafter size and speed at mature pretraining remain unknown',
+            'One initialization seed per size; no architecture or seed sweep',
         ],
     }
     save_json(H / 'summary.json', summary)
@@ -70,7 +73,9 @@ def main():
     ]
     for size, r in children.items():
         lines.append(f"| {size} | {r['parameters']:,} | {r['changed_parameter_tensors']}/{r['eligible_parameter_tensors']} | {r['initial_preflight_NLL']:.3f} | {r['online_training_NLL_by_epoch'][-1]['mean_online_train_nll']:.3f} |")
-    lines += ['', 'A NLL acima é de treino e não mede generalização.', '',
+    lines += ['', 'A NLL acima é de treino e não mede generalização. '
+              'O embedding compartilhado ocupa cerca de 89% do filho menor e 67% do maior: '
+              'compatibilidade direta com o vocabulário do professor tem custo relevante neste tamanho.', '',
               '| Modelo | Programas corretos /8 | Casos /43 | Geral /8 |', '|---|---:|---:|---:|']
     for name, r in scores.items():
         lines.append(f"| {name} | {r['code_tasks']} | {r['code_cases']} | {r['general_correct']} |")
@@ -92,6 +97,7 @@ def main():
               'As sondas de paridade e os testes sintéticos não provam equivalência universal. '
               'A capacidade individual dos filhos é medida separadamente da aceitação pelo professor.', '',
               'Este piloto não estabelece o menor tamanho útil, inteligência geral ou velocidade após pré-treino amplo. '
+              'Há apenas uma semente por tamanho e os kernels usados são as referências PyTorch de CPU. '
               'Uma continuação precisa de muito mais dados de pré-treino/distilação e novos testes reservados, '
               'sem reutilizar estes resultados para ajustar e reavaliar no mesmo conjunto.', '',
               'Fontes e protocolo: [PROTOCOL.md](PROTOCOL.md), [config.json](config.json), [frozen.json](frozen.json). '
