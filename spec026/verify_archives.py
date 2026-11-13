@@ -25,6 +25,12 @@ def main():
                 assert payload['step'] == trained['optimizer_steps']
                 assert len(payload['optimizer']['state']) == len(expected)
                 assert payload['rng'].dtype == torch.uint8
+                rolling_path = Path('/dev/shm/liquid-spec026') / f'rolling_{size}.pt'
+                rolling = torch.load(rolling_path, weights_only=True, mmap=True)
+                assert rolling['step'] == payload['step']
+                assert all(tensor_hash(rolling['model'][n]) == h for n, h in expected.items())
+                assert torch.equal(rolling['rng'], payload['rng'])
+                del rolling
             rows.append({'size': size, 'phase': phase, 'parameter_tensors_verified': len(expected),
                          'compressed_sha256': manifest['compressed_sha256'],
                          'compressed_bytes': manifest['compressed_bytes'], 'all_finite': True,
