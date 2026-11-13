@@ -1,0 +1,162 @@
+{
+  "status": "complete_experimental_pilot_no_target_promotion",
+  "children": {
+    "small": {
+      "parameters": 17818400,
+      "embedding_parameters": 15892480,
+      "embedding_parameter_fraction": 0.8919139765635523,
+      "epochs": 3,
+      "optimizer_steps": 162,
+      "training_tokens": 40932,
+      "initial_preflight_NLL": 12.426916122436523,
+      "online_training_NLL_by_epoch": [
+        {
+          "epoch": 1,
+          "mean_online_train_nll": 10.803463647037754,
+          "tokens": 13644
+        },
+        {
+          "epoch": 2,
+          "mean_online_train_nll": 6.249179897682997,
+          "tokens": 13644
+        },
+        {
+          "epoch": 3,
+          "mean_online_train_nll": 2.92171515149128,
+          "tokens": 13644
+        }
+      ],
+      "changed_parameter_tensors": 546,
+      "eligible_parameter_tensors": 546,
+      "inference_compressed_bytes": 26752512,
+      "pretrained_teacher_tensors_copied": 0,
+      "all_finite": true
+    },
+    "large": {
+      "parameters": 94832240,
+      "embedding_parameters": 63569920,
+      "embedding_parameter_fraction": 0.6703408039291279,
+      "epochs": 3,
+      "optimizer_steps": 162,
+      "training_tokens": 40932,
+      "initial_preflight_NLL": 12.487987518310547,
+      "online_training_NLL_by_epoch": [
+        {
+          "epoch": 1,
+          "mean_online_train_nll": 6.501021668415411,
+          "tokens": 13644
+        },
+        {
+          "epoch": 2,
+          "mean_online_train_nll": 1.3043216693719368,
+          "tokens": 13644
+        },
+        {
+          "epoch": 3,
+          "mean_online_train_nll": 0.6713889490226538,
+          "tokens": 13644
+        }
+      ],
+      "changed_parameter_tensors": 546,
+      "eligible_parameter_tensors": 546,
+      "inference_compressed_bytes": 149839676,
+      "pretrained_teacher_tensors_copied": 0,
+      "all_finite": true
+    }
+  },
+  "actual_teacher_output_tokens": 498,
+  "standalone_quality": {
+    "original": {
+      "code_tasks": 4,
+      "code_cases": 30,
+      "code_cases_total": 43,
+      "general_correct": 7,
+      "code_truncated_at_budget": 0
+    },
+    "target": {
+      "code_tasks": 4,
+      "code_cases": 29,
+      "code_cases_total": 43,
+      "general_correct": 7,
+      "code_truncated_at_budget": 0
+    },
+    "small_initial": {
+      "code_tasks": 0,
+      "code_cases": 0,
+      "code_cases_total": 43,
+      "general_correct": 0,
+      "code_truncated_at_budget": 8
+    },
+    "small_trained": {
+      "code_tasks": 0,
+      "code_cases": 0,
+      "code_cases_total": 43,
+      "general_correct": 0,
+      "code_truncated_at_budget": 1
+    },
+    "large_initial": {
+      "code_tasks": 0,
+      "code_cases": 0,
+      "code_cases_total": 43,
+      "general_correct": 0,
+      "code_truncated_at_budget": 8
+    },
+    "large_trained": {
+      "code_tasks": 0,
+      "code_cases": 4,
+      "code_cases_total": 43,
+      "general_correct": 0,
+      "code_truncated_at_budget": 0
+    }
+  },
+  "speculative_cpu_results": {
+    "small": {
+      "target_total_seconds": 47.76284245502029,
+      "speculative_total_seconds": 299.59136570600094,
+      "speed_ratio_total": 0.15942663214764197,
+      "mean_pair_ratio": 0.19857871951571107,
+      "all_target_token_streams_identical": true,
+      "acceptance": 0.030434782608695653,
+      "proposed": 460,
+      "accepted": 14,
+      "verification_mode": "serial",
+      "fixed_pairs": 6,
+      "paired_sign_flip_p_two_sided": 0.03125,
+      "measured_cpu_benefit_with_matching_tokens": false,
+      "no_universal_lossless_or_phone_claim": true
+    },
+    "large": {
+      "target_total_seconds": 46.52013805099705,
+      "speculative_total_seconds": 295.31980081599613,
+      "speed_ratio_total": 0.15752461542523585,
+      "mean_pair_ratio": 0.19110368217159845,
+      "all_target_token_streams_identical": true,
+      "acceptance": 0.030303030303030304,
+      "proposed": 396,
+      "accepted": 12,
+      "verification_mode": "serial",
+      "fixed_pairs": 6,
+      "paired_sign_flip_p_two_sided": 0.03125,
+      "measured_cpu_benefit_with_matching_tokens": false,
+      "no_universal_lossless_or_phone_claim": true
+    }
+  },
+  "block_parity_checks": 16,
+  "block_parity_failures": 2,
+  "timing_verification_modes": {
+    "small": "serial",
+    "large": "serial"
+  },
+  "target_weights_changed": false,
+  "android_apk_changed": false,
+  "limitations": [
+    "192 conversations, 13644 unique next-token labels; bounded pilot, not corpus-scale pretraining",
+    "Teacher output traces are behavior examples, not verified solutions",
+    "8 custom code tasks and 8 general questions do not measure general intelligence",
+    "Fixed short greedy CPU requests; no stochastic-decoding or Android speed claim",
+    "Finite exact token agreement is not a universal numerical equivalence proof",
+    "Minimum useful drafter size and speed at mature pretraining remain unknown",
+    "One initialization seed per size; no architecture or seed sweep",
+    "Block path failed token parity for both children; primary timings use sequential verification, not parallel block acceleration"
+  ]
+}

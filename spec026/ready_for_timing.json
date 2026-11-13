@@ -1,0 +1,8 @@
+{
+  "opened_utc": "2026-11-13T22:52:30Z",
+  "all_source_data_and_six_checkpoint_archives_uploaded": true,
+  "last_verified_upload_commit": "d20d3fb68b3d7016fc2ada44ae20cf7d3dbd75df",
+  "six_way_quality_complete": true,
+  "all_model_workers_closed_before_gate": true,
+  "no_upload_or_training_during_benchmark": true
+}

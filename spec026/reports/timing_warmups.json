@@ -1,0 +1,185 @@
+[
+  {
+    "variant": "target",
+    "ids": [
+      727,
+      22983,
+      2007,
+      1590,
+      198,
+      262,
+      460,
+      830,
+      348,
+      220,
+      18,
+      248046
+    ],
+    "seconds": 4.720556479005609,
+    "prefill_seconds": 1.1982427839975571,
+    "decode_seconds": 3.5223136950080516,
+    "first_token_seconds": 1.1982427839975571,
+    "target": {
+      "seconds": 4.714459339957102,
+      "calls": 12,
+      "evaluated_tokens": 41
+    },
+    "tokens": 12,
+    "draft": {},
+    "proposed": 0,
+    "accepted": 0,
+    "text": "def triple(x):\n    return x * 3",
+    "resident_request_seconds": 4.722534833999816,
+    "tokenize_seconds": 0.0009993629937525839
+  },
+  {
+    "variant": "small",
+    "ids": [
+      727,
+      22983,
+      2007,
+      1590,
+      198,
+      262,
+      460,
+      830,
+      348,
+      220,
+      18,
+      248046
+    ],
+    "tokens": 12,
+    "seconds": 13.710979516006773,
+    "prefill_seconds": 1.058261856000172,
+    "decode_seconds": 12.652717660006601,
+    "first_token_seconds": 1.058261856000172,
+    "target": {
+      "seconds": 9.89375699502125,
+      "calls": 31,
+      "evaluated_tokens": 60,
+      "clone_seconds": 0.07566087199666072
+    },
+    "draft": {
+      "seconds": 3.700036237030872,
+      "calls": 31,
+      "evaluated_tokens": 60,
+      "clone_seconds": 0.02051155902154278
+    },
+    "proposed": 19,
+    "accepted": 6,
+    "acceptance": 0.3157894736842105,
+    "rejection_blocks": 4,
+    "trace": [
+      {
+        "drafted": 4,
+        "accepted": 0,
+        "all_accepted": false
+      },
+      {
+        "drafted": 4,
+        "accepted": 0,
+        "all_accepted": false
+      },
+      {
+        "drafted": 4,
+        "accepted": 4,
+        "all_accepted": true
+      },
+      {
+        "drafted": 2,
+        "accepted": 0,
+        "all_accepted": false
+      },
+      {
+        "drafted": 4,
+        "accepted": 1,
+        "all_accepted": false
+      },
+      {
+        "drafted": 1,
+        "accepted": 1,
+        "all_accepted": true
+      }
+    ],
+    "verify_mode": "serial",
+    "pending_final_token_not_processed_same_as_serial": true,
+    "text": "def triple(x):\n    return x * 3",
+    "resident_request_seconds": 13.713074608007446,
+    "tokenize_seconds": 0.0010729040077421814
+  },
+  {
+    "variant": "large",
+    "ids": [
+      727,
+      22983,
+      2007,
+      1590,
+      198,
+      262,
+      460,
+      830,
+      348,
+      220,
+      18,
+      248046
+    ],
+    "tokens": 12,
+    "seconds": 13.82717838100507,
+    "prefill_seconds": 0.9688460180041147,
+    "decode_seconds": 12.858332363000955,
+    "first_token_seconds": 0.9688460180041147,
+    "target": {
+      "seconds": 9.233350607973989,
+      "calls": 30,
+      "evaluated_tokens": 59,
+      "clone_seconds": 0.07719426798576023
+    },
+    "draft": {
+      "seconds": 4.476310287966044,
+      "calls": 30,
+      "evaluated_tokens": 59,
+      "clone_seconds": 0.021152646018890664
+    },
+    "proposed": 18,
+    "accepted": 6,
+    "acceptance": 0.3333333333333333,
+    "rejection_blocks": 4,
+    "trace": [
+      {
+        "drafted": 4,
+        "accepted": 0,
+        "all_accepted": false
+      },
+      {
+        "drafted": 1,
+        "accepted": 0,
+        "all_accepted": false
+      },
+      {
+        "drafted": 4,
+        "accepted": 4,
+        "all_accepted": true
+      },
+      {
+        "drafted": 4,
+        "accepted": 0,
+        "all_accepted": false
+      },
+      {
+        "drafted": 4,
+        "accepted": 1,
+        "all_accepted": false
+      },
+      {
+        "drafted": 1,
+        "accepted": 1,
+        "all_accepted": true
+      }
+    ],
+    "verify_mode": "serial",
+    "pending_final_token_not_processed_same_as_serial": true,
+    "text": "def triple(x):\n    return x * 3",
+    "resident_request_seconds": 13.828945055996883,
+    "tokenize_seconds": 0.0006729489978170022
+  }
+]

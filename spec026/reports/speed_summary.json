@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "hardware": "cloud x86 CPU quota2,4threads; not Android",
+  "model_load_seconds_excluded_from_resident_requests": 8.962309492999339,
+  "model_target_parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "all_pairs_included": true,
+  "models": {
+    "small": {
+      "target_total_seconds": 47.76284245502029,
+      "speculative_total_seconds": 299.59136570600094,
+      "speed_ratio_total": 0.15942663214764197,
+      "mean_pair_ratio": 0.19857871951571107,
+      "all_target_token_streams_identical": true,
+      "acceptance": 0.030434782608695653,
+      "proposed": 460,
+      "accepted": 14,
+      "verification_mode": "serial",
+      "fixed_pairs": 6,
+      "paired_sign_flip_p_two_sided": 0.03125,
+      "measured_cpu_benefit_with_matching_tokens": false,
+      "no_universal_lossless_or_phone_claim": true
+    },
+    "large": {
+      "target_total_seconds": 46.52013805099705,
+      "speculative_total_seconds": 295.31980081599613,
+      "speed_ratio_total": 0.15752461542523585,
+      "mean_pair_ratio": 0.19110368217159845,
+      "all_target_token_streams_identical": true,
+      "acceptance": 0.030303030303030304,
+      "proposed": 396,
+      "accepted": 12,
+      "verification_mode": "serial",
+      "fixed_pairs": 6,
+      "paired_sign_flip_p_two_sided": 0.03125,
+      "measured_cpu_benefit_with_matching_tokens": false,
+      "no_universal_lossless_or_phone_claim": true
+    }
+  }
+}

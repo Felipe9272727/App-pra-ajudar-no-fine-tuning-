@@ -1,0 +1,11 @@
+PILOT_PHASE train_large
+PILOT_PHASE verify_archives
+PILOT_PHASE quality_target
+PILOT_PHASE quality_small_initial
+PILOT_PHASE quality_small_trained
+PILOT_PHASE quality_large_initial
+PILOT_PHASE quality_large_trained
+WAITING_FOR_TIMING_GATE: finish all uploads first
+PILOT_PHASE benchmark
+PILOT_PHASE summarize
+PILOT_ALL_COMPUTE_COMPLETE

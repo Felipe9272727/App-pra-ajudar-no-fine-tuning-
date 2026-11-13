@@ -1,0 +1,3832 @@
+{
+  "status": "complete",
+  "pid": null,
+  "stages": [
+    {
+      "name": "train_large",
+      "started_utc": "2026-11-13T22:20:37Z",
+      "status": "complete",
+      "memory_samples": [
+        {
+          "utc": "22:20:37",
+          "cgroup_bytes": 3726577664
+        },
+        {
+          "utc": "22:20:42",
+          "pid": 53305,
+          "rss_kb": 616560,
+          "peak_rss_kb": 616560,
+          "cgroup_bytes": 4403830784
+        },
+        {
+          "utc": "22:20:47",
+          "pid": 53305,
+          "rss_kb": 829968,
+          "peak_rss_kb": 1183164,
+          "cgroup_bytes": 4598808576
+        },
+        {
+          "utc": "22:20:52",
+          "pid": 53305,
+          "rss_kb": 972800,
+          "peak_rss_kb": 1183164,
+          "cgroup_bytes": 4745342976
+        },
+        {
+          "utc": "22:20:57",
+          "pid": 53305,
+          "rss_kb": 753308,
+          "peak_rss_kb": 1211980,
+          "cgroup_bytes": 4873846784
+        },
+        {
+          "utc": "22:21:02",
+          "pid": 53305,
+          "rss_kb": 1677356,
+          "peak_rss_kb": 1677356,
+          "cgroup_bytes": 5821362176
+        },
+        {
+          "utc": "22:21:07",
+          "pid": 53305,
+          "rss_kb": 1264028,
+          "peak_rss_kb": 1679324,
+          "cgroup_bytes": 5392953344
+        },
+        {
+          "utc": "22:21:12",
+          "pid": 53305,
+          "rss_kb": 1299844,
+          "peak_rss_kb": 1718928,
+          "cgroup_bytes": 5433597952
+        },
+        {
+          "utc": "22:21:17",
+          "pid": 53305,
+          "rss_kb": 1516016,
+          "peak_rss_kb": 1777348,
+          "cgroup_bytes": 5661720576
+        },
+        {
+          "utc": "22:21:22",
+          "pid": 53305,
+          "rss_kb": 1100904,
+          "peak_rss_kb": 1780388,
+          "cgroup_bytes": 5241413632
+        },
+        {
+          "utc": "22:21:27",
+          "pid": 53305,
+          "rss_kb": 1345120,
+          "peak_rss_kb": 1780388,
+          "cgroup_bytes": 5492723712
+        },
+        {
+          "utc": "22:21:32",
+          "pid": 53305,
+          "rss_kb": 1422700,
+          "peak_rss_kb": 1780388,
+          "cgroup_bytes": 5572784128
+        },
+        {
+          "utc": "22:21:37",
+          "pid": 53305,
+          "rss_kb": 1302900,
+          "peak_rss_kb": 1780388,
+          "cgroup_bytes": 5449515008
+        },
+        {
+          "utc": "22:21:42",
+          "pid": 53305,
+          "rss_kb": 1325268,
+          "peak_rss_kb": 1780868,
+          "cgroup_bytes": 5468160000
+        },
+        {
+          "utc": "22:21:47",
+          "pid": 53305,
+          "rss_kb": 1329368,
+          "peak_rss_kb": 1781884,
+          "cgroup_bytes": 5475893248
+        },
+        {
+          "utc": "22:21:52",
+          "pid": 53305,
+          "rss_kb": 1102420,
+          "peak_rss_kb": 1781884,
+          "cgroup_bytes": 5260455936
+        },
+        {
+          "utc": "22:21:57",
+          "pid": 53305,
+          "rss_kb": 1350744,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5496709120
+        },
+        {
+          "utc": "22:22:02",
+          "pid": 53305,
+          "rss_kb": 1328212,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5466402816
+        },
+        {
+          "utc": "22:22:07",
+          "pid": 53305,
+          "rss_kb": 1322208,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5466574848
+        },
+        {
+          "utc": "22:22:12",
+          "pid": 53305,
+          "rss_kb": 1293944,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5445136384
+        },
+        {
+          "utc": "22:22:17",
+          "pid": 53305,
+          "rss_kb": 1167020,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5308293120
+        },
+        {
+          "utc": "22:22:22",
+          "pid": 53305,
+          "rss_kb": 1096284,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5235216384
+        },
+        {
+          "utc": "22:22:27",
+          "pid": 53305,
+          "rss_kb": 1407208,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5555138560
+        },
+        {
+          "utc": "22:22:32",
+          "pid": 53305,
+          "rss_kb": 1299840,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5438418944
+        },
+        {
+          "utc": "22:22:37",
+          "pid": 53305,
+          "rss_kb": 1310080,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5451497472
+        },
+        {
+          "utc": "22:22:42",
+          "pid": 53305,
+          "rss_kb": 1257544,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5396934656
+        },
+        {
+          "utc": "22:22:47",
+          "pid": 53305,
+          "rss_kb": 1037020,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5167804416
+        },
+        {
+          "utc": "22:22:52",
+          "pid": 53305,
+          "rss_kb": 1333344,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5473107968
+        },
+        {
+          "utc": "22:22:57",
+          "pid": 53305,
+          "rss_kb": 1300864,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5445980160
+        },
+        {
+          "utc": "22:23:02",
+          "pid": 53305,
+          "rss_kb": 1416916,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5558611968
+        },
+        {
+          "utc": "22:23:07",
+          "pid": 53305,
+          "rss_kb": 1096536,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5222330368
+        },
+        {
+          "utc": "22:23:12",
+          "pid": 53305,
+          "rss_kb": 1343832,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5469401088
+        },
+        {
+          "utc": "22:23:17",
+          "pid": 53305,
+          "rss_kb": 1591132,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5719224320
+        },
+        {
+          "utc": "22:23:22",
+          "pid": 53305,
+          "rss_kb": 1299064,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5417672704
+        },
+        {
+          "utc": "22:23:27",
+          "pid": 53305,
+          "rss_kb": 1299064,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5410816000
+        },
+        {
+          "utc": "22:23:32",
+          "pid": 53305,
+          "rss_kb": 1432320,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5547925504
+        },
+        {
+          "utc": "22:23:37",
+          "pid": 53305,
+          "rss_kb": 1041364,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5146791936
+        },
+        {
+          "utc": "22:23:42",
+          "pid": 53305,
+          "rss_kb": 1340760,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5453758464
+        },
+        {
+          "utc": "22:23:47",
+          "pid": 53305,
+          "rss_kb": 1315160,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5424050176
+        },
+        {
+          "utc": "22:23:52",
+          "pid": 53305,
+          "rss_kb": 1299064,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5413588992
+        },
+        {
+          "utc": "22:23:57",
+          "pid": 53305,
+          "rss_kb": 1391192,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5515997184
+        },
+        {
+          "utc": "22:24:02",
+          "pid": 53305,
+          "rss_kb": 1099608,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5220798464
+        },
+        {
+          "utc": "22:24:07",
+          "pid": 53305,
+          "rss_kb": 1346908,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5479686144
+        },
+        {
+          "utc": "22:24:12",
+          "pid": 53305,
+          "rss_kb": 1320268,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5457776640
+        },
+        {
+          "utc": "22:24:17",
+          "pid": 53305,
+          "rss_kb": 1299052,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5436444672
+        },
+        {
+          "utc": "22:24:22",
+          "pid": 53305,
+          "rss_kb": 1299056,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5436461056
+        },
+        {
+          "utc": "22:24:27",
+          "pid": 53305,
+          "rss_kb": 1094472,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5225521152
+        },
+        {
+          "utc": "22:24:32",
+          "pid": 53305,
+          "rss_kb": 1342796,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5480484864
+        },
+        {
+          "utc": "22:24:37",
+          "pid": 53305,
+          "rss_kb": 1321292,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5460643840
+        },
+        {
+          "utc": "22:24:42",
+          "pid": 53305,
+          "rss_kb": 1313228,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5447999488
+        },
+        {
+          "utc": "22:24:47",
+          "pid": 53305,
+          "rss_kb": 1364928,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5506633728
+        },
+        {
+          "utc": "22:24:52",
+          "pid": 53305,
+          "rss_kb": 1035248,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5169737728
+        },
+        {
+          "utc": "22:24:57",
+          "pid": 53305,
+          "rss_kb": 1345912,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5489508352
+        },
+        {
+          "utc": "22:25:02",
+          "pid": 53305,
+          "rss_kb": 1299760,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5437890560
+        },
+        {
+          "utc": "22:25:07",
+          "pid": 53305,
+          "rss_kb": 1315248,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5447008256
+        },
+        {
+          "utc": "22:25:12",
+          "pid": 53305,
+          "rss_kb": 1296480,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5419556864
+        },
+        {
+          "utc": "22:25:17",
+          "pid": 53305,
+          "rss_kb": 1033656,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5151617024
+        },
+        {
+          "utc": "22:25:22",
+          "pid": 53305,
+          "rss_kb": 1343296,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5465677824
+        },
+        {
+          "utc": "22:25:27",
+          "pid": 53305,
+          "rss_kb": 1314620,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5438418944
+        },
+        {
+          "utc": "22:25:32",
+          "pid": 53305,
+          "rss_kb": 1296476,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5426274304
+        },
+        {
+          "utc": "22:25:37",
+          "pid": 53305,
+          "rss_kb": 1288604,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5418614784
+        },
+        {
+          "utc": "22:25:42",
+          "pid": 53305,
+          "rss_kb": 1093644,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5210808320
+        },
+        {
+          "utc": "22:25:47",
+          "pid": 53305,
+          "rss_kb": 1346064,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5466341376
+        },
+        {
+          "utc": "22:25:52",
+          "pid": 53305,
+          "rss_kb": 1313804,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5433184256
+        },
+        {
+          "utc": "22:25:57",
+          "pid": 53305,
+          "rss_kb": 1295148,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5413924864
+        },
+        {
+          "utc": "22:26:02",
+          "pid": 53305,
+          "rss_kb": 1445804,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5569658880
+        },
+        {
+          "utc": "22:26:07",
+          "pid": 53305,
+          "rss_kb": 1181068,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5299965952
+        },
+        {
+          "utc": "22:26:12",
+          "pid": 53305,
+          "rss_kb": 1348112,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5469286400
+        },
+        {
+          "utc": "22:26:17",
+          "pid": 53305,
+          "rss_kb": 1301516,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5425860608
+        },
+        {
+          "utc": "22:26:22",
+          "pid": 53305,
+          "rss_kb": 1295148,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5419843584
+        },
+        {
+          "utc": "22:26:27",
+          "pid": 53305,
+          "rss_kb": 1198172,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5315043328
+        },
+        {
+          "utc": "22:26:32",
+          "pid": 53305,
+          "rss_kb": 1169272,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5281054720
+        },
+        {
+          "utc": "22:26:37",
+          "pid": 53305,
+          "rss_kb": 1086472,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5582704640
+        },
+        {
+          "utc": "22:26:42",
+          "pid": 53305,
+          "rss_kb": 1414556,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5920034816
+        },
+        {
+          "utc": "22:26:47",
+          "pid": 53305,
+          "rss_kb": 1327576,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5834805248
+        },
+        {
+          "utc": "22:26:52",
+          "pid": 53305,
+          "rss_kb": 1198336,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5704130560
+        },
+        {
+          "utc": "22:26:57",
+          "pid": 53305,
+          "rss_kb": 1341788,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5845299200
+        },
+        {
+          "utc": "22:27:02",
+          "pid": 53305,
+          "rss_kb": 1312600,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5818880000
+        },
+        {
+          "utc": "22:27:07",
+          "pid": 53305,
+          "rss_kb": 1295480,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5795266560
+        },
+        {
+          "utc": "22:27:12",
+          "pid": 53305,
+          "rss_kb": 1292776,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5792808960
+        },
+        {
+          "utc": "22:27:17",
+          "pid": 53305,
+          "rss_kb": 1031636,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5525336064
+        },
+        {
+          "utc": "22:27:22",
+          "pid": 53305,
+          "rss_kb": 1636476,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 6146088960
+        },
+        {
+          "utc": "22:27:27",
+          "pid": 53305,
+          "rss_kb": 1295480,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5797785600
+        },
+        {
+          "utc": "22:27:32",
+          "pid": 53305,
+          "rss_kb": 1340492,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5844279296
+        },
+        {
+          "utc": "22:27:37",
+          "pid": 53305,
+          "rss_kb": 1097048,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5593681920
+        },
+        {
+          "utc": "22:27:42",
+          "pid": 53305,
+          "rss_kb": 1587548,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 6098735104
+        },
+        {
+          "utc": "22:27:47",
+          "pid": 53305,
+          "rss_kb": 1322328,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5828755456
+        },
+        {
+          "utc": "22:27:52",
+          "pid": 53305,
+          "rss_kb": 1302136,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5808381952
+        },
+        {
+          "utc": "22:27:57",
+          "pid": 53305,
+          "rss_kb": 1294116,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5776871424
+        },
+        {
+          "utc": "22:28:02",
+          "pid": 53305,
+          "rss_kb": 1083388,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5554589696
+        },
+        {
+          "utc": "22:28:07",
+          "pid": 53305,
+          "rss_kb": 1512384,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5995974656
+        },
+        {
+          "utc": "22:28:12",
+          "pid": 53305,
+          "rss_kb": 1293312,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5771993088
+        },
+        {
+          "utc": "22:28:17",
+          "pid": 53305,
+          "rss_kb": 1287456,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5766848512
+        },
+        {
+          "utc": "22:28:22",
+          "pid": 53305,
+          "rss_kb": 1287460,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5770641408
+        },
+        {
+          "utc": "22:28:27",
+          "pid": 53305,
+          "rss_kb": 1089024,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5569372160
+        },
+        {
+          "utc": "22:28:32",
+          "pid": 53305,
+          "rss_kb": 1575916,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 6068764672
+        },
+        {
+          "utc": "22:28:37",
+          "pid": 53305,
+          "rss_kb": 1307136,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5789937664
+        },
+        {
+          "utc": "22:28:42",
+          "pid": 53305,
+          "rss_kb": 1301280,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5783244800
+        },
+        {
+          "utc": "22:28:47",
+          "pid": 53305,
+          "rss_kb": 1394276,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5877379072
+        },
+        {
+          "utc": "22:28:52",
+          "pid": 53305,
+          "rss_kb": 1336836,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5819736064
+        },
+        {
+          "utc": "22:28:58",
+          "pid": 53305,
+          "rss_kb": 1618552,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 6083493888
+        },
+        {
+          "utc": "22:29:03",
+          "pid": 53305,
+          "rss_kb": 1293548,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5753921536
+        },
+        {
+          "utc": "22:29:08",
+          "pid": 53305,
+          "rss_kb": 1303904,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5767413760
+        },
+        {
+          "utc": "22:29:13",
+          "pid": 53305,
+          "rss_kb": 1345540,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5809758208
+        },
+        {
+          "utc": "22:29:18",
+          "pid": 53305,
+          "rss_kb": 1021788,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5471760384
+        },
+        {
+          "utc": "22:29:23",
+          "pid": 53305,
+          "rss_kb": 1331940,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5794615296
+        },
+        {
+          "utc": "22:29:28",
+          "pid": 53305,
+          "rss_kb": 1317728,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5787459584
+        },
+        {
+          "utc": "22:29:33",
+          "pid": 53305,
+          "rss_kb": 1283584,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5739995136
+        },
+        {
+          "utc": "22:29:38",
+          "pid": 53305,
+          "rss_kb": 1351128,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5820284928
+        },
+        {
+          "utc": "22:29:43",
+          "pid": 53305,
+          "rss_kb": 1023836,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5476028416
+        },
+        {
+          "utc": "22:29:48",
+          "pid": 53305,
+          "rss_kb": 1329892,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5793562624
+        },
+        {
+          "utc": "22:29:53",
+          "pid": 53305,
+          "rss_kb": 1290304,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5743525888
+        },
+        {
+          "utc": "22:29:58",
+          "pid": 53305,
+          "rss_kb": 1288928,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5743271936
+        },
+        {
+          "utc": "22:30:03",
+          "pid": 53305,
+          "rss_kb": 1383972,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5841981440
+        },
+        {
+          "utc": "22:30:08",
+          "pid": 53305,
+          "rss_kb": 1083328,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5530783744
+        },
+        {
+          "utc": "22:30:13",
+          "pid": 53305,
+          "rss_kb": 1323584,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5778116608
+        },
+        {
+          "utc": "22:30:18",
+          "pid": 53305,
+          "rss_kb": 1293888,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5762670592
+        },
+        {
+          "utc": "22:30:23",
+          "pid": 53305,
+          "rss_kb": 1178944,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5630865408
+        },
+        {
+          "utc": "22:30:28",
+          "pid": 53305,
+          "rss_kb": 1328580,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5788360704
+        },
+        {
+          "utc": "22:30:33",
+          "pid": 53305,
+          "rss_kb": 1313728,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5773144064
+        },
+        {
+          "utc": "22:30:38",
+          "pid": 53305,
+          "rss_kb": 1394476,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5857488896
+        },
+        {
+          "utc": "22:30:43",
+          "pid": 53305,
+          "rss_kb": 1020476,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5464182784
+        },
+        {
+          "utc": "22:30:48",
+          "pid": 53305,
+          "rss_kb": 1495380,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5948588032
+        },
+        {
+          "utc": "22:30:53",
+          "pid": 53305,
+          "rss_kb": 1320512,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5769347072
+        },
+        {
+          "utc": "22:30:58",
+          "pid": 53305,
+          "rss_kb": 1280736,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5727502336
+        },
+        {
+          "utc": "22:31:03",
+          "pid": 53305,
+          "rss_kb": 1377580,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5822840832
+        },
+        {
+          "utc": "22:31:08",
+          "pid": 53305,
+          "rss_kb": 1387592,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5832519680
+        },
+        {
+          "utc": "22:31:13",
+          "pid": 53305,
+          "rss_kb": 1016892,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5452853248
+        },
+        {
+          "utc": "22:31:18",
+          "pid": 53305,
+          "rss_kb": 1332676,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5770072064
+        },
+        {
+          "utc": "22:31:23",
+          "pid": 53305,
+          "rss_kb": 1761648,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 6205825024
+        },
+        {
+          "utc": "22:31:28",
+          "pid": 53305,
+          "rss_kb": 1280728,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5712453632
+        },
+        {
+          "utc": "22:31:33",
+          "pid": 53305,
+          "rss_kb": 1281080,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5712855040
+        },
+        {
+          "utc": "22:31:38",
+          "pid": 53305,
+          "rss_kb": 1156444,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5585068032
+        },
+        {
+          "utc": "22:31:43",
+          "pid": 53305,
+          "rss_kb": 1017908,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5443014656
+        },
+        {
+          "utc": "22:31:48",
+          "pid": 53305,
+          "rss_kb": 1332156,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5765279744
+        },
+        {
+          "utc": "22:31:53",
+          "pid": 53305,
+          "rss_kb": 1309624,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5742174208
+        },
+        {
+          "utc": "22:31:58",
+          "pid": 53305,
+          "rss_kb": 1280728,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5712523264
+        },
+        {
+          "utc": "22:32:03",
+          "pid": 53305,
+          "rss_kb": 1399644,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5834596352
+        },
+        {
+          "utc": "22:32:08",
+          "pid": 53305,
+          "rss_kb": 1017908,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5432496128
+        },
+        {
+          "utc": "22:32:13",
+          "pid": 53305,
+          "rss_kb": 1321984,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5729095680
+        },
+        {
+          "utc": "22:32:18",
+          "pid": 53305,
+          "rss_kb": 1317376,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5724569600
+        },
+        {
+          "utc": "22:32:23",
+          "pid": 53305,
+          "rss_kb": 1304084,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5711052800
+        },
+        {
+          "utc": "22:32:28",
+          "pid": 53305,
+          "rss_kb": 1300116,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5706813440
+        },
+        {
+          "utc": "22:32:33",
+          "pid": 53305,
+          "rss_kb": 1276724,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5682905088
+        },
+        {
+          "utc": "22:32:38",
+          "pid": 53305,
+          "rss_kb": 1400892,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5810298880
+        },
+        {
+          "utc": "22:32:43",
+          "pid": 53305,
+          "rss_kb": 1075468,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5471383552
+        },
+        {
+          "utc": "22:32:48",
+          "pid": 53305,
+          "rss_kb": 1326864,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5729705984
+        },
+        {
+          "utc": "22:32:53",
+          "pid": 53305,
+          "rss_kb": 1321744,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5724299264
+        },
+        {
+          "utc": "22:32:58",
+          "pid": 53305,
+          "rss_kb": 1287052,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5688664064
+        },
+        {
+          "utc": "22:33:03",
+          "pid": 53305,
+          "rss_kb": 1393064,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5797408768
+        },
+        {
+          "utc": "22:33:08",
+          "pid": 53305,
+          "rss_kb": 1206604,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5605969920
+        },
+        {
+          "utc": "22:33:13",
+          "pid": 53305,
+          "rss_kb": 1323244,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5725601792
+        },
+        {
+          "utc": "22:33:18",
+          "pid": 53305,
+          "rss_kb": 1306344,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5708193792
+        },
+        {
+          "utc": "22:33:23",
+          "pid": 53305,
+          "rss_kb": 1280008,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5681045504
+        },
+        {
+          "utc": "22:33:28",
+          "pid": 53305,
+          "rss_kb": 1345200,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5749440512
+        },
+        {
+          "utc": "22:33:33",
+          "pid": 53305,
+          "rss_kb": 1218856,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5618401280
+        },
+        {
+          "utc": "22:33:38",
+          "pid": 53305,
+          "rss_kb": 1321156,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5723324416
+        },
+        {
+          "utc": "22:33:43",
+          "pid": 53305,
+          "rss_kb": 1537420,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5934927872
+        },
+        {
+          "utc": "22:33:48",
+          "pid": 53305,
+          "rss_kb": 1273824,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5664096256
+        },
+        {
+          "utc": "22:33:53",
+          "pid": 53305,
+          "rss_kb": 1397992,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5791449088
+        },
+        {
+          "utc": "22:33:58",
+          "pid": 53305,
+          "rss_kb": 1397952,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5791264768
+        },
+        {
+          "utc": "22:34:03",
+          "pid": 53305,
+          "rss_kb": 1076888,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5461598208
+        },
+        {
+          "utc": "22:34:08",
+          "pid": 53305,
+          "rss_kb": 1075864,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5460942848
+        },
+        {
+          "utc": "22:34:13",
+          "pid": 53305,
+          "rss_kb": 1324188,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5715705856
+        },
+        {
+          "utc": "22:34:18",
+          "pid": 53305,
+          "rss_kb": 1297048,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5687549952
+        },
+        {
+          "utc": "22:34:23",
+          "pid": 53305,
+          "rss_kb": 1317656,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5709180928
+        },
+        {
+          "utc": "22:34:28",
+          "pid": 53305,
+          "rss_kb": 1281428,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5672009728
+        },
+        {
+          "utc": "22:34:33",
+          "pid": 53305,
+          "rss_kb": 1071252,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5456248832
+        },
+        {
+          "utc": "22:34:38",
+          "pid": 53305,
+          "rss_kb": 1072280,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5457100800
+        },
+        {
+          "utc": "22:34:43",
+          "pid": 53305,
+          "rss_kb": 1544896,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5942079488
+        },
+        {
+          "utc": "22:34:48",
+          "pid": 53305,
+          "rss_kb": 1296536,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5684965376
+        },
+        {
+          "utc": "22:34:53",
+          "pid": 53305,
+          "rss_kb": 1272516,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5659963392
+        },
+        {
+          "utc": "22:34:58",
+          "pid": 53305,
+          "rss_kb": 1200252,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5586157568
+        },
+        {
+          "utc": "22:35:03",
+          "pid": 53305,
+          "rss_kb": 1010164,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5391396864
+        },
+        {
+          "utc": "22:35:08",
+          "pid": 53305,
+          "rss_kb": 1318236,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5691858944
+        },
+        {
+          "utc": "22:35:13",
+          "pid": 53305,
+          "rss_kb": 1269880,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5642199040
+        },
+        {
+          "utc": "22:35:18",
+          "pid": 53305,
+          "rss_kb": 1281144,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5653610496
+        },
+        {
+          "utc": "22:35:23",
+          "pid": 53305,
+          "rss_kb": 1180224,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5550440448
+        },
+        {
+          "utc": "22:35:28",
+          "pid": 53305,
+          "rss_kb": 1313624,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5687058432
+        },
+        {
+          "utc": "22:35:33",
+          "pid": 53305,
+          "rss_kb": 1732208,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 6116732928
+        },
+        {
+          "utc": "22:35:38",
+          "pid": 53305,
+          "rss_kb": 1303512,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5676761088
+        },
+        {
+          "utc": "22:35:43",
+          "pid": 53305,
+          "rss_kb": 1269880,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5642407936
+        },
+        {
+          "utc": "22:35:48",
+          "pid": 53305,
+          "rss_kb": 1071448,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5438492672
+        },
+        {
+          "utc": "22:35:53",
+          "pid": 53305,
+          "rss_kb": 1071448,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5438885888
+        },
+        {
+          "utc": "22:35:58",
+          "pid": 53305,
+          "rss_kb": 1741108,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 6125748224
+        },
+        {
+          "utc": "22:36:03",
+          "pid": 53305,
+          "rss_kb": 1296344,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5669408768
+        },
+        {
+          "utc": "22:36:08",
+          "pid": 53305,
+          "rss_kb": 1307620,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5674303488
+        },
+        {
+          "utc": "22:36:13",
+          "pid": 53305,
+          "rss_kb": 1347460,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5715861504
+        },
+        {
+          "utc": "22:36:18",
+          "pid": 53305,
+          "rss_kb": 1132256,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5494083584
+        },
+        {
+          "utc": "22:36:23",
+          "pid": 53305,
+          "rss_kb": 1315164,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5681008640
+        },
+        {
+          "utc": "22:36:28",
+          "pid": 53305,
+          "rss_kb": 1301848,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5667438592
+        },
+        {
+          "utc": "22:36:33",
+          "pid": 53305,
+          "rss_kb": 1267320,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5632016384
+        },
+        {
+          "utc": "22:36:38",
+          "pid": 53305,
+          "rss_kb": 1391488,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5759307776
+        },
+        {
+          "utc": "22:36:43",
+          "pid": 53305,
+          "rss_kb": 1191516,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5554143232
+        },
+        {
+          "utc": "22:36:48",
+          "pid": 53305,
+          "rss_kb": 1317724,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5683773440
+        },
+        {
+          "utc": "22:36:53",
+          "pid": 53305,
+          "rss_kb": 1301848,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5667401728
+        },
+        {
+          "utc": "22:36:58",
+          "pid": 53305,
+          "rss_kb": 1293784,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5659160576
+        },
+        {
+          "utc": "22:37:03",
+          "pid": 53305,
+          "rss_kb": 1284568,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5649580032
+        },
+        {
+          "utc": "22:37:08",
+          "pid": 53305,
+          "rss_kb": 1391488,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5759381504
+        },
+        {
+          "utc": "22:37:13",
+          "pid": 53305,
+          "rss_kb": 1067352,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5426896896
+        },
+        {
+          "utc": "22:37:18",
+          "pid": 53305,
+          "rss_kb": 1444408,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5813559296
+        },
+        {
+          "utc": "22:37:23",
+          "pid": 53305,
+          "rss_kb": 1300312,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5666103296
+        },
+        {
+          "utc": "22:37:28",
+          "pid": 53305,
+          "rss_kb": 1267320,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5631991808
+        },
+        {
+          "utc": "22:37:33",
+          "pid": 53305,
+          "rss_kb": 1267316,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5631827968
+        },
+        {
+          "utc": "22:37:38",
+          "pid": 53305,
+          "rss_kb": 1341724,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5708468224
+        },
+        {
+          "utc": "22:37:43",
+          "pid": 53305,
+          "rss_kb": 1004496,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5362212864
+        },
+        {
+          "utc": "22:37:48",
+          "pid": 53305,
+          "rss_kb": 1306040,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5679804416
+        },
+        {
+          "utc": "22:37:53",
+          "pid": 53305,
+          "rss_kb": 1134912,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5505671168
+        },
+        {
+          "utc": "22:37:58",
+          "pid": 53305,
+          "rss_kb": 1057724,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5667622912
+        },
+        {
+          "utc": "22:38:03",
+          "pid": 53305,
+          "rss_kb": 864276,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5581639680
+        },
+        {
+          "utc": "22:38:08",
+          "pid": 53305,
+          "rss_kb": 864276,
+          "peak_rss_kb": 1783940,
+          "cgroup_bytes": 5701492736
+        }
+      ],
+      "exit_code": 0,
+      "ended_utc": "2026-11-13T22:38:13Z"
+    },
+    {
+      "name": "verify_archives",
+      "started_utc": "2026-11-13T22:38:13Z",
+      "status": "complete",
+      "memory_samples": [
+        {
+          "utc": "22:38:13",
+          "pid": 56296,
+          "rss_kb": 844,
+          "peak_rss_kb": 844,
+          "cgroup_bytes": 4982018048
+        },
+        {
+          "utc": "22:38:18",
+          "pid": 56296,
+          "rss_kb": 505380,
+          "peak_rss_kb": 505380,
+          "cgroup_bytes": 5500096512
+        },
+        {
+          "utc": "22:38:23",
+          "pid": 56296,
+          "rss_kb": 1008824,
+          "peak_rss_kb": 1008824,
+          "cgroup_bytes": 6012559360
+        },
+        {
+          "utc": "22:38:28",
+          "pid": 56296,
+          "rss_kb": 1247020,
+          "peak_rss_kb": 1247020,
+          "cgroup_bytes": 6002479104
+        }
+      ],
+      "exit_code": 0,
+      "ended_utc": "2026-11-13T22:38:33Z"
+    },
+    {
+      "name": "quality_target",
+      "started_utc": "2026-11-13T22:38:33Z",
+      "status": "complete",
+      "memory_samples": [
+        {
+          "utc": "22:38:33",
+          "cgroup_bytes": 4600877056
+        },
+        {
+          "utc": "22:38:38",
+          "pid": 56318,
+          "rss_kb": 606516,
+          "peak_rss_kb": 606516,
+          "cgroup_bytes": 6677426176
+        },
+        {
+          "utc": "22:38:43",
+          "pid": 56318,
+          "rss_kb": 2418432,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8589893632
+        },
+        {
+          "utc": "22:38:48",
+          "pid": 56318,
+          "rss_kb": 2441856,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8575795200
+        },
+        {
+          "utc": "22:38:53",
+          "pid": 56318,
+          "rss_kb": 2482148,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8573116416
+        },
+        {
+          "utc": "22:38:58",
+          "pid": 56318,
+          "rss_kb": 2489480,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8572891136
+        },
+        {
+          "utc": "22:39:03",
+          "pid": 56318,
+          "rss_kb": 2489504,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8577576960
+        },
+        {
+          "utc": "22:39:08",
+          "pid": 56318,
+          "rss_kb": 2491564,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8579264512
+        },
+        {
+          "utc": "22:39:13",
+          "pid": 56318,
+          "rss_kb": 2531976,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8589922304
+        },
+        {
+          "utc": "22:39:18",
+          "pid": 56318,
+          "rss_kb": 2531980,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8571273216
+        },
+        {
+          "utc": "22:39:23",
+          "pid": 56318,
+          "rss_kb": 2531996,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8567353344
+        },
+        {
+          "utc": "22:39:28",
+          "pid": 56318,
+          "rss_kb": 2532216,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8564875264
+        },
+        {
+          "utc": "22:39:33",
+          "pid": 56318,
+          "rss_kb": 2534280,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8567246848
+        },
+        {
+          "utc": "22:39:38",
+          "pid": 56318,
+          "rss_kb": 2534284,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8568516608
+        },
+        {
+          "utc": "22:39:43",
+          "pid": 56318,
+          "rss_kb": 2534444,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8567492608
+        },
+        {
+          "utc": "22:39:48",
+          "pid": 56318,
+          "rss_kb": 2508612,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8529240064
+        },
+        {
+          "utc": "22:39:53",
+          "pid": 56318,
+          "rss_kb": 2547668,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8573091840
+        },
+        {
+          "utc": "22:39:58",
+          "pid": 56318,
+          "rss_kb": 2547672,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8568524800
+        },
+        {
+          "utc": "22:40:03",
+          "pid": 56318,
+          "rss_kb": 2569060,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8587776000
+        },
+        {
+          "utc": "22:40:08",
+          "pid": 56318,
+          "rss_kb": 2597400,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8589807616
+        },
+        {
+          "utc": "22:40:13",
+          "pid": 56318,
+          "rss_kb": 2621664,
+          "peak_rss_kb": 2659504,
+          "cgroup_bytes": 8574767104
+        }
+      ],
+      "exit_code": 0,
+      "ended_utc": "2026-11-13T22:40:18Z"
+    },
+    {
+      "name": "quality_small_initial",
+      "started_utc": "2026-11-13T22:40:18Z",
+      "status": "complete",
+      "memory_samples": [
+        {
+          "utc": "22:40:18",
+          "cgroup_bytes": 6495748096
+        },
+        {
+          "utc": "22:40:23",
+          "pid": 56871,
+          "rss_kb": 515732,
+          "peak_rss_kb": 515732,
+          "cgroup_bytes": 6940516352
+        },
+        {
+          "utc": "22:40:28",
+          "pid": 56871,
+          "rss_kb": 612916,
+          "peak_rss_kb": 612916,
+          "cgroup_bytes": 7021637632
+        },
+        {
+          "utc": "22:40:33",
+          "pid": 56871,
+          "rss_kb": 655016,
+          "peak_rss_kb": 655016,
+          "cgroup_bytes": 7071010816
+        },
+        {
+          "utc": "22:40:38",
+          "pid": 56871,
+          "rss_kb": 689004,
+          "peak_rss_kb": 689004,
+          "cgroup_bytes": 7106424832
+        },
+        {
+          "utc": "22:40:43",
+          "pid": 56871,
+          "rss_kb": 689564,
+          "peak_rss_kb": 689564,
+          "cgroup_bytes": 7105515520
+        },
+        {
+          "utc": "22:40:48",
+          "pid": 56871,
+          "rss_kb": 696088,
+          "peak_rss_kb": 696088,
+          "cgroup_bytes": 7109472256
+        },
+        {
+          "utc": "22:40:53",
+          "pid": 56871,
+          "rss_kb": 696708,
+          "peak_rss_kb": 696708,
+          "cgroup_bytes": 7112491008
+        },
+        {
+          "utc": "22:40:58",
+          "pid": 56871,
+          "rss_kb": 697044,
+          "peak_rss_kb": 697044,
+          "cgroup_bytes": 7104581632
+        },
+        {
+          "utc": "22:41:03",
+          "pid": 56871,
+          "rss_kb": 703792,
+          "peak_rss_kb": 703792,
+          "cgroup_bytes": 7111344128
+        },
+        {
+          "utc": "22:41:08",
+          "pid": 56871,
+          "rss_kb": 704012,
+          "peak_rss_kb": 704012,
+          "cgroup_bytes": 7089766400
+        },
+        {
+          "utc": "22:41:13",
+          "pid": 56871,
+          "rss_kb": 712824,
+          "peak_rss_kb": 712824,
+          "cgroup_bytes": 7098478592
+        },
+        {
+          "utc": "22:41:18",
+          "pid": 56871,
+          "rss_kb": 713536,
+          "peak_rss_kb": 713536,
+          "cgroup_bytes": 7099441152
+        },
+        {
+          "utc": "22:41:23",
+          "pid": 56871,
+          "rss_kb": 713696,
+          "peak_rss_kb": 713696,
+          "cgroup_bytes": 7096573952
+        },
+        {
+          "utc": "22:41:28",
+          "pid": 56871,
+          "rss_kb": 713700,
+          "peak_rss_kb": 713700,
+          "cgroup_bytes": 7095939072
+        },
+        {
+          "utc": "22:41:33",
+          "pid": 56871,
+          "rss_kb": 713712,
+          "peak_rss_kb": 713712,
+          "cgroup_bytes": 7093157888
+        },
+        {
+          "utc": "22:41:38",
+          "pid": 56871,
+          "rss_kb": 720444,
+          "peak_rss_kb": 720444,
+          "cgroup_bytes": 7100907520
+        },
+        {
+          "utc": "22:41:43",
+          "pid": 56871,
+          "rss_kb": 720628,
+          "peak_rss_kb": 720628,
+          "cgroup_bytes": 7105859584
+        },
+        {
+          "utc": "22:41:48",
+          "pid": 56871,
+          "rss_kb": 727496,
+          "peak_rss_kb": 727496,
+          "cgroup_bytes": 7103725568
+        },
+        {
+          "utc": "22:41:53",
+          "pid": 56871,
+          "rss_kb": 727712,
+          "peak_rss_kb": 727712,
+          "cgroup_bytes": 7107297280
+        },
+        {
+          "utc": "22:41:58",
+          "pid": 56871,
+          "rss_kb": 739664,
+          "peak_rss_kb": 739664,
+          "cgroup_bytes": 7118344192
+        },
+        {
+          "utc": "22:42:03",
+          "pid": 56871,
+          "rss_kb": 757000,
+          "peak_rss_kb": 757000,
+          "cgroup_bytes": 7136215040
+        },
+        {
+          "utc": "22:42:08",
+          "pid": 56871,
+          "rss_kb": 761364,
+          "peak_rss_kb": 761364,
+          "cgroup_bytes": 6959677440
+        },
+        {
+          "utc": "22:42:13",
+          "pid": 56871,
+          "rss_kb": 768260,
+          "peak_rss_kb": 768260,
+          "cgroup_bytes": 6966341632
+        },
+        {
+          "utc": "22:42:18",
+          "pid": 56871,
+          "rss_kb": 774792,
+          "peak_rss_kb": 774792,
+          "cgroup_bytes": 6970339328
+        },
+        {
+          "utc": "22:42:23",
+          "pid": 56871,
+          "rss_kb": 780660,
+          "peak_rss_kb": 780660,
+          "cgroup_bytes": 6977208320
+        },
+        {
+          "utc": "22:42:28",
+          "pid": 56871,
+          "rss_kb": 781260,
+          "peak_rss_kb": 781260,
+          "cgroup_bytes": 6978342912
+        }
+      ],
+      "exit_code": 0,
+      "ended_utc": "2026-11-13T22:42:33Z"
+    },
+    {
+      "name": "quality_small_trained",
+      "started_utc": "2026-11-13T22:42:33Z",
+      "status": "complete",
+      "memory_samples": [
+        {
+          "utc": "22:42:33",
+          "cgroup_bytes": 6294339584
+        },
+        {
+          "utc": "22:42:38",
+          "pid": 57648,
+          "rss_kb": 440544,
+          "peak_rss_kb": 440544,
+          "cgroup_bytes": 6631919616
+        },
+        {
+          "utc": "22:42:43",
+          "pid": 57648,
+          "rss_kb": 603912,
+          "peak_rss_kb": 603912,
+          "cgroup_bytes": 6780919808
+        },
+        {
+          "utc": "22:42:48",
+          "pid": 57648,
+          "rss_kb": 617968,
+          "peak_rss_kb": 617968,
+          "cgroup_bytes": 6793056256
+        },
+        {
+          "utc": "22:42:53",
+          "pid": 57648,
+          "rss_kb": 636996,
+          "peak_rss_kb": 636996,
+          "cgroup_bytes": 6814765056
+        },
+        {
+          "utc": "22:42:58",
+          "pid": 57648,
+          "rss_kb": 689380,
+          "peak_rss_kb": 689380,
+          "cgroup_bytes": 6874263552
+        },
+        {
+          "utc": "22:43:03",
+          "pid": 57648,
+          "rss_kb": 742244,
+          "peak_rss_kb": 742244,
+          "cgroup_bytes": 6922108928
+        },
+        {
+          "utc": "22:43:08",
+          "pid": 57648,
+          "rss_kb": 765180,
+          "peak_rss_kb": 765180,
+          "cgroup_bytes": 6824509440
+        },
+        {
+          "utc": "22:43:13",
+          "pid": 57648,
+          "rss_kb": 775288,
+          "peak_rss_kb": 775288,
+          "cgroup_bytes": 6833328128
+        },
+        {
+          "utc": "22:43:18",
+          "pid": 57648,
+          "rss_kb": 778648,
+          "peak_rss_kb": 778648,
+          "cgroup_bytes": 6832128000
+        },
+        {
+          "utc": "22:43:23",
+          "pid": 57648,
+          "rss_kb": 715712,
+          "peak_rss_kb": 784828,
+          "cgroup_bytes": 6766964736
+        }
+      ],
+      "exit_code": 0,
+      "ended_utc": "2026-11-13T22:43:28Z"
+    },
+    {
+      "name": "quality_large_initial",
+      "started_utc": "2026-11-13T22:43:28Z",
+      "status": "complete",
+      "memory_samples": [
+        {
+          "utc": "22:43:28",
+          "cgroup_bytes": 6139207680
+        },
+        {
+          "utc": "22:43:33",
+          "pid": 57974,
+          "rss_kb": 480156,
+          "peak_rss_kb": 480156,
+          "cgroup_bytes": 6554963968
+        },
+        {
+          "utc": "22:43:38",
+          "pid": 57974,
+          "rss_kb": 825404,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6825181184
+        },
+        {
+          "utc": "22:43:43",
+          "pid": 57974,
+          "rss_kb": 842660,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6837821440
+        },
+        {
+          "utc": "22:43:48",
+          "pid": 57974,
+          "rss_kb": 842932,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6837305344
+        },
+        {
+          "utc": "22:43:53",
+          "pid": 57974,
+          "rss_kb": 878576,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6872969216
+        },
+        {
+          "utc": "22:43:58",
+          "pid": 57974,
+          "rss_kb": 880724,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6870564864
+        },
+        {
+          "utc": "22:44:03",
+          "pid": 57974,
+          "rss_kb": 880736,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6869430272
+        },
+        {
+          "utc": "22:44:08",
+          "pid": 57974,
+          "rss_kb": 888428,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6879416320
+        },
+        {
+          "utc": "22:44:13",
+          "pid": 57974,
+          "rss_kb": 888444,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6878814208
+        },
+        {
+          "utc": "22:44:18",
+          "pid": 57974,
+          "rss_kb": 888448,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6876839936
+        },
+        {
+          "utc": "22:44:23",
+          "pid": 57974,
+          "rss_kb": 896124,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6767648768
+        },
+        {
+          "utc": "22:44:28",
+          "pid": 57974,
+          "rss_kb": 896124,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6770655232
+        },
+        {
+          "utc": "22:44:33",
+          "pid": 57974,
+          "rss_kb": 896128,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6768795648
+        },
+        {
+          "utc": "22:44:38",
+          "pid": 57974,
+          "rss_kb": 906172,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6780923904
+        },
+        {
+          "utc": "22:44:43",
+          "pid": 57974,
+          "rss_kb": 903344,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6705639424
+        },
+        {
+          "utc": "22:44:48",
+          "pid": 57974,
+          "rss_kb": 903344,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6704644096
+        },
+        {
+          "utc": "22:44:53",
+          "pid": 57974,
+          "rss_kb": 903348,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6705012736
+        },
+        {
+          "utc": "22:44:58",
+          "pid": 57974,
+          "rss_kb": 903348,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6703579136
+        },
+        {
+          "utc": "22:45:03",
+          "pid": 57974,
+          "rss_kb": 911012,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6609170432
+        },
+        {
+          "utc": "22:45:08",
+          "pid": 57974,
+          "rss_kb": 911012,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6612172800
+        },
+        {
+          "utc": "22:45:13",
+          "pid": 57974,
+          "rss_kb": 911016,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6610923520
+        },
+        {
+          "utc": "22:45:18",
+          "pid": 57974,
+          "rss_kb": 918692,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6615633920
+        },
+        {
+          "utc": "22:45:23",
+          "pid": 57974,
+          "rss_kb": 918684,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6465695744
+        },
+        {
+          "utc": "22:45:28",
+          "pid": 57974,
+          "rss_kb": 925436,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6471598080
+        },
+        {
+          "utc": "22:45:33",
+          "pid": 57974,
+          "rss_kb": 959080,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6503280640
+        },
+        {
+          "utc": "22:45:38",
+          "pid": 57974,
+          "rss_kb": 968612,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6511595520
+        },
+        {
+          "utc": "22:45:43",
+          "pid": 57974,
+          "rss_kb": 973060,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6497964032
+        },
+        {
+          "utc": "22:45:48",
+          "pid": 57974,
+          "rss_kb": 989612,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6517932032
+        },
+        {
+          "utc": "22:45:53",
+          "pid": 57974,
+          "rss_kb": 997964,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6527455232
+        },
+        {
+          "utc": "22:45:58",
+          "pid": 57974,
+          "rss_kb": 998112,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6526140416
+        },
+        {
+          "utc": "22:46:03",
+          "pid": 57974,
+          "rss_kb": 1007516,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6535458816
+        },
+        {
+          "utc": "22:46:08",
+          "pid": 57974,
+          "rss_kb": 1008004,
+          "peak_rss_kb": 1117432,
+          "cgroup_bytes": 6538919936
+        }
+      ],
+      "exit_code": 0,
+      "ended_utc": "2026-11-13T22:46:13Z"
+    },
+    {
+      "name": "quality_large_trained",
+      "started_utc": "2026-11-13T22:46:14Z",
+      "status": "complete",
+      "memory_samples": [
+        {
+          "utc": "22:46:14",
+          "cgroup_bytes": 5388484608
+        },
+        {
+          "utc": "22:46:19",
+          "pid": 58785,
+          "rss_kb": 433228,
+          "peak_rss_kb": 433228,
+          "cgroup_bytes": 5834334208
+        },
+        {
+          "utc": "22:46:24",
+          "pid": 58785,
+          "rss_kb": 801724,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6205005824
+        },
+        {
+          "utc": "22:46:29",
+          "pid": 58785,
+          "rss_kb": 807816,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6211366912
+        },
+        {
+          "utc": "22:46:34",
+          "pid": 58785,
+          "rss_kb": 818056,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6219182080
+        },
+        {
+          "utc": "22:46:39",
+          "pid": 58785,
+          "rss_kb": 825732,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6219530240
+        },
+        {
+          "utc": "22:46:44",
+          "pid": 58785,
+          "rss_kb": 833424,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6104297472
+        },
+        {
+          "utc": "22:46:49",
+          "pid": 58785,
+          "rss_kb": 833440,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6109536256
+        },
+        {
+          "utc": "22:46:54",
+          "pid": 58785,
+          "rss_kb": 843488,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6120837120
+        },
+        {
+          "utc": "22:46:59",
+          "pid": 58785,
+          "rss_kb": 843508,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6126325760
+        },
+        {
+          "utc": "22:47:04",
+          "pid": 58785,
+          "rss_kb": 848572,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6132682752
+        },
+        {
+          "utc": "22:47:09",
+          "pid": 58785,
+          "rss_kb": 851184,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6133035008
+        },
+        {
+          "utc": "22:47:14",
+          "pid": 58785,
+          "rss_kb": 858860,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6136561664
+        },
+        {
+          "utc": "22:47:19",
+          "pid": 58785,
+          "rss_kb": 897748,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6177697792
+        },
+        {
+          "utc": "22:47:24",
+          "pid": 58785,
+          "rss_kb": 924660,
+          "peak_rss_kb": 932140,
+          "cgroup_bytes": 6127472640
+        },
+        {
+          "utc": "22:47:29",
+          "pid": 58785,
+          "rss_kb": 939664,
+          "peak_rss_kb": 939664,
+          "cgroup_bytes": 6144892928
+        },
+        {
+          "utc": "22:47:34",
+          "pid": 58785,
+          "rss_kb": 946760,
+          "peak_rss_kb": 946760,
+          "cgroup_bytes": 6156304384
+        },
+        {
+          "utc": "22:47:39",
+          "pid": 58785,
+          "rss_kb": 757516,
+          "peak_rss_kb": 948880,
+          "cgroup_bytes": 5962555392
+        }
+      ],
+      "exit_code": 0,
+      "ended_utc": "2026-11-13T22:47:44Z"
+    },
+    {
+      "name": "benchmark",
+      "started_utc": "2026-11-13T22:52:34Z",
+      "status": "complete",
+      "memory_samples": [
+        {
+          "utc": "22:52:34",
+          "cgroup_bytes": 5980385280
+        },
+        {
+          "utc": "22:52:39",
+          "pid": 59786,
+          "rss_kb": 374364,
+          "peak_rss_kb": 374812,
+          "cgroup_bytes": 6318649344
+        },
+        {
+          "utc": "22:52:44",
+          "pid": 59786,
+          "rss_kb": 1773924,
+          "peak_rss_kb": 2659996,
+          "cgroup_bytes": 8589709312
+        },
+        {
+          "utc": "22:52:49",
+          "pid": 59786,
+          "rss_kb": 2140776,
+          "peak_rss_kb": 2659996,
+          "cgroup_bytes": 8365166592
+        },
+        {
+          "utc": "22:52:54",
+          "pid": 59786,
+          "rss_kb": 2707736,
+          "peak_rss_kb": 2707736,
+          "cgroup_bytes": 8588627968
+        },
+        {
+          "utc": "22:52:59",
+          "pid": 59786,
+          "rss_kb": 2792520,
+          "peak_rss_kb": 2792520,
+          "cgroup_bytes": 8589676544
+        },
+        {
+          "utc": "22:53:04",
+          "pid": 59786,
+          "rss_kb": 2798448,
+          "peak_rss_kb": 2798448,
+          "cgroup_bytes": 8589680640
+        },
+        {
+          "utc": "22:53:09",
+          "pid": 59786,
+          "rss_kb": 2849940,
+          "peak_rss_kb": 2849940,
+          "cgroup_bytes": 8589914112
+        },
+        {
+          "utc": "22:53:14",
+          "pid": 59786,
+          "rss_kb": 2854324,
+          "peak_rss_kb": 2854324,
+          "cgroup_bytes": 8588427264
+        },
+        {
+          "utc": "22:53:19",
+          "pid": 59786,
+          "rss_kb": 2864676,
+          "peak_rss_kb": 2864676,
+          "cgroup_bytes": 8588365824
+        },
+        {
+          "utc": "22:53:24",
+          "pid": 59786,
+          "rss_kb": 2880804,
+          "peak_rss_kb": 2880804,
+          "cgroup_bytes": 8586014720
+        },
+        {
+          "utc": "22:53:29",
+          "pid": 59786,
+          "rss_kb": 2886636,
+          "peak_rss_kb": 2886636,
+          "cgroup_bytes": 8587845632
+        },
+        {
+          "utc": "22:53:34",
+          "pid": 59786,
+          "rss_kb": 2891640,
+          "peak_rss_kb": 2891640,
+          "cgroup_bytes": 8585363456
+        },
+        {
+          "utc": "22:53:39",
+          "pid": 59786,
+          "rss_kb": 2897204,
+          "peak_rss_kb": 2897204,
+          "cgroup_bytes": 8586797056
+        },
+        {
+          "utc": "22:53:44",
+          "pid": 59786,
+          "rss_kb": 2919348,
+          "peak_rss_kb": 2919348,
+          "cgroup_bytes": 8589602816
+        },
+        {
+          "utc": "22:53:49",
+          "pid": 59786,
+          "rss_kb": 2924156,
+          "peak_rss_kb": 2924156,
+          "cgroup_bytes": 8589758464
+        },
+        {
+          "utc": "22:53:54",
+          "pid": 59786,
+          "rss_kb": 2929208,
+          "peak_rss_kb": 2929208,
+          "cgroup_bytes": 8589901824
+        },
+        {
+          "utc": "22:53:59",
+          "pid": 59786,
+          "rss_kb": 2929428,
+          "peak_rss_kb": 2929428,
+          "cgroup_bytes": 8589881344
+        },
+        {
+          "utc": "22:54:04",
+          "pid": 59786,
+          "rss_kb": 2929588,
+          "peak_rss_kb": 2929588,
+          "cgroup_bytes": 8589881344
+        },
+        {
+          "utc": "22:54:09",
+          "pid": 59786,
+          "rss_kb": 2949600,
+          "peak_rss_kb": 2949600,
+          "cgroup_bytes": 8589828096
+        },
+        {
+          "utc": "22:54:14",
+          "pid": 59786,
+          "rss_kb": 2958584,
+          "peak_rss_kb": 2958584,
+          "cgroup_bytes": 8589697024
+        },
+        {
+          "utc": "22:54:19",
+          "pid": 59786,
+          "rss_kb": 2960096,
+          "peak_rss_kb": 2960096,
+          "cgroup_bytes": 8589848576
+        },
+        {
+          "utc": "22:54:24",
+          "pid": 59786,
+          "rss_kb": 2960276,
+          "peak_rss_kb": 2960276,
+          "cgroup_bytes": 8589864960
+        },
+        {
+          "utc": "22:54:29",
+          "pid": 59786,
+          "rss_kb": 2978004,
+          "peak_rss_kb": 2978004,
+          "cgroup_bytes": 8589905920
+        },
+        {
+          "utc": "22:54:34",
+          "pid": 59786,
+          "rss_kb": 2985192,
+          "peak_rss_kb": 2985192,
+          "cgroup_bytes": 8589914112
+        },
+        {
+          "utc": "22:54:39",
+          "pid": 59786,
+          "rss_kb": 2985208,
+          "peak_rss_kb": 2985208,
+          "cgroup_bytes": 8589860864
+        },
+        {
+          "utc": "22:54:44",
+          "pid": 59786,
+          "rss_kb": 2985384,
+          "peak_rss_kb": 2985384,
+          "cgroup_bytes": 8589930496
+        },
+        {
+          "utc": "22:54:49",
+          "pid": 59786,
+          "rss_kb": 2985512,
+          "peak_rss_kb": 2985512,
+          "cgroup_bytes": 8589680640
+        },
+        {
+          "utc": "22:54:54",
+          "pid": 59786,
+          "rss_kb": 2995060,
+          "peak_rss_kb": 2995060,
+          "cgroup_bytes": 8589709312
+        },
+        {
+          "utc": "22:54:59",
+          "pid": 59786,
+          "rss_kb": 2997168,
+          "peak_rss_kb": 2997168,
+          "cgroup_bytes": 8589152256
+        },
+        {
+          "utc": "22:55:04",
+          "pid": 59786,
+          "rss_kb": 3005268,
+          "peak_rss_kb": 3005268,
+          "cgroup_bytes": 8589901824
+        },
+        {
+          "utc": "22:55:09",
+          "pid": 59786,
+          "rss_kb": 3010216,
+          "peak_rss_kb": 3010216,
+          "cgroup_bytes": 8589844480
+        },
+        {
+          "utc": "22:55:14",
+          "pid": 59786,
+          "rss_kb": 3010288,
+          "peak_rss_kb": 3010288,
+          "cgroup_bytes": 8583704576
+        },
+        {
+          "utc": "22:55:19",
+          "pid": 59786,
+          "rss_kb": 3017084,
+          "peak_rss_kb": 3017084,
+          "cgroup_bytes": 8589893632
+        },
+        {
+          "utc": "22:55:24",
+          "pid": 59786,
+          "rss_kb": 3019992,
+          "peak_rss_kb": 3019992,
+          "cgroup_bytes": 8589754368
+        },
+        {
+          "utc": "22:55:29",
+          "pid": 59786,
+          "rss_kb": 3020008,
+          "peak_rss_kb": 3020008,
+          "cgroup_bytes": 8589758464
+        },
+        {
+          "utc": "22:55:34",
+          "pid": 59786,
+          "rss_kb": 3020168,
+          "peak_rss_kb": 3020168,
+          "cgroup_bytes": 8589922304
+        },
+        {
+          "utc": "22:55:39",
+          "pid": 59786,
+          "rss_kb": 3028260,
+          "peak_rss_kb": 3028260,
+          "cgroup_bytes": 8589840384
+        },
+        {
+          "utc": "22:55:44",
+          "pid": 59786,
+          "rss_kb": 3037664,
+          "peak_rss_kb": 3037664,
+          "cgroup_bytes": 8589713408
+        },
+        {
+          "utc": "22:55:49",
+          "pid": 59786,
+          "rss_kb": 3037680,
+          "peak_rss_kb": 3037680,
+          "cgroup_bytes": 8589737984
+        },
+        {
+          "utc": "22:55:54",
+          "pid": 59786,
+          "rss_kb": 3037680,
+          "peak_rss_kb": 3037680,
+          "cgroup_bytes": 8589742080
+        },
+        {
+          "utc": "22:55:59",
+          "pid": 59786,
+          "rss_kb": 3037680,
+          "peak_rss_kb": 3037680,
+          "cgroup_bytes": 8589742080
+        },
+        {
+          "utc": "22:56:04",
+          "pid": 59786,
+          "rss_kb": 3039344,
+          "peak_rss_kb": 3039344,
+          "cgroup_bytes": 8589922304
+        },
+        {
+          "utc": "22:56:09",
+          "pid": 59786,
+          "rss_kb": 3044196,
+          "peak_rss_kb": 3044196,
+          "cgroup_bytes": 8589803520
+        },
+        {
+          "utc": "22:56:14",
+          "pid": 59786,
+          "rss_kb": 3044180,
+          "peak_rss_kb": 3044180,
+          "cgroup_bytes": 8583569408
+        },
+        {
+          "utc": "22:56:19",
+          "pid": 59786,
+          "rss_kb": 3044180,
+          "peak_rss_kb": 3044180,
+          "cgroup_bytes": 8583417856
+        },
+        {
+          "utc": "22:56:24",
+          "pid": 59786,
+          "rss_kb": 3044180,
+          "peak_rss_kb": 3044180,
+          "cgroup_bytes": 8583614464
+        },
+        {
+          "utc": "22:56:29",
+          "pid": 59786,
+          "rss_kb": 3044180,
+          "peak_rss_kb": 3044180,
+          "cgroup_bytes": 8583548928
+        },
+        {
+          "utc": "22:56:34",
+          "pid": 59786,
+          "rss_kb": 3044196,
+          "peak_rss_kb": 3044196,
+          "cgroup_bytes": 8583479296
+        },
+        {
+          "utc": "22:56:39",
+          "pid": 59786,
+          "rss_kb": 3044360,
+          "peak_rss_kb": 3044360,
+          "cgroup_bytes": 8583663616
+        },
+        {
+          "utc": "22:56:44",
+          "pid": 59786,
+          "rss_kb": 3044492,
+          "peak_rss_kb": 3044492,
+          "cgroup_bytes": 8584118272
+        },
+        {
+          "utc": "22:56:49",
+          "pid": 59786,
+          "rss_kb": 3052684,
+          "peak_rss_kb": 3052684,
+          "cgroup_bytes": 8589922304
+        },
+        {
+          "utc": "22:56:54",
+          "pid": 59786,
+          "rss_kb": 3052684,
+          "peak_rss_kb": 3052684,
+          "cgroup_bytes": 8589852672
+        },
+        {
+          "utc": "22:56:59",
+          "pid": 59786,
+          "rss_kb": 3052700,
+          "peak_rss_kb": 3052700,
+          "cgroup_bytes": 8589795328
+        },
+        {
+          "utc": "22:57:04",
+          "pid": 59786,
+          "rss_kb": 3052844,
+          "peak_rss_kb": 3052844,
+          "cgroup_bytes": 8584015872
+        },
+        {
+          "utc": "22:57:09",
+          "pid": 59786,
+          "rss_kb": 3058164,
+          "peak_rss_kb": 3058164,
+          "cgroup_bytes": 8589131776
+        },
+        {
+          "utc": "22:57:14",
+          "pid": 59786,
+          "rss_kb": 3058164,
+          "peak_rss_kb": 3058164,
+          "cgroup_bytes": 8589324288
+        },
+        {
+          "utc": "22:57:19",
+          "pid": 59786,
+          "rss_kb": 3058164,
+          "peak_rss_kb": 3058164,
+          "cgroup_bytes": 8583462912
+        },
+        {
+          "utc": "22:57:24",
+          "pid": 59786,
+          "rss_kb": 3060636,
+          "peak_rss_kb": 3060636,
+          "cgroup_bytes": 8586248192
+        },
+        {
+          "utc": "22:57:29",
+          "pid": 59786,
+          "rss_kb": 3060776,
+          "peak_rss_kb": 3060776,
+          "cgroup_bytes": 8586440704
+        },
+        {
+          "utc": "22:57:34",
+          "pid": 59786,
+          "rss_kb": 3069592,
+          "peak_rss_kb": 3069592,
+          "cgroup_bytes": 8589766656
+        },
+        {
+          "utc": "22:57:39",
+          "pid": 59786,
+          "rss_kb": 3069592,
+          "peak_rss_kb": 3069592,
+          "cgroup_bytes": 8589766656
+        },
+        {
+          "utc": "22:57:44",
+          "pid": 59786,
+          "rss_kb": 3072848,
+          "peak_rss_kb": 3072848,
+          "cgroup_bytes": 8589864960
+        },
+        {
+          "utc": "22:57:49",
+          "pid": 59786,
+          "rss_kb": 3073004,
+          "peak_rss_kb": 3073004,
+          "cgroup_bytes": 8589774848
+        },
+        {
+          "utc": "22:57:54",
+          "pid": 59786,
+          "rss_kb": 3079164,
+          "peak_rss_kb": 3079164,
+          "cgroup_bytes": 8589819904
+        },
+        {
+          "utc": "22:57:59",
+          "pid": 59786,
+          "rss_kb": 3077148,
+          "peak_rss_kb": 3079132,
+          "cgroup_bytes": 8549097472
+        },
+        {
+          "utc": "22:58:04",
+          "pid": 59786,
+          "rss_kb": 3080052,
+          "peak_rss_kb": 3080052,
+          "cgroup_bytes": 8552173568
+        },
+        {
+          "utc": "22:58:09",
+          "pid": 59786,
+          "rss_kb": 3081236,
+          "peak_rss_kb": 3081236,
+          "cgroup_bytes": 8553414656
+        },
+        {
+          "utc": "22:58:14",
+          "pid": 59786,
+          "rss_kb": 3081236,
+          "peak_rss_kb": 3081236,
+          "cgroup_bytes": 8553611264
+        },
+        {
+          "utc": "22:58:19",
+          "pid": 59786,
+          "rss_kb": 3081296,
+          "peak_rss_kb": 3081296,
+          "cgroup_bytes": 8557465600
+        },
+        {
+          "utc": "22:58:24",
+          "pid": 59786,
+          "rss_kb": 3081296,
+          "peak_rss_kb": 3081296,
+          "cgroup_bytes": 8557395968
+        },
+        {
+          "utc": "22:58:29",
+          "pid": 59786,
+          "rss_kb": 3081296,
+          "peak_rss_kb": 3081296,
+          "cgroup_bytes": 8557322240
+        },
+        {
+          "utc": "22:58:34",
+          "pid": 59786,
+          "rss_kb": 3081304,
+          "peak_rss_kb": 3081304,
+          "cgroup_bytes": 8557510656
+        },
+        {
+          "utc": "22:58:39",
+          "pid": 59786,
+          "rss_kb": 3081304,
+          "peak_rss_kb": 3081304,
+          "cgroup_bytes": 8557436928
+        },
+        {
+          "utc": "22:58:44",
+          "pid": 59786,
+          "rss_kb": 3081312,
+          "peak_rss_kb": 3081312,
+          "cgroup_bytes": 8557363200
+        },
+        {
+          "utc": "22:58:49",
+          "pid": 59786,
+          "rss_kb": 3081316,
+          "peak_rss_kb": 3081316,
+          "cgroup_bytes": 8557551616
+        },
+        {
+          "utc": "22:58:54",
+          "pid": 59786,
+          "rss_kb": 3081316,
+          "peak_rss_kb": 3081316,
+          "cgroup_bytes": 8557477888
+        },
+        {
+          "utc": "22:58:59",
+          "pid": 59786,
+          "rss_kb": 3081316,
+          "peak_rss_kb": 3081316,
+          "cgroup_bytes": 8557404160
+        },
+        {
+          "utc": "22:59:04",
+          "pid": 59786,
+          "rss_kb": 3081316,
+          "peak_rss_kb": 3081316,
+          "cgroup_bytes": 8557580288
+        },
+        {
+          "utc": "22:59:09",
+          "pid": 59786,
+          "rss_kb": 3081316,
+          "peak_rss_kb": 3081316,
+          "cgroup_bytes": 8557768704
+        },
+        {
+          "utc": "22:59:14",
+          "pid": 59786,
+          "rss_kb": 3081316,
+          "peak_rss_kb": 3081316,
+          "cgroup_bytes": 8557694976
+        },
+        {
+          "utc": "22:59:19",
+          "pid": 59786,
+          "rss_kb": 3081316,
+          "peak_rss_kb": 3081316,
+          "cgroup_bytes": 8557617152
+        },
+        {
+          "utc": "22:59:24",
+          "pid": 59786,
+          "rss_kb": 3081364,
+          "peak_rss_kb": 3081364,
+          "cgroup_bytes": 8557805568
+        },
+        {
+          "utc": "22:59:29",
+          "pid": 59786,
+          "rss_kb": 3081444,
+          "peak_rss_kb": 3081444,
+          "cgroup_bytes": 8557731840
+        },
+        {
+          "utc": "22:59:34",
+          "pid": 59786,
+          "rss_kb": 3093908,
+          "peak_rss_kb": 3093908,
+          "cgroup_bytes": 8570765312
+        },
+        {
+          "utc": "22:59:39",
+          "pid": 59786,
+          "rss_kb": 3093908,
+          "peak_rss_kb": 3093908,
+          "cgroup_bytes": 8570691584
+        },
+        {
+          "utc": "22:59:44",
+          "pid": 59786,
+          "rss_kb": 3093908,
+          "peak_rss_kb": 3093908,
+          "cgroup_bytes": 8570617856
+        },
+        {
+          "utc": "22:59:49",
+          "pid": 59786,
+          "rss_kb": 3093908,
+          "peak_rss_kb": 3093908,
+          "cgroup_bytes": 8570544128
+        },
+        {
+          "utc": "22:59:54",
+          "pid": 59786,
+          "rss_kb": 3093908,
+          "peak_rss_kb": 3093908,
+          "cgroup_bytes": 8570732544
+        },
+        {
+          "utc": "22:59:59",
+          "pid": 59786,
+          "rss_kb": 3093908,
+          "peak_rss_kb": 3093908,
+          "cgroup_bytes": 8570658816
+        },
+        {
+          "utc": "23:00:04",
+          "pid": 59786,
+          "rss_kb": 3093908,
+          "peak_rss_kb": 3093908,
+          "cgroup_bytes": 8570585088
+        },
+        {
+          "utc": "23:00:09",
+          "pid": 59786,
+          "rss_kb": 3093908,
+          "peak_rss_kb": 3093908,
+          "cgroup_bytes": 8570773504
+        },
+        {
+          "utc": "23:00:14",
+          "pid": 59786,
+          "rss_kb": 3085420,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8415055872
+        },
+        {
+          "utc": "23:00:19",
+          "pid": 59786,
+          "rss_kb": 3086444,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8416030720
+        },
+        {
+          "utc": "23:00:24",
+          "pid": 59786,
+          "rss_kb": 3086444,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8415956992
+        },
+        {
+          "utc": "23:00:29",
+          "pid": 59786,
+          "rss_kb": 3086444,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8416141312
+        },
+        {
+          "utc": "23:00:34",
+          "pid": 59786,
+          "rss_kb": 3086444,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8416063488
+        },
+        {
+          "utc": "23:00:39",
+          "pid": 59786,
+          "rss_kb": 3086448,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8415977472
+        },
+        {
+          "utc": "23:00:44",
+          "pid": 59786,
+          "rss_kb": 3086456,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8416161792
+        },
+        {
+          "utc": "23:00:49",
+          "pid": 59786,
+          "rss_kb": 3086456,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8416083968
+        },
+        {
+          "utc": "23:00:54",
+          "pid": 59786,
+          "rss_kb": 3086456,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8416006144
+        },
+        {
+          "utc": "23:00:59",
+          "pid": 59786,
+          "rss_kb": 3086456,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8416018432
+        },
+        {
+          "utc": "23:01:04",
+          "pid": 59786,
+          "rss_kb": 3086456,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8415940608
+        },
+        {
+          "utc": "23:01:09",
+          "pid": 59786,
+          "rss_kb": 3086456,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8415862784
+        },
+        {
+          "utc": "23:01:14",
+          "pid": 59786,
+          "rss_kb": 3086456,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8415784960
+        },
+        {
+          "utc": "23:01:19",
+          "pid": 59786,
+          "rss_kb": 3089504,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8419049472
+        },
+        {
+          "utc": "23:01:24",
+          "pid": 59786,
+          "rss_kb": 3089504,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8418971648
+        },
+        {
+          "utc": "23:01:29",
+          "pid": 59786,
+          "rss_kb": 3089504,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8418893824
+        },
+        {
+          "utc": "23:01:34",
+          "pid": 59786,
+          "rss_kb": 3089504,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8419078144
+        },
+        {
+          "utc": "23:01:39",
+          "pid": 59786,
+          "rss_kb": 3089504,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8419000320
+        },
+        {
+          "utc": "23:01:44",
+          "pid": 59786,
+          "rss_kb": 3089504,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8418922496
+        },
+        {
+          "utc": "23:01:49",
+          "pid": 59786,
+          "rss_kb": 3089504,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8419106816
+        },
+        {
+          "utc": "23:01:54",
+          "pid": 59786,
+          "rss_kb": 3089504,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8419028992
+        },
+        {
+          "utc": "23:01:59",
+          "pid": 59786,
+          "rss_kb": 3089504,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8418938880
+        },
+        {
+          "utc": "23:02:04",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8400982016
+        },
+        {
+          "utc": "23:02:09",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8401166336
+        },
+        {
+          "utc": "23:02:14",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8401088512
+        },
+        {
+          "utc": "23:02:19",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8401244160
+        },
+        {
+          "utc": "23:02:24",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8401162240
+        },
+        {
+          "utc": "23:02:29",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8401080320
+        },
+        {
+          "utc": "23:02:34",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8400998400
+        },
+        {
+          "utc": "23:02:39",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399749120
+        },
+        {
+          "utc": "23:02:44",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399667200
+        },
+        {
+          "utc": "23:02:49",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399585280
+        },
+        {
+          "utc": "23:02:54",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399765504
+        },
+        {
+          "utc": "23:02:59",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399683584
+        },
+        {
+          "utc": "23:03:04",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399601664
+        },
+        {
+          "utc": "23:03:09",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399884288
+        },
+        {
+          "utc": "23:03:14",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399806464
+        },
+        {
+          "utc": "23:03:19",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399958016
+        },
+        {
+          "utc": "23:03:24",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399876096
+        },
+        {
+          "utc": "23:03:29",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399794176
+        },
+        {
+          "utc": "23:03:34",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399712256
+        },
+        {
+          "utc": "23:03:39",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399892480
+        },
+        {
+          "utc": "23:03:44",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399810560
+        },
+        {
+          "utc": "23:03:49",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399724544
+        },
+        {
+          "utc": "23:03:54",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399642624
+        },
+        {
+          "utc": "23:03:59",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399822848
+        },
+        {
+          "utc": "23:04:04",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399740928
+        },
+        {
+          "utc": "23:04:09",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399659008
+        },
+        {
+          "utc": "23:04:14",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399532032
+        },
+        {
+          "utc": "23:04:19",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399450112
+        },
+        {
+          "utc": "23:04:24",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399626240
+        },
+        {
+          "utc": "23:04:29",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399515648
+        },
+        {
+          "utc": "23:04:34",
+          "pid": 59786,
+          "rss_kb": 3088536,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399691776
+        },
+        {
+          "utc": "23:04:39",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399605760
+        },
+        {
+          "utc": "23:04:44",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399519744
+        },
+        {
+          "utc": "23:04:49",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399663104
+        },
+        {
+          "utc": "23:04:54",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399417344
+        },
+        {
+          "utc": "23:04:59",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399593472
+        },
+        {
+          "utc": "23:05:04",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399507456
+        },
+        {
+          "utc": "23:05:09",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399298560
+        },
+        {
+          "utc": "23:05:14",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399474688
+        },
+        {
+          "utc": "23:05:19",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399388672
+        },
+        {
+          "utc": "23:05:24",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399302656
+        },
+        {
+          "utc": "23:05:29",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399478784
+        },
+        {
+          "utc": "23:05:34",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399392768
+        },
+        {
+          "utc": "23:05:39",
+          "pid": 59786,
+          "rss_kb": 3088540,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399306752
+        },
+        {
+          "utc": "23:05:44",
+          "pid": 59786,
+          "rss_kb": 3088556,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399478784
+        },
+        {
+          "utc": "23:05:49",
+          "pid": 59786,
+          "rss_kb": 3088588,
+          "peak_rss_kb": 3093852,
+          "cgroup_bytes": 8399654912
+        },
+        {
+          "utc": "23:05:54",
+          "pid": 59786,
+          "rss_kb": 3096804,
+          "peak_rss_kb": 3096804,
+          "cgroup_bytes": 8407920640
+        },
+        {
+          "utc": "23:05:59",
+          "pid": 59786,
+          "rss_kb": 3096828,
+          "peak_rss_kb": 3096828,
+          "cgroup_bytes": 8408096768
+        },
+        {
+          "utc": "23:06:04",
+          "pid": 59786,
+          "rss_kb": 3098892,
+          "peak_rss_kb": 3098892,
+          "cgroup_bytes": 8410107904
+        },
+        {
+          "utc": "23:06:09",
+          "pid": 59786,
+          "rss_kb": 3099932,
+          "peak_rss_kb": 3099932,
+          "cgroup_bytes": 8411328512
+        },
+        {
+          "utc": "23:06:14",
+          "pid": 59786,
+          "rss_kb": 3103024,
+          "peak_rss_kb": 3103024,
+          "cgroup_bytes": 8414650368
+        },
+        {
+          "utc": "23:06:19",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419803136
+        },
+        {
+          "utc": "23:06:24",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419676160
+        },
+        {
+          "utc": "23:06:29",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419848192
+        },
+        {
+          "utc": "23:06:34",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419758080
+        },
+        {
+          "utc": "23:06:39",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419667968
+        },
+        {
+          "utc": "23:06:44",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419667968
+        },
+        {
+          "utc": "23:06:49",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419512320
+        },
+        {
+          "utc": "23:06:54",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419684352
+        },
+        {
+          "utc": "23:06:59",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419594240
+        },
+        {
+          "utc": "23:07:04",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419504128
+        },
+        {
+          "utc": "23:07:09",
+          "pid": 59786,
+          "rss_kb": 3108148,
+          "peak_rss_kb": 3108148,
+          "cgroup_bytes": 8419676160
+        },
+        {
+          "utc": "23:07:14",
+          "pid": 59786,
+          "rss_kb": 3108144,
+          "peak_rss_kb": 3108144,
+          "cgroup_bytes": 8419540992
+        },
+        {
+          "utc": "23:07:19",
+          "pid": 59786,
+          "rss_kb": 3108144,
+          "peak_rss_kb": 3108144,
+          "cgroup_bytes": 8419450880
+        },
+        {
+          "utc": "23:07:24",
+          "pid": 59786,
+          "rss_kb": 3108144,
+          "peak_rss_kb": 3108144,
+          "cgroup_bytes": 8419622912
+        },
+        {
+          "utc": "23:07:29",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422150144
+        },
+        {
+          "utc": "23:07:34",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422412288
+        },
+        {
+          "utc": "23:07:39",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422227968
+        },
+        {
+          "utc": "23:07:44",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422371328
+        },
+        {
+          "utc": "23:07:49",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422281216
+        },
+        {
+          "utc": "23:07:54",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422178816
+        },
+        {
+          "utc": "23:07:59",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422350848
+        },
+        {
+          "utc": "23:08:04",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422260736
+        },
+        {
+          "utc": "23:08:09",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422170624
+        },
+        {
+          "utc": "23:08:14",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422289408
+        },
+        {
+          "utc": "23:08:19",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422264832
+        },
+        {
+          "utc": "23:08:24",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422125568
+        },
+        {
+          "utc": "23:08:29",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422268928
+        },
+        {
+          "utc": "23:08:34",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422174720
+        },
+        {
+          "utc": "23:08:39",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422293504
+        },
+        {
+          "utc": "23:08:44",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422150144
+        },
+        {
+          "utc": "23:08:49",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422264832
+        },
+        {
+          "utc": "23:08:54",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422330368
+        },
+        {
+          "utc": "23:08:59",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422182912
+        },
+        {
+          "utc": "23:09:04",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422326272
+        },
+        {
+          "utc": "23:09:09",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422162432
+        },
+        {
+          "utc": "23:09:14",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422277120
+        },
+        {
+          "utc": "23:09:19",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422129664
+        },
+        {
+          "utc": "23:09:24",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422244352
+        },
+        {
+          "utc": "23:09:29",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422359040
+        },
+        {
+          "utc": "23:09:34",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422211584
+        },
+        {
+          "utc": "23:09:39",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422326272
+        },
+        {
+          "utc": "23:09:45",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422162432
+        },
+        {
+          "utc": "23:09:50",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422260736
+        },
+        {
+          "utc": "23:09:55",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422359040
+        },
+        {
+          "utc": "23:10:00",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422121472
+        },
+        {
+          "utc": "23:10:05",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422219776
+        },
+        {
+          "utc": "23:10:10",
+          "pid": 59786,
+          "rss_kb": 3108152,
+          "peak_rss_kb": 3108152,
+          "cgroup_bytes": 8422055936
+        }
+      ],
+      "exit_code": 0,
+      "ended_utc": "2026-11-13T23:10:15Z"
+    },
+    {
+      "name": "summarize",
+      "started_utc": "2026-11-13T23:10:15Z",
+      "status": "complete",
+      "memory_samples": [
+        {
+          "utc": "23:10:15",
+          "pid": 59873,
+          "rss_kb": 336,
+          "peak_rss_kb": 336,
+          "cgroup_bytes": 5886619648
+        }
+      ],
+      "exit_code": 0,
+      "ended_utc": "2026-11-13T23:10:20Z"
+    }
+  ]
+}

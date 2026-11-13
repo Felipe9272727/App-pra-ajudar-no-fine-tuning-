@@ -1,0 +1,2700 @@
+[
+  {
+    "size": "small",
+    "pair": 0,
+    "id": "S026S/0",
+    "order": [
+      "target",
+      "small"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        727,
+        22983,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        348,
+        220,
+        18,
+        248046
+      ],
+      "seconds": 4.125659384997562,
+      "prefill_seconds": 0.9137242040014826,
+      "decode_seconds": 3.211935180996079,
+      "first_token_seconds": 0.9137242040014826,
+      "target": {
+        "seconds": 4.121129196981201,
+        "calls": 12,
+        "evaluated_tokens": 41
+      },
+      "tokens": 12,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "def triple(x):\n    return x * 3",
+      "resident_request_seconds": 4.126725688998704,
+      "tokenize_seconds": 0.0006479709991253912
+    },
+    "speculative": {
+      "ids": [
+        727,
+        22983,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        348,
+        220,
+        18,
+        248046
+      ],
+      "tokens": 12,
+      "seconds": 13.48915551500977,
+      "prefill_seconds": 1.0409913629991934,
+      "decode_seconds": 12.448164152010577,
+      "first_token_seconds": 1.0409913629991934,
+      "target": {
+        "seconds": 9.667028241005028,
+        "calls": 31,
+        "evaluated_tokens": 60,
+        "clone_seconds": 0.08197243901668116
+      },
+      "draft": {
+        "seconds": 3.7003057470428757,
+        "calls": 31,
+        "evaluated_tokens": 60,
+        "clone_seconds": 0.020776948003913276
+      },
+      "proposed": 19,
+      "accepted": 6,
+      "acceptance": 0.3157894736842105,
+      "rejection_blocks": 4,
+      "trace": [
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 4,
+          "all_accepted": true
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 1,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 1,
+          "all_accepted": true
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "def triple(x):\n    return x * 3",
+      "resident_request_seconds": 13.49090428299678,
+      "tokenize_seconds": 0.0006034639955032617
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.305889479491735,
+    "all_overhead_included": true
+  },
+  {
+    "size": "small",
+    "pair": 1,
+    "id": "S026S/0",
+    "order": [
+      "small",
+      "target"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        727,
+        22983,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        348,
+        220,
+        18,
+        248046
+      ],
+      "seconds": 4.235395158990286,
+      "prefill_seconds": 0.9261808500014013,
+      "decode_seconds": 3.309214308988885,
+      "first_token_seconds": 0.9261808500014013,
+      "target": {
+        "seconds": 4.231135890004225,
+        "calls": 12,
+        "evaluated_tokens": 41
+      },
+      "tokens": 12,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "def triple(x):\n    return x * 3",
+      "resident_request_seconds": 4.236327649996383,
+      "tokenize_seconds": 0.0005081489944132045
+    },
+    "speculative": {
+      "ids": [
+        727,
+        22983,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        348,
+        220,
+        18,
+        248046
+      ],
+      "tokens": 12,
+      "seconds": 13.799508719996084,
+      "prefill_seconds": 1.2069723220047308,
+      "decode_seconds": 12.592536397991353,
+      "first_token_seconds": 1.2069723220047308,
+      "target": {
+        "seconds": 9.951538809007616,
+        "calls": 31,
+        "evaluated_tokens": 60,
+        "clone_seconds": 0.07233536601415835
+      },
+      "draft": {
+        "seconds": 3.738163024041569,
+        "calls": 31,
+        "evaluated_tokens": 60,
+        "clone_seconds": 0.01868671398551669
+      },
+      "proposed": 19,
+      "accepted": 6,
+      "acceptance": 0.3157894736842105,
+      "rejection_blocks": 4,
+      "trace": [
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 4,
+          "all_accepted": true
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 1,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 1,
+          "all_accepted": true
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "def triple(x):\n    return x * 3",
+      "resident_request_seconds": 13.801118746996508,
+      "tokenize_seconds": 0.0005943089927313849
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.30695538004252887,
+    "all_overhead_included": true
+  },
+  {
+    "size": "small",
+    "pair": 2,
+    "id": "S026S/1",
+    "order": [
+      "target",
+      "small"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        2198,
+        277,
+        193362,
+        181380,
+        3362,
+        318,
+        282,
+        328,
+        3092,
+        10804,
+        871,
+        3825,
+        10293,
+        177829,
+        15346,
+        945,
+        58211,
+        75978,
+        401,
+        3061,
+        3239,
+        175364,
+        264,
+        2972,
+        14186,
+        84149,
+        332,
+        378,
+        264,
+        2972,
+        22033,
+        575
+      ],
+      "seconds": 10.240440353009035,
+      "prefill_seconds": 1.0917884490045253,
+      "decode_seconds": 9.14865190400451,
+      "first_token_seconds": 1.0917884490045253,
+      "target": {
+        "seconds": 10.229217735002749,
+        "calls": 32,
+        "evaluated_tokens": 59
+      },
+      "tokens": 32,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "Testar entradas vazias (ou \"empty inputs\") é uma prática fundamental em desenvolvimento de software para garantir a **segurança** e a **robust",
+      "resident_request_seconds": 10.241539026013925,
+      "tokenize_seconds": 0.0005338980117812753
+    },
+    "speculative": {
+      "ids": [
+        2198,
+        277,
+        193362,
+        181380,
+        3362,
+        318,
+        282,
+        328,
+        3092,
+        10804,
+        871,
+        3825,
+        10293,
+        177829,
+        15346,
+        945,
+        58211,
+        75978,
+        401,
+        3061,
+        3239,
+        175364,
+        264,
+        2972,
+        14186,
+        84149,
+        332,
+        378,
+        264,
+        2972,
+        22033,
+        575
+      ],
+      "tokens": 32,
+      "seconds": 67.99170920399774,
+      "prefill_seconds": 0.9799676670081681,
+      "decode_seconds": 67.01174153698958,
+      "first_token_seconds": 0.9799676670081681,
+      "target": {
+        "seconds": 48.823072785977274,
+        "calls": 167,
+        "evaluated_tokens": 194,
+        "clone_seconds": 0.38499231297464576
+      },
+      "draft": {
+        "seconds": 18.5910074999847,
+        "calls": 166,
+        "evaluated_tokens": 193,
+        "clone_seconds": 0.09483142997487448
+      },
+      "proposed": 105,
+      "accepted": 0,
+      "acceptance": 0.0,
+      "rejection_blocks": 30,
+      "trace": [
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "Testar entradas vazias (ou \"empty inputs\") é uma prática fundamental em desenvolvimento de software para garantir a **segurança** e a **robust",
+      "resident_request_seconds": 67.99326793300861,
+      "tokenize_seconds": 0.0006472189998021349
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.15062578013024105,
+    "all_overhead_included": true
+  },
+  {
+    "size": "small",
+    "pair": 3,
+    "id": "S026S/1",
+    "order": [
+      "small",
+      "target"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        2198,
+        277,
+        193362,
+        181380,
+        3362,
+        318,
+        282,
+        328,
+        3092,
+        10804,
+        871,
+        3825,
+        10293,
+        177829,
+        15346,
+        945,
+        58211,
+        75978,
+        401,
+        3061,
+        3239,
+        175364,
+        264,
+        2972,
+        14186,
+        84149,
+        332,
+        378,
+        264,
+        2972,
+        22033,
+        575
+      ],
+      "seconds": 10.315836900001159,
+      "prefill_seconds": 0.9452562540100189,
+      "decode_seconds": 9.37058064599114,
+      "first_token_seconds": 0.9452562540100189,
+      "target": {
+        "seconds": 10.303731225983938,
+        "calls": 32,
+        "evaluated_tokens": 59
+      },
+      "tokens": 32,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "Testar entradas vazias (ou \"empty inputs\") é uma prática fundamental em desenvolvimento de software para garantir a **segurança** e a **robust",
+      "resident_request_seconds": 10.316837324004155,
+      "tokenize_seconds": 0.0005318949988577515
+    },
+    "speculative": {
+      "ids": [
+        2198,
+        277,
+        193362,
+        181380,
+        3362,
+        318,
+        282,
+        328,
+        3092,
+        10804,
+        871,
+        3825,
+        10293,
+        177829,
+        15346,
+        945,
+        58211,
+        75978,
+        401,
+        3061,
+        3239,
+        175364,
+        264,
+        2972,
+        14186,
+        84149,
+        332,
+        378,
+        264,
+        2972,
+        22033,
+        575
+      ],
+      "tokens": 32,
+      "seconds": 69.11704376900161,
+      "prefill_seconds": 0.8830323669972131,
+      "decode_seconds": 68.2340114020044,
+      "first_token_seconds": 0.8830323669972131,
+      "target": {
+        "seconds": 49.37852872017538,
+        "calls": 167,
+        "evaluated_tokens": 194,
+        "clone_seconds": 0.39389428801951
+      },
+      "draft": {
+        "seconds": 18.915705270148464,
+        "calls": 166,
+        "evaluated_tokens": 193,
+        "clone_seconds": 0.3277175029506907
+      },
+      "proposed": 105,
+      "accepted": 0,
+      "acceptance": 0.0,
+      "rejection_blocks": 30,
+      "trace": [
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "Testar entradas vazias (ou \"empty inputs\") é uma prática fundamental em desenvolvimento de software para garantir a **segurança** e a **robust",
+      "resident_request_seconds": 69.1185897779942,
+      "tokenize_seconds": 0.0005240929895080626
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.14926284458553585,
+    "all_overhead_included": true
+  },
+  {
+    "size": "small",
+    "pair": 4,
+    "id": "S026S/2",
+    "order": [
+      "target",
+      "small"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        8160,
+        513,
+        2250,
+        1328,
+        5706,
+        314,
+        264,
+        12654,
+        10675,
+        25,
+        271,
+        16,
+        13,
+        220,
+        2972,
+        1536,
+        12,
+        1094,
+        387,
+        4568,
+        92217,
+        357,
+        10675,
+        369,
+        264,
+        4281,
+        314,
+        1328,
+        18509,
+        13139,
+        11,
+        1332
+      ],
+      "seconds": 9.508325952992891,
+      "prefill_seconds": 0.7956426119926618,
+      "decode_seconds": 8.71268334100023,
+      "first_token_seconds": 0.7956426119926618,
+      "target": {
+        "seconds": 9.497722333035199,
+        "calls": 32,
+        "evaluated_tokens": 53
+      },
+      "tokens": 32,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "Here are three key properties of a Python dictionary:\n\n1.  **Key-Value Pairs**: A dictionary is a collection of key-value pairs, where",
+      "resident_request_seconds": 9.509288770001149,
+      "tokenize_seconds": 0.0005063870048616081
+    },
+    "speculative": {
+      "ids": [
+        8160,
+        513,
+        2250,
+        1328,
+        5706,
+        314,
+        264,
+        12654,
+        10675,
+        25,
+        271,
+        16,
+        13,
+        220,
+        2972,
+        1536,
+        12,
+        1094,
+        387,
+        4568,
+        92217,
+        357,
+        10675,
+        369,
+        264,
+        4281,
+        314,
+        1328,
+        18509,
+        13139,
+        11,
+        1332
+      ],
+      "tokens": 32,
+      "seconds": 67.94357666499855,
+      "prefill_seconds": 0.7627272210083902,
+      "decode_seconds": 67.18084944399016,
+      "first_token_seconds": 0.7627272210083902,
+      "target": {
+        "seconds": 48.762749616929796,
+        "calls": 167,
+        "evaluated_tokens": 188,
+        "clone_seconds": 0.34235070302383974
+      },
+      "draft": {
+        "seconds": 18.64508441599901,
+        "calls": 166,
+        "evaluated_tokens": 187,
+        "clone_seconds": 0.09426167199853808
+      },
+      "proposed": 106,
+      "accepted": 1,
+      "acceptance": 0.009433962264150943,
+      "rejection_blocks": 29,
+      "trace": [
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 1,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "Here are three key properties of a Python dictionary:\n\n1.  **Key-Value Pairs**: A dictionary is a collection of key-value pairs, where",
+      "resident_request_seconds": 67.94493098399835,
+      "tokenize_seconds": 0.0004781930038006976
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.13995582352185587,
+    "all_overhead_included": true
+  },
+  {
+    "size": "small",
+    "pair": 5,
+    "id": "S026S/2",
+    "order": [
+      "small",
+      "target"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        8160,
+        513,
+        2250,
+        1328,
+        5706,
+        314,
+        264,
+        12654,
+        10675,
+        25,
+        271,
+        16,
+        13,
+        220,
+        2972,
+        1536,
+        12,
+        1094,
+        387,
+        4568,
+        92217,
+        357,
+        10675,
+        369,
+        264,
+        4281,
+        314,
+        1328,
+        18509,
+        13139,
+        11,
+        1332
+      ],
+      "seconds": 9.331196361992625,
+      "prefill_seconds": 0.7577878309966763,
+      "decode_seconds": 8.573408530995948,
+      "first_token_seconds": 0.7577878309966763,
+      "target": {
+        "seconds": 9.320355910007493,
+        "calls": 32,
+        "evaluated_tokens": 53
+      },
+      "tokens": 32,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "Here are three key properties of a Python dictionary:\n\n1.  **Key-Value Pairs**: A dictionary is a collection of key-value pairs, where",
+      "resident_request_seconds": 9.332123996005976,
+      "tokenize_seconds": 0.0004960910009685904
+    },
+    "speculative": {
+      "ids": [
+        8160,
+        513,
+        2250,
+        1328,
+        5706,
+        314,
+        264,
+        12654,
+        10675,
+        25,
+        271,
+        16,
+        13,
+        220,
+        2972,
+        1536,
+        12,
+        1094,
+        387,
+        4568,
+        92217,
+        357,
+        10675,
+        369,
+        264,
+        4281,
+        314,
+        1328,
+        18509,
+        13139,
+        11,
+        1332
+      ],
+      "tokens": 32,
+      "seconds": 67.24110684100015,
+      "prefill_seconds": 0.74602414900437,
+      "decode_seconds": 66.49508269199578,
+      "first_token_seconds": 0.74602414900437,
+      "target": {
+        "seconds": 48.01793184003327,
+        "calls": 167,
+        "evaluated_tokens": 188,
+        "clone_seconds": 0.3389412409887882
+      },
+      "draft": {
+        "seconds": 18.69649034901522,
+        "calls": 166,
+        "evaluated_tokens": 187,
+        "clone_seconds": 0.09249689400894567
+      },
+      "proposed": 106,
+      "accepted": 1,
+      "acceptance": 0.009433962264150943,
+      "rejection_blocks": 29,
+      "trace": [
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 1,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "Here are three key properties of a Python dictionary:\n\n1.  **Key-Value Pairs**: A dictionary is a collection of key-value pairs, where",
+      "resident_request_seconds": 67.2425539810065,
+      "tokenize_seconds": 0.0004960799997206777
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.13878300932236975,
+    "all_overhead_included": true
+  },
+  {
+    "size": "large",
+    "pair": 0,
+    "id": "S026S/0",
+    "order": [
+      "target",
+      "large"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        727,
+        22983,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        348,
+        220,
+        18,
+        248046
+      ],
+      "seconds": 3.9572113699978217,
+      "prefill_seconds": 0.9090736079961061,
+      "decode_seconds": 3.0481377620017156,
+      "first_token_seconds": 0.9090736079961061,
+      "target": {
+        "seconds": 3.9530218889849493,
+        "calls": 12,
+        "evaluated_tokens": 41
+      },
+      "tokens": 12,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "def triple(x):\n    return x * 3",
+      "resident_request_seconds": 3.9582854860054795,
+      "tokenize_seconds": 0.000631887000054121
+    },
+    "speculative": {
+      "ids": [
+        727,
+        22983,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        348,
+        220,
+        18,
+        248046
+      ],
+      "tokens": 12,
+      "seconds": 13.695927284003119,
+      "prefill_seconds": 0.8617038959928323,
+      "decode_seconds": 12.834223388010287,
+      "first_token_seconds": 0.8617038959928323,
+      "target": {
+        "seconds": 9.22694953798782,
+        "calls": 30,
+        "evaluated_tokens": 59,
+        "clone_seconds": 0.07363765900663566
+      },
+      "draft": {
+        "seconds": 4.356396009010496,
+        "calls": 30,
+        "evaluated_tokens": 59,
+        "clone_seconds": 0.02025555599539075
+      },
+      "proposed": 18,
+      "accepted": 6,
+      "acceptance": 0.3333333333333333,
+      "rejection_blocks": 4,
+      "trace": [
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 4,
+          "all_accepted": true
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 1,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 1,
+          "all_accepted": true
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "def triple(x):\n    return x * 3",
+      "resident_request_seconds": 13.697618783990038,
+      "tokenize_seconds": 0.0005953310028417036
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.288976175233609,
+    "all_overhead_included": true
+  },
+  {
+    "size": "large",
+    "pair": 1,
+    "id": "S026S/0",
+    "order": [
+      "large",
+      "target"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        727,
+        22983,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        348,
+        220,
+        18,
+        248046
+      ],
+      "seconds": 3.9613186079950538,
+      "prefill_seconds": 0.9241747729975032,
+      "decode_seconds": 3.0371438349975506,
+      "first_token_seconds": 0.9241747729975032,
+      "target": {
+        "seconds": 3.9574488070065854,
+        "calls": 12,
+        "evaluated_tokens": 41
+      },
+      "tokens": 12,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "def triple(x):\n    return x * 3",
+      "resident_request_seconds": 3.962327444998664,
+      "tokenize_seconds": 0.0005264170031296089
+    },
+    "speculative": {
+      "ids": [
+        727,
+        22983,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        348,
+        220,
+        18,
+        248046
+      ],
+      "tokens": 12,
+      "seconds": 14.133097789992462,
+      "prefill_seconds": 0.9348022249905625,
+      "decode_seconds": 13.1982955650019,
+      "first_token_seconds": 0.9348022249905625,
+      "target": {
+        "seconds": 9.553556609942461,
+        "calls": 30,
+        "evaluated_tokens": 59,
+        "clone_seconds": 0.06781343900365755
+      },
+      "draft": {
+        "seconds": 4.470408681983827,
+        "calls": 30,
+        "evaluated_tokens": 59,
+        "clone_seconds": 0.021598621999146417
+      },
+      "proposed": 18,
+      "accepted": 6,
+      "acceptance": 0.3333333333333333,
+      "rejection_blocks": 4,
+      "trace": [
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 4,
+          "all_accepted": true
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 1,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 1,
+          "all_accepted": true
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "def triple(x):\n    return x * 3",
+      "resident_request_seconds": 14.134769789990969,
+      "tokenize_seconds": 0.0005747889954363927
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.2803248658357665,
+    "all_overhead_included": true
+  },
+  {
+    "size": "large",
+    "pair": 2,
+    "id": "S026S/1",
+    "order": [
+      "target",
+      "large"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        2198,
+        277,
+        193362,
+        181380,
+        3362,
+        318,
+        282,
+        328,
+        3092,
+        10804,
+        871,
+        3825,
+        10293,
+        177829,
+        15346,
+        945,
+        58211,
+        75978,
+        401,
+        3061,
+        3239,
+        175364,
+        264,
+        2972,
+        14186,
+        84149,
+        332,
+        378,
+        264,
+        2972,
+        22033,
+        575
+      ],
+      "seconds": 9.60758602200076,
+      "prefill_seconds": 0.9076746979990276,
+      "decode_seconds": 8.699911324001732,
+      "first_token_seconds": 0.9076746979990276,
+      "target": {
+        "seconds": 9.59624510507274,
+        "calls": 32,
+        "evaluated_tokens": 59
+      },
+      "tokens": 32,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "Testar entradas vazias (ou \"empty inputs\") é uma prática fundamental em desenvolvimento de software para garantir a **segurança** e a **robust",
+      "resident_request_seconds": 9.60862912099401,
+      "tokenize_seconds": 0.0005883300036657602
+    },
+    "speculative": {
+      "ids": [
+        2198,
+        277,
+        193362,
+        181380,
+        3362,
+        318,
+        282,
+        328,
+        3092,
+        10804,
+        871,
+        3825,
+        10293,
+        177829,
+        15346,
+        945,
+        58211,
+        75978,
+        401,
+        3061,
+        3239,
+        175364,
+        264,
+        2972,
+        14186,
+        84149,
+        332,
+        378,
+        264,
+        2972,
+        22033,
+        575
+      ],
+      "tokens": 32,
+      "seconds": 67.4498594780016,
+      "prefill_seconds": 0.9344567299995106,
+      "decode_seconds": 66.51540274800209,
+      "first_token_seconds": 0.9344567299995106,
+      "target": {
+        "seconds": 45.08362682907318,
+        "calls": 154,
+        "evaluated_tokens": 181,
+        "clone_seconds": 0.4091692880174378
+      },
+      "draft": {
+        "seconds": 21.750446979975095,
+        "calls": 153,
+        "evaluated_tokens": 180,
+        "clone_seconds": 0.10417449695523828
+      },
+      "proposed": 92,
+      "accepted": 0,
+      "acceptance": 0.0,
+      "rejection_blocks": 30,
+      "trace": [
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "Testar entradas vazias (ou \"empty inputs\") é uma prática fundamental em desenvolvimento de software para garantir a **segurança** e a **robust",
+      "resident_request_seconds": 67.45142973400652,
+      "tokenize_seconds": 0.0004877580067841336
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.14245256414705312,
+    "all_overhead_included": true
+  },
+  {
+    "size": "large",
+    "pair": 3,
+    "id": "S026S/1",
+    "order": [
+      "large",
+      "target"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        2198,
+        277,
+        193362,
+        181380,
+        3362,
+        318,
+        282,
+        328,
+        3092,
+        10804,
+        871,
+        3825,
+        10293,
+        177829,
+        15346,
+        945,
+        58211,
+        75978,
+        401,
+        3061,
+        3239,
+        175364,
+        264,
+        2972,
+        14186,
+        84149,
+        332,
+        378,
+        264,
+        2972,
+        22033,
+        575
+      ],
+      "seconds": 9.682606062997365,
+      "prefill_seconds": 0.9285660509922309,
+      "decode_seconds": 8.754040012005134,
+      "first_token_seconds": 0.9285660509922309,
+      "target": {
+        "seconds": 9.671338589992956,
+        "calls": 32,
+        "evaluated_tokens": 59
+      },
+      "tokens": 32,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "Testar entradas vazias (ou \"empty inputs\") é uma prática fundamental em desenvolvimento de software para garantir a **segurança** e a **robust",
+      "resident_request_seconds": 9.683544252999127,
+      "tokenize_seconds": 0.0004753599932882935
+    },
+    "speculative": {
+      "ids": [
+        2198,
+        277,
+        193362,
+        181380,
+        3362,
+        318,
+        282,
+        328,
+        3092,
+        10804,
+        871,
+        3825,
+        10293,
+        177829,
+        15346,
+        945,
+        58211,
+        75978,
+        401,
+        3061,
+        3239,
+        175364,
+        264,
+        2972,
+        14186,
+        84149,
+        332,
+        378,
+        264,
+        2972,
+        22033,
+        575
+      ],
+      "tokens": 32,
+      "seconds": 67.39500010300253,
+      "prefill_seconds": 0.9543148160009878,
+      "decode_seconds": 66.44068528700154,
+      "first_token_seconds": 0.9543148160009878,
+      "target": {
+        "seconds": 44.885128462003195,
+        "calls": 154,
+        "evaluated_tokens": 181,
+        "clone_seconds": 0.3832509439671412
+      },
+      "draft": {
+        "seconds": 21.924717012021574,
+        "calls": 153,
+        "evaluated_tokens": 180,
+        "clone_seconds": 0.101846075951471
+      },
+      "proposed": 92,
+      "accepted": 0,
+      "acceptance": 0.0,
+      "rejection_blocks": 30,
+      "trace": [
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "Testar entradas vazias (ou \"empty inputs\") é uma prática fundamental em desenvolvimento de software para garantir a **segurança** e a **robust",
+      "resident_request_seconds": 67.39650905600865,
+      "tokenize_seconds": 0.0005387450073612854
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.14368020523068623,
+    "all_overhead_included": true
+  },
+  {
+    "size": "large",
+    "pair": 4,
+    "id": "S026S/2",
+    "order": [
+      "target",
+      "large"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        8160,
+        513,
+        2250,
+        1328,
+        5706,
+        314,
+        264,
+        12654,
+        10675,
+        25,
+        271,
+        16,
+        13,
+        220,
+        2972,
+        1536,
+        12,
+        1094,
+        387,
+        4568,
+        92217,
+        357,
+        10675,
+        369,
+        264,
+        4281,
+        314,
+        1328,
+        18509,
+        13139,
+        11,
+        1332
+      ],
+      "seconds": 9.681677674001548,
+      "prefill_seconds": 0.8934908760129474,
+      "decode_seconds": 8.788186797988601,
+      "first_token_seconds": 0.8934908760129474,
+      "target": {
+        "seconds": 9.669970723989536,
+        "calls": 32,
+        "evaluated_tokens": 53
+      },
+      "tokens": 32,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "Here are three key properties of a Python dictionary:\n\n1.  **Key-Value Pairs**: A dictionary is a collection of key-value pairs, where",
+      "resident_request_seconds": 9.682641563995276,
+      "tokenize_seconds": 0.0004688100016210228
+    },
+    "speculative": {
+      "ids": [
+        8160,
+        513,
+        2250,
+        1328,
+        5706,
+        314,
+        264,
+        12654,
+        10675,
+        25,
+        271,
+        16,
+        13,
+        220,
+        2972,
+        1536,
+        12,
+        1094,
+        387,
+        4568,
+        92217,
+        357,
+        10675,
+        369,
+        264,
+        4281,
+        314,
+        1328,
+        18509,
+        13139,
+        11,
+        1332
+      ],
+      "tokens": 32,
+      "seconds": 65.43715450000309,
+      "prefill_seconds": 0.7707733120041667,
+      "decode_seconds": 64.66638118799892,
+      "first_token_seconds": 0.7707733120041667,
+      "target": {
+        "seconds": 43.83174935396528,
+        "calls": 150,
+        "evaluated_tokens": 171,
+        "clone_seconds": 0.3775766439794097
+      },
+      "draft": {
+        "seconds": 21.02729862210981,
+        "calls": 149,
+        "evaluated_tokens": 170,
+        "clone_seconds": 0.1034187089826446
+      },
+      "proposed": 88,
+      "accepted": 0,
+      "acceptance": 0.0,
+      "rejection_blocks": 30,
+      "trace": [
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "Here are three key properties of a Python dictionary:\n\n1.  **Key-Value Pairs**: A dictionary is a collection of key-value pairs, where",
+      "resident_request_seconds": 65.438614158993,
+      "tokenize_seconds": 0.0004999669909011573
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.14796526009046942,
+    "all_overhead_included": true
+  },
+  {
+    "size": "large",
+    "pair": 5,
+    "id": "S026S/2",
+    "order": [
+      "large",
+      "target"
+    ],
+    "mode": "serial",
+    "target": {
+      "ids": [
+        8160,
+        513,
+        2250,
+        1328,
+        5706,
+        314,
+        264,
+        12654,
+        10675,
+        25,
+        271,
+        16,
+        13,
+        220,
+        2972,
+        1536,
+        12,
+        1094,
+        387,
+        4568,
+        92217,
+        357,
+        10675,
+        369,
+        264,
+        4281,
+        314,
+        1328,
+        18509,
+        13139,
+        11,
+        1332
+      ],
+      "seconds": 9.623591308991308,
+      "prefill_seconds": 0.7897000579978339,
+      "decode_seconds": 8.833891250993474,
+      "first_token_seconds": 0.7897000579978339,
+      "target": {
+        "seconds": 9.612435773029574,
+        "calls": 32,
+        "evaluated_tokens": 53
+      },
+      "tokens": 32,
+      "draft": {},
+      "proposed": 0,
+      "accepted": 0,
+      "text": "Here are three key properties of a Python dictionary:\n\n1.  **Key-Value Pairs**: A dictionary is a collection of key-value pairs, where",
+      "resident_request_seconds": 9.624710182004492,
+      "tokenize_seconds": 0.0005453549965750426
+    },
+    "speculative": {
+      "ids": [
+        8160,
+        513,
+        2250,
+        1328,
+        5706,
+        314,
+        264,
+        12654,
+        10675,
+        25,
+        271,
+        16,
+        13,
+        220,
+        2972,
+        1536,
+        12,
+        1094,
+        387,
+        4568,
+        92217,
+        357,
+        10675,
+        369,
+        264,
+        4281,
+        314,
+        1328,
+        18509,
+        13139,
+        11,
+        1332
+      ],
+      "tokens": 32,
+      "seconds": 67.19933435499843,
+      "prefill_seconds": 0.7977114189998247,
+      "decode_seconds": 66.4016229359986,
+      "first_token_seconds": 0.7977114189998247,
+      "target": {
+        "seconds": 45.12859705016308,
+        "calls": 150,
+        "evaluated_tokens": 171,
+        "clone_seconds": 0.39468163505080156
+      },
+      "draft": {
+        "seconds": 21.47025051897799,
+        "calls": 149,
+        "evaluated_tokens": 170,
+        "clone_seconds": 0.10410005004086997
+      },
+      "proposed": 88,
+      "accepted": 0,
+      "acceptance": 0.0,
+      "rejection_blocks": 30,
+      "trace": [
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 3,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 4,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 2,
+          "accepted": 0,
+          "all_accepted": false
+        },
+        {
+          "drafted": 1,
+          "accepted": 0,
+          "all_accepted": false
+        }
+      ],
+      "verify_mode": "serial",
+      "pending_final_token_not_processed_same_as_serial": true,
+      "text": "Here are three key properties of a Python dictionary:\n\n1.  **Key-Value Pairs**: A dictionary is a collection of key-value pairs, where",
+      "resident_request_seconds": 67.20085929300694,
+      "tokenize_seconds": 0.0005150990036781877
+    },
+    "identical": true,
+    "resident_speed_ratio": 0.1432230224920064,
+    "all_overhead_included": true
+  }
+]
