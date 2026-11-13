@@ -1,0 +1,10 @@
+{
+  "format": "exact-apk-prefix-parent-pack-suffix-v1",
+  "original_sha256": "04726275404bf609156d91cf28bbe0ab8df17cd6d112b501e5f09b36db4a779c",
+  "prefix_bytes": 15429212,
+  "suffix_bytes": 826091,
+  "pack_bytes": 1599290240,
+  "pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "pack_source": "tooluse022/apk_archive/manifest.json",
+  "reconstructed_full_sha_verified_before_refresh": true
+}

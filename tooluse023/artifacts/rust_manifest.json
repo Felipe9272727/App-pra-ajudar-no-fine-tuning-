@@ -1,0 +1,16 @@
+[
+  {
+    "name": "rust_arm",
+    "raw_sha256": "bd1cc4bd8320afe107e667ad0e7c3361631d6c9d1957c166ef772553a2c7777b",
+    "raw_bytes": 4870576,
+    "compressed_sha256": "f7e59569cf7edc7ad8187c6de1a7d350f46e142badd15691b58b4a8e2ef42bc7",
+    "compressed_bytes": 1747430
+  },
+  {
+    "name": "rust_host",
+    "raw_sha256": "9746583f86a437f0ec47d54a36afb5202b274171fd6e960b95527d43faec6c46",
+    "raw_bytes": 5100528,
+    "compressed_sha256": "cef771e091151b2cd1230f081c50d65579db86dae7a41cc20e92cb6737226ac8",
+    "compressed_bytes": 1766038
+  }
+]
