@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "clip_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-2, min(2, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "clip_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-3, min(3, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "clip_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-4, min(4, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "clip_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-5, min(5, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "clip_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-6, min(6, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "clip_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-7, min(7, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "clip_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-8, min(8, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "clip_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-9, min(9, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "clip_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-10, min(10, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "clip_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [max(-11, min(11, x)) for x in xs]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 2\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 3\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 4\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 5\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 6\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 7\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 8\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 9\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 10\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "prefix_offset_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    total = 11\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 2)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 3)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 4)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 5)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 6)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 7)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 8)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 9)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 10)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "above_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for x in xs if x > 11)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 2\n    for x in xs:\n        out[x % 2] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 3\n    for x in xs:\n        out[x % 3] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 4\n    for x in xs:\n        out[x % 4] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 5\n    for x in xs:\n        out[x % 5] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 6\n    for x in xs:\n        out[x % 6] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 7\n    for x in xs:\n        out[x % 7] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 8\n    for x in xs:\n        out[x % 8] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 9\n    for x in xs:\n        out[x % 9] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 10\n    for x in xs:\n        out[x % 10] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "residues_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * 11\n    for x in xs:\n        out[x % 11] += 1\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 2 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 3 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 4 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 5 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 6 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 7 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 8 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 9 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 10 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "weighted_alternate_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return 11 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 2\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 3\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 4\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 5\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 6\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 7\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 8\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 9\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 10\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "suffix_offset_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = [0] * len(xs)\n    total = 11\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 2)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 3)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 4)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 5)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 6)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 7)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 8)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 9)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 10)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "large_jumps_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 11)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 2 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 3 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 4 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 5 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 6 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 7 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 8 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 9 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 10 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "drop_periodic_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 11 != 0]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 2\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 3\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 4\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 5\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 6\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 7\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 8\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 9\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 10\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "running_min_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. At each index return the minimum of K and all elements seen up to that index. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    out = []\n    current = 11\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 2 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 3 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 4 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 5 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 6 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 7 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 8 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 9 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 10 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "adjacent_dedup_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Keep only the first value of each consecutive equal run, then add K to each retained value. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [x + 11 for i, x in enumerate(xs) if i == 0 or x != xs[i-1]]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+2]) for i in range(0, len(xs), 2)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+3]) for i in range(0, len(xs), 3)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+4]) for i in range(0, len(xs), 4)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+5]) for i in range(0, len(xs), 5)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+6]) for i in range(0, len(xs), 6)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+7]) for i in range(0, len(xs), 7)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+8]) for i in range(0, len(xs), 8)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+9]) for i in range(0, len(xs), 9)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+10]) for i in range(0, len(xs), 10)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "block_sums_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Return sums of consecutive nonoverlapping blocks of size K, including a final shorter block. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return [sum(xs[i:i+11]) for i in range(0, len(xs), 11)]\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_0",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 2 and xs[i]-xs[i+1] >= 2)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_1",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 3. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 3 and xs[i]-xs[i+1] >= 3)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_2",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 4. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 4 and xs[i]-xs[i+1] >= 4)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_3",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 5. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 5 and xs[i]-xs[i+1] >= 5)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_4",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 6. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 6 and xs[i]-xs[i+1] >= 6)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_5",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 7. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 7 and xs[i]-xs[i+1] >= 7)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_6",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 8. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 8 and xs[i]-xs[i+1] >= 8)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_7",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 9. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 9 and xs[i]-xs[i+1] >= 9)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_8",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 10. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 10 and xs[i]-xs[i+1] >= 10)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "peaks_9",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 11. Count interior indices whose value exceeds BOTH immediate neighbors by at least K. Return only the function, no imports or explanation.",
+    "answer": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)-1) if xs[i]-xs[i-1] >= 11 and xs[i]-xs[i+1] >= 11)\n",
+    "source": "review013_verified_train"
+  },
+  {
+    "id": "TEACH016/00",
+    "prompt": "What is the chemical symbol for sodium? Reply only with the symbol.",
+    "answer": "Na",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/01",
+    "prompt": "Qual é a capital do Japão? Responda somente a cidade.",
+    "answer": "Tóquio",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/02",
+    "prompt": "What organs enable breathing? Reply with one plural noun.",
+    "answer": "lungs",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/03",
+    "prompt": "Give only the plural of mouse.",
+    "answer": "mice",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/04",
+    "prompt": "Responda somente com o número: 6 vezes 7.",
+    "answer": "42",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/05",
+    "prompt": "Davi chegou antes de Eva. Eva chegou antes de Leo. Quem chegou primeiro? Responda somente o nome.",
+    "answer": "Davi",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/06",
+    "prompt": "Reply only with a number: a box has 22 pens and 9 are removed. How many remain?",
+    "answer": "13",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/07",
+    "prompt": "What is half of 46? Reply only with the number.",
+    "answer": "23",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/08",
+    "prompt": "Give only the simple past tense of bring.",
+    "answer": "brought",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/09",
+    "prompt": "Responda somente o plural de papel.",
+    "answer": "papéis",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/10",
+    "prompt": "Translate bread into Portuguese. Reply with one word.",
+    "answer": "pão",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/11",
+    "prompt": "Responda com uma palavra: qual é o contrário de escuro?",
+    "answer": "claro",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/12",
+    "prompt": "What is the chemical symbol for gold? Reply only with the symbol.",
+    "answer": "Au",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/13",
+    "prompt": "Qual é a capital da Itália? Responda somente a cidade.",
+    "answer": "Roma",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/14",
+    "prompt": "Zoe chegou antes de Ivo. Ivo chegou antes de Rui. Quem chegou primeiro? Responda somente o nome.",
+    "answer": "Zoe",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "TEACH016/15",
+    "prompt": "Responda somente com o número: 9 mais 18.",
+    "answer": "27",
+    "source": "balanced016_general_train"
+  },
+  {
+    "id": "S026M/0",
+    "prompt": "Responda somente com o número: 2 vezes 3.",
+    "answer": "6",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/1",
+    "prompt": "Responda somente com o número: 3 vezes 3.",
+    "answer": "9",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/2",
+    "prompt": "Responda somente com o número: 4 vezes 3.",
+    "answer": "12",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/3",
+    "prompt": "Responda somente com o número: 5 vezes 3.",
+    "answer": "15",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/4",
+    "prompt": "Responda somente com o número: 6 vezes 3.",
+    "answer": "18",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/5",
+    "prompt": "Responda somente com o número: 7 vezes 3.",
+    "answer": "21",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/6",
+    "prompt": "Responda somente com o número: 8 vezes 3.",
+    "answer": "24",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/7",
+    "prompt": "Responda somente com o número: 9 vezes 3.",
+    "answer": "27",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/8",
+    "prompt": "Responda somente com o número: 2 vezes 4.",
+    "answer": "8",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/9",
+    "prompt": "Responda somente com o número: 3 vezes 4.",
+    "answer": "12",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/10",
+    "prompt": "Responda somente com o número: 4 vezes 4.",
+    "answer": "16",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/11",
+    "prompt": "Responda somente com o número: 5 vezes 4.",
+    "answer": "20",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/12",
+    "prompt": "Responda somente com o número: 6 vezes 4.",
+    "answer": "24",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/13",
+    "prompt": "Responda somente com o número: 7 vezes 4.",
+    "answer": "28",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/14",
+    "prompt": "Responda somente com o número: 8 vezes 4.",
+    "answer": "32",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/15",
+    "prompt": "Responda somente com o número: 9 vezes 4.",
+    "answer": "36",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/16",
+    "prompt": "Responda somente com o número: 2 vezes 5.",
+    "answer": "10",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/17",
+    "prompt": "Responda somente com o número: 3 vezes 5.",
+    "answer": "15",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/18",
+    "prompt": "Responda somente com o número: 4 vezes 5.",
+    "answer": "20",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/19",
+    "prompt": "Responda somente com o número: 5 vezes 5.",
+    "answer": "25",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/20",
+    "prompt": "Responda somente com o número: 6 vezes 5.",
+    "answer": "30",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/21",
+    "prompt": "Responda somente com o número: 7 vezes 5.",
+    "answer": "35",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/22",
+    "prompt": "Responda somente com o número: 8 vezes 5.",
+    "answer": "40",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/23",
+    "prompt": "Responda somente com o número: 9 vezes 5.",
+    "answer": "45",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/24",
+    "prompt": "Responda somente com o número: 2 vezes 6.",
+    "answer": "12",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/25",
+    "prompt": "Responda somente com o número: 3 vezes 6.",
+    "answer": "18",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/26",
+    "prompt": "Responda somente com o número: 4 vezes 6.",
+    "answer": "24",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/27",
+    "prompt": "Responda somente com o número: 5 vezes 6.",
+    "answer": "30",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/28",
+    "prompt": "Responda somente com o número: 6 vezes 6.",
+    "answer": "36",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/29",
+    "prompt": "Responda somente com o número: 7 vezes 6.",
+    "answer": "42",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/30",
+    "prompt": "Responda somente com o número: 8 vezes 6.",
+    "answer": "48",
+    "source": "constructed_checked_math_training"
+  },
+  {
+    "id": "S026M/31",
+    "prompt": "Responda somente com o número: 9 vezes 6.",
+    "answer": "54",
+    "source": "constructed_checked_math_training"
+  }
+]
