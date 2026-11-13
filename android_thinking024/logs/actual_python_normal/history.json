@@ -1,0 +1,24 @@
+[
+  {
+    "role": "user",
+    "content": "Use Python para conferir quanto é 18 vezes 23 e diga o resultado."
+  },
+  {
+    "role": "assistant",
+    "content": "<tool_call>\n<function=run_python>\n<parameter=code>\n18 * 23\n<\/parameter>\n<\/function>\n<\/tool_call>"
+  },
+  {
+    "role": "tool",
+    "content": "{\"stdout\":\"\",\"runtime\":\"MicroPython1.26.1 actual C interpreter, Python subset\",\"ok\":true,\"tool\":\"run_python\"}"
+  },
+  {
+    "internal": true,
+    "role": "user",
+    "content": "Confira a observação real acima e conclua o pedido original. Cite somente URLs retornadas se fez uma busca. Se faltarem dados, diga isso ou faça uma nova consulta específica. Não repita uma chamada já bem-sucedida."
+  },
+  {
+    "internal": true,
+    "role": "user",
+    "content": "Essa chamada já foi executada com sucesso; o resultado real está acima. Conclua a resposta sem repetir a ferramenta."
+  }
+]

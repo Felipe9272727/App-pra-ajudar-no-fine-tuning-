@@ -1,0 +1,18 @@
+[
+  {
+    "name": "rust_arm",
+    "path": "android_thinking024/artifacts/rust_arm.zlib.bin",
+    "raw_bytes": 4879920,
+    "raw_sha256": "df1de5e8bdbd0da4e47e7d5b885ac6a18d5950e4d1a91a0e8931b030c301cf95",
+    "compressed_sha256": "7e17cd74a62e58aeea2926546fa6c8c7333cb29a3c63f8781acfad48a3de4ce9",
+    "compressed_bytes": 1751424
+  },
+  {
+    "name": "rust_host",
+    "path": "android_thinking024/artifacts/rust_host.zlib.bin",
+    "raw_bytes": 5142216,
+    "raw_sha256": "190354d7b70be4ea885a1a9294f914e80dd3b3619abf38ad17ac749fe889f29b",
+    "compressed_sha256": "b81a018ab34a5411db2f2292b95ae997aabaedf0c784204822df747a6c791340",
+    "compressed_bytes": 1780489
+  }
+]

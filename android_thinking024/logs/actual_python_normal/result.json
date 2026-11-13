@@ -1,0 +1,33 @@
+{
+  "raw_text": "O resultado é 414.<|im_end|>\n",
+  "forced_reasoning_close": false,
+  "prefill_seconds": 206.56564728799998,
+  "actual_tool_calls": 1,
+  "no_reference_answer_in_input": true,
+  "forced_control_tokens": 0,
+  "thinking": false,
+  "first_token_seconds": 77.098545674,
+  "wall_seconds_descriptive_only": 218.249567939,
+  "prompt_tokens": 637,
+  "finish_reason": "stop",
+  "decode_seconds": 9.739727082999998,
+  "scope": "Linux host Rust model + identical Java agent + actual C Python subset; not Android phone execution",
+  "tokens": 72,
+  "generated_ids": [
+    46,
+    25356,
+    3825,
+    220,
+    19,
+    16,
+    19,
+    13,
+    248046,
+    198
+  ],
+  "reasoning_complete": true,
+  "text": "O resultado é 414.<|im_end|>",
+  "reasoning_tokens": 0,
+  "reused_prompt_tokens": 0,
+  "response_tokens": 10
+}
