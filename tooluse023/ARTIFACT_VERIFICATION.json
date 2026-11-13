@@ -1,0 +1,12 @@
+{
+  "commit": "f930b51c1ca89bb8a69c8913f3fe3f1ad73123d6",
+  "files_verified": 141,
+  "bad": [],
+  "missing": [],
+  "root_tree": "6edaab8e51958be0ba3f1d0b8fbd30d7bac01941",
+  "all_local_published_blobs_match": true,
+  "checks": "Git blob identities compared against local exact file bytes; raw logs/binaries preserved",
+  "scope": "all published tooluse023 files, before this manifest",
+  "unpublished_transient": "publish_files.json only",
+  "no_active_model_worker": true
+}
