@@ -9,7 +9,7 @@ def main():
  for s in sources:
   if s.name=='mphalport.c':continue
   obj=OUT/(s.stem+'.o')
-  if '--link-only' not in sys.argv:subprocess.run([*cc,'-c',str(s),'-o',str(obj)],check=True,env=env)
+  if '--link-only' not in sys.argv and ('--runner-only' not in sys.argv or s.name=='runner.c'):subprocess.run([*cc,'-c',str(s),'-o',str(obj)],check=True,env=env)
   assert obj.exists();objects.append(str(obj))
  lib=OUT/'libliquid_python.so';subprocess.run([*cc,'-shared',*objects,str(sdk/'28/libc.so'),str(sdk/'28/libm.so'),str(sdk/'28/libdl.so'),'-Wl,-z,max-page-size=16384','-Wl,--no-undefined','-o',str(lib)],check=True,env=env)
  report={'status':'ARM64_interpreter_compiled','bytes':lib.stat().st_size,'sha256':hashlib.sha256(lib.read_bytes()).hexdigest(),'Android_API':28,'MICROPYTHON':'1.26.1','heap_bytes':16*1024*1024,'max_VM_hooks':2000000,'wall_seconds_VM':2,'phone_execution_verified':False,'filesystem_network_process_bindings':False}

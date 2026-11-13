@@ -30,3 +30,13 @@ verification. Official Android resource/JavaDEX/JNI/ELF/signature/zipalign and
 exact model pack checks are required. No physical phone execution is claimed.
 Keep oldAPK bytes in their verified recoverable archive and specialist021APK
 untouched. Source hashes/checkpoints/reports are preserved on their branches.
+
+## Interpreter compatibility repair, no weight changes
+Initial sum-squares20run emitted valid Python with an f-string. The minimal
+MicroPython configuration had f-strings disabled and returned SyntaxError;
+the model repeated its valid code. Preserve initial outputs/scores unchanged.
+Enable MICROPY_PY_FSTRINGS, rebuild host/ARM and verify the exact earlier
+program executes (runtime regression, no new model generation). Keep old
+interpreter binary/hash. Then run NEW smoke requests: sum-squares1..21
+(expected3311 only in judge) and Python math.sqrt web documentation. Same
+model/controller/budgets; interpreter revision report separate from initial.

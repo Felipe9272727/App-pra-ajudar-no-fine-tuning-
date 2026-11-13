@@ -1,0 +1,11 @@
+{
+  "raw_bytes": 2474112,
+  "raw_sha256": "f4799e029a0ac2e31e006759724fa89876440aacdd0dfb4e91ae91d8608d12a4",
+  "compressed_bytes": 792506,
+  "compressed_sha256": "6e089f018b625125991f06a4d4560795ea50abe07b52337283f8e4de03888e0e",
+  "MicroPython": "1.26.1",
+  "fstrings_enabled": true,
+  "binary_stdout_preserved": true,
+  "NUL_source_rejected": true,
+  "phone_execution_verified": false
+}

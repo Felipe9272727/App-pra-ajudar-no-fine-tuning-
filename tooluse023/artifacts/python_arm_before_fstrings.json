@@ -1,0 +1,9 @@
+{
+  "raw_bytes": 2486008,
+  "raw_sha256": "0f4a15f547f92e5ad6896516f8f7216f0c2dbf4075d473d410784cac2b1a63e8",
+  "compressed_bytes": 794476,
+  "compressed_sha256": "e71a38aaa78819329d7a5501a0aece999ea1bd62f798fc72ce394fba76a1ae15",
+  "fix": "preserve binary stdout, reject NUL inside source",
+  "MicroPython": "1.26.1",
+  "phone_execution_verified": false
+}

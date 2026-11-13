@@ -1,0 +1,15 @@
+{
+  "cases": [
+    {
+      "input_hex": "7072696e742822615c783030622229",
+      "exit": 0,
+      "stdout_hex": "6100620a"
+    },
+    {
+      "input_hex": "7072696e74283129007072696e74283229",
+      "exit": 3,
+      "stdout_hex": ""
+    }
+  ],
+  "fresh_VM_after_failures": "FRESH_VM_AFTER_EACH_FAILURE_PASSED"
+}

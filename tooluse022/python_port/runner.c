@@ -66,7 +66,7 @@ const char *liquid_python_run(const char *code) {
     int jump=setjmp(escape);
     if(jump) {
         const char *error=jump==1?"ResourceLimit: time or instruction budget":jump==2?"ResourceLimit: stdout budget":"RuntimeError: math helper initialization";
-        snprintf(output,sizeof(output),"%s",error);return output;
+        snprintf(output,sizeof(output),"%s",error);used=strlen(output);return output;
     }
     int stack_top;mp_embed_init(heap,sizeof(heap),&stack_top);mp_stack_set_limit(128*1024);
     math_helpers();used=0;output[0]=0;
@@ -77,13 +77,21 @@ int liquid_python_ok(void) {return success;}
 #include <jni.h>
 JNIEXPORT jbyteArray JNICALL Java_dev_liquidsense_chat_PythonService_nativeRun(JNIEnv *env,jclass cls,jbyteArray input) {
     (void)cls;jsize n=(*env)->GetArrayLength(env,input);if(n>6000)return NULL;
-    char source[6001];(*env)->GetByteArrayRegion(env,input,0,n,(jbyte*)source);source[n]=0;
-    const char *out=liquid_python_run(source);size_t len=strlen(out);jbyteArray result=(*env)->NewByteArray(env,len+1);
+    char source[6001];(*env)->GetByteArrayRegion(env,input,0,n,(jbyte*)source);if(memchr(source,0,n)!=NULL)return NULL;source[n]=0;
+    const char *out=liquid_python_run(source);size_t len=used;jbyteArray result=(*env)->NewByteArray(env,len+1);
     jbyte ok=liquid_python_ok()?1:0;(*env)->SetByteArrayRegion(env,result,0,1,&ok);(*env)->SetByteArrayRegion(env,result,1,len,(const jbyte*)out);return result;
 }
 #else
-int main(void) {
-    char source[6002];size_t n=fread(source,1,6001,stdin);if(n>6000)return 3;source[n]=0;
-    const char *out=liquid_python_run(source);fputs(out,stdout);return liquid_python_ok()?0:1;
+int main(int argc,char **argv) {
+    if(argc==2 && strcmp(argv[1],"--repeat-probe")==0) {
+        const char *tests[]={"while True: pass","print(6)","print(1/0)","print(6)","a='x'*100000000","print(6)","print('x'*7000)","print(6)","def f(): return f()\nf()","print(6)"};
+        for(int i=0;i<10;i++) {
+            const char *out=liquid_python_run(tests[i]);
+            if(liquid_python_ok()!=(i%2) || (i%2 && strcmp(out,"6\n")!=0))return 4;
+        }
+        puts("FRESH_VM_AFTER_EACH_FAILURE_PASSED");return 0;
+    }
+    char source[6002];size_t n=fread(source,1,6001,stdin);if(n>6000||memchr(source,0,n)!=NULL)return 3;source[n]=0;
+    const char *out=liquid_python_run(source);fwrite(out,1,used,stdout);return liquid_python_ok()?0:1;
 }
 #endif
