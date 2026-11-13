@@ -1,0 +1,3088 @@
+[
+  {
+    "id": "clip_0",
+    "family": "clip",
+    "variant": 0,
+    "split": "train",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Clip each integer to the inclusive interval [-K, K]. Return only the function, no imports or explanation.",
+    "solution": "def solve(xs):\n    return [max(-2, min(2, x)) for x in xs]\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2
+          ]
+        ],
+        "expected": [
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            -2
+          ]
+        ],
+        "expected": [
+          -2
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "expected": [
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            -2,
+            0,
+            3,
+            -3
+          ]
+        ],
+        "expected": [
+          2,
+          -2,
+          0,
+          2,
+          -2
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "expected": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ]
+      },
+      {
+        "args": [
+          [
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "expected": [
+          -2,
+          -2,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            -1,
+            -2,
+            -3,
+            -4,
+            -5
+          ]
+        ],
+        "expected": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0,
+          -1,
+          -2,
+          -2,
+          -2,
+          -2
+        ]
+      },
+      {
+        "args": [
+          [
+            14,
+            -6,
+            -3,
+            -9,
+            0,
+            -4,
+            11,
+            6,
+            14,
+            4,
+            -11,
+            -9,
+            10,
+            -12
+          ]
+        ],
+        "expected": [
+          2,
+          -2,
+          -2,
+          -2,
+          0,
+          -2,
+          2,
+          2,
+          2,
+          2,
+          -2,
+          -2,
+          2,
+          -2
+        ]
+      },
+      {
+        "args": [
+          [
+            1
+          ]
+        ],
+        "expected": [
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            -6,
+            -10,
+            13,
+            -5,
+            -3,
+            -11,
+            7,
+            5,
+            -6,
+            3,
+            -8,
+            -12,
+            6,
+            -8,
+            9
+          ]
+        ],
+        "expected": [
+          -2,
+          -2,
+          2,
+          -2,
+          -2,
+          -2,
+          2,
+          2,
+          -2,
+          2,
+          -2,
+          -2,
+          2,
+          -2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            -13,
+            1
+          ]
+        ],
+        "expected": [
+          -2,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            13,
+            -4,
+            -12,
+            12,
+            -11,
+            -3,
+            -1,
+            14,
+            6,
+            -7,
+            -6,
+            -5,
+            13,
+            10,
+            1,
+            0,
+            8,
+            14,
+            0,
+            7
+          ]
+        ],
+        "expected": [
+          2,
+          -2,
+          -2,
+          2,
+          -2,
+          -2,
+          -1,
+          2,
+          2,
+          -2,
+          -2,
+          -2,
+          2,
+          2,
+          1,
+          0,
+          2,
+          2,
+          0,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            9,
+            8,
+            8,
+            -8
+          ]
+        ],
+        "expected": [
+          2,
+          2,
+          2,
+          -2
+        ]
+      },
+      {
+        "args": [
+          [
+            -9,
+            -1,
+            -3,
+            -9,
+            1
+          ]
+        ],
+        "expected": [
+          -2,
+          -1,
+          -2,
+          -2,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            11,
+            13,
+            11,
+            -8,
+            8,
+            -1,
+            7,
+            -5,
+            12,
+            -13,
+            -10,
+            5,
+            -6,
+            0,
+            -2
+          ]
+        ],
+        "expected": [
+          2,
+          2,
+          2,
+          -2,
+          2,
+          -1,
+          2,
+          -2,
+          2,
+          -2,
+          -2,
+          2,
+          -2,
+          0,
+          -2
+        ]
+      },
+      {
+        "args": [
+          [
+            -11,
+            -6,
+            -14,
+            -2
+          ]
+        ],
+        "expected": [
+          -2,
+          -2,
+          -2,
+          -2
+        ]
+      }
+    ],
+    "provenance": "researcher-authored reference; independent expression oracle; not sampled from Qwen or external API",
+    "solution_ast_sha256": "47ad34b29ac19cec6f6c57256f1668c505f3e9fa4cde611e9516f7c5c4cf249b",
+    "role": "observed_code_training"
+  },
+  {
+    "id": "prefix_offset_0",
+    "family": "prefix_offset",
+    "variant": 0,
+    "split": "train",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Return cumulative sums, with initial running total K. Return only the function, no imports or explanation.",
+    "solution": "def solve(xs):\n    out = []\n    total = 2\n    for x in xs:\n        total += x\n        out.append(total)\n    return out\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": [
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            2
+          ]
+        ],
+        "expected": [
+          4
+        ]
+      },
+      {
+        "args": [
+          [
+            -2
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "expected": [
+          4,
+          6,
+          8
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          5,
+          8,
+          11,
+          14
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            -2,
+            0,
+            3,
+            -3
+          ]
+        ],
+        "expected": [
+          4,
+          2,
+          2,
+          5,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "expected": [
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "expected": [
+          -2,
+          -5,
+          -7,
+          -8,
+          -8,
+          -7,
+          -5,
+          -2,
+          2,
+          7,
+          13,
+          20
+        ]
+      },
+      {
+        "args": [
+          [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            -1,
+            -2,
+            -3,
+            -4,
+            -5
+          ]
+        ],
+        "expected": [
+          11,
+          19,
+          26,
+          32,
+          37,
+          41,
+          44,
+          46,
+          47,
+          47,
+          46,
+          44,
+          41,
+          37,
+          32
+        ]
+      },
+      {
+        "args": [
+          [
+            8,
+            -8,
+            -14,
+            3,
+            9,
+            -2,
+            0,
+            -7,
+            -6,
+            10,
+            7,
+            1,
+            -4,
+            -12,
+            13
+          ]
+        ],
+        "expected": [
+          10,
+          2,
+          -12,
+          -9,
+          0,
+          -2,
+          -2,
+          -9,
+          -15,
+          -5,
+          2,
+          3,
+          -1,
+          -13,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            -8,
+            5,
+            10,
+            -2,
+            0,
+            7,
+            -1,
+            -4,
+            -7,
+            6,
+            14,
+            -4,
+            -13,
+            -2,
+            7,
+            2,
+            -2,
+            13
+          ]
+        ],
+        "expected": [
+          -6,
+          -1,
+          9,
+          7,
+          7,
+          14,
+          13,
+          9,
+          2,
+          8,
+          22,
+          18,
+          5,
+          3,
+          10,
+          12,
+          10,
+          23
+        ]
+      },
+      {
+        "args": [
+          [
+            -14,
+            10,
+            11,
+            8,
+            -10,
+            0,
+            2,
+            -14,
+            -9,
+            11,
+            14,
+            12,
+            -14,
+            6,
+            -14,
+            -2,
+            5,
+            -3,
+            -8,
+            2
+          ]
+        ],
+        "expected": [
+          -12,
+          -2,
+          9,
+          17,
+          7,
+          7,
+          9,
+          -5,
+          -14,
+          -3,
+          11,
+          23,
+          9,
+          15,
+          1,
+          -1,
+          4,
+          1,
+          -7,
+          -5
+        ]
+      },
+      {
+        "args": [
+          [
+            -12,
+            10,
+            4
+          ]
+        ],
+        "expected": [
+          -10,
+          0,
+          4
+        ]
+      },
+      {
+        "args": [
+          [
+            -1,
+            1,
+            -2,
+            -1,
+            4,
+            -13,
+            -5,
+            -12,
+            -11,
+            -9,
+            -1,
+            11,
+            -13
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          0,
+          -1,
+          3,
+          -10,
+          -15,
+          -27,
+          -38,
+          -47,
+          -48,
+          -37,
+          -50
+        ]
+      },
+      {
+        "args": [
+          [
+            -6,
+            9,
+            5,
+            8,
+            2,
+            -12,
+            13,
+            -4,
+            5,
+            9,
+            -2,
+            -9,
+            12,
+            1
+          ]
+        ],
+        "expected": [
+          -4,
+          5,
+          10,
+          18,
+          20,
+          8,
+          21,
+          17,
+          22,
+          31,
+          29,
+          20,
+          32,
+          33
+        ]
+      },
+      {
+        "args": [
+          [
+            7,
+            3,
+            9,
+            -10
+          ]
+        ],
+        "expected": [
+          9,
+          12,
+          21,
+          11
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            6,
+            -14,
+            -13,
+            -9,
+            -14
+          ]
+        ],
+        "expected": [
+          4,
+          10,
+          -4,
+          -17,
+          -26,
+          -40
+        ]
+      },
+      {
+        "args": [
+          [
+            8,
+            -8,
+            1,
+            -12,
+            0,
+            -8,
+            -4,
+            13,
+            13,
+            9,
+            11
+          ]
+        ],
+        "expected": [
+          10,
+          2,
+          3,
+          -9,
+          -9,
+          -17,
+          -21,
+          -8,
+          5,
+          14,
+          25
+        ]
+      }
+    ],
+    "provenance": "researcher-authored reference; independent expression oracle; not sampled from Qwen or external API",
+    "solution_ast_sha256": "182ab5fa6049a2538ddf0f187db4c9b383bdb492334ef6174d28f1f9703632f3",
+    "role": "observed_code_training"
+  },
+  {
+    "id": "above_0",
+    "family": "above",
+    "variant": 0,
+    "split": "train",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Count elements strictly greater than K. Return only the function, no imports or explanation.",
+    "solution": "def solve(xs):\n    return sum(1 for x in xs if x > 2)\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            2
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            -2
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            3,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": 4
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            2,
+            -2,
+            0,
+            3,
+            -3
+          ]
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "expected": 5
+      },
+      {
+        "args": [
+          [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            -1,
+            -2,
+            -3,
+            -4,
+            -5
+          ]
+        ],
+        "expected": 7
+      },
+      {
+        "args": [
+          [
+            1,
+            14,
+            -3,
+            -5,
+            -14,
+            7,
+            -8,
+            4,
+            3,
+            -7,
+            -5,
+            -7,
+            3,
+            -12,
+            12,
+            8,
+            1
+          ]
+        ],
+        "expected": 7
+      },
+      {
+        "args": [
+          [
+            -2,
+            2,
+            9,
+            0,
+            0,
+            1,
+            -1,
+            5,
+            -12
+          ]
+        ],
+        "expected": 2
+      },
+      {
+        "args": [
+          [
+            -7,
+            -9,
+            11,
+            -8,
+            13,
+            7,
+            11,
+            -10,
+            8,
+            3,
+            -8,
+            11,
+            6,
+            13,
+            -9,
+            -12,
+            9,
+            -11,
+            -1,
+            -1
+          ]
+        ],
+        "expected": 10
+      },
+      {
+        "args": [
+          [
+            -10,
+            6,
+            -14,
+            -14,
+            -7,
+            -9,
+            2,
+            12,
+            -3,
+            14,
+            -13,
+            10,
+            -12
+          ]
+        ],
+        "expected": 4
+      },
+      {
+        "args": [
+          [
+            -1,
+            11,
+            -13,
+            -13,
+            3,
+            9,
+            -5,
+            -9,
+            13,
+            -14,
+            -2,
+            -14,
+            -14,
+            12,
+            5,
+            13,
+            5,
+            -12
+          ]
+        ],
+        "expected": 8
+      },
+      {
+        "args": [
+          [
+            8,
+            -6
+          ]
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          [
+            -3,
+            -1,
+            -4,
+            -4,
+            -1,
+            -5,
+            7,
+            -3,
+            9,
+            4
+          ]
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          [
+            -1,
+            -4,
+            12,
+            7,
+            -9,
+            -3,
+            -9,
+            1,
+            5,
+            4,
+            1,
+            -2,
+            13,
+            -10,
+            -13,
+            7,
+            -14
+          ]
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          [
+            -3
+          ]
+        ],
+        "expected": 0
+      }
+    ],
+    "provenance": "researcher-authored reference; independent expression oracle; not sampled from Qwen or external API",
+    "solution_ast_sha256": "d6408aee44a1a00c00a783401c8eb15e4de099b27cff53af5ad7211cc5f8d45b",
+    "role": "observed_code_training"
+  },
+  {
+    "id": "residues_0",
+    "family": "residues",
+    "variant": 0,
+    "split": "train",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Return a length-K list of counts of residues 0 through K-1 modulo K. Return only the function, no imports or explanation.",
+    "solution": "def solve(xs):\n    out = [0] * 2\n    for x in xs:\n        out[x % 2] += 1\n    return out\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": [
+          0,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": [
+          1,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2
+          ]
+        ],
+        "expected": [
+          1,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            -2
+          ]
+        ],
+        "expected": [
+          1,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "expected": [
+          3,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          0,
+          4
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          4,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            -2,
+            0,
+            3,
+            -3
+          ]
+        ],
+        "expected": [
+          3,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "expected": [
+          0,
+          16
+        ]
+      },
+      {
+        "args": [
+          [
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "expected": [
+          6,
+          6
+        ]
+      },
+      {
+        "args": [
+          [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            -1,
+            -2,
+            -3,
+            -4,
+            -5
+          ]
+        ],
+        "expected": [
+          7,
+          8
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            6,
+            -9,
+            0,
+            -2,
+            11,
+            -10,
+            7,
+            -10,
+            2,
+            -9,
+            -10,
+            -4,
+            7
+          ]
+        ],
+        "expected": [
+          8,
+          6
+        ]
+      },
+      {
+        "args": [
+          []
+        ],
+        "expected": [
+          0,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            -11
+          ]
+        ],
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            9,
+            -10
+          ]
+        ],
+        "expected": [
+          1,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            11,
+            -5,
+            3,
+            2,
+            -5,
+            -10,
+            14,
+            9,
+            6,
+            13,
+            4,
+            5
+          ]
+        ],
+        "expected": [
+          5,
+          7
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            12,
+            -11,
+            -4,
+            13,
+            -3,
+            1,
+            -14,
+            -8,
+            3,
+            -6,
+            14
+          ]
+        ],
+        "expected": [
+          6,
+          6
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            4,
+            -13,
+            13,
+            10,
+            11
+          ]
+        ],
+        "expected": [
+          3,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            8,
+            -5,
+            -4,
+            1,
+            4,
+            11,
+            2,
+            -4,
+            -9
+          ]
+        ],
+        "expected": [
+          5,
+          4
+        ]
+      },
+      {
+        "args": [
+          [
+            13,
+            -11,
+            -1,
+            3,
+            -4,
+            -7,
+            -6
+          ]
+        ],
+        "expected": [
+          2,
+          5
+        ]
+      }
+    ],
+    "provenance": "researcher-authored reference; independent expression oracle; not sampled from Qwen or external API",
+    "solution_ast_sha256": "2dd3ed98e7d41ea67efc7413046b6f7bc427f13be765e45cd5f240fa41cf2d0a",
+    "role": "observed_code_training"
+  },
+  {
+    "id": "weighted_alternate_0",
+    "family": "weighted_alternate",
+    "variant": 0,
+    "split": "train",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Return K times the alternating sum xs[0]-xs[1]+xs[2]-xs[3] and so on. Return only the function, no imports or explanation.",
+    "solution": "def solve(xs):\n    return 2 * sum(x if i % 2 == 0 else -x for i, x in enumerate(xs))\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            2
+          ]
+        ],
+        "expected": 4
+      },
+      {
+        "args": [
+          [
+            -2
+          ]
+        ],
+        "expected": -4
+      },
+      {
+        "args": [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "expected": 4
+      },
+      {
+        "args": [
+          [
+            3,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            2,
+            -2,
+            0,
+            3,
+            -3
+          ]
+        ],
+        "expected": -4
+      },
+      {
+        "args": [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "expected": 32
+      },
+      {
+        "args": [
+          [
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "expected": -12
+      },
+      {
+        "args": [
+          [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            -1,
+            -2,
+            -3,
+            -4,
+            -5
+          ]
+        ],
+        "expected": 4
+      },
+      {
+        "args": [
+          [
+            4,
+            -10,
+            12
+          ]
+        ],
+        "expected": 52
+      },
+      {
+        "args": [
+          [
+            5,
+            -4,
+            2,
+            13,
+            13
+          ]
+        ],
+        "expected": 22
+      },
+      {
+        "args": [
+          [
+            12,
+            -5,
+            -10,
+            -2,
+            -1,
+            3
+          ]
+        ],
+        "expected": 10
+      },
+      {
+        "args": [
+          [
+            -11,
+            4,
+            4,
+            10,
+            10,
+            -3,
+            2,
+            3,
+            -12,
+            7,
+            12,
+            6
+          ]
+        ],
+        "expected": -44
+      },
+      {
+        "args": [
+          [
+            13,
+            2,
+            6,
+            5
+          ]
+        ],
+        "expected": 24
+      },
+      {
+        "args": [
+          [
+            -9,
+            13,
+            -13,
+            3,
+            -5,
+            -3,
+            9,
+            -7,
+            -12,
+            1,
+            -13,
+            1
+          ]
+        ],
+        "expected": -102
+      },
+      {
+        "args": [
+          [
+            8,
+            -11,
+            14
+          ]
+        ],
+        "expected": 66
+      },
+      {
+        "args": [
+          [
+            3,
+            -6,
+            -12,
+            14,
+            -2,
+            -2,
+            -13,
+            -11,
+            -2,
+            9,
+            14,
+            8,
+            -6,
+            1,
+            11,
+            -14
+          ]
+        ],
+        "expected": -12
+      },
+      {
+        "args": [
+          [
+            1,
+            10,
+            -2,
+            8,
+            3,
+            11,
+            7,
+            -2,
+            -5,
+            12,
+            3,
+            -14,
+            13,
+            10,
+            0,
+            6
+          ]
+        ],
+        "expected": -42
+      }
+    ],
+    "provenance": "researcher-authored reference; independent expression oracle; not sampled from Qwen or external API",
+    "solution_ast_sha256": "179a72dc50235794072d0a2e1bc86015e8bd0b7917be790f59c05f401fb65366",
+    "role": "observed_code_training"
+  },
+  {
+    "id": "suffix_offset_0",
+    "family": "suffix_offset",
+    "variant": 0,
+    "split": "train",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. At each index return K plus the sum from that index through the end. Return only the function, no imports or explanation.",
+    "solution": "def solve(xs):\n    out = [0] * len(xs)\n    total = 2\n    for i in range(len(xs) - 1, -1, -1):\n        total += xs[i]\n        out[i] = total\n    return out\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": [
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            2
+          ]
+        ],
+        "expected": [
+          4
+        ]
+      },
+      {
+        "args": [
+          [
+            -2
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "expected": [
+          8,
+          6,
+          4
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          14,
+          11,
+          8,
+          5
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            -2,
+            0,
+            3,
+            -3
+          ]
+        ],
+        "expected": [
+          2,
+          0,
+          2,
+          2,
+          -1
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "expected": [
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "expected": [
+          20,
+          24,
+          27,
+          29,
+          30,
+          30,
+          29,
+          27,
+          24,
+          20,
+          15,
+          9
+        ]
+      },
+      {
+        "args": [
+          [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            -1,
+            -2,
+            -3,
+            -4,
+            -5
+          ]
+        ],
+        "expected": [
+          32,
+          23,
+          15,
+          8,
+          2,
+          -3,
+          -7,
+          -10,
+          -12,
+          -13,
+          -13,
+          -12,
+          -10,
+          -7,
+          -3
+        ]
+      },
+      {
+        "args": [
+          [
+            -11,
+            4,
+            2,
+            3,
+            -10,
+            11,
+            7,
+            1,
+            9,
+            8,
+            -9,
+            3,
+            0,
+            8,
+            4,
+            14,
+            -8,
+            8,
+            9
+          ]
+        ],
+        "expected": [
+          55,
+          66,
+          62,
+          60,
+          57,
+          67,
+          56,
+          49,
+          48,
+          39,
+          31,
+          40,
+          37,
+          37,
+          29,
+          25,
+          11,
+          19,
+          11
+        ]
+      },
+      {
+        "args": [
+          [
+            -13,
+            -7,
+            6,
+            -6,
+            -11,
+            -13,
+            0,
+            -13,
+            -14,
+            1,
+            -1,
+            -5,
+            -11,
+            13
+          ]
+        ],
+        "expected": [
+          -72,
+          -59,
+          -52,
+          -58,
+          -52,
+          -41,
+          -28,
+          -28,
+          -15,
+          -1,
+          -2,
+          -1,
+          4,
+          15
+        ]
+      },
+      {
+        "args": [
+          [
+            -4
+          ]
+        ],
+        "expected": [
+          -2
+        ]
+      },
+      {
+        "args": [
+          [
+            7,
+            -7,
+            13,
+            14
+          ]
+        ],
+        "expected": [
+          29,
+          22,
+          29,
+          16
+        ]
+      },
+      {
+        "args": [
+          [
+            4,
+            3,
+            4,
+            -8,
+            -8,
+            -3,
+            -13
+          ]
+        ],
+        "expected": [
+          -19,
+          -23,
+          -26,
+          -30,
+          -22,
+          -14,
+          -11
+        ]
+      },
+      {
+        "args": [
+          [
+            -4,
+            -4,
+            8,
+            0,
+            14,
+            -11,
+            -4,
+            9,
+            -8,
+            -12,
+            7
+          ]
+        ],
+        "expected": [
+          -3,
+          1,
+          5,
+          -3,
+          -3,
+          -17,
+          -6,
+          -2,
+          -11,
+          -3,
+          9
+        ]
+      },
+      {
+        "args": [
+          [
+            -7,
+            -10,
+            10,
+            -4,
+            -12,
+            -8,
+            -8,
+            3
+          ]
+        ],
+        "expected": [
+          -34,
+          -27,
+          -17,
+          -27,
+          -23,
+          -11,
+          -3,
+          5
+        ]
+      },
+      {
+        "args": [
+          [
+            -9,
+            12
+          ]
+        ],
+        "expected": [
+          5,
+          14
+        ]
+      },
+      {
+        "args": [
+          [
+            -12,
+            -1,
+            -3,
+            -2,
+            -10,
+            7,
+            -9,
+            0
+          ]
+        ],
+        "expected": [
+          -28,
+          -16,
+          -15,
+          -12,
+          -10,
+          0,
+          -7,
+          2
+        ]
+      }
+    ],
+    "provenance": "researcher-authored reference; independent expression oracle; not sampled from Qwen or external API",
+    "solution_ast_sha256": "a063fda1cdc4694f66851485ffbb30494f1a69baf89322ed57d6408a8f2e60a9",
+    "role": "observed_code_training"
+  },
+  {
+    "id": "large_jumps_0",
+    "family": "large_jumps",
+    "variant": 0,
+    "split": "train",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Count adjacent pairs whose absolute difference is strictly greater than K. Return only the function, no imports or explanation.",
+    "solution": "def solve(xs):\n    return sum(1 for i in range(1, len(xs)) if abs(xs[i] - xs[i-1]) > 2)\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            2
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            -2
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            3,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            2,
+            -2,
+            0,
+            3,
+            -3
+          ]
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            -1,
+            -2,
+            -3,
+            -4,
+            -5
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            6,
+            4
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            -6,
+            -4,
+            -3
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            -8,
+            -10,
+            1,
+            -3,
+            -10,
+            13,
+            7,
+            -14,
+            -2,
+            -2,
+            -3,
+            10,
+            -1,
+            -3,
+            7,
+            -3,
+            -12
+          ]
+        ],
+        "expected": 12
+      },
+      {
+        "args": [
+          [
+            14,
+            9,
+            0,
+            -3,
+            13,
+            3,
+            6,
+            0,
+            8,
+            -12,
+            -12,
+            0,
+            -5
+          ]
+        ],
+        "expected": 11
+      },
+      {
+        "args": [
+          [
+            -3,
+            8,
+            -8,
+            2,
+            5,
+            2,
+            -9,
+            9,
+            12,
+            -13,
+            13,
+            10,
+            9,
+            12,
+            -11
+          ]
+        ],
+        "expected": 13
+      },
+      {
+        "args": [
+          [
+            3,
+            6,
+            -3,
+            9,
+            8,
+            12,
+            14,
+            -14,
+            14
+          ]
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          [
+            3,
+            5,
+            -13,
+            7,
+            6,
+            9,
+            10,
+            -5,
+            7,
+            -12,
+            -10,
+            -12,
+            -10,
+            0
+          ]
+        ],
+        "expected": 7
+      },
+      {
+        "args": [
+          [
+            10,
+            -3,
+            -4,
+            14,
+            -9,
+            -8,
+            -9,
+            -1,
+            10,
+            -14,
+            -3,
+            -4,
+            -10,
+            11,
+            -12,
+            -7,
+            -8,
+            -11,
+            -6,
+            -3
+          ]
+        ],
+        "expected": 14
+      },
+      {
+        "args": [
+          [
+            -3,
+            12,
+            14,
+            -12,
+            0,
+            -9,
+            8,
+            -5,
+            14,
+            5,
+            14,
+            -7,
+            -8
+          ]
+        ],
+        "expected": 10
+      }
+    ],
+    "provenance": "researcher-authored reference; independent expression oracle; not sampled from Qwen or external API",
+    "solution_ast_sha256": "24ca3f43cfb07c7d094205191ddf83e35c41a67fe2d48ca10244e8219c52202a",
+    "role": "observed_code_training"
+  },
+  {
+    "id": "drop_periodic_0",
+    "family": "drop_periodic",
+    "variant": 0,
+    "split": "train",
+    "prompt": "Write Python function solve(xs). xs is a list of integers. K = 2. Remove every K-th element using one-based positions, preserving order. Return only the function, no imports or explanation.",
+    "solution": "def solve(xs):\n    return [x for i, x in enumerate(xs) if (i + 1) % 2 != 0]\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2
+          ]
+        ],
+        "expected": [
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            -2
+          ]
+        ],
+        "expected": [
+          -2
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "expected": [
+          2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            3,
+            3,
+            3
+          ]
+        ],
+        "expected": [
+          3,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          0,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            -2,
+            0,
+            3,
+            -3
+          ]
+        ],
+        "expected": [
+          2,
+          0,
+          -3
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "expected": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "expected": [
+          -4,
+          -2,
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      {
+        "args": [
+          [
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            -1,
+            -2,
+            -3,
+            -4,
+            -5
+          ]
+        ],
+        "expected": [
+          9,
+          7,
+          5,
+          3,
+          1,
+          -1,
+          -3,
+          -5
+        ]
+      },
+      {
+        "args": [
+          [
+            8,
+            -12,
+            -1,
+            -11,
+            -9,
+            13,
+            -4,
+            6,
+            2,
+            -7,
+            9,
+            -9,
+            0,
+            -9,
+            14,
+            -4,
+            -5
+          ]
+        ],
+        "expected": [
+          8,
+          -1,
+          -9,
+          -4,
+          2,
+          9,
+          0,
+          14,
+          -5
+        ]
+      },
+      {
+        "args": [
+          [
+            11,
+            -6,
+            9,
+            10,
+            0,
+            -8,
+            -12,
+            -3,
+            -6,
+            11,
+            14,
+            2
+          ]
+        ],
+        "expected": [
+          11,
+          9,
+          0,
+          -12,
+          -6,
+          14
+        ]
+      },
+      {
+        "args": [
+          [
+            8,
+            -14,
+            12,
+            3,
+            3,
+            5,
+            -13,
+            0,
+            3,
+            2,
+            -11,
+            -11,
+            2,
+            -8
+          ]
+        ],
+        "expected": [
+          8,
+          12,
+          3,
+          -13,
+          3,
+          -11,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            6,
+            -6,
+            4,
+            -12,
+            13,
+            -9,
+            13,
+            10,
+            -12,
+            6,
+            -13,
+            -11,
+            1,
+            6,
+            14,
+            -4,
+            5,
+            -3,
+            -12
+          ]
+        ],
+        "expected": [
+          6,
+          4,
+          13,
+          13,
+          -12,
+          -13,
+          1,
+          14,
+          5,
+          -12
+        ]
+      },
+      {
+        "args": [
+          [
+            -3,
+            -13
+          ]
+        ],
+        "expected": [
+          -3
+        ]
+      },
+      {
+        "args": [
+          [
+            5,
+            6,
+            2,
+            -9,
+            14,
+            -9,
+            -6,
+            11,
+            9,
+            -3,
+            4,
+            0,
+            5,
+            -11,
+            14,
+            1,
+            11
+          ]
+        ],
+        "expected": [
+          5,
+          2,
+          14,
+          -6,
+          9,
+          4,
+          5,
+          14,
+          11
+        ]
+      },
+      {
+        "args": [
+          [
+            9,
+            -7,
+            10,
+            12,
+            1,
+            3,
+            -12,
+            0,
+            5
+          ]
+        ],
+        "expected": [
+          9,
+          10,
+          1,
+          -12,
+          5
+        ]
+      },
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            12,
+            1,
+            -5,
+            -11,
+            0,
+            12,
+            2,
+            -1,
+            5,
+            0
+          ]
+        ],
+        "expected": [
+          12,
+          -5,
+          0,
+          2,
+          5
+        ]
+      }
+    ],
+    "provenance": "researcher-authored reference; independent expression oracle; not sampled from Qwen or external API",
+    "solution_ast_sha256": "d1bcddce7a8bd0ec570a4d9c31b389d3b45bc00cc64324671612665b10ddc223",
+    "role": "observed_code_training"
+  }
+]
