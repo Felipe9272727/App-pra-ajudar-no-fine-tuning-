@@ -1,0 +1,115 @@
+[
+  {
+    "call": {
+      "name": "run_python",
+      "arguments": {"code": "print(18 * 23)"}
+    },
+    "answer": {
+      "raw_text": "<tool_call>\n<function=run_python>\n<parameter=code>\nprint(18 * 23)\n<\/parameter>\n<\/function>\n<\/tool_call>",
+      "forced_reasoning_close": false,
+      "prefill_seconds": 69.126583847,
+      "forced_control_tokens": 0,
+      "thinking": false,
+      "first_token_seconds": 69.148806813,
+      "prompt_tokens": 480,
+      "finish_reason": "tool_call",
+      "decode_seconds": 4.735119447,
+      "tokens": 34,
+      "generated_ids": [
+        248058,
+        198,
+        27,
+        1628,
+        28,
+        5917,
+        53995,
+        29,
+        198,
+        27,
+        15704,
+        28,
+        1787,
+        29,
+        198,
+        1302,
+        7,
+        16,
+        23,
+        348,
+        220,
+        17,
+        18,
+        8,
+        198,
+        510,
+        15704,
+        29,
+        198,
+        510,
+        1628,
+        29,
+        198,
+        248059
+      ],
+      "reasoning_complete": true,
+      "text": "<tool_call>\n<function=run_python>\n<parameter=code>\nprint(18 * 23)\n<\/parameter>\n<\/function>\n<\/tool_call>",
+      "reasoning_tokens": 0,
+      "reused_prompt_tokens": 0,
+      "response_tokens": 34
+    },
+    "observation": {
+      "stdout": "414\n",
+      "runtime": "MicroPython1.26.1 actual C interpreter, Python subset",
+      "ok": true,
+      "tool": "run_python"
+    },
+    "options": {
+      "profile": "normal",
+      "context_tokens": 16384,
+      "reasoning_tokens": 0,
+      "thinking": false,
+      "response_tokens": 2048
+    },
+    "turn": 0
+  },
+  {
+    "answer": {
+      "raw_text": "A saída observada é: **414**",
+      "forced_reasoning_close": false,
+      "prefill_seconds": 75.952185632,
+      "forced_control_tokens": 0,
+      "thinking": false,
+      "first_token_seconds": 75.976697882,
+      "prompt_tokens": 617,
+      "finish_reason": "stop",
+      "decode_seconds": 1.658160388,
+      "tokens": 11,
+      "generated_ids": [
+        32,
+        193935,
+        9006,
+        2499,
+        3825,
+        25,
+        2972,
+        19,
+        16,
+        19,
+        332
+      ],
+      "reasoning_complete": true,
+      "text": "A saída observada é: **414**",
+      "reasoning_tokens": 0,
+      "reused_prompt_tokens": 0,
+      "response_tokens": 11
+    },
+    "options": {
+      "profile": "normal",
+      "context_tokens": 16384,
+      "reasoning_tokens": 0,
+      "thinking": false,
+      "response_tokens": 2048
+    },
+    "turn": 1
+  }
+]

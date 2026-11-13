@@ -1,0 +1,44 @@
+{
+  "status": "signed_tools_APK_built",
+  "path": "/dev/shm/liquid-android/thinking024-apk/LiquidSense-0.4.0-thinking-preview.apk",
+  "bytes": 1616520387,
+  "sha256": "6cb9927dca809c901947aed2c4ebd577d421de87e338f06c2714ea21a0f091db",
+  "package": "dev.liquidsense.chat.tools",
+  "separate_app_preserves_specialist_and_original": true,
+  "versionCode": 2,
+  "parent_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "config": {
+    "use_validated_dense": false,
+    "model_parent": "general_best",
+    "neural_loop_visits": 56,
+    "physical_layers": 32,
+    "tools_variant": "preserved_general_tools_runtime",
+    "experimental": true,
+    "general_quality_promotion": false,
+    "context_tokens": 16384,
+    "generation_presets": {
+      "normal": {
+        "thinking": false,
+        "reasoning_tokens": 0,
+        "response_tokens": 2048
+      },
+      "profundo": {
+        "thinking": true,
+        "reasoning_tokens": 1024,
+        "response_tokens": 2048
+      },
+      "extenso": {
+        "thinking": true,
+        "reasoning_tokens": 2048,
+        "response_tokens": 4096
+      }
+    },
+    "default_general_profile": "normal",
+    "agent_max_rounds": 6,
+    "agent_max_actual_tools": 4,
+    "task_output_limit": 16384
+  },
+  "phone_execution_verified": false,
+  "specialist_option": "uses optional installed dev.liquidsense.chat.fast public assets",
+  "base_general_fully_bundled": true
+}

@@ -41,6 +41,12 @@ def seal(existing_config=False):
   if z.read(old)!=native:
    z.filelist.remove(old);del z.NameToInfo[entry];z.writestr(aligned_info(z,entry,len(native),zipfile.ZIP_DEFLATED),native)
   assert hashlib.sha256(z.read(entry)).hexdigest()==hashlib.sha256(native).hexdigest()
+  for dex in Path('/dev/shm/liquid-android/thinking024/ui/dex').glob('*.dex'):
+   old=z.getinfo(dex.name);payload=dex.read_bytes()
+   if z.read(old)!=payload:
+    z.filelist.remove(old);del z.NameToInfo[dex.name];z.writestr(aligned_info(z,dex.name,len(payload),zipfile.ZIP_DEFLATED),payload)
+   assert z.read(dex.name)==payload
+  assert len(z.namelist())==len(set(z.namelist())), 'Never ship duplicate ZIP entry names'
   present='assets/build_config.json' in z.namelist();assert not present or existing_config,'Inspect partial sealing state'
   if use:
    chosen=json.loads((HERE/'candidate_artifact.json').read_text());m=json.loads((HERE/chosen['metadata']).read_text());p=HERE/chosen['weights'];assert sha(p)==m['sha256'];config['dense_sha256']=m['sha256'];z.writestr(aligned_info(z,'assets/down_proj.bf16.bin',p.stat().st_size,zipfile.ZIP_STORED),p.read_bytes())
@@ -54,6 +60,7 @@ def seal(existing_config=False):
   r=subprocess.run([str(a) for a in args],check=True,capture_output=True,text=True,env=ENV);(HERE/'reports'/name).write_text(r.stdout)
  run(BT/'zipalign','-c','-P','16','4',final);assert 'android.permission.INTERNET' in (HERE/'reports/permissions.txt').read_text();assert 'fcb504e5004b8e0be879b952d597248da3a731c481c1f24cd1ac01502df5ac5b' in (HERE/'reports/signature.txt').read_text()
  with zipfile.ZipFile(final) as z:
+  assert z.testzip() is None,'APK entry CRC failure'
   assert z.getinfo('assets/model.lsp').compress_type==zipfile.ZIP_STORED
   with z.open('assets/model.lsp') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==PACK_SHA
   assert json.loads(z.read('assets/build_config.json'))==config
