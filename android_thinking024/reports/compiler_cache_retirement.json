@@ -1,0 +1,10 @@
+{
+  "task_owned_compiler_cache_only": [
+    "/dev/shm/liquid-android/tools022/zig-linux-x86_64-0.13.0",
+    "/dev/shm/liquid-android/tools022/zig-cache",
+    "/dev/shm/liquid-android/tools022/zig-local",
+    "/dev/shm/liquid-android/tools022/zig.tar.xz"
+  ],
+  "models_checkpoints_reports_APKs_removed": false,
+  "compiler_sources_hashes_preserved": "tooluse022/reports/native_tool_sources.json"
+}
