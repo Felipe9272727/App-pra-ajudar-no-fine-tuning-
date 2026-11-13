@@ -1,0 +1,6 @@
+"""One credential-free offline worker at a time; accurate closed-phase metadata."""
+import json,os,subprocess,sys
+from pathlib import Path
+H=Path(__file__).resolve().parent;ROOT=H.parent;phase=sys.argv[1];assert phase in ['collect_teacher','train_draft','evaluate_models','benchmark','preflight_cache'];path=H/'status.json';s=json.loads(path.read_text()) if path.exists() else {};s.update(status='running_'+phase,phase=phase,model_process_active=True,target_weights_changed=False);path.write_text(json.dumps(s,indent=2)+'\n')
+env={'PATH':'/usr/bin:/bin','LANG':'C.UTF-8','OMP_NUM_THREADS':'4','MKL_NUM_THREADS':'4','OPENBLAS_NUM_THREADS':'4','LS_CPU_THREADS':'4','HF_HUB_OFFLINE':'1','TRANSFORMERS_OFFLINE':'1','TOKENIZERS_PARALLELISM':'false'}
+p=subprocess.Popen([sys.executable,'-u',str(H/(phase+'.py')),*sys.argv[2:]],env=env,cwd=ROOT);(H/'runtime.json').write_text(json.dumps({'phase':phase,'pid':p.pid,'single_worker':True,'credentials_forwarded':False},indent=2)+'\n');r=p.wait();s=json.loads(path.read_text());s.update(status='completed_'+phase if r==0 else 'failed_'+phase,model_process_active=False,last_exit_code=r);path.write_text(json.dumps(s,indent=2)+'\n');(H/'runtime.json').write_text(json.dumps({'phase':phase,'pid':None,'model_process_active':False,'last_exit_code':r},indent=2)+'\n');raise SystemExit(r)

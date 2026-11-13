@@ -1,0 +1,20 @@
+{
+  "spec026/target_model.py": "86b08e18ed11f77e1de5732465e4f1640f62e4d5a76e080522c57952a22f84f6",
+  "spec026/spec_engine.py": "f4c820258ccd39cc8abe32b8ff4d2e106a8096e988b2e33b54b7351f8c4e2f2d",
+  "spec026/preflight_cache.py": "ba1da9e1654c3162443d35d0fd0806e3ef1fbd90da575978a2f9e8b9d7023272",
+  "spec026/draft_model.py": "5816dc1a7f873a2c1eeca34a3e6aafbf92b2f646bc5ba91527b90457bb147229",
+  "spec026/collect_teacher.py": "f42652222f506ae4643c654286c57d4eb2736295f834e64b11536508af6ee7b7",
+  "spec026/test_spec_engine.py": "2b57d329024e8d9b368af40b4ecfc343913deb0bd35d7d8d6f3409822d3c4c17",
+  "spec026/io_parts.py": "7c853ffd351648bb9b8f0cd6a818ba454121a1c5c38b1d455c726c0594e4608c",
+  "spec026/run_clean.py": "3db8dcb47cb3002b4d0cdacb99fed6132508d73a77c51a8f9174d08a3ace5d60",
+  "spec026/build_data.py": "ee8ac4f527bfeb1007a17940b5422c19babe57fceabdde4f35a8e3ce721cf491",
+  "spec026/PROTOCOL.md": "ec176f3e3df3a0de7d2bbe0f2a2e032509016b99f876e06398bcfc858b708141",
+  "spec026/config.json": "0fb8d34dd359ffa2ae2d319cf53d5f2f9d0c08278ad4691eb8f160d92cc8d313",
+  "spec026/AGENTS.md": "8f2120b3f7e3835f0a264e54655025d669fa72452e611aa8176bc56a108b1081",
+  "spec026/data/quality_code.json": "c9085220f83017426c1c923b14acbeb55e5d2c888606ca8e2743ce6785d206e0",
+  "spec026/data/speed_prompts.json": "78850bbc756202cd7e7e9d4a6e78f6438ca0425bfc512b615c690b12bda2dc49",
+  "spec026/data/correct_train.json": "a1b796aa509c46f88770f66af43fe153c126008054f18702266d304838fadd31",
+  "spec026/data/construction_audit.json": "5a2f715507a38365eb2cdb132b98ece231d7497c524666da686e2473c391c707",
+  "spec026/data/quality_general.json": "1185d1348899ae3631978532daac5ea5eb453903ab4619e24efc9bfea8c3e6aa",
+  "spec026/data/teacher_prompts.json": "9e481f29ebd4fb96b6014460124339b4a2882d49f0b3aee96a3faeadfc5e2ee9"
+}

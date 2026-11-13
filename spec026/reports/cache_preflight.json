@@ -1,0 +1,103 @@
+{
+  "rows": [
+    {
+      "prompt": "Hi.",
+      "serial_ids": [
+        9419,
+        0,
+        2500,
+        628,
+        353,
+        1438,
+        488,
+        3242,
+        30,
+        248046
+      ],
+      "block_ids": [
+        9419,
+        0,
+        2500,
+        628,
+        353,
+        1438,
+        488,
+        3242,
+        30,
+        248046
+      ],
+      "serial_verified_ids": [
+        9419,
+        0,
+        2500,
+        628,
+        353,
+        1438,
+        488,
+        3242,
+        30,
+        248046
+      ],
+      "block_matches_serial": true,
+      "serial_verification_matches": true,
+      "untrained_child_not_quality_scored": true,
+      "block_proposed": 33,
+      "block_accepted": 0
+    },
+    {
+      "prompt": "Write Python function f(x) that returns x plus one. Return only code.",
+      "serial_ids": [
+        727,
+        281,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        478,
+        220,
+        16,
+        248046
+      ],
+      "block_ids": [
+        727,
+        281,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        478,
+        220,
+        16,
+        248046
+      ],
+      "serial_verified_ids": [
+        727,
+        281,
+        2007,
+        1590,
+        198,
+        262,
+        460,
+        830,
+        478,
+        220,
+        16,
+        248046
+      ],
+      "block_matches_serial": true,
+      "serial_verification_matches": true,
+      "untrained_child_not_quality_scored": true,
+      "block_proposed": 34,
+      "block_accepted": 0
+    }
+  ],
+  "block_greedy_parity": true,
+  "snapshot_deepcopy_independent": true,
+  "snapshot_restoration_exact": true,
+  "virtual_slots": 56,
+  "no_speed_or_quality_claim": true
+}
