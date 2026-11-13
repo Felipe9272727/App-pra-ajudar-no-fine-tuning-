@@ -1,0 +1,37 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   7%|▋         | 44/675 [00:00<00:01, 407.78it/s]Loading weights:  14%|█▍        | 96/675 [00:00<00:01, 462.10it/s]Loading weights:  24%|██▍       | 163/675 [00:00<00:00, 541.25it/s]Loading weights:  36%|███▌      | 240/675 [00:00<00:00, 623.34it/s]Loading weights:  45%|████▍     | 303/675 [00:00<00:00, 602.23it/s]Loading weights:  54%|█████▍    | 364/675 [00:00<00:00, 595.72it/s]Loading weights:  69%|██████▉   | 466/675 [00:00<00:00, 727.90it/s]Loading weights:  81%|████████  | 547/675 [00:00<00:00, 745.19it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 721.85it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794583429.9257026, "attempt": null, "pid": 49553}
+PHASE_END checkpoint_load:best.pt 0.008
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TRAIN025 1 1 [0.47351402044296265, 0.008938947692513466] {'temporal': 60, 'mhc': 96, 'normalization': 44, 'opened_loop_exit': 16, 'loop_gain': 16}
+TRAIN025 2 1 [0.5365968942642212, 2.3560142517089844] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 3 1 [0.5279747247695923, 0.9797152280807495] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 4 1 [0.2588377296924591, 0.4471047818660736] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 5 1 [0.09948837012052536, 1.0780223608016968] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 6 1 [0.5232617259025574, 0.014157879166305065] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 7 1 [0.5974695682525635, 0.5507739782333374] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 8 1 [0.4535859525203705, 0.0012201167410239577] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+EPOCH_SAVED 1 81341445 48210480
+TRAIN025 9 2 [0.3439907729625702, 0.019251110032200813] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 10 2 [0.1648891270160675, 0.010973596945405006] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 11 2 [0.8334364295005798, 0.13765613734722137] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 12 2 [0.27218085527420044, 0.10119267553091049] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 13 2 [0.2038605809211731, 0.014519472606480122] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 14 2 [0.19861425459384918, 3.0516958236694336] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 15 2 [0.2665029764175415, 0.3128531873226166] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 16 2 [0.9647830724716187, 0.001174566918052733] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+EPOCH_SAVED 2 81231407 48245664
+TRAIN025 17 3 [0.5959352850914001, 0.11484351754188538] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 18 3 [0.32644838094711304, 0.007290433626621962] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 19 3 [0.46269458532333374, 0.0002494946529623121] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 20 3 [0.11354303359985352, 0.0003266008279751986] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 21 3 [0.47234946489334106, 0.0017015142366290092] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 22 3 [0.15420177578926086, 0.0005111139616928995] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 23 3 [1.2427641153335571, 0.0006701697711832821] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+TRAIN025 24 3 [0.19744765758514404, 0.020058829337358475] {'temporal': 90, 'mhc': 96, 'normalization': 66, 'opened_loop_exit': 16, 'loop_gain': 24}
+EPOCH_SAVED 3 81145234 48260468
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  20%|██        | 137/675 [00:00<00:00, 645.51it/s]Loading weights:  32%|███▏      | 213/675 [00:00<00:00, 686.89it/s]Loading weights:  47%|████▋     | 315/675 [00:00<00:00, 806.45it/s]Loading weights:  59%|█████▉    | 400/675 [00:00<00:00, 817.93it/s]Loading weights:  72%|███████▏  | 485/675 [00:00<00:00, 817.93it/s]Loading weights:  86%|████████▌ | 578/675 [00:00<00:00, 852.70it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 884.01it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794583855.1053202, "attempt": null, "pid": 49553}
+PHASE_END checkpoint_load:best.pt 0.006
+TRAIN025_COMPLETE_COLD_RESTORE_VERIFIED
