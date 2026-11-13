@@ -20,7 +20,11 @@ def load_parts(folder):
  assert reader.hash.hexdigest()==m['compressed_sha256'];return torch.load(io.BytesIO(raw),map_location='cpu',weights_only=True),m
 
 def load_draft(size,phase='inference'):
- from draft_model import DraftLM
+ from draft_model import DraftLM,tensor_hash
  p,m=load_parts(H/'checkpoints'/size/phase);model=DraftLM(size,p['seed']);model.load_state_dict(p['model'],strict=True);del p
- if phase=='inference':model.inference_bf16()
+ if phase=='initial':
+  expected=json.loads((H/'reports'/f'initial_{size}.json').read_text())['parameter_hashes'];assert all(tensor_hash(p)==expected[n] for n,p in model.named_parameters())
+ if phase in ['initial','inference']:model.inference_bf16()
+ if phase=='inference':
+  expected=json.loads((H/'reports'/f'training_{size}.json').read_text())['inference_hashes'];assert all(tensor_hash(p)==expected[n] for n,p in model.named_parameters())
  return model,m
