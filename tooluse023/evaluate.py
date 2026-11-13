@@ -37,6 +37,6 @@ def main():
    except Exception as e:entry['parse_error']=str(e);turns.append(entry);break
    if call is None:turns.append(entry);break
    if turn==2:entry['error']='tool call limit';turns.append(entry);break
-   obs=execute(call);entry['observation']=obs;turns.append(entry);messages.extend([{'role':'assistant','content':raw},{'role':'tool','content':json.dumps(obs,ensure_ascii=False,separators=(',',':'))}])
+   obs=execute(call);entry['observation']=obs;turns.append(entry);messages.extend([{'role':'assistant','content':raw},{'role':'tool','content':safe_text(json.dumps(obs,ensure_ascii=False,separators=(',',':')),6000)}])
   result={'id':row['id'],'question':row['question'],'variant':args.variant,'set':args.set,'turns':turns,'grade':grade(row,turns),'seconds':time.monotonic()-start,'reference_answers_or_tests_in_prompt':False};results.append(result);p.parent.mkdir(exist_ok=True);tr.e.cr.atomic_json(p,results);print('EVALUATED',args.variant,row['id'],json.dumps(result['grade']),flush=True)
 if __name__=='__main__':main()
