@@ -12,7 +12,7 @@ def read(path):
 
 def main():
     scores = {}
-    for variant in ['target', 'small_initial', 'small_trained', 'large_initial', 'large_trained']:
+    for variant in ['original', 'target', 'small_initial', 'small_trained', 'large_initial', 'large_trained']:
         r = read(f'reports/quality_{variant}.json')
         assert r['status'] == 'complete'
         scores[variant] = {k: r[k] for k in ['code_tasks', 'code_cases', 'code_cases_total', 'general_correct']}
