@@ -1,0 +1,33 @@
+{
+  "status": "fresh_tool_evaluation_complete",
+  "comparison": {
+    "original": {
+      "correct_with_real_tool": 3,
+      "tasks": 4,
+      "actual_tool_calls": 3,
+      "truncated_tasks": 2
+    },
+    "specialist": {
+      "correct_with_real_tool": 0,
+      "tasks": 4,
+      "actual_tool_calls": 4,
+      "truncated_tasks": 0
+    },
+    "candidate": {
+      "correct_with_real_tool": 0,
+      "tasks": 4,
+      "actual_tool_calls": 0,
+      "truncated_tasks": 3
+    }
+  },
+  "candidate_promoted": false,
+  "reason": "candidate0/4 equals specialist0/4 and below original3/4; new-tool gain gate failed",
+  "manual_semantic_audit": {
+    "original_fresh_web01": "Cites actual returned PythonURL but adds false description: heappush returns minimum (it returns None). Automated source-lookup criterion passes; factual extension is wrong. Preserve both labels.",
+    "original_fresh_py01": "Correct number delivered; unnecessarily enumerates cubes and truncates.",
+    "specialist_python": "Executes actual code twice but no delivered final before maximum tool calls.",
+    "candidate": "No valid actual calls in any of4tasks; three truncations."
+  },
+  "limitation": "4custom tasks, no statistical general-superiority claim; live web results may differ; same schema/budget/questions/executor",
+  "retention": "running separately; no promotion regardless of outcome"
+}
