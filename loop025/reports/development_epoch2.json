@@ -1,0 +1,449 @@
+{
+  "variant": "epoch2",
+  "phase": "development",
+  "controls": [
+    {
+      "output": "Sb",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.943349498003954,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_0",
+      "correct": true
+    },
+    {
+      "output": "children",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.4759199870022712,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_1",
+      "correct": true
+    },
+    {
+      "output": "La Serena",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.7952990510093514,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_2",
+      "correct": false
+    },
+    {
+      "output": "heart",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.0795619199925568,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_3",
+      "correct": true
+    },
+    {
+      "output": "42",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.5778382930002408,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_product",
+      "correct": false
+    },
+    {
+      "output": "Ana",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.5293919870018726,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_order",
+      "correct": true
+    },
+    {
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.5857050850027008,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_subtract",
+      "correct": true
+    },
+    {
+      "output": "17",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.470561246998841,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_half",
+      "correct": true
+    },
+    {
+      "output": "Frío",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.5773229299957165,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_opposite",
+      "correct": true
+    },
+    {
+      "output": "went",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.0483931049966486,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_past",
+      "correct": true
+    },
+    {
+      "output": "animais",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.3108697249990655,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_plural",
+      "correct": true
+    },
+    {
+      "output": "água",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.3739390389964683,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_translate",
+      "correct": true
+    }
+  ],
+  "code": [
+    {
+      "id": "prefix_offset_0",
+      "split": "taught_fit",
+      "output": "def solve(xs):\n    total = 2\n    total += 2\n    return total\n",
+      "new_tokens": 22,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 7.748620722995838,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.05818149819970131,
+          "cosine": 0.9983146786689758,
+          "first_norm": 6.708531379699707,
+          "second_norm": 6.669714450836182
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 20,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    total = 2\n    total += 2\n    return total"
+    },
+    {
+      "id": "above_0",
+      "split": "taught_fit",
+      "output": "def solve(xs):\n    return sum(1 for x in xs)\n",
+      "new_tokens": 17,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 6.065380225001718,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.0572228841483593,
+          "cosine": 0.9983658790588379,
+          "first_norm": 6.760937213897705,
+          "second_norm": 6.7302141189575195
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 2,
+      "total": 20,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    return sum(1 for x in xs)"
+    },
+    {
+      "id": "L025V/rotate",
+      "split": "validation",
+      "output": "def solve(xs):\n    return [x] + [x] * 3\n",
+      "new_tokens": 19,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 6.490220813997439,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.059049949049949646,
+          "cosine": 0.9982647895812988,
+          "first_norm": 6.6278886795043945,
+          "second_norm": 6.587323188781738
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 9,
+      "all_passed": false,
+      "category": "NameError",
+      "error_types": [
+        "NameError"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    return [x] + [x] * 3"
+    },
+    {
+      "id": "L025V/brackets",
+      "split": "validation",
+      "output": "def solve(s):\n    return True\n",
+      "new_tokens": 10,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 3.827049013998476,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.05911291390657425,
+          "cosine": 0.9982665777206421,
+          "first_norm": 6.56138801574707,
+          "second_norm": 6.51411247253418
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 6,
+      "total": 10,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "code": "def solve(s):\n    return True"
+    },
+    {
+      "id": "L025V/compact",
+      "split": "validation",
+      "output": "def solve(xs):\n    return [x]\n",
+      "new_tokens": 12,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 5.008915814003558,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.05788220465183258,
+          "cosine": 0.9983446598052979,
+          "first_norm": 6.70725154876709,
+          "second_norm": 6.652839183807373
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "NameError",
+      "error_types": [
+        "NameError"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    return [x]"
+    },
+    {
+      "id": "L025V/subarray",
+      "split": "validation",
+      "output": "def solve(xs):\n    total = 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "ended_eos": false,
+      "seconds_descriptive_only": 50.48958244200912,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.05962556600570679,
+          "cosine": 0.9982690811157227,
+          "first_norm": 6.531569480895996,
+          "second_norm": 6.456322193145752
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 9,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    total = 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0\n    total += 0"
+    }
+  ],
+  "protocol": {
+    "thinking": false,
+    "greedy": true,
+    "seed": 0,
+    "threads": 4,
+    "code_budget": 160,
+    "control_budget": 64,
+    "eos_ids": [
+      248044,
+      248046
+    ],
+    "reference_answers_or_tests_in_generation_inputs": false,
+    "framework": "PyTorch CPU BF16 eager",
+    "bypass_diagnostic_only": false
+  },
+  "source_metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    },
+    "epoch": 2,
+    "checkpoint_sha256": "92bf5cc2bb63712e7460852117a0ea93267a6afe2465855d0f2c22afae71d8e3"
+  },
+  "status": "complete",
+  "controls_correct": 10,
+  "taught_tasks_passed": 0,
+  "validation_tasks_passed": 0,
+  "final_tasks_passed": 0
+}
