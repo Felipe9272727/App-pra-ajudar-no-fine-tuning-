@@ -1,0 +1,22 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 66/473 [00:00<00:00, 658.73it/s]Loading weights:  28%|██▊       | 132/473 [00:00<00:00, 575.38it/s]Loading weights:  40%|████      | 191/473 [00:00<00:00, 577.03it/s]Loading weights:  75%|███████▌  | 357/473 [00:00<00:00, 975.63it/s]Loading weights:  97%|█████████▋| 457/473 [00:00<00:00, 963.32it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 882.54it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+QUALITY026_ORIGINAL S026Q/reverse_words True
+QUALITY026_ORIGINAL S026Q/absolute_sum True
+QUALITY026_ORIGINAL S026Q/equal_pairs True
+QUALITY026_ORIGINAL S026Q/second True
+QUALITY026_ORIGINAL S026Q/flatten False
+QUALITY026_ORIGINAL S026Q/products False
+QUALITY026_ORIGINAL S026Q/palindrome False
+QUALITY026_ORIGINAL S026Q/interleave False
+QUALITY026_ORIGINAL S026G/0 True
+QUALITY026_ORIGINAL S026G/1 True
+QUALITY026_ORIGINAL S026G/2 True
+QUALITY026_ORIGINAL S026G/3 True
+QUALITY026_ORIGINAL S026G/4 True
+QUALITY026_ORIGINAL S026G/5 False
+QUALITY026_ORIGINAL S026G/6 True
+QUALITY026_ORIGINAL S026G/7 True

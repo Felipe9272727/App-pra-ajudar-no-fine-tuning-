@@ -1,0 +1,59 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "size": "small",
+      "phase": "initial",
+      "parameter_tensors_verified": 546,
+      "compressed_sha256": "cbb71c69ca1757f570c33d2a8eda24d3ffd44c5e14226fe5187b69dd6fa6eb65",
+      "compressed_bytes": 66042334,
+      "all_finite": true,
+      "optimizer_and_rng_restored": false
+    },
+    {
+      "size": "small",
+      "phase": "final",
+      "parameter_tensors_verified": 546,
+      "compressed_sha256": "9f4e58aeeedd17e3a44ae2b180ee9432b3b4bd2823cf9b90fd4724a00484c170",
+      "compressed_bytes": 66520680,
+      "all_finite": true,
+      "optimizer_and_rng_restored": true
+    },
+    {
+      "size": "small",
+      "phase": "inference",
+      "parameter_tensors_verified": 546,
+      "compressed_sha256": "04a0fb6f252eb121344c7989b258ab3432a26ba37238bdc4b41b37720d66c672",
+      "compressed_bytes": 26752512,
+      "all_finite": true,
+      "optimizer_and_rng_restored": false
+    },
+    {
+      "size": "large",
+      "phase": "initial",
+      "parameter_tensors_verified": 546,
+      "compressed_sha256": "bea90fb5dbbce5ed9381c69197c93769575242368fa48c794798de18f723d905",
+      "compressed_bytes": 351548550,
+      "all_finite": true,
+      "optimizer_and_rng_restored": false
+    },
+    {
+      "size": "large",
+      "phase": "final",
+      "parameter_tensors_verified": 546,
+      "compressed_sha256": "e190434a61265449fb380ac3f0cfe3e55ee340d0b2552febf5d83e5fe4fb5c40",
+      "compressed_bytes": 352861299,
+      "all_finite": true,
+      "optimizer_and_rng_restored": true
+    },
+    {
+      "size": "large",
+      "phase": "inference",
+      "parameter_tensors_verified": 546,
+      "compressed_sha256": "ed09b23d84a5b415caef863ea06c14f50e0f255c812f3a6fdf3d6478cc712a0a",
+      "compressed_bytes": 149839676,
+      "all_finite": true,
+      "optimizer_and_rng_restored": false
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "scope": "descriptive audit of already-completed standalone outputs",
+  "variants": {
+    "small": {
+      "distinct_code_outputs_for_8_requests": 3,
+      "most_frequent_output": "def solve(xs):\n    return [",
+      "most_frequent_output_count": 5,
+      "parseable_function_outputs": 0,
+      "code_rows": [
+        {
+          "id": "S026Q/reverse_words",
+          "parseable_function": false,
+          "passed_cases": 0,
+          "all_cases": 5
+        },
+        {
+          "id": "S026Q/absolute_sum",
+          "parseable_function": false,
+          "passed_cases": 0,
+          "all_cases": 5
+        },
+        {
+          "id": "S026Q/equal_pairs",
+          "parseable_function": false,
+          "passed_cases": 0,
+          "all_cases": 6
+        },
+        {
+          "id": "S026Q/second",
+          "parseable_function": false,
+          "passed_cases": 0,
+          "all_cases": 6
+        },
+        {
+          "id": "S026Q/flatten",
+          "parseable_function": false,
+          "passed_cases": 0,
+          "all_cases": 5
+        },
+        {
+          "id": "S026Q/products",
+          "parseable_function": false,
+          "passed_cases": 0,
+          "all_cases": 5
+        },
+        {
+          "id": "S026Q/palindrome",
+          "parseable_function": false,
+          "passed_cases": 0,
+          "all_cases": 6
+        },
+        {
+          "id": "S026Q/interleave",
+          "parseable_function": false,
+          "passed_cases": 0,
+          "all_cases": 5
+        }
+      ],
+      "general_outputs_starting_def": 8,
+      "general_correct": 0
+    },
+    "large": {
+      "distinct_code_outputs_for_8_requests": 1,
+      "most_frequent_output": "def solve(xs):\n    out = []\n    current = 10\n    for x in xs:\n        current = min(current, x)\n        out.append(current)\n    return out\n",
+      "most_frequent_output_count": 8,
+      "parseable_function_outputs": 8,
+      "code_rows": [
+        {
+          "id": "S026Q/reverse_words",
+          "parseable_function": true,
+          "passed_cases": 0,
+          "all_cases": 5
+        },
+        {
+          "id": "S026Q/absolute_sum",
+          "parseable_function": true,
+          "passed_cases": 0,
+          "all_cases": 5
+        },
+        {
+          "id": "S026Q/equal_pairs",
+          "parseable_function": true,
+          "passed_cases": 0,
+          "all_cases": 6
+        },
+        {
+          "id": "S026Q/second",
+          "parseable_function": true,
+          "passed_cases": 0,
+          "all_cases": 6
+        },
+        {
+          "id": "S026Q/flatten",
+          "parseable_function": true,
+          "passed_cases": 1,
+          "all_cases": 5
+        },
+        {
+          "id": "S026Q/products",
+          "parseable_function": true,
+          "passed_cases": 3,
+          "all_cases": 5
+        },
+        {
+          "id": "S026Q/palindrome",
+          "parseable_function": true,
+          "passed_cases": 0,
+          "all_cases": 6
+        },
+        {
+          "id": "S026Q/interleave",
+          "parseable_function": true,
+          "passed_cases": 0,
+          "all_cases": 5
+        }
+      ],
+      "general_outputs_starting_def": 4,
+      "general_correct": 0
+    }
+  },
+  "training_or_judges_changed": false,
+  "interpretation": "Small child emits incomplete program templates; large child repeats a largely fixed program. Train NLL did not establish instruction following or fresh-task competence.",
+  "causal_limits": "No matched architecture/data/objective ablation was run; do not identify a unique culpable tensor or blame the loop from these observations.",
+  "next_hypothesis_not_executed": "Much broader pretraining/teacher data and an assistant-focused objective may improve conditioning and acceptance; requires a new preregistration and fresh reserved evaluations."
+}

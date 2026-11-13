@@ -1,0 +1,14 @@
+[
+  {
+    "working_file": "/dev/shm/liquid-spec026/rolling_small.pt",
+    "bytes": 73145411,
+    "identical_final_archive": "checkpoints/small/final",
+    "permanent_checkpoints_retained": true
+  },
+  {
+    "working_file": "/dev/shm/liquid-spec026/rolling_large.pt",
+    "bytes": 382143939,
+    "identical_final_archive": "checkpoints/large/final",
+    "permanent_checkpoints_retained": true
+  }
+]
