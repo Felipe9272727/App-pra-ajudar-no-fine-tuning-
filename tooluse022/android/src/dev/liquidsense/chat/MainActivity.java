@@ -112,7 +112,7 @@ public final class MainActivity extends Activity {
             catch(Exception e){observation=new JSONObject().put("tool",name).put("ok",false).put("error",ToolExecutor.safe(e.toString(),500));}
             trace.put(new JSONObject().put("call",call).put("observation",observation));getPreferences(MODE_PRIVATE).edit().putString("tool_trace_last",trace.toString()).apply();
             final JSONObject shown=observation;main.post(()->showToolResult(shown));
-            messages.put(new JSONObject().put("role","assistant").put("content",raw));messages.put(new JSONObject().put("role","tool").put("content",observation.toString()));
+            messages.put(new JSONObject().put("role","assistant").put("content",raw));messages.put(new JSONObject().put("role","tool").put("content",ToolExecutor.safe(observation.toString(),6000)));
         }throw new IllegalStateException("Limite de ferramentas");
     }
     private void showToolResult(JSONObject result){
