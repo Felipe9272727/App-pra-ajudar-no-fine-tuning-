@@ -1,0 +1,58 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   7%|▋         | 45/675 [00:00<00:01, 411.89it/s]Loading weights:  13%|█▎        | 87/675 [00:00<00:01, 390.66it/s]Loading weights:  25%|██▌       | 170/675 [00:00<00:00, 559.09it/s]Loading weights:  36%|███▌      | 242/675 [00:00<00:00, 609.15it/s]Loading weights:  53%|█████▎    | 358/675 [00:00<00:00, 754.12it/s]Loading weights:  65%|██████▌   | 441/675 [00:00<00:00, 763.58it/s]Loading weights:  77%|███████▋  | 518/675 [00:00<00:00, 740.07it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 851.37it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794532314.7732918, "attempt": null, "pid": 31373}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+NATIVE_TEACHER py01 74
+NATIVE_TEACHER py01_final 21
+NATIVE_TEACHER py02 75
+NATIVE_TEACHER py02_final 19
+NATIVE_TEACHER py03 80
+NATIVE_TEACHER py03_final 29
+NATIVE_TEACHER py04 76
+NATIVE_TEACHER py04_final 22
+NATIVE_TEACHER web01 40
+NATIVE_TEACHER web01_final 18
+NATIVE_TEACHER web02 40
+NATIVE_TEACHER web02_final 17
+NATIVE_TEACHER web03 40
+NATIVE_TEACHER web03_final 18
+NATIVE_TEACHER web04 40
+NATIVE_TEACHER web04_final 22
+PREFLIGHT {"tokens": 631, "argmax_agreement": 1.0, "max_hidden_reconstruction_error": 0.0625, "forced_replay_not_inference_score": true}
+UPDATE {"step": 1, "supervised_margin_loss_before_update": 8.772390365600586, "cached_correct_tokens": 447, "total_teacher_tokens": 631, "minimum_margin": -12.546875, "relative_float_update": 0.003307101782411337}
+UPDATE {"step": 2, "supervised_margin_loss_before_update": 6.377660751342773, "cached_correct_tokens": 450, "total_teacher_tokens": 631, "minimum_margin": -11.890625, "relative_float_update": 0.006100630387663841}
+UPDATE {"step": 3, "supervised_margin_loss_before_update": 4.77473783493042, "cached_correct_tokens": 455, "total_teacher_tokens": 631, "minimum_margin": -11.203125, "relative_float_update": 0.008611279539763927}
+UPDATE {"step": 4, "supervised_margin_loss_before_update": 3.6221156120300293, "cached_correct_tokens": 456, "total_teacher_tokens": 631, "minimum_margin": -10.6875, "relative_float_update": 0.010000050067901611}
+UPDATE {"step": 5, "supervised_margin_loss_before_update": 2.965165615081787, "cached_correct_tokens": 464, "total_teacher_tokens": 631, "minimum_margin": -10.5, "relative_float_update": 0.010000101290643215}
+UPDATE {"step": 6, "supervised_margin_loss_before_update": 2.79587984085083, "cached_correct_tokens": 471, "total_teacher_tokens": 631, "minimum_margin": -10.34375, "relative_float_update": 0.010000111535191536}
+UPDATE {"step": 7, "supervised_margin_loss_before_update": 2.699214220046997, "cached_correct_tokens": 473, "total_teacher_tokens": 631, "minimum_margin": -10.15625, "relative_float_update": 0.010000142268836498}
+UPDATE {"step": 8, "supervised_margin_loss_before_update": 2.643655300140381, "cached_correct_tokens": 467, "total_teacher_tokens": 631, "minimum_margin": -10.0, "relative_float_update": 0.010000109672546387}
+UPDATE {"step": 9, "supervised_margin_loss_before_update": 2.594118356704712, "cached_correct_tokens": 468, "total_teacher_tokens": 631, "minimum_margin": -9.875, "relative_float_update": 0.01000011246651411}
+UPDATE {"step": 10, "supervised_margin_loss_before_update": 2.55623197555542, "cached_correct_tokens": 468, "total_teacher_tokens": 631, "minimum_margin": -9.875, "relative_float_update": 0.010000113397836685}
+UPDATE {"step": 11, "supervised_margin_loss_before_update": 2.5457205772399902, "cached_correct_tokens": 465, "total_teacher_tokens": 631, "minimum_margin": -9.78125, "relative_float_update": 0.010000108741223812}
+UPDATE {"step": 12, "supervised_margin_loss_before_update": 2.5336179733276367, "cached_correct_tokens": 463, "total_teacher_tokens": 631, "minimum_margin": -9.75, "relative_float_update": 0.010000110603868961}
+UPDATE {"step": 13, "supervised_margin_loss_before_update": 2.531536340713501, "cached_correct_tokens": 460, "total_teacher_tokens": 631, "minimum_margin": -9.65625, "relative_float_update": 0.010000125505030155}
+UPDATE {"step": 14, "supervised_margin_loss_before_update": 2.515869617462158, "cached_correct_tokens": 461, "total_teacher_tokens": 631, "minimum_margin": -9.5625, "relative_float_update": 0.010000139474868774}
+UPDATE {"step": 15, "supervised_margin_loss_before_update": 2.5073821544647217, "cached_correct_tokens": 460, "total_teacher_tokens": 631, "minimum_margin": -9.46875, "relative_float_update": 0.010000146925449371}
+UPDATE {"step": 16, "supervised_margin_loss_before_update": 2.5040206909179688, "cached_correct_tokens": 461, "total_teacher_tokens": 631, "minimum_margin": -9.46875, "relative_float_update": 0.010000151582062244}
+UPDATE {"step": 17, "supervised_margin_loss_before_update": 2.4983935356140137, "cached_correct_tokens": 461, "total_teacher_tokens": 631, "minimum_margin": -9.4375, "relative_float_update": 0.010000135749578476}
+UPDATE {"step": 18, "supervised_margin_loss_before_update": 2.5006825923919678, "cached_correct_tokens": 459, "total_teacher_tokens": 631, "minimum_margin": -9.53125, "relative_float_update": 0.0100001385435462}
+UPDATE {"step": 19, "supervised_margin_loss_before_update": 2.493204355239868, "cached_correct_tokens": 460, "total_teacher_tokens": 631, "minimum_margin": -9.53125, "relative_float_update": 0.010000108741223812}
+UPDATE {"step": 20, "supervised_margin_loss_before_update": 2.484328508377075, "cached_correct_tokens": 462, "total_teacher_tokens": 631, "minimum_margin": -9.53125, "relative_float_update": 0.010000141337513924}
+UPDATE {"step": 21, "supervised_margin_loss_before_update": 2.4858639240264893, "cached_correct_tokens": 461, "total_teacher_tokens": 631, "minimum_margin": -9.46875, "relative_float_update": 0.010000118985772133}
+UPDATE {"step": 22, "supervised_margin_loss_before_update": 2.481004238128662, "cached_correct_tokens": 460, "total_teacher_tokens": 631, "minimum_margin": -9.46875, "relative_float_update": 0.010000104084610939}
+UPDATE {"step": 23, "supervised_margin_loss_before_update": 2.4835548400878906, "cached_correct_tokens": 460, "total_teacher_tokens": 631, "minimum_margin": -9.40625, "relative_float_update": 0.010000119917094707}
+UPDATE {"step": 24, "supervised_margin_loss_before_update": 2.4928653240203857, "cached_correct_tokens": 459, "total_teacher_tokens": 631, "minimum_margin": -9.40625, "relative_float_update": 0.010000118054449558}
+UPDATE {"step": 25, "supervised_margin_loss_before_update": 2.4834184646606445, "cached_correct_tokens": 459, "total_teacher_tokens": 631, "minimum_margin": -9.40625, "relative_float_update": 0.010000121779739857}
+UPDATE {"step": 26, "supervised_margin_loss_before_update": 2.489440441131592, "cached_correct_tokens": 459, "total_teacher_tokens": 631, "minimum_margin": -9.375, "relative_float_update": 0.010000140406191349}
+UPDATE {"step": 27, "supervised_margin_loss_before_update": 2.4831740856170654, "cached_correct_tokens": 460, "total_teacher_tokens": 631, "minimum_margin": -9.375, "relative_float_update": 0.010000159963965416}
+UPDATE {"step": 28, "supervised_margin_loss_before_update": 2.487036943435669, "cached_correct_tokens": 459, "total_teacher_tokens": 631, "minimum_margin": -9.40625, "relative_float_update": 0.010000164620578289}
+UPDATE {"step": 29, "supervised_margin_loss_before_update": 2.4924025535583496, "cached_correct_tokens": 459, "total_teacher_tokens": 631, "minimum_margin": -9.40625, "relative_float_update": 0.010000143200159073}
+UPDATE {"step": 30, "supervised_margin_loss_before_update": 2.4871082305908203, "cached_correct_tokens": 462, "total_teacher_tokens": 631, "minimum_margin": -9.34375, "relative_float_update": 0.010000169277191162}
+UPDATE {"step": 31, "supervised_margin_loss_before_update": 2.477593183517456, "cached_correct_tokens": 459, "total_teacher_tokens": 631, "minimum_margin": -9.40625, "relative_float_update": 0.01000016089528799}
+UPDATE {"step": 32, "supervised_margin_loss_before_update": 2.4756786823272705, "cached_correct_tokens": 459, "total_teacher_tokens": 631, "minimum_margin": -9.46875, "relative_float_update": 0.01000013668090105}
+TRAINING_COMPLETE {"status": "native_cache_training_complete_unvalidated", "parent": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8", "target": "model.language_model.layers.31.mlp.down_proj.weight", "shape": [1024, 3584], "dtype": "bfloat16", "bytes": 7340032, "sha256": "a7eafb008b64625e2364ecdf1b59d78497cc2859ad82cd2da85696c37118d54a", "old_tensor_sha256": "1866748ce87d32cfee34891d2fa393fdfeee77447935f6a31d036e4b80332a48", "updates": 32, "new_factor_values": 147456, "trainable_factor_values": 32768, "merged_changed_values": 2236841, "only_old_tensor_changed": true, "all_other698_tensors_unchanged": true, "all_loop_mhc_temporal_weights_frozen_but_executed": true, "preflight": {"tokens": 631, "argmax_agreement": 1.0, "max_hidden_reconstruction_error": 0.0625, "forced_replay_not_inference_score": true}, "seconds": 407.0456796819999}
