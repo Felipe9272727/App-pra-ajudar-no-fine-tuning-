@@ -30,7 +30,8 @@ packed128token blocks,batch2, same token exposures for both sizes. Causal CE on
 full conversations (including user text) teaches a fresh tokenizer embedding;
 outputs/assistant content are not inserted into evaluation prompts. Adafactor
 FP32 master parameters with BF16 CPU autocast, matrix lr.03/controllers lr.003,
-10step warmup then cosine to.25,gradient norm1. All child parameters eligible.
+10step warmup then cosine to.25,gradient norm1. Embedding/residual forward uses
+BF16 and GDN recurrence remains FP32 to match inference arithmetic contracts. All child parameters eligible.
 Save seeded FP32 initial and exact final train state/optimizer/RNG in verified
 parts; save BF16 inference variant separately, with routers/gains FP32. Scores
 and speculation use saved BF16 variants. Save loss/gradient/memory per step.

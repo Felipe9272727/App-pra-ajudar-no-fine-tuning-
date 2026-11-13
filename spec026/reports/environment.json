@@ -1,0 +1,9 @@
+{
+  "torch": "2.15.0+cpu",
+  "transformers": "5.22.1",
+  "cpu": "x86_64",
+  "threads": 4,
+  "cpu_quota": 2,
+  "memory_limit_bytes": 8589934592,
+  "GPU": false
+}
