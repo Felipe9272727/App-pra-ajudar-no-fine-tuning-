@@ -1,0 +1,13 @@
+{
+  "format": "exact-apk-prefix-parent-pack-suffix-v1",
+  "original_sha256": "d8c649c9e06be632b7a411417d06a3a926911788764950a7d4ea2cf6956137f4",
+  "original_bytes": 1615574215,
+  "prefix_bytes": 15429212,
+  "suffix_bytes": 854763,
+  "pack_bytes": 1599290240,
+  "pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "pack_source": "tooluse022/apk_archive/manifest.json; immutable safetensors + verified fragments",
+  "reconstructed_full_sha_verified_before_refresh": true,
+  "original_public_download": "https://gofile.io/d/fowGW6q4",
+  "restore_command": "python tooluse023/restore_apk_fragments.py android_thinking024/artifacts/prior_tools023 NEW_OUTPUT.apk"
+}
