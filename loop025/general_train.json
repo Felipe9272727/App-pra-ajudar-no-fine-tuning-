@@ -1,0 +1,50 @@
+[
+  {
+    "id": "TEACH016/00",
+    "prompt": "What is the chemical symbol for sodium? Reply only with the symbol.",
+    "solution": "Na",
+    "role": "general_training"
+  },
+  {
+    "id": "TEACH016/01",
+    "prompt": "Qual é a capital do Japão? Responda somente a cidade.",
+    "solution": "Tóquio",
+    "role": "general_training"
+  },
+  {
+    "id": "TEACH016/02",
+    "prompt": "What organs enable breathing? Reply with one plural noun.",
+    "solution": "lungs",
+    "role": "general_training"
+  },
+  {
+    "id": "TEACH016/03",
+    "prompt": "Give only the plural of mouse.",
+    "solution": "mice",
+    "role": "general_training"
+  },
+  {
+    "id": "TEACH016/04",
+    "prompt": "Responda somente com o número: 6 vezes 7.",
+    "solution": "42",
+    "role": "general_training"
+  },
+  {
+    "id": "TEACH016/05",
+    "prompt": "Davi chegou antes de Eva. Eva chegou antes de Leo. Quem chegou primeiro? Responda somente o nome.",
+    "solution": "Davi",
+    "role": "general_training"
+  },
+  {
+    "id": "TEACH016/06",
+    "prompt": "Reply only with a number: a box has 22 pens and 9 are removed. How many remain?",
+    "solution": "13",
+    "role": "general_training"
+  },
+  {
+    "id": "TEACH016/07",
+    "prompt": "What is half of 46? Reply only with the number.",
+    "solution": "23",
+    "role": "general_training"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "seed": 20261113,
+  "epochs": 3,
+  "pairs_per_epoch": 8,
+  "optimizer_steps": 24,
+  "learning_rate_controllers": 0.005,
+  "learning_rate_exits": 0.03,
+  "trust_controllers": 0.05,
+  "trust_exits": 0.01,
+  "trust_rms_floor": 0.01,
+  "cpu_threads": 4,
+  "code_budget": 160,
+  "control_budget": 64,
+  "thinking": false,
+  "eval_eos_ids": [
+    248044,
+    248046
+  ],
+  "training_eos_id": 248046,
+  "training_pair_example_weights": [
+    0.5,
+    0.5
+  ],
+  "gradient_clip_norm": 1.0
+}

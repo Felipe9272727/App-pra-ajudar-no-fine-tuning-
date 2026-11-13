@@ -1,0 +1,30 @@
+[
+  {
+    "id": "L025G/00",
+    "question": "Reply with one word: what is the plural of goose?",
+    "answer": "geese",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "L025G/01",
+    "question": "Responda somente com o número: 13 vezes 6.",
+    "answer": "78",
+    "aliases": [],
+    "numeric": true
+  },
+  {
+    "id": "L025G/02",
+    "question": "Reply only with the symbol: chemical symbol for potassium.",
+    "answer": "K",
+    "aliases": [],
+    "numeric": false
+  },
+  {
+    "id": "L025G/03",
+    "question": "Nina veio antes de Otto. Otto veio antes de Paula. Quem veio primeiro? Responda apenas o nome.",
+    "answer": "Nina",
+    "aliases": [],
+    "numeric": false
+  }
+]

@@ -1,0 +1,466 @@
+[
+  {
+    "id": "L025T/zeros",
+    "family": "factorial_divisibility",
+    "prompt": "Write Python function solve(n). For a nonnegative integer n, return the number of trailing decimal zero digits of n!. Handle n=0. Return only the function, without imports or explanation.",
+    "solution": "def solve(n):\n    total=0\n    while n:\n        n//=5\n        total+=n\n    return total\n",
+    "cases": [
+      {
+        "args": [
+          0
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          1
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          4
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          5
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          9
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          10
+        ],
+        "expected": 2
+      },
+      {
+        "args": [
+          24
+        ],
+        "expected": 4
+      },
+      {
+        "args": [
+          25
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          30
+        ],
+        "expected": 7
+      },
+      {
+        "args": [
+          50
+        ],
+        "expected": 12
+      },
+      {
+        "args": [
+          125
+        ],
+        "expected": 31
+      }
+    ],
+    "provenance": "new researcher-authored025custom task; not a published benchmark; no model outputs used in construction"
+  },
+  {
+    "id": "L025T/transpose",
+    "family": "matrix_transpose",
+    "prompt": "Write Python function solve(rows). Transpose a rectangular list of lists, returning lists rather than tuples. Return [] if there are no rows or zero columns. Return only the function, without imports or explanation.",
+    "solution": "def solve(rows):\n    if not rows or not rows[0]: return []\n    return [[row[i] for row in rows] for i in range(len(rows[0]))]\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            []
+          ]
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            [],
+            []
+          ]
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            [
+              1
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              0,
+              -1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            0,
+            3
+          ],
+          [
+            -1,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      }
+    ],
+    "provenance": "new researcher-authored025custom task; not a published benchmark; no model outputs used in construction"
+  },
+  {
+    "id": "L025T/unique",
+    "family": "stable_distinct",
+    "prompt": "Write Python function solve(xs). Remove duplicate integer values globally, retaining only their first occurrence in the original order. Return only the function, without imports or explanation.",
+    "solution": "def solve(xs):\n    out=[]\n    seen=set()\n    for x in xs:\n        if x not in seen:\n            seen.add(x)\n            out.append(x)\n    return out\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            1
+          ]
+        ],
+        "expected": [
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            1
+          ]
+        ],
+        "expected": [
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            3,
+            1,
+            3,
+            2,
+            1
+          ]
+        ],
+        "expected": [
+          3,
+          1,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            -1,
+            0,
+            -1,
+            2,
+            0
+          ]
+        ],
+        "expected": [
+          -1,
+          0,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      }
+    ],
+    "provenance": "new researcher-authored025custom task; not a published benchmark; no model outputs used in construction"
+  },
+  {
+    "id": "L025T/intervals",
+    "family": "interval_union",
+    "prompt": "Write Python function solve(intervals). Each input interval [start,end] has start<=end. Merge overlapping or endpoint-touching closed intervals, returning sorted [start,end] lists. Do not mutate the input. Return only the function, without imports or explanation.",
+    "solution": "def solve(intervals):\n    out=[]\n    for a,b in sorted(intervals):\n        if out and a<=out[-1][1]: out[-1][1]=max(out[-1][1],b)\n        else: out.append([a,b])\n    return out\n",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              2
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              3,
+              5
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            10
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              2
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              5,
+              8
+            ],
+            [
+              -2,
+              3
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            -2,
+            8
+          ]
+        ]
+      }
+    ],
+    "provenance": "new researcher-authored025custom task; not a published benchmark; no model outputs used in construction"
+  }
+]
