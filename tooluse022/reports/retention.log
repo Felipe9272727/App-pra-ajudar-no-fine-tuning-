@@ -1,0 +1,28 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   6%|▋         | 43/675 [00:00<00:01, 422.98it/s]Loading weights:  13%|█▎        | 86/675 [00:00<00:01, 361.41it/s]Loading weights:  20%|█▉        | 132/675 [00:00<00:01, 391.39it/s]Loading weights:  29%|██▉       | 199/675 [00:00<00:00, 487.82it/s]Loading weights:  50%|████▉     | 337/675 [00:00<00:00, 770.47it/s]Loading weights:  68%|██████▊   | 462/675 [00:00<00:00, 887.95it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 902.25it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794531819.9962425, "attempt": null, "pid": 31155}
+PHASE_END checkpoint_load:best.pt 0.007
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+RETENTION controls dev_0 True
+RETENTION controls dev_1 True
+RETENTION controls dev_2 True
+RETENTION controls dev_3 True
+RETENTION controls reason_product True
+RETENTION controls reason_order False
+RETENTION controls reason_subtract False
+RETENTION controls reason_half True
+RETENTION controls lang_opposite True
+RETENTION controls lang_past False
+RETENTION controls lang_plural False
+RETENTION controls lang_translate False
+RETENTION taught HumanEval/32 True
+RETENTION taught HumanEval/39 False
+RETENTION taught HumanEval/75 True
+RETENTION taught HumanEval/114 True
+RETENTION taught HumanEval/119 False
+RETENTION taught HumanEval/129 True
+RETENTION taught HumanEval/132 True
+RETENTION taught HumanEval/147 True
