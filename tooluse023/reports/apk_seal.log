@@ -1,0 +1,6 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx384m
+Note: /workspace/liquid-sense/android_models021/tools/TailSigner.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Picked up JAVA_TOOL_OPTIONS: -Xmx384m
+SIGNED_VERIFIED_PREFIX=1615537112 TAIL_BYTES=8431 TOTAL=1615545543
+TOOLS_APK_SIGNED {"status": "signed_tools_APK_built", "path": "/dev/shm/liquid-android/tools023-apk/LiquidSense-0.3.0-tools-preview.apk", "bytes": 1615545543, "sha256": "04726275404bf609156d91cf28bbe0ab8df17cd6d112b501e5f09b36db4a779c", "package": "dev.liquidsense.chat.tools", "separate_app_preserves_specialist_and_original": true, "versionCode": 1, "parent_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288", "config": {"use_validated_dense": false, "model_parent": "general_best", "neural_loop_visits": 56, "physical_layers": 32, "tools_variant": "preserved_general_tools_runtime", "experimental": true, "general_quality_promotion": false}, "phone_execution_verified": false, "specialist_option": "uses optional installed dev.liquidsense.chat.fast public assets", "base_general_fully_bundled": true}

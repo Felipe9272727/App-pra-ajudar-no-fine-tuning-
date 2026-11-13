@@ -1,0 +1,5 @@
+APP_TOOL app_py_squares20 run_python False
+APP_TOOL app_py_squares20 run_python False
+APP_SMOKE app_py_squares20 False
+APP_TOOL app_web_jsonloads search_web True
+APP_SMOKE app_web_jsonloads False

@@ -1,0 +1,4 @@
+APP_TOOL app_py_squares21 run_python True
+APP_SMOKE app_py_squares21 True
+APP_TOOL app_web_mathsqrt search_web True
+APP_SMOKE app_web_mathsqrt False

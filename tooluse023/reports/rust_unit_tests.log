@@ -1,0 +1,24 @@
+warning: structure field `parent_E_stream` should have a snake case name
+  --> src/model.rs:48:26
+   |
+48 | pub struct Readout { pub parent_E_stream: String, pub rank: usize, pub a: Vec<f32>, pub b: Vec<f32> }
+   |                          ^^^^^^^^^^^^^^^ help: convert the identifier to snake case: `parent_e_stream`
+   |
+   = note: `#[warn(non_snake_case)]` on by default
+
+warning: `liquid-sense-mobile` (lib test) generated 1 warning
+    Finished `release` profile [optimized] target(s) in 0.05s
+     Running unittests src/lib.rs (/dev/shm/liquid-android/tools023/rust-host-target/release/deps/liquid_sense-01139c357aebfc14)
+
+running 8 tests
+test chat::tests::cache_requires_all_saved_tokens ... ok
+test kernels::greedy_tests::exact_ties_choose_first_token ... ok
+test kernels::tests::bf_dot_matches_float ... ok
+test kernels::tests::quantized_dot_matches_scalar ... ok
+test kernels::exact_order_tests::transpose_matches_strided_sum_bits ... ok
+test kernels::tests::rounding_ties ... ok
+test kernels::zero_shortcut_tests::signed_zero_weights_finite_inputs_match_simd_positive_zero ... ok
+test model::tests::slots_are_independent ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
