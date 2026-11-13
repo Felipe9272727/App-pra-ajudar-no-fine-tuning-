@@ -1,0 +1,7 @@
+{
+  "status": "preparing_registered_study",
+  "optimizer_steps": 0,
+  "model_process_active": false,
+  "checkpoint_promoted": false,
+  "independent_test_queried": false
+}
