@@ -1,5 +1,15 @@
 # Liquid Sense 0.8B LOOP
 
+## Prévia0.3 — internet, Python e seletor de modelos (13/11/2026)
+
+[**Baixar APK Tools0.3 no Gofile**](https://gofile.io/d/fowGW6q4) (~1,62GB, ARM64/Android9+, modelo geral integrado). App separado **Liquid Sense · Tools**. Busca real com fontes, consulta verificada à documentação Python e execução local de Python3 limitado (math/json/f-strings, sem pacotes externos), em serviço isolado.
+
+O botão **Trocar modelo** fica abaixo do cabeçalho: Web e Python, Base geral offline e Especializada015Eoffline. Para a especialista, mantenha instalado/atualizado o [app0.2](https://gofile.io/d/iNjQRGpN); essa opção usa seus assets públicos e preserva seus dados. A especialista fez8/8programas ENSINADOS no PyTorch,7/8na portabilidade Rust e0/8transferência anterior: não é HumanEval completo.
+
+Os novos treinos022e023foram salvos e **rejeitados**:022perdeu8→6programas ensinados;023caiu2/4→1/4nas tarefas de ferramentas. **APK usa o geral anterior, com Loop/mHC e operadores temporais preservados, sem overlays rejeitados.** Ferramentas ampliam o sistema; não há ganho novo geral/de pensamento nos pesos comprovado. Assinatura/CRC/zipalign/hashes e upload verificados; execução física no celular não medida.
+
+[Guia e arquivos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/2cdd5d6af98b3cd969b975d8d0725faa4904d357/tooluse023/README.md) · [Resultados e limitações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/2cdd5d6af98b3cd969b975d8d0725faa4904d357/tooluse023/REPORT.md) · [Verificação de141artefatos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/2cdd5d6af98b3cd969b975d8d0725faa4904d357/tooluse023/ARTIFACT_VERIFICATION.json)
+
 Experimento de Felipe: adaptar diretamente os pesos de Qwen3.5-0.8B a um decoder loop/mHC inspirado em SenseNova-Loop-9B e a operadores compatíveis inspirados em Liquid LFM3.
 
 Registro inicial (histórico): calibração algébrica concluída; ciclos de melhoria e avaliação em preparação. Não há demonstração de autoaperfeiçoamento recursivo geral ou de ganho de inteligência.
@@ -8,7 +18,7 @@ Este repositório será usado para código, estado retomável, logs reais, check
 
 ## Prévia rápida0.1.1 e estudos017–020 (12/11/2026)
 
-[**Baixar APK no Gofile**](https://gofile.io/d/j7WqfPBY) (~1,61GB, ARM64/Android9+, modelo geral integrado). Instala separadamente como **Liquid Sense Rápido** e mostra preparação/tokens por segundo. Mesmos pesos gerais; o app anterior e seu histórico ficam preservados. O seletor base/especialista continua para depois.
+[**Baixar APK no Gofile**](https://gofile.io/d/j7WqfPBY) (~1,61GB, ARM64/Android9+, modelo geral integrado). Instala separadamente como **Liquid Sense Rápido** e mostra preparação/tokens por segundo. Mesmos pesos gerais; o app anterior e seu histórico ficam preservados. Essa prévia0.1.1não tinha seletor; as versões0.2/0.3estão descritas acima.
 
 No servidor, o protótipo Rust019teve **1,1633x de throughput do backbone** (14,04%menos tempo),12pares fixos,8testes técnicos e estados/tokens idênticos nos testes. APK ARM64assinado e verificado; **sem medição física no Snapdragon**. O piloto de treino conjunto018fez8atualizações e mudou224tensores/1.245.166valores, preservando10/12controles, porém0/2programas comthinking256e0/1no diagnóstico1024. **Rejeitado para promoção; principal geral preservado.** Variante94,8M é desenho dimensional, não modelo treinado nem prova contra4B.
 
