@@ -1,0 +1,31 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 173/675 [00:00<00:00, 1647.56it/s]Loading weights:  50%|█████     | 338/675 [00:00<00:00, 1156.32it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 2196.42it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794527099.399596, "attempt": null, "pid": 22557}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+COLLECTED py01 74
+COLLECTED py01_final 21
+COLLECTED py02 75
+COLLECTED py02_final 19
+COLLECTED py03 80
+COLLECTED py03_final 29
+COLLECTED py04 76
+COLLECTED py04_final 22
+COLLECTED web01 40
+COLLECTED web01_final 18
+COLLECTED web02 40
+COLLECTED web02_final 17
+COLLECTED web03 40
+COLLECTED web03_final 18
+COLLECTED web04 40
+COLLECTED web04_final 22
+UPDATE {"step": 1, "full_vocabulary_cross_entropy_before_update": 2.1533470153808594, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.36203670501708984, "taught_data_only": true}
+UPDATE {"step": 2, "full_vocabulary_cross_entropy_before_update": 1.8154789209365845, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.5439412593841553, "taught_data_only": true}
+UPDATE {"step": 3, "full_vocabulary_cross_entropy_before_update": 1.6924906969070435, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.6926329135894775, "taught_data_only": true}
+UPDATE {"step": 4, "full_vocabulary_cross_entropy_before_update": 1.093437671661377, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.8252168297767639, "taught_data_only": true}
+UPDATE {"step": 5, "full_vocabulary_cross_entropy_before_update": 1.4559887647628784, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.9354365468025208, "taught_data_only": true}
+UPDATE {"step": 6, "full_vocabulary_cross_entropy_before_update": 1.1267670392990112, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 1.0213205814361572, "taught_data_only": true}
+UPDATE {"step": 7, "full_vocabulary_cross_entropy_before_update": 0.680301308631897, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 1.1024141311645508, "taught_data_only": true}
+UPDATE {"step": 8, "full_vocabulary_cross_entropy_before_update": 1.5256547927856445, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 1.175744652748108, "taught_data_only": true}
+TRAINING_COMPLETE 69b43dc17d7781c133efb53d622988b35da70d13c99c21b77fb1e17888f67922

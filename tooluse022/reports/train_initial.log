@@ -1,0 +1,18 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  11%|█         | 75/675 [00:00<00:00, 740.52it/s]Loading weights:  29%|██▊       | 194/675 [00:00<00:00, 994.45it/s]Loading weights:  44%|████▎     | 294/675 [00:00<00:00, 867.09it/s]Loading weights:  57%|█████▋    | 383/675 [00:00<00:00, 865.76it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1451.84it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794527017.2373621, "attempt": null, "pid": 22491}
+PHASE_END checkpoint_load:best.pt 0.005
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/tooluse022/train.py", line 44, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/liquid-sense/tooluse022/train.py", line 29, in main
+    start=time.monotonic();model,tok,meta=load_e();before={n:tensor_hash(p) for n,p in model.named_parameters()};h0,y0,groups0=collect(model,tok)
+                                                                                                                               ^^^^^^^^^^^^^^^^^^
+  File "/home/agent/.local/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in inference_mode
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/liquid-sense/tooluse022/train.py", line 21, in collect
+    ids=tok.apply_chat_template(row['messages'],tools=config['schemas'],enable_thinking=False,add_generation_prompt=True,return_tensors='pt',return_dict=False);y=tok.encode(row['target']+tok.eos_token,add_special_tokens=False);assert y[-1]==248044
+                                                                                                                                                                                                                                          ^^^^^^^^^^^^^
+AssertionError
