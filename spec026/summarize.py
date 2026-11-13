@@ -41,12 +41,16 @@ def main():
         }
     speed = read('reports/speed_summary.json')
     assert speed['status'] == 'complete'
+    parity = read('reports/parity.json')
     summary = {
         'status': 'complete_experimental_pilot_no_target_promotion',
         'children': children,
         'actual_teacher_output_tokens': teacher_output_tokens,
         'standalone_quality': scores,
         'speculative_cpu_results': speed['models'],
+        'block_parity_checks': len(parity['rows']),
+        'block_parity_failures': sum(not r['identical'] for r in parity['rows']),
+        'timing_verification_modes': parity['selected_correctness_modes'],
         'target_weights_changed': False,
         'android_apk_changed': False,
         'limitations': [
@@ -57,6 +61,7 @@ def main():
             'Finite exact token agreement is not a universal numerical equivalence proof',
             'Minimum useful drafter size and speed at mature pretraining remain unknown',
             'One initialization seed per size; no architecture or seed sweep',
+            'Block path failed token parity for both children; primary timings use sequential verification, not parallel block acceleration',
         ],
     }
     save_json(H / 'summary.json', summary)
@@ -85,11 +90,15 @@ def main():
         lines.append(f"| {name} | {r['code_tasks']} | {r['code_cases']} | {r['general_correct']} |")
     lines += ['', 'Os testes novos usam os mesmos prompts, greedy e limites: 96 tokens para código e 32 para geral. '
               'Nenhuma solução é entregue no prompt. São testes pequenos próprios, sem comparação com grandes modelos públicos.', '',
-              '| Rascunhador | Propostas aceitas | Razão de velocidade¹ | Tokens finais iguais | p pareado² |',
-              '|---|---:|---:|---|---:|']
+              '| Rascunhador | Verificação | Propostas aceitas | Razão de velocidade¹ | Tokens finais iguais | p pareado² |',
+              '|---|---|---:|---:|---|---:|']
     for size, r in speed['models'].items():
-        lines.append(f"| {size} | {r['accepted']}/{r['proposed']} ({100*r['acceptance']:.2f}%) | {r['speed_ratio_total']:.3f}× | {r['all_target_token_streams_identical']} | {r['paired_sign_flip_p_two_sided']:.5f} |")
-    lines += ['', '¹ Tempo total sem especulação / tempo total com especulação. Abaixo de 1× significa mais lento. '
+        lines.append(f"| {size} | {r['verification_mode']} | {r['accepted']}/{r['proposed']} ({100*r['acceptance']:.2f}%) | {r['speed_ratio_total']:.3f}× | {r['all_target_token_streams_identical']} | {r['paired_sign_flip_p_two_sided']:.5f} |")
+    lines += ['', 'A via de verificação em bloco falhou na igualdade de tokens em duas das 16 comparações '
+              '(um mesmo prompt com ambos os filhos, no último token). Ambos usaram o fallback `serial` '
+              'previsto no protocolo. Essa via verifica sequencialmente e não demonstra aceleração por '
+              'verificação paralela. A aceleração equivalente em bloco permanece NÃO VALIDADA.', '',
+              '¹ Tempo total sem especulação / tempo total com especulação. Abaixo de 1× significa mais lento. '
               'Seis pares fixos por filho, ordem ABBA, três prefixes, orçamento de 32 tokens. '
               'Modelos residentes: tokenização, prefill, rascunhos, verificações, snapshots, rollback, '
               'correções e decodificação incluídos; carga dos pesos separada. Tempos de CPU x86, quota de dois CPUs e quatro threads; '
