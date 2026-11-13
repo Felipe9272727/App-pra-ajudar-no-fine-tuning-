@@ -44,14 +44,14 @@ public final class AgentRunner {
             String raw=answer.optString("raw_text",answer.optString("text"));JSONObject call=null;
             try{
                 call=ToolExecutor.parse(answer.optString("text",raw),!answer.optBoolean("reasoning_complete",true));
-                if(call==null&&answer.optString("text",ToolExecutor.content(raw)).trim().isEmpty())throw new ToolExecutor.CallError("EMPTY_FINAL","O modelo encerrou sem uma resposta final.");
+                if(call==null&&answer.optString("text",ToolExecutor.content(raw)).replace("<think>","").replace("</think>","").trim().isEmpty())throw new ToolExecutor.CallError("EMPTY_FINAL","O modelo encerrou sem uma resposta final utilizável.");
             }catch(Exception e){
                 String code=e instanceof ToolExecutor.CallError?((ToolExecutor.CallError)e).code:"CALL_FORMAT";record.put("parse_error_code",code).put("parse_error",e.toString());events.diagnostic(records);
                 if(repairs++==0&&turn<5){focusFinal=true;control(messages,"A etapa anterior não produziu uma chamada válida ou resposta final ("+code+"). Refaça a próxima etapa: use uma única chamada completa no formato definido, ou conclua com os resultados reais já recebidos. Não invente execuções nem fontes.");continue;}
                 String detail=code.equals("CALL_INCOMPLETE")&&answer.optString("finish_reason").equals("length")?"A chamada atingiu o limite antes de ficar completa.":"O modelo não conseguiu corrigir o formato da chamada ("+code+").";
                 return failure(code,detail+" Toque em Continuar resposta; o diagnóstico local foi guardado.");
             }
-            if(call==null)return summarize(answer);
+            if(call==null)return summarize(answer.put("text",ToolExecutor.content(answer.optString("text",raw))));
             String name=call.getString("name");JSONObject args=call.getJSONObject("arguments");String key=name+"\n"+args.toString();
             if(successful.contains(key)){
                 record.put("duplicate_successful_call_suppressed",true);events.diagnostic(records);focusFinal=true;
@@ -60,6 +60,7 @@ public final class AgentRunner {
             if(toolsTrace.length()>=4)return failure("TOOL_CALL_LIMIT","Foram feitas quatro chamadas. Os resultados reais continuam na conversa; toque em Continuar resposta.");
             JSONObject observation;
             try{observation=tools.execute(call);}catch(Exception e){observation=new JSONObject().put("tool",name).put("ok",false).put("error",ToolExecutor.safe(e.toString(),1000));}
+            if(name.equals("run_python")&&observation.optBoolean("ok")&&observation.optString("stdout","").trim().isEmpty())observation.put("stdout_empty",true).put("runtime_note","O programa terminou sem imprimir saída. Esta ferramenta executa um script, sem retornar automaticamente o valor de expressões. Para observar um valor, imprima-o com print(...). Não afirme um resultado numérico que não foi retornado.");
             toolsTrace.put(new JSONObject().put("call",call).put("observation",observation));record.put("call",call).put("observation",observation);events.diagnostic(records);events.tool(call,observation);
             if(observation.optBoolean("ok"))successful.add(key);
             append(messages,new JSONObject().put("role","assistant").put("content",answer.optString("text",ToolExecutor.content(raw))));

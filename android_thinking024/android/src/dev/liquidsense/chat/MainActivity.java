@@ -107,6 +107,7 @@ public final class MainActivity extends Activity {
         if(destroyed||!busy)return;
         if(total==0){pending.setText("Raciocinando…");status.setText("Pensando no aparelho · "+done+" tokens");return;}
         if(text.isEmpty()){status.setText("Lendo contexto · "+done+"/"+total+" tokens");return;}
+        if(text.replace("<think>","").replace("</think>","").trim().isEmpty()){pending.setText("Ainda não há uma resposta final utilizável…");status.setText("Você pode parar a geração e escolher o modo Normal.");return;}
         if(text.contains("<tool_call>")){pending.setText("Preparando uma chamada completa…");status.setText("Planejando a próxima ferramenta…");return;}
         pending.setText(text);if(text.contains("```"))pending.setTypeface(Typeface.MONOSPACE);status.setText("Escrevendo a resposta…");bottom();
     });}
@@ -139,7 +140,7 @@ public final class MainActivity extends Activity {
         if(destroyed)return;StringBuilder text=new StringBuilder();boolean web=result.optString("tool").equals("search_web");text.append(web?"BUSCA NA WEB\n":"PYTHON · EXECUÇÃO LOCAL\n");
         if(!result.optBoolean("ok")){text.append("Não concluído: ").append(result.optString("error","Nenhum resultado retornado."));}
         else if(web){JSONArray items=result.optJSONArray("items");if(items!=null)for(int i=0;i<items.length();i++){JSONObject x=items.optJSONObject(i);if(x!=null)text.append("\n").append(x.optString("title")).append("\n").append(x.optString("url")).append("\n").append(x.optString("snippet")).append("\n");}}
-        else{text.append(result.optString("stdout","(sem saída)"));}
+        else{String output=result.optString("stdout","");text.append(output.isEmpty()?"O programa terminou sem imprimir saída.":output);}
         TextView card=bubble(text.toString().trim(),false);card.setTextSize(13);android.text.util.Linkify.addLinks(card,android.text.util.Linkify.WEB_URLS);card.setLinkTextColor(accent);bottom();
     }
     private void restoreBubbles(){

@@ -66,6 +66,7 @@ pub fn complete_action(text:&str)->bool {
  serde_json::from_str::<serde_json::Value>(s).ok().is_some_and(|v|json_call(&v))
 }
 fn common_prefix(a:&[u32],b:&[u32])->usize{a.iter().zip(b).take_while(|(a,b)|a==b).count()}
+fn is_stop(next:Option<u32>,specialist:bool)->bool {next==Some(248044)||(!specialist&&next==Some(248046))}
 impl Chat {
  pub fn generate<F>(&self,messages:&[Message],max_tokens:usize,cancel:&AtomicBool,update:F)->Result<Answer> where F:FnMut(&str,usize,usize){
   self.generate_profile(messages,GenerationOptions{thinking:false,reasoning_tokens:0,response_tokens:max_tokens.clamp(16,512),context_tokens:if self.tools_prefix.is_some(){4096}else{2048}},cancel,update)
@@ -99,7 +100,7 @@ impl Chat {
    let at_thought_limit=!thinking_done&&reasoning>=o.reasoning_tokens;
    if thinking_done&&response>=o.response_tokens{reason="length";break;}
    let next=if at_thought_limit{None}else{let logits=self.model.logits(&hidden);Some(crate::kernels::greedy(&logits)as u32)};
-   let eos=next==Some(248044)||(!o.thinking&&self.tools_prefix.is_none()&&self.model.manifest.source_checkpoint_sha256!=crate::model::SPECIALIST&&next==Some(248046));
+   let eos=is_stop(next,self.model.manifest.source_checkpoint_sha256==crate::model::SPECIALIST);
    if !thinking_done&&(at_thought_limit||eos){
     let close=encode("</think>\n\n")?;forced=true;
     for id in close {generated.push(id);forced_tokens+=1;match self.model.token(&mut session,id,cancel,false){Ok((h,_))=>hidden=h,Err(e)if e.to_string()=="cancelled"=>{reason="cancelled";stopped=true;break},Err(e)=>return Err(e)}}
@@ -121,6 +122,8 @@ impl Chat {
 #[cfg(test)]mod tests{
  use super::*;
  #[test]fn prefix_tokens_match(){assert_eq!(common_prefix(&[1,2,8],&[1,2,9]),2);}
+ #[test]fn general_chat_ends_at_im_end(){assert!(is_stop(Some(248046),false));assert!(is_stop(Some(248044),false));assert!(!is_stop(Some(248069),false));}
+ #[test]fn specialist_preserves_previous_stop_policy(){assert!(!is_stop(Some(248046),true));assert!(is_stop(Some(248044),true));}
  #[test]fn incomplete_call_not_complete(){assert!(!complete_action("<tool_call><function=run_python><parameter=code>print('</tool_call>')"));}
  #[test]fn full_xml_complete(){assert!(complete_action("<tool_call>\n<function=run_python><parameter=code>print(4)</parameter></function></tool_call>"));}
  #[test]fn thought_tools_are_not_actions(){assert!(split_content("I might use <tool_call></tool_call>",true).is_none());}

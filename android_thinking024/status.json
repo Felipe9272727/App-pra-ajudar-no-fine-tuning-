@@ -1,5 +1,5 @@
 {
-  "status": "native_QA_in_progress_not_released",
+  "status": "correcting_general_im_end_stop_rule_before_release",
   "weights_changed": false,
   "source_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
   "completed": [
@@ -9,15 +9,17 @@
     "Java25agent/parser checks",
     "byte-exact signed0.3archive reconstructed and hash verified",
     "baseline arithmetic323",
-    "forced32thought+64response bookkeeping, semantic failure recorded"
+    "forced32thought+64response bookkeeping, semantic failure recorded",
+    "full3072token probe failed/repeated tags; oldcontextguard crossed naturally",
+    "actual Python expression executed but no stdout; not counted as verified numeric result",
+    "actual Java HTTPS lookup math.cos passed with managed host proxy"
   ],
-  "active": "fullProfundo1024+2048 arithmetic same input; one model worker",
+  "active": "Rustrebuild; no model worker",
   "pending": [
-    "actual tool agent smoke",
-    "context above2048 smoke",
-    "select default from QA",
-    "signed APK",
-    "Gofile delivery"
+    "compile fixed stop rule",
+    "native Python smoke with empty stdout feedback",
+    "refresh staging native library",
+    "sign and deliver"
   ],
   "no_new_weight_training": true,
   "old023sealed4questions_not_queried": true

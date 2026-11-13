@@ -36,6 +36,11 @@ def prepare():
 def seal(existing_config=False):
  unsigned=OUT/'unsigned.apk';assert unsigned.exists();final=OUT/'LiquidSense-0.4.0-thinking-preview.apk';assert not final.exists();use=False;config={'use_validated_dense':use,'model_parent':'general_best','neural_loop_visits':56,'physical_layers':32,'tools_variant':'native_supervised023' if use else 'preserved_general_tools_runtime','experimental':True,'general_quality_promotion':False,'context_tokens':16384,'generation_presets':{'normal':{'thinking':False,'reasoning_tokens':0,'response_tokens':2048},'profundo':{'thinking':True,'reasoning_tokens':1024,'response_tokens':2048},'extenso':{'thinking':True,'reasoning_tokens':2048,'response_tokens':4096}},'default_general_profile':'normal','agent_max_rounds':6,'agent_max_actual_tools':4,'task_output_limit':16384}
  with zipfile.ZipFile(unsigned,'a',allowZip64=False) as z:
+  # Staging may precede the final native rebuild; replace only unsigned library.
+  native=Path('/dev/shm/liquid-android/prebuilt/thinking024/libliquid_sense.so').read_bytes();entry='lib/arm64-v8a/libliquid_sense.so';old=z.getinfo(entry)
+  if z.read(old)!=native:
+   z.filelist.remove(old);del z.NameToInfo[entry];z.writestr(aligned_info(z,entry,len(native),zipfile.ZIP_DEFLATED),native)
+  assert hashlib.sha256(z.read(entry)).hexdigest()==hashlib.sha256(native).hexdigest()
   present='assets/build_config.json' in z.namelist();assert not present or existing_config,'Inspect partial sealing state'
   if use:
    chosen=json.loads((HERE/'candidate_artifact.json').read_text());m=json.loads((HERE/chosen['metadata']).read_text());p=HERE/chosen['weights'];assert sha(p)==m['sha256'];config['dense_sha256']=m['sha256'];z.writestr(aligned_info(z,'assets/down_proj.bf16.bin',p.stat().st_size,zipfile.ZIP_STORED),p.read_bytes())

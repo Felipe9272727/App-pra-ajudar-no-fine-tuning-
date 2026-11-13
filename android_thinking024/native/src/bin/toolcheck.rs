@@ -8,7 +8,7 @@ fn main()->Result<()> {
     let fixtures:Vec<serde_json::Value>=serde_json::from_slice(&std::fs::read("tooluse022/reports/tool_template_fixtures.json")?)?;
     for f in fixtures {let ms:Vec<Message>=serde_json::from_value(f["messages"].clone())?;ensure!(render_tools(&prefix,&ms)==f["expected"].as_str().unwrap(),"Native tools template mismatch");}
     if args.len()==1 {println!("TOOLS_TEMPLATES_MATCH_HF");return Ok(());}
-    let loc:serde_json::Value=serde_json::from_slice(&std::fs::read("tooluse023/reports/model_locator.json")?)?;
+    let loc:serde_json::Value=serde_json::from_slice(&std::fs::read("android_thinking024/reports/model_locator.json")?)?;
     let file=File::open(loc["path"].as_str().unwrap())?;let mut model=Model::region(&file,loc["offset"].as_u64().unwrap(),loc["length"].as_u64().unwrap() as usize)?;model.optimize=true;
     let spec=&model.manifest.tensors["layers.31.mlp.down_proj.weight"];ensure!(spec.kind=="bf16","Expected exactBF16");let mut base=file.try_clone()?;base.seek(SeekFrom::Start(loc["offset"].as_u64().unwrap()+spec.offset as u64))?;let mut bytes=vec![0u8;spec.bytes];base.read_exact(&mut bytes)?;
     let x:Vec<f32>=(0..3584).map(|i|(i as f32-1000.)*0.001).collect();let reference=model.mv("layers.31.mlp.down_proj.weight",&x);model.attach_dense(bytes)?;let repeated=model.mv("layers.31.mlp.down_proj.weight",&x);ensure!(reference.iter().zip(&repeated).all(|(a,b)|a.to_bits()==b.to_bits()),"Dense override changed reference accumulation");
