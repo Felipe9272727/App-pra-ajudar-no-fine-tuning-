@@ -1,0 +1,33 @@
+{
+  "format": "zlib-native-binaries-v1",
+  "phone_execution_verified": false,
+  "items": [
+    {
+      "name": "python_arm",
+      "raw_path": "/dev/shm/liquid-android/tools022/python-arm/libliquid_python.so",
+      "raw_bytes": 2485880,
+      "raw_sha256": "876a6aa8204a686f501120fb3b2d3b264bbad44c72f19a3d9133e25ff017be2a",
+      "compressed_file": "tooluse022/artifacts/python_arm.zlib.bin",
+      "compressed_bytes": 794403,
+      "compressed_sha256": "f5b8be0da867c221445b173a9479f1038f3561a5a5ca1d5dc7cd8e900393c668"
+    },
+    {
+      "name": "rust_arm",
+      "raw_path": "/dev/shm/liquid-android/prebuilt/tools022/libliquid_sense.so",
+      "raw_bytes": 4853808,
+      "raw_sha256": "d5d3429db04966cbca47aa04edb5a626e0dd807000949091664990e8770f66c3",
+      "compressed_file": "tooluse022/artifacts/rust_arm.zlib.bin",
+      "compressed_bytes": 1740915,
+      "compressed_sha256": "ba0cb76ccdc4998bfbe710a12ca652598d35be5b7937094011a60cc64d377745"
+    },
+    {
+      "name": "rust_host_toolcheck",
+      "raw_path": "/dev/shm/liquid-android/prebuilt/tools022/toolcheck",
+      "raw_bytes": 5089736,
+      "raw_sha256": "313c81be323d37c2a71b5d0086b224bdcddf144954f041016d4cbc95792a58bd",
+      "compressed_file": "tooluse022/artifacts/rust_host_toolcheck.zlib.bin",
+      "compressed_bytes": 1763792,
+      "compressed_sha256": "77bf93d1a259b4807e0b5f5949dfd814c1be9f2e7483a7119186cc9658d0aa1c"
+    }
+  ]
+}

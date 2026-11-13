@@ -1,0 +1,5 @@
+{
+  "metadata": "checkpoints/projected/final.json",
+  "weights": "checkpoints/projected/down_proj.bf16.bin",
+  "selection_reason": "deterministic enforcement of preregistered factor trust bound, no validation selection"
+}

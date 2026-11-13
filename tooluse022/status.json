@@ -1,0 +1,10 @@
+{
+  "status": "complete_rejected",
+  "model_process_active": false,
+  "checkpoint_promoted": false,
+  "general_best_unchanged": true,
+  "specialistE_unchanged": true,
+  "toolsAPK_released": false,
+  "tools_native_UI_and_interpreter_compiled": true,
+  "continuation": "tooluse023/PROTOCOL.md; new native-cache hypothesis on preserved general, separate fixed trial"
+}

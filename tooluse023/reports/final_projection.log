@@ -1,0 +1,1 @@
+CONSTRAINT_PROJECTED {"reason": "FP32 norm reduction underestimation", "original_factors_relative_norm_FP64": 0.010002719140743912, "scale": 0.9997271601146138, "no_new_gradient_steps": true, "no_candidate_outputs_seen": true, "original_weights_factors_optimizer_retained": true} 0.009999990294992923
