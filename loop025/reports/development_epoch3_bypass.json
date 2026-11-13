@@ -1,0 +1,128 @@
+{
+  "variant": "epoch3",
+  "phase": "development",
+  "controls": [],
+  "code": [
+    {
+      "id": "prefix_offset_0",
+      "split": "taught_fit",
+      "output": "def solve(xs):\n    out = []\n    total = 2\n    for x in xs):\n        total += x)\n        out.append(total + x))\n        out.append(total + x))\n        total += x)\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total +",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "ended_eos": false,
+      "seconds_descriptive_only": 48.847304786002496,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.05044005811214447,
+          "cosine": 0.9987301826477051,
+          "first_norm": 6.405542373657227,
+          "second_norm": 6.41248083114624
+        }
+      ],
+      "second_contribution_bypassed": true,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 20,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 4,
+      "code": "def solve(xs):\n    out = []\n    total = 2\n    for x in xs):\n        total += x)\n        out.append(total + x))\n        out.append(total + x))\n        total += x)\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total +"
+    },
+    {
+      "id": "above_0",
+      "split": "taught_fit",
+      "output": "def solve(xs):\n    return sum(1 for x in xs)\n",
+      "new_tokens": 17,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 6.616133912000805,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.04792765527963638,
+          "cosine": 0.9988511204719543,
+          "first_norm": 6.589315414428711,
+          "second_norm": 6.58371639251709
+        }
+      ],
+      "second_contribution_bypassed": true,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 2,
+      "total": 20,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    return sum(1 for x in xs)"
+    }
+  ],
+  "protocol": {
+    "thinking": false,
+    "greedy": true,
+    "seed": 0,
+    "threads": 4,
+    "code_budget": 160,
+    "control_budget": 64,
+    "eos_ids": [
+      248044,
+      248046
+    ],
+    "reference_answers_or_tests_in_generation_inputs": false,
+    "framework": "PyTorch CPU BF16 eager",
+    "bypass_diagnostic_only": true
+  },
+  "source_metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    },
+    "epoch": 3,
+    "checkpoint_sha256": "b10ee50298448780e1932f3f7d126db8d37f45a8d5914ed05cd745f3fe3f456d"
+  },
+  "status": "complete",
+  "controls_correct": 0,
+  "taught_tasks_passed": 0,
+  "validation_tasks_passed": 0,
+  "final_tasks_passed": 0
+}

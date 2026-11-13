@@ -1,0 +1,386 @@
+{
+  "variant": "epoch3",
+  "phase": "development",
+  "controls": [
+    {
+      "output": "Sb",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.8075876860093558,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_0",
+      "correct": true
+    },
+    {
+      "output": "children",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.3018083299975842,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_1",
+      "correct": true
+    },
+    {
+      "output": "Santiago",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.60274253100215,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_2",
+      "correct": true
+    },
+    {
+      "output": "heart",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.1194109589996515,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_3",
+      "correct": true
+    },
+    {
+      "output": "56",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.9077341969968984,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_product",
+      "correct": true
+    },
+    {
+      "output": "Ana",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.4938679429906188,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_order",
+      "correct": true
+    },
+    {
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.6054965060029645,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_subtract",
+      "correct": true
+    },
+    {
+      "output": "17",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.5781484629987972,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_half",
+      "correct": true
+    },
+    {
+      "output": "frío",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.5406217080017086,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_opposite",
+      "correct": true
+    },
+    {
+      "output": "went",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.0269656970049255,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_past",
+      "correct": true
+    },
+    {
+      "output": "animais",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.3296179579920135,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_plural",
+      "correct": true
+    },
+    {
+      "output": "água",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.5450242049992085,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_translate",
+      "correct": true
+    }
+  ],
+  "code": [
+    {
+      "id": "prefix_offset_0",
+      "split": "taught_fit",
+      "output": "def solve(xs):\n    out = []\n    total = 2\n    for x in xs):\n        total += x)\n        out.append(total + x))\n        out.append(total + x))\n        total += x)\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total +",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "ended_eos": false,
+      "seconds_descriptive_only": 50.11951672700525,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.05044005811214447,
+          "cosine": 0.9987301826477051,
+          "first_norm": 6.405542373657227,
+          "second_norm": 6.41248083114624
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 20,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 4,
+      "code": "def solve(xs):\n    out = []\n    total = 2\n    for x in xs):\n        total += x)\n        out.append(total + x))\n        out.append(total + x))\n        total += x)\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total + x))\n        out.append(total +"
+    },
+    {
+      "id": "above_0",
+      "split": "taught_fit",
+      "output": "def solve(xs):\n    return sum(1 for x in xs)\n",
+      "new_tokens": 17,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 6.146405521998531,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.04792765527963638,
+          "cosine": 0.9988511204719543,
+          "first_norm": 6.589315414428711,
+          "second_norm": 6.58371639251709
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 2,
+      "total": 20,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    return sum(1 for x in xs)"
+    },
+    {
+      "id": "L025V/rotate",
+      "split": "validation",
+      "output": "def solve(xs):\n    return [x for x in xs]\n",
+      "new_tokens": 16,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 5.6109940219903365,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.050772421061992645,
+          "cosine": 0.9987114071846008,
+          "first_norm": 6.385168075561523,
+          "second_norm": 6.367825508117676
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 3,
+      "total": 9,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    return [x for x in xs]"
+    },
+    {
+      "id": "L025V/brackets",
+      "split": "validation",
+      "output": "def solve(s):\n    return all(\n        (\n            (\n                (\n                    (\n                        (\n                            (\n                                (\n                                    (\n                                        (\n                                            (\n                                                (\n                                                    (\n                                                        (\n                                                            (\n                                                                (\n                                                                    (\n                                                                        (\n                                                                            (\n                                                                                (\n                                                                                    (\n                                                                                        (\n                                                                                            (\n                                                                                                (\n                                                                                                    (\n                                                                                                        (\n                                                                                                            (\n                                                                                                                (\n                                                                                                                    (\n                                                                                                                        (\n                                                                                                                            (\n                                                                                                                                (\n                                                                                                                                    (\n                                                                                                                                        (\n                                                                                                                                            (\n                                                                                                                                                (\n                                                                                                                                                    (\n                                                                                                                                                        (\n                                                                                                                                                            (\n                                                                                                                                                                (\n                                                                                                                                                                    (\n                                                                                                                                                                        (\n                                                                                                                                                    (\n                                                                                                                                                        (",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "ended_eos": false,
+      "seconds_descriptive_only": 48.379948749992764,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.05161165073513985,
+          "cosine": 0.9986674785614014,
+          "first_norm": 6.340065002441406,
+          "second_norm": 6.333360195159912
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 10,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 45,
+      "code": "def solve(s):\n    return all(\n        (\n            (\n                (\n                    (\n                        (\n                            (\n                                (\n                                    (\n                                        (\n                                            (\n                                                (\n                                                    (\n                                                        (\n                                                            (\n                                                                (\n                                                                    (\n                                                                        (\n                                                                            (\n                                                                                (\n                                                                                    (\n                                                                                        (\n                                                                                            (\n                                                                                                (\n                                                                                                    (\n                                                                                                        (\n                                                                                                            (\n                                                                                                                (\n                                                                                                                    (\n                                                                                                                        (\n                                                                                                                            (\n                                                                                                                                (\n                                                                                                                                    (\n                                                                                                                                        (\n                                                                                                                                            (\n                                                                                                                                                (\n                                                                                                                                                    (\n                                                                                                                                                        (\n                                                                                                                                                            (\n                                                                                                                                                                (\n                                                                                                                                                                    (\n                                                                                                                                                                        (\n                                                                                                                                                    (\n                                                                                                                                                        ("
+    },
+    {
+      "id": "L025V/compact",
+      "split": "validation",
+      "output": "def solve(xs):\n    return [max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "ended_eos": false,
+      "seconds_descriptive_only": 50.95598034199793,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.047922585159540176,
+          "cosine": 0.9988532066345215,
+          "first_norm": 6.581518173217773,
+          "second_norm": 6.561455726623535
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 8,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 2,
+      "code": "def solve(xs):\n    return [max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max(1, min(100, max("
+    },
+    {
+      "id": "L025V/subarray",
+      "split": "validation",
+      "output": "def solve(xs):\n    return max(sum(min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0",
+      "new_tokens": 160,
+      "hit_limit": true,
+      "ended_eos": false,
+      "seconds_descriptive_only": 49.40969052599394,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.04971359670162201,
+          "cosine": 0.9987666606903076,
+          "first_norm": 6.281901836395264,
+          "second_norm": 6.25890588760376
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 9,
+      "all_passed": false,
+      "category": "SyntaxError",
+      "line": 2,
+      "code": "def solve(xs):\n    return max(sum(min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0, min(2, max(0"
+    }
+  ],
+  "protocol": {
+    "thinking": false,
+    "greedy": true,
+    "seed": 0,
+    "threads": 4,
+    "code_budget": 160,
+    "control_budget": 64,
+    "eos_ids": [
+      248044,
+      248046
+    ],
+    "reference_answers_or_tests_in_generation_inputs": false,
+    "framework": "PyTorch CPU BF16 eager",
+    "bypass_diagnostic_only": false
+  },
+  "source_metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    },
+    "epoch": 3,
+    "checkpoint_sha256": "b10ee50298448780e1932f3f7d126db8d37f45a8d5914ed05cd745f3fe3f456d"
+  },
+  "status": "complete",
+  "controls_correct": 12,
+  "taught_tasks_passed": 0,
+  "validation_tasks_passed": 0,
+  "final_tasks_passed": 0
+}
