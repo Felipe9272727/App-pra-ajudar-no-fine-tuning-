@@ -1,0 +1,11 @@
+{
+  "status": "no_update_preflight_passed",
+  "loss": 12.426916122436523,
+  "all_parameters_have_gradients": true,
+  "nonzero_gradient_tensor_count": 546,
+  "all_parameter_tensors": 546,
+  "both_actual_visits_recomputed": true,
+  "all_initial_hashes_unchanged": true,
+  "rss_kb": 648728,
+  "peak_rss_kb": 710572
+}
