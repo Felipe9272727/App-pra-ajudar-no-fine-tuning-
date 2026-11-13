@@ -1,4 +1,4 @@
-"""Stream exact preserved general pack into a separate Tools APK; sign later.
+"""Stream exact preserved general pack into the Tools0.4 update; sign later.
 
 prepare: UI, native libraries, shared assets and verified parent model only.
 seal: attach eligible weights/config, sign, verify; never auto-promote a failure.
@@ -34,7 +34,7 @@ def prepare():
   assert n==man['pack']['bytes'] and h.hexdigest()==PACK_SHA
  loc={'path':str(unsigned),'offset':offset,'length':n,'sha256':PACK_SHA,'source':'preserved general best, all546text tensors'};(HERE/'reports/model_locator.json').write_text(json.dumps(loc,indent=2)+'\n');print('PARENT_PACK_PREPARED',n,flush=True)
 def seal(existing_config=False):
- unsigned=OUT/'unsigned.apk';assert unsigned.exists();final=OUT/'LiquidSense-0.4.0-thinking-preview.apk';assert not final.exists();use=False;config={'use_validated_dense':use,'model_parent':'general_best','neural_loop_visits':56,'physical_layers':32,'tools_variant':'native_supervised023' if use else 'preserved_general_tools_runtime','experimental':True,'general_quality_promotion':False,'context_tokens':16384,'generation_presets':{'normal':{'thinking':False,'reasoning_tokens':0,'response_tokens':2048},'profundo':{'thinking':True,'reasoning_tokens':1024,'response_tokens':2048},'extenso':{'thinking':True,'reasoning_tokens':2048,'response_tokens':4096}},'default_general_profile':'profundo','agent_max_rounds':6,'agent_max_actual_tools':4,'task_output_limit':16384}
+ unsigned=OUT/'unsigned.apk';assert unsigned.exists();final=OUT/'LiquidSense-0.4.0-thinking-preview.apk';assert not final.exists();use=False;config={'use_validated_dense':use,'model_parent':'general_best','neural_loop_visits':56,'physical_layers':32,'tools_variant':'native_supervised023' if use else 'preserved_general_tools_runtime','experimental':True,'general_quality_promotion':False,'context_tokens':16384,'generation_presets':{'normal':{'thinking':False,'reasoning_tokens':0,'response_tokens':2048},'profundo':{'thinking':True,'reasoning_tokens':1024,'response_tokens':2048},'extenso':{'thinking':True,'reasoning_tokens':2048,'response_tokens':4096}},'default_general_profile':'normal','agent_max_rounds':6,'agent_max_actual_tools':4,'task_output_limit':16384}
  with zipfile.ZipFile(unsigned,'a',allowZip64=False) as z:
   present='assets/build_config.json' in z.namelist();assert not present or existing_config,'Inspect partial sealing state'
   if use:

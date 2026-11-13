@@ -10,9 +10,10 @@ No weight training or promotion. Same exact general pack6c774a... and56neural
 visits/32physical layers with mHC/temporal operators. Tools app software update,
 same applicationID/certificate,versionCode2,0.4preview; histories preserved.
 
-Presets: Normal0thinking+2048response, Profundo1024+2048(default general),
-Extenso2048+4096. Specialist defaults Normal because its prior tests were
-nonthinking. Per-model settings. Context16384; task output bound16384tokens,
+Presets: Normal0thinking+2048response, Profundo1024+2048(experimental),
+Extenso2048+4096. All variants default Normal; the initial proposal of default Profundo
+was withdrawn after observed repetition and earlier poor thinking diagnostics.
+Longer modes remain explicit user choices. Per-model settings. Context16384; task output bound16384tokens,
 max4actual tools/6model rounds, one syntax-repair round, no execution of partial
 calls. Reasoning budget can be closed with protocol tokens to reserve the
 separate response allowance; record forced closure and actual reasoning tokens.

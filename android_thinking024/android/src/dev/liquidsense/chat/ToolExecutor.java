@@ -48,7 +48,7 @@ public final class ToolExecutor {
         if(!name.equals("search_web")&&!name.equals("run_python"))throw new CallError("UNKNOWN_TOOL","Ferramenta não disponível.");String key=name.equals("search_web")?"query":"code";
         if(args.length()!=1||!(args.opt(key) instanceof String))throw new CallError("CALL_ARGUMENTS","Argumentos incompatíveis com a ferramenta.");String value=args.getString(key);
         if(value.trim().isEmpty())throw new CallError("CALL_ARGUMENTS","Argumento vazio.");
-        if(value.length()>(key.equals("query")?300:6000))throw new CallError("CALL_ARGUMENT_LIMIT",key.equals("query")?"A consulta ultrapassou300caracteres.":"O programa ultrapassou6000caracteres.");
+        if(value.length()>(key.equals("query")?300:6000))throw new CallError("CALL_ARGUMENT_LIMIT",key.equals("query")?"A consulta ultrapassou 300 caracteres.":"O programa ultrapassou 6.000 caracteres.");
         return new JSONObject().put("name",name).put("arguments",args);
     }
     public static String safe(String s,int max){
