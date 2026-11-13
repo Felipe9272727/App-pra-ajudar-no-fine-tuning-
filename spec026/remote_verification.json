@@ -1,0 +1,11 @@
+{
+  "verified_commit": "94c7b110011d411eca7aca4c35eb22cb0f7d9831",
+  "matching_files": 349,
+  "manifest_entries": 348,
+  "manifest_file_itself_verified": true,
+  "all_git_blob_identities_match": true,
+  "all_six_checkpoint_archives_included": true,
+  "target_general_unchanged": true,
+  "model_workers_active": 0,
+  "verification_scope": "entire manifest plus manifest itself; receipt excluded from its own proof"
+}
