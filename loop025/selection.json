@@ -1,0 +1,257 @@
+{
+  "selected_epoch": null,
+  "rows": [
+    {
+      "epoch": 1,
+      "validation_tasks": 0,
+      "validation_cases": 9,
+      "taught_tasks": 0,
+      "controls": 8,
+      "lost_parent_correct_cases": [
+        [
+          "L025V/rotate",
+          0
+        ],
+        [
+          "L025V/rotate",
+          1
+        ],
+        [
+          "L025V/rotate",
+          3
+        ],
+        [
+          "L025V/rotate",
+          5
+        ],
+        [
+          "L025V/brackets",
+          0
+        ],
+        [
+          "L025V/brackets",
+          1
+        ],
+        [
+          "L025V/brackets",
+          2
+        ],
+        [
+          "L025V/brackets",
+          3
+        ],
+        [
+          "L025V/brackets",
+          6
+        ],
+        [
+          "L025V/brackets",
+          9
+        ],
+        [
+          "L025V/subarray",
+          0
+        ],
+        [
+          "L025V/subarray",
+          1
+        ],
+        [
+          "L025V/subarray",
+          3
+        ],
+        [
+          "L025V/subarray",
+          4
+        ],
+        [
+          "L025V/subarray",
+          5
+        ],
+        [
+          "L025V/subarray",
+          7
+        ],
+        [
+          "L025V/subarray",
+          8
+        ]
+      ],
+      "lost_parent_correct_controls": [
+        "dev_0",
+        "reason_subtract"
+      ],
+      "eligible": false
+    },
+    {
+      "epoch": 2,
+      "validation_tasks": 0,
+      "validation_cases": 6,
+      "taught_tasks": 0,
+      "controls": 10,
+      "lost_parent_correct_cases": [
+        [
+          "L025V/rotate",
+          0
+        ],
+        [
+          "L025V/rotate",
+          1
+        ],
+        [
+          "L025V/rotate",
+          3
+        ],
+        [
+          "L025V/rotate",
+          5
+        ],
+        [
+          "L025V/brackets",
+          5
+        ],
+        [
+          "L025V/brackets",
+          7
+        ],
+        [
+          "L025V/compact",
+          0
+        ],
+        [
+          "L025V/subarray",
+          0
+        ],
+        [
+          "L025V/subarray",
+          1
+        ],
+        [
+          "L025V/subarray",
+          2
+        ],
+        [
+          "L025V/subarray",
+          3
+        ],
+        [
+          "L025V/subarray",
+          4
+        ],
+        [
+          "L025V/subarray",
+          5
+        ],
+        [
+          "L025V/subarray",
+          6
+        ],
+        [
+          "L025V/subarray",
+          7
+        ],
+        [
+          "L025V/subarray",
+          8
+        ]
+      ],
+      "lost_parent_correct_controls": [
+        "dev_2",
+        "reason_product"
+      ],
+      "eligible": false
+    },
+    {
+      "epoch": 3,
+      "validation_tasks": 0,
+      "validation_cases": 3,
+      "taught_tasks": 0,
+      "controls": 12,
+      "lost_parent_correct_cases": [
+        [
+          "L025V/rotate",
+          5
+        ],
+        [
+          "L025V/brackets",
+          0
+        ],
+        [
+          "L025V/brackets",
+          1
+        ],
+        [
+          "L025V/brackets",
+          2
+        ],
+        [
+          "L025V/brackets",
+          3
+        ],
+        [
+          "L025V/brackets",
+          5
+        ],
+        [
+          "L025V/brackets",
+          6
+        ],
+        [
+          "L025V/brackets",
+          7
+        ],
+        [
+          "L025V/brackets",
+          9
+        ],
+        [
+          "L025V/compact",
+          0
+        ],
+        [
+          "L025V/subarray",
+          0
+        ],
+        [
+          "L025V/subarray",
+          1
+        ],
+        [
+          "L025V/subarray",
+          2
+        ],
+        [
+          "L025V/subarray",
+          3
+        ],
+        [
+          "L025V/subarray",
+          4
+        ],
+        [
+          "L025V/subarray",
+          5
+        ],
+        [
+          "L025V/subarray",
+          6
+        ],
+        [
+          "L025V/subarray",
+          7
+        ],
+        [
+          "L025V/subarray",
+          8
+        ]
+      ],
+      "lost_parent_correct_controls": [],
+      "eligible": false
+    }
+  ],
+  "parent_validation_tasks": 1,
+  "parent_controls": 10,
+  "final_gate_open": false,
+  "general_checkpoint_replaced": false,
+  "reason": "no epoch meets declared gate; retain general and leave final unused"
+}

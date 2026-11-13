@@ -1,7 +1,10 @@
 {
-  "status": "preparing_registered_study",
-  "optimizer_steps": 0,
+  "status": "comparison_complete_pending_report",
+  "optimizer_steps": 24,
+  "epochs": 3,
   "model_process_active": false,
   "checkpoint_promoted": false,
-  "independent_test_queried": false
+  "selected_epoch": null,
+  "independent_test_queried": false,
+  "active_runs": []
 }
