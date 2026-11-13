@@ -1,0 +1,1194 @@
+{
+  "format": "full-conversation-causal-LM-blocks-v1",
+  "samples": [
+    {
+      "id": "clip_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 25
+    },
+    {
+      "id": "clip_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 25
+    },
+    {
+      "id": "clip_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 25
+    },
+    {
+      "id": "clip_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 25
+    },
+    {
+      "id": "clip_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 25
+    },
+    {
+      "id": "clip_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 25
+    },
+    {
+      "id": "clip_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 25
+    },
+    {
+      "id": "clip_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 25
+    },
+    {
+      "id": "clip_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 27
+    },
+    {
+      "id": "clip_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 27
+    },
+    {
+      "id": "prefix_offset_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 50,
+      "answer_tokens": 39
+    },
+    {
+      "id": "prefix_offset_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 50,
+      "answer_tokens": 39
+    },
+    {
+      "id": "prefix_offset_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 50,
+      "answer_tokens": 39
+    },
+    {
+      "id": "prefix_offset_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 50,
+      "answer_tokens": 39
+    },
+    {
+      "id": "prefix_offset_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 50,
+      "answer_tokens": 39
+    },
+    {
+      "id": "prefix_offset_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 50,
+      "answer_tokens": 39
+    },
+    {
+      "id": "prefix_offset_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 50,
+      "answer_tokens": 39
+    },
+    {
+      "id": "prefix_offset_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 50,
+      "answer_tokens": 39
+    },
+    {
+      "id": "prefix_offset_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 51,
+      "answer_tokens": 40
+    },
+    {
+      "id": "prefix_offset_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 51,
+      "answer_tokens": 40
+    },
+    {
+      "id": "above_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 47,
+      "answer_tokens": 22
+    },
+    {
+      "id": "above_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 47,
+      "answer_tokens": 22
+    },
+    {
+      "id": "above_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 47,
+      "answer_tokens": 22
+    },
+    {
+      "id": "above_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 47,
+      "answer_tokens": 22
+    },
+    {
+      "id": "above_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 47,
+      "answer_tokens": 22
+    },
+    {
+      "id": "above_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 47,
+      "answer_tokens": 22
+    },
+    {
+      "id": "above_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 47,
+      "answer_tokens": 22
+    },
+    {
+      "id": "above_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 47,
+      "answer_tokens": 22
+    },
+    {
+      "id": "above_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 48,
+      "answer_tokens": 23
+    },
+    {
+      "id": "above_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 48,
+      "answer_tokens": 23
+    },
+    {
+      "id": "residues_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 38
+    },
+    {
+      "id": "residues_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 38
+    },
+    {
+      "id": "residues_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 38
+    },
+    {
+      "id": "residues_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 38
+    },
+    {
+      "id": "residues_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 38
+    },
+    {
+      "id": "residues_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 38
+    },
+    {
+      "id": "residues_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 38
+    },
+    {
+      "id": "residues_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 38
+    },
+    {
+      "id": "residues_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 40
+    },
+    {
+      "id": "residues_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 40
+    },
+    {
+      "id": "weighted_alternate_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 66,
+      "answer_tokens": 33
+    },
+    {
+      "id": "weighted_alternate_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 66,
+      "answer_tokens": 33
+    },
+    {
+      "id": "weighted_alternate_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 66,
+      "answer_tokens": 33
+    },
+    {
+      "id": "weighted_alternate_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 66,
+      "answer_tokens": 33
+    },
+    {
+      "id": "weighted_alternate_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 66,
+      "answer_tokens": 33
+    },
+    {
+      "id": "weighted_alternate_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 66,
+      "answer_tokens": 33
+    },
+    {
+      "id": "weighted_alternate_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 66,
+      "answer_tokens": 33
+    },
+    {
+      "id": "weighted_alternate_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 66,
+      "answer_tokens": 33
+    },
+    {
+      "id": "weighted_alternate_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 67,
+      "answer_tokens": 34
+    },
+    {
+      "id": "weighted_alternate_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 67,
+      "answer_tokens": 34
+    },
+    {
+      "id": "suffix_offset_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 60
+    },
+    {
+      "id": "suffix_offset_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 60
+    },
+    {
+      "id": "suffix_offset_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 60
+    },
+    {
+      "id": "suffix_offset_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 60
+    },
+    {
+      "id": "suffix_offset_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 60
+    },
+    {
+      "id": "suffix_offset_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 60
+    },
+    {
+      "id": "suffix_offset_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 60
+    },
+    {
+      "id": "suffix_offset_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 60
+    },
+    {
+      "id": "suffix_offset_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 56,
+      "answer_tokens": 61
+    },
+    {
+      "id": "suffix_offset_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 56,
+      "answer_tokens": 61
+    },
+    {
+      "id": "large_jumps_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 37
+    },
+    {
+      "id": "large_jumps_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 37
+    },
+    {
+      "id": "large_jumps_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 37
+    },
+    {
+      "id": "large_jumps_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 37
+    },
+    {
+      "id": "large_jumps_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 37
+    },
+    {
+      "id": "large_jumps_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 37
+    },
+    {
+      "id": "large_jumps_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 37
+    },
+    {
+      "id": "large_jumps_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 52,
+      "answer_tokens": 37
+    },
+    {
+      "id": "large_jumps_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 38
+    },
+    {
+      "id": "large_jumps_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 38
+    },
+    {
+      "id": "drop_periodic_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 33
+    },
+    {
+      "id": "drop_periodic_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 33
+    },
+    {
+      "id": "drop_periodic_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 33
+    },
+    {
+      "id": "drop_periodic_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 33
+    },
+    {
+      "id": "drop_periodic_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 33
+    },
+    {
+      "id": "drop_periodic_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 33
+    },
+    {
+      "id": "drop_periodic_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 33
+    },
+    {
+      "id": "drop_periodic_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 53,
+      "answer_tokens": 33
+    },
+    {
+      "id": "drop_periodic_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 34
+    },
+    {
+      "id": "drop_periodic_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 34
+    },
+    {
+      "id": "running_min_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 57,
+      "answer_tokens": 43
+    },
+    {
+      "id": "running_min_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 57,
+      "answer_tokens": 43
+    },
+    {
+      "id": "running_min_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 57,
+      "answer_tokens": 43
+    },
+    {
+      "id": "running_min_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 57,
+      "answer_tokens": 43
+    },
+    {
+      "id": "running_min_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 57,
+      "answer_tokens": 43
+    },
+    {
+      "id": "running_min_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 57,
+      "answer_tokens": 43
+    },
+    {
+      "id": "running_min_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 57,
+      "answer_tokens": 43
+    },
+    {
+      "id": "running_min_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 57,
+      "answer_tokens": 43
+    },
+    {
+      "id": "running_min_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 44
+    },
+    {
+      "id": "running_min_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 44
+    },
+    {
+      "id": "adjacent_dedup_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 35
+    },
+    {
+      "id": "adjacent_dedup_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 35
+    },
+    {
+      "id": "adjacent_dedup_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 35
+    },
+    {
+      "id": "adjacent_dedup_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 35
+    },
+    {
+      "id": "adjacent_dedup_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 35
+    },
+    {
+      "id": "adjacent_dedup_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 35
+    },
+    {
+      "id": "adjacent_dedup_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 35
+    },
+    {
+      "id": "adjacent_dedup_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 35
+    },
+    {
+      "id": "adjacent_dedup_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 60,
+      "answer_tokens": 36
+    },
+    {
+      "id": "adjacent_dedup_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 60,
+      "answer_tokens": 36
+    },
+    {
+      "id": "block_sums_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 30
+    },
+    {
+      "id": "block_sums_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 30
+    },
+    {
+      "id": "block_sums_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 30
+    },
+    {
+      "id": "block_sums_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 30
+    },
+    {
+      "id": "block_sums_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 30
+    },
+    {
+      "id": "block_sums_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 30
+    },
+    {
+      "id": "block_sums_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 30
+    },
+    {
+      "id": "block_sums_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 58,
+      "answer_tokens": 30
+    },
+    {
+      "id": "block_sums_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 32
+    },
+    {
+      "id": "block_sums_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 59,
+      "answer_tokens": 32
+    },
+    {
+      "id": "peaks_0",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 49
+    },
+    {
+      "id": "peaks_1",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 49
+    },
+    {
+      "id": "peaks_2",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 49
+    },
+    {
+      "id": "peaks_3",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 49
+    },
+    {
+      "id": "peaks_4",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 49
+    },
+    {
+      "id": "peaks_5",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 49
+    },
+    {
+      "id": "peaks_6",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 49
+    },
+    {
+      "id": "peaks_7",
+      "source": "review013_verified_train",
+      "prompt_tokens": 54,
+      "answer_tokens": 49
+    },
+    {
+      "id": "peaks_8",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 51
+    },
+    {
+      "id": "peaks_9",
+      "source": "review013_verified_train",
+      "prompt_tokens": 55,
+      "answer_tokens": 51
+    },
+    {
+      "id": "TEACH016/00",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 26,
+      "answer_tokens": 2
+    },
+    {
+      "id": "TEACH016/01",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 28,
+      "answer_tokens": 4
+    },
+    {
+      "id": "TEACH016/02",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 23,
+      "answer_tokens": 2
+    },
+    {
+      "id": "TEACH016/03",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 19,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/04",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/05",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 36,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/06",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 35,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/07",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/08",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 21,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/09",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 21,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/10",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 22,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/11",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 27,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/12",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 26,
+      "answer_tokens": 2
+    },
+    {
+      "id": "TEACH016/13",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 26,
+      "answer_tokens": 2
+    },
+    {
+      "id": "TEACH016/14",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 38,
+      "answer_tokens": 3
+    },
+    {
+      "id": "TEACH016/15",
+      "source": "balanced016_general_train",
+      "prompt_tokens": 27,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/0",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 2
+    },
+    {
+      "id": "S026M/1",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 2
+    },
+    {
+      "id": "S026M/2",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/3",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/4",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/5",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/6",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/7",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/8",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 2
+    },
+    {
+      "id": "S026M/9",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/10",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/11",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/12",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/13",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/14",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/15",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/16",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/17",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/18",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/19",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/20",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/21",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/22",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/23",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/24",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/25",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/26",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/27",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/28",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/29",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/30",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026M/31",
+      "source": "constructed_checked_math_training",
+      "prompt_tokens": 26,
+      "answer_tokens": 3
+    },
+    {
+      "id": "S026D/00",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 29,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/01",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 29,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/02",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 29,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/03",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 29,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/04",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 29,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/05",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 29,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/06",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 29,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/07",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 30,
+      "answer_tokens": 13,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/08",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 27,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/09",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 27,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/10",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 27,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/11",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 27,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/12",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 27,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/13",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 27,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/14",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 27,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/15",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 28,
+      "answer_tokens": 3,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/16",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 25,
+      "answer_tokens": 49,
+      "artificial_document_boundary_after_truncated_trace": true
+    },
+    {
+      "id": "S026D/17",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 24,
+      "answer_tokens": 29,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/18",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 22,
+      "answer_tokens": 49,
+      "artificial_document_boundary_after_truncated_trace": true
+    },
+    {
+      "id": "S026D/19",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 22,
+      "answer_tokens": 49,
+      "artificial_document_boundary_after_truncated_trace": true
+    },
+    {
+      "id": "S026D/20",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 26,
+      "answer_tokens": 49,
+      "artificial_document_boundary_after_truncated_trace": true
+    },
+    {
+      "id": "S026D/21",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 24,
+      "answer_tokens": 33,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/22",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 22,
+      "answer_tokens": 12,
+      "artificial_document_boundary_after_truncated_trace": false
+    },
+    {
+      "id": "S026D/23",
+      "source": "actual_teacher_behavior",
+      "prompt_tokens": 24,
+      "answer_tokens": 49,
+      "artificial_document_boundary_after_truncated_trace": true
+    }
+  ],
+  "unique_conversations": 192,
+  "raw_stream_tokens": 13645,
+  "label_tokens_per_epoch": 13644,
+  "training_token_presentations_per_size": 40932,
+  "blocks": 107,
+  "block_tokens": 128,
+  "batch_size": 2,
+  "epochs": 3,
+  "optimizer_steps_per_size": 162,
+  "training_labels_include_user_text": true,
+  "teacher_traces_not_verified_solutions": true,
+  "quality_or_speed_data_included": false,
+  "packed_sha256": "1025e1a30bd705113f122165047fbf86c81feae9af95631a0edcf4796f7ecc32"
+}
