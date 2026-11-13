@@ -1,0 +1,61 @@
+{
+  "status": "HF_templates_verified",
+  "cases": [
+    {
+      "fixture": 0,
+      "thinking": false,
+      "template_match": true,
+      "prompt_sha256": "acf96d61d4f0d055e078b60bdf296fc888c3bdb8544972bcfe3f03c5594a2fba"
+    },
+    {
+      "fixture": 0,
+      "thinking": true,
+      "template_match": true,
+      "prompt_sha256": "86fd136ef3800c67578cd02c9f25fe5648b428adf80d922b81420ba688e533b7"
+    },
+    {
+      "fixture": 1,
+      "thinking": false,
+      "template_match": true,
+      "prompt_sha256": "857f2ce4fe3be961668027de1fb1d063688bbcc51a32db37c6f42837de6ba1ff"
+    },
+    {
+      "fixture": 1,
+      "thinking": true,
+      "template_match": true,
+      "prompt_sha256": "7e9e94ea18c6b95b42cc8cebd8e948cf19a238d23fe66550b163a7147c086312"
+    },
+    {
+      "fixture": 2,
+      "thinking": false,
+      "template_match": true,
+      "prompt_sha256": "e57f4aa059ef90b5394126f3e9994ecf918d38f5c0c056bfc59bcf2ec72b98bb"
+    },
+    {
+      "fixture": 2,
+      "thinking": true,
+      "template_match": true,
+      "prompt_sha256": "973553eb85b58481c41de34b935dafb15cc0b03f5e373f232ada675bb0585593"
+    },
+    {
+      "fixture": 3,
+      "thinking": false,
+      "template_match": true,
+      "prompt_sha256": "1550678eeb7a5f9ec7617ea09b96ac473a9f63a2b2b2859372c31cd07a08ead2"
+    },
+    {
+      "fixture": 3,
+      "thinking": true,
+      "template_match": true,
+      "prompt_sha256": "03b934aeda58e84b72c0ba7d917bb3e44354891b9a7ec0dda910ccb8d8744cf2"
+    }
+  ],
+  "actual_native_checks": "toolcheck verifies original3nonthinking fixtures on every native run; thinking arithmetic prompt token count compared separately",
+  "python_transcription_of_native_rendering_not_independent_compiled_render_test": true,
+  "expected_arithmetic_prompt_tokens": {
+    "False": 476,
+    "True": 474
+  },
+  "long_context_prompt_tokens": 2049,
+  "no_model_weights_loaded": true
+}

@@ -1,0 +1,24 @@
+{
+  "status": "native_QA_in_progress_not_released",
+  "weights_changed": false,
+  "source_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "completed": [
+    "Rust14unit checks",
+    "ARM64library build",
+    "AndroidJava/DEXbuild",
+    "Java25agent/parser checks",
+    "byte-exact signed0.3archive reconstructed and hash verified",
+    "baseline arithmetic323",
+    "forced32thought+64response bookkeeping, semantic failure recorded"
+  ],
+  "active": "fullProfundo1024+2048 arithmetic same input; one model worker",
+  "pending": [
+    "actual tool agent smoke",
+    "context above2048 smoke",
+    "select default from QA",
+    "signed APK",
+    "Gofile delivery"
+  ],
+  "no_new_weight_training": true,
+  "old023sealed4questions_not_queried": true
+}
