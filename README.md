@@ -1,5 +1,14 @@
 # Liquid Sense 0.8B LOOP
 
+## Piloto especulativo026 — sem aceleração validada (13/11/2026)
+
+Dois filhos de **17,8M e 94,8M parâmetros** foram criados com pesos novos, preservando a família Loop/mHC/GatedDeltaNet/conv7 e compartilhando o tokenizer. Cada um completou três épocas, 162 atualizações e 40.932 exposições a rótulos de tokens. Os dois fizeram **0/8 programas e 0/8 questões gerais** na bateria nova; o maior passou 4/43 casos parciais. Original e principal fizeram 4/8 programas e 7/8 gerais.
+
+A via em bloco divergiu em 2/16 comparações e ficou inelegível. A alternativa sequencial preservou os tokens nos 12 pares cronometrados, com cerca de 3% de propostas aceitas e **6,27×/6,35× mais tempo** em CPU. Não houve aceleração validada; o principal e o APK foram preservados. Os seis checkpoints, fontes e resultados negativos estão arquivados.
+
+[Relatório completo](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/dec6d930678d9a1dd5d302f39c35bd95f30311fd/spec026/REPORT.md) · [Checkpoints](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/dec6d930678d9a1dd5d302f39c35bd95f30311fd/spec026/checkpoints) · [Verificação dos artefatos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/dec6d930678d9a1dd5d302f39c35bd95f30311fd/spec026/remote_verification.json)
+
+
 ## Treino Loop025 — três épocas, sem promoção (13/11/2026)
 
 Treino supervisionado do bloco repetido concluído: **3 épocas / 24 atualizações**, 16 exemplos curtos, 292 tensores / 48,34 milhões de valores elegíveis. A última época mudou 48,26 milhões de valores. Ambas as visitas, mHC e componentes temporais receberam gradientes; 16 saídas antes zeradas foram liberadas. Todos os 407 tensores congelados ficaram idênticos, e cada época foi restaurada e conferida pelos 699 hashes.
