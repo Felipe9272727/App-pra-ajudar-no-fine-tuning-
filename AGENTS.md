@@ -1,5 +1,38 @@
 # Retomada do experimento
 
+## Latest from-scratch speculative study026 — complete negative pilot
+
+- Branch `codex/liquid-sense-speculative-026-20261113`. Read spec026/status.json,
+  PROTOCOL.md, REPORT.md, summary.json and remote_verification.json before work.
+- User explicitly authorized NEW small AI weights from scratch as speculative
+  children. Two text-only native hybrid children have17,818,400/94,832,240
+  parameters:32physical/56visits,Loop4..27twice,mHC2,GDN/attention,conv7,local
+  windows256. Tokenizer/vocabulary reused; zero pretrained teacher tensors copied.
+- Both completed3epochs/162updates/40,932label-token presentations over192
+  conversations(13,644unique labels),including24rawteacher traces/498output
+  tokens. All546parameter tensors changed per child. Six initial/final/inference
+  archives were cold-restored and checked; final FP32 includes optimizer/RNG.
+- New8code/43cases+8general scores:original4/30/7,target4/29/7,
+  small-initial0/0/0,small-trained0/0/0,large-initial0/0/0,
+  large-trained0/4/0. Tiny custom pilot, not a general intelligence benchmark.
+- Small emits incomplete templates; large repeats one program on all8code
+  prompts. Train NLL is not instruction following or fresh-task competence.
+- Cached block verification passed14/16probes and failed2:both children diverged
+  onS026S/5token16. Block mode is INELIGIBLE as equivalent acceleration.
+  Primary timings therefore used preregistered sequential verification:
+  small14/460accepted,0.1594266x speed;large12/396,0.1575246x.
+  All12timed streams matched target; six fixed pairs per child, no timing
+  reruns. These are slower CPU fallback paths, NOT valid block acceleration.
+- Post-timing witness reproduced the block mismatch at equal token history:
+  tail logit max difference.21875 versus reference margin.125. Both sequential
+  fallbacks matched that prompt with zero logit difference at compared prefixes.
+  First diverging operation/rounding-only cause remains unproven.
+- Do not rerun completed training, quality or timing to get better numbers.
+  Any new learned candidate needs fresh reserved evaluations. Preserve all
+  sources, logs and six archives. Target and Android APK were NOT changed.
+- Keep general parentSHA25646f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
+  No model worker remains active. Do not promise background work after turns.
+
 ## Latest user authorization — supervised015
 
 - User explicitly selected "Usar treino supervisionado com gradientes". See
