@@ -3,5 +3,15 @@
     "epoch": 1,
     "mean_online_train_nll": 10.803463647037754,
     "tokens": 13644
+  },
+  {
+    "epoch": 2,
+    "mean_online_train_nll": 6.249179897682997,
+    "tokens": 13644
+  },
+  {
+    "epoch": 3,
+    "mean_online_train_nll": 2.92171515149128,
+    "tokens": 13644
   }
 ]
