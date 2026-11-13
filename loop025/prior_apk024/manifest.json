@@ -1,0 +1,17 @@
+{
+  "format": "exact-apk-prefix-parent-pack-suffix-v1",
+  "original_sha256": "6cb9927dca809c901947aed2c4ebd577d421de87e338f06c2714ea21a0f091db",
+  "original_bytes": 1616520387,
+  "prefix_bytes": 15438988,
+  "suffix_bytes": 1791159,
+  "pack_bytes": 1599290240,
+  "pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "reconstructed_full_sha_verified_before_refresh": true,
+  "original_public_download": "https://gofile.io/d/hmAohFD5",
+  "restore_command": "python tooluse023/restore_apk_fragments.py loop025/prior_apk024 NEW_OUTPUT.apk",
+  "retired_only_redundant_build_copy": "/dev/shm/liquid-android/thinking024-apk/LiquidSense-0.4.0-thinking-preview.apk",
+  "backing_sources_protected": [
+    "sensenova_port/model.safetensors",
+    "upstream/model.safetensors-00001-of-00001.safetensors"
+  ]
+}
