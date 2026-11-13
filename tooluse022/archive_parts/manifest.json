@@ -1,0 +1,33 @@
+{
+  "format": "tar-parts-v1",
+  "parts": [
+    {
+      "path": "part0000.bin",
+      "bytes": 4194304,
+      "sha256": "bb4a0bb5c30139565b6fdc803e7fa8fc1840ff8a31a0a9c4d227e26e47e6598b"
+    },
+    {
+      "path": "part0001.bin",
+      "bytes": 4194304,
+      "sha256": "b4cac1cd286ba0a413880219091155795af54e46746c3999e173bbed51cf6ffc"
+    },
+    {
+      "path": "part0002.bin",
+      "bytes": 4194304,
+      "sha256": "a9c433529345bccece9d9f803dbae3f859d2c958fd1177760f052744b29331de"
+    },
+    {
+      "path": "part0003.bin",
+      "bytes": 4194304,
+      "sha256": "9ca74f696f9c4ba0cce3a4a03bd9da71ecb1cdfb3d31c526cc1fa2d3b25150ca"
+    },
+    {
+      "path": "part0004.bin",
+      "bytes": 3682304,
+      "sha256": "73c7790aa3c9907916bf51f15022738b7949c7e1bebf433cfcbd34017f55835e"
+    }
+  ],
+  "stream_sha256": "3d28ada309f0820d81f96b151f860362ff2524652337691ad282ce32e4899f2f",
+  "purpose": "lossless preservation of old signed general APKs",
+  "restore": "python tooluse022/pack_archive.py restore; python tooluse022/archive_apks.py restore --index 0"
+}

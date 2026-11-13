@@ -1,0 +1,105 @@
+{
+  "status": "fixed_training_complete_not_validated",
+  "updates": 8,
+  "new_values": 65536,
+  "trainable_new_values": 32768,
+  "all_old699_tensors_unchanged": true,
+  "training_tokens": 631,
+  "teaching_traces": 8,
+  "supervised_turns": 16,
+  "cache_mode": "full_prefill_teacher_forcing_not_generation_score",
+  "checkpoint_sha256": "69b43dc17d7781c133efb53d622988b35da70d13c99c21b77fb1e17888f67922",
+  "seconds": 196.24442894800086,
+  "history": [
+    {
+      "step": 1,
+      "full_vocabulary_cross_entropy_before_update": 2.1533470153808594,
+      "batch_tokens": 64,
+      "trainable_new_values": 32768,
+      "B_frobenius": 0.36203670501708984,
+      "taught_data_only": true
+    },
+    {
+      "step": 2,
+      "full_vocabulary_cross_entropy_before_update": 1.8154789209365845,
+      "batch_tokens": 64,
+      "trainable_new_values": 32768,
+      "B_frobenius": 0.5439412593841553,
+      "taught_data_only": true
+    },
+    {
+      "step": 3,
+      "full_vocabulary_cross_entropy_before_update": 1.6924906969070435,
+      "batch_tokens": 64,
+      "trainable_new_values": 32768,
+      "B_frobenius": 0.6926329135894775,
+      "taught_data_only": true
+    },
+    {
+      "step": 4,
+      "full_vocabulary_cross_entropy_before_update": 1.093437671661377,
+      "batch_tokens": 64,
+      "trainable_new_values": 32768,
+      "B_frobenius": 0.8252168297767639,
+      "taught_data_only": true
+    },
+    {
+      "step": 5,
+      "full_vocabulary_cross_entropy_before_update": 1.4559887647628784,
+      "batch_tokens": 64,
+      "trainable_new_values": 32768,
+      "B_frobenius": 0.9354365468025208,
+      "taught_data_only": true
+    },
+    {
+      "step": 6,
+      "full_vocabulary_cross_entropy_before_update": 1.1267670392990112,
+      "batch_tokens": 64,
+      "trainable_new_values": 32768,
+      "B_frobenius": 1.0213205814361572,
+      "taught_data_only": true
+    },
+    {
+      "step": 7,
+      "full_vocabulary_cross_entropy_before_update": 0.680301308631897,
+      "batch_tokens": 64,
+      "trainable_new_values": 32768,
+      "B_frobenius": 1.1024141311645508,
+      "taught_data_only": true
+    },
+    {
+      "step": 8,
+      "full_vocabulary_cross_entropy_before_update": 1.5256547927856445,
+      "batch_tokens": 64,
+      "trainable_new_values": 32768,
+      "B_frobenius": 1.175744652748108,
+      "taught_data_only": true
+    }
+  ],
+  "source_metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    }
+  },
+  "no_general_superiority_claim": true
+}

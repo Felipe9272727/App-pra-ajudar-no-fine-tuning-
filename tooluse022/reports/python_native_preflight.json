@@ -1,0 +1,72 @@
+[
+  {
+    "code": "print(sum(i*i for i in range(1,18)))",
+    "exit": 0,
+    "stdout": "1785\n",
+    "stderr": "",
+    "seconds": 0.0014262689983297605
+  },
+  {
+    "code": "import math\nprint(math.gcd(462,1071),math.isqrt(123456789),math.lcm(84,198))",
+    "exit": 0,
+    "stdout": "21 11111 2772\n",
+    "stderr": "",
+    "seconds": 0.0013381860007939395
+  },
+  {
+    "code": "import json\nprint(json.dumps([1,2,3]))",
+    "exit": 0,
+    "stdout": "[1, 2, 3]\n",
+    "stderr": "",
+    "seconds": 0.00107228200067766
+  },
+  {
+    "code": "print(1/0)",
+    "exit": 1,
+    "stdout": "Traceback (most recent call last):\n  File \"<stdin>\", in <module>\nZeroDivisionError: divide by zero\n",
+    "stderr": "",
+    "seconds": 0.0010486569990462158
+  },
+  {
+    "code": "print(open(\"/etc/hostname\").read())",
+    "exit": 1,
+    "stdout": "Traceback (most recent call last):\n  File \"<stdin>\", in <module>\nOSError: filesystem unavailable\n",
+    "stderr": "",
+    "seconds": 0.0012572430023283232
+  },
+  {
+    "code": "import os",
+    "exit": 1,
+    "stdout": "Traceback (most recent call last):\n  File \"<stdin>\", in <module>\nImportError: no module named 'os'\n",
+    "stderr": "",
+    "seconds": 0.0011336060015310068
+  },
+  {
+    "code": "import socket",
+    "exit": 1,
+    "stdout": "Traceback (most recent call last):\n  File \"<stdin>\", in <module>\nImportError: no module named 'socket'\n",
+    "stderr": "",
+    "seconds": 0.002224947002105182
+  },
+  {
+    "code": "while True: pass",
+    "exit": 1,
+    "stdout": "ResourceLimit: time or instruction budget",
+    "stderr": "",
+    "seconds": 0.006323620000330266
+  },
+  {
+    "code": "a=\"x\"*100000000",
+    "exit": 1,
+    "stdout": "Traceback (most recent call last):\n  File \"<stdin>\", in <module>\nMemoryError: memory allocation failed, allocating 100000001 bytes\n",
+    "stderr": "",
+    "seconds": 0.0019336460027261637
+  },
+  {
+    "code": "def f(): return f()\nf()",
+    "exit": 1,
+    "stdout": "Traceback (most recent call last):\n  File \"<stdin>\", in <module>\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\n  File \"<stdin>\", in f\nRuntimeError: maximum recursion depth exceeded\n",
+    "stderr": "",
+    "seconds": 0.0017891979987325612
+  }
+]

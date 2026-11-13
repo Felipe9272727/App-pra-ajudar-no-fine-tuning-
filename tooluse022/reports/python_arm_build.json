@@ -1,0 +1,12 @@
+{
+  "status": "ARM64_interpreter_compiled",
+  "bytes": 2485880,
+  "sha256": "876a6aa8204a686f501120fb3b2d3b264bbad44c72f19a3d9133e25ff017be2a",
+  "Android_API": 28,
+  "MICROPYTHON": "1.26.1",
+  "heap_bytes": 16777216,
+  "max_VM_hooks": 2000000,
+  "wall_seconds_VM": 2,
+  "phone_execution_verified": false,
+  "filesystem_network_process_bindings": false
+}

@@ -1,0 +1,12 @@
+{
+  "micropython": {
+    "url": "https://codeload.github.com/micropython/micropython/tar.gz/refs/tags/v1.26.1",
+    "sha256": "10600e844f02a8b448cf176df71031d2eb3d731097a809a963ce9c35cef3d613",
+    "license": "MIT"
+  },
+  "zig": {
+    "url": "https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz",
+    "sha256": "d45312e61ebcc48032b77bc4cf7fd6915c11fa16e4aad116b66c9468211230ea",
+    "use": "task-owned cross-compiler, not shipped inside APK"
+  }
+}

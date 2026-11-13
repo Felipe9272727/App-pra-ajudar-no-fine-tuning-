@@ -1,0 +1,8 @@
+{"step": 1, "full_vocabulary_cross_entropy_before_update": 2.1533470153808594, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.36203670501708984, "taught_data_only": true}
+{"step": 2, "full_vocabulary_cross_entropy_before_update": 1.8154789209365845, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.5439412593841553, "taught_data_only": true}
+{"step": 3, "full_vocabulary_cross_entropy_before_update": 1.6924906969070435, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.6926329135894775, "taught_data_only": true}
+{"step": 4, "full_vocabulary_cross_entropy_before_update": 1.093437671661377, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.8252168297767639, "taught_data_only": true}
+{"step": 5, "full_vocabulary_cross_entropy_before_update": 1.4559887647628784, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 0.9354365468025208, "taught_data_only": true}
+{"step": 6, "full_vocabulary_cross_entropy_before_update": 1.1267670392990112, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 1.0213205814361572, "taught_data_only": true}
+{"step": 7, "full_vocabulary_cross_entropy_before_update": 0.680301308631897, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 1.1024141311645508, "taught_data_only": true}
+{"step": 8, "full_vocabulary_cross_entropy_before_update": 1.5256547927856445, "batch_tokens": 64, "trainable_new_values": 32768, "B_frobenius": 1.175744652748108, "taught_data_only": true}
