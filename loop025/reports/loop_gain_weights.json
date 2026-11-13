@@ -1,0 +1,322 @@
+{
+  "parent_second_gain_all24": 0.05,
+  "epochs": [
+    {
+      "epoch": 1,
+      "mean_second_gain": 0.045675679886092745,
+      "min_second_gain": 0.03653191775083542,
+      "max_second_gain": 0.056377168744802475,
+      "all_gains": {
+        "model.language_model.layers.4.native_visit_gain": [
+          0.9550002813339233,
+          0.044999703764915466
+        ],
+        "model.language_model.layers.5.native_visit_gain": [
+          0.9611470103263855,
+          0.03885297104716301
+        ],
+        "model.language_model.layers.6.native_visit_gain": [
+          0.9518369436264038,
+          0.04816306009888649
+        ],
+        "model.language_model.layers.7.native_visit_gain": [
+          0.9479896426200867,
+          0.05201029032468796
+        ],
+        "model.language_model.layers.8.native_visit_gain": [
+          0.9627931714057922,
+          0.03720686212182045
+        ],
+        "model.language_model.layers.9.native_visit_gain": [
+          0.963468074798584,
+          0.03653191775083542
+        ],
+        "model.language_model.layers.10.native_visit_gain": [
+          0.9620577692985535,
+          0.03794218227267265
+        ],
+        "model.language_model.layers.11.native_visit_gain": [
+          0.9627752900123596,
+          0.037224676460027695
+        ],
+        "model.language_model.layers.12.native_visit_gain": [
+          0.9444329142570496,
+          0.05556713044643402
+        ],
+        "model.language_model.layers.13.native_visit_gain": [
+          0.9517056345939636,
+          0.048294320702552795
+        ],
+        "model.language_model.layers.14.native_visit_gain": [
+          0.9556752443313599,
+          0.04432475194334984
+        ],
+        "model.language_model.layers.15.native_visit_gain": [
+          0.9450226426124573,
+          0.054977331310510635
+        ],
+        "model.language_model.layers.16.native_visit_gain": [
+          0.9437644481658936,
+          0.05623553320765495
+        ],
+        "model.language_model.layers.17.native_visit_gain": [
+          0.9453651309013367,
+          0.05463489517569542
+        ],
+        "model.language_model.layers.18.native_visit_gain": [
+          0.9453797340393066,
+          0.05462026968598366
+        ],
+        "model.language_model.layers.19.native_visit_gain": [
+          0.9436228275299072,
+          0.056377168744802475
+        ],
+        "model.language_model.layers.20.native_visit_gain": [
+          0.9615709781646729,
+          0.03842901065945625
+        ],
+        "model.language_model.layers.21.native_visit_gain": [
+          0.9611472487449646,
+          0.03885272517800331
+        ],
+        "model.language_model.layers.22.native_visit_gain": [
+          0.9626731276512146,
+          0.0373268723487854
+        ],
+        "model.language_model.layers.23.native_visit_gain": [
+          0.9617393016815186,
+          0.03826069459319115
+        ],
+        "model.language_model.layers.24.native_visit_gain": [
+          0.9532088041305542,
+          0.04679122939705849
+        ],
+        "model.language_model.layers.25.native_visit_gain": [
+          0.9500071406364441,
+          0.049992844462394714
+        ],
+        "model.language_model.layers.26.native_visit_gain": [
+          0.9493688941001892,
+          0.0506310798227787
+        ],
+        "model.language_model.layers.27.native_visit_gain": [
+          0.9620312452316284,
+          0.037968795746564865
+        ]
+      },
+      "all_positive_and_normalized": true
+    },
+    {
+      "epoch": 2,
+      "mean_second_gain": 0.04469270305708051,
+      "min_second_gain": 0.017199840396642685,
+      "max_second_gain": 0.06598304212093353,
+      "all_gains": {
+        "model.language_model.layers.4.native_visit_gain": [
+          0.9520667791366577,
+          0.04793322831392288
+        ],
+        "model.language_model.layers.5.native_visit_gain": [
+          0.9632385969161987,
+          0.036761362105607986
+        ],
+        "model.language_model.layers.6.native_visit_gain": [
+          0.9466947913169861,
+          0.05330522730946541
+        ],
+        "model.language_model.layers.7.native_visit_gain": [
+          0.9451286792755127,
+          0.05487138777971268
+        ],
+        "model.language_model.layers.8.native_visit_gain": [
+          0.9750602841377258,
+          0.024939686059951782
+        ],
+        "model.language_model.layers.9.native_visit_gain": [
+          0.9724110960960388,
+          0.027588892728090286
+        ],
+        "model.language_model.layers.10.native_visit_gain": [
+          0.9692893028259277,
+          0.030710700899362564
+        ],
+        "model.language_model.layers.11.native_visit_gain": [
+          0.9828001260757446,
+          0.017199840396642685
+        ],
+        "model.language_model.layers.12.native_visit_gain": [
+          0.945414125919342,
+          0.054585862904787064
+        ],
+        "model.language_model.layers.13.native_visit_gain": [
+          0.9594731330871582,
+          0.04052683711051941
+        ],
+        "model.language_model.layers.14.native_visit_gain": [
+          0.9519980549812317,
+          0.048001959919929504
+        ],
+        "model.language_model.layers.15.native_visit_gain": [
+          0.9453235268592834,
+          0.05467647686600685
+        ],
+        "model.language_model.layers.16.native_visit_gain": [
+          0.9340169429779053,
+          0.06598304212093353
+        ],
+        "model.language_model.layers.17.native_visit_gain": [
+          0.9416693449020386,
+          0.05833065137267113
+        ],
+        "model.language_model.layers.18.native_visit_gain": [
+          0.9383435845375061,
+          0.06165647506713867
+        ],
+        "model.language_model.layers.19.native_visit_gain": [
+          0.9487519264221191,
+          0.05124801769852638
+        ],
+        "model.language_model.layers.20.native_visit_gain": [
+          0.9601184129714966,
+          0.03988153859972954
+        ],
+        "model.language_model.layers.21.native_visit_gain": [
+          0.9590680599212646,
+          0.04093192517757416
+        ],
+        "model.language_model.layers.22.native_visit_gain": [
+          0.9634499549865723,
+          0.03655003383755684
+        ],
+        "model.language_model.layers.23.native_visit_gain": [
+          0.9590547680854797,
+          0.04094523563981056
+        ],
+        "model.language_model.layers.24.native_visit_gain": [
+          0.9579511284828186,
+          0.0420488677918911
+        ],
+        "model.language_model.layers.25.native_visit_gain": [
+          0.9520719647407532,
+          0.047928012907505035
+        ],
+        "model.language_model.layers.26.native_visit_gain": [
+          0.9469870328903198,
+          0.05301298201084137
+        ],
+        "model.language_model.layers.27.native_visit_gain": [
+          0.9569933414459229,
+          0.04300662875175476
+        ]
+      },
+      "all_positive_and_normalized": true
+    },
+    {
+      "epoch": 3,
+      "mean_second_gain": 0.035950809406737484,
+      "min_second_gain": 0.014248436316847801,
+      "max_second_gain": 0.06159203499555588,
+      "all_gains": {
+        "model.language_model.layers.4.native_visit_gain": [
+          0.9643831849098206,
+          0.03561682254076004
+        ],
+        "model.language_model.layers.5.native_visit_gain": [
+          0.9729072451591492,
+          0.02709278278052807
+        ],
+        "model.language_model.layers.6.native_visit_gain": [
+          0.9535480737686157,
+          0.046451907604932785
+        ],
+        "model.language_model.layers.7.native_visit_gain": [
+          0.9637354612350464,
+          0.03626458719372749
+        ],
+        "model.language_model.layers.8.native_visit_gain": [
+          0.9820966124534607,
+          0.01790335401892662
+        ],
+        "model.language_model.layers.9.native_visit_gain": [
+          0.9815417528152466,
+          0.018458232283592224
+        ],
+        "model.language_model.layers.10.native_visit_gain": [
+          0.9767001271247864,
+          0.023299813270568848
+        ],
+        "model.language_model.layers.11.native_visit_gain": [
+          0.9857515692710876,
+          0.014248436316847801
+        ],
+        "model.language_model.layers.12.native_visit_gain": [
+          0.9565837383270264,
+          0.04341621324419975
+        ],
+        "model.language_model.layers.13.native_visit_gain": [
+          0.9710336327552795,
+          0.028966376557946205
+        ],
+        "model.language_model.layers.14.native_visit_gain": [
+          0.9623948335647583,
+          0.0376051627099514
+        ],
+        "model.language_model.layers.15.native_visit_gain": [
+          0.9496681094169617,
+          0.05033188313245773
+        ],
+        "model.language_model.layers.16.native_visit_gain": [
+          0.9478315114974976,
+          0.05216854065656662
+        ],
+        "model.language_model.layers.17.native_visit_gain": [
+          0.9571563005447388,
+          0.042843710631132126
+        ],
+        "model.language_model.layers.18.native_visit_gain": [
+          0.9524427652359009,
+          0.0475572869181633
+        ],
+        "model.language_model.layers.19.native_visit_gain": [
+          0.9551427960395813,
+          0.044857148081064224
+        ],
+        "model.language_model.layers.20.native_visit_gain": [
+          0.9756450057029724,
+          0.02435501664876938
+        ],
+        "model.language_model.layers.21.native_visit_gain": [
+          0.9741842150688171,
+          0.025815781205892563
+        ],
+        "model.language_model.layers.22.native_visit_gain": [
+          0.9799237251281738,
+          0.02007635124027729
+        ],
+        "model.language_model.layers.23.native_visit_gain": [
+          0.9715904593467712,
+          0.02840951457619667
+        ],
+        "model.language_model.layers.24.native_visit_gain": [
+          0.9598182439804077,
+          0.04018177464604378
+        ],
+        "model.language_model.layers.25.native_visit_gain": [
+          0.946678638458252,
+          0.05332135036587715
+        ],
+        "model.language_model.layers.26.native_visit_gain": [
+          0.9384080171585083,
+          0.06159203499555588
+        ],
+        "model.language_model.layers.27.native_visit_gain": [
+          0.9580146670341492,
+          0.041985344141721725
+        ]
+      },
+      "all_positive_and_normalized": true
+    }
+  ],
+  "weight_read_only_no_generation_or_training": true,
+  "not_evidence_of_quality_gain": true
+}
