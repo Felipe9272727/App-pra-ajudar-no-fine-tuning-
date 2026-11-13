@@ -1,0 +1,6 @@
+{
+  "status": "host_probe_failed_environment",
+  "cause": "JVM HttpURLConnection did not inherit managed HTTPS_PROXY; direct TCP connection refused",
+  "product_code_changed": false,
+  "phone_network_test": false
+}
