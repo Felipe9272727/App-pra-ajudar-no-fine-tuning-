@@ -1,0 +1,32 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7357.72it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794607114.5900059, "attempt": null, "pid": 52549}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TEACHER026 S026D/00 12
+TEACHER026 S026D/01 12
+TEACHER026 S026D/02 12
+TEACHER026 S026D/03 12
+TEACHER026 S026D/04 12
+TEACHER026 S026D/05 12
+TEACHER026 S026D/06 12
+TEACHER026 S026D/07 13
+TEACHER026 S026D/08 12
+TEACHER026 S026D/09 12
+TEACHER026 S026D/10 12
+TEACHER026 S026D/11 12
+TEACHER026 S026D/12 12
+TEACHER026 S026D/13 12
+TEACHER026 S026D/14 12
+TEACHER026 S026D/15 3
+TEACHER026 S026D/16 48
+TEACHER026 S026D/17 29
+TEACHER026 S026D/18 48
+TEACHER026 S026D/19 48
+TEACHER026 S026D/20 48
+TEACHER026 S026D/21 33
+TEACHER026 S026D/22 12
+TEACHER026 S026D/23 48
