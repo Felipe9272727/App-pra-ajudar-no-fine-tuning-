@@ -1,0 +1,13 @@
+{
+  "correct_training_samples": 168,
+  "teacher_prompts": 24,
+  "quality_code": 8,
+  "quality_general": 8,
+  "speed_prompts": 8,
+  "quality_reference_cases": 43,
+  "all_quality_references_passed": true,
+  "all_None_mutants_rejected": true,
+  "quality_speed_exact_prompts_excluded_from_training": true,
+  "ordinary_skill_and_pretraining_overlap_possible": true,
+  "prior025_final_not_read": true
+}

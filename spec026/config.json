@@ -1,0 +1,40 @@
+{
+  "seed": 20261113,
+  "sizes": [
+    "small",
+    "large"
+  ],
+  "expected_parameters": {
+    "small": 17818400,
+    "large": 94832240
+  },
+  "epochs": 3,
+  "block_tokens": 128,
+  "batch_size": 2,
+  "lr_matrix": 0.03,
+  "lr_controls": 0.003,
+  "warmup_steps": 10,
+  "lr_final_fraction": 0.25,
+  "gradient_clip": 1.0,
+  "teacher_queries": 24,
+  "teacher_budget": 48,
+  "quality_code_budget": 96,
+  "quality_general_budget": 32,
+  "spec_budget": 32,
+  "spec_block": 4,
+  "parity_budget": 16,
+  "timing_pairs_per_child": 6,
+  "timing_prompt_ids": [
+    "S026S/0",
+    "S026S/1",
+    "S026S/2"
+  ],
+  "cpu_threads": 4,
+  "target_eos_ids": [
+    248044,
+    248046
+  ],
+  "from_scratch_weights": true,
+  "shared_tokenizer_only": true,
+  "inference_dtype": "bfloat16_with_FP32_routers_and_gains"
+}
