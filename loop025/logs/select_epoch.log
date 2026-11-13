@@ -1,0 +1,11 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/loop025/choose_epoch.py", line 10, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/liquid-sense/loop025/choose_epoch.py", line 7, in main
+    loss_cases=[(i,k) for i,b in bm.items() for k,(x,y) in enumerate(zip(b['case_passed'],cm[i]['case_passed'])) if x and not y];loss_controls=[i for i,b in bc.items() if b['correct'] and not cc[i]['correct']];gain=c['validation_tasks_passed']>base['validation_tasks_passed'];eligible=gain and not loss_cases and not loss_controls
+                                                                                          ~~~~~^^^^^^^^^^^^^^^
+KeyError: 'case_passed'
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+SELECTION025 None

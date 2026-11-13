@@ -1,0 +1,13 @@
+PHASE025_FINISHED development_original
+PHASE025_FINISHED development_parent
+PHASE025_FINISHED development_epoch1
+PHASE025_FINISHED development_epoch2
+PHASE025_FINISHED development_epoch3
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/loop025/run_comparison.py", line 12, in <module>
+    run(['loop025/choose_epoch.py'],'select_epoch');selection=json.loads((H/'selection.json').read_text());chosen=selection['selected_epoch']
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/liquid-sense/loop025/run_comparison.py", line 9, in run
+    status['model_process_active']=False;status['last_exit_code']=result;(H/'status.json').write_text(json.dumps(status,indent=2)+'\n');assert result==0,(label,result);print('PHASE025_FINISHED',label,flush=True)
+                                                                                                                                               ^^^^^^^^^
+AssertionError: ('select_epoch', 1)

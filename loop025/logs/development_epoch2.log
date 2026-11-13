@@ -1,0 +1,29 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 7172.44it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794584307.3883262, "attempt": null, "pid": 51462}
+PHASE_END checkpoint_load:best.pt 0.01
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+CONTROL025 epoch2 dev_0 True
+CONTROL025 epoch2 dev_1 True
+CONTROL025 epoch2 dev_2 False
+CONTROL025 epoch2 dev_3 True
+CONTROL025 epoch2 reason_product False
+CONTROL025 epoch2 reason_order True
+CONTROL025 epoch2 reason_subtract True
+CONTROL025 epoch2 reason_half True
+CONTROL025 epoch2 lang_opposite True
+CONTROL025 epoch2 lang_past True
+CONTROL025 epoch2 lang_plural True
+CONTROL025 epoch2 lang_translate True
+CODE025 development epoch2 prefix_offset_0 0 20
+CODE025 development epoch2 above_0 2 20
+CODE025 development epoch2 L025V/rotate 0 9
+CODE025 development epoch2 L025V/brackets 6 10
+CODE025 development epoch2 L025V/compact 0 8
+CODE025 development epoch2 L025V/subarray 0 9
+EVAL025_COMPLETE reports/development_epoch2.json
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+SKIP_COMPLETED reports/development_epoch2.json
