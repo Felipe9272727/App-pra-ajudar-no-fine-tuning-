@@ -1,0 +1,16 @@
+{
+  "status": "package_verification_passed",
+  "apk_sha256": "d8c649c9e06be632b7a411417d06a3a926911788764950a7d4ea2cf6956137f4",
+  "bytes": 1615574215,
+  "md5": "ec03ed09d6c8fc1d254dd2c0aa0f4549",
+  "cert_SHA256": "fcb504e5004b8e0be879b952d597248da3a731c481c1f24cd1ac01502df5ac5b",
+  "SDK_signature_and_zipalign_passed": true,
+  "all_current_ZIP_CRCs_passed": true,
+  "one_entry_per_name": true,
+  "Trocar_modelo_and_official_documentation_broker_in_final_DEX": true,
+  "exact_fstrings_ARM_interpreter_in_APK": true,
+  "no_rejected_weights_in_assets": true,
+  "general_best_checkpoint_file_unchanged": true,
+  "general_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "phone_execution_verified": false
+}

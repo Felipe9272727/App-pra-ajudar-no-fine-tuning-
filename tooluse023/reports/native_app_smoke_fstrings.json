@@ -1,0 +1,300 @@
+[
+  {
+    "id": "app_py_squares21",
+    "question": "Use Python para conferir a soma dos quadrados de 1 até 21 e diga o resultado.",
+    "turns": [
+      {
+        "step": 0,
+        "answer": {
+          "raw_text": "<tool_call>\n<function=run_python>\n<parameter=code>\ndef soma_de_quadrados(n):\n    return sum(i**2 for i in range(1, n+1))\n\nprint(f\"Soma dos quadrados de 1 até 21: {soma_de_quadrados(21)}\")\n</parameter>\n</function>\n</tool_call>",
+          "text": "<tool_call>\n<function=run_python>\n<parameter=code>\ndef soma_de_quadrados(n):\n    return sum(i**2 for i in range(1, n+1))\n\nprint(f\"Soma dos quadrados de 1 até 21: {soma_de_quadrados(21)}\")\n</parameter>\n</function>\n</tool_call>",
+          "tokens": 79,
+          "prompt_tokens": 480,
+          "finish_reason": "tool_call",
+          "generated_ids": [
+            248058,
+            198,
+            27,
+            1628,
+            28,
+            5917,
+            53995,
+            29,
+            198,
+            27,
+            15704,
+            28,
+            1787,
+            29,
+            198,
+            727,
+            55822,
+            2187,
+            10953,
+            14245,
+            5379,
+            1393,
+            1590,
+            198,
+            262,
+            460,
+            2542,
+            1889,
+            332,
+            17,
+            364,
+            585,
+            303,
+            2020,
+            7,
+            16,
+            11,
+            307,
+            10,
+            16,
+            578,
+            271,
+            1302,
+            925,
+            64073,
+            7540,
+            8485,
+            28183,
+            5379,
+            401,
+            220,
+            16,
+            37206,
+            220,
+            17,
+            16,
+            25,
+            313,
+            82,
+            7540,
+            2187,
+            10953,
+            14245,
+            5379,
+            7,
+            17,
+            16,
+            8866,
+            871,
+            198,
+            510,
+            15704,
+            29,
+            198,
+            510,
+            1628,
+            29,
+            198,
+            248059
+          ],
+          "reused_prompt_tokens": 0,
+          "prefill_seconds": 58.804543345,
+          "decode_seconds": 11.19784666,
+          "first_token_seconds": 58.828374633
+        },
+        "call": {
+          "name": "run_python",
+          "arguments": {
+            "code": "def soma_de_quadrados(n):\n    return sum(i**2 for i in range(1, n+1))\n\nprint(f\"Soma dos quadrados de 1 até 21: {soma_de_quadrados(21)}\")"
+          }
+        },
+        "observation": {
+          "tool": "run_python",
+          "ok": true,
+          "stdout": "Soma dos quadrados de 1 até 21: 3311\n",
+          "runtime": "MicroPython1.26.1 subset, actual C host executable",
+          "filesystem": false,
+          "network": false
+        }
+      },
+      {
+        "step": 1,
+        "answer": {
+          "raw_text": "A soma dos quadrados de 1 até 21 é 3311.",
+          "text": "A soma dos quadrados de 1 até 21 é 3311.",
+          "tokens": 19,
+          "prompt_tokens": 701,
+          "finish_reason": "stop",
+          "generated_ids": [
+            32,
+            55822,
+            8485,
+            28183,
+            5379,
+            401,
+            220,
+            16,
+            37206,
+            220,
+            17,
+            16,
+            3825,
+            220,
+            18,
+            18,
+            16,
+            16,
+            13
+          ],
+          "reused_prompt_tokens": 0,
+          "prefill_seconds": 87.695758017,
+          "decode_seconds": 2.871002484,
+          "first_token_seconds": 87.721750556
+        },
+        "call": null
+      }
+    ],
+    "correct_with_actual_tool": true,
+    "seconds_descriptive_only": 162.08293045399478,
+    "scope": "RustLinux actual model+MicroPythonC; app final control; no Android execution",
+    "no_reference_answer_in_input": true
+  },
+  {
+    "id": "app_web_mathsqrt",
+    "question": "Pesquise na web a documentação de math.sqrt do Python e cite uma fonte retornada.",
+    "turns": [
+      {
+        "step": 0,
+        "answer": {
+          "raw_text": "<tool_call>\n<function=search_web>\n<parameter=query>\nmath.sqrt python documentation\n</parameter>\n</function>\n</tool_call>",
+          "text": "<tool_call>\n<function=search_web>\n<parameter=query>\nmath.sqrt python documentation\n</parameter>\n</function>\n</tool_call>",
+          "tokens": 27,
+          "prompt_tokens": 478,
+          "finish_reason": "tool_call",
+          "generated_ids": [
+            248058,
+            198,
+            27,
+            1628,
+            93260,
+            25130,
+            29,
+            198,
+            27,
+            15704,
+            76478,
+            29,
+            198,
+            10065,
+            17510,
+            9834,
+            9417,
+            198,
+            510,
+            15704,
+            29,
+            198,
+            510,
+            1628,
+            29,
+            198,
+            248059
+          ],
+          "reused_prompt_tokens": 0,
+          "prefill_seconds": 57.609632015,
+          "decode_seconds": 3.750657451,
+          "first_token_seconds": 57.631892537
+        },
+        "call": {
+          "name": "search_web",
+          "arguments": {
+            "query": "math.sqrt python documentation"
+          }
+        },
+        "observation": {
+          "tool": "search_web",
+          "ok": true,
+          "query": "math.sqrt python documentation",
+          "retrieved_at_utc": "2026-11-13T01:57:09Z",
+          "transport": "real HTTPS Yahoo Search HTML",
+          "response_sha256": "25199bc28e80248f5fdac8a715183a4538372e14786addd7d279a0d8e1daa01f",
+          "items": [
+            {
+              "title": "Math Playground: Purposeful Play. Powerful Learning.",
+              "url": "https://www.mathplayground.com/",
+              "snippet": " Explore hundreds of math games, puzzles, and learning adventures that make problem-solving fun and meaningful. Designed by an educator to spark curiosity, build confidence, and turn math into a world of discovery. "
+            },
+            {
+              "title": "Math is Fun",
+              "url": "https://www.mathsisfun.com/",
+              "snippet": "Apr 19, 2010 ·   Math explained in easy language, plus puzzles, games, worksheets and an illustrated dictionary. For K-12 kids, teachers and parents. "
+            },
+            {
+              "title": "Learn math online - IXL",
+              "url": "https://www.ixl.com/math",
+              "snippet": " Discover thousands of math skills covering pre-K to 12th grade, from counting to calculus, with infinite questions that adapt to each student's level. "
+            }
+          ],
+          "untrusted_evidence": true,
+          "provider_failures": [
+            {
+              "provider": "Brave Search HTML",
+              "error": "HTTPError: HTTP Error 429: Too Many Requests"
+            }
+          ]
+        }
+      },
+      {
+        "step": 1,
+        "answer": {
+          "raw_text": "Eu não encontrei nenhuma informação específica sobre `math.sqrt` na observação real. Para corrigir um erro ou obter uma informação que falta, preciso fazer outra chamada.",
+          "text": "Eu não encontrei nenhuma informação específica sobre `math.sqrt` na observação real. Para corrigir um erro ou obter uma informação que falta, preciso fazer outra chamada.",
+          "tokens": 35,
+          "prompt_tokens": 925,
+          "finish_reason": "stop",
+          "generated_ids": [
+            52303,
+            12038,
+            644,
+            29312,
+            72,
+            185819,
+            176866,
+            195619,
+            14690,
+            1510,
+            10065,
+            17510,
+            63,
+            4176,
+            9006,
+            12595,
+            1865,
+            13,
+            22272,
+            212410,
+            396,
+            4297,
+            35110,
+            5724,
+            183970,
+            10293,
+            176866,
+            1649,
+            60874,
+            11,
+            174215,
+            38524,
+            77921,
+            193587,
+            13
+          ],
+          "reused_prompt_tokens": 0,
+          "prefill_seconds": 114.460267879,
+          "decode_seconds": 5.377823058,
+          "first_token_seconds": 114.48346121
+        },
+        "call": null
+      }
+    ],
+    "correct_with_actual_tool": false,
+    "seconds_descriptive_only": 183.14827655300178,
+    "scope": "RustLinux actual model+MicroPythonC; app final control; no Android execution",
+    "no_reference_answer_in_input": true
+  }
+]
