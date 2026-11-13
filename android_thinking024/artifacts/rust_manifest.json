@@ -2,17 +2,17 @@
   {
     "name": "rust_arm",
     "path": "android_thinking024/artifacts/rust_arm.zlib.bin",
-    "raw_bytes": 4879920,
-    "raw_sha256": "df1de5e8bdbd0da4e47e7d5b885ac6a18d5950e4d1a91a0e8931b030c301cf95",
-    "compressed_sha256": "7e17cd74a62e58aeea2926546fa6c8c7333cb29a3c63f8781acfad48a3de4ce9",
-    "compressed_bytes": 1751424
+    "raw_bytes": 4879888,
+    "raw_sha256": "19c373c43c30cd56119f01f5c8dd77caea3a9624ec72f1b81b5c23092e52fff2",
+    "compressed_sha256": "a815be5f25e8e790c7dff4830b396c229784673a840133204e86df91f44e2aa7",
+    "compressed_bytes": 1751341
   },
   {
     "name": "rust_host",
     "path": "android_thinking024/artifacts/rust_host.zlib.bin",
-    "raw_bytes": 5142216,
-    "raw_sha256": "190354d7b70be4ea885a1a9294f914e80dd3b3619abf38ad17ac749fe889f29b",
-    "compressed_sha256": "b81a018ab34a5411db2f2292b95ae997aabaedf0c784204822df747a6c791340",
-    "compressed_bytes": 1780489
+    "raw_bytes": 5142584,
+    "raw_sha256": "fd1074dda05c83bc2596bc06faef0b56dc11ccd0050785f7794dcd0be720a0bb",
+    "compressed_sha256": "927511c5f8fb81b5d6a42aba17df25a7a11ecccd6de1b17f28ef3dbb728cdd7c",
+    "compressed_bytes": 1780546
   }
 ]

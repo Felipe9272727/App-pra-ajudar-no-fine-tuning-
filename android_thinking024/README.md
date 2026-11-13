@@ -1,4 +1,8 @@
-# Liquid Sense Tools0.4 — limites e recuperação de ferramentas
+# Liquid Sense Tools 0.4 — limites e recuperação de ferramentas
+
+[**Baixar APK 0.4 no Gofile**](https://gofile.io/d/hmAohFD5) — cerca de 1,62 GB,
+ARM64 / Android 9+. Atualiza o Tools 0.3 mantendo as conversas.
+[Resultados completos](REPORT.md) · [Comparação e logs](reports/comparison.json).
 
 Atualização de software do app0.3, sem treinamento nem mudança de pesos.
 O APK usa o mesmo pacote Android/certificado, com versionCode2, preservando
@@ -36,9 +40,9 @@ conversa e saídas brutas: copiar é uma ação explícita do usuário.
 
 ## Verificação e reprodução
 
-- `AgentTests.java`:25verificações do parser/agente com respostas simuladas;
+- `AgentTests.java`:27 verificações do parser/agente com respostas simuladas;
   esses testes não medem capacidade do modelo.
-- Rust:14testes; compilação ARM64 com alinhamento de16KiB.
+- Rust:16 testes; compilação ARM64 com alinhamento de16KiB.
 - `verify_templates.py`:8comparações com template oficial HuggingFace;
   distingue a transcrição Python dos testes nativos compilados existentes.
 - `NativeAgentSmoke.java`:modelo Rust real + mesmo agente Java + intérprete
@@ -52,3 +56,10 @@ A cópia de build do APK0.3 pode ser substituída por arquivo deduplicado após
 reconstrução SHA-256 byte a byte. A restauração está documentada em
 `artifacts/prior_tools023/manifest.json`; os pesos imutáveis de apoio nunca
 podem ser removidos. O download0.3 antigo continua preservado.
+
+As compilações intermediárias024e seus resultados ficam preservados. O primeiro
+smoke Python executou uma expressão sem print: houve execução real, mas stdout
+vazio, portanto não foi considerado cálculo verificado. O agente agora devolve
+um aviso genérico sobre esse comportamento do runtime, sem inserir resultados.
+O smoke detectou também um marcador im_end vazando na implementação024inicial;
+a regra de parada geral anterior foi restaurada antes de distribuir o APK.

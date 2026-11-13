@@ -51,7 +51,7 @@ public final class AgentRunner {
                 String detail=code.equals("CALL_INCOMPLETE")&&answer.optString("finish_reason").equals("length")?"A chamada atingiu o limite antes de ficar completa.":"O modelo não conseguiu corrigir o formato da chamada ("+code+").";
                 return failure(code,detail+" Toque em Continuar resposta; o diagnóstico local foi guardado.");
             }
-            if(call==null)return summarize(answer.put("text",ToolExecutor.content(answer.optString("text",raw))));
+            if(call==null)return summarize(answer);
             String name=call.getString("name");JSONObject args=call.getJSONObject("arguments");String key=name+"\n"+args.toString();
             if(successful.contains(key)){
                 record.put("duplicate_successful_call_suppressed",true);events.diagnostic(records);focusFinal=true;

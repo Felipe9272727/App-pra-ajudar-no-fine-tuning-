@@ -34,3 +34,10 @@ small fixed native smoke under old/nonthinking and new thinking settings without
 reference answers in input; disclose failures, no broad quality claim. Old023
 sealed4questions remain unqueried. Official SDK/ELF/signature/ZIP+pack checks
 before Gofile delivery. Linux tests/ARM compilation are not phone execution.
+
+Post-QA corrections: restore general im_end stopping (token248046) as in023;
+endoftext248044 also stops. Preserve Specialist previous policy. Intermediate
+024incorrectly gated im_end by no-tools/nonthinking and was not released.
+Long probe contains no248046or248044, so this correction cannot alter that
+deterministic3072-token failure. Its total3548tokens proves the2048guard was
+crossed; prepared long-input fixture remains unqueried to avoid redundant QA.
