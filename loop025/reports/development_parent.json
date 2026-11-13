@@ -1,0 +1,445 @@
+{
+  "variant": "parent",
+  "phase": "development",
+  "controls": [
+    {
+      "output": "Sb",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 2.1399237790028565,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_0",
+      "correct": true
+    },
+    {
+      "output": "children",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.6123080459947232,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_1",
+      "correct": true
+    },
+    {
+      "output": "Santiago",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.6689548569993349,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_2",
+      "correct": true
+    },
+    {
+      "output": "heart",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.2318645479972474,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "dev_3",
+      "correct": true
+    },
+    {
+      "output": "56",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.8801386790000834,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_product",
+      "correct": true
+    },
+    {
+      "output": "Ana",
+      "new_tokens": 2,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.4124038879963337,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_order",
+      "correct": true
+    },
+    {
+      "output": "12",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.773271311991266,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_subtract",
+      "correct": true
+    },
+    {
+      "output": "17",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.7698088110046228,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "reason_half",
+      "correct": true
+    },
+    {
+      "output": "Frio",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.652030733996071,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_opposite",
+      "correct": true
+    },
+    {
+      "output": "I went.",
+      "new_tokens": 4,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 2.2006068240007153,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_past",
+      "correct": false
+    },
+    {
+      "output": "Cães, gatos, pássaros, peixes, répteis, mamíferos, aves, anfíbios, répteis, anfíbios, répteis, mamíferos, aves, anfíbios, répteis, mamíferos, aves, anfíbios, ré",
+      "new_tokens": 64,
+      "hit_limit": true,
+      "ended_eos": false,
+      "seconds_descriptive_only": 22.673727543995483,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_plural",
+      "correct": false
+    },
+    {
+      "output": "água",
+      "new_tokens": 3,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 1.511181268011569,
+      "loop_exit_prefill": [],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "id": "lang_translate",
+      "correct": true
+    }
+  ],
+  "code": [
+    {
+      "id": "prefix_offset_0",
+      "split": "taught_fit",
+      "output": "def solve(xs):\n    K = 2\n    total = K\n    return [total] + [total + x for x in xs]",
+      "new_tokens": 32,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 10.662573829002213,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.06415282189846039,
+          "cosine": 0.9979414939880371,
+          "first_norm": 5.870781898498535,
+          "second_norm": 5.86725378036499
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 20,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    K = 2\n    total = K\n    return [total] + [total + x for x in xs]"
+    },
+    {
+      "id": "above_0",
+      "split": "taught_fit",
+      "output": "def solve(xs):\n    return [x for x in xs if x > 2]",
+      "new_tokens": 20,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 6.960928083004546,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.0629739910364151,
+          "cosine": 0.9980202317237854,
+          "first_norm": 5.727657318115234,
+          "second_norm": 5.734152317047119
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 0,
+      "total": 20,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    return [x for x in xs if x > 2]"
+    },
+    {
+      "id": "L025V/rotate",
+      "split": "validation",
+      "output": "def solve(xs):\n    if len(xs) == 0:\n        return []\n    return xs[-3:] + xs[:-3]",
+      "new_tokens": 31,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 10.562018438999075,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.06415586173534393,
+          "cosine": 0.9979456067085266,
+          "first_norm": 5.842907905578613,
+          "second_norm": 5.850103378295898
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 4,
+      "total": 9,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    if len(xs) == 0:\n        return []\n    return xs[-3:] + xs[:-3]"
+    },
+    {
+      "id": "L025V/brackets",
+      "split": "validation",
+      "output": "def solve(s):\n    stack = []\n    for char in s:\n        if char == '(':\n            stack.append(char)\n        elif char == ')':\n            if not stack:\n                return False\n            stack.pop()\n        else:\n            continue\n    return len(stack) == 0",
+      "new_tokens": 68,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 22.190252697007963,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.06550505012273788,
+          "cosine": 0.9978549480438232,
+          "first_norm": 5.706300735473633,
+          "second_norm": 5.681900501251221
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 8,
+      "total": 10,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "code": "def solve(s):\n    stack = []\n    for char in s:\n        if char == '(':\n            stack.append(char)\n        elif char == ')':\n            if not stack:\n                return False\n            stack.pop()\n        else:\n            continue\n    return len(stack) == 0"
+    },
+    {
+      "id": "L025V/compact",
+      "split": "validation",
+      "output": "def solve(xs):\n    result = []\n    for i in range(len(xs) - 1):\n        if xs[i] == xs[i + 1]:\n            result.append(xs[i])\n        else:\n            result.append(xs[i])\n    return result",
+      "new_tokens": 58,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 18.735199445000035,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.06417421996593475,
+          "cosine": 0.9979453682899475,
+          "first_norm": 5.902545928955078,
+          "second_norm": 5.9114813804626465
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 1,
+      "total": 8,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(xs):\n    result = []\n    for i in range(len(xs) - 1):\n        if xs[i] == xs[i + 1]:\n            result.append(xs[i])\n        else:\n            result.append(xs[i])\n    return result"
+    },
+    {
+      "id": "L025V/subarray",
+      "split": "validation",
+      "output": "def solve(xs):\n    if not xs:\n        return 0\n    max_sum = 0\n    current_sum = 0\n    for x in xs:\n        current_sum += x\n        if current_sum > max_sum:\n            max_sum = current_sum\n        if current_sum < 0:\n            current_sum = 0\n    return max_sum",
+      "new_tokens": 80,
+      "hit_limit": false,
+      "ended_eos": true,
+      "seconds_descriptive_only": 26.4442388729949,
+      "loop_exit_prefill": [
+        {
+          "relative_L2": 0.07276810705661774,
+          "cosine": 0.9973632097244263,
+          "first_norm": 5.304140567779541,
+          "second_norm": 5.261808395385742
+        }
+      ],
+      "second_contribution_bypassed": false,
+      "all56_layer_executions_retained_if_hybrid": true,
+      "passed": 9,
+      "total": 9,
+      "all_passed": true,
+      "category": "passed",
+      "error_types": [],
+      "case_passed": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "code": "def solve(xs):\n    if not xs:\n        return 0\n    max_sum = 0\n    current_sum = 0\n    for x in xs:\n        current_sum += x\n        if current_sum > max_sum:\n            max_sum = current_sum\n        if current_sum < 0:\n            current_sum = 0\n    return max_sum"
+    }
+  ],
+  "protocol": {
+    "thinking": false,
+    "greedy": true,
+    "seed": 0,
+    "threads": 4,
+    "code_budget": 160,
+    "control_budget": 64,
+    "eos_ids": [
+      248044,
+      248046
+    ],
+    "reference_answers_or_tests_in_generation_inputs": false,
+    "framework": "PyTorch CPU BF16 eager",
+    "bypass_diagnostic_only": false
+  },
+  "source_metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    }
+  },
+  "status": "complete",
+  "controls_correct": 10,
+  "taught_tasks_passed": 0,
+  "validation_tasks_passed": 1,
+  "final_tasks_passed": 0
+}
