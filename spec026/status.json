@@ -1,6 +1,8 @@
 {
-  "status": "architecture_and_unit_tests_passed_preparing_teacher_data",
+  "status": "running_train_draft",
   "child_training_steps": 0,
   "target_weights_changed": false,
-  "model_process_active": false
+  "model_process_active": true,
+  "phase": "train_draft",
+  "last_exit_code": 0
 }
