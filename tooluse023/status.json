@@ -1,12 +1,14 @@
 {
-  "status": "screening_candidate",
-  "model_process_active": true,
-  "gradient_updates_complete": 32,
-  "parent_screen_correct": 2,
-  "parent_screen_total": 4,
-  "candidate_screen_rows_complete": 0,
-  "fresh4_queried": false,
+  "status": "complete_rejected_weights_tools_APK_delivered",
+  "model_process_active": false,
+  "background_work_promised": false,
+  "gradient_updates_completed": 32,
   "checkpoint_promoted": false,
-  "selected_candidate_metadata": "checkpoints/projected/final.json",
-  "parent_best_unchanged": true
+  "tools_candidate_eligible": false,
+  "general_best_unchanged": true,
+  "specialistE_unchanged": true,
+  "fresh4_queried": false,
+  "app_includes_rejected_edits": false,
+  "apk": "https://gofile.io/d/fowGW6q4",
+  "phone_execution_verified": false
 }
