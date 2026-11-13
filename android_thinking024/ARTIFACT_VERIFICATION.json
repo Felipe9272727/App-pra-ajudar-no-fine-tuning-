@@ -1,0 +1,840 @@
+{
+  "format": "sha256-and-git-blob-catalog-v1",
+  "status": "all_cataloged_artifacts_match_remote_git_blobs",
+  "files": [
+    {
+      "path": "android_thinking024/AGENTS.md",
+      "bytes": 1048,
+      "sha256": "cdaadaed779ee733e770ca831ca5de94af5e7372bcd1efa512a1ac349aefcb69",
+      "git_blob_sha": "491a906f8fe9a1be4d49aa0bb0698a5a6d5dfda3"
+    },
+    {
+      "path": "android_thinking024/AgentTests.java",
+      "bytes": 5274,
+      "sha256": "2bd9648893c1b8d4017b3b623d529870dd327858ec293eb4e976e6663ebb9885",
+      "git_blob_sha": "1926ea0467f1d073626306050ff6224ea065b485"
+    },
+    {
+      "path": "android_thinking024/NativeAgentSmoke.java",
+      "bytes": 3564,
+      "sha256": "3425e2c6592712ba95b116a177bd99b0aeb5e16d0e799b73bbfbcc74598c1bc2",
+      "git_blob_sha": "70017d02dcb0cdea722c82139c1081d5e282af7c"
+    },
+    {
+      "path": "android_thinking024/PROTOCOL.md",
+      "bytes": 2893,
+      "sha256": "6c69a453f212e2c36b84597b7f4e6beeaf3601738f3589ff23211e457f9495ea",
+      "git_blob_sha": "34005a044fb6b47657b1375f1b07f8062040177a"
+    },
+    {
+      "path": "android_thinking024/README.md",
+      "bytes": 3898,
+      "sha256": "9c5af9aa99e637f85538cd57d5ac37baaecefffb0934b9fa41bfef475cd1f166",
+      "git_blob_sha": "fcd3d0c84b43a42aef1fd7625c5702bcd8dc4cd3"
+    },
+    {
+      "path": "android_thinking024/REPORT.md",
+      "bytes": 6202,
+      "sha256": "4cd4a4b20cab6934974a164fb86ab4584d6a1c080e300d6c9e8c9c398b2ded38",
+      "git_blob_sha": "afae897d7404fe6d26f430732f8a76d0301d64d7"
+    },
+    {
+      "path": "android_thinking024/android/AndroidManifest.xml",
+      "bytes": 1225,
+      "sha256": "efe30369cdd55efd489f2bb7208eb4131ec6a9893f9d03798c75e35ee4b5a7c3",
+      "git_blob_sha": "b57e15b232a0e82fee0fea7486999de3c4a7f847"
+    },
+    {
+      "path": "android_thinking024/android/res/drawable/ic_launcher.xml",
+      "bytes": 536,
+      "sha256": "ac4a5cdd1e51a699e5a1129cbb60494671f0927a91a640ed4c361010a26bf6d0",
+      "git_blob_sha": "74482a42659fcd895f4462e1e2a22abb6ca74e46"
+    },
+    {
+      "path": "android_thinking024/android/res/values/styles.xml",
+      "bytes": 566,
+      "sha256": "2067e84e2cdfbea204ca9733feab911832d70d8e2a81c4ab06087f659eb270e5",
+      "git_blob_sha": "611b5223b66fb8ab7877b17fa48c2c886ba3f7e3"
+    },
+    {
+      "path": "android_thinking024/android/src/dev/liquidsense/chat/AgentRunner.java",
+      "bytes": 7982,
+      "sha256": "1cd9fc6f034f633f9cfcf1c7234ccc12cb561321a6fae0f5d696b942b717a3c4",
+      "git_blob_sha": "5fa6819210e1cb4b6530d535d05771a87dcad988"
+    },
+    {
+      "path": "android_thinking024/android/src/dev/liquidsense/chat/InferenceSettings.java",
+      "bytes": 732,
+      "sha256": "2fee230773c3c489f149491d85bde24805d93ea521c233ef78b34e9d088e5381",
+      "git_blob_sha": "7d6ae6b2ec558d0f3068dd590225e7681968b99e"
+    },
+    {
+      "path": "android_thinking024/android/src/dev/liquidsense/chat/MainActivity.java",
+      "bytes": 23749,
+      "sha256": "cb987ab54edbbb8a79b782f0cfa559e42771647588c7752fcdd1bdbd23efce44",
+      "git_blob_sha": "df53e41308824b69c71ea7a13161210bc7a1a5c9"
+    },
+    {
+      "path": "android_thinking024/android/src/dev/liquidsense/chat/PythonClient.java",
+      "bytes": 1455,
+      "sha256": "135a32ff4988e5cec3484d95b1b52531d7c101ea4b0eb4ec43908f58c6cd8f53",
+      "git_blob_sha": "21232a9a4c080e5759a544cb2db9969470ddf3ad"
+    },
+    {
+      "path": "android_thinking024/android/src/dev/liquidsense/chat/PythonService.java",
+      "bytes": 2422,
+      "sha256": "bb95f2be990f264f392fdadaa563312469efdbf783f27128ac72e89437f61d3e",
+      "git_blob_sha": "316134a63772ab6552081ad4cc8ac08a683caeb6"
+    },
+    {
+      "path": "android_thinking024/android/src/dev/liquidsense/chat/ToolExecutor.java",
+      "bytes": 11549,
+      "sha256": "ffffd20960128c8fbdedc03ce0a32dee6078a1be6260e4919c1ddd150e7c71e2",
+      "git_blob_sha": "2da6974580c6de1cd95c136ef8d834bf89c20aea"
+    },
+    {
+      "path": "android_thinking024/artifacts/README.md",
+      "bytes": 940,
+      "sha256": "72b9c1d898ba97d7bc692feeef9b63f3557e466eeb7e13643b733cf86d51973f",
+      "git_blob_sha": "655457f85a8ceae75aad18346f5ef465b6f612aa"
+    },
+    {
+      "path": "android_thinking024/artifacts/before_eos_fix_rust_arm.zlib.bin",
+      "bytes": 1751424,
+      "sha256": "7e17cd74a62e58aeea2926546fa6c8c7333cb29a3c63f8781acfad48a3de4ce9",
+      "git_blob_sha": "db808cd9088363fba361207cfdf78595b4625ba5"
+    },
+    {
+      "path": "android_thinking024/artifacts/before_eos_fix_rust_host.zlib.bin",
+      "bytes": 1780489,
+      "sha256": "b81a018ab34a5411db2f2292b95ae997aabaedf0c784204822df747a6c791340",
+      "git_blob_sha": "1bb1ed7950b9901ba27f9ac3fb966220bef8774e"
+    },
+    {
+      "path": "android_thinking024/artifacts/before_eos_fix_rust_manifest.json",
+      "bytes": 671,
+      "sha256": "b38d52d4f7828edb8f9bcbdfa1a9973c68eb31bf5efd9946e26de066a0e3daf8",
+      "git_blob_sha": "3ceff8cc655631b33a6059c3acda6b6286339480"
+    },
+    {
+      "path": "android_thinking024/artifacts/prior_tools023/manifest.json",
+      "bytes": 693,
+      "sha256": "94855a7554328fd6b60662f4b6cd83bf80fa1b72701cf5f6bb75bef1012d2721",
+      "git_blob_sha": "4c9413c346d1fb0d604d5948be08771b7544dc8f"
+    },
+    {
+      "path": "android_thinking024/artifacts/prior_tools023/prefix.zlib.bin",
+      "bytes": 6095216,
+      "sha256": "0e0be9eed6b570385c883d8d1b67d7a69310aac02ba52016e639f51f6e705905",
+      "git_blob_sha": "ff95f1eb28a91f26755a84e513154e2a542a3f86"
+    },
+    {
+      "path": "android_thinking024/artifacts/prior_tools023/suffix.zlib.bin",
+      "bytes": 818029,
+      "sha256": "6162df0327c003c3b2d4636ffa96494260b379a6215d94807ddb182ca3ff9bce",
+      "git_blob_sha": "d4335fe8160c8007a8b713d7f652aac045665971"
+    },
+    {
+      "path": "android_thinking024/artifacts/rust_arm.zlib.bin",
+      "bytes": 1751341,
+      "sha256": "a815be5f25e8e790c7dff4830b396c229784673a840133204e86df91f44e2aa7",
+      "git_blob_sha": "847c642615bd4b2443063419fac75d5968a1e84c"
+    },
+    {
+      "path": "android_thinking024/artifacts/rust_host.zlib.bin",
+      "bytes": 1780546,
+      "sha256": "927511c5f8fb81b5d6a42aba17df25a7a11ecccd6de1b17f28ef3dbb728cdd7c",
+      "git_blob_sha": "f6048b8a349a107f8cb77a68762602359b044187"
+    },
+    {
+      "path": "android_thinking024/artifacts/rust_manifest.json",
+      "bytes": 671,
+      "sha256": "7c7c8ce5c7ce0dc1910534f818fa1945129cfb55e0e83168f912ba5016e56c50",
+      "git_blob_sha": "3caf6b315fc0c85401fd0d42882d47670df5759a"
+    },
+    {
+      "path": "android_thinking024/build_apk.py",
+      "bytes": 8367,
+      "sha256": "d83e0cc0b59e436d19219158fe5c6be744bf0da18785962463d0c83bda19779d",
+      "git_blob_sha": "f4ca1c7a5f1ae2a6ce62ebfdd3db98bf1d39a802"
+    },
+    {
+      "path": "android_thinking024/compile.sh",
+      "bytes": 1836,
+      "sha256": "1a6aaf9a57f0f47d47212a6516ba9b5b68d5065b8144e8d8bf9b2b359d568d9f",
+      "git_blob_sha": "df1217a7bf22b74feeb22dd88b34caaf99fb88ce"
+    },
+    {
+      "path": "android_thinking024/compile_ui.py",
+      "bytes": 1347,
+      "sha256": "d0e22172f951b6564722c7ee61e06a74c84c80615ce49dacd6e9a919db16c3c5",
+      "git_blob_sha": "6ea7d487c28465245aaa80f939174b0e91f5d136"
+    },
+    {
+      "path": "android_thinking024/deliver.py",
+      "bytes": 2375,
+      "sha256": "e644f45a7802de25556c87e8e46ff86058e7d4d141c42eb8981c6c781f901b16",
+      "git_blob_sha": "7d1878f9ba0320baf62d383c5da09fc1b43250bd"
+    },
+    {
+      "path": "android_thinking024/fixtures/arithmetic.json",
+      "bytes": 83,
+      "sha256": "1aef17b8829b8a971582ca3731ed5958e85f5800e3dddd9faecbf7b69eac3cea",
+      "git_blob_sha": "7aca6fc6103f9b2cbdc18c0b7e20732d4f3ae265"
+    },
+    {
+      "path": "android_thinking024/fixtures/context_options.json",
+      "bytes": 91,
+      "sha256": "1a78b9f27bce9d2fb8e44827bb1cb7ed9f50aab3d52f47408e6c35096982de66",
+      "git_blob_sha": "73a089fe909c1acbb329ea0c12c7deffd009a62e"
+    },
+    {
+      "path": "android_thinking024/fixtures/context_over2048.json",
+      "bytes": 3252,
+      "sha256": "1296591a2586083964e24bc468b147d8724ac5e8f78e3576dc84a828fb96e8bd",
+      "git_blob_sha": "89637ffb54a983f07220d0afb85829b2ecd93877"
+    },
+    {
+      "path": "android_thinking024/fixtures/forced_close.json",
+      "bytes": 90,
+      "sha256": "3a17fd70251d0bfdc7e747493af1d3c7a1fe2f9c741994d18a352e270f094e1f",
+      "git_blob_sha": "e7d119cc373c875e9c1c15b1b14617c59c763539"
+    },
+    {
+      "path": "android_thinking024/fixtures/profundo.json",
+      "bytes": 94,
+      "sha256": "23dbad8f2ab94d3400ba577cbc6a08e345b5041371cfbf627833bbcf4d00bf4f",
+      "git_blob_sha": "23a1261020f4cc5e8204bfd84097b882ab373607"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/history.json",
+      "bytes": 1012,
+      "sha256": "3722e25d941423f703e06e9a8ec799a2b1fdddf30a0ee6c43d76c85cd57806ef",
+      "git_blob_sha": "d1a751e8065fffad2236ebd9105a2b38e252e6be"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/messages_0.json",
+      "bytes": 96,
+      "sha256": "155d4cbf8d95d63e1c53db109520b8f59a12a709fa0ef8d346d4bbf301c401bb",
+      "git_blob_sha": "32e962a94dbcccccbba4d2abd7a0e76ccafd230c"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/messages_1.json",
+      "bytes": 933,
+      "sha256": "329000721b8101336de377a356ff3ef378e1fd209bcc8e53e2e017e28fc8a224",
+      "git_blob_sha": "f246f25aeebf648b5d18a3cd5f7532c0b9ee3dcd"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/native_0.json",
+      "bytes": 697,
+      "sha256": "e2f2a74f1edb99a4afedb24679338015dfd2c4954b8947d2056b63770a0b9980",
+      "git_blob_sha": "0f20457966079063cdd7706be220ffc5bfe32ba8"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/native_0.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/native_1.json",
+      "bytes": 489,
+      "sha256": "b65b0150b0bbde2ffe7441d51d1e05e67e30252b00f215feca413438f7a46b60",
+      "git_blob_sha": "c40fdafa68c3138ef82f479bb45297e38d7e9e2b"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/native_1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/options_0.json",
+      "bytes": 104,
+      "sha256": "c0dcdab9ec490276eac56baf2fd04f5739f9f2cc763f2141263f51904b06ffbb",
+      "git_blob_sha": "ac1b3a7e972c89f3e9667b3d2ef8042c0a56d723"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/options_1.json",
+      "bytes": 104,
+      "sha256": "c0dcdab9ec490276eac56baf2fd04f5739f9f2cc763f2141263f51904b06ffbb",
+      "git_blob_sha": "ac1b3a7e972c89f3e9667b3d2ef8042c0a56d723"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/python_1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/python_1.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/result.json",
+      "bytes": 871,
+      "sha256": "ab904dce7bf5fec0b34c2c465276bb645da39f529730e1905d66a43d6bdb975a",
+      "git_blob_sha": "167d6e3f0f6242e474f7c9e31ae844f2a5fcf840"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes/trace.json",
+      "bytes": 2851,
+      "sha256": "c48495eb46c68afaecc528e31c27e5dd1ea954c23e657b767404a0ef311bd7cc",
+      "git_blob_sha": "6c8bcc3d84aec4b4576f1288cfd679833d0ddd83"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_after_fixes.stdout",
+      "bytes": 903,
+      "sha256": "1b5da24913263890f6d8df878f766d1a581c46b16cbb8e828f158e1248aeba00",
+      "git_blob_sha": "4dfdf8a7e1926b7574e460fea0de8a200504f260"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/history.json",
+      "bytes": 918,
+      "sha256": "f2fc596ad8121ebdde876794e85da324815ac8407c64d7f23d5eb245495dfa1b",
+      "git_blob_sha": "7e2c6ce5155e06f7ff7a44e808083353d50f8f6b"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/messages_0.json",
+      "bytes": 96,
+      "sha256": "155d4cbf8d95d63e1c53db109520b8f59a12a709fa0ef8d346d4bbf301c401bb",
+      "git_blob_sha": "32e962a94dbcccccbba4d2abd7a0e76ccafd230c"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/messages_1.json",
+      "bytes": 652,
+      "sha256": "ca2b8a75968a8dfc1bf8b0fca76bdf41cf733f066efdf701dc264ed253a4a217",
+      "git_blob_sha": "149ec1951742c81632786fec7693b06a0277a0f3"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/messages_2.json",
+      "bytes": 815,
+      "sha256": "d56a69946632ccae9c40984ac9bcbfed79fe657cb72847f82db3b4a696c7cec0",
+      "git_blob_sha": "643e793c730e9449b34422af08c8f256b4917c4f"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/native_0.json",
+      "bytes": 698,
+      "sha256": "140f71dd78dfeb401733b29f575ea1cee9cc9dd460bdd800a349c03d6d086a84",
+      "git_blob_sha": "27a3f34b1c29a9b1df4c543313125234b1fcc5b1"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/native_0.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/native_1.json",
+      "bytes": 698,
+      "sha256": "58cb51dc34ce2dfb801a4fcd0b3a77f9c7a8b678c59ded8e0c6bbd25255e16a4",
+      "git_blob_sha": "c8541941de0388726b5d5dcc67fe8717446c3171"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/native_1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/native_2.json",
+      "bytes": 462,
+      "sha256": "aabc57e553ed4159185d2e702240e712419a8f620112d2030b64a462c3120907",
+      "git_blob_sha": "af87696f4f7e528729f93c6fac154d5abd20a617"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/native_2.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/options_0.json",
+      "bytes": 104,
+      "sha256": "c0dcdab9ec490276eac56baf2fd04f5739f9f2cc763f2141263f51904b06ffbb",
+      "git_blob_sha": "ac1b3a7e972c89f3e9667b3d2ef8042c0a56d723"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/options_1.json",
+      "bytes": 104,
+      "sha256": "c0dcdab9ec490276eac56baf2fd04f5739f9f2cc763f2141263f51904b06ffbb",
+      "git_blob_sha": "ac1b3a7e972c89f3e9667b3d2ef8042c0a56d723"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/options_2.json",
+      "bytes": 104,
+      "sha256": "c0dcdab9ec490276eac56baf2fd04f5739f9f2cc763f2141263f51904b06ffbb",
+      "git_blob_sha": "ac1b3a7e972c89f3e9667b3d2ef8042c0a56d723"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/python_1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/python_1.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/result.json",
+      "bytes": 820,
+      "sha256": "9d4a8f8fd703005280ddc0ebaf0810c20c238be86514d44a59dc67ffe5e712a8",
+      "git_blob_sha": "a3db673b8dde9152adc1bacb41dcee0852f096e4"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal/trace.json",
+      "bytes": 3857,
+      "sha256": "771e9420e7e5ffc8df98a16b42f89f3e93d221ddcccd7a46139d4370a88bd193",
+      "git_blob_sha": "bed5155b6b74e412ed3dbf29c7e08ad369926209"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/actual_python_normal.stdout",
+      "bytes": 852,
+      "sha256": "664a2189bba101e6889e03341f0ab41e854a8056c8602a5c032179faf0896f96",
+      "git_blob_sha": "1ca579b244388d4097b1a977cb28c45e1ae92b97"
+    },
+    {
+      "path": "android_thinking024/logs/android_compile.log",
+      "bytes": 562,
+      "sha256": "eda9ea437529b0d77b1aa53f7f2702e93e8010746ba2661f11bc59cf7a1ca4b3",
+      "git_blob_sha": "736e7ec8cd216eaec3745db7e9ef10f0bc63232e"
+    },
+    {
+      "path": "android_thinking024/logs/android_compile_final.log",
+      "bytes": 562,
+      "sha256": "eda9ea437529b0d77b1aa53f7f2702e93e8010746ba2661f11bc59cf7a1ca4b3",
+      "git_blob_sha": "736e7ec8cd216eaec3745db7e9ef10f0bc63232e"
+    },
+    {
+      "path": "android_thinking024/logs/apk_prepare.log",
+      "bytes": 32,
+      "sha256": "a79e4dd22db2b4e7f4b0d4cb6a168d08aaeaa31b6f83ca84e0083ee49b53c512",
+      "git_blob_sha": "516a99d84c174dad7fabb470e337bc2c5b3e7d10"
+    },
+    {
+      "path": "android_thinking024/logs/apk_seal.log",
+      "bytes": 1552,
+      "sha256": "745fc8353b2cd60a8a9d8380e690c295ac34120baec70cf84ddc76333f7a7b52",
+      "git_blob_sha": "d935d71d08b1fd96bfe24655609bec425cf729af"
+    },
+    {
+      "path": "android_thinking024/logs/baseline_math.json",
+      "bytes": 233,
+      "sha256": "22ecce5fe9cae02185ac6c9f257e2b461a6184f0e145430b23081e489bd35ed9",
+      "git_blob_sha": "d1d5bb22efc448f4e6478a48da431dc45c5f0e8e"
+    },
+    {
+      "path": "android_thinking024/logs/baseline_math.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/history.json",
+      "bytes": 750,
+      "sha256": "1acc5aa8d9959e7a0947084ac5e4e6362719355c99b51d82c0051e169d63f321",
+      "git_blob_sha": "a62eb4fc36aca433576935c1a51592f07b54794d"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/messages_0.json",
+      "bytes": 102,
+      "sha256": "897438f5309d0a4b53475d4b5b576bdb424e4a70269a5e1cbb86891b2868ea68",
+      "git_blob_sha": "45d83b6d0828494b086901c274ae84e19561e361"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/messages_1.json",
+      "bytes": 671,
+      "sha256": "d4a2ddf8776ca88fe2f4c0e25b9a3e0a557d1761c7f30b1628b09a621f15c139",
+      "git_blob_sha": "998909be08b060e27788876a488c6949894bcba6"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/native_0.json",
+      "bytes": 721,
+      "sha256": "4253e50a5289366d5b58cbca75b9c1a90b6eef6c64623de9adb5a810a0afc5ce",
+      "git_blob_sha": "ab19f4a28aece0868d072b8161e9e552f0322b2b"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/native_0.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/native_1.json",
+      "bytes": 467,
+      "sha256": "3171bb4015250f47d973867732616c8b309088a0f1897b20bfab16f7329eaa29",
+      "git_blob_sha": "b637281abfdd7ea115fdf9021dca24c0744d322c"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/native_1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/options_0.json",
+      "bytes": 104,
+      "sha256": "c0dcdab9ec490276eac56baf2fd04f5739f9f2cc763f2141263f51904b06ffbb",
+      "git_blob_sha": "ac1b3a7e972c89f3e9667b3d2ef8042c0a56d723"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/options_1.json",
+      "bytes": 104,
+      "sha256": "c0dcdab9ec490276eac56baf2fd04f5739f9f2cc763f2141263f51904b06ffbb",
+      "git_blob_sha": "ac1b3a7e972c89f3e9667b3d2ef8042c0a56d723"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/python_1.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/python_1.stdout",
+      "bytes": 4,
+      "sha256": "d92c61b32619f9f894b657941a45489569d9d4e48ddd9e2d0b2f375ecd28299c",
+      "git_blob_sha": "d1b9f6a9c4b4d535836ac86e366b4bc43a439cc8"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/result.json",
+      "bytes": 831,
+      "sha256": "6d1215596c6387f09b9b72ac96f0cbb53f4e2870cd680f6bdcda0fdaf3840866",
+      "git_blob_sha": "40cbf4d38b1136f650d14b8dc0adbeeced588fd3"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi/trace.json",
+      "bytes": 2556,
+      "sha256": "9f08a13a0cc46f5ac201938180f5526cf1a24f350ae25dc864ff97ceae303b1d",
+      "git_blob_sha": "bd87553cf7847948402431d76a66b42c859e6c74"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/explicit_python_abi.stdout",
+      "bytes": 863,
+      "sha256": "1268b7d84106715e44879854306677f26e15200c6957e84e791b70c19a1895af",
+      "git_blob_sha": "06029b2190428534837d4f671f06fac9754840cd"
+    },
+    {
+      "path": "android_thinking024/logs/forced_math.json",
+      "bytes": 1717,
+      "sha256": "a93c34dacfbea553479eefbe525d06aa6f82753bd331c4ed6c9f42b487f7d5e4",
+      "git_blob_sha": "e21ceb5823a2c58edc0faf0665a6f5e0497e24e2"
+    },
+    {
+      "path": "android_thinking024/logs/forced_math.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/gofile_delivery.log",
+      "bytes": 431,
+      "sha256": "61a0c9567dd3d396d151d1876d458150fab8a1a2ab3c0106097d72d986fb11f5",
+      "git_blob_sha": "2851790fcbfb001a23bb80f8ef69d318fe28a605"
+    },
+    {
+      "path": "android_thinking024/logs/java_actual_https.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/profundo_math.json",
+      "bytes": 46982,
+      "sha256": "7d56e6117f2ee7f2afc91c1a1d0b7fb60d1c538e47a09ca17281c9279587c1db",
+      "git_blob_sha": "17093ef969aa36f9ab08db4b04150721f7c131eb"
+    },
+    {
+      "path": "android_thinking024/logs/profundo_math.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/logs/rust_target_eos_fix.log",
+      "bytes": 37,
+      "sha256": "831ad8906cd548d1be0b512110752469e0a5b4f23e8ea459eb4bf438761bef31",
+      "git_blob_sha": "895dcb909d8928face15a56d53a54f5d9e85f8cc"
+    },
+    {
+      "path": "android_thinking024/logs/rust_toolchain_eos_fix.log",
+      "bytes": 1947,
+      "sha256": "7189761ccc26682e8bfdd82f3a4e349d0f322397cd1a48251ba7d70120e42394",
+      "git_blob_sha": "fd773006c814039528eb003fa5c56a6c2ad2147b"
+    },
+    {
+      "path": "android_thinking024/logs/template_checks.log",
+      "bytes": 1877,
+      "sha256": "586a82f2d6913e3f31e3f97d90326f00a7958ac2638bc7640f575659bba96b9c",
+      "git_blob_sha": "3101a464eea282f914cb7dbbfe7df0aa2d5dc547"
+    },
+    {
+      "path": "android_thinking024/native/Cargo.lock",
+      "bytes": 23700,
+      "sha256": "4d194e3c2d289d3f8b2cb3943030abcb7c202b5f2df21b54379ecc8c9bab3d73",
+      "git_blob_sha": "ce4f8f52e3a9902238bdcf8cd3cc1dd7226ae928"
+    },
+    {
+      "path": "android_thinking024/native/Cargo.toml",
+      "bytes": 527,
+      "sha256": "f3fe93e340849d0733e1875c1136e2d20dc9c48116701a416bb6a48d35567e1a",
+      "git_blob_sha": "01c2ade2492fa08f88311823d89ca2a8b087b83e"
+    },
+    {
+      "path": "android_thinking024/native/src/android.rs",
+      "bytes": 6139,
+      "sha256": "2dd21f38408670167a6b1ae5a9992bd4f29416bb35c1b5cd050fa5dae9fe67cf",
+      "git_blob_sha": "b790fa171dc9a61a97234ff0f055b995b6089c10"
+    },
+    {
+      "path": "android_thinking024/native/src/bin/toolcheck.rs",
+      "bytes": 2673,
+      "sha256": "70747fee509b203b1a02d55408386ce5fd1384acc14105d9b0cd77889741eddb",
+      "git_blob_sha": "bd12273301c983bc32d9fce2ae6b32f7482b5fda"
+    },
+    {
+      "path": "android_thinking024/native/src/chat.rs",
+      "bytes": 11502,
+      "sha256": "b99342aad1a4d68403013b7ab142965d7e485271b95ce8fb34aca255e341d448",
+      "git_blob_sha": "763423c33813617efc60131ae7cbb6af1fde2e95"
+    },
+    {
+      "path": "android_thinking024/native/src/kernels.rs",
+      "bytes": 9121,
+      "sha256": "e76fd4ba2b3c8a926e7729b3c8ffd23b2acd45426f32ac43e343a66b115f837b",
+      "git_blob_sha": "0468aad48084e5f61b42eb41a4b1b994057951f8"
+    },
+    {
+      "path": "android_thinking024/native/src/lib.rs",
+      "bytes": 89,
+      "sha256": "edd05b32aed71eee71f0cf8191255964d3e2bc6ebb050ed3ef8bb2204f93dff7",
+      "git_blob_sha": "2bfb7a01b7401f1f78755c91c6f9f2d152945187"
+    },
+    {
+      "path": "android_thinking024/native/src/model.rs",
+      "bytes": 24451,
+      "sha256": "655f7b736ea26caf9ea4ec1490cdbda8ceaed82b68be3548e04790421ef62fc3",
+      "git_blob_sha": "52feb357e92f227879ec04f39252bbc718004fc9"
+    },
+    {
+      "path": "android_thinking024/reports/android_ui_build.log",
+      "bytes": 562,
+      "sha256": "eda9ea437529b0d77b1aa53f7f2702e93e8010746ba2661f11bc59cf7a1ca4b3",
+      "git_blob_sha": "736e7ec8cd216eaec3745db7e9ef10f0bc63232e"
+    },
+    {
+      "path": "android_thinking024/reports/apk_manifest.json",
+      "bytes": 1435,
+      "sha256": "89a70917243b74692c64329a44c45dd11d863ce4b59b3bfc03fbce2c95ed4fee",
+      "git_blob_sha": "5f22766b8a990a81c9e11fcb2a6655503615624a"
+    },
+    {
+      "path": "android_thinking024/reports/badging.txt",
+      "bytes": 805,
+      "sha256": "81047c61c3cc3a800604628b4a97865bee28fd4f2f6826f21c2c015b9ae4e2f7",
+      "git_blob_sha": "cf6ee36aabe9564274fc4c7569d5cd3d66db558a"
+    },
+    {
+      "path": "android_thinking024/reports/before_eos_fix_native_template_parity.log",
+      "bytes": 25,
+      "sha256": "2b20b1117396b40fef3c9e33826d4858775a2bc1db89802be4d244e3a0be6ee6",
+      "git_blob_sha": "4b4e0b0524bf9db431a56f199496718023302086"
+    },
+    {
+      "path": "android_thinking024/reports/before_eos_fix_rust_arm_build.log",
+      "bytes": 3217,
+      "sha256": "9451d5c7ab107615895c7c8a77cd96af470bfb8ef96220406b9b52c8de1415e8",
+      "git_blob_sha": "8d3ac15a81fd3fa1d9d98e7b0c17046fc8a3869c"
+    },
+    {
+      "path": "android_thinking024/reports/before_eos_fix_rust_arm_elf.txt",
+      "bytes": 2797,
+      "sha256": "2210c4dfee3f0752218cd341c17cb7901ea5e6c9ffc82161587daa94c52f095e",
+      "git_blob_sha": "8fcf0c6c5576a10ff7481f54bd83b2c671d5f7c4"
+    },
+    {
+      "path": "android_thinking024/reports/before_eos_fix_rust_host_build.log",
+      "bytes": 2451,
+      "sha256": "86bde31b502f266f74b2a9e90f55f8f119a922b79343dc5b18b87c6705311371",
+      "git_blob_sha": "1b16159db9aa8a2f78be563a5f145441a5225050"
+    },
+    {
+      "path": "android_thinking024/reports/before_eos_fix_rust_unit_tests.log",
+      "bytes": 6997,
+      "sha256": "13d4a48df35c0575cad1d6aa3f8e180556bb6220fd2bd48398eae3a9313e1977",
+      "git_blob_sha": "3dff5bf81d4562b88539e73129a59802fdcb5027"
+    },
+    {
+      "path": "android_thinking024/reports/comparison.json",
+      "bytes": 5782,
+      "sha256": "310806f775c738ce88c4db7dbc48353c059dd7216d94c6e6bb879b1693d73575",
+      "git_blob_sha": "9d53c13c084670028c2bf262714abffdd4cb6ea3"
+    },
+    {
+      "path": "android_thinking024/reports/compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "android_thinking024/reports/compiler_cache_retirement.json",
+      "bytes": 398,
+      "sha256": "8c99692c6f9a64b793308c9a9e62904034530bc8adfd0f08baee8ab149df05a0",
+      "git_blob_sha": "e2266196d4aba5af4313a3d921a1eb1f83e49dca"
+    },
+    {
+      "path": "android_thinking024/reports/final_apk_checks.json",
+      "bytes": 786,
+      "sha256": "ea6ac95b6bf7dded1c8dd56100ce3af74a6e72b561127bd91a12ae3ebfe8cddf",
+      "git_blob_sha": "49d0b85f5dc12dce8e85eabe8456feab7bf2568d"
+    },
+    {
+      "path": "android_thinking024/reports/gofile_delivery.json",
+      "bytes": 451,
+      "sha256": "47e1b81e31762fb4be72767a0aea8e3cf9b3ac7c5355428360ce2c2b4664a68d",
+      "git_blob_sha": "4e22993dca649378678a635fe09435be39397077"
+    },
+    {
+      "path": "android_thinking024/reports/hf_template_checks.json",
+      "bytes": 1877,
+      "sha256": "586a82f2d6913e3f31e3f97d90326f00a7958ac2638bc7640f575659bba96b9c",
+      "git_blob_sha": "3101a464eea282f914cb7dbbfe7df0aa2d5dc547"
+    },
+    {
+      "path": "android_thinking024/reports/java_actual_https.json",
+      "bytes": 618,
+      "sha256": "8182afd422029fc872c5bfa3b7945c5ea21a49592a148f58607d9c56a75f3904",
+      "git_blob_sha": "fda47c3cc4cb406931b62564067fb35032fb9b57"
+    },
+    {
+      "path": "android_thinking024/reports/java_agent_tests.json",
+      "bytes": 78,
+      "sha256": "c5ddd4115479067804d1c794df3f4faaab5db1b03977b207eb37dc5688ac88eb",
+      "git_blob_sha": "cf455eca996e8161694f278c03ad447e1d76c719"
+    },
+    {
+      "path": "android_thinking024/reports/java_https_initial_failure.json",
+      "bytes": 215,
+      "sha256": "42785e2ee7c9067ea3da7496fee275290478d81d9d972a63c6f25a4f358da718",
+      "git_blob_sha": "dbe0f347d01cc7d11e3d5ac3de3372007385122c"
+    },
+    {
+      "path": "android_thinking024/reports/java_tests_compile.log",
+      "bytes": 512,
+      "sha256": "accf394f2f83359fef4118a669f2e3723ece2ce43c6ac327fe754e324e9f0dff",
+      "git_blob_sha": "98f24414fa6a40a013e7fae712f0810bbb6aaef4"
+    },
+    {
+      "path": "android_thinking024/reports/model_locator.json",
+      "bytes": 279,
+      "sha256": "11fbfa5fcf9a6f988e9f1ca93639dd4c56bb869245d579a7cc32a90f434bdc4e",
+      "git_blob_sha": "03a0c19bbbe9da384814dcef3a6042851afa284c"
+    },
+    {
+      "path": "android_thinking024/reports/native_template_parity.log",
+      "bytes": 25,
+      "sha256": "2b20b1117396b40fef3c9e33826d4858775a2bc1db89802be4d244e3a0be6ee6",
+      "git_blob_sha": "4b4e0b0524bf9db431a56f199496718023302086"
+    },
+    {
+      "path": "android_thinking024/reports/permissions.txt",
+      "bytes": 88,
+      "sha256": "a34a34a8ac895478166dbe61f4becfdd66220b01fa64963cb8c4757f58c520d5",
+      "git_blob_sha": "2769b286ce73ded097ff11aa8641e01ec2337044"
+    },
+    {
+      "path": "android_thinking024/reports/prior_apk_retirement.json",
+      "bytes": 406,
+      "sha256": "f4ebfd75e64fa068686d2a2e99aad0185c0d5264e25d271b17d9f269526797b1",
+      "git_blob_sha": "097c5507a2e9ab4f6e254cf55854d1a46f07c0c8"
+    },
+    {
+      "path": "android_thinking024/reports/rust_arm_build.log",
+      "bytes": 3217,
+      "sha256": "ead2ea98f05bf191c5e48fb9c91dad6a8c80efe905e96ca5e520547ad083b2cb",
+      "git_blob_sha": "9db3aa01e34b7948ab82344bc2a7a579e025085a"
+    },
+    {
+      "path": "android_thinking024/reports/rust_arm_elf.txt",
+      "bytes": 2797,
+      "sha256": "497157c9d1531e5d3bd7342738274d700fcbb2f9199a9c531c105bc7a8536834",
+      "git_blob_sha": "6e4718c8bfc6e279d953c1a63337d1f2b295b9ff"
+    },
+    {
+      "path": "android_thinking024/reports/rust_arm_target.log",
+      "bytes": 37,
+      "sha256": "831ad8906cd548d1be0b512110752469e0a5b4f23e8ea459eb4bf438761bef31",
+      "git_blob_sha": "895dcb909d8928face15a56d53a54f5d9e85f8cc"
+    },
+    {
+      "path": "android_thinking024/reports/rust_host_build.log",
+      "bytes": 2451,
+      "sha256": "9be3a28d71e33e78b86a18e889c74f1cb6576526c93f0612fdae9330d8f66d37",
+      "git_blob_sha": "9094697b7b7ac17e3e1260b472a35468afb844d6"
+    },
+    {
+      "path": "android_thinking024/reports/rust_toolchain.log",
+      "bytes": 1947,
+      "sha256": "7189761ccc26682e8bfdd82f3a4e349d0f322397cd1a48251ba7d70120e42394",
+      "git_blob_sha": "fd773006c814039528eb003fa5c56a6c2ad2147b"
+    },
+    {
+      "path": "android_thinking024/reports/rust_unit_tests.log",
+      "bytes": 7117,
+      "sha256": "8e5d41645a4e79930c613a05baa546d14067ea2d4b2ca1b40f3b7abaad85be88",
+      "git_blob_sha": "85f4d732660431a32dc0175bd882c5df5b2da42e"
+    },
+    {
+      "path": "android_thinking024/reports/signature.txt",
+      "bytes": 950,
+      "sha256": "c9b2f5f8504f9ff5aa61381de9076af9a4b89bbc2967d6e3151370a9b02f0a82",
+      "git_blob_sha": "c94b94532139e37a97c95efa4b65adbe5ae1e44c"
+    },
+    {
+      "path": "android_thinking024/status.json",
+      "bytes": 1237,
+      "sha256": "b191edf5448b33aad7cf03c32da204e32b37d3501a1b229280308ca00f1e316d",
+      "git_blob_sha": "f4b89d45e11d3c7cc57ffd64bf0bc995d07eeaeb"
+    },
+    {
+      "path": "android_thinking024/summarize.py",
+      "bytes": 4915,
+      "sha256": "04f398ef0739879d2fe0cc887aadf955d9f2e8156baa623f6548cdeee2cfe233",
+      "git_blob_sha": "5c26b166f641812586e1c1d5694373ee5a7f178c"
+    },
+    {
+      "path": "android_thinking024/verify_templates.py",
+      "bytes": 3279,
+      "sha256": "c827e82c0004a6180371cf7d05c5fb6c95701814c4580890254222aad937afb0",
+      "git_blob_sha": "428177c8016ccd9bbd351a8ee8656d87ca6c34d6"
+    }
+  ],
+  "files_count": 138,
+  "APK_hash_in_manifest": "6cb9927dca809c901947aed2c4ebd577d421de87e338f06c2714ea21a0f091db",
+  "no_model_workers_running": true,
+  "excluded": "self manifest, temporary before-tree/README snapshots, Python bytecode and unused copied legacy bins",
+  "verified_files": 138,
+  "verified_at_commit": "3072a16ebf68cb35c57bf058d4a5155b38375136"
+}
