@@ -1,0 +1,9 @@
+{
+  "failure": "canonical judge zero-score compile/AST/runtime failures omit per-case array; selector assumed it always existed",
+  "fix": "normalize only missing zero-score arrays to allFalse, assert lengths and sums; retain raw evaluation files",
+  "optimizer_updates_repeated": 0,
+  "completed_model_generations_repeated": 0,
+  "reference_answers_judge_or_scores_changed": false,
+  "selection_rule_unchanged": true,
+  "outcome_independent_of_fix": "All epochs have0validation tasks vs parent1; no eligible epoch under declared strict-gain rule"
+}
