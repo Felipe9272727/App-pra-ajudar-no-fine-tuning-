@@ -1,0 +1,46 @@
+{
+  "format": "gzip-torch-parts-v1",
+  "parts": [
+    {
+      "path": "part0000.bin",
+      "bytes": 4194304,
+      "sha256": "e5e7620c49a74cd4ca2e94443eef072f231fd1d75e0d1ef919bab1552b42bf38"
+    },
+    {
+      "path": "part0001.bin",
+      "bytes": 4194304,
+      "sha256": "797d55f0b0757f74c6c4ab9452dae8840775f9a9858ada239026ed5e5767e187"
+    },
+    {
+      "path": "part0002.bin",
+      "bytes": 4194304,
+      "sha256": "26d2692f244096ac438eb52759b56e0885aa1a59a0677d12f268219b193b0175"
+    },
+    {
+      "path": "part0003.bin",
+      "bytes": 4194304,
+      "sha256": "4b9f312b8c80720bebd1df56e8f5d04d13e8dcd0bcff1c1060be3956eee4fb36"
+    },
+    {
+      "path": "part0004.bin",
+      "bytes": 4194304,
+      "sha256": "b88b6fc41a64e07482bb1d4a56b585632cdd38216c56db00baeef6db0b990fac"
+    },
+    {
+      "path": "part0005.bin",
+      "bytes": 4194304,
+      "sha256": "f512bd71585d00418a1112af01127f1d21b18f2de8cd61c10ce551ae2448e10f"
+    },
+    {
+      "path": "part0006.bin",
+      "bytes": 1586688,
+      "sha256": "12b013510ca11461a3e8e6f44e4653330369c2ff0f230399dd3a2c1b1e72ab6e"
+    }
+  ],
+  "compressed_sha256": "04a0fb6f252eb121344c7989b258ab3432a26ba37238bdc4b41b37720d66c672",
+  "compressed_bytes": 26752512,
+  "phase": "BF16_inference_FP32_routers_gains",
+  "size": "small",
+  "steps": 162,
+  "parameters": 17818400
+}
