@@ -1,0 +1,58 @@
+[
+  {
+    "id": "S026G/0",
+    "question": "Responda somente com o número: 13 vezes 7.",
+    "answer": "91",
+    "numeric": true,
+    "aliases": []
+  },
+  {
+    "id": "S026G/1",
+    "question": "Reply only with a number: 29 minus 12.",
+    "answer": "17",
+    "numeric": true,
+    "aliases": []
+  },
+  {
+    "id": "S026G/2",
+    "question": "Iara chegou antes de João. João chegou antes de Lia. Quem chegou primeiro? Responda somente o nome.",
+    "answer": "Iara",
+    "numeric": false,
+    "aliases": []
+  },
+  {
+    "id": "S026G/3",
+    "question": "Give only the plural of child.",
+    "answer": "children",
+    "numeric": false,
+    "aliases": []
+  },
+  {
+    "id": "S026G/4",
+    "question": "What is the capital of France? Reply only with the city.",
+    "answer": "Paris",
+    "numeric": false,
+    "aliases": []
+  },
+  {
+    "id": "S026G/5",
+    "question": "Traduza red para português. Responda uma palavra.",
+    "answer": "vermelho",
+    "numeric": false,
+    "aliases": []
+  },
+  {
+    "id": "S026G/6",
+    "question": "Responda apenas: SIM",
+    "answer": "SIM",
+    "numeric": false,
+    "aliases": []
+  },
+  {
+    "id": "S026G/7",
+    "question": "Todo mamífero é um animal. Uma foca é mamífero. A foca é um animal? Responda apenas sim ou não.",
+    "answer": "sim",
+    "numeric": false,
+    "aliases": []
+  }
+]

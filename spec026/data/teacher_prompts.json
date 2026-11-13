@@ -1,0 +1,98 @@
+[
+  {
+    "id": "S026D/00",
+    "prompt": "Write a Python function f(x) returning x plus 3. Return only code."
+  },
+  {
+    "id": "S026D/01",
+    "prompt": "Write a Python function f(x) returning x plus 4. Return only code."
+  },
+  {
+    "id": "S026D/02",
+    "prompt": "Write a Python function f(x) returning x plus 5. Return only code."
+  },
+  {
+    "id": "S026D/03",
+    "prompt": "Write a Python function f(x) returning x plus 6. Return only code."
+  },
+  {
+    "id": "S026D/04",
+    "prompt": "Write a Python function f(x) returning x plus 7. Return only code."
+  },
+  {
+    "id": "S026D/05",
+    "prompt": "Write a Python function f(x) returning x plus 8. Return only code."
+  },
+  {
+    "id": "S026D/06",
+    "prompt": "Write a Python function f(x) returning x plus 9. Return only code."
+  },
+  {
+    "id": "S026D/07",
+    "prompt": "Write a Python function f(x) returning x plus 10. Return only code."
+  },
+  {
+    "id": "S026D/08",
+    "prompt": "Responda brevemente: quanto é 3 vezes 7?"
+  },
+  {
+    "id": "S026D/09",
+    "prompt": "Responda brevemente: quanto é 4 vezes 7?"
+  },
+  {
+    "id": "S026D/10",
+    "prompt": "Responda brevemente: quanto é 5 vezes 7?"
+  },
+  {
+    "id": "S026D/11",
+    "prompt": "Responda brevemente: quanto é 6 vezes 7?"
+  },
+  {
+    "id": "S026D/12",
+    "prompt": "Responda brevemente: quanto é 7 vezes 7?"
+  },
+  {
+    "id": "S026D/13",
+    "prompt": "Responda brevemente: quanto é 8 vezes 7?"
+  },
+  {
+    "id": "S026D/14",
+    "prompt": "Responda brevemente: quanto é 9 vezes 7?"
+  },
+  {
+    "id": "S026D/15",
+    "prompt": "Responda brevemente: quanto é 10 vezes 7?"
+  },
+  {
+    "id": "S026D/16",
+    "prompt": "Explique brevemente o que é uma lista em Python."
+  },
+  {
+    "id": "S026D/17",
+    "prompt": "What does a Python for loop do? Keep it short."
+  },
+  {
+    "id": "S026D/18",
+    "prompt": "Como verificar se um número é par em Python?"
+  },
+  {
+    "id": "S026D/19",
+    "prompt": "Explain what a Python dictionary stores, briefly."
+  },
+  {
+    "id": "S026D/20",
+    "prompt": "What is the difference between a list and a tuple? Briefly."
+  },
+  {
+    "id": "S026D/21",
+    "prompt": "Explique em uma frase o que é uma variável."
+  },
+  {
+    "id": "S026D/22",
+    "prompt": "Give a short Python example that prints a greeting."
+  },
+  {
+    "id": "S026D/23",
+    "prompt": "Why test empty input when writing a function? Briefly."
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "S026S/0",
+    "prompt": "Write a Python function triple(x) that returns x multiplied by three. Return only code."
+  },
+  {
+    "id": "S026S/1",
+    "prompt": "Explique brevemente por que testar entradas vazias em uma função."
+  },
+  {
+    "id": "S026S/2",
+    "prompt": "List three properties of a Python dictionary, briefly."
+  },
+  {
+    "id": "S026S/3",
+    "prompt": "Write Python function square(x), returning x*x. Return only code."
+  },
+  {
+    "id": "S026S/4",
+    "prompt": "Qual é a diferença entre uma lista e uma tupla? Resuma."
+  },
+  {
+    "id": "S026S/5",
+    "prompt": "Write a short Python function that returns the largest value of a nonempty list."
+  },
+  {
+    "id": "S026S/6",
+    "prompt": "Explique em duas frases o que faz um laço for."
+  },
+  {
+    "id": "S026S/7",
+    "prompt": "Give two simple ways to check a Python function result."
+  }
+]
