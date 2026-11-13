@@ -1,0 +1,27 @@
+{
+  "status": "native_cache_training_complete_unvalidated",
+  "parent": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "target": "model.language_model.layers.31.mlp.down_proj.weight",
+  "shape": [
+    1024,
+    3584
+  ],
+  "dtype": "bfloat16",
+  "bytes": 7340032,
+  "sha256": "a7eafb008b64625e2364ecdf1b59d78497cc2859ad82cd2da85696c37118d54a",
+  "old_tensor_sha256": "1866748ce87d32cfee34891d2fa393fdfeee77447935f6a31d036e4b80332a48",
+  "updates": 32,
+  "new_factor_values": 147456,
+  "trainable_factor_values": 32768,
+  "merged_changed_values": 2236841,
+  "only_old_tensor_changed": true,
+  "all_other698_tensors_unchanged": true,
+  "all_loop_mhc_temporal_weights_frozen_but_executed": true,
+  "preflight": {
+    "tokens": 631,
+    "argmax_agreement": 1.0,
+    "max_hidden_reconstruction_error": 0.0625,
+    "forced_replay_not_inference_score": true
+  },
+  "seconds": 407.0456796819999
+}

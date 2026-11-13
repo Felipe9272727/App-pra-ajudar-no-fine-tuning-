@@ -1,0 +1,6 @@
+{
+  "tokens": 631,
+  "argmax_agreement": 1.0,
+  "max_hidden_reconstruction_error": 0.0625,
+  "forced_replay_not_inference_score": true
+}

@@ -9,7 +9,7 @@ class EndCall(StoppingCriteria):
  def __init__(self,tok,start):self.tok=tok;self.start=start
  def __call__(self,ids,scores,**kw):return '</tool_call>' in self.tok.decode(ids[0,self.start:],skip_special_tokens=False)
 def apply_candidate(model):
- data=json.loads((HERE/'checkpoints/final.json').read_text());raw=(HERE/'checkpoints/down_proj.bf16.bin').read_bytes();assert hashlib.sha256(raw).hexdigest()==data['sha256'];w=torch.frombuffer(bytearray(raw),dtype=torch.bfloat16).reshape(data['shape']);target=model.model.language_model.layers[31].mlp.down_proj.weight
+ chosen=json.loads((HERE/'candidate_artifact.json').read_text());data=json.loads((HERE/chosen['metadata']).read_text());raw=(HERE/chosen['weights']).read_bytes();assert hashlib.sha256(raw).hexdigest()==data['sha256'];w=torch.frombuffer(bytearray(raw),dtype=torch.bfloat16).reshape(data['shape']);target=model.model.language_model.layers[31].mlp.down_proj.weight
  with torch.no_grad():target.copy_(w)
 def grade(row,turns):
  finals=[r['raw'] for r in turns if r.get('call') is None];final=finals[-1] if finals else '';calls=[r for r in turns if r.get('observation')];valid=any(r['observation'].get('ok') for r in calls);kind=row['kind'];correct=False

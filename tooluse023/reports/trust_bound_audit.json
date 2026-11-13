@@ -1,0 +1,7 @@
+{
+  "FP64_relative_factor_update": 0.010002719140743912,
+  "actual_BF16_relative_weight_update": 0.010056876853797145,
+  "FP32_training_projection_report": "last0.01000013668090105; nominal limit.01; no evaluation-dependent correction",
+  "weights_changed_after_training": false,
+  "raw_sha256": "a7eafb008b64625e2364ecdf1b59d78497cc2859ad82cd2da85696c37118d54a"
+}

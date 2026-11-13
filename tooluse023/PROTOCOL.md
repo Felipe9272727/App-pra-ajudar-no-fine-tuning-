@@ -57,3 +57,13 @@ Android tooling022 is implemented/compiled (Rust+JavaDEX+isolated MicroPython),
 but no new Tools APK has been released or claimed validated. Integrate only
 eligible weights with separate Base/Specialist options and verified provenance.
 Keep the released specialist021APK and all earlier APK bytes/checkpoints.
+
+## Numerical constraint repair before candidate inference
+FP64 auditing found that the FP32 norm reduction used in the projection slightly
+underestimated ||BA||F. Preserve original final/optimizer files and apply one
+deterministic scalar projection to satisfy the SAME1%factor bound, with1e-6
+relative safety margin for FP32rounding. No new gradient update, target/dose
+search or candidate output has occurred. candidate_artifact.json points to a
+new projected directory; old artifacts stay intact. Parent screen in progress
+is unaffected (no candidate weights loaded). BF16weight-rounding differences
+are reported separately; the preregistered constraint concerns the float BA.
