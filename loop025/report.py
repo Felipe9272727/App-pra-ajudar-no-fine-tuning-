@@ -24,7 +24,7 @@ def main():
  if chosen is not None:
   final_data={v:read(f'reports/final_{v}.json') for v in ['original','parent','epoch'+str(chosen)]};p=final_data['parent'];c=final_data['epoch'+str(chosen)];pm={r['id']:r for r in p['code']};cm={r['id']:r for r in c['code']};pc={r['id']:r for r in p['controls']};cc={r['id']:r for r in c['controls']};regressions=[(i,j) for i,r in pm.items() for j,(a,b) in enumerate(zip(bits(r),bits(cm[i]))) if a and not b];ctrl=[i for i,r in pc.items() if r['correct'] and not cc[i]['correct']];gain=c['final_tasks_passed']>p['final_tasks_passed'];validated=gain and not regressions and not ctrl;final_status='pilot_candidate_passed' if validated else 'final_failed_keep_general'
  cfg=read('config.json');training={'epochs':3,'optimizer_updates':24,'backward_passes':49,'unique_training_examples':16,'example_presentations':48,'eligible_tensors':292,'eligible_values':48340208,'actual_changed_tensors_final':audit['changed_tensors'],'actual_changed_values_final':audit['changed_values'],'frozen_tensors_unchanged':407,'vision_tensors_unchanged':153,'formerly_blocked_tensors_with_actual_gradients':len(audit['formerly_blocked_gradient_names_observed']),'all292_nonzero_from_step2_onward':all(len(r['nonzero_gradient_names'])==292 for r in steps[1:]),'cold_restore_699_verified':read('cold_restore.json')['all699_hashes_match'],'all_finite':audit['all_finite'],'optimizer_parameters':cfg,'post_projection_overshoot_events':len(overs),'max_actual_relative_controller_displacement_after_normalization':max(x['relative_l2'] for x in overs) if overs else None,'overshoots_are_reported_not_corrected_after_evaluation':True,'dense_exit_caps_exceeded':any(x['cap']==.01 for x in overs),'training_seconds_descriptive':read('training_complete.json')['seconds']}
- result={'status':'research_candidate_validated_small_pilot' if validated else 'completed_no_candidate_promotion','training':training,'comparison':summaries,'selection':selection,'causal_loop_diagnostic':causal,'independent_final_status':final_status,'independent_final':final_data,'source_parent_sha256':'46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8','selected_general_checkpoint_unchanged':True,'APK024_unchanged':True,'no_4B_or_general_intelligence_claim':True,'no_background_model_worker':True};write('summary.json',result)
+ result={'status':'research_candidate_validated_small_pilot' if validated else 'completed_no_candidate_promotion','training':training,'comparison':summaries,'selection':selection,'loop_gain_weights':read('reports/loop_gain_weights.json'),'causal_loop_diagnostic':causal,'independent_final_status':final_status,'independent_final':final_data,'source_parent_sha256':'46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8','selected_general_checkpoint_unchanged':True,'APK024_unchanged':True,'no_4B_or_general_intelligence_claim':True,'no_background_model_worker':True};write('summary.json',result)
  text='''# Loop025 — treino real do bloco repetido, três épocas
 
 Foram concluídas **3 épocas / 24 atualizações supervisionadas**, com gradientes
@@ -60,7 +60,14 @@ gradientes, mas a validação pode selecionar uma entre três épocas. Não são
 HumanEval/LiveCodeBench completos. Habilidades usuais de listas/pilhas se sobrepõem
 entre famílias; rótulos de família distintos não garantem independência conceitual.
 Os 12 controles são observados e curtos, sem avaliação ampla de estilo/conversa.
-Todos os casos corretos do pai, e não apenas o total, entram no gate de retenção.
+Na terceira época, 4 das 6 saídas de código atingiram o teto de 160 tokens.
+Apareceram repetições de padrões min/max e parênteses até truncar, enquanto
+o pai não truncou nenhuma das seis. A resposta curta de contagem também
+contou todos os elementos, omitindo a condição maior que K. Esses são erros
+observados de geração, não respostas corretas escondidas por um juiz alterado.
+Todos os casos corretos do pai entram no gate de retenção. Na época 2, o
+total 10/12 dos controles incluiu duas perdas e duas recuperações em relação
+ao pai; a terceira época preservou os dez acertos e acrescentou dois.
 '''
  text+='\n**Decisão:** '+selection['reason']+'.\n'
  if chosen is None:text+='As 4 tarefas e os 4 controles finais novos ficaram sem consulta. O principal\ne o APK 0.4 permanecem com os pesos gerais anteriores. As três épocas são\nexperimentos preservados, não versões promovidas.\n'
@@ -99,7 +106,8 @@ A projeção é feita antes da renormalização dos ganhos e da quantização BF
 Foram observados %d eventos de excesso do limite nominal dos controladores,
 com deslocamento relativo máximo %.8f, para limite nominal 0,05. Estes desvios
 foram registrados, não ocultados ou reparados depois de ver a avaliação. As
-matrizes de saída não excederam seu limite RMS declarado. Isso limita qualquer
+matrizes de saída não registraram excessos acima da tolerância de 0,1% usada
+na auditoria. Isso limita qualquer
 interpretação de preservação matematicamente garantida; os testes são necessários.
 
 As saídas antes zeradas agora podem ter custo adicional em um motor que pulava
@@ -111,8 +119,16 @@ exatamente por prefixo/corpo/sufixo após conferir o SHA completo, mantendo o
 
 Uma falha de importação por colisão de nomes ocorreu antes de carregar qualquer
 modelo ou executar atualizações; fontes iniciais e correção estão no histórico.
+O seletor também precisou interpretar falhas de compilação/AST com pontuação
+zero e sem vetor de casos como todos os casos falsos. Juiz, gabaritos, arquivos
+de avaliação brutos e pontuações permaneceram iguais. Somente fases sem
+resultado foram retomadas; nenhuma geração concluída foi repetida.
 Nenhum experimento antigo foi reiniciado, nenhum gabarito foi modificado e não
 restam trabalhadores de modelo após fechar este estudo.
 ''' % (len(overs),max(x['relative_l2'] for x in overs) if overs else 0)
+ gains=read('reports/loop_gain_weights.json')
+ text+='\n## Pesos de contribuição por visita\n\nO ganho residual médio da segunda visita começou em 0,05 e terminou em '
+ text+=', '.join(f"{r['mean_second_gain']:.6f} na época {r['epoch']}" for r in gains['epochs'])+'. A média caiu; algumas camadas aumentaram e outras reduziram. Esses pesos não são frações do custo computacional: ambas as visitas continuam executadas. Os valores completos estão em reports/loop_gain_weights.json. Não foi demonstrado reforço útil da segunda passagem neste treino.\n'
+ text+='\nHipótese para outro estudo, ainda não executada: separar a adaptação específica da segunda visita, preservar o caminho anterior por distilação e ampliar os dados antes de aumentar épocas. A projeção dos ganhos precisa respeitar conjuntamente a soma um e o limite L2. Também vale conferir a coerência entre treino de sequência completa e decodificação com cache. Nenhuma dessas hipóteses foi apresentada como causa isolada comprovada ou ganho já obtido.\n'
  (H/'REPORT.md').write_text(text);write('status.json',{'status':result['status'],'epochs':3,'optimizer_steps':24,'model_process_active':False,'checkpoint_promoted':False,'selected_general_checkpoint_unchanged':True,'selected_epoch':chosen,'independent_test_queried':chosen is not None,'active_runs':[],'process_continues_in_background':False});print(json.dumps({'status':result['status'],'comparison':summaries,'final':final_status},ensure_ascii=False))
 if __name__=='__main__':main()

@@ -1,0 +1,15 @@
+{
+  "training_source_manifest": "frozen_before_selector_fix.json",
+  "training_manifest_sha256": "413e7b5b75509c46cf1b8605909c7bc013b8302a83855e207574debc01b36aae",
+  "current_manifest": "frozen.json",
+  "all_current_frozen_hashes_match": true,
+  "final_test_queried": false,
+  "epochs_cold_restored_and_all699_hashes_verified": [
+    1,
+    2,
+    3
+  ],
+  "best_parent_file_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "frozen_source_changes_after_evaluation": "selector missing-zero-score-array normalization only; no evaluation source, judge, data or score changed",
+  "posthoc_diagnostic": "read-only weights inspection, no additional generation or optimizer updates"
+}
