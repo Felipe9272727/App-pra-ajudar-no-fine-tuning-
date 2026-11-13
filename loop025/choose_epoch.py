@@ -1,5 +1,5 @@
 """Declared validation gate; no source or answer changes from observed outputs."""
-from common import *
+from loop_runtime import *
 def main():
  base=read('reports/development_parent.json');rows=[]
  for e in [1,2,3]:

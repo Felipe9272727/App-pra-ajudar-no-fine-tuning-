@@ -1,7 +1,7 @@
 """Three real epochs on loop block + opened exits; parent and all epochs retained."""
 import argparse,collections,gc,gzip,json,math,os,time
 from pathlib import Path
-from common import *
+from loop_runtime import *
 from train_runtime import materialize,CheckpointVisits,loss,tensor_hash
 
 def main():

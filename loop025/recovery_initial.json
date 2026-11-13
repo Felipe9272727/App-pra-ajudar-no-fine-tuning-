@@ -1,0 +1,9 @@
+{
+  "failure": "module name common collided with legacy runtime helper import; select also renamed to avoid standard-library shadowing",
+  "model_loaded": false,
+  "optimizer_updates": 0,
+  "any_evaluation_outputs_observed": false,
+  "changes": "rename study-local helper and selector modules only",
+  "initial_protocol_commits_preserve_old_sources": true,
+  "data_judges_hyperparameters_unchanged": true
+}

@@ -1,6 +1,6 @@
 """Matched free generation across original, general parent and every epoch."""
 import argparse,gc,time
-from common import *
+from loop_runtime import *
 from local_cpu.sandbox import evaluate as judge
 
 @torch.inference_mode()
