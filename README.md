@@ -1,5 +1,21 @@
 # Liquid Sense 0.8B LOOP
 
+## Treino Loop025 — três épocas, sem promoção (13/11/2026)
+
+Treino supervisionado do bloco repetido concluído: **3 épocas / 24 atualizações**, 16 exemplos curtos, 292 tensores / 48,34 milhões de valores elegíveis. A última época mudou 48,26 milhões de valores. Ambas as visitas, mHC e componentes temporais receberam gradientes; 16 saídas antes zeradas foram liberadas. Todos os 407 tensores congelados ficaram idênticos, e cada época foi restaurada e conferida pelos 699 hashes.
+
+| Modelo | Tarefas novas de código | Casos de código | Controles curtos |
+|---|---:|---:|---:|
+| Qwen original | 1/4 | 22/36 | 9/12 |
+| Liquid preservado | 1/4 | 22/36 | 10/12 |
+| Época 1 | 0/4 | 9/36 | 8/12 |
+| Época 2 | 0/4 | 6/36 | 10/12 |
+| Época 3 | 0/4 | 3/36 | 12/12 |
+
+**A melhora nos controles observados não compensou as regressões em programação.** Nenhuma época foi promovida; o app 0.4 segue com o principal geral anterior. O peso residual médio da segunda passagem caiu de 0,05 para 0,03595, e a ablação em dois exemplos ensinados não mudou os acertos. As quatro tarefas e quatro controles finais novos ficaram sem consulta. Resultados são de um piloto pequeno; não demonstram ganho geral de inteligência nem superioridade contra 4B.
+
+[Relatório completo](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/179513cfc22512615f9aaa06e0c46b186201eaa0/loop025/REPORT.md) · [Treino e três checkpoints](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/179513cfc22512615f9aaa06e0c46b186201eaa0/loop025) · [127 artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/179513cfc22512615f9aaa06e0c46b186201eaa0/loop025/ARTIFACT_VERIFICATION.json)
+
 ## Prévia 0.4 — limites maiores e recuperação de ferramentas (13/11/2026)
 
 [**Baixar APK 0.4 no Gofile**](https://gofile.io/d/hmAohFD5) (~1,62 GB, ARM64 / Android 9+). **Atualiza o Tools 0.3**, com o mesmo pacote e certificado, preservando suas conversas. Pesos gerais integrados; o seletor da Especializada 015E continua disponível.
