@@ -1,0 +1,28 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   9%|▉         | 64/675 [00:00<00:01, 566.76it/s]Loading weights:  22%|██▏       | 151/675 [00:00<00:00, 736.02it/s]Loading weights:  57%|█████▋    | 385/675 [00:00<00:00, 1433.42it/s]Loading weights:  88%|████████▊ | 594/675 [00:00<00:00, 1686.18it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1515.34it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794687270.352514, "attempt": null, "pid": 3695}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL029 validation parent False N029V/chunks 1 128
+EVAL029 validation parent False N029V/anagram_groups 0 128
+EVAL029 validation parent False N029V/sliding_max 1 128
+EVAL029 validation parent False N029V/components 0 128
+EVAL029 validation parent False N029G/0 False 4
+EVAL029 validation parent False N029G/1 False 2
+EVAL029 validation parent False N029G/2 True 2
+EVAL029 validation parent False N029G/3 True 3
+EVAL029 validation parent False N029G/4 False 5
+EVAL029 validation parent False N029G/5 True 3
+EVAL029 validation parent False N029G/6 True 2
+EVAL029 validation parent False N029G/7 False 3
+EVAL029 validation parent True N029V/chunks 0 192
+EVAL029 validation parent True N029V/anagram_groups 0 192
+EVAL029 validation parent True N029V/sliding_max 0 192
+EVAL029 validation parent True N029V/components 0 192
+EVAL029 validation parent True N029G/0 False 192
+EVAL029 validation parent True N029G/1 False 192
+EVAL029 validation parent True N029G/2 False 192
+EVAL029 validation parent True N029G/3 False 192
