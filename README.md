@@ -1,5 +1,14 @@
 # Liquid Sense 0.8B LOOP
 
+## APK 0.5 — época 2 opcional, sem promoção geral
+
+[**Baixar no Gofile — 1,97 GB**](https://gofile.io/d/7OFCC99z) · Android9+/ARM64.
+No seletor: **Experimental029 · época2 (Web e Python)**. Atualiza o mesmo pacote/certificado; Base, Web/Python e Especializada015E continuam disponíveis. Os novos pesos acompanham o APK; a Especializada continua opcional por outro app instalado.
+
+A época2 ganhou no pequeno conjunto novo em Python, mas perdeu3casos antigos e2controles. No motor Rust, a questão de dividir listas passou1/5casos contra5/5no Python, apesar dos mesmos546tensores. Portanto, é experimental; a Base permanece como padrão geral. Sem teste em celular físico.
+
+[Fontes, limites e validações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/3a73e4795bdbdcd9a14479336416aa04d75d6fd5/android_epochs030) · [registro da entrega](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/3a73e4795bdbdcd9a14479336416aa04d75d6fd5/android_epochs030/reports/gofile_delivery.json).
+
 ## Pesquisa029 — quatro épocas concluídas, sem promoção
 
 [Relatório completo](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f07a48295b01a5e2d8517301605f85e36c1c02af/native029/REPORT.md), [comparações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f07a48295b01a5e2d8517301605f85e36c1c02af/native029/summary.json), [decisão](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f07a48295b01a5e2d8517301605f85e36c1c02af/native029/selection.json) e [178 artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f07a48295b01a5e2d8517301605f85e36c1c02af/native029/remote_verification.json).

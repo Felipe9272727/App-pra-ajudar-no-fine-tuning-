@@ -1,3 +1,11 @@
+# Android030 COMPLETE — optional epoch02 APK0.5 delivered
+
+- Signed Tools package dev.liquidsense.chat.tools, versionCode3, same previous certificate. Public APK: https://gofile.io/d/7OFCC99z (1969325396bytes). Stable/default general unchanged; experimental029epoch02 bundled as a separate Web/Python selector/history. Specialist015E remains optional via its installed app.
+- Source/artifacts branch codex/liquid-sense-app-epochs-030-20261114; verified immutable commit3a73e4795bdbdcd9a14479336416aa04d75d6fd5,170files match Git blob SHA1 and sizes. Read android_epochs030/README.md,status.json, reports and exact APK/patch archives there. No training or general promotion.
+- Exact546text hashes/381changed tensors; decoded edit1000020000bytes. Native loop32physical/56executed,mHC2,temporal7,local256 retained.18Rust tests/27Java checks, Android compilation/signature/alignment/CRC and native loading passed. No physical device run or speed gain claimed.
+- IMPORTANT: native Rust is not generation-equivalent to Python for this candidate. Already observed chunks probe:Rust1/5cases,Python5/5;19x7candidate133matches,parent123retained. UI warns; don't advertise029Python gains as measured Android gains. Research029 retention still FAILED; keep general best.pt46f6697.
+- Exact signed APK SHA2569a1a487230f7979f441002cc885501f5eb79d1f859e12474cb6b14c93b239cac.85patch fragments plus APK prefix/bridge/suffix retained; full reconstruction stream hash verified. All prior sources/checkpoints/archives preserved. Gofile guest/signing secrets remain private. No ongoing model worker.
+
 # Latest research — Native029 four epochs COMPLETE, no candidate promoted
 
 - User asked “Treine o melhor+4 épocas”. Latest results branch is
