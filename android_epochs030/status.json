@@ -1,0 +1,10 @@
+{
+  "status": "building",
+  "training_updates": 0,
+  "candidate": "native029_epoch02",
+  "general_promotion": false,
+  "default": "tools/general",
+  "source_ref": "f07a48295b01a5e2d8517301605f85e36c1c02af",
+  "versionCode": 3,
+  "phone_execution_verified": false
+}
