@@ -1,5 +1,24 @@
 # Liquid Sense 0.8B LOOP
 
+## Piloto028 — treino conjunto no modelo principal, sem promoção (14/11/2026)
+
+[Relatório completo](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/5bf2ef89c7092984267ee9da96f7617b5ea3f5d1/native028/REPORT.md), [comparações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/5bf2ef89c7092984267ee9da96f7617b5ea3f5d1/native028/summary.json), [decisão](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/5bf2ef89c7092984267ee9da96f7617b5ea3f5d1/native028/selection.json) e [255 artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/5bf2ef89c7092984267ee9da96f7617b5ea3f5d1/native028/remote_verification.json).
+Pesquisa dos modelos atuais: [estudo027](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/5bf2ef89c7092984267ee9da96f7617b5ea3f5d1/research027/REPORT.md).
+
+Duas épocas/96 atualizações supervisionadas e 8 por recompensa adaptaram o
+bloco do Loop e controladores mHC/temporais juntos. As versões treinadas passaram
+a concluir 8/8 respostas com thinking, mas não resolveram integralmente nenhum
+dos quatro problemas novos de código. Sem thinking: Qwen original 1/4 tarefas,
+6/20 casos; híbrido anterior 0/4,7/20; SFT 0/4,2/20; SFT+PPO 0/4,6/20.
+Houve perda de controles anteriormente corretos. **Nenhum candidato promovido.**
+
+O budget de 192 tokens mede conclusão curta, não o modo Extenso do aplicativo.
+A segunda passagem não alterou acertos nos dois probes causais. Nas quatro
+comparações antes/depois da fusão, os tokens coincidiram. Checkpoints e estados
+foram preservados, teste final não consultado, modelo geral e APK inalterados.
+Todos os workers encerrados. Não há ganho de velocidade sem perda demonstrado.
+
+
 ## Piloto especulativo026 — sem aceleração validada (13/11/2026)
 
 Dois filhos de **17,8M e 94,8M parâmetros** foram criados com pesos novos, preservando a família Loop/mHC/GatedDeltaNet/conv7 e compartilhando o tokenizer. Cada um completou três épocas, 162 atualizações e 40.932 exposições a rótulos de tokens. Os dois fizeram **0/8 programas e 0/8 questões gerais** na bateria nova; o maior passou 4/43 casos parciais. Original e principal fizeram 4/8 programas e 7/8 gerais.
