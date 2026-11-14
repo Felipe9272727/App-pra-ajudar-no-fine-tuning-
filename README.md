@@ -1,5 +1,30 @@
 # Liquid Sense 0.8B LOOP
 
+## Pesquisa029 — quatro épocas concluídas, sem promoção
+
+[Relatório completo](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f07a48295b01a5e2d8517301605f85e36c1c02af/native029/REPORT.md), [comparações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f07a48295b01a5e2d8517301605f85e36c1c02af/native029/summary.json), [decisão](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f07a48295b01a5e2d8517301605f85e36c1c02af/native029/selection.json) e [178 artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f07a48295b01a5e2d8517301605f85e36c1c02af/native029/remote_verification.json).
+
+Quatro épocas novas desde o checkpoint geral preservado:192atualizações e10796
+apresentações de tokens-alvo. Loop,mHC e controles temporais treinados juntos,
+com passos menores e proteção KLmais forte. Todas as quatro épocas, estados de
+AdamW/RNG, hashes e outputs foram preservados.
+
+| Versão | Programas novos completos sem thinking | Casos | Gerais novos |
+|---|---:|---:|---:|
+| Checkpoint de partida | 0/4 | 2/20 | 4/8 |
+| Época1 | 0/4 | 5/20 | 6/8 |
+| Época2 | 1/4 | 10/20 | 6/8 |
+| Época3 | 0/4 | 7/20 | 7/8 |
+| Época4 | 0/4 | 5/20 | 7/8 |
+
+A segunda época ganhou um problema novo completo, mas perdeu3casos antigos de
+código e2controles gerais. **Nenhuma época preservou todos os acertos exigidos.**
+O modelo estável e o APK continuam selecionados; teste final não consultado.
+Com thinking, as versões treinadas encerraram8/8respostas, mas0/4programas certos.
+Os budgets128/192são curtos; os originais truncaram. Não demonstram desempenho
+máximo, raciocínio extenso,4Bsuperioridade ou velocidade sem perda. Workers fechados.
+
+
 ## Piloto028 — treino conjunto no modelo principal, sem promoção (14/11/2026)
 
 [Relatório completo](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/5bf2ef89c7092984267ee9da96f7617b5ea3f5d1/native028/REPORT.md), [comparações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/5bf2ef89c7092984267ee9da96f7617b5ea3f5d1/native028/summary.json), [decisão](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/5bf2ef89c7092984267ee9da96f7617b5ea3f5d1/native028/selection.json) e [255 artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/5bf2ef89c7092984267ee9da96f7617b5ea3f5d1/native028/remote_verification.json).
