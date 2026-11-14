@@ -1,0 +1,9 @@
+{
+  "status": "exact_saved_patch_roundtrip_passed",
+  "bytes": 352753958,
+  "sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+  "ref": "3a73e4795bdbdcd9a14479336416aa04d75d6fd5",
+  "source": "local verified archive fragments; Git blob identities separately remotely verified",
+  "only_verified_temporary_duplicate_removed": true,
+  "original_patch_and_all85fragments_preserved": true
+}
