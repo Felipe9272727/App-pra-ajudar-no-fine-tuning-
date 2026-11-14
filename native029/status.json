@@ -1,0 +1,10 @@
+{
+  "status": "prepared_not_started",
+  "model_process_active": false,
+  "optimizer_updates": 0,
+  "sft_updates": 0,
+  "parent_weights_changed": false,
+  "starting_checkpoint": "rsi100/checkpoints/best.pt",
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "old_studies_restarted": false
+}

@@ -1,0 +1,11 @@
+{
+  "user": "Treine o melhor+4 épocas",
+  "starting_checkpoint": "rsi100/checkpoints/best.pt",
+  "selected_parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "new_epochs": 4,
+  "old_rejected_checkpoints_promoted": false,
+  "starting_optimizer": "fresh; selected parent has no accepted028optimizer state",
+  "same_teaching_data": true,
+  "learning_rate_fraction_of028": 0.25,
+  "retention_weight": 1.0
+}
