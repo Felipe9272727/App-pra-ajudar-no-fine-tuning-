@@ -1,276 +1,196 @@
 # Liquid Sense 0.8B LOOP
 
-Um projeto independente conduzido por um desenvolvedor, dedicado a investigar
-programação e raciocínio por meio de alterações verificáveis nos pesos.
-A base pré-treinada é **Qwen3.5-0.8B**; o híbrido com componentes inspirados em
-**SenseNova Loop/mHC e Liquid AI** carrega aproximadamente **1,02B parâmetros**.
+## Piloto028 — pensamento produtivo no modelo principal (14/11/2026)
 
-## Pesquisa mais recente — alterações distribuídas 008/009
+[Relatório completo](native028/REPORT.md), [comparações](native028/summary.json),
+[decisão](native028/selection.json) e [protocolo](native028/PROTOCOL.md).
+Pesquisa dos pares atuais: [estudo027](research027/REPORT.md).
 
-[Relatório completo](MULTI_TENSOR_REPORT.md),
-[comparações](reasoning/multi009/summary.json) e
-[integridade](reasoning/multi009/integrity.json).
+Treinados juntos o bloco compartilhado do Loop e controladores mHC/temporais:
+2épocas,96atualizações supervisionadas e8por recompensa. O piloto ensinou a
+encerrar as8/8respostas com thinking, mas não demonstrou ganho de programação.
+Nos quatro problemas inéditos, todos os híbridos ficaram0/4tarefas completas em
+ambos os modos; Qwen original1/4semthinking. Casos semthinking: original6/20,
+anterior7/20,SFT2/20,SFT+PPO6/20. Houve perda de controles já corretos, mesmo
+quando a contagem geral5/8se manteve. **Nenhuma candidata promovida.**
 
-Foram testadas duas edições coordenadas, sem gradientes nem soluções nos inputs:
-32.281 valores em40 tensores de 20 camadas, e 4.994.722 valores em quatro
-matrizes MLP. Ambas ficaram nos mesmos 27/36 casos e 3/7 tarefas da triagem
-do híbrido preservado. Os controles inversos também não acrescentaram acertos.
-Nenhuma candidata foi promovida; pesos, ativações e relatórios estão salvos.
-Alterar muitos pesos não demonstrou ganho de capacidade nesta avaliação.
+Os192tokens de thinking são um teste curto, não o modo Extenso do app. Nos dois
+probes causais, a segunda passagem não aumentou os casos corretos. A auditoria
+antes/depois da fusão deu os mesmos tokens nos4probes. Checkpoints, otimização,
+outputs e resultados negativos estão preservados. Teste final não consultado;
+modelo geral e APK anteriores continuam selecionados. Workers encerrados.
 
-## Pesquisa anterior — diagnóstico e edições 006/007
 
-[Relatório e comparações](ERROR_ANALYSIS_REPORT.md),
-[estado retomável](reasoning/cycle2/status.json) e
-[seleção](reasoning/cycle2/selection.json).
-O checkpoint híbrido pai continua selecionado; nenhuma nova edição foi promovida.
+## Piloto especulativo026 — sem aceleração validada (13/11/2026)
 
-Na comparação dos mesmos 16 problemas de desenvolvimento, Qwen original
-resolveu 12 tarefas e 66/81 casos; o híbrido preservado resolveu 11 tarefas
-e 69/81 casos. Ambos fizeram 4/4 controles. A edição 006 ganhou um caso,
-mas piorou a NLL de linguagem contra o pai e foi rejeitada. O resultado
-mistura ganhos e perdas entre tarefas, sem superioridade geral demonstrada.
+Dois filhos de **17,8M e 94,8M parâmetros** foram criados com pesos novos, preservando a família Loop/mHC/GatedDeltaNet/conv7 e compartilhando o tokenizer. Cada um completou três épocas, 162 atualizações e 40.932 exposições a rótulos de tokens. Os dois fizeram **0/8 programas e 0/8 questões gerais** na bateria nova; o maior passou 4/43 casos parciais. Original e principal fizeram 4/8 programas e 7/8 gerais.
 
-Também foi confirmado que os dois fluxos mHC permaneciam idênticos durante
-as gerações medidas, com roteadores de entrada zerados. A edição 007 alterou
-dois parâmetros FP32 para separar os fluxos, preservando a média dos ganhos.
-A separação ocorreu, mas candidata e controle inverso mantiveram 25/31 casos
-da triagem. Ambos os checkpoints experimentais estão preservados.
+A via em bloco divergiu em 2/16 comparações e ficou inelegível. A alternativa sequencial preservou os tokens nos 12 pares cronometrados, com cerca de 3% de propostas aceitas e **6,27×/6,35× mais tempo** em CPU. Não houve aceleração validada; o principal e o APK foram preservados. Os seis checkpoints, fontes e resultados negativos estão arquivados.
 
-Há um modo de raciocínio nativo opcional, sem mudança nos pesos selecionados:
+[Relatório completo](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/dec6d930678d9a1dd5d302f39c35bd95f30311fd/spec026/REPORT.md) · [Checkpoints](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/dec6d930678d9a1dd5d302f39c35bd95f30311fd/spec026/checkpoints) · [Verificação dos artefatos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/dec6d930678d9a1dd5d302f39c35bd95f30311fd/spec026/remote_verification.json)
 
-```bash
-python liquid_sense_chat.py --thinking --max-new-tokens 1024 --message "Como você verifica uma solução?"
-```
 
-Esse modo é experimental e usa mais tokens. O diagnóstico de conclusão
-está no relatório: até 1.024 tokens, Qwen concluiu 2/3 respostas corretas
-e o híbrido 0/3, em três problemas já observados. Ele não virou o padrão
-e não demonstra melhoria geral nem aprendizado novo.
-O chat informa quando não obteve resposta final dentro do orçamento.
+## Treino Loop025 — três épocas, sem promoção (13/11/2026)
 
-## Pesquisa anterior — 2026-11-05
+Treino supervisionado do bloco repetido concluído: **3 épocas / 24 atualizações**, 16 exemplos curtos, 292 tensores / 48,34 milhões de valores elegíveis. A última época mudou 48,26 milhões de valores. Ambas as visitas, mHC e componentes temporais receberam gradientes; 16 saídas antes zeradas foram liberadas. Todos os 407 tensores congelados ficaram idênticos, e cada época foi restaurada e conferida pelos 699 hashes.
 
-A continuação usa ativações da geração real, hipóteses pré-registradas e
-comparações com rollback. As hipóteses 003 e 005 reforçaram contribuições e
-profundidade do loop, sem aumentar os acertos da triagem. A hipótese 004 ganhou
-um caso de programação, mas piorou a NLL das âncoras e não foi promovida.
-O checkpoint pai permanece selecionado. Não há alegação de maior inteligência.
+| Modelo | Tarefas novas de código | Casos de código | Controles curtos |
+|---|---:|---:|---:|
+| Qwen original | 1/4 | 22/36 | 9/12 |
+| Liquid preservado | 1/4 | 22/36 | 10/12 |
+| Época 1 | 0/4 | 9/36 | 8/12 |
+| Época 2 | 0/4 | 6/36 | 10/12 |
+| Época 3 | 0/4 | 3/36 | 12/12 |
 
-- [Estado atual](reasoning/status.json) e [protocolo](reasoning/PROTOCOL.md).
-- [Benchmarks oficiais de origem e subconjuntos locais](benchmarks/reasoning_20261105/README.md).
-- [Decisões e seleção de pesos](reasoning/selection.json).
-- [Validação anterior da hipótese 002](MENTOR002_VALIDATION_REPORT.md).
+**A melhora nos controles observados não compensou as regressões em programação.** Nenhuma época foi promovida; o app 0.4 segue com o principal geral anterior. O peso residual médio da segunda passagem caiu de 0,05 para 0,03595, e a ablação em dois exemplos ensinados não mudou os acertos. As quatro tarefas e quatro controles finais novos ficaram sem consulta. Resultados são de um piloto pequeno; não demonstram ganho geral de inteligência nem superioridade contra 4B.
 
-A apresentação do chat dá crédito ao projeto independente e preserva a origem
-no Qwen. Essa configuração de identidade não é uma melhoria aprendida nos pesos
-e fica fora dos benchmarks. Para consultar a apresentação ou conversar:
+[Relatório completo](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/179513cfc22512615f9aaa06e0c46b186201eaa0/loop025/REPORT.md) · [Treino e três checkpoints](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/179513cfc22512615f9aaa06e0c46b186201eaa0/loop025) · [127 artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/179513cfc22512615f9aaa06e0c46b186201eaa0/loop025/ARTIFACT_VERIFICATION.json)
 
-```
-python liquid_sense_chat.py --about
-python liquid_sense_chat.py --message "Quem é você?"
-```
+## Prévia 0.4 — limites maiores e recuperação de ferramentas (13/11/2026)
 
-## Resultados do ciclo anterior
+[**Baixar APK 0.4 no Gofile**](https://gofile.io/d/hmAohFD5) (~1,62 GB, ARM64 / Android 9+). **Atualiza o Tools 0.3**, com o mesmo pacote e certificado, preservando suas conversas. Pesos gerais integrados; o seletor da Especializada 015E continua disponível.
 
-| Subconjunto local | Qwen original | Liquid Sense (pai preservado) |
+O botão **Raciocínio** oferece Normal (até 2.048 tokens de resposta), Profundo experimental (1.024 para pensar + 2.048 de resposta) e Extenso experimental (2.048 + 4.096), por etapa. Contexto máximo de 16 mil tokens. Chamadas incompletas têm reparo limitado; resultados reais ficam na conversa, com Continuação e diagnóstico local.
+
+**Mais thinking não demonstrou ganho:** no mesmo cálculo, o Normal anterior acertou e o Profundo repetiu marcadores sem responder. Normal permanece padrão. O teste de I/O com programa Python explícito passou; o uso espontâneo sem `print` não contou como número verificado. Mesmos pesos gerais e arquitetura híbrida preservada, sem novos treinos nem promoção de qualidade.
+
+Assinatura, CRC, alinhamento, hashes e upload verificados. Esta versão 0.4 ainda não foi testada no telefone físico. [Guia](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3c241b8ef04294f2e00666aa81dfb1700e89840f/android_thinking024/README.md) · [Resultados e falhas preservadas](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3c241b8ef04294f2e00666aa81dfb1700e89840f/android_thinking024/REPORT.md) · [138 artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3c241b8ef04294f2e00666aa81dfb1700e89840f/android_thinking024/ARTIFACT_VERIFICATION.json)
+
+## Prévia0.3 — internet, Python e seletor de modelos (13/11/2026)
+
+[**Baixar APK Tools0.3 no Gofile**](https://gofile.io/d/fowGW6q4) (~1,62GB, ARM64/Android9+, modelo geral integrado). App separado **Liquid Sense · Tools**. Busca real com fontes, consulta verificada à documentação Python e execução local de Python3 limitado (math/json/f-strings, sem pacotes externos), em serviço isolado.
+
+O botão **Trocar modelo** fica abaixo do cabeçalho: Web e Python, Base geral offline e Especializada015Eoffline. Para a especialista, mantenha instalado/atualizado o [app0.2](https://gofile.io/d/iNjQRGpN); essa opção usa seus assets públicos e preserva seus dados. A especialista fez8/8programas ENSINADOS no PyTorch,7/8na portabilidade Rust e0/8transferência anterior: não é HumanEval completo.
+
+Os novos treinos022e023foram salvos e **rejeitados**:022perdeu8→6programas ensinados;023caiu2/4→1/4nas tarefas de ferramentas. **APK usa o geral anterior, com Loop/mHC e operadores temporais preservados, sem overlays rejeitados.** Ferramentas ampliam o sistema; não há ganho novo geral/de pensamento nos pesos comprovado. Assinatura/CRC/zipalign/hashes e upload verificados; execução física no celular não medida.
+
+[Guia e arquivos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/2cdd5d6af98b3cd969b975d8d0725faa4904d357/tooluse023/README.md) · [Resultados e limitações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/2cdd5d6af98b3cd969b975d8d0725faa4904d357/tooluse023/REPORT.md) · [Verificação de141artefatos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/2cdd5d6af98b3cd969b975d8d0725faa4904d357/tooluse023/ARTIFACT_VERIFICATION.json)
+
+Experimento de Felipe: adaptar diretamente os pesos de Qwen3.5-0.8B a um decoder loop/mHC inspirado em SenseNova-Loop-9B e a operadores compatíveis inspirados em Liquid LFM3.
+
+Registro inicial (histórico): calibração algébrica concluída; ciclos de melhoria e avaliação em preparação. Não há demonstração de autoaperfeiçoamento recursivo geral ou de ganho de inteligência.
+
+Este repositório será usado para código, estado retomável, logs reais, checkpoints incrementais e resultados. O histórico inicial fica na branch `codex/qwen-sensenova-liquid-rsi-20261103`.
+
+## Prévia rápida0.1.1 e estudos017–020 (12/11/2026)
+
+[**Baixar APK no Gofile**](https://gofile.io/d/j7WqfPBY) (~1,61GB, ARM64/Android9+, modelo geral integrado). Instala separadamente como **Liquid Sense Rápido** e mostra preparação/tokens por segundo. Mesmos pesos gerais; o app anterior e seu histórico ficam preservados. Essa prévia0.1.1não tinha seletor; as versões0.2/0.3estão descritas acima.
+
+No servidor, o protótipo Rust019teve **1,1633x de throughput do backbone** (14,04%menos tempo),12pares fixos,8testes técnicos e estados/tokens idênticos nos testes. APK ARM64assinado e verificado; **sem medição física no Snapdragon**. O piloto de treino conjunto018fez8atualizações e mudou224tensores/1.245.166valores, preservando10/12controles, porém0/2programas comthinking256e0/1no diagnóstico1024. **Rejeitado para promoção; principal geral preservado.** Variante94,8M é desenho dimensional, não modelo treinado nem prova contra4B.
+
+[Relatório e comparações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3887ac5c139a72756fe3640c65860f3118ccee7b/SPEED_REASONING_REPORT.md) · [171artefatos verificados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3887ac5c139a72756fe3640c65860f3118ccee7b/RESEARCH_ARTIFACT_VERIFICATION.json) · [Fonte e verificação do APK](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/3887ac5c139a72756fe3640c65860f3118ccee7b/android_fast020/README.md).
+
+## Treino conjunto Loop/mHC e operadores temporais — estudo 016 (12/11/2026)
+
+Uma candidata recebeu 16 atualizações supervisionadas conjuntas em 330 tensores elegíveis (6.345.904 parâmetros), incluindo Loop/mHC e operadores inspirados na Liquid. Mudaram efetivamente 298 tensores e 2.815.113 valores; os outros 369 tensores permaneceram idênticos ao especialista 015E. A arquitetura híbrida foi preservada.
+
+| Modelo | HumanEval ensinado /8 | MBPP observado /8 | Controles /12 |
+|---|---:|---:|---:|
+| Qwen original | 1 | 0 | 10 |
+| Principal geral preservado | 1 | 0 | 10 |
+| Especialista 015E | 8 | 0 | 6 |
+| Candidata 016 | 8 | 0 | 8 |
+
+A candidata recuperou três controles e perdeu um contra E: 7 × 8 passou de 56 para 7. **Rejeitada para promoção por regressão e retenção insuficiente.** Principal geral e especialista anterior foram preservados. O único grupo adicional aprovado no MBPP aceita o zero constante como False; não demonstra aprendizado do algoritmo. Os oito problemas novos de programação e os oito controles corrigidos v2 ficaram sem consulta. O conjunto v1, com quatro fatos já existentes em estudos antigos, foi preservado sem uso. Nenhum ganho geral de inteligência ou vantagem sobre 4B foi demonstrado.
+
+[Relatório e limitações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/a6a5d5f58f317dc9293caf9fe1956521a6dd7c85/BALANCED_JOINT_REPORT.md) · [Resultados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/a6a5d5f58f317dc9293caf9fe1956521a6dd7c85/balanced016/summary.json) · [Checkpoint experimental exato](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/a6a5d5f58f317dc9293caf9fe1956521a6dd7c85/balanced016/checkpoints/final/manifest.json) · [Verificação dos 59 artefatos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/a6a5d5f58f317dc9293caf9fe1956521a6dd7c85/balanced016/artifact_verification.json).
+
+## Treino supervisionado de todos os pesos de texto — estudo015 (11/11/2026)
+
+Após autorização explícita para gradientes, foram treinados os546 tensores ativos de texto (919.659.696 parâmetros elegíveis), preservando visão e arquitetura híbrida. A comparação binária confirmou mudança em 546 tensores/483082021 valores. original: HumanEval ensinado 1/8, MBPP diagnóstico 0/8, controles 10/12; parent: HumanEval ensinado 1/8, MBPP diagnóstico 0/8, controles 10/12; specialist: HumanEval ensinado 8/8, MBPP diagnóstico 0/8, controles 6/12. As oito soluções HumanEval foram ensinadas deliberadamente: isso mede especialização, não um resultado limpo do benchmark ou inteligência geral. MBPP ficou fora do treino, mas já era observado no014. Estado: experimental_specialist_e_preserved_after_terminal_label_repair. O especialista foi preservado separadamente; o checkpoint principal anterior permanece selecionado. Sem alegação de superioridade contra4B.
+
+[Relatório e regressões](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/9b22cc6b3a28a98dbdadf88fb8dae2856d4754f3/SUPERVISED_TEXT_REPORT.md) · [Resultados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/9b22cc6b3a28a98dbdadf88fb8dae2856d4754f3/supervised015/final_summary.json) · [Pesos exatos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/9b22cc6b3a28a98dbdadf88fb8dae2856d4754f3/supervised015/attempt_e/checkpoints/candidate/manifest.json) · [Reprodução](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/9b22cc6b3a28a98dbdadf88fb8dae2856d4754f3/supervised015/attempt_e/REPRODUCE.md).
+
+## Respostas corretas nos pesos — estudo 014 (11/11/2026)
+
+Oito soluções corretas do HumanEval supervisionaram a edição direta de uma matriz existente da camada31; depois foram avaliados esses oito problemas e oito diferentes do MBPP, com os mesmos prompts/configurações para cada modelo. original: HumanEval ensinado 1/8, MBPP diferente 0/8; parent: HumanEval ensinado 1/8, MBPP diferente 0/8; edited: HumanEval ensinado 1/8, MBPP diferente 1/8. O resultado no conjunto ensinado mede ajuste aos exemplos, não generalização. São subconjuntos de um piloto, sem pontuações completas dos benchmarks. O acerto adicional no MBPP falhou numa contraprova de quadrado mágico, e a candidata perdeu um controle exato de formato e piorou a NLL de linguagem. Nenhum checkpoint foi promovido; o anterior permanece selecionado.
+
+[Relatório e limites](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/713c8c69827f83a0cacbe56994ed8f23c2330939/DIRECT_BENCHMARK_REPORT.md) · [Pesos e estado](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/713c8c69827f83a0cacbe56994ed8f23c2330939/supervised014/teaching.json) · [Reprodução](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/713c8c69827f83a0cacbe56994ed8f23c2330939/supervised014/REPRODUCE.md).
+
+## Aprendizagem supervisionada do loop — 11/11/2026
+
+Estudo 013 concluído. A nova autorização permitiu ensinar com soluções corretas: 120 programas verificados, adaptadores algébricos na segunda passagem e dados separados por família. Comparação de geração livre: original: 0/8 tarefas, 36/160 casos; parent: 0/8 tarefas, 43/160 casos; loop: 0/8 tarefas, 39/160 casos; joint: 0/8 tarefas, 43/160 casos. Nenhum checkpoint promovido; preservar o anterior. A auditoria identificou que o avaliador histórico rejeita o nome Python válido `_`; escores e gabaritos foram preservados, com a limitação documentada.
+
+[Resultados e limites](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/6cefca0a1194e8551d7f6ba2a3c8c36dbe32c9d3/EXPERIMENTOS_CAPACIDADE.md) · [Estado recuperado](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/6cefca0a1194e8551d7f6ba2a3c8c36dbe32c9d3/STATUS_RECUPERACAO.md) · [DSpine e fontes CCORE](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/6cefca0a1194e8551d7f6ba2a3c8c36dbe32c9d3/PLANO_DSPINE.md).
+
+## Loop, linguagem e edição temporal protegida — estudo 012, 05/11/2026
+
+O loop altera estados internos: distância L2 relativa média de **5,98%** nos 21 pontos medidos. Substituir apenas sua segunda saída pela primeira mudou quatro de sete programas, mas não os acertos: **23/35 casos e 2/7 tarefas completas**, com zero ganhos/perdas. Sete replays da chamada real com cópia do cache foram bit-exatos. Isso demonstra influência funcional, sem ganho de programação demonstrado nessa amostra.
+
+Em seis prompts neutros, a fala diferiu do Qwen em quatro. A revisão qualitativa sem nomes preferiu Liquid2, Qwen2 e empatou2, com vantagens específicas e falhas também; sem superioridade geral de linguagem.
+
+Uma nova edição direta, sem gradientes ou respostas fornecidas, alterou **24.522 valores em duas matrizes de memória das camadas6,25**, protegendo amostras da primeira visita. Proposta e controle oposto permaneceram **23/35 e 2/7**. Ambos foram arquivados como experimentos; **best.pt continua intacto**. O reinício do executor foi registrado e a referência recuperada reproduziu todos os textos e casos antigos.
+
+[Relatório, dados completos, pesos e limitações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/0a70bfbd0a877c6e4793cc24742116581b0428a2/LOOP_LANGUAGE_RESEARCH_REPORT.md). Branch `codex/liquid-sense-loop-language-20261105`. Validação inédita preservada, cinco novos testes técnicos passaram e estudo encerrado sem worker em segundo plano.
+
+## Métrica contra 4B e tensores nos erros — diagnóstico 011, 05/11/2026
+
+Python rastreou os **699 tensores de parâmetros** durante cinco respostas erradas e duas corretas: **417 decisões, 813 slots de módulos por decisão**. Os mesmos 546 tensores textuais foram acessados nos dois grupos; não há tensor exclusivamente ligado nos erros desses exemplos. Textos, casos e todos os hashes de pesos permaneceram idênticos aos anteriores.
+
+A métrica implementada é **Delta4B em pontos percentuais de problemas totalmente resolvidos**, com testes pareados novos e retenção. O Qwen3.5-4B está fixado por revisão e hashes, mas **a comparação permanece não medida** neste ambiente. O resultado conhecido de desenvolvimento do Liquid é 11/16 tarefas e 69/81 casos.
+
+Os maiores contrastes exploratórios apareceram nas projeções de decaimento DeltaNet das camadas25,6,28. Trinta intervenções de ativação de ±1% mudaram logits, mas nenhum argmax contra seus controles; não houve ganho de qualidade nem edição de pesos. Dados reais (216 MB) estão preservados sem perda em onze partes verificadas.
+
+[Relatório, tabela de todos os tensores, métrica executável e limitações](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/4f1e5558cee08353cb090300729f9dbaaac1549d/TENSOR_ERROR_ANALYSIS_REPORT.md). Branch `codex/liquid-sense-error-tensors-20261105`. Validação inédita preservada; estudo encerrado sem worker em segundo plano.
+
+## Varredura integral e adaptação nativa 010 — 05/11/2026
+
+Python examinou todos os **1.020.252.592 valores em 699 tensores únicos** do híbrido carregado, além dos buffers e de 20,45 milhões de pesos MTP preservados fora do runtime. Não encontrou pesos não finitos.
+
+Foram construídos e salvos três candidatos com as 32 camadas ativas, 56 execuções e até 48 roteadores mHC condicionais, alterando até **140,1 milhões de valores**, sem gradientes ou respostas nas entradas. A triagem foi **8/36, 11/36 e 11/36 casos**, todos 0/7 tarefas, contra o parent **27/36 e 3/7** e o Qwen original **27/36 e 5/7**. **Nenhum foi promovido; best.pt permanece intacto.** A validação inédita não foi consumida.
+
+[Relatório, comparações e forma correta de recarregar os checkpoints incrementais](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f123d822d04694f431cdf1277f14ed9467201653/NATIVE_ARCHITECTURE_REPORT.md). Fontes, pesos incrementais, hashes e ativações estão na branch `codex/liquid-sense-native-audit-20261105`. Os 55 testes técnicos e as nove sondas de cache passaram. Estudo encerrado, sem processo em segundo plano e sem demonstração de superioridade sobre modelos maiores.
+
+## Pesquisa mais recente — edições distribuídas 008/009 concluídas
+
+[Relatório e comparações, fixados por commit](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/f8a0a7f5801baeeb225aad38996e951c6f00ded7/MULTI_TENSOR_REPORT.md).
+[Código, pesos e estado retomável](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/codex/liquid-sense-multi-tensor-20261105).
+
+Foram construídas duas candidatas independentes por edição direta: 32.281 valores em 40 tensores de normalização, e 4.994.722 valores em quatro matrizes MLP das camadas 5, 13, 25 e 31. Sem gradientes nem soluções corretas nas entradas; o original forneceu apenas vetores internos dos enunciados.
+
+Na mesma triagem de sete problemas, ambas fizeram 27/36 casos e 3/7 tarefas completas, iguais ao híbrido pai. Controles inversos também não acrescentaram acertos. Não houve ganho demonstrado e nenhuma candidata foi promovida. O checkpoint anterior permanece selecionado.
+
+Foram preservados e conferidos 22 artefatos de tensores, com os pesos exatos e as ativações. Os 46 testes técnicos passaram. Os testes de modelo terminaram; não há execução permanente nem retomada automática das 100 rodadas. O conjunto reservado continua sem execução nesta continuação, pois as candidatas falharam na triagem.
+
+## Pesquisa anterior — diagnóstico concluído em 2026-11-05
+
+[Relatório completo, fixado por commit](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/c57b3124986268e495ff5324bdfdbe831028970e/ERROR_ANALYSIS_REPORT.md).
+[Código, checkpoints e estado retomável](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/codex/liquid-sense-error-analysis-20261105).
+
+As edições diretas 006 e 007 foram concluídas sem promoção. A 006 ganhou um caso de programação, mas piorou a NLL de linguagem contra o pai. A 007 separou os fluxos mHC que operavam em igualdade, porém não mudou os acertos. Os pesos anteriores e os cinco novos artefatos de tensores foram preservados e conferidos.
+
+Nos mesmos 16 problemas de desenvolvimento, o Qwen original resolveu 12 tarefas e 66/81 casos; o híbrido preservado resolveu 11 tarefas e 69/81 casos, ambos com 4/4 controles. São trocas entre tarefas, sem superioridade geral demonstrada. Em três problemas diagnósticos já observados, com raciocínio e até 1.024 tokens, o Qwen concluiu 2/3 respostas corretas e o híbrido 0/3, preso em repetição. O modo de raciocínio ficou opcional e experimental.
+
+O checkpoint híbrido pai continua selecionado. Nenhuma melhoria nova nos pesos foi validada. Todos os testes deste ciclo terminaram; nenhum processo de modelo foi deixado rodando entre turnos.
+
+## Retomada concluída em 2026-11-05
+
+Estado desta etapa histórica: [branch de recuperação e validação](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/codex/mentor002-independent-validation-20261104).
+[Relatório completo, fixado por commit](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/478cc5933a11925ef050507ae4f761234f0569ad/MENTOR002_VALIDATION_REPORT.md).
+
+A hipótese 002 original tinha somente sua triagem salva; o checkpoint final não foi encontrado no estado persistido acessível. A reconstrução da hipótese reproduziu 11→12 tarefas e 69→72 casos no desenvolvimento, com 4/4 controles. Não se afirma identidade bit a bit com os pesos não salvos.
+
+Na validação nova congelada (24 tarefas / 192 casos), Qwen original fez 5/24 e 71/192; híbrido pai fez 7/24 e 85/192; candidata reconstruída fez 7/24 e 78/192. Todos fizeram 6/12 controles estritos, com limitações e diferenças por item documentadas. A candidata ganhou 5 casos, perdeu 12 e não ganhou tarefas completas em relação ao pai. **Sem promoção: manter o checkpoint pai.**
+
+Seleção preservada: `rsi100/checkpoints/best.pt`, SHA256 `46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8`.
+A candidata, suas ativações e todos os resultados continuam arquivados como experimento. Loop/mHC + operadores inspirados em Liquid permanecem ativos; o híbrido tem aproximadamente 1,02B parâmetros carregados. Os 31 descartes antigos e a V3 NCM foram preservados. A busca automática não foi reiniciada. Avaliação concluída, sem processo de pesquisa em segundo plano.
+
+## Pesquisa guiada e identidade — conclusão de 2026-11-05
+
+Continuação atual: [código, pesos e artefatos](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/codex/liquid-sense-reasoning-20261105).
+[Relatório fixado por commit](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/blob/982cafd27ae51847d3dabdbbddc17919c723ea29/REASONING_BENCHMARK_REPORT.md).
+
+Foram testadas três novas hipóteses: reforço dos pesos de visita em camadas selecionadas por ativações, edição direta da MLP com proteção de 137 estados e terceira visita seletiva (80 execuções de camada). As intervenções de loop não ganharam casos na triagem. A edição da MLP fez 69→70 casos de desenvolvimento, com controles preservados, mas piorou a NLL das âncoras (3,183729→3,189105) e foi rejeitada. **Nenhuma candidata promovida; manter o pai.**
+
+| Piloto em subconjuntos fixados | Qwen original | Liquid Sense preservado |
 |---|---:|---:|
-| LiveCodeBench v6 — 8 problemas | 1/8 | 2/8 |
-| GSM8K — 16 questões, resposta concisa | 1/16 | 1/16 |
-| IFEval estrito — 12 prompts | 8/12 | 8/12 |
+| LiveCodeBench v6 (8 problemas) | 1/8 | 2/8 |
+| GSM8K, resposta concisa (16 questões) | 1/16 | 1/16 |
+| IFEval estrito (12 prompts) | 8/12 | 8/12 |
 
-As amostras são pequenas e os protocolos locais têm limites e restrições;
-esses números não equivalem aos benchmarks completos da Liquid AI nem
-estabelecem superioridade geral. Nenhuma nova candidata foi promovida.
-[Relatório completo](REASONING_BENCHMARK_REPORT.md),
-[saídas e estatísticas](benchmarks/reasoning_20261105/summary.json) e
-[teste de identidade do chat](reasoning/identity_probe.json) estão preservados.
+Os protocolos locais usam limites e um executor restrito; não reproduzem as pontuações completas publicadas pela Liquid AI. As amostras são pequenas, com trocas de acertos detalhadas no relatório e sem evidência estatística de superioridade geral.
 
-## Histórico preservado — busca de 100 tentativas
+O chat se apresenta como **Liquid Sense**, projeto independente conduzido por um desenvolvedor, com base Qwen e adaptações inspiradas em SenseNova/Liquid. Essa identidade é configuração da aplicação, sem alegação de aprendizado nos pesos nem de criação do Qwen do zero. A apresentação real e suas tentativas estão preservadas.
 
-O estágio abaixo foi pausado após 31 rejeições; não foi reiniciado nesta
-continuação. Seus registros, pesos e checkpoints permanecem preservados.
+Foram aprovados 39 testes técnicos. Pesos anteriores, candidatas e ativações permanecem arquivados. A execução terminou; nenhum processo de pesquisa ficou em segundo plano.
 
-Protocolo deste estágio histórico: 100 rodadas de busca direta em pesos, sem gradientes. Cada tentativa
-parte do melhor checkpoint. Pioras e empates são descartados; o melhor é restaurado
-após cada avaliação e salvo no Git. Não são 100 passagens internas do decoder.
-O híbrido SenseNova + Liquid permanece ativo com 2/3/4 passagens internas.
-
-- [Protocolo de aceitação e limites](rsi100/PROTOCOL.md)
-- [Estado real e contador](rsi100/status.json)
-- [Execução](.github/workflows/liquid-sense-rsi100.yml)
-- [Relatório ao concluir](RSI100_REPORT.md)
-
-A busca repetida usa explicitamente tarefas observadas como currículo. Validação
-e teste novos medem transferência; o teste final não escolhe pesos. É adaptação
-por busca com recompensa, não prova de autonomia ou de ser o melhor modelo pequeno.
-A execução espera a avaliação anterior terminar antes de consumir novas CPUs.
-
----
-
-# liquid sense 0.8 b LOOP — programação e loops experimentais
-
-Pedido atual: melhorar programação por edição direta dos pesos e feedback de
-execução, mantendo SenseNova + Liquid. Estado em `code_rsi/status.json`.
-O novo conjunto tem 48 funções Python em quatro divisões; é um piloto pequeno.
-O modelo recebe enunciado e seu próprio feedback, sem soluções de referência
-ou respostas-alvo nos prompts. Todos os pesos experimentais são salvos.
-
-Testar gates e caches para duas, três e quatro passagens pelo bloco compartilhado.
-Mais computação não garante melhor raciocínio. Não há alegação de ser o melhor
-modelo pequeno ou de já ter qualidade geral excepcional. A base nominal é 0,8B;
-o híbrido ampliado carrega aproximadamente 1,02B parâmetros.
-
-- [Protocolo e referências](code_rsi/PROTOCOL.md)
-- [Estado real](code_rsi/status.json)
-- [Workflow atual](.github/workflows/liquid-sense-coding-rsi.yml)
-- [Relatório ao terminar](CODE_REPORT.md)
-
-O ciclo 2 anterior está concluído: nenhuma edição foi promovida.
-Os resultados anteriores foram preservados abaixo e no histórico.
-
----
-
-# liquid sense 0.8 b LOOP — RSI ciclo 2
-
-Continuação da V2 híbrida ativa. A V3 NCM foi arquivada separadamente.
-A base nominal Qwen é 0,8B; o híbrido ampliado carrega cerca de 1,02B parâmetros.
-Componentes inspirados em SenseNova e Liquid permanecem ativos; não são
-os modelos completos nem seus pesos pré-treinados.
-
-O ciclo atual escreve diretamente a última matriz MLP, em três etapas de
-regressão fechada sem gradientes. O assistente definiu e controla o programa;
-não é autoaperfeiçoamento autônomo. Cada etapa salva pesos, erros e decisão
-em commit. Nenhum ganho é garantido.
-
-- Protocolo: [lab_rsi/PROTOCOL.md](lab_rsi/PROTOCOL.md).
-- Estado: [lab_rsi/status.json](lab_rsi/status.json).
-- Execução: [.github/workflows/liquid-sense-rsi-cycle2.yml](.github/workflows/liquid-sense-rsi-cycle2.yml).
-- Resultados anteriores: [history/PILOT1_REPORT.md](history/PILOT1_REPORT.md).
-- Relatório novo após conclusão: [LAB_REPORT.md](LAB_REPORT.md).
-
-No piloto anterior, híbrido 39/64 e original 34/64 em teste customizado.
-Nenhuma edição nova passou na validação. O ciclo 2 começa dessa base híbrida,
-usa perguntas novas e seleciona principalmente por respostas exatas geradas.
-O teste final não escolhe pesos.
-
-Reprodução CPU: instalar requirements-ci.txt e torch 2.15.0+cpu;
-executar download_model.py, build_sensenova_port.py e python lab_rsi/ci.py develop.
-O workflow organiza validação, congelamento e teste final sem misturar conjuntos.
-Não repetir o teste observado para selecionar edições.
-Os comandos do histórico abaixo não definem o ciclo atual.
-
----
-
-# liquid sense 0.8 b LOOP
-
-Nome nominal da base: 0,8B. Híbrido ampliado: aproximadamente 1,02B parâmetros carregados.
-
-Novo piloto baseado em referências públicas de pesquisa automatizada: [LAB_METHODS.md](LAB_METHODS.md). SenseNova e componentes inspirados na Liquid devem permanecer ativos nas novas candidatas.
-
-Execução paralela do novo piloto em CPUs padrão do GitHub: [GITHUB_ACTIONS.md](GITHUB_ACTIONS.md).
-Estado atual do novo piloto: `lab_rsi/status.json`. O primeiro piloto abaixo é histórico.
-
-## Primeiro piloto concluído
-
-Código, estado retomável, patch de calibração e seis rodadas reais salvos. Nenhuma das seis candidatas de RSI venceu o critério de desenvolvimento; o checkpoint foi preservado.
-
-| Teste novo, 24 perguntas | Acertos |
-|---|---:|
-| Qwen original | 17/24 |
-| Loop adaptado preservado | 18/24 |
-| Loop + componentes inspirados no LFM3, experimental | 19/24 |
-
-A vantagem de duas perguntas é limitada e não prova melhora geral. A variante experimental permanece registrada, sem promoção com base no teste. Consulte [PILOT_REPORT.md](PILOT_REPORT.md) para todas as respostas e decisões. Estado atual: piloto concluído e pausado no checkpoint.
-
-
-Experimento de Felipe. O assistente ChatGPT Work controla os ciclos: propõe
-uma alteração, escreve valores diretamente nos pesos, mede o resultado e
-aceita ou rejeita a candidata. A IA pequena também produz sugestões reais,
-registradas sem correção em cada rodada. A escolha executada é identificada
-como decisão do assistente; não inventamos uma proposta da IA quando ela falha.
-
-Isso é uma pesquisa de melhoria guiada com feedback. Não é demonstração de
-autoaperfeiçoamento recursivo geral, consciência da arquitetura ou crescimento
-ilimitado de inteligência. O estado real está em `rsi/status.json`.
-
-## Modelo e alterações
-
-- Base pública: `Qwen/Qwen3.5-0.8B`, revisão fixa no manifesto.
-- Núcleo SenseNova: 32 camadas físicas, bloco [4,28) visitado duas vezes,
-  56 execuções, mHC de duas vias. Dimensões menores do Qwen preservadas.
-- Controle por visita: divide a contribuição residual entre primeira e
-  segunda passagem. Na inicialização conservadora, duas sondas tiveram logits
-  idênticos aos do Qwen original.
-- LFM3: inspiração na convolução curta de sete posições e na atenção local
-  de 256 tokens. Mantemos Gated DeltaNet do Qwen; não é a arquitetura completa
-  ou os pesos treinados do LFM3.
-- Ajuste dos pesos de convolução por regressão ridge fechada, regularizada
-  pelo original, usando ativações em oito textos. Zero backward passes.
-- A adaptação é aprendida por dados e feedback. Não é correto chamá-la de
-  processo totalmente sem aprendizagem só por não usar gradientes.
-
-O arquivo `v2_adaptation/closed_form_fit.json` registra os coeficientes
-efetivamente alterados. Os pesos de entrada e os conhecimentos do LFM3 não
-foram transplantados entre espaços latentes incompatíveis.
-
-## Persistência e retomada
-
-`checkpoints/liquid_patch.pt` guarda exatamente os pequenos tensores ajustados
-(carregar com `weights_only=True`). `checkpoints/incumbent.json` registra o
-modelo base, revisão, receita de cirurgia e hash do patch. Juntos com o código,
-permitem reconstruir o mesmo checkpoint sem versionar gigabytes de pesos base.
-`rsi/round_*.json` preserva proposta, sugestão real da IA, métrica, decisão e
-estado. As gravações locais usam arquivos temporários, fsync e troca atômica.
-O GitHub preserva os checkpoints confirmados; o campo `pending` ajuda a detectar
-uma rodada interrompida. Não repita uma rodada finalizada.
-
-Os arquivos `data_v2.json` separam oito textos de calibração, oito problemas
-de desenvolvimento e 24 testes novos. Somente desenvolvimento decide promoção.
-O teste reservado é executado depois de congelar o estado e nunca escolhe pesos.
-
-## Executar
-
-Instale primeiro PyTorch CPU e dependências:
-
-```bash
-pip install torch==2.15.0+cpu --index-url https://download.pytorch.org/whl/cpu
-pip install transformers==5.22.1 accelerate==1.15.0 safetensors==0.8.0 numpy
-python download_model.py
-python build_sensenova_port.py
-```
-
-Para reconstruir os ajustes algébricos desde o início, em vez do patch salvo:
-
-```bash
-python v2_adaptation/experiment.py teacher
-python v2_adaptation/experiment.py adapt
-```
-
-Uma rodada é executada pelo controlador com uma receita explícita, por exemplo:
-
-```bash
-python rsi_cycle.py --round 1 --gain 0.05 --beta 0.025 --liquid-mix 0 --reason "Dividir a contribuição entre camadas originais e inseridas"
-```
-
-A numeração precisa coincidir com o checkpoint atual; use `rsi/status.json`.
-Uma candidata só é promovida se reduzir a NLL média de desenvolvimento em mais
-de 0,0001. Isso não garante melhora em perguntas novas. Sugestões do modelo são
-dados para inspeção, não comandos que serão executados automaticamente.
-
-O experimento roda em CPU durante a sessão. Este repositório não promete um
-serviço de treinamento permanente nem dispara gastos ou APIs pagas.
-
-## Fontes e licenças
-
-Qwen e código SenseNova são Apache-2.0, conforme seus repositórios. A licença
-e o aviso de atribuição estão incluídos. O LFM3 serve como referência de desenho:
-
-- https://huggingface.co/Qwen/Qwen3.5-0.8B
-- https://github.com/OpenSenseNova/SenseNova-Loop
-- https://www.liquid.ai/blog/lfm3
-- https://arxiv.org/abs/1511.05641 — transformações que preservam a função
-- https://arxiv.org/abs/2605.23872 — amortecimento de computação em loops
-
-As adaptações específicas deste repositório são experimentais. Resultados e
-limitações devem ser lidos antes de alegar que o modelo melhorou.

@@ -24,6 +24,7 @@ class Reader(io.RawIOBase):
 def main():
     assert json.load(open(H/'status.json'))['status']=='complete'
     assert not json.load(open(H/'runtime.json'))['model_process_active']
+    assert not json.load(open(H/'arithmetic_runtime.json'))['model_process_active']
     gzip_audit=[]
     for stage in ['initial_factors','recovery_step48','sft_epoch1','sft_final','policy_final']:
         folder=H/'checkpoints'/stage;m=json.load(open(folder/'manifest.json'));full=hashlib.sha256()

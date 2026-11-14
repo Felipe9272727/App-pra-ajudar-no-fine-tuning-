@@ -1,3 +1,47 @@
+# Native028 complete — MAIN productive-thinking pilot, rejected (2026-11-14)
+
+- Active results branch: `codex/liquid-sense-productive-thinking-028-20261114`.
+  Read native028/REPORT.md,summary.json,selection.json,status.json and the
+  artifact/remote verification catalogs before any new model work. Peer research
+  is research027/REPORT.md. User focus is MAIN, not speculative children.
+- Exactly2epochs/96SFTupdates and8group-relativePPOupdates.48paired problems,
+  5398target-token presentations; policy32samples on8TRAIN prompts,29all-pass.
+  Rank8 factors on150shared projections (5111808values) plus276native controls
+  (2202864values), both real loop visits. This is limited adaptation, not full
+  text-model tuning, industrial DAPO or stronger-teacher OPD. Gradients authorized.
+- Export failed after step48 because(B@A)*s and(B*s)@A rounded differently before
+  BF16. Exact state preserved and2581tensors compared. Technical projection fix
+  is recorded in recovery/source_revision.json; initial freezes retained. Resume
+  executed49..96only. Do not repeat completed epochs or quality rows.
+- New validation4code families/20cases plus8general(nonthinking), same4code plus
+  first4general(thinking). Code tasks in nonthinking/thinking: original1/0,
+  parent0/0,SFT0/0,policy0/0. Cases: original6/0,parent7/0,SFT2/4,policy6/6.
+  All trained thinking outputs ended; parents'8/8thinking outputs hit192tokens.
+  This is SHORT-budget delivery, not app Extenso or proof of deeper reasoning.
+- General nonthinking totals4/8original,5/8allhybrids, but BOTH trained versions
+  lose the parent's plural-of-cao and immutable-tuple controls. Retention is per
+  item, never just an aggregate. Neither candidate eligible; FINAL UNQUERIED.
+- Loop replacement(first exit for second,all56computations retained) changed no
+  case bits on2probes. Tool success0/2allfour, although valid actual calls exist:
+  expression withoutprint gives empty stdout; average omitted an input. Do not
+  claim no pretrained tool-calling capability, loop utility,4Bsuperiority or
+  lossless speed. Shorter wrong responses are not the requested quality gain.
+- Exploratory arithmetic audit: first2nonthinking code tasks forSFT/PPO, exact
+  saved factors, no updates. All4outputs have identical tokens/cases to already
+  scored folded versions. Not another independent validation or a rescue gate.
+- All699merged native tensor hashes verified in scored coldSFT/PPOloads. Initial,
+  recovery_step48,epoch1,SFTfinal,policyfinal archives preserved with optimizer/RNG.
+  Restore missing parts via native028/restore.py --ref EXACT_COMMIT --stage ... .
+  Base model and best.pt remain separately required. Official Qwen source file
+  matches SHA25604b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696.
+- KEEP general parent rsi100/checkpoints/best.pt SHA256
+  46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8.
+  No candidate promoted; APK/default unchanged. No model worker/background run.
+  All unused build tools and duplicate cache temporarily archived for RAM were
+  restored byte-for-byte; archives retained. Never erase past experiments.
+- Current validation is OBSERVED; do not call it fresh in a next study. A next
+  hypothesis is documented but NOT executed. Do not automatically restart028.
+
 # Retomada do experimento
 
 ## Latest from-scratch speculative study026 — complete negative pilot
