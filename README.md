@@ -1,5 +1,30 @@
 # Liquid Sense 0.8B LOOP
 
+## Pesquisa029 — quatro épocas do melhor geral, sem promoção
+
+[Relatório](native029/REPORT.md), [comparações](native029/summary.json),
+[decisão](native029/selection.json) e [protocolo](native029/PROTOCOL.md).
+
+Quatro épocas NOVAS desde o checkpoint geral preservado:192atualizações e10796
+apresentações de tokens-alvo. Loop,mHC e controles temporais treinados juntos,
+com passos menores e KLmais forte. Todas as quatro versões foram preservadas.
+
+| Versão | Código novo sem thinking | Casos | Gerais novos |
+|---|---:|---:|---:|
+| Pai selecionado | 0/4 | 2/20 | 4/8 |
+| Época1 | 0/4 | 5/20 | 6/8 |
+| Época2 | 1/4 | 10/20 | 6/8 |
+| Época3 | 0/4 | 7/20 | 7/8 |
+| Época4 | 0/4 | 5/20 | 7/8 |
+
+A segunda época ganhou um problema novo completo, mas perdeu3casos antigos de
+código e2controles gerais. **Nenhuma época passou os critérios de preservação.**
+O checkpoint anterior e o APK continuam selecionados; teste final não consultado.
+Com thinking, as versões treinadas encerraram8/8respostas, mas0/4programas certos.
+Budget curto192tokens não mede o modo Extenso. Não há ganho geral de inteligência,
+loop útil ou velocidade sem perda demonstrado. Workers encerrados.
+
+
 ## Piloto028 — pensamento produtivo no modelo principal (14/11/2026)
 
 [Relatório completo](native028/REPORT.md), [comparações](native028/summary.json),
