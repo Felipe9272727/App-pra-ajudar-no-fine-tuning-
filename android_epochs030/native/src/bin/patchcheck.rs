@@ -25,7 +25,7 @@ fn main()->Result<()> {
         let mut ids=vec![];
         for _ in 0..row["budget"].as_u64().unwrap() {
             let next=greedy(&model.logits(&hidden)) as u32;ids.push(next);
-            if next==248044 {break;}
+            if next==248044 || next==248046 {break;}
             hidden=model.token(&mut session,next,&cancel,false)?.0;
         }
         println!("{}",serde_json::json!({"id":row["id"],"mode":mode,"ids":ids,"executions":56}));std::io::stdout().flush()?;
