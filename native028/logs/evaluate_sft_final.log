@@ -1,0 +1,28 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  17%|█▋        | 117/675 [00:00<00:00, 1147.78it/s]Loading weights:  36%|███▋      | 246/675 [00:00<00:00, 1208.95it/s]Loading weights:  54%|█████▍    | 367/675 [00:00<00:00, 1179.11it/s]Loading weights:  72%|███████▏  | 485/675 [00:00<00:00, 722.88it/s] Loading weights: 100%|██████████| 675/675 [00:00<00:00, 1042.91it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794629028.3611386, "attempt": null, "pid": 64804}
+PHASE_END checkpoint_load:best.pt 0.008
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL028 validation sft_final False N028V/transpose 1 16
+EVAL028 validation sft_final False N028V/merge_intervals 0 27
+EVAL028 validation sft_final False N028V/decode_runs 0 25
+EVAL028 validation sft_final False N028V/zero_sum 1 70
+EVAL028 validation sft_final False N028VG/0 True 4
+EVAL028 validation sft_final False N028VG/1 False 2
+EVAL028 validation sft_final False N028VG/2 True 3
+EVAL028 validation sft_final False N028VG/3 False 3
+EVAL028 validation sft_final False N028VG/4 True 3
+EVAL028 validation sft_final False N028VG/5 True 3
+EVAL028 validation sft_final False N028VG/6 True 2
+EVAL028 validation sft_final False N028VG/7 False 2
+EVAL028 validation sft_final True N028V/transpose 1 35
+EVAL028 validation sft_final True N028V/merge_intervals 0 51
+EVAL028 validation sft_final True N028V/decode_runs 0 42
+EVAL028 validation sft_final True N028V/zero_sum 3 82
+EVAL028 validation sft_final True N028VG/0 True 24
+EVAL028 validation sft_final True N028VG/1 False 18
+EVAL028 validation sft_final True N028VG/2 True 14
+EVAL028 validation sft_final True N028VG/3 True 13
