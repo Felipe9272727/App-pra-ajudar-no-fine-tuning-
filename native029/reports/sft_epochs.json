@@ -1,0 +1,8 @@
+[
+  {
+    "epoch": 1,
+    "steps": 48,
+    "sft_tokens": 2699,
+    "anchor_tokens": 456
+  }
+]
