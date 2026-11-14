@@ -1,0 +1,6 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+SELECTION029 epoch01
+SELECTION029 None
+SELECTION029 None
+SELECTION029 epoch01
+SELECTION029_CONTRACTS_PASS: known control loss blocks; history drift blocks; earlier tied epoch wins
