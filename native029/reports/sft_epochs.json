@@ -16,5 +16,11 @@
     "steps": 144,
     "sft_tokens": 8097,
     "anchor_tokens": 1368
+  },
+  {
+    "epoch": 4,
+    "steps": 192,
+    "sft_tokens": 10796,
+    "anchor_tokens": 1824
   }
 ]
