@@ -1,0 +1,45 @@
+async function(paths, message) {
+  function unpack(r) {
+    if(r.isError) throw Error(JSON.stringify(r.structuredContent||r.content));
+    let s=r.structuredContent;while(s?.structuredContent)s=s.structuredContent;
+    return s?.content?JSON.parse(s.content):s;
+  }
+  const page=Number((await tools.exec_command({cmd:'python native028/publish_nonce.py',workdir:'/workspace/liquid-sense',max_output_tokens:100})).output.trim());
+  const repo='Felipe9272727/App-pra-ajudar-no-fine-tuning-',branch='codex/liquid-sense-productive-thinking-028-20261114';
+  const entries=[];
+  for(const path of paths) {
+    if(!/^native028\/[a-zA-Z0-9_./-]+\.(pt|json|bin|jsonl|log)$/.test(path))throw Error('Unexpected tensor path');
+    const metaResult=await tools.exec_command({cmd:"python -c 'import pathlib,json,subprocess; p=pathlib.Path(\""+path+"\"); print(json.dumps({\"size\":p.stat().st_size,\"git_blob\":subprocess.check_output([\"git\",\"hash-object\",str(p)],text=True).strip()}))'",workdir:'/workspace/liquid-sense',max_output_tokens:2000});
+    const meta=JSON.parse(metaResult.output);const parts=[];
+    const offsets=[];for(let off=0;off<meta.size;off+=737280)offsets.push(off);
+    for(let start=0;start<offsets.length;start+=8) {
+      const batch=offsets.slice(start,start+8);
+      const results=await Promise.allSettled(batch.map(async offset=>{
+        const n=Math.min(737280,meta.size-offset);
+        const r=await tools.exec_command({cmd:`python -c 'import pathlib,base64; f=pathlib.Path("${path}").open("rb"); f.seek(${offset}); print(base64.b64encode(f.read(${n})).decode())'`,workdir:'/workspace/liquid-sense',max_output_tokens:250000});
+        const data=r.output.trim();if(r.exit_code!==0||data.length!==4*Math.ceil(n/3))throw Error('Truncated binary');return data;
+      }));
+      for(const r of results){if(r.status!=='fulfilled')throw r.reason;parts.push(r.value);}
+    }
+    let blob;
+    try {
+      blob=unpack(await tools.mcp__codex_apps__github_create_blob({repository_full_name:repo,encoding:'base64',content:parts.join('')}));
+    } catch(error) {
+      if(!String(error).includes('ReadTimeout'))throw error;
+      const current=unpack(await tools.mcp__codex_apps__github_fetch({url:'https://api.github.com/repos/'+repo+'/commits?sha='+encodeURIComponent(branch)+'&per_page=1'}))[0];
+      const probe=unpack(await tools.mcp__codex_apps__github_create_tree({repository_full_name:repo,base_tree_sha:current.commit.tree.sha,tree_elements:[{path,mode:'100644',type:'blob',sha:meta.git_blob}]}));
+      const recovered={path,expected_blob:meta.git_blob,verified_orphan_tree:probe.sha,response_timed_out_but_blob_exists:true,retransferred:false};
+      store('upload015recoveries',[...(load('upload015recoveries')||[]),recovered]);
+      blob={sha:meta.git_blob};
+    }
+    if(blob.sha!==meta.git_blob)throw Error('Weight blob identity mismatch');
+    entries.push({path,mode:'100644',type:'blob',sha:blob.sha});
+  }
+  const headUrl='https://api.github.com/repos/'+repo+'/commits?sha='+encodeURIComponent(branch)+'&per_page=1';
+  const before=unpack(await tools.mcp__codex_apps__github_fetch({url:headUrl.replace('per_page=1','per_page='+page+'&page=1')}))[0];
+  const tree=unpack(await tools.mcp__codex_apps__github_create_tree({repository_full_name:repo,base_tree_sha:before.commit.tree.sha,tree_elements:entries}));
+  const commit=unpack(await tools.mcp__codex_apps__github_create_commit({repository_full_name:repo,parent_sha:before.sha,tree_sha:tree.sha,message}));
+  unpack(await tools.mcp__codex_apps__github_update_ref({repository_full_name:repo,branch_name:branch,sha:commit.sha,expected_sha:before.sha,force:false}));
+  if(unpack(await tools.mcp__codex_apps__github_fetch({url:headUrl.replace('per_page=1','per_page='+(page+1)+'&page=1')}))[0].sha!==commit.sha)throw Error('Tensor outcome commit not verified');
+  return {commit:commit.sha,tensors:paths.length};
+}

@@ -1,0 +1,93 @@
+{
+  "cache": "/dev/shm/liquid-loop025/latest.pt.gz.bin",
+  "cache_sha256": "b10ee50298448780e1932f3f7d126db8d37f45a8d5914ed05cd745f3fe3f456d",
+  "bytes": 81145234,
+  "identical_permanent_checkpoint": "loop025/checkpoints/epoch03",
+  "permanent_parts_verified": [
+    {
+      "path": "loop025/checkpoints/epoch03/part0000.bin",
+      "git_blob": "c7a9db7b4e2720903f3e07b1a0fdb1c21c9e07ce"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0001.bin",
+      "git_blob": "5108954c02b1a9f2b6bc03097b59c8aa440f3a12"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0002.bin",
+      "git_blob": "b5c82e94b595bbdfd0451b4237813459caf87132"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0003.bin",
+      "git_blob": "5c7a0246d5c5860229f638f0ae86f43ba224fa02"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0004.bin",
+      "git_blob": "c5e1df3c4319d42d5820bbff89ce637bb96e8057"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0005.bin",
+      "git_blob": "f87b4857d247eb2da5832192c32b96dcf3cf42a3"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0006.bin",
+      "git_blob": "46ba47dc94cfeacc8f864b3c8ada3cc3fd12dffd"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0007.bin",
+      "git_blob": "ddf0352993b50dc972f6fc28a54970ec3a0e018e"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0008.bin",
+      "git_blob": "84bcfcda2f62422379aceac53fe79cf1f7e9013a"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0009.bin",
+      "git_blob": "d72c3da725776d1526dc964604894691b5cb74dc"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0010.bin",
+      "git_blob": "632aefd12f9643162cce9b7592d5208238104c6c"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0011.bin",
+      "git_blob": "81aa33cd82ee797ad7d4f189ad057131ac15993f"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0012.bin",
+      "git_blob": "84c802fb259c07d9da109c9e6d3bd67a30bda75e"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0013.bin",
+      "git_blob": "3a4f1e4a61e3e53278f9ef313cfd5a134183ff2b"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0014.bin",
+      "git_blob": "3da52954063f6c9b2684bad6d87f97284955d525"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0015.bin",
+      "git_blob": "45109282421aeae3f16e2d9f4afa162a357a9271"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0016.bin",
+      "git_blob": "4904c5c2edad87fb50b18a4cef225230c88717f1"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0017.bin",
+      "git_blob": "91292c3776b243d27e7ef8f86b8b9249cdb7d228"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0018.bin",
+      "git_blob": "9f2a8ce81d05d95dc90ba3f37e256213bd4e2edc"
+    },
+    {
+      "path": "loop025/checkpoints/epoch03/part0019.bin",
+      "git_blob": "3649c0efbf8d32918a8e939b7578f89f62f96847"
+    }
+  ],
+  "cache_removed": true,
+  "remote_permanent_checkpoint_all20_parts_verified": true,
+  "remote_tree_commit": "5c8c1c4455d530b9bf71b9fe5b1f1a972c5f5dff",
+  "unique_weights_or_experiments_removed": false,
+  "restoration": "Concatenate the20 immutable epoch03 parts in manifest order; exact SHA256 is recorded."
+}
