@@ -1,0 +1,538 @@
+{
+  "status": "complete",
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "parent_file_unchanged": true,
+  "scope": "small controlled productive-thinking pilot on MAIN; not a general-intelligence benchmark",
+  "training": {
+    "sft_epochs": 2,
+    "sft_updates": 96,
+    "target_token_presentations": 5398,
+    "factor_values": 5111808,
+    "native_control_values": 2202864,
+    "both_actual_visits_recomputed": true,
+    "policy_groups": 8,
+    "policy_samples": 32,
+    "policy_updates": 8,
+    "policy_zero_variance_skips": 0,
+    "rollout_train_fit": {
+      "all_cases_correct": 29,
+      "samples": 32,
+      "thinking_closed": 32,
+      "ended_eos": 32,
+      "mean_tokens": 37.8125,
+      "scope": "TRAIN prompts, before each respective group update; not independent evaluation"
+    }
+  },
+  "validation": {
+    "original": {
+      "False": {
+        "code_tasks": 1,
+        "code_total": 4,
+        "cases": 6,
+        "case_total": 20,
+        "general_correct": 4,
+        "general_total": 8,
+        "tokens": 446,
+        "unfinished_thinking": 0,
+        "truncated": 1
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 0,
+        "case_total": 20,
+        "general_correct": 0,
+        "general_total": 4,
+        "tokens": 1536,
+        "unfinished_thinking": 8,
+        "truncated": 8
+      }
+    },
+    "parent": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 7,
+        "case_total": 20,
+        "general_correct": 5,
+        "general_total": 8,
+        "tokens": 453,
+        "unfinished_thinking": 0,
+        "truncated": 1
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 0,
+        "case_total": 20,
+        "general_correct": 0,
+        "general_total": 4,
+        "tokens": 1536,
+        "unfinished_thinking": 8,
+        "truncated": 8
+      }
+    },
+    "sft_final": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 2,
+        "case_total": 20,
+        "general_correct": 5,
+        "general_total": 8,
+        "tokens": 160,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 4,
+        "case_total": 20,
+        "general_correct": 3,
+        "general_total": 4,
+        "tokens": 279,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      }
+    },
+    "policy_final": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 6,
+        "case_total": 20,
+        "general_correct": 5,
+        "general_total": 8,
+        "tokens": 145,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 6,
+        "case_total": 20,
+        "general_correct": 2,
+        "general_total": 4,
+        "tokens": 254,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      }
+    }
+  },
+  "selection": {
+    "selected": null,
+    "checks": {
+      "sft_final": {
+        "eligible": false,
+        "completed_code_task_gain": 0,
+        "lost_parent_correct_cases_or_controls": [
+          [
+            "code",
+            "N028V/transpose",
+            false,
+            1
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            false,
+            1
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            false,
+            2
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            false,
+            3
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            false,
+            5
+          ],
+          [
+            "general",
+            "N028VG/3",
+            false
+          ],
+          [
+            "general",
+            "N028VG/7",
+            false
+          ]
+        ],
+        "gained_code_cases": [
+          [
+            "code",
+            "N028V/transpose",
+            true,
+            0
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            true,
+            0
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            true,
+            1
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            true,
+            4
+          ]
+        ],
+        "no_mode_task_loss": true
+      },
+      "policy_final": {
+        "eligible": false,
+        "completed_code_task_gain": 0,
+        "lost_parent_correct_cases_or_controls": [
+          [
+            "code",
+            "N028V/transpose",
+            false,
+            1
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            false,
+            2
+          ],
+          [
+            "general",
+            "N028VG/3",
+            false
+          ],
+          [
+            "general",
+            "N028VG/7",
+            false
+          ]
+        ],
+        "gained_code_cases": [
+          [
+            "code",
+            "N028V/zero_sum",
+            false,
+            4
+          ],
+          [
+            "code",
+            "N028V/transpose",
+            true,
+            0
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            true,
+            0
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            true,
+            1
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            true,
+            3
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            true,
+            4
+          ],
+          [
+            "code",
+            "N028V/zero_sum",
+            true,
+            5
+          ]
+        ],
+        "no_mode_task_loss": true
+      }
+    },
+    "final_gate_open": false,
+    "selected_parent_unchanged": true,
+    "promotion_pending_fresh_final": false,
+    "all_summaries": {
+      "original": {
+        "False": {
+          "code_tasks": 1,
+          "code_total": 4,
+          "cases": 6,
+          "case_total": 20,
+          "general_correct": 4,
+          "general_total": 8,
+          "tokens": 446,
+          "unfinished_thinking": 0,
+          "truncated": 1
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 0,
+          "case_total": 20,
+          "general_correct": 0,
+          "general_total": 4,
+          "tokens": 1536,
+          "unfinished_thinking": 8,
+          "truncated": 8
+        }
+      },
+      "parent": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 7,
+          "case_total": 20,
+          "general_correct": 5,
+          "general_total": 8,
+          "tokens": 453,
+          "unfinished_thinking": 0,
+          "truncated": 1
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 0,
+          "case_total": 20,
+          "general_correct": 0,
+          "general_total": 4,
+          "tokens": 1536,
+          "unfinished_thinking": 8,
+          "truncated": 8
+        }
+      },
+      "sft_final": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 2,
+          "case_total": 20,
+          "general_correct": 5,
+          "general_total": 8,
+          "tokens": 160,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 4,
+          "case_total": 20,
+          "general_correct": 3,
+          "general_total": 4,
+          "tokens": 279,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      },
+      "policy_final": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 6,
+          "case_total": 20,
+          "general_correct": 5,
+          "general_total": 8,
+          "tokens": 145,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 6,
+          "case_total": 20,
+          "general_correct": 2,
+          "general_total": 4,
+          "tokens": 254,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      }
+    }
+  },
+  "final": null,
+  "validated_research_candidate": null,
+  "general_parent_stays_selected": true,
+  "research_candidate_passed_both_gates": false,
+  "no_existing_checkpoint_overwritten": true,
+  "loop_replacement_descriptive": {
+    "parent": [
+      {
+        "id": "N028V/transpose",
+        "normal_cases": 0,
+        "replaced_cases": 0,
+        "normal_task": false,
+        "replaced_task": false,
+        "case_bits_changed": false,
+        "program_changed": false,
+        "normal_tokens": 192,
+        "replaced_tokens": 192
+      },
+      {
+        "id": "N028V/merge_intervals",
+        "normal_cases": 0,
+        "replaced_cases": 0,
+        "normal_task": false,
+        "replaced_task": false,
+        "case_bits_changed": false,
+        "program_changed": false,
+        "normal_tokens": 192,
+        "replaced_tokens": 192
+      }
+    ],
+    "policy_final": [
+      {
+        "id": "N028V/transpose",
+        "normal_cases": 1,
+        "replaced_cases": 1,
+        "normal_task": false,
+        "replaced_task": false,
+        "case_bits_changed": false,
+        "program_changed": false,
+        "normal_tokens": 34,
+        "replaced_tokens": 32
+      },
+      {
+        "id": "N028V/merge_intervals",
+        "normal_cases": 0,
+        "replaced_cases": 0,
+        "normal_task": false,
+        "replaced_task": false,
+        "case_bits_changed": false,
+        "program_changed": false,
+        "normal_tokens": 45,
+        "replaced_tokens": 45
+      }
+    ]
+  },
+  "tools_successes_out_of2": {
+    "original": 0,
+    "parent": 0,
+    "sft_final": 0,
+    "policy_final": 0
+  },
+  "exports": {
+    "initial_factors": {
+      "step": 0,
+      "changed_native_tensors": 0,
+      "changed_folded_projections": 0,
+      "factor_values": 5111808,
+      "native_values": 2202864,
+      "effective_native_parameter_count": 1020252592,
+      "vision153_unchanged": true
+    },
+    "sft_epoch1": {
+      "step": 48,
+      "changed_native_tensors": 235,
+      "changed_folded_projections": 150,
+      "factor_values": 5111808,
+      "native_values": 2202864,
+      "effective_native_parameter_count": 1020252592,
+      "vision153_unchanged": true
+    },
+    "sft_final": {
+      "step": 96,
+      "changed_native_tensors": 241,
+      "changed_folded_projections": 150,
+      "factor_values": 5111808,
+      "native_values": 2202864,
+      "effective_native_parameter_count": 1020252592,
+      "vision153_unchanged": true
+    },
+    "policy_final": {
+      "step": 8,
+      "changed_native_tensors": 240,
+      "changed_folded_projections": 150,
+      "factor_values": 5111808,
+      "native_values": 2202864,
+      "effective_native_parameter_count": 1020252592,
+      "vision153_unchanged": true
+    }
+  },
+  "apk_changed": false,
+  "workers_active": false,
+  "technical_recovery": {
+    "step": 48,
+    "completed_updates_repeated": 0,
+    "state_tensor_equality_checks": 2581,
+    "actual_projection_bounds_checked": 150,
+    "source_revision": "native028/recovery/source_revision.json"
+  },
+  "arithmetic_audit": {
+    "sft_final": {
+      "rows": 2,
+      "same_ids": 2,
+      "same_case_bits": 2
+    },
+    "policy_final": {
+      "rows": 2,
+      "same_ids": 2,
+      "same_case_bits": 2
+    }
+  },
+  "tool_flow_analysis": {
+    "original": {
+      "valid_actual_model_calls": 1,
+      "successful_executions_with_empty_stdout": 1,
+      "complete_tool_flows_passed": 0,
+      "parse_errors": 0
+    },
+    "parent": {
+      "valid_actual_model_calls": 1,
+      "successful_executions_with_empty_stdout": 1,
+      "complete_tool_flows_passed": 0,
+      "parse_errors": 0
+    },
+    "sft_final": {
+      "valid_actual_model_calls": 2,
+      "successful_executions_with_empty_stdout": 1,
+      "complete_tool_flows_passed": 0,
+      "parse_errors": 0
+    },
+    "policy_final": {
+      "valid_actual_model_calls": 2,
+      "successful_executions_with_empty_stdout": 1,
+      "complete_tool_flows_passed": 0,
+      "parse_errors": 0
+    }
+  },
+  "official_original_file_integrity": {
+    "repository": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "remote_file": "model.safetensors-00001-of-00001.safetensors",
+    "local_file": "upstream/model.safetensors-00001-of-00001.safetensors",
+    "bytes": 1746942600,
+    "local_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+    "official_lfs_sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+    "exact_official_original_file": true,
+    "model_inference_repeated": false
+  },
+  "exact_sft_journal_steps1_through96": true,
+  "posthoc_audit_new_weight_updates": 0,
+  "parameter_geometry_report": "native028/reports/parameter_geometry.json",
+  "error_mode_report": "native028/reports/error_modes.json",
+  "paired_uncertainty_report": "native028/reports/paired_uncertainty.json"
+}

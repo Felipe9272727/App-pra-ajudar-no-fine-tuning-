@@ -1,7 +1,18 @@
 {
-  "status": "preparing_new_authorized_main_pilot",
+  "status": "complete",
   "model_process_active": false,
-  "optimizer_updates": 0,
+  "optimizer_updates": 104,
   "parent_weights_changed": false,
-  "old_studies_restarted": false
+  "old_studies_restarted": false,
+  "phase": "tools_evaluate",
+  "last_exit_code": 0,
+  "sft_updates": 96,
+  "epoch": 2,
+  "policy_updates": 8,
+  "policy_groups_completed": 8,
+  "general_parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "validated_research_candidate": null,
+  "selected_checkpoint_promoted": false,
+  "final_set_queried": false,
+  "last_arithmetic_exit_code": 0
 }
