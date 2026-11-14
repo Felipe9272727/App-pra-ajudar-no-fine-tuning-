@@ -1,0 +1,26 @@
+{
+  "format": "gzip-torch-parts-v1",
+  "parts": [
+    {
+      "path": "part0000.bin",
+      "bytes": 4194304,
+      "sha256": "85fa5e4bba49c3113135804ff9923d7136ea52c917c4ab06b624bb464edbc036"
+    },
+    {
+      "path": "part0001.bin",
+      "bytes": 4194304,
+      "sha256": "61a804796f12b11f6aa7cda7c1a1197d73ad1b4d8db268d7032e27e7951059fb"
+    },
+    {
+      "path": "part0002.bin",
+      "bytes": 674282,
+      "sha256": "41426ccf6740dba48bad9a490db7eed5d557775141603e431cfbbc5083fdb2eb"
+    }
+  ],
+  "compressed_sha256": "122b20df2b44ce2c0f1bee1a828639fe7ae8b3d3efd04c68ecbc14b2e307c2b8",
+  "compressed_bytes": 9062890,
+  "phase": "initial_factors",
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "optimizer_RNG_included": true,
+  "steps": 0
+}
