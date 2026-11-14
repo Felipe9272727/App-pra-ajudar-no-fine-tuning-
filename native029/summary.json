@@ -1,0 +1,859 @@
+{
+  "status": "complete",
+  "new_epochs": 4,
+  "updates": 192,
+  "target_token_presentations": 10796,
+  "starting_checkpoint": "rsi100/checkpoints/best.pt",
+  "parent_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "principal_file_unchanged": true,
+  "apk_changed": false,
+  "all_model_workers_closed": true,
+  "selected_validation_epoch": null,
+  "validated_research_candidate": null,
+  "final_queried": false,
+  "final": null,
+  "selection": {
+    "selected": null,
+    "checks": {
+      "epoch01": {
+        "eligible": false,
+        "fresh": {
+          "eligible": false,
+          "completed_code_task_gain": 0,
+          "lost_parent_correct_cases_or_controls": [],
+          "gained_code_cases": [
+            [
+              "code",
+              "N029V/anagram_groups",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N029V/sliding_max",
+              false,
+              4
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N029V/chunks",
+              true,
+              0
+            ],
+            [
+              "code",
+              "N029V/anagram_groups",
+              true,
+              0
+            ],
+            [
+              "code",
+              "N029V/components",
+              true,
+              0
+            ]
+          ],
+          "no_mode_task_loss": true
+        },
+        "known_retention": {
+          "eligible": false,
+          "completed_code_task_gain": 0,
+          "lost_parent_correct_cases_or_controls": [
+            [
+              "code",
+              "N028V/transpose",
+              false,
+              1
+            ],
+            [
+              "code",
+              "N028V/zero_sum",
+              false,
+              2
+            ],
+            [
+              "general",
+              "N028VG/7",
+              false
+            ]
+          ],
+          "gained_code_cases": [
+            [
+              "code",
+              "N028V/zero_sum",
+              false,
+              4
+            ]
+          ],
+          "no_mode_task_loss": true
+        },
+        "all_known_retained": false,
+        "legacy_parent_replay_matches_historical": true
+      },
+      "epoch02": {
+        "eligible": false,
+        "fresh": {
+          "eligible": true,
+          "completed_code_task_gain": 1,
+          "lost_parent_correct_cases_or_controls": [],
+          "gained_code_cases": [
+            [
+              "code",
+              "N029V/chunks",
+              false,
+              1
+            ],
+            [
+              "code",
+              "N029V/chunks",
+              false,
+              2
+            ],
+            [
+              "code",
+              "N029V/chunks",
+              false,
+              3
+            ],
+            [
+              "code",
+              "N029V/chunks",
+              false,
+              4
+            ],
+            [
+              "code",
+              "N029V/anagram_groups",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              2
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              3
+            ],
+            [
+              "code",
+              "N029V/chunks",
+              true,
+              0
+            ],
+            [
+              "code",
+              "N029V/anagram_groups",
+              true,
+              0
+            ],
+            [
+              "code",
+              "N029V/sliding_max",
+              true,
+              0
+            ],
+            [
+              "code",
+              "N029V/sliding_max",
+              true,
+              4
+            ],
+            [
+              "code",
+              "N029V/components",
+              true,
+              0
+            ]
+          ],
+          "no_mode_task_loss": true
+        },
+        "known_retention": {
+          "eligible": false,
+          "completed_code_task_gain": 0,
+          "lost_parent_correct_cases_or_controls": [
+            [
+              "code",
+              "N028V/transpose",
+              false,
+              1
+            ],
+            [
+              "code",
+              "N028V/zero_sum",
+              false,
+              3
+            ],
+            [
+              "code",
+              "N028V/zero_sum",
+              false,
+              5
+            ],
+            [
+              "general",
+              "N028VG/3",
+              false
+            ],
+            [
+              "general",
+              "N028VG/7",
+              false
+            ]
+          ],
+          "gained_code_cases": [],
+          "no_mode_task_loss": true
+        },
+        "all_known_retained": false,
+        "legacy_parent_replay_matches_historical": true
+      },
+      "epoch03": {
+        "eligible": false,
+        "fresh": {
+          "eligible": false,
+          "completed_code_task_gain": 0,
+          "lost_parent_correct_cases_or_controls": [],
+          "gained_code_cases": [
+            [
+              "code",
+              "N029V/anagram_groups",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N029V/sliding_max",
+              false,
+              4
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              2
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              3
+            ],
+            [
+              "code",
+              "N029V/chunks",
+              true,
+              0
+            ],
+            [
+              "code",
+              "N029V/anagram_groups",
+              true,
+              0
+            ]
+          ],
+          "no_mode_task_loss": true
+        },
+        "known_retention": {
+          "eligible": false,
+          "completed_code_task_gain": 0,
+          "lost_parent_correct_cases_or_controls": [
+            [
+              "code",
+              "N028V/transpose",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N028V/transpose",
+              false,
+              1
+            ],
+            [
+              "code",
+              "N028V/zero_sum",
+              false,
+              2
+            ],
+            [
+              "code",
+              "N028V/zero_sum",
+              false,
+              3
+            ],
+            [
+              "code",
+              "N028V/zero_sum",
+              false,
+              5
+            ],
+            [
+              "general",
+              "N028VG/3",
+              false
+            ],
+            [
+              "general",
+              "N028VG/7",
+              false
+            ]
+          ],
+          "gained_code_cases": [],
+          "no_mode_task_loss": true
+        },
+        "all_known_retained": false,
+        "legacy_parent_replay_matches_historical": true
+      },
+      "epoch04": {
+        "eligible": false,
+        "fresh": {
+          "eligible": false,
+          "completed_code_task_gain": 0,
+          "lost_parent_correct_cases_or_controls": [
+            [
+              "code",
+              "N029V/sliding_max",
+              false,
+              0
+            ]
+          ],
+          "gained_code_cases": [
+            [
+              "code",
+              "N029V/anagram_groups",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              2
+            ],
+            [
+              "code",
+              "N029V/components",
+              false,
+              3
+            ],
+            [
+              "code",
+              "N029V/chunks",
+              true,
+              0
+            ],
+            [
+              "code",
+              "N029V/anagram_groups",
+              true,
+              0
+            ],
+            [
+              "code",
+              "N029V/components",
+              true,
+              0
+            ],
+            [
+              "code",
+              "N029V/components",
+              true,
+              2
+            ]
+          ],
+          "no_mode_task_loss": true
+        },
+        "known_retention": {
+          "eligible": false,
+          "completed_code_task_gain": 0,
+          "lost_parent_correct_cases_or_controls": [
+            [
+              "code",
+              "N028V/transpose",
+              false,
+              0
+            ],
+            [
+              "code",
+              "N028V/transpose",
+              false,
+              1
+            ],
+            [
+              "code",
+              "N028V/zero_sum",
+              false,
+              3
+            ],
+            [
+              "general",
+              "N028VG/3",
+              false
+            ],
+            [
+              "general",
+              "N028VG/7",
+              false
+            ]
+          ],
+          "gained_code_cases": [],
+          "no_mode_task_loss": true
+        },
+        "all_known_retained": false,
+        "legacy_parent_replay_matches_historical": true
+      }
+    },
+    "final_gate_open": false,
+    "historical_parent_reference_match": true,
+    "principal_file_unchanged": true,
+    "all_summaries": {
+      "original": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 2,
+          "case_total": 20,
+          "general_correct": 5,
+          "general_total": 8,
+          "tokens": 536,
+          "unfinished_thinking": 0,
+          "truncated": 4
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 0,
+          "case_total": 20,
+          "general_correct": 0,
+          "general_total": 4,
+          "tokens": 1536,
+          "unfinished_thinking": 8,
+          "truncated": 8
+        }
+      },
+      "parent": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 2,
+          "case_total": 20,
+          "general_correct": 4,
+          "general_total": 8,
+          "tokens": 536,
+          "unfinished_thinking": 0,
+          "truncated": 4
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 0,
+          "case_total": 20,
+          "general_correct": 0,
+          "general_total": 4,
+          "tokens": 1536,
+          "unfinished_thinking": 8,
+          "truncated": 8
+        }
+      },
+      "epoch01": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 5,
+          "case_total": 20,
+          "general_correct": 6,
+          "general_total": 8,
+          "tokens": 180,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 3,
+          "case_total": 20,
+          "general_correct": 3,
+          "general_total": 4,
+          "tokens": 341,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      },
+      "epoch02": {
+        "False": {
+          "code_tasks": 1,
+          "code_total": 4,
+          "cases": 10,
+          "case_total": 20,
+          "general_correct": 6,
+          "general_total": 8,
+          "tokens": 301,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 5,
+          "case_total": 20,
+          "general_correct": 3,
+          "general_total": 4,
+          "tokens": 327,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      },
+      "epoch03": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 7,
+          "case_total": 20,
+          "general_correct": 7,
+          "general_total": 8,
+          "tokens": 241,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 2,
+          "case_total": 20,
+          "general_correct": 3,
+          "general_total": 4,
+          "tokens": 279,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      },
+      "epoch04": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 5,
+          "case_total": 20,
+          "general_correct": 7,
+          "general_total": 8,
+          "tokens": 313,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 4,
+          "case_total": 20,
+          "general_correct": 3,
+          "general_total": 4,
+          "tokens": 356,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      }
+    },
+    "legacy_summaries": {
+      "parent": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 7,
+          "case_total": 20,
+          "general_correct": 5,
+          "general_total": 8,
+          "tokens": 453,
+          "unfinished_thinking": 0,
+          "truncated": 1
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 0,
+          "cases": 0,
+          "case_total": 0,
+          "general_correct": 0,
+          "general_total": 0,
+          "tokens": 0,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      },
+      "epoch01": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 6,
+          "case_total": 20,
+          "general_correct": 5,
+          "general_total": 8,
+          "tokens": 171,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 0,
+          "cases": 0,
+          "case_total": 0,
+          "general_correct": 0,
+          "general_total": 0,
+          "tokens": 0,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      },
+      "epoch02": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 4,
+          "case_total": 20,
+          "general_correct": 5,
+          "general_total": 8,
+          "tokens": 270,
+          "unfinished_thinking": 0,
+          "truncated": 1
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 0,
+          "cases": 0,
+          "case_total": 0,
+          "general_correct": 0,
+          "general_total": 0,
+          "tokens": 0,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      },
+      "epoch03": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 2,
+          "case_total": 20,
+          "general_correct": 5,
+          "general_total": 8,
+          "tokens": 154,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 0,
+          "cases": 0,
+          "case_total": 0,
+          "general_correct": 0,
+          "general_total": 0,
+          "tokens": 0,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      },
+      "epoch04": {
+        "False": {
+          "code_tasks": 0,
+          "code_total": 4,
+          "cases": 4,
+          "case_total": 20,
+          "general_correct": 5,
+          "general_total": 8,
+          "tokens": 148,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        },
+        "True": {
+          "code_tasks": 0,
+          "code_total": 0,
+          "cases": 0,
+          "case_total": 0,
+          "general_correct": 0,
+          "general_total": 0,
+          "tokens": 0,
+          "unfinished_thinking": 0,
+          "truncated": 0
+        }
+      }
+    }
+  },
+  "fresh_validation": {
+    "original": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 2,
+        "case_total": 20,
+        "general_correct": 5,
+        "general_total": 8,
+        "tokens": 536,
+        "unfinished_thinking": 0,
+        "truncated": 4
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 0,
+        "case_total": 20,
+        "general_correct": 0,
+        "general_total": 4,
+        "tokens": 1536,
+        "unfinished_thinking": 8,
+        "truncated": 8
+      }
+    },
+    "parent": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 2,
+        "case_total": 20,
+        "general_correct": 4,
+        "general_total": 8,
+        "tokens": 536,
+        "unfinished_thinking": 0,
+        "truncated": 4
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 0,
+        "case_total": 20,
+        "general_correct": 0,
+        "general_total": 4,
+        "tokens": 1536,
+        "unfinished_thinking": 8,
+        "truncated": 8
+      }
+    },
+    "epoch01": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 5,
+        "case_total": 20,
+        "general_correct": 6,
+        "general_total": 8,
+        "tokens": 180,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 3,
+        "case_total": 20,
+        "general_correct": 3,
+        "general_total": 4,
+        "tokens": 341,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      }
+    },
+    "epoch02": {
+      "False": {
+        "code_tasks": 1,
+        "code_total": 4,
+        "cases": 10,
+        "case_total": 20,
+        "general_correct": 6,
+        "general_total": 8,
+        "tokens": 301,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 5,
+        "case_total": 20,
+        "general_correct": 3,
+        "general_total": 4,
+        "tokens": 327,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      }
+    },
+    "epoch03": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 7,
+        "case_total": 20,
+        "general_correct": 7,
+        "general_total": 8,
+        "tokens": 241,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 2,
+        "case_total": 20,
+        "general_correct": 3,
+        "general_total": 4,
+        "tokens": 279,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      }
+    },
+    "epoch04": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 5,
+        "case_total": 20,
+        "general_correct": 7,
+        "general_total": 8,
+        "tokens": 313,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 4,
+        "case_total": 20,
+        "general_correct": 3,
+        "general_total": 4,
+        "tokens": 356,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      }
+    }
+  },
+  "scope": "small custom pilot; not general intelligence or4B comparison",
+  "best_new_coding_score_epoch": "epoch02",
+  "best_new_coding_score_is_not_a_validated_winner": true,
+  "four_epochs_completed_without_repeating_steps": true,
+  "all576_selected_tensors_received_nonzero_gradients": true,
+  "uncertainty_report": "native029/reports/paired_uncertainty.json",
+  "completion_utc": "2026-11-14T20:47:45.924427+00:00"
+}

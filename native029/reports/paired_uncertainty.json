@@ -1,0 +1,167 @@
+{
+  "sampling": "greedy one fixed output per prompt; no sampled pass@k",
+  "unit": "four problem families, grouping the two thinking modes",
+  "limitation": "n=4 families; two modes share each problem. Minimum two-sided exact sign p=.125. No adequately powered superiority claim.",
+  "candidates": {
+    "original": {
+      "families": [
+        {
+          "id": "N029V/anagram_groups",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/chunks",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/components",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/sliding_max",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        }
+      ],
+      "improved": 0,
+      "regressed": 0,
+      "ties": 4,
+      "two_sided_exact_sign_p": 1.0
+    },
+    "epoch01": {
+      "families": [
+        {
+          "id": "N029V/anagram_groups",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/chunks",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/components",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/sliding_max",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        }
+      ],
+      "improved": 0,
+      "regressed": 0,
+      "ties": 4,
+      "two_sided_exact_sign_p": 1.0
+    },
+    "epoch02": {
+      "families": [
+        {
+          "id": "N029V/anagram_groups",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/chunks",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 1,
+          "difference": 1
+        },
+        {
+          "id": "N029V/components",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/sliding_max",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        }
+      ],
+      "improved": 1,
+      "regressed": 0,
+      "ties": 3,
+      "two_sided_exact_sign_p": 1.0
+    },
+    "epoch03": {
+      "families": [
+        {
+          "id": "N029V/anagram_groups",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/chunks",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/components",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/sliding_max",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        }
+      ],
+      "improved": 0,
+      "regressed": 0,
+      "ties": 4,
+      "two_sided_exact_sign_p": 1.0
+    },
+    "epoch04": {
+      "families": [
+        {
+          "id": "N029V/anagram_groups",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/chunks",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/components",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        },
+        {
+          "id": "N029V/sliding_max",
+          "parent_completed_modes": 0,
+          "candidate_completed_modes": 0,
+          "difference": 0
+        }
+      ],
+      "improved": 0,
+      "regressed": 0,
+      "ties": 4,
+      "two_sided_exact_sign_p": 1.0
+    }
+  }
+}
