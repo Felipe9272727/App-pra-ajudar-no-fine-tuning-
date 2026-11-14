@@ -1,0 +1,9 @@
+{
+  "before_any_optimizer_updates": true,
+  "teacher_targets_and_gold_cases_changed": false,
+  "full_original_tool_context_retained": "/workspace/liquid-sense/native028/data/train_tools_full_context.json",
+  "full_context_sha256": "b8d175dae75a1ca44f5d7a50260517f180ea424bac301007b6118fdacb6162e0",
+  "original_long_context_backward_preflight_already_passed": true,
+  "reason": "Reduce activation memory by omitting runtime metadata and obsolete failed round from successful-final teaching; retain real error in the repair example and all raw observations.",
+  "replayed_model_or_teacher_collection": false
+}

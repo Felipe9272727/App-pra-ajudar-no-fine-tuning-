@@ -12,6 +12,13 @@ from spec026.io_parts import save_json, save_parts, load_parts, file_hash
 H=ROOT/'native028'
 
 
+def tensor_hash(value):
+    # Same bytes as the legacy audit, without allocating a whole-embedding
+    # Python bytes copy (~509MB). Buffer hashing is read-only.
+    array=value.detach().cpu().contiguous().view(torch.uint8).numpy()
+    return hashlib.sha256(memoryview(array)).hexdigest()
+
+
 def read(name): return json.loads((H/name).read_text())
 def save(name,value): save_json(H/name,value)
 def memory():
@@ -57,6 +64,7 @@ def install(model,rank=8):
         a=torch.cos(math.pi*k*j/n)*math.sqrt(2/n);a[0]/=math.sqrt(2)
         module.__class__=LowRankLinear
         module.lora_A=nn.Parameter(a.float());module.lora_B=nn.Parameter(torch.zeros(module.weight.shape[0],r))
+        module._lora_reference_denom=max(float(module.weight.double().norm()),math.sqrt(module.weight.numel())*read('config.json')['trust_rms_floor'])
         descriptors.append({'module':name,'physical':physical,'shape':list(module.weight.shape),'rank':r})
     for n,p in model.named_parameters():p.requires_grad_('.lora_' in n or n in names)
     assert descriptors
@@ -111,6 +119,13 @@ def clear_grad(opt,native):
     for p in native.values():p.grad=None
 
 
+def factor_norm(a,b):
+    # ||B A||_F^2 = trace((B^T B)(A A^T)); rank8 Gram matrices avoid
+    # materializing every dense projection during each optimizer step.
+    aa=a.double();bb=b.double()
+    return float(((bb.T@bb)*(aa@aa.T)).sum().clamp_min(0).sqrt())
+
+
 @torch.no_grad()
 def project(model,native,baseline,masters,export=False):
     cfg=read('config.json');events=[]
@@ -134,10 +149,11 @@ def project(model,native,baseline,masters,export=False):
         assert float((p.float()-base).double().norm())<=cap+1e-7,n
     for name,m in model.named_modules():
         if not isinstance(m,LowRankLinear):continue
-        den=max(float(m.weight.double().norm()),math.sqrt(m.weight.numel())*cfg['trust_rms_floor']);cap=cfg['factor_trust_relative']*den
-        delta=m.lora_B@m.lora_A;length=float(delta.double().norm())
-        if length>cap:m.lora_B.mul_(cap/length);delta=m.lora_B@m.lora_A
+        den=m._lora_reference_denom;cap=cfg['factor_trust_relative']*den
+        length=factor_norm(m.lora_A,m.lora_B)
+        if length>cap:m.lora_B.mul_(cap/length)
         if export:
+            delta=m.lora_B@m.lora_A
             base=m.weight.float();actual=float(((base+delta).to(m.weight.dtype).float()-base).double().norm())
             if actual>cap+1e-7:
                 lo=0.;hi=1.
@@ -166,7 +182,7 @@ def folded_hashes(model,before):
         if not isinstance(m,LowRankLinear):continue
         value=(m.weight.float()+m.lora_B@m.lora_A).to(m.weight.dtype)
         hashes[name+'.weight']=tensor_hash(value)
-        changes[name+'.weight']={'changed_values':int((value!=m.weight).count_nonzero()),'relative_l2':float((value.float()-m.weight.float()).double().norm())/max(float(m.weight.double().norm()),math.sqrt(m.weight.numel())*.01)}
+        changes[name+'.weight']={'changed_values':int((value!=m.weight).count_nonzero()),'relative_l2':float((value.float()-m.weight.float()).double().norm())/m._lora_reference_denom}
     assert set(hashes)==set(before)
     return hashes,changes
 

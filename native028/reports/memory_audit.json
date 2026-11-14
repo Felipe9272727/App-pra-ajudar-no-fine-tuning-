@@ -1,0 +1,12 @@
+{
+  "buffer_hash_conformance_checks": 12,
+  "hash_values_changed": false,
+  "whole_embedding_bytes_copy_avoided": true,
+  "no_old_model_or_build_file_removed": true,
+  "old_preflight_peak_rss_kb": 4954936,
+  "old_max_training_input": 532,
+  "new_max_training_input": 482,
+  "no_optimizer_updates_yet": true,
+  "rank_gram_norm_conformance_checks": 4,
+  "dense_projection_norm_allocation_avoided_per_step": true
+}
