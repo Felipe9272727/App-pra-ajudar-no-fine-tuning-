@@ -1,0 +1,28 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 10237.48it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794688048.2542183, "attempt": null, "pid": 3848}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL029 validation epoch01 False N029V/chunks 1 25
+EVAL029 validation epoch01 False N029V/anagram_groups 1 18
+EVAL029 validation epoch01 False N029V/sliding_max 2 38
+EVAL029 validation epoch01 False N029V/components 1 76
+EVAL029 validation epoch01 False N029G/0 True 4
+EVAL029 validation epoch01 False N029G/1 False 2
+EVAL029 validation epoch01 False N029G/2 True 2
+EVAL029 validation epoch01 False N029G/3 True 3
+EVAL029 validation epoch01 False N029G/4 True 4
+EVAL029 validation epoch01 False N029G/5 True 3
+EVAL029 validation epoch01 False N029G/6 True 2
+EVAL029 validation epoch01 False N029G/7 False 3
+EVAL029 validation epoch01 True N029V/chunks 1 47
+EVAL029 validation epoch01 True N029V/anagram_groups 1 36
+EVAL029 validation epoch01 True N029V/sliding_max 0 53
+EVAL029 validation epoch01 True N029V/components 1 105
+EVAL029 validation epoch01 True N029G/0 True 17
+EVAL029 validation epoch01 True N029G/1 False 17
+EVAL029 validation epoch01 True N029G/2 True 48
+EVAL029 validation epoch01 True N029G/3 True 18
