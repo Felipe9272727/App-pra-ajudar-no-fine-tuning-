@@ -48,7 +48,9 @@ def main():
         'validated_research_candidate':winner if promote else None,
         'general_parent_stays_selected':True,'research_candidate_passed_both_gates':promote,'no_existing_checkpoint_overwritten':True,
         'loop_replacement_descriptive':loop,'tools_successes_out_of2':tools,'exports':stages,
-        'apk_changed':False,'workers_active':False}
+        'apk_changed':False,'workers_active':False,
+        'technical_recovery':{'step':48,'completed_updates_repeated':0,'state_tensor_equality_checks':2581,
+            'actual_projection_bounds_checked':150,'source_revision':'native028/recovery/source_revision.json'}}
     save('summary.json',out)
     lines=['# Native028 — treino de pensamento produtivo no Liquid Sense principal','',
         'Piloto concluído; '+('candidato passou os dois gates independentes.' if promote else 'nenhum checkpoint promovido; o modelo geral anterior permanece selecionado.'),'',
@@ -76,6 +78,7 @@ def main():
     lines+=['','Resultados por caso, textos integrais, conclusão, repetição e tokens em `reports/validation_*.json`. '
         'As mesmas quatro tarefas aparecem em dois modos: não são oito problemas independentes. '
         'A amostra é pequena, sem evidência estatística de superioridade geral ou contra4B. '
+        'Este budget de192tokens não mede o modo Extenso do aplicativo, que admite milhares de tokens. '
         'Ganho em casos parciais, NLL ou tokens não substitui o gate de tarefas completas e preservação.','',
         '## Decisão','',json.dumps(selection['checks'],ensure_ascii=False,indent=2),'',
         ('O teste final novo foi aberto apenas para o vencedor congelado; resultado em `summary.json`.' if winner else

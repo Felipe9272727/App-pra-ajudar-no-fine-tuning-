@@ -21,7 +21,7 @@ def obtain(url,path,expected=None,expected_bytes=None):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--ref',required=True,help='Exact40hex repository commit containing the archives')
-    ap.add_argument('--stage',nargs='+',choices=['initial_factors','sft_epoch1','sft_final','policy_final'],default=[])
+    ap.add_argument('--stage',nargs='+',choices=['initial_factors','recovery_step48','sft_epoch1','sft_final','policy_final'],default=[])
     ap.add_argument('--tokenizer',action='store_true');args=ap.parse_args();assert re.fullmatch('[0-9a-f]{40}',args.ref)
     for stage in args.stage:
         folder=H/'checkpoints'/stage;url='https://raw.githubusercontent.com/'+REPO+'/'+args.ref+'/native028/checkpoints/'+stage+'/'
