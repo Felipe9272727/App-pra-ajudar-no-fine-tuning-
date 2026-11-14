@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "no_pretrained_model_loaded": true,
+  "no_optimizer_update_on_project_model": true,
+  "cases": [
+    {
+      "advantage": 1.0,
+      "ratio": 1.0,
+      "expected_clipped_zero_gradient": false,
+      "head_grad_norm": 2.148341417312622
+    },
+    {
+      "advantage": -1.0,
+      "ratio": 1.0,
+      "expected_clipped_zero_gradient": false,
+      "head_grad_norm": 2.148341417312622
+    },
+    {
+      "advantage": 1.0,
+      "ratio": 2.0,
+      "expected_clipped_zero_gradient": true,
+      "head_grad_norm": 0.0
+    },
+    {
+      "advantage": -1.0,
+      "ratio": 0.5,
+      "expected_clipped_zero_gradient": true,
+      "head_grad_norm": 0.0
+    }
+  ]
+}

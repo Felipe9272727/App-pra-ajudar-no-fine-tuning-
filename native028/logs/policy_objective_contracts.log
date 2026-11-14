@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/native028/test_policy_objective.py", line 4, in <module>
+    from policy import *
+  File "/workspace/liquid-sense/native028/policy.py", line 3, in <module>
+    from core import *
+  File "/workspace/liquid-sense/native028/core.py", line 6, in <module>
+    import train_runtime as tr
+  File "/workspace/liquid-sense/supervised015/train_runtime.py", line 11, in <module>
+    from runtime_helpers import load,e,torch,PARENT_HASH
+  File "/workspace/liquid-sense/reasoning/runtime_helpers.py", line 10, in <module>
+    import engine as e
+  File "/workspace/liquid-sense/rsi100/engine.py", line 11, in <module>
+    from policy import flatten,dominates,accept,accept_paired
+ImportError: cannot import name 'flatten' from partially initialized module 'policy' (most likely due to a circular import) (/workspace/liquid-sense/native028/policy.py)
