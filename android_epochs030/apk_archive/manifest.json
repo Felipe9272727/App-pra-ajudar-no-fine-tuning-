@@ -1,0 +1,45 @@
+{
+  "format": "exact-signed-apk-segments-v1",
+  "apk_name": "LiquidSense-0.5.0-epochs-preview.apk",
+  "bytes": 1969325396,
+  "sha256": "9a1a487230f7979f441002cc885501f5eb79d1f859e12474cb6b14c93b239cac",
+  "segments": [
+    {
+      "kind": "zlib",
+      "path": "prefix.zlib.bin",
+      "bytes": 15436016,
+      "sha256": "14a61cfa4e932b9d3d4a75e96a7f748dc31224124dc807f2ae86549e764747bb",
+      "compressed_bytes": 6198552,
+      "compressed_sha256": "c59ca242bb2dc19a6c322c1c6a46111b426bd59554f78f941a2029b30e97e985"
+    },
+    {
+      "kind": "patch",
+      "manifest": "android_epochs030/patch_archive/manifest.json",
+      "bytes": 352753958,
+      "sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310"
+    },
+    {
+      "kind": "zlib",
+      "path": "bridge.zlib.bin",
+      "bytes": 3662,
+      "sha256": "9cf5c947e1b2691c6e1ed947ab11e9cf2bfbc88f51ed9c90e7affd3990c98827",
+      "compressed_bytes": 2786,
+      "compressed_sha256": "13a20edaa189247dea92e2d16507e54289b19542c9361fb553b45b46e1ada409"
+    },
+    {
+      "kind": "parent_pack",
+      "manifest": "tooluse022/apk_archive/manifest.json",
+      "bytes": 1599290240,
+      "sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288"
+    },
+    {
+      "kind": "zlib",
+      "path": "suffix.zlib.bin",
+      "bytes": 1841520,
+      "sha256": "9895de3513c04432d402098cfe065bac609eea92da32d3ed756169bb744898a9",
+      "compressed_bytes": 1818028,
+      "compressed_sha256": "4e3824792ba917537cc4c63fe74d594a49d7f0c3dfe1b00db9a0d331f6ee76f2"
+    }
+  ],
+  "public_download": "https://gofile.io/d/7OFCC99z"
+}
