@@ -1,0 +1,2 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+ARCHIVE028_GEOMETRY_COMPLETE_NO_MODEL_GENERATION
