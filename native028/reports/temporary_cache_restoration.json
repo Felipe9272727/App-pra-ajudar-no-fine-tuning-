@@ -1,0 +1,10 @@
+{
+  "cache_restored": "/dev/shm/liquid-loop025/latest.pt.gz.bin",
+  "sha256": "b10ee50298448780e1932f3f7d126db8d37f45a8d5914ed05cd745f3fe3f456d",
+  "exact_previous_bytes_restored": true,
+  "source": "loop025/checkpoints/epoch03",
+  "not_a_new_training_checkpoint": true,
+  "all7367_build_entries_restored": true,
+  "build_tools_archive_retained": true,
+  "model_workers_closed": true
+}

@@ -1,0 +1,26 @@
+{
+  "original": {
+    "valid_actual_model_calls": 1,
+    "successful_executions_with_empty_stdout": 1,
+    "complete_tool_flows_passed": 0,
+    "parse_errors": 0
+  },
+  "parent": {
+    "valid_actual_model_calls": 1,
+    "successful_executions_with_empty_stdout": 1,
+    "complete_tool_flows_passed": 0,
+    "parse_errors": 0
+  },
+  "sft_final": {
+    "valid_actual_model_calls": 2,
+    "successful_executions_with_empty_stdout": 1,
+    "complete_tool_flows_passed": 0,
+    "parse_errors": 0
+  },
+  "policy_final": {
+    "valid_actual_model_calls": 2,
+    "successful_executions_with_empty_stdout": 1,
+    "complete_tool_flows_passed": 0,
+    "parse_errors": 0
+  }
+}

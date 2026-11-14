@@ -1,0 +1,78 @@
+{
+  "scope": "post-hoc description, never used to change judges, weights or selection",
+  "warning": "192-token thinking budget tests short-budget delivery; not app Extenso or full long reasoning. A completed answer versus unfinished thought is a usability gain, not proof of stronger latent reasoning.",
+  "variants": {
+    "original": {
+      "failure_categories": {
+        "False": {
+          "passed_all_cases": 1,
+          "generation_limit_after_thinking_closure": 1,
+          "TypeError": 1,
+          "WrongReturnValue": 1
+        },
+        "True": {
+          "unfinished_thinking": 4
+        }
+      },
+      "completed_task_gains_vs_parent": [
+        {
+          "id": "N028V/transpose",
+          "thinking": false,
+          "parent_failure_mode": "WrongReturnValue",
+          "parent_tokens": 85,
+          "candidate_tokens": 87
+        }
+      ],
+      "completed_task_losses_vs_parent": []
+    },
+    "parent": {
+      "failure_categories": {
+        "False": {
+          "WrongReturnValue": 2,
+          "generation_limit_after_thinking_closure": 1,
+          "TypeError": 1
+        },
+        "True": {
+          "unfinished_thinking": 4
+        }
+      },
+      "completed_task_gains_vs_parent": [],
+      "completed_task_losses_vs_parent": []
+    },
+    "sft_final": {
+      "failure_categories": {
+        "False": {
+          "WrongReturnValue": 2,
+          "TypeError": 2
+        },
+        "True": {
+          "WrongReturnValue": 2,
+          "TypeError": 2
+        }
+      },
+      "completed_task_gains_vs_parent": [],
+      "completed_task_losses_vs_parent": []
+    },
+    "policy_final": {
+      "failure_categories": {
+        "False": {
+          "WrongReturnValue": 2,
+          "TypeError": 2
+        },
+        "True": {
+          "WrongReturnValue": 2,
+          "TypeError": 2
+        }
+      },
+      "completed_task_gains_vs_parent": [],
+      "completed_task_losses_vs_parent": []
+    }
+  },
+  "policy_replay_numerics": {
+    "scored_tokens": 1210,
+    "mean_abs_logp_mismatch_weighted": 0.011459359348643849,
+    "max_abs_logp_mismatch": 0.2835202217102051,
+    "clipped_fraction_weighted": 0.0024793388645264727,
+    "note": "cached additive behavior vs uncached BF16 full-prefix replay; numerical discrepancy is measured, not absent"
+  }
+}

@@ -1,0 +1,1856 @@
+{
+  "scope": "post-hoc parameter changes; not isolated thinking weights or proof of useful routing",
+  "stages": {
+    "sft_epoch1": {
+      "native_groups": {
+        "visit_gains": {
+          "tensors": 24,
+          "values": 48,
+          "changed_tensors": 24,
+          "changed_values": 48,
+          "max_relative_L2_with_floor": 0.0005542375701523105
+        },
+        "temporal_decay": {
+          "tensors": 36,
+          "values": 576,
+          "changed_tensors": 15,
+          "changed_values": 18,
+          "max_relative_L2_with_floor": 0.00010661084532402939
+        },
+        "temporal_convolution": {
+          "tensors": 18,
+          "values": 774144,
+          "changed_tensors": 18,
+          "changed_values": 682000,
+          "max_relative_L2_with_floor": 0.0049999989445757235
+        },
+        "normalization": {
+          "tensors": 66,
+          "values": 51456,
+          "changed_tensors": 46,
+          "changed_values": 6187,
+          "max_relative_L2_with_floor": 0.0023079323941543094
+        },
+        "temporal_input_gates": {
+          "tensors": 36,
+          "values": 589824,
+          "changed_tensors": 36,
+          "changed_values": 410077,
+          "max_relative_L2_with_floor": 0.004999996575787997
+        },
+        "mHC": {
+          "tensors": 96,
+          "values": 786816,
+          "changed_tensors": 96,
+          "changed_values": 786814,
+          "max_relative_L2_with_floor": 0.0050000001463492046
+        }
+      },
+      "visit_gain_values": {
+        "model.language_model.layers.4.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9502614140510559,
+            0.04973858222365379
+          ]
+        },
+        "model.language_model.layers.5.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9502462148666382,
+            0.04975379258394241
+          ]
+        },
+        "model.language_model.layers.6.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499527812004089,
+            0.050047218799591064
+          ]
+        },
+        "model.language_model.layers.7.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9497695565223694,
+            0.05023045092821121
+          ]
+        },
+        "model.language_model.layers.8.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499437212944031,
+            0.05005626752972603
+          ]
+        },
+        "model.language_model.layers.9.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501640796661377,
+            0.04983591288328171
+          ]
+        },
+        "model.language_model.layers.10.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.949870228767395,
+            0.05012977868318558
+          ]
+        },
+        "model.language_model.layers.11.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9497814178466797,
+            0.050218578428030014
+          ]
+        },
+        "model.language_model.layers.12.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501872062683105,
+            0.049812786281108856
+          ]
+        },
+        "model.language_model.layers.13.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499775171279907,
+            0.050022490322589874
+          ]
+        },
+        "model.language_model.layers.14.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9502342343330383,
+            0.04976576566696167
+          ]
+        },
+        "model.language_model.layers.15.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.949897050857544,
+            0.050102949142456055
+          ]
+        },
+        "model.language_model.layers.16.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.950353741645813,
+            0.04964625462889671
+          ]
+        },
+        "model.language_model.layers.17.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9502995610237122,
+            0.049700431525707245
+          ]
+        },
+        "model.language_model.layers.18.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.949627161026001,
+            0.05037282407283783
+          ]
+        },
+        "model.language_model.layers.19.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501047134399414,
+            0.049895279109478
+          ]
+        },
+        "model.language_model.layers.20.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499555826187134,
+            0.05004441738128662
+          ]
+        },
+        "model.language_model.layers.21.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.949943482875824,
+            0.050056520849466324
+          ]
+        },
+        "model.language_model.layers.22.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498879909515381,
+            0.050112005323171616
+          ]
+        },
+        "model.language_model.layers.23.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499893188476562,
+            0.05001067370176315
+          ]
+        },
+        "model.language_model.layers.24.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.949876070022583,
+            0.0501239150762558
+          ]
+        },
+        "model.language_model.layers.25.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9503017663955688,
+            0.04969821497797966
+          ]
+        },
+        "model.language_model.layers.26.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498586654663086,
+            0.05014131963253021
+          ]
+        },
+        "model.language_model.layers.27.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499090313911438,
+            0.050090961158275604
+          ]
+        }
+      },
+      "mHC_input_matrices": [
+        {
+          "name": "model.language_model.layers.4.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399997044354677
+        },
+        {
+          "name": "model.language_model.layers.4.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.5.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.5.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.6.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.6.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400001235306263
+        },
+        {
+          "name": "model.language_model.layers.7.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.7.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.8.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.8.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.9.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.9.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.10.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.10.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.11.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.11.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.12.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.12.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.13.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.13.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.14.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400001235306263
+        },
+        {
+          "name": "model.language_model.layers.14.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.15.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.15.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.16.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.16.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.17.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400001235306263
+        },
+        {
+          "name": "model.language_model.layers.17.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.18.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.18.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.19.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.19.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399997975677252
+        },
+        {
+          "name": "model.language_model.layers.20.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.20.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.21.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.21.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.22.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.22.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.23.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.0063999975100159645
+        },
+        {
+          "name": "model.language_model.layers.23.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.24.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.24.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.25.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.25.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.26.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400001235306263
+        },
+        {
+          "name": "model.language_model.layers.26.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.27.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.27.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        }
+      ],
+      "formerly_neutral_exit_matrices": [
+        {
+          "name": "model.language_model.layers.8.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.008516855094223102
+        },
+        {
+          "name": "model.language_model.layers.8.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.006546678386482246
+        },
+        {
+          "name": "model.language_model.layers.9.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.008553849016286657
+        },
+        {
+          "name": "model.language_model.layers.9.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.006538071808267425
+        },
+        {
+          "name": "model.language_model.layers.10.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.008797425956458433
+        },
+        {
+          "name": "model.language_model.layers.10.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.006383262145446587
+        },
+        {
+          "name": "model.language_model.layers.11.self_attn.o_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.007988299140106365
+        },
+        {
+          "name": "model.language_model.layers.11.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.0065062568608116374
+        },
+        {
+          "name": "model.language_model.layers.20.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009098440723321648
+        },
+        {
+          "name": "model.language_model.layers.20.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.006696529280201172
+        },
+        {
+          "name": "model.language_model.layers.21.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.00902558127090028
+        },
+        {
+          "name": "model.language_model.layers.21.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.006541274102737816
+        },
+        {
+          "name": "model.language_model.layers.22.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.008956693296920617
+        },
+        {
+          "name": "model.language_model.layers.22.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007034029658938108
+        },
+        {
+          "name": "model.language_model.layers.23.self_attn.o_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.008797338156203463
+        },
+        {
+          "name": "model.language_model.layers.23.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.006746831378613246
+        }
+      ],
+      "formerly_neutral_exits_changed": 16,
+      "folded_projection_values_changed": 378555905,
+      "extra_deployed_factor_parameters": 0,
+      "native_loaded_parameters": 1020252592,
+      "checkpoint_sha256": "80d4cb6a2d4b7d638cbea0e3ae58bd56bb65834c6395e176d998398aeecc9157"
+    },
+    "sft_final": {
+      "native_groups": {
+        "visit_gains": {
+          "tensors": 24,
+          "values": 48,
+          "changed_tensors": 24,
+          "changed_values": 48,
+          "max_relative_L2_with_floor": 0.0007769083890533599
+        },
+        "temporal_decay": {
+          "tensors": 36,
+          "values": 576,
+          "changed_tensors": 20,
+          "changed_values": 25,
+          "max_relative_L2_with_floor": 0.00017221611144124698
+        },
+        "temporal_convolution": {
+          "tensors": 18,
+          "values": 774144,
+          "changed_tensors": 18,
+          "changed_values": 684497,
+          "max_relative_L2_with_floor": 0.004999999853863035
+        },
+        "normalization": {
+          "tensors": 66,
+          "values": 51456,
+          "changed_tensors": 47,
+          "changed_values": 7493,
+          "max_relative_L2_with_floor": 0.0025284201248127135
+        },
+        "temporal_input_gates": {
+          "tensors": 36,
+          "values": 589824,
+          "changed_tensors": 36,
+          "changed_values": 409035,
+          "max_relative_L2_with_floor": 0.004999996135453282
+        },
+        "mHC": {
+          "tensors": 96,
+          "values": 786816,
+          "changed_tensors": 96,
+          "changed_values": 786814,
+          "max_relative_L2_with_floor": 0.005000000144117827
+        }
+      },
+      "visit_gain_values": {
+        "model.language_model.layers.4.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9503133893013,
+            0.04968659579753876
+          ]
+        },
+        "model.language_model.layers.5.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501891732215881,
+            0.04981081932783127
+          ]
+        },
+        "model.language_model.layers.6.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9500306248664856,
+            0.0499693788588047
+          ]
+        },
+        "model.language_model.layers.7.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.949724555015564,
+            0.05027543008327484
+          ]
+        },
+        "model.language_model.layers.8.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498608708381653,
+            0.05013911426067352
+          ]
+        },
+        "model.language_model.layers.9.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501616954803467,
+            0.04983829706907272
+          ]
+        },
+        "model.language_model.layers.10.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499674439430237,
+            0.050032537430524826
+          ]
+        },
+        "model.language_model.layers.11.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498133659362793,
+            0.05018661916255951
+          ]
+        },
+        "model.language_model.layers.12.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9504178166389465,
+            0.04958216845989227
+          ]
+        },
+        "model.language_model.layers.13.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501016736030579,
+            0.049898311495780945
+          ]
+        },
+        "model.language_model.layers.14.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9504274129867554,
+            0.04957257956266403
+          ]
+        },
+        "model.language_model.layers.15.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501546621322632,
+            0.049845337867736816
+          ]
+        },
+        "model.language_model.layers.16.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9505226016044617,
+            0.04947739094495773
+          ]
+        },
+        "model.language_model.layers.17.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9503143429756165,
+            0.04968564212322235
+          ]
+        },
+        "model.language_model.layers.18.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9497710466384888,
+            0.050228945910930634
+          ]
+        },
+        "model.language_model.layers.19.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9500798583030701,
+            0.049920134246349335
+          ]
+        },
+        "model.language_model.layers.20.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9500432014465332,
+            0.0499567985534668
+          ]
+        },
+        "model.language_model.layers.21.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499959945678711,
+            0.05000399798154831
+          ]
+        },
+        "model.language_model.layers.22.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498805999755859,
+            0.05011938512325287
+          ]
+        },
+        "model.language_model.layers.23.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9500142335891724,
+            0.04998575896024704
+          ]
+        },
+        "model.language_model.layers.24.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499785304069519,
+            0.050021469593048096
+          ]
+        },
+        "model.language_model.layers.25.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9503534436225891,
+            0.04964655637741089
+          ]
+        },
+        "model.language_model.layers.26.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498947858810425,
+            0.05010521411895752
+          ]
+        },
+        "model.language_model.layers.27.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498317241668701,
+            0.050168268382549286
+          ]
+        }
+      },
+      "mHC_input_matrices": [
+        {
+          "name": "model.language_model.layers.4.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.4.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.5.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399997975677252
+        },
+        {
+          "name": "model.language_model.layers.5.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.6.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.6.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.7.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.7.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.8.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.8.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.9.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.00640000170096755
+        },
+        {
+          "name": "model.language_model.layers.9.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399997975677252
+        },
+        {
+          "name": "model.language_model.layers.10.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.10.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.11.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.11.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.12.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.12.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.13.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.13.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.14.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.14.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.15.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.15.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.16.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.16.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.17.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.17.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.18.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.18.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400001235306263
+        },
+        {
+          "name": "model.language_model.layers.19.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.19.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.20.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.20.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.21.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.21.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.22.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.22.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.23.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.23.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.0063999975100159645
+        },
+        {
+          "name": "model.language_model.layers.24.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.24.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.00640000170096755
+        },
+        {
+          "name": "model.language_model.layers.25.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.25.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.26.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.26.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.0063999975100159645
+        },
+        {
+          "name": "model.language_model.layers.27.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.27.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        }
+      ],
+      "formerly_neutral_exit_matrices": [
+        {
+          "name": "model.language_model.layers.8.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009541692087847702
+        },
+        {
+          "name": "model.language_model.layers.8.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007302445253172633
+        },
+        {
+          "name": "model.language_model.layers.9.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009509043188419154
+        },
+        {
+          "name": "model.language_model.layers.9.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007353593545135409
+        },
+        {
+          "name": "model.language_model.layers.10.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009718770855562817
+        },
+        {
+          "name": "model.language_model.layers.10.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007294720130245696
+        },
+        {
+          "name": "model.language_model.layers.11.self_attn.o_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.008884959937633411
+        },
+        {
+          "name": "model.language_model.layers.11.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007383036299564829
+        },
+        {
+          "name": "model.language_model.layers.20.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009999979343310265
+        },
+        {
+          "name": "model.language_model.layers.20.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007681802219686456
+        },
+        {
+          "name": "model.language_model.layers.21.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009999949514048425
+        },
+        {
+          "name": "model.language_model.layers.21.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.0074927864495105715
+        },
+        {
+          "name": "model.language_model.layers.22.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009999985477414649
+        },
+        {
+          "name": "model.language_model.layers.22.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007847281078903413
+        },
+        {
+          "name": "model.language_model.layers.23.self_attn.o_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009850162718001135
+        },
+        {
+          "name": "model.language_model.layers.23.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007696458046981649
+        }
+      ],
+      "formerly_neutral_exits_changed": 16,
+      "folded_projection_values_changed": 389230927,
+      "extra_deployed_factor_parameters": 0,
+      "native_loaded_parameters": 1020252592,
+      "checkpoint_sha256": "0270ea8d23a89949516af502b63f62d00530c32d8d609ca6766e95ff72d60392"
+    },
+    "policy_final": {
+      "native_groups": {
+        "visit_gains": {
+          "tensors": 24,
+          "values": 48,
+          "changed_tensors": 24,
+          "changed_values": 48,
+          "max_relative_L2_with_floor": 0.0007443977184967451
+        },
+        "temporal_decay": {
+          "tensors": 36,
+          "values": 576,
+          "changed_tensors": 20,
+          "changed_values": 25,
+          "max_relative_L2_with_floor": 0.00017221611144124698
+        },
+        "temporal_convolution": {
+          "tensors": 18,
+          "values": 774144,
+          "changed_tensors": 18,
+          "changed_values": 684603,
+          "max_relative_L2_with_floor": 0.004999999888065528
+        },
+        "normalization": {
+          "tensors": 66,
+          "values": 51456,
+          "changed_tensors": 46,
+          "changed_values": 7492,
+          "max_relative_L2_with_floor": 0.002538345193694185
+        },
+        "temporal_input_gates": {
+          "tensors": 36,
+          "values": 589824,
+          "changed_tensors": 36,
+          "changed_values": 408747,
+          "max_relative_L2_with_floor": 0.004999999849520958
+        },
+        "mHC": {
+          "tensors": 96,
+          "values": 786816,
+          "changed_tensors": 96,
+          "changed_values": 786814,
+          "max_relative_L2_with_floor": 0.005000000144730942
+        }
+      },
+      "visit_gain_values": {
+        "model.language_model.layers.4.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.950312614440918,
+            0.04968739300966263
+          ]
+        },
+        "model.language_model.layers.5.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501931071281433,
+            0.049806877970695496
+          ]
+        },
+        "model.language_model.layers.6.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9500337839126587,
+            0.04996621608734131
+          ]
+        },
+        "model.language_model.layers.7.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9497261047363281,
+            0.05027390271425247
+          ]
+        },
+        "model.language_model.layers.8.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.949847936630249,
+            0.05015205591917038
+          ]
+        },
+        "model.language_model.layers.9.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501680135726929,
+            0.049831993877887726
+          ]
+        },
+        "model.language_model.layers.10.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499550461769104,
+            0.050044938921928406
+          ]
+        },
+        "model.language_model.layers.11.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498009085655212,
+            0.05019909888505936
+          ]
+        },
+        "model.language_model.layers.12.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9503968358039856,
+            0.04960314929485321
+          ]
+        },
+        "model.language_model.layers.13.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501234889030457,
+            0.049876511096954346
+          ]
+        },
+        "model.language_model.layers.14.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9504082202911377,
+            0.049591779708862305
+          ]
+        },
+        "model.language_model.layers.15.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9501497149467468,
+            0.04985029250383377
+          ]
+        },
+        "model.language_model.layers.16.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9505007266998291,
+            0.049499254673719406
+          ]
+        },
+        "model.language_model.layers.17.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9503162503242493,
+            0.04968373477458954
+          ]
+        },
+        "model.language_model.layers.18.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9497935771942139,
+            0.050206415355205536
+          ]
+        },
+        "model.language_model.layers.19.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9500614404678345,
+            0.04993854835629463
+          ]
+        },
+        "model.language_model.layers.20.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9500300884246826,
+            0.04996991157531738
+          ]
+        },
+        "model.language_model.layers.21.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499867558479309,
+            0.0500132255256176
+          ]
+        },
+        "model.language_model.layers.22.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498754739761353,
+            0.05012451112270355
+          ]
+        },
+        "model.language_model.layers.23.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9500107169151306,
+            0.049989260733127594
+          ]
+        },
+        "model.language_model.layers.24.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499794840812683,
+            0.05002051964402199
+          ]
+        },
+        "model.language_model.layers.25.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9503630995750427,
+            0.04963688552379608
+          ]
+        },
+        "model.language_model.layers.26.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9499032497406006,
+            0.05009673535823822
+          ]
+        },
+        "model.language_model.layers.27.native_visit_gain": {
+          "parent": [
+            0.949999988079071,
+            0.05000000074505806
+          ],
+          "candidate": [
+            0.9498351812362671,
+            0.05016481131315231
+          ]
+        }
+      },
+      "mHC_input_matrices": [
+        {
+          "name": "model.language_model.layers.4.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.4.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.5.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.5.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.6.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.6.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.7.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.7.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400002166628838
+        },
+        {
+          "name": "model.language_model.layers.8.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.8.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.9.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.9.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.10.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.10.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.11.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.11.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.12.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.12.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.13.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.13.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.14.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.14.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.15.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.15.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        },
+        {
+          "name": "model.language_model.layers.16.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.0063999975100159645
+        },
+        {
+          "name": "model.language_model.layers.16.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.17.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400001235306263
+        },
+        {
+          "name": "model.language_model.layers.17.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.18.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.18.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.19.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.19.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999838322401
+        },
+        {
+          "name": "model.language_model.layers.20.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.20.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399997975677252
+        },
+        {
+          "name": "model.language_model.layers.21.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.21.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.22.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000303983688
+        },
+        {
+          "name": "model.language_model.layers.22.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.23.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.00639999657869339
+        },
+        {
+          "name": "model.language_model.layers.23.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.24.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.24.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.25.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.25.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399999372661114
+        },
+        {
+          "name": "model.language_model.layers.26.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006400000769644976
+        },
+        {
+          "name": "model.language_model.layers.26.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998441338539
+        },
+        {
+          "name": "model.language_model.layers.27.mhc_attn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.00640000170096755
+        },
+        {
+          "name": "model.language_model.layers.27.mhc_ffn.weight",
+          "parent_norm": 0.0,
+          "candidate_norm": 0.006399998906999826
+        }
+      ],
+      "formerly_neutral_exit_matrices": [
+        {
+          "name": "model.language_model.layers.8.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009538015580911996
+        },
+        {
+          "name": "model.language_model.layers.8.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007307266630529949
+        },
+        {
+          "name": "model.language_model.layers.9.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009516859061425473
+        },
+        {
+          "name": "model.language_model.layers.9.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007354525072072616
+        },
+        {
+          "name": "model.language_model.layers.10.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009733817217766472
+        },
+        {
+          "name": "model.language_model.layers.10.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007302371933195405
+        },
+        {
+          "name": "model.language_model.layers.11.self_attn.o_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.008885672631426634
+        },
+        {
+          "name": "model.language_model.layers.11.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007385749508117973
+        },
+        {
+          "name": "model.language_model.layers.20.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009999983395146466
+        },
+        {
+          "name": "model.language_model.layers.20.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007685696490945989
+        },
+        {
+          "name": "model.language_model.layers.21.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009990878783688494
+        },
+        {
+          "name": "model.language_model.layers.21.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007492544844430543
+        },
+        {
+          "name": "model.language_model.layers.22.linear_attn.out_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009994186712551117
+        },
+        {
+          "name": "model.language_model.layers.22.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.00783723135164061
+        },
+        {
+          "name": "model.language_model.layers.23.self_attn.o_proj.weight",
+          "changed_values": 2097152,
+          "relative_l2": 0.009841507819210869
+        },
+        {
+          "name": "model.language_model.layers.23.mlp.down_proj.weight",
+          "changed_values": 3670016,
+          "relative_l2": 0.007696498652749251
+        }
+      ],
+      "formerly_neutral_exits_changed": 16,
+      "folded_projection_values_changed": 389225577,
+      "extra_deployed_factor_parameters": 0,
+      "native_loaded_parameters": 1020252592,
+      "checkpoint_sha256": "4dd01538d014b6c8b8917014f67e3f4d41944e0134d9bb2915771534a628941a"
+    }
+  }
+}
