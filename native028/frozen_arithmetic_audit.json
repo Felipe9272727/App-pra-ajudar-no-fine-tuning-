@@ -1,0 +1,15 @@
+{
+  "native028/diagnose_merge.py": "83e9d2ab47cbde8b1a1db9e995b10e449045e55eeb5a4875d06a2d704297d66e",
+  "native028/run_audit_clean.py": "25e757abfe9e512c7dcfe7294788208a139e7fc19b68d4b449b609b60b9a403d",
+  "native028/ARITHMETIC_AUDIT.md": "39b8fad07433c371c484a993d1979b0d6646ca8ed0bf58108fe851d968678d36",
+  "native028/core.py": "0acf8c2d70c0fe8c52b7c56277e1660d0b36296191987fc9857aabf41434a239",
+  "native028/inference.py": "93c79813a74012be4b7f4b761d8c263f4e1445627ada536a77276d5d63e74a93",
+  "native028/config.json": "785147a587666d9110d23bdd162b5bcc6a0d9cf30f117c5d53a4f5317d30a6cf",
+  "native028/recovery/source_revision.json": "d960104ef19b94cceac1a7d535c4d9c4cd6fe4cda8f751cec1b08633a0467702",
+  "native028/data/validation_code.json": "6683ba6981ef724d3ba49242695b0cd50718243a0d692ba287860e887bda6e1c",
+  "native028/reports/validation_sft_final.json": "30244dd07052a9c4931a35b0c4c20ede0b859741a7a81b99b973e5e6827e4739",
+  "native028/reports/validation_policy_final.json": "b07f6ebb63f83545795a85cb1e623a526a5fda3fc6b61dcb4169c389cab87811",
+  "native028/checkpoints/sft_final/manifest.json": "d561fc31f96ab115a3d1620a0c1934560fc4e60382e895193f7d4c78f0bb2ce3",
+  "native028/checkpoints/policy_final/manifest.json": "ba2c503a88fbc0035337aa9b343da3f9939b7c570e58b96c3dd9341a0b8bbfc1",
+  "native028/selection.json": "3b5a9bf6b1a513ca3a7a5783729e4688855dd988302116d6a4595beef57307c6"
+}

@@ -1,0 +1,252 @@
+{
+  "selected": null,
+  "checks": {
+    "sft_final": {
+      "eligible": false,
+      "completed_code_task_gain": 0,
+      "lost_parent_correct_cases_or_controls": [
+        [
+          "code",
+          "N028V/transpose",
+          false,
+          1
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          false,
+          1
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          false,
+          2
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          false,
+          3
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          false,
+          5
+        ],
+        [
+          "general",
+          "N028VG/3",
+          false
+        ],
+        [
+          "general",
+          "N028VG/7",
+          false
+        ]
+      ],
+      "gained_code_cases": [
+        [
+          "code",
+          "N028V/transpose",
+          true,
+          0
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          true,
+          0
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          true,
+          1
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          true,
+          4
+        ]
+      ],
+      "no_mode_task_loss": true
+    },
+    "policy_final": {
+      "eligible": false,
+      "completed_code_task_gain": 0,
+      "lost_parent_correct_cases_or_controls": [
+        [
+          "code",
+          "N028V/transpose",
+          false,
+          1
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          false,
+          2
+        ],
+        [
+          "general",
+          "N028VG/3",
+          false
+        ],
+        [
+          "general",
+          "N028VG/7",
+          false
+        ]
+      ],
+      "gained_code_cases": [
+        [
+          "code",
+          "N028V/zero_sum",
+          false,
+          4
+        ],
+        [
+          "code",
+          "N028V/transpose",
+          true,
+          0
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          true,
+          0
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          true,
+          1
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          true,
+          3
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          true,
+          4
+        ],
+        [
+          "code",
+          "N028V/zero_sum",
+          true,
+          5
+        ]
+      ],
+      "no_mode_task_loss": true
+    }
+  },
+  "final_gate_open": false,
+  "selected_parent_unchanged": true,
+  "promotion_pending_fresh_final": false,
+  "all_summaries": {
+    "original": {
+      "False": {
+        "code_tasks": 1,
+        "code_total": 4,
+        "cases": 6,
+        "case_total": 20,
+        "general_correct": 4,
+        "general_total": 8,
+        "tokens": 446,
+        "unfinished_thinking": 0,
+        "truncated": 1
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 0,
+        "case_total": 20,
+        "general_correct": 0,
+        "general_total": 4,
+        "tokens": 1536,
+        "unfinished_thinking": 8,
+        "truncated": 8
+      }
+    },
+    "parent": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 7,
+        "case_total": 20,
+        "general_correct": 5,
+        "general_total": 8,
+        "tokens": 453,
+        "unfinished_thinking": 0,
+        "truncated": 1
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 0,
+        "case_total": 20,
+        "general_correct": 0,
+        "general_total": 4,
+        "tokens": 1536,
+        "unfinished_thinking": 8,
+        "truncated": 8
+      }
+    },
+    "sft_final": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 2,
+        "case_total": 20,
+        "general_correct": 5,
+        "general_total": 8,
+        "tokens": 160,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 4,
+        "case_total": 20,
+        "general_correct": 3,
+        "general_total": 4,
+        "tokens": 279,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      }
+    },
+    "policy_final": {
+      "False": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 6,
+        "case_total": 20,
+        "general_correct": 5,
+        "general_total": 8,
+        "tokens": 145,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      },
+      "True": {
+        "code_tasks": 0,
+        "code_total": 4,
+        "cases": 6,
+        "case_total": 20,
+        "general_correct": 2,
+        "general_total": 4,
+        "tokens": 254,
+        "unfinished_thinking": 0,
+        "truncated": 0
+      }
+    }
+  }
+}
