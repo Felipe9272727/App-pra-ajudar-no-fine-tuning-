@@ -1,0 +1,21 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "run_python",
+      "description": "Execute bounded Python3 calculations with print, math and json; no files, processes or network. Inspect stdout before answering.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+]

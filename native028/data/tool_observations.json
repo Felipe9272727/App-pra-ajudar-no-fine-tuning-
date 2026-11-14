@@ -1,0 +1,24 @@
+{
+  "sum_cubes": {
+    "tool": "run_python",
+    "ok": true,
+    "stdout": "2025\n",
+    "runtime": "CPython3 restricted Linux subprocess",
+    "filesystem": false,
+    "network": false
+  },
+  "failed": {
+    "tool": "run_python",
+    "ok": false,
+    "stdout": "",
+    "error": "ZeroDivisionError: division by zero"
+  },
+  "repair": {
+    "tool": "run_python",
+    "ok": true,
+    "stdout": "5.0\n",
+    "runtime": "CPython3 restricted Linux subprocess",
+    "filesystem": false,
+    "network": false
+  }
+}

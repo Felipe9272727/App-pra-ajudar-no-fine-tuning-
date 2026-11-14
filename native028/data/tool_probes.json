@@ -1,0 +1,13 @@
+[
+  {
+    "id": "N028UT/0",
+    "prompt": "Use run_python to compute 53 times 27. Then reply only with the result.",
+    "expected": "1431"
+  },
+  {
+    "id": "N028UT/1",
+    "prompt": "Use run_python to compute the average of [5,7,9]. Fix the previous failed call and reply only with the result.",
+    "expected": "7",
+    "prior_failed_call": "print((5+7)/0)"
+  }
+]

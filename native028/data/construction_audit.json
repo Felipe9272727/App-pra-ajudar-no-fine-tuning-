@@ -1,0 +1,18 @@
+{
+  "train_code": 32,
+  "train_general": 12,
+  "train_tools": 4,
+  "paired_views": 96,
+  "anchors": 12,
+  "validation_code": 4,
+  "validation_cases": 20,
+  "sealed_final_code": 4,
+  "sealed_final_cases": 19,
+  "references_all_passed": true,
+  "None_mutants_rejected": true,
+  "tool_observations_real_restricted_execution": true,
+  "exact_prompt_overlap": false,
+  "algorithm_label_overlap_train_to_validation_final": false,
+  "pretraining_or_ordinary_skill_overlap_not_ruled_out": true,
+  "no_model_outputs_used_to_author_or_select_tests": true
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "N028U/call",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Use run_python for requested calculations. Inspect real tool output before reporting a result. Do not invent executions."
+      },
+      {
+        "role": "user",
+        "content": "Use Python to sum the cubes of integers from 1 through 9, check the result, then answer only the number."
+      }
+    ],
+    "solution": "<tool_call>\n<function=run_python>\n<parameter=code>\nn=9\ns=sum(i*i*i for i in range(1,n+1))\nassert s==(n*(n+1)//2)**2\nprint(s)\n</parameter>\n</function>\n</tool_call>",
+    "plan": "Call Python and verify the sum before giving a numeric answer.",
+    "schemas": [
+      {
+        "type": "function",
+        "function": {
+          "name": "run_python",
+          "description": "Execute bounded Python3 calculations with print, math and json; no files, processes or network. Inspect stdout before answering.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "N028U/final",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Use run_python for requested calculations. Inspect real tool output before reporting a result. Do not invent executions."
+      },
+      {
+        "role": "user",
+        "content": "Use Python to sum the cubes of integers from 1 through 9, check the result, then answer only the number."
+      },
+      {
+        "role": "assistant",
+        "content": "<tool_call>\n<function=run_python>\n<parameter=code>\nn=9\ns=sum(i*i*i for i in range(1,n+1))\nassert s==(n*(n+1)//2)**2\nprint(s)\n</parameter>\n</function>\n</tool_call>"
+      },
+      {
+        "role": "tool",
+        "content": "{\"tool\": \"run_python\", \"ok\": true, \"stdout\": \"2025\\n\", \"runtime\": \"CPython3 restricted Linux subprocess\", \"filesystem\": false, \"network\": false}"
+      }
+    ],
+    "solution": "2025",
+    "plan": "The execution and its assertion succeeded; report the observed number.",
+    "schemas": [
+      {
+        "type": "function",
+        "function": {
+          "name": "run_python",
+          "description": "Execute bounded Python3 calculations with print, math and json; no files, processes or network. Inspect stdout before answering.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "N028U/repair",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Use run_python for requested calculations. Inspect real tool output before reporting a result. Do not invent executions."
+      },
+      {
+        "role": "user",
+        "content": "Use Python to calculate the average of [2,4,9]. Correct any failed execution and answer only the number."
+      },
+      {
+        "role": "assistant",
+        "content": "<tool_call>\n<function=run_python>\n<parameter=code>\nprint(1/0)\n</parameter>\n</function>\n</tool_call>"
+      },
+      {
+        "role": "tool",
+        "content": "{\"tool\": \"run_python\", \"ok\": false, \"stdout\": \"\", \"error\": \"ZeroDivisionError: division by zero\"}"
+      }
+    ],
+    "solution": "<tool_call>\n<function=run_python>\n<parameter=code>\nxs=[2,4,9]\nprint(sum(xs)/len(xs))\n</parameter>\n</function>\n</tool_call>",
+    "plan": "The previous code divided by zero and did not compute the requested average. Recompute from the nonempty input list.",
+    "schemas": [
+      {
+        "type": "function",
+        "function": {
+          "name": "run_python",
+          "description": "Execute bounded Python3 calculations with print, math and json; no files, processes or network. Inspect stdout before answering.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "N028U/repaired_final",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Use run_python for requested calculations. Inspect real tool output before reporting a result. Do not invent executions."
+      },
+      {
+        "role": "user",
+        "content": "Use Python to calculate the average of [2,4,9]. Correct any failed execution and answer only the number."
+      },
+      {
+        "role": "assistant",
+        "content": "<tool_call>\n<function=run_python>\n<parameter=code>\nprint(1/0)\n</parameter>\n</function>\n</tool_call>"
+      },
+      {
+        "role": "tool",
+        "content": "{\"tool\": \"run_python\", \"ok\": false, \"stdout\": \"\", \"error\": \"ZeroDivisionError: division by zero\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "<tool_call>\n<function=run_python>\n<parameter=code>\nxs=[2,4,9]\nprint(sum(xs)/len(xs))\n</parameter>\n</function>\n</tool_call>"
+      },
+      {
+        "role": "tool",
+        "content": "{\"tool\": \"run_python\", \"ok\": true, \"stdout\": \"5.0\\n\", \"runtime\": \"CPython3 restricted Linux subprocess\", \"filesystem\": false, \"network\": false}"
+      }
+    ],
+    "solution": "5.0",
+    "plan": "The corrected execution succeeded; use its observed output.",
+    "schemas": [
+      {
+        "type": "function",
+        "function": {
+          "name": "run_python",
+          "description": "Execute bounded Python3 calculations with print, math and json; no files, processes or network. Inspect stdout before answering.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  }
+]
