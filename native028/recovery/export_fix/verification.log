@@ -1,0 +1,6 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/native028/recovery/export_fix/check_recovery.py", line 36, in <module>
+    assert core.tensor_hash(w)==before[prefix+'.weight'],prefix
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: model.language_model.layers.8.linear_attn.out_proj

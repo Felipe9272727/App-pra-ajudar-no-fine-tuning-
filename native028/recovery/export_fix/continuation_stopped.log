@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/native028/continue_fixed.py", line 42, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/liquid-sense/native028/continue_fixed.py", line 27, in main
+    assert read('status.json').get('last_exit_code')==0,'Inspect failed prior phase'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Inspect failed prior phase
