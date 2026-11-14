@@ -1,0 +1,35 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   7%|▋         | 49/675 [00:00<00:01, 449.08it/s]Loading weights:  19%|█▉        | 131/675 [00:00<00:00, 629.23it/s]Loading weights:  32%|███▏      | 218/675 [00:00<00:00, 711.35it/s]Loading weights:  45%|████▍     | 302/675 [00:00<00:00, 752.79it/s]Loading weights:  59%|█████▉    | 401/675 [00:00<00:00, 826.04it/s]Loading weights:  72%|███████▏  | 484/675 [00:00<00:00, 778.87it/s]Loading weights:  87%|████████▋ | 590/675 [00:00<00:00, 858.78it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 833.98it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794624790.5707297, "attempt": null, "pid": 60939}
+PHASE_END checkpoint_load:best.pt 0.006
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TRAIN028 1 96 N028T/threshold_keys [1.0693583488464355, 2.4978127479553223] 3.754304600533942e-08 {'factor_nonzero': 116, 'native_nonzero': 216}
+TRAIN028 4 96 N028T/sign_counts [0.9539094567298889, 2.354736566543579] 0.0020748241804540157 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 8 96 N028U/call [0.8211763501167297, 1.2169471979141235] 0.10106915235519409 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 12 96 N028G/0 [1.1332052946090698, 2.853553056716919] 0.18968278169631958 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 16 96 N028T/character_counts [0.2687115967273712, 0.7833345532417297] 0.2777480185031891 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 20 96 N028T/square_dictionary [0.05181090533733368, 1.5092029571533203] 1.3408983945846558 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 24 96 N028T/word_lengths [0.17559954524040222, 1.3888664245605469] 0.05053577199578285 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 28 96 N028U/repair [0.4387865960597992, 1.16878080368042] 0.8180265426635742 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 32 96 N028G/3 [1.736637830734253, 2.4860119819641113] 0.771528959274292 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 36 96 N028T/sort_odds [0.19021998345851898, 1.0610828399658203] 0.14646244049072266 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 40 96 N028T/collatz_steps [0.3868795335292816, 0.9783297777175903] 0.31832438707351685 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 44 96 N028T/factorial [0.12701302766799927, 1.0095566511154175] 1.518750786781311 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 48 96 N028T/all_distinct [0.14072224497795105, 1.0831289291381836] 0.03376379981637001 {'factor_nonzero': 300, 'native_nonzero': 276}
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/native028/train.py", line 78, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/liquid-sense/native028/train.py", line 63, in main
+    export(model,native,factors,baseline,masters,opt,before,descriptors,stage,step,
+  File "/workspace/liquid-sense/native028/core.py", line 198, in export
+    events=project(model,native,baseline,masters,export=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agent/.local/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 158, in no_grad
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/liquid-sense/native028/core.py", line 165, in project
+    assert float(((base+m.lora_B@m.lora_A).to(m.weight.dtype).float()-base).double().norm())<=cap+1e-7
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

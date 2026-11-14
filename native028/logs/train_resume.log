@@ -1,0 +1,22 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:   5%|▍         | 31/675 [00:00<00:02, 309.06it/s]Loading weights:   9%|▉         | 62/675 [00:00<00:02, 305.90it/s]Loading weights:  22%|██▏       | 148/675 [00:00<00:00, 548.40it/s]Loading weights:  36%|███▌      | 241/675 [00:00<00:00, 696.62it/s]Loading weights:  46%|████▌     | 312/675 [00:00<00:00, 699.14it/s]Loading weights:  60%|██████    | 407/675 [00:00<00:00, 752.63it/s]Loading weights:  71%|███████▏  | 482/675 [00:00<00:00, 717.40it/s]Loading weights:  86%|████████▌ | 582/675 [00:00<00:00, 795.93it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 742.51it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794626373.4270937, "attempt": null, "pid": 62307}
+PHASE_END checkpoint_load:best.pt 0.006
+RESUMED028_SFT 48
+EPOCH028_SAVED sft_epoch1 48
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+TRAIN028 52 96 N028U/repaired_final [0.006539132911711931, 1.191715121269226] 0.15096378326416016 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 56 96 N028T/sign_counts [0.07831435650587082, 0.8370976448059082] 0.23640231788158417 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 60 96 N028T/nonempty [0.026109477505087852, 1.0164626836776733] 0.025893690064549446 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 64 96 N028T/span [0.01777690090239048, 0.7352373600006104] 0.05792362242937088 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 68 96 N028U/call [0.20857316255569458, 0.5927560925483704] 0.08958005905151367 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 72 96 N028T/square_dictionary [0.021112307906150818, 0.9375497698783875] 0.023606566712260246 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 76 96 N028T/repeat_pattern [0.0007606990984641016, 0.8271638751029968] 0.09268417954444885 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 80 96 N028U/repair [0.13361437618732452, 0.6755433082580566] 0.13638174533843994 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 84 96 N028G/11 [0.03339266777038574, 0.52670818567276] 0.018331056460738182 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 88 96 N028T/factorial [0.0361144058406353, 0.5243479609489441] 0.06257366389036179 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 92 96 N028T/clamp [0.026643896475434303, 0.6200052499771118] 0.07188459485769272 {'factor_nonzero': 300, 'native_nonzero': 276}
+TRAIN028 96 96 N028G/10 [0.031100288033485413, 0.9100847244262695] 0.014707072637975216 {'factor_nonzero': 300, 'native_nonzero': 276}
+EPOCH028_SAVED sft_final 96
+SFT028_COMPLETE 96 5398
