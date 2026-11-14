@@ -1,0 +1,7 @@
+{
+  "status": "preparing_new_authorized_main_pilot",
+  "model_process_active": false,
+  "optimizer_updates": 0,
+  "parent_weights_changed": false,
+  "old_studies_restarted": false
+}
