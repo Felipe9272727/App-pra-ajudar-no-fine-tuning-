@@ -46,7 +46,7 @@ def main():
             'policy_zero_variance_skips':policy['skipped_zero_variance']},
         'validation':{v:r['summary'] for v,r in data.items()},'selection':selection,'final':final,
         'validated_research_candidate':winner if promote else None,
-        'general_parent_stays_selected':not promote,'no_existing_checkpoint_overwritten':True,
+        'general_parent_stays_selected':True,'research_candidate_passed_both_gates':promote,'no_existing_checkpoint_overwritten':True,
         'loop_replacement_descriptive':loop,'tools_successes_out_of2':tools,'exports':stages,
         'apk_changed':False,'workers_active':False}
     save('summary.json',out)

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/native028/archive_build_cache.py", line 88, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/liquid-sense/native028/archive_build_cache.py", line 77, in main
+    assert not DEST.exists();DEST.mkdir();rows=inventory();writer=Split()
+                                               ^^^^^^^^^^^
+  File "/workspace/liquid-sense/native028/archive_build_cache.py", line 13, in inventory
+    assert not p.name.endswith(('.apk','.gguf','.safetensors','.pt')),'Model or APK must not be archived here'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Model or APK must not be archived here

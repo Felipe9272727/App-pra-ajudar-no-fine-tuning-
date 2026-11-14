@@ -1,0 +1,12 @@
+{
+  "only_unused_Android_build_tools": [
+    "prebuilt",
+    "tools022/micropython-1.26.1",
+    "tools022/python-host",
+    "tools022/python-arm"
+  ],
+  "all_files_preserved_in_verified_archive": true,
+  "no_model_APK_checkpoint_or_experiment_removed": true,
+  "freed_shm_file_bytes": 120919899,
+  "archive_manifest": "native028/build_tools_archive/manifest.json"
+}
