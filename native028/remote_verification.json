@@ -1,0 +1,14 @@
+{
+  "status": "all255cataloged_artifacts_match_remote_Git_blobs",
+  "verified_tree_commit": "48ead4571a9861baae0bef195d1109628c547680",
+  "verified_tree_sha": "599526d4776ea102f7e326d133a75c74ee9b8645",
+  "catalog_files": 255,
+  "additional_docs_and_catalog_verified": 3,
+  "all5_checkpoint_archives_integrity_verified": true,
+  "frozen_data_sources_and_explicit_technical_revision_verified": true,
+  "all_model_workers_closed": true,
+  "parent_unchanged": true,
+  "candidate_promoted": false,
+  "sealed_final_queried": false,
+  "verification_record_added_in_following_commit": true
+}
