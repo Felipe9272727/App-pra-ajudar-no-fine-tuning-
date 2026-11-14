@@ -1,0 +1,14 @@
+{
+  "status": "all178cataloged_artifacts_match_remote_Git_blobs",
+  "verified_tree_commit": "31149c196d0ffe80da66b164aaa48883f84247c1",
+  "catalog_files": 178,
+  "additional_catalog_and_docs_verified": 3,
+  "all5_checkpoint_archives_CRC_SHA256_verified": true,
+  "all4epochs_192updates_complete": true,
+  "parent_unchanged": true,
+  "candidate_promoted": false,
+  "sealed_final_queried": false,
+  "all_model_workers_closed": true,
+  "frozen_sources_data_verified": true,
+  "verification_added_in_following_commit": true
+}
