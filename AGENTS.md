@@ -1,3 +1,22 @@
+# Native029 — authorized four-epoch MAIN-best continuation
+
+- User: “Treine o melhor+4 épocas”. Branch
+  codex/liquid-sense-main-four-epochs-029-20261114. Read native029/AGENTS.md,
+  PROTOCOL.md,status.json,runtime.json and checkpoint manifests before action.
+- Start is the selected GENERAL46f6697checkpoint;028SFT/PPOwere rejected.
+  Four new epochs/fresh optimizer, not six accumulated on a rejected candidate.
+  Same48paired teaching tasks,192updates,total10796label-token presentations.
+  Factorlr5e-5/controllerlr1.25e-5 and parentKL1.0were frozen before learning.
+- Preserve32physical/56actualvisits,mHC2,conv7,local256. Save every epoch with
+  all699native hashes,optimizer/RNG; source/weight archives from028remain inGit.
+- Fresh029validation and separately labelled OBSERVED028retention. A known
+  correct case/control loss blocks selection even if aggregate totals improve.
+  The never-queried028final remains reserved; open only for a frozen eligible
+  winner. No selection from NLL or thought closure. No PPO/children/APK here.
+- Inspect real status and logs; do not assume four epochs completed until the
+  training report records192unique updates and epoch04manifest is complete.
+  Investigate any uncertain worker before restart. No background-run promises.
+
 # Native028 complete — MAIN productive-thinking pilot, rejected (2026-11-14)
 
 - Active results branch: `codex/liquid-sense-productive-thinking-028-20261114`.
