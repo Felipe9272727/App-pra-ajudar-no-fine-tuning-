@@ -1,0 +1,342 @@
+[
+  {
+    "id": "N029V/chunks",
+    "family": "chunks",
+    "prompt": "Write Python function solve. Given a list xs and integer k>0, split xs into consecutive lists of length k; include the shorter last chunk. Empty input gives []. Return only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs,k):\n    return [xs[i:i+k] for i in range(0,len(xs),k)]",
+    "cases": [
+      {
+        "args": [
+          [],
+          2
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          2
+        ],
+        "expected": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            2
+          ],
+          3
+        ],
+        "expected": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            7,
+            8
+          ],
+          1
+        ],
+        "expected": [
+          [
+            7
+          ],
+          [
+            8
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          2
+        ],
+        "expected": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N029V/anagram_groups",
+    "family": "anagram_groups",
+    "prompt": "Write Python function solve. Given list words of lowercase ASCII strings, group anagrams. Preserve word order within each group and order groups by first occurrence of a member. Repeated words stay repeated. Return list of lists. Return only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(words):\n    groups={}\n    for word in words:\n        key=\"\".join(sorted(word))\n        groups.setdefault(key,[]).append(word)\n    return list(groups.values())",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            "eat",
+            "tea",
+            "tan",
+            "ate",
+            "nat",
+            "bat"
+          ]
+        ],
+        "expected": [
+          [
+            "eat",
+            "tea",
+            "ate"
+          ],
+          [
+            "tan",
+            "nat"
+          ],
+          [
+            "bat"
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            "",
+            "a",
+            ""
+          ]
+        ],
+        "expected": [
+          [
+            "",
+            ""
+          ],
+          [
+            "a"
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            "ab",
+            "ba",
+            "ab"
+          ]
+        ],
+        "expected": [
+          [
+            "ab",
+            "ba",
+            "ab"
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            "cat",
+            "dog"
+          ]
+        ],
+        "expected": [
+          [
+            "cat"
+          ],
+          [
+            "dog"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N029V/sliding_max",
+    "family": "sliding_max",
+    "prompt": "Write Python function solve. Given integer list xs and integer k>0, return the maximum of every consecutive window of exactly k elements. Return [] if no full window exists. Return only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs,k):\n    return [max(xs[i:i+k]) for i in range(len(xs)-k+1)]",
+    "cases": [
+      {
+        "args": [
+          [],
+          1
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            1,
+            3,
+            -1,
+            -3,
+            5,
+            3,
+            6,
+            7
+          ],
+          3
+        ],
+        "expected": [
+          3,
+          3,
+          5,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "args": [
+          [
+            -4,
+            -2,
+            -5
+          ],
+          2
+        ],
+        "expected": [
+          -2,
+          -2
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            2
+          ],
+          1
+        ],
+        "expected": [
+          2,
+          2
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            2
+          ],
+          3
+        ],
+        "expected": []
+      }
+    ]
+  },
+  {
+    "id": "N029V/components",
+    "family": "components",
+    "prompt": "Write Python function solve. Given n>=0 and list edges of undirected edges [u,v], vertices are 0..n-1. Return the number of connected components, counting isolated vertices. Self-edges and repeated edges are allowed. Return only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(n,edges):\n    graph=[[] for j in range(n)]\n    for a,b in edges:\n        graph[a].append(b)\n        graph[b].append(a)\n    seen=set()\n    count=0\n    for v in range(n):\n        if v in seen: continue\n        count+=1\n        stack=[v]\n        seen.add(v)\n        while stack:\n            x=stack.pop()\n            for y in graph[x]:\n                if y not in seen:\n                    seen.add(y)\n                    stack.append(y)\n    return count",
+    "cases": [
+      {
+        "args": [
+          0,
+          []
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          3,
+          []
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          5,
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ],
+        "expected": 2
+      },
+      {
+        "args": [
+          3,
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          3,
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "expected": 2
+      }
+    ]
+  }
+]

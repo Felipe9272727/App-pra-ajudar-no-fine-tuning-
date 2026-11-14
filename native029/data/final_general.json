@@ -1,0 +1,31 @@
+[
+  {
+    "id": "N028FG/0",
+    "prompt": "Reply only with a number: 7 times 19.",
+    "answers": [
+      "133"
+    ]
+  },
+  {
+    "id": "N028FG/1",
+    "prompt": "Qual é a capital da Noruega? Apenas a cidade.",
+    "answers": [
+      "Oslo"
+    ]
+  },
+  {
+    "id": "N028FG/2",
+    "prompt": "Traduza thank you para português. Apenas a tradução.",
+    "answers": [
+      "obrigado",
+      "obrigada"
+    ]
+  },
+  {
+    "id": "N028FG/3",
+    "prompt": "Eva está antes de Nuno, e Nuno antes de Olga. Quem é a última pessoa? Apenas o nome.",
+    "answers": [
+      "Olga"
+    ]
+  }
+]

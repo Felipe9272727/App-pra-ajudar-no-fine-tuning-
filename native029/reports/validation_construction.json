@@ -1,0 +1,9 @@
+{
+  "fresh_code_families": 4,
+  "cases": 20,
+  "general": 8,
+  "references_pass_real_sandbox": true,
+  "null_mutants_rejected": true,
+  "no_project_model_inference_performed": true,
+  "old028_final_remains_unqueried_and_reused_only_as_reserved_final": true
+}

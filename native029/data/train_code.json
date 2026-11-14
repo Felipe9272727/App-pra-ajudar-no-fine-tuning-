@@ -1,0 +1,1382 @@
+[
+  {
+    "id": "N028T/inclusive_sum",
+    "family": "inclusive_sum",
+    "prompt": "Write Python function solve. Given integer n>=0, sum all integers from 1 through n, inclusive.\nRepair this incorrect implementation:\ndef solve(n): return sum(range(n))\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(n):\n    return n*(n+1)//2",
+    "plan": "The upper endpoint is inclusive. The arithmetic-series formula also gives zero for n=0.",
+    "cases": [
+      {
+        "args": [
+          0
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          1
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          2
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          8
+        ],
+        "expected": 36
+      },
+      {
+        "args": [
+          15
+        ],
+        "expected": 120
+      }
+    ]
+  },
+  {
+    "id": "N028T/squares",
+    "family": "squares",
+    "prompt": "Write Python function solve. Given a list xs of integers, return their squares in the same order.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return [x*x for x in xs]",
+    "plan": "Transform each element independently and preserve order; an empty list stays empty.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            -2,
+            3
+          ]
+        ],
+        "expected": [
+          4,
+          9
+        ]
+      },
+      {
+        "args": [
+          [
+            5,
+            -1,
+            4
+          ]
+        ],
+        "expected": [
+          25,
+          1,
+          16
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/multiples_three",
+    "family": "multiples_three",
+    "prompt": "Write Python function solve. Return only integers in xs divisible by 3, preserving order.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return [x for x in xs if x%3==0]",
+    "plan": "A remainder of zero selects multiples, including zero and negative multiples.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            -3,
+            0,
+            4,
+            6
+          ]
+        ],
+        "expected": [
+          -3,
+          0,
+          6
+        ]
+      },
+      {
+        "args": [
+          [
+            9,
+            9,
+            10
+          ]
+        ],
+        "expected": [
+          9,
+          9
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/trim_words",
+    "family": "trim_words",
+    "prompt": "Write Python function solve. Given a list of strings xs, strip whitespace from each string.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return [x.strip() for x in xs]",
+    "plan": "Strip each string separately; preserve the number and order of items.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            " a ",
+            "b\n"
+          ]
+        ],
+        "expected": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "args": [
+          [
+            " ",
+            " c"
+          ]
+        ],
+        "expected": [
+          "",
+          "c"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/vowels",
+    "family": "vowels",
+    "prompt": "Write Python function solve. Count ASCII vowels in string s, ignoring case.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(s):\n    return sum(c.lower() in \"aeiou\" for c in s)",
+    "plan": "Normalize case and count only a,e,i,o,u. Non-vowels add zero.",
+    "cases": [
+      {
+        "args": [
+          ""
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          "AEi"
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          "sky"
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          "hello world"
+        ],
+        "expected": 3
+      }
+    ]
+  },
+  {
+    "id": "N028T/digit_sum",
+    "family": "digit_sum",
+    "prompt": "Write Python function solve. Return the sum of decimal digits of integer n; ignore its sign.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(n):\n    return sum(int(c) for c in str(abs(n)))",
+    "plan": "Remove the sign before reading digits. Zero has digit sum zero.",
+    "cases": [
+      {
+        "args": [
+          0
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          109
+        ],
+        "expected": 10
+      },
+      {
+        "args": [
+          -583
+        ],
+        "expected": 16
+      },
+      {
+        "args": [
+          7007
+        ],
+        "expected": 14
+      }
+    ]
+  },
+  {
+    "id": "N028T/factorial",
+    "family": "factorial",
+    "prompt": "Write Python function solve. Given integer n>=0, return n factorial.\nRepair this incorrect implementation:\ndef solve(n):\n    out=0\n    for k in range(1,n+1): out*=k\n    return out\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(n):\n    out=1\n    for k in range(2,n+1):\n        out*=k\n    return out",
+    "plan": "Start the product at one so the empty product for zero is correct.",
+    "cases": [
+      {
+        "args": [
+          0
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          1
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          3
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          6
+        ],
+        "expected": 720
+      }
+    ]
+  },
+  {
+    "id": "N028T/gcd",
+    "family": "gcd",
+    "prompt": "Write Python function solve. Given integers a and b, return their nonnegative greatest common divisor; gcd(0,0)=0.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(a,b):\n    a,b=abs(a),abs(b)\n    while b:\n        a,b=b,a%b\n    return a",
+    "plan": "Use Euclid on absolute values. The zero cases follow from stopping when b is zero.",
+    "cases": [
+      {
+        "args": [
+          0,
+          0
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          12,
+          18
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          -15,
+          5
+        ],
+        "expected": 5
+      },
+      {
+        "args": [
+          7,
+          0
+        ],
+        "expected": 7
+      },
+      {
+        "args": [
+          17,
+          13
+        ],
+        "expected": 1
+      }
+    ]
+  },
+  {
+    "id": "N028T/prime",
+    "family": "prime",
+    "prompt": "Write Python function solve. Return whether integer n is prime. Integers below 2 are not prime.\nRepair this incorrect implementation:\ndef solve(n): return all(n%d for d in range(2,n))\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(n):\n    if n<2: return False\n    d=2\n    while d*d<=n:\n        if n%d==0: return False\n        d+=1\n    return True",
+    "plan": "Reject numbers below two first. Test divisors through the square root, including perfect squares.",
+    "cases": [
+      {
+        "args": [
+          0
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          1
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          2
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          9
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          17
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          25
+        ],
+        "expected": false
+      }
+    ]
+  },
+  {
+    "id": "N028T/move_last",
+    "family": "move_last",
+    "prompt": "Write Python function solve. For string s, move its last character to the front. Empty stays empty.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(s):\n    return s[-1:]+s[:-1]",
+    "plan": "Slices handle an empty string safely; concatenate the last-character slice and the rest.",
+    "cases": [
+      {
+        "args": [
+          ""
+        ],
+        "expected": ""
+      },
+      {
+        "args": [
+          "a"
+        ],
+        "expected": "a"
+      },
+      {
+        "args": [
+          "abcd"
+        ],
+        "expected": "dabc"
+      },
+      {
+        "args": [
+          "xy"
+        ],
+        "expected": "yx"
+      }
+    ]
+  },
+  {
+    "id": "N028T/nonempty",
+    "family": "nonempty",
+    "prompt": "Write Python function solve. Filter out exactly the empty strings from xs; preserve spaces and order.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return [x for x in xs if x!=\"\"]",
+    "plan": "Only length-zero strings are excluded. A string containing spaces is retained.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            "",
+            "a",
+            " ",
+            ""
+          ]
+        ],
+        "expected": [
+          "a",
+          " "
+        ]
+      },
+      {
+        "args": [
+          [
+            "b",
+            "c"
+          ]
+        ],
+        "expected": [
+          "b",
+          "c"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/span",
+    "family": "span",
+    "prompt": "Write Python function solve. Return max(xs)-min(xs) for integer list xs, or 0 when empty.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return max(xs)-min(xs) if xs else 0",
+    "plan": "Handle the empty list before taking extrema. A single value has span zero.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            2
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            4,
+            -3,
+            8
+          ]
+        ],
+        "expected": 11
+      },
+      {
+        "args": [
+          [
+            -2,
+            -1
+          ]
+        ],
+        "expected": 1
+      }
+    ]
+  },
+  {
+    "id": "N028T/stable_unique",
+    "family": "stable_unique",
+    "prompt": "Write Python function solve. Return distinct items of xs in first-occurrence order.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    seen=set()\n    out=[]\n    for x in xs:\n        if x not in seen:\n            seen.add(x)\n            out.append(x)\n    return out",
+    "plan": "Use a membership set but append on first occurrence; a sorted set would lose input order.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            1,
+            1,
+            2,
+            1,
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            "a",
+            "b",
+            "a"
+          ]
+        ],
+        "expected": [
+          "a",
+          "b"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/sign_counts",
+    "family": "sign_counts",
+    "prompt": "Write Python function solve. Return [positive_count, negative_count] for xs; ignore zeros.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return [sum(x>0 for x in xs),sum(x<0 for x in xs)]",
+    "plan": "Use strict comparisons so zeros enter neither count.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": [
+          0,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            1,
+            -2,
+            3,
+            0
+          ]
+        ],
+        "expected": [
+          2,
+          1
+        ]
+      },
+      {
+        "args": [
+          [
+            0,
+            0
+          ]
+        ],
+        "expected": [
+          0,
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            -1,
+            -2
+          ]
+        ],
+        "expected": [
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/prefix_sum",
+    "family": "prefix_sum",
+    "prompt": "Write Python function solve. Return inclusive running sums of integer list xs.\nRepair this incorrect implementation:\ndef solve(xs):\n    out=[]\n    total=1\n    for x in xs:\n        total+=x\n        out.append(total)\n    return out\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    out=[]\n    total=0\n    for x in xs:\n        total+=x\n        out.append(total)\n    return out",
+    "plan": "Initialize the running total to zero, then add before appending.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": [
+          0
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": [
+          1,
+          3,
+          6
+        ]
+      },
+      {
+        "args": [
+          [
+            -1,
+            4,
+            -2
+          ]
+        ],
+        "expected": [
+          -1,
+          3,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/differences",
+    "family": "differences",
+    "prompt": "Write Python function solve. Return consecutive differences xs[i+1]-xs[i]. Lists shorter than two give [].\nRepair this incorrect implementation:\ndef solve(xs): return [xs[i]-xs[i+1] for i in range(len(xs)-1)]\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return [xs[i+1]-xs[i] for i in range(len(xs)-1)]",
+    "plan": "Subtract the earlier value from the later one. Empty and singleton inputs have no adjacent pairs.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            7
+          ]
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            2,
+            5,
+            1
+          ]
+        ],
+        "expected": [
+          3,
+          -4
+        ]
+      },
+      {
+        "args": [
+          [
+            -2,
+            0,
+            3
+          ]
+        ],
+        "expected": [
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/clamp",
+    "family": "clamp",
+    "prompt": "Write Python function solve. Given xs, low and high with low<=high, clamp every value into [low,high].\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs,low,high):\n    return [max(low,min(high,x)) for x in xs]",
+    "plan": "Apply the lower and upper bounds to each item. Equal bounds produce a constant list.",
+    "cases": [
+      {
+        "args": [
+          [],
+          0,
+          3
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            -2,
+            1,
+            6
+          ],
+          0,
+          4
+        ],
+        "expected": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "args": [
+          [
+            1,
+            1
+          ],
+          2,
+          2
+        ],
+        "expected": [
+          2,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/sort_odds",
+    "family": "sort_odds",
+    "prompt": "Write Python function solve. Sort all odd integers in xs into ascending order; return only the odd integers.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return sorted(x for x in xs if x%2!=0)",
+    "plan": "Filter odd numbers before sorting. Negative odd numbers also have a nonzero remainder.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            4,
+            1,
+            3,
+            2,
+            -5
+          ]
+        ],
+        "expected": [
+          -5,
+          1,
+          3
+        ]
+      },
+      {
+        "args": [
+          [
+            2,
+            8
+          ]
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            1,
+            1
+          ]
+        ],
+        "expected": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/square_dictionary",
+    "family": "square_dictionary",
+    "prompt": "Write Python function solve. Return a dictionary mapping str(x) to x*x for the integers in xs.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return {str(x):x*x for x in xs}",
+    "plan": "Dictionary keys are strings as requested; duplicate integers overwrite with the same square.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": {}
+      },
+      {
+        "args": [
+          [
+            2,
+            -3,
+            2
+          ]
+        ],
+        "expected": {
+          "2": 4,
+          "-3": 9
+        }
+      },
+      {
+        "args": [
+          [
+            0,
+            1
+          ]
+        ],
+        "expected": {
+          "0": 0,
+          "1": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "N028T/character_counts",
+    "family": "character_counts",
+    "prompt": "Write Python function solve. Return a character-frequency dictionary for string s, case-sensitive.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(s):\n    counts={}\n    for c in s:\n        counts[c]=counts.get(c,0)+1\n    return counts",
+    "plan": "Count each character exactly, including spaces and case differences.",
+    "cases": [
+      {
+        "args": [
+          ""
+        ],
+        "expected": {}
+      },
+      {
+        "args": [
+          "aba"
+        ],
+        "expected": {
+          "b": 1,
+          "a": 2
+        }
+      },
+      {
+        "args": [
+          "Aa A"
+        ],
+        "expected": {
+          "A": 2,
+          " ": 1,
+          "a": 1
+        }
+      },
+      {
+        "args": [
+          "1112"
+        ],
+        "expected": {
+          "2": 1,
+          "1": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "N028T/word_lengths",
+    "family": "word_lengths",
+    "prompt": "Write Python function solve. Split s on whitespace and return the length of each word.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(s):\n    return [len(w) for w in s.split()]",
+    "plan": "Whitespace splitting removes empty pieces; preserve the resulting word order.",
+    "cases": [
+      {
+        "args": [
+          ""
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          "  hi  there "
+        ],
+        "expected": [
+          2,
+          5
+        ]
+      },
+      {
+        "args": [
+          "a bc def"
+        ],
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "args": [
+          "x\ny"
+        ],
+        "expected": [
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/collatz_steps",
+    "family": "collatz_steps",
+    "prompt": "Write Python function solve. For positive integer n, count Collatz transformations until reaching 1.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(n):\n    steps=0\n    while n!=1:\n        n=n//2 if n%2==0 else 3*n+1\n        steps+=1\n    return steps",
+    "plan": "Count transformations, not visited values. Starting at one requires zero transformations.",
+    "cases": [
+      {
+        "args": [
+          1
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          2
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          3
+        ],
+        "expected": 7
+      },
+      {
+        "args": [
+          7
+        ],
+        "expected": 16
+      },
+      {
+        "args": [
+          10
+        ],
+        "expected": 6
+      }
+    ]
+  },
+  {
+    "id": "N028T/power_two",
+    "family": "power_two",
+    "prompt": "Write Python function solve. Return whether integer n is a positive power of two.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(n):\n    return n>0 and (n&(n-1))==0",
+    "plan": "A positive power of two has one set bit. Positivity excludes zero and negatives.",
+    "cases": [
+      {
+        "args": [
+          -2
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          0
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          1
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          2
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          3
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          16
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "id": "N028T/triangle",
+    "family": "triangle",
+    "prompt": "Write Python function solve. Given lengths a,b,c, return whether they form a nondegenerate triangle.\nRepair this incorrect implementation:\ndef solve(a,b,c): return a+b>=c and a+c>=b and b+c>=a\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(a,b,c):\n    return min(a,b,c)>0 and a+b>c and a+c>b and b+c>a",
+    "plan": "Require positive sides and strict triangle inequalities. Equality is a degenerate line.",
+    "cases": [
+      {
+        "args": [
+          3,
+          4,
+          5
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          1,
+          2,
+          3
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          0,
+          1,
+          1
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          -1,
+          3,
+          3
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          2,
+          2,
+          2
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "id": "N028T/alternating_sum",
+    "family": "alternating_sum",
+    "prompt": "Write Python function solve. Return xs[0]-xs[1]+xs[2]-... for integer list xs.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return sum(x if i%2==0 else -x for i,x in enumerate(xs))",
+    "plan": "Even indices contribute positively and odd indices negatively. Empty gives zero.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            3
+          ]
+        ],
+        "expected": 3
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "expected": -2
+      },
+      {
+        "args": [
+          [
+            -1,
+            -2,
+            -3
+          ]
+        ],
+        "expected": -2
+      }
+    ]
+  },
+  {
+    "id": "N028T/all_distinct",
+    "family": "all_distinct",
+    "prompt": "Write Python function solve. Return whether all items of xs are distinct.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    return len(set(xs))==len(xs)",
+    "plan": "Compare set size with list size. Empty and singleton lists are distinct.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          [
+            1
+          ]
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          [
+            "a",
+            "b"
+          ]
+        ],
+        "expected": true
+      }
+    ]
+  },
+  {
+    "id": "N028T/reverse_word_letters",
+    "family": "reverse_word_letters",
+    "prompt": "Write Python function solve. Reverse the letters within each whitespace-separated word of s; join with single spaces.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(s):\n    return \" \".join(w[::-1] for w in s.split())",
+    "plan": "Reverse each word separately without reversing word order; normalize separating spaces.",
+    "cases": [
+      {
+        "args": [
+          ""
+        ],
+        "expected": ""
+      },
+      {
+        "args": [
+          "ab cd"
+        ],
+        "expected": "ba dc"
+      },
+      {
+        "args": [
+          "  hello  a "
+        ],
+        "expected": "olleh a"
+      }
+    ]
+  },
+  {
+    "id": "N028T/negative_index",
+    "family": "negative_index",
+    "prompt": "Write Python function solve. Return the index of the first negative value in xs, or -1 if absent.\nRepair this incorrect implementation:\ndef solve(xs):\n    for i,x in enumerate(xs):\n        if x>0: return i\n    return -1\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    for i,x in enumerate(xs):\n        if x<0: return i\n    return -1",
+    "plan": "The comparison must be negative, and return immediately for the first match.",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": -1
+      },
+      {
+        "args": [
+          [
+            0,
+            2
+          ]
+        ],
+        "expected": -1
+      },
+      {
+        "args": [
+          [
+            1,
+            -2,
+            -3
+          ]
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          [
+            -1,
+            0
+          ]
+        ],
+        "expected": 0
+      }
+    ]
+  },
+  {
+    "id": "N028T/repeat_pattern",
+    "family": "repeat_pattern",
+    "prompt": "Write Python function solve. Given string s and nonnegative n, return s repeated n times.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(s,n):\n    return s*n",
+    "plan": "String multiplication preserves the pattern. Zero repetitions and empty patterns give empty strings.",
+    "cases": [
+      {
+        "args": [
+          "ab",
+          0
+        ],
+        "expected": ""
+      },
+      {
+        "args": [
+          "x",
+          3
+        ],
+        "expected": "xxx"
+      },
+      {
+        "args": [
+          "",
+          5
+        ],
+        "expected": ""
+      },
+      {
+        "args": [
+          "ha",
+          2
+        ],
+        "expected": "haha"
+      }
+    ]
+  },
+  {
+    "id": "N028T/threshold_keys",
+    "family": "threshold_keys",
+    "prompt": "Write Python function solve. Given dictionary d of string keys and numeric values, return sorted keys with value strictly above k.\nRepair this incorrect implementation:\ndef solve(d,k): return sorted(key for key,value in d.items() if value>=k)\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(d,k):\n    return sorted(key for key,value in d.items() if value>k)",
+    "plan": "Use a strict threshold and sort the selected keys; equal values are excluded.",
+    "cases": [
+      {
+        "args": [
+          {},
+          2
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          {
+            "a": 2,
+            "b": 3,
+            "c": 1
+          },
+          2
+        ],
+        "expected": [
+          "b"
+        ]
+      },
+      {
+        "args": [
+          {
+            "x": -1,
+            "z": 0
+          },
+          -1
+        ],
+        "expected": [
+          "z"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028T/merge_counts",
+    "family": "merge_counts",
+    "prompt": "Write Python function solve. Given dictionaries a,b with string keys and integer counts, sum counts for each key in their union.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(a,b):\n    out=a.copy()\n    for key,value in b.items():\n        out[key]=out.get(key,0)+value\n    return out",
+    "plan": "Start from a copy, add the second dictionary, and treat missing counts as zero.",
+    "cases": [
+      {
+        "args": [
+          {},
+          {}
+        ],
+        "expected": {}
+      },
+      {
+        "args": [
+          {
+            "x": 2
+          },
+          {
+            "x": 3,
+            "y": 1
+          }
+        ],
+        "expected": {
+          "x": 5,
+          "y": 1
+        }
+      },
+      {
+        "args": [
+          {
+            "a": -2
+          },
+          {
+            "b": 0
+          }
+        ],
+        "expected": {
+          "b": 0,
+          "a": -2
+        }
+      }
+    ]
+  },
+  {
+    "id": "N028T/substring_count",
+    "family": "substring_count",
+    "prompt": "Write Python function solve. Count occurrences of nonempty substring sub in s, including overlaps.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(s,sub):\n    return sum(s[i:i+len(sub)]==sub for i in range(len(s)-len(sub)+1))",
+    "plan": "Try every start position so overlapping matches count; do not advance by the whole substring.",
+    "cases": [
+      {
+        "args": [
+          "",
+          "a"
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          "aaa",
+          "aa"
+        ],
+        "expected": 2
+      },
+      {
+        "args": [
+          "ababa",
+          "aba"
+        ],
+        "expected": 2
+      },
+      {
+        "args": [
+          "abc",
+          "x"
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          "abc",
+          "abcd"
+        ],
+        "expected": 0
+      }
+    ]
+  }
+]

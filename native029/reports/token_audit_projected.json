@@ -1,0 +1,680 @@
+{
+  "paired_problems": 48,
+  "views": 96,
+  "max_training_input": 482,
+  "target_tokens_per_epoch": 2699,
+  "rows": [
+    {
+      "id": "N028T/inclusive_sum",
+      "thinking": false,
+      "input_tokens": 79,
+      "prefix_tokens": 65,
+      "target_tokens": 15
+    },
+    {
+      "id": "N028T/inclusive_sum",
+      "thinking": true,
+      "input_tokens": 98,
+      "prefix_tokens": 63,
+      "target_tokens": 36
+    },
+    {
+      "id": "N028T/squares",
+      "thinking": false,
+      "input_tokens": 62,
+      "prefix_tokens": 47,
+      "target_tokens": 16
+    },
+    {
+      "id": "N028T/squares",
+      "thinking": true,
+      "input_tokens": 77,
+      "prefix_tokens": 45,
+      "target_tokens": 33
+    },
+    {
+      "id": "N028T/multiples_three",
+      "thinking": false,
+      "input_tokens": 65,
+      "prefix_tokens": 45,
+      "target_tokens": 21
+    },
+    {
+      "id": "N028T/multiples_three",
+      "thinking": true,
+      "input_tokens": 79,
+      "prefix_tokens": 43,
+      "target_tokens": 37
+    },
+    {
+      "id": "N028T/trim_words",
+      "thinking": false,
+      "input_tokens": 61,
+      "prefix_tokens": 45,
+      "target_tokens": 17
+    },
+    {
+      "id": "N028T/trim_words",
+      "thinking": true,
+      "input_tokens": 75,
+      "prefix_tokens": 43,
+      "target_tokens": 33
+    },
+    {
+      "id": "N028T/vowels",
+      "thinking": false,
+      "input_tokens": 63,
+      "prefix_tokens": 42,
+      "target_tokens": 22
+    },
+    {
+      "id": "N028T/vowels",
+      "thinking": true,
+      "input_tokens": 82,
+      "prefix_tokens": 40,
+      "target_tokens": 43
+    },
+    {
+      "id": "N028T/digit_sum",
+      "thinking": false,
+      "input_tokens": 64,
+      "prefix_tokens": 46,
+      "target_tokens": 19
+    },
+    {
+      "id": "N028T/digit_sum",
+      "thinking": true,
+      "input_tokens": 78,
+      "prefix_tokens": 44,
+      "target_tokens": 35
+    },
+    {
+      "id": "N028T/factorial",
+      "thinking": false,
+      "input_tokens": 107,
+      "prefix_tokens": 77,
+      "target_tokens": 31
+    },
+    {
+      "id": "N028T/factorial",
+      "thinking": true,
+      "input_tokens": 122,
+      "prefix_tokens": 75,
+      "target_tokens": 48
+    },
+    {
+      "id": "N028T/gcd",
+      "thinking": false,
+      "input_tokens": 87,
+      "prefix_tokens": 54,
+      "target_tokens": 34
+    },
+    {
+      "id": "N028T/gcd",
+      "thinking": true,
+      "input_tokens": 106,
+      "prefix_tokens": 52,
+      "target_tokens": 55
+    },
+    {
+      "id": "N028T/prime",
+      "thinking": false,
+      "input_tokens": 116,
+      "prefix_tokens": 71,
+      "target_tokens": 46
+    },
+    {
+      "id": "N028T/prime",
+      "thinking": true,
+      "input_tokens": 135,
+      "prefix_tokens": 69,
+      "target_tokens": 67
+    },
+    {
+      "id": "N028T/move_last",
+      "thinking": false,
+      "input_tokens": 64,
+      "prefix_tokens": 48,
+      "target_tokens": 17
+    },
+    {
+      "id": "N028T/move_last",
+      "thinking": true,
+      "input_tokens": 82,
+      "prefix_tokens": 46,
+      "target_tokens": 37
+    },
+    {
+      "id": "N028T/nonempty",
+      "thinking": false,
+      "input_tokens": 63,
+      "prefix_tokens": 46,
+      "target_tokens": 18
+    },
+    {
+      "id": "N028T/nonempty",
+      "thinking": true,
+      "input_tokens": 78,
+      "prefix_tokens": 44,
+      "target_tokens": 35
+    },
+    {
+      "id": "N028T/span",
+      "thinking": false,
+      "input_tokens": 68,
+      "prefix_tokens": 50,
+      "target_tokens": 19
+    },
+    {
+      "id": "N028T/span",
+      "thinking": true,
+      "input_tokens": 84,
+      "prefix_tokens": 48,
+      "target_tokens": 37
+    },
+    {
+      "id": "N028T/stable_unique",
+      "thinking": false,
+      "input_tokens": 88,
+      "prefix_tokens": 44,
+      "target_tokens": 45
+    },
+    {
+      "id": "N028T/stable_unique",
+      "thinking": true,
+      "input_tokens": 107,
+      "prefix_tokens": 42,
+      "target_tokens": 66
+    },
+    {
+      "id": "N028T/sign_counts",
+      "thinking": false,
+      "input_tokens": 72,
+      "prefix_tokens": 46,
+      "target_tokens": 27
+    },
+    {
+      "id": "N028T/sign_counts",
+      "thinking": true,
+      "input_tokens": 82,
+      "prefix_tokens": 44,
+      "target_tokens": 39
+    },
+    {
+      "id": "N028T/prefix_sum",
+      "thinking": false,
+      "input_tokens": 118,
+      "prefix_tokens": 83,
+      "target_tokens": 36
+    },
+    {
+      "id": "N028T/prefix_sum",
+      "thinking": true,
+      "input_tokens": 131,
+      "prefix_tokens": 81,
+      "target_tokens": 51
+    },
+    {
+      "id": "N028T/differences",
+      "thinking": false,
+      "input_tokens": 104,
+      "prefix_tokens": 79,
+      "target_tokens": 26
+    },
+    {
+      "id": "N028T/differences",
+      "thinking": true,
+      "input_tokens": 124,
+      "prefix_tokens": 77,
+      "target_tokens": 48
+    },
+    {
+      "id": "N028T/clamp",
+      "thinking": false,
+      "input_tokens": 75,
+      "prefix_tokens": 52,
+      "target_tokens": 24
+    },
+    {
+      "id": "N028T/clamp",
+      "thinking": true,
+      "input_tokens": 93,
+      "prefix_tokens": 50,
+      "target_tokens": 44
+    },
+    {
+      "id": "N028T/sort_odds",
+      "thinking": false,
+      "input_tokens": 68,
+      "prefix_tokens": 48,
+      "target_tokens": 21
+    },
+    {
+      "id": "N028T/sort_odds",
+      "thinking": true,
+      "input_tokens": 84,
+      "prefix_tokens": 46,
+      "target_tokens": 39
+    },
+    {
+      "id": "N028T/square_dictionary",
+      "thinking": false,
+      "input_tokens": 66,
+      "prefix_tokens": 48,
+      "target_tokens": 19
+    },
+    {
+      "id": "N028T/square_dictionary",
+      "thinking": true,
+      "input_tokens": 82,
+      "prefix_tokens": 46,
+      "target_tokens": 37
+    },
+    {
+      "id": "N028T/character_counts",
+      "thinking": false,
+      "input_tokens": 75,
+      "prefix_tokens": 44,
+      "target_tokens": 32
+    },
+    {
+      "id": "N028T/character_counts",
+      "thinking": true,
+      "input_tokens": 87,
+      "prefix_tokens": 42,
+      "target_tokens": 46
+    },
+    {
+      "id": "N028T/word_lengths",
+      "thinking": false,
+      "input_tokens": 61,
+      "prefix_tokens": 44,
+      "target_tokens": 18
+    },
+    {
+      "id": "N028T/word_lengths",
+      "thinking": true,
+      "input_tokens": 74,
+      "prefix_tokens": 42,
+      "target_tokens": 33
+    },
+    {
+      "id": "N028T/collatz_steps",
+      "thinking": false,
+      "input_tokens": 89,
+      "prefix_tokens": 46,
+      "target_tokens": 44
+    },
+    {
+      "id": "N028T/collatz_steps",
+      "thinking": true,
+      "input_tokens": 104,
+      "prefix_tokens": 44,
+      "target_tokens": 61
+    },
+    {
+      "id": "N028T/power_two",
+      "thinking": false,
+      "input_tokens": 62,
+      "prefix_tokens": 43,
+      "target_tokens": 20
+    },
+    {
+      "id": "N028T/power_two",
+      "thinking": true,
+      "input_tokens": 80,
+      "prefix_tokens": 41,
+      "target_tokens": 40
+    },
+    {
+      "id": "N028T/triangle",
+      "thinking": false,
+      "input_tokens": 103,
+      "prefix_tokens": 76,
+      "target_tokens": 28
+    },
+    {
+      "id": "N028T/triangle",
+      "thinking": true,
+      "input_tokens": 119,
+      "prefix_tokens": 74,
+      "target_tokens": 46
+    },
+    {
+      "id": "N028T/alternating_sum",
+      "thinking": false,
+      "input_tokens": 76,
+      "prefix_tokens": 51,
+      "target_tokens": 26
+    },
+    {
+      "id": "N028T/alternating_sum",
+      "thinking": true,
+      "input_tokens": 90,
+      "prefix_tokens": 49,
+      "target_tokens": 42
+    },
+    {
+      "id": "N028T/all_distinct",
+      "thinking": false,
+      "input_tokens": 55,
+      "prefix_tokens": 41,
+      "target_tokens": 15
+    },
+    {
+      "id": "N028T/all_distinct",
+      "thinking": true,
+      "input_tokens": 70,
+      "prefix_tokens": 39,
+      "target_tokens": 32
+    },
+    {
+      "id": "N028T/reverse_word_letters",
+      "thinking": false,
+      "input_tokens": 68,
+      "prefix_tokens": 48,
+      "target_tokens": 21
+    },
+    {
+      "id": "N028T/reverse_word_letters",
+      "thinking": true,
+      "input_tokens": 82,
+      "prefix_tokens": 46,
+      "target_tokens": 37
+    },
+    {
+      "id": "N028T/negative_index",
+      "thinking": false,
+      "input_tokens": 110,
+      "prefix_tokens": 83,
+      "target_tokens": 28
+    },
+    {
+      "id": "N028T/negative_index",
+      "thinking": true,
+      "input_tokens": 125,
+      "prefix_tokens": 81,
+      "target_tokens": 45
+    },
+    {
+      "id": "N028T/repeat_pattern",
+      "thinking": false,
+      "input_tokens": 56,
+      "prefix_tokens": 46,
+      "target_tokens": 11
+    },
+    {
+      "id": "N028T/repeat_pattern",
+      "thinking": true,
+      "input_tokens": 72,
+      "prefix_tokens": 44,
+      "target_tokens": 29
+    },
+    {
+      "id": "N028T/threshold_keys",
+      "thinking": false,
+      "input_tokens": 99,
+      "prefix_tokens": 78,
+      "target_tokens": 22
+    },
+    {
+      "id": "N028T/threshold_keys",
+      "thinking": true,
+      "input_tokens": 115,
+      "prefix_tokens": 76,
+      "target_tokens": 40
+    },
+    {
+      "id": "N028T/merge_counts",
+      "thinking": false,
+      "input_tokens": 88,
+      "prefix_tokens": 52,
+      "target_tokens": 37
+    },
+    {
+      "id": "N028T/merge_counts",
+      "thinking": true,
+      "input_tokens": 106,
+      "prefix_tokens": 50,
+      "target_tokens": 57
+    },
+    {
+      "id": "N028T/substring_count",
+      "thinking": false,
+      "input_tokens": 75,
+      "prefix_tokens": 45,
+      "target_tokens": 31
+    },
+    {
+      "id": "N028T/substring_count",
+      "thinking": true,
+      "input_tokens": 93,
+      "prefix_tokens": 43,
+      "target_tokens": 51
+    },
+    {
+      "id": "N028G/0",
+      "thinking": false,
+      "input_tokens": 29,
+      "prefix_tokens": 27,
+      "target_tokens": 3
+    },
+    {
+      "id": "N028G/0",
+      "thinking": true,
+      "input_tokens": 43,
+      "prefix_tokens": 25,
+      "target_tokens": 19
+    },
+    {
+      "id": "N028G/1",
+      "thinking": false,
+      "input_tokens": 28,
+      "prefix_tokens": 26,
+      "target_tokens": 3
+    },
+    {
+      "id": "N028G/1",
+      "thinking": true,
+      "input_tokens": 39,
+      "prefix_tokens": 24,
+      "target_tokens": 16
+    },
+    {
+      "id": "N028G/2",
+      "thinking": false,
+      "input_tokens": 29,
+      "prefix_tokens": 26,
+      "target_tokens": 4
+    },
+    {
+      "id": "N028G/2",
+      "thinking": true,
+      "input_tokens": 37,
+      "prefix_tokens": 24,
+      "target_tokens": 14
+    },
+    {
+      "id": "N028G/3",
+      "thinking": false,
+      "input_tokens": 26,
+      "prefix_tokens": 25,
+      "target_tokens": 2
+    },
+    {
+      "id": "N028G/3",
+      "thinking": true,
+      "input_tokens": 37,
+      "prefix_tokens": 23,
+      "target_tokens": 15
+    },
+    {
+      "id": "N028G/4",
+      "thinking": false,
+      "input_tokens": 26,
+      "prefix_tokens": 25,
+      "target_tokens": 2
+    },
+    {
+      "id": "N028G/4",
+      "thinking": true,
+      "input_tokens": 36,
+      "prefix_tokens": 23,
+      "target_tokens": 14
+    },
+    {
+      "id": "N028G/5",
+      "thinking": false,
+      "input_tokens": 24,
+      "prefix_tokens": 22,
+      "target_tokens": 3
+    },
+    {
+      "id": "N028G/5",
+      "thinking": true,
+      "input_tokens": 33,
+      "prefix_tokens": 20,
+      "target_tokens": 14
+    },
+    {
+      "id": "N028G/6",
+      "thinking": false,
+      "input_tokens": 34,
+      "prefix_tokens": 33,
+      "target_tokens": 2
+    },
+    {
+      "id": "N028G/6",
+      "thinking": true,
+      "input_tokens": 49,
+      "prefix_tokens": 31,
+      "target_tokens": 19
+    },
+    {
+      "id": "N028G/7",
+      "thinking": false,
+      "input_tokens": 36,
+      "prefix_tokens": 35,
+      "target_tokens": 2
+    },
+    {
+      "id": "N028G/7",
+      "thinking": true,
+      "input_tokens": 51,
+      "prefix_tokens": 33,
+      "target_tokens": 19
+    },
+    {
+      "id": "N028G/8",
+      "thinking": false,
+      "input_tokens": 33,
+      "prefix_tokens": 32,
+      "target_tokens": 2
+    },
+    {
+      "id": "N028G/8",
+      "thinking": true,
+      "input_tokens": 45,
+      "prefix_tokens": 30,
+      "target_tokens": 16
+    },
+    {
+      "id": "N028G/9",
+      "thinking": false,
+      "input_tokens": 25,
+      "prefix_tokens": 24,
+      "target_tokens": 2
+    },
+    {
+      "id": "N028G/9",
+      "thinking": true,
+      "input_tokens": 33,
+      "prefix_tokens": 22,
+      "target_tokens": 12
+    },
+    {
+      "id": "N028G/10",
+      "thinking": false,
+      "input_tokens": 23,
+      "prefix_tokens": 21,
+      "target_tokens": 3
+    },
+    {
+      "id": "N028G/10",
+      "thinking": true,
+      "input_tokens": 36,
+      "prefix_tokens": 19,
+      "target_tokens": 18
+    },
+    {
+      "id": "N028G/11",
+      "thinking": false,
+      "input_tokens": 38,
+      "prefix_tokens": 36,
+      "target_tokens": 3
+    },
+    {
+      "id": "N028G/11",
+      "thinking": true,
+      "input_tokens": 45,
+      "prefix_tokens": 34,
+      "target_tokens": 12
+    },
+    {
+      "id": "N028U/call",
+      "thinking": false,
+      "input_tokens": 402,
+      "prefix_tokens": 341,
+      "target_tokens": 62
+    },
+    {
+      "id": "N028U/call",
+      "thinking": true,
+      "input_tokens": 415,
+      "prefix_tokens": 339,
+      "target_tokens": 77
+    },
+    {
+      "id": "N028U/final",
+      "thinking": false,
+      "input_tokens": 446,
+      "prefix_tokens": 442,
+      "target_tokens": 5
+    },
+    {
+      "id": "N028U/final",
+      "thinking": true,
+      "input_tokens": 459,
+      "prefix_tokens": 440,
+      "target_tokens": 20
+    },
+    {
+      "id": "N028U/repair",
+      "thinking": false,
+      "input_tokens": 458,
+      "prefix_tokens": 417,
+      "target_tokens": 42
+    },
+    {
+      "id": "N028U/repair",
+      "thinking": true,
+      "input_tokens": 482,
+      "prefix_tokens": 415,
+      "target_tokens": 68
+    },
+    {
+      "id": "N028U/repaired_final",
+      "thinking": false,
+      "input_tokens": 423,
+      "prefix_tokens": 420,
+      "target_tokens": 4
+    },
+    {
+      "id": "N028U/repaired_final",
+      "thinking": true,
+      "input_tokens": 434,
+      "prefix_tokens": 418,
+      "target_tokens": 17
+    }
+  ]
+}

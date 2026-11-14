@@ -1,0 +1,59 @@
+[
+  {
+    "id": "N029G/0",
+    "prompt": "Responda somente com o número: 19 vezes 7.",
+    "answers": [
+      "133"
+    ]
+  },
+  {
+    "id": "N029G/1",
+    "prompt": "Reply only with the integer remainder: 59 divided by 8.",
+    "answers": [
+      "3"
+    ]
+  },
+  {
+    "id": "N029G/2",
+    "prompt": "Ana arrived before Bia. Bia arrived before Caio. Who arrived first? Reply with the name only.",
+    "answers": [
+      "Ana"
+    ]
+  },
+  {
+    "id": "N029G/3",
+    "prompt": "Dê somente o plural de pão.",
+    "answers": [
+      "pães"
+    ]
+  },
+  {
+    "id": "N029G/4",
+    "prompt": "Traduza yellow para português. Responda uma palavra.",
+    "answers": [
+      "amarelo"
+    ]
+  },
+  {
+    "id": "N029G/5",
+    "prompt": "What is the capital of Norway? Reply only with the city.",
+    "answers": [
+      "Oslo"
+    ]
+  },
+  {
+    "id": "N029G/6",
+    "prompt": "Toda ave é um animal. Uma coruja é uma ave. Uma coruja é um animal? Responda apenas sim ou não.",
+    "answers": [
+      "sim"
+    ]
+  },
+  {
+    "id": "N029G/7",
+    "prompt": "Qual é mutável em Python: lista ou tupla? Responda uma palavra.",
+    "answers": [
+      "lista",
+      "list"
+    ]
+  }
+]

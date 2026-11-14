@@ -1,0 +1,74 @@
+[
+  {
+    "id": "N028G/0",
+    "prompt": "Responda somente com o número: 14 vezes 6.",
+    "solution": "84",
+    "plan": "Multiplicar quatorze por seis fornece o produto solicitado."
+  },
+  {
+    "id": "N028G/1",
+    "prompt": "Reply only with the integer: 91 minus 38.",
+    "solution": "53",
+    "plan": "Subtract the two integers and return the result."
+  },
+  {
+    "id": "N028G/2",
+    "prompt": "Qual é a capital de Portugal? Responda apenas o nome.",
+    "solution": "Lisboa",
+    "plan": "A capital de Portugal é Lisboa."
+  },
+  {
+    "id": "N028G/3",
+    "prompt": "What is the capital of Spain? Reply with the city only.",
+    "solution": "Madrid",
+    "plan": "Use the country-capital fact and return the city."
+  },
+  {
+    "id": "N028G/4",
+    "prompt": "Traduza green para português. Responda uma palavra.",
+    "solution": "verde",
+    "plan": "A tradução de green neste contexto é verde."
+  },
+  {
+    "id": "N028G/5",
+    "prompt": "Give only the plural of mouse (the animal).",
+    "solution": "mice",
+    "plan": "The animal noun has an irregular plural."
+  },
+  {
+    "id": "N028G/6",
+    "prompt": "Ana chegou antes de Bia; Bia chegou antes de Caio. Quem chegou primeiro? Apenas o nome.",
+    "solution": "Ana",
+    "plan": "A ordem informada coloca Ana antes de Bia e de Caio."
+  },
+  {
+    "id": "N028G/7",
+    "prompt": "Todo quadrado tem quatro lados. Esta figura é um quadrado. Tem quatro lados? Apenas sim ou não.",
+    "solution": "sim",
+    "plan": "Aplicar a propriedade de todos os quadrados à figura dada."
+  },
+  {
+    "id": "N028G/8",
+    "prompt": "Em Python, qual é mutável: list ou tuple? Responda apenas list ou tuple.",
+    "solution": "list",
+    "plan": "List permite alterações; tuple não permite alterar seus elementos."
+  },
+  {
+    "id": "N028G/9",
+    "prompt": "What keyword defines a Python function? Reply with one keyword.",
+    "solution": "def",
+    "plan": "Python function definitions start with def."
+  },
+  {
+    "id": "N028G/10",
+    "prompt": "Responda exatamente com a palavra: pronto",
+    "solution": "pronto",
+    "plan": "Cumprir o formato pedido sem acrescentar explicações."
+  },
+  {
+    "id": "N028G/11",
+    "prompt": "A box has 5 red balls and 7 blue balls. How many balls total? Reply only with a number.",
+    "solution": "12",
+    "plan": "Add the two disjoint groups."
+  }
+]

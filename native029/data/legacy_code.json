@@ -1,0 +1,312 @@
+[
+  {
+    "id": "N028V/transpose",
+    "family": "transpose",
+    "prompt": "Write Python function solve. Given rectangular matrix rows, return its transpose as lists. Empty matrix gives [].\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(rows):\n    return [list(col) for col in zip(*rows)]",
+    "plan": "",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            []
+          ]
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028V/merge_intervals",
+    "family": "merge_intervals",
+    "prompt": "Write Python function solve. Merge overlapping or touching closed intervals [start,end]. Return intervals in start order.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    out=[]\n    for a,b in sorted(xs):\n        if out and a<=out[-1][1]: out[-1][1]=max(out[-1][1],b)\n        else: out.append([a,b])\n    return out",
+    "plan": "",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              2
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              8,
+              9
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            6
+          ],
+          [
+            8,
+            9
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              3,
+              4
+            ],
+            [
+              1,
+              3
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              -2,
+              5
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            -2,
+            5
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "N028V/decode_runs",
+    "family": "decode_runs",
+    "prompt": "Write Python function solve. Given pairs [text,count] with nonnegative counts, concatenate each text repeated count times.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(pairs):\n    return \"\".join(text*count for text,count in pairs)",
+    "plan": "",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": ""
+      },
+      {
+        "args": [
+          [
+            [
+              "a",
+              3
+            ]
+          ]
+        ],
+        "expected": "aaa"
+      },
+      {
+        "args": [
+          [
+            [
+              "ab",
+              2
+            ],
+            [
+              "x",
+              0
+            ],
+            [
+              "!",
+              1
+            ]
+          ]
+        ],
+        "expected": "abab!"
+      },
+      {
+        "args": [
+          [
+            [
+              "z",
+              0
+            ]
+          ]
+        ],
+        "expected": ""
+      }
+    ]
+  },
+  {
+    "id": "N028V/zero_sum",
+    "family": "zero_sum",
+    "prompt": "Write Python function solve. Return the maximum length of a contiguous subarray whose sum is zero, or 0 if none.\nReturn only the complete function after any thinking. Do not import modules.",
+    "solution": "def solve(xs):\n    first={0:-1}\n    total=best=0\n    for i,x in enumerate(xs):\n        total+=x\n        if total in first: best=max(best,i-first[total])\n        else: first[total]=i\n    return best",
+    "plan": "",
+    "cases": [
+      {
+        "args": [
+          []
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            0
+          ]
+        ],
+        "expected": 1
+      },
+      {
+        "args": [
+          [
+            1,
+            -1
+          ]
+        ],
+        "expected": 2
+      },
+      {
+        "args": [
+          [
+            2,
+            -2,
+            3,
+            0,
+            -3
+          ]
+        ],
+        "expected": 5
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "expected": 3
+      }
+    ]
+  }
+]

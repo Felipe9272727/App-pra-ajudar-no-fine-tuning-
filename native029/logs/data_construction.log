@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/native029/build_validation.py", line 49, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/liquid-sense/native029/build_validation.py", line 27, in main
+    add('components','Given n>=0 and list edges of undirected edges [u,v], vertices are 0..n-1. Return the number of connected components, counting isolated vertices. Self-edges and repeated edges are allowed.',
+  File "/workspace/liquid-sense/native029/build_validation.py", line 13, in add
+    assert evaluate(solution,row)['all_passed'],name
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+AssertionError: components

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "N028A/0",
+    "prompt": "Explique brevemente o que é uma variável em Python.",
+    "solution": "Uma variável associa um nome a um valor que o programa pode usar."
+  },
+  {
+    "id": "N028A/1",
+    "prompt": "Explain briefly why tests should include empty input.",
+    "solution": "Empty inputs often exercise boundary cases that ordinary inputs miss."
+  },
+  {
+    "id": "N028A/2",
+    "prompt": "O que uma lista Python armazena? Resuma.",
+    "solution": "Uma lista armazena uma sequência ordenada de elementos e pode ser modificada."
+  },
+  {
+    "id": "N028A/3",
+    "prompt": "What does a dictionary map in Python?",
+    "solution": "A dictionary maps keys to values."
+  },
+  {
+    "id": "N028A/4",
+    "prompt": "Qual é a capital da Itália? Responda uma palavra.",
+    "solution": "Roma"
+  },
+  {
+    "id": "N028A/5",
+    "prompt": "What is the capital of Japan? Reply only with the city.",
+    "solution": "Tokyo"
+  },
+  {
+    "id": "N028A/6",
+    "prompt": "Traduza hello para português.",
+    "solution": "Olá"
+  },
+  {
+    "id": "N028A/7",
+    "prompt": "Reply only with a number: 8 plus 11.",
+    "solution": "19"
+  },
+  {
+    "id": "N028A/8",
+    "prompt": "Dê uma dica curta para localizar um erro em código.",
+    "solution": "Reproduza o problema com um caso pequeno e compare o resultado com o esperado."
+  },
+  {
+    "id": "N028A/9",
+    "prompt": "Explain what a Python return statement does.",
+    "solution": "It ends the function call and sends a value back to the caller."
+  },
+  {
+    "id": "N028A/10",
+    "prompt": "Qual é o contrário de aumentar? Responda uma palavra.",
+    "solution": "diminuir"
+  },
+  {
+    "id": "N028A/11",
+    "prompt": "Name one reason to use a function in a program.",
+    "solution": "A function groups reusable behavior behind a clear interface."
+  }
+]
