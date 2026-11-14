@@ -1,0 +1,54 @@
+{
+  "status": "signed_tools_APK_built",
+  "path": "/dev/shm/liquid-android/epochs030-apk/LiquidSense-0.5.0-epochs-preview.apk",
+  "bytes": 1969325396,
+  "sha256": "9a1a487230f7979f441002cc885501f5eb79d1f859e12474cb6b14c93b239cac",
+  "package": "dev.liquidsense.chat.tools",
+  "separate_app_preserves_specialist_and_original": true,
+  "versionCode": 3,
+  "parent_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "config": {
+    "use_validated_dense": false,
+    "model_parent": "general_best",
+    "neural_loop_visits": 56,
+    "physical_layers": 32,
+    "tools_variant": "preserved_general_tools_runtime",
+    "experimental": true,
+    "general_quality_promotion": false,
+    "context_tokens": 16384,
+    "generation_presets": {
+      "normal": {
+        "thinking": false,
+        "reasoning_tokens": 0,
+        "response_tokens": 2048
+      },
+      "profundo": {
+        "thinking": true,
+        "reasoning_tokens": 1024,
+        "response_tokens": 2048
+      },
+      "extenso": {
+        "thinking": true,
+        "reasoning_tokens": 2048,
+        "response_tokens": 4096
+      }
+    },
+    "default_general_profile": "normal",
+    "agent_max_rounds": 6,
+    "agent_max_actual_tools": 4,
+    "task_output_limit": 16384,
+    "experimental_model_id": "epochs029",
+    "experimental_source_archive_sha256": "73b452641035c272aef3ecb76e7fd8b2fd75b1e261007bb32107ad04c4fe4b06",
+    "experimental_patch_sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+    "experimental_checkpoint": "native029_epoch02",
+    "experimental_not_general_promotion": true,
+    "default_model_id": "tools"
+  },
+  "phone_execution_verified": false,
+  "specialist_option": "uses optional installed dev.liquidsense.chat.fast public assets",
+  "base_general_fully_bundled": true,
+  "experimental_epoch02_fully_bundled": true,
+  "experimental_patch_sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+  "default_preserved": "tools/general",
+  "previous_apk_sha256": "6cb9927dca809c901947aed2c4ebd577d421de87e338f06c2714ea21a0f091db"
+}

@@ -1,0 +1,5 @@
+    62: 00000000001be7fc  2432 FUNC    GLOBAL DEFAULT   13 Java_dev_liquidsense_chat_MainActivity_nativeAttachPatch
+    65: 00000000001bcd8c  6544 FUNC    GLOBAL DEFAULT   13 Java_dev_liquidsense_chat_MainActivity_nativeLoad
+  2622: 00000000001be71c   224 FUNC    LOCAL  DEFAULT   13 _ZN12liquid_sense7android49Java_dev_liquidsense_chat_MainActivity_nativeLoad28_$u7b$$u7b$closure$u7d$$u7d$28_$u7b$$u7b$closure$u7d$$u7d$17h2e88e2217ac5b56dE
+ 22108: 00000000001be7fc  2432 FUNC    GLOBAL DEFAULT   13 Java_dev_liquidsense_chat_MainActivity_nativeAttachPatch
+ 22111: 00000000001bcd8c  6544 FUNC    GLOBAL DEFAULT   13 Java_dev_liquidsense_chat_MainActivity_nativeLoad

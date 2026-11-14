@@ -1,0 +1,14 @@
+{
+  "status": "exact_epoch02_patch_exported",
+  "path": "/dev/shm/liquid-android/epochs030/epoch02.lspatch",
+  "bytes": 352753958,
+  "sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+  "changed_tensors": 381,
+  "decoded_override_bytes": 1000020000,
+  "all546_text_hashes_verified": true,
+  "all699_source_hashes_verified": true,
+  "source_archive_sha256": "73b452641035c272aef3ecb76e7fd8b2fd75b1e261007bb32107ad04c4fe4b06",
+  "no_quantization": true,
+  "new_training_updates": 0,
+  "seconds": 92.73440669499905
+}

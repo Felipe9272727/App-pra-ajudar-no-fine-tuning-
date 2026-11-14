@@ -1,0 +1,14 @@
+{
+  "research_checkpoint_branch": "codex/liquid-sense-main-four-epochs-029-20261114",
+  "research_commit": "f07a48295b01a5e2d8517301605f85e36c1c02af",
+  "app_branch": "codex/liquid-sense-app-epochs-030-20261114",
+  "source_initial_commit": "898f27fb7ef569d7f5ddca6a2768c9a32263c653",
+  "exact85patch_fragments_commit": "9524523fd437802c5d42bdd957be775c0329b908",
+  "all85_returned_Git_blob_SHA1_match_local_bytes": true,
+  "patch_sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+  "parent_checkpoint_unchanged_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "apk_download": "https://gofile.io/d/7OFCC99z",
+  "no_general_promotion": true,
+  "exact_signed_APK_archive_commit": "dde4905c5cd8893f6b1a0026b6bed51a18202ae2",
+  "all_archive_fragment_Git_blob_identities_verified": true
+}

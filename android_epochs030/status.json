@@ -1,10 +1,21 @@
 {
-  "status": "building",
-  "training_updates": 0,
-  "candidate": "native029_epoch02",
-  "general_promotion": false,
-  "default": "tools/general",
-  "source_ref": "f07a48295b01a5e2d8517301605f85e36c1c02af",
+  "status": "completed_experimental_app_update_delivered",
+  "app_version": "0.5.0-epochs-preview",
   "versionCode": 3,
-  "phone_execution_verified": false
+  "package": "dev.liquidsense.chat.tools",
+  "default_model": "tools/general_preserved",
+  "optional_model": "native029_epoch02",
+  "candidate_general_quality_promoted": false,
+  "new_training_updates": 0,
+  "weights_exact": true,
+  "all546_mobile_text_hashes_verified": true,
+  "all699_source_hashes_verified": true,
+  "rust_generation_equivalent_to_python": false,
+  "physical_device_tested": false,
+  "rust_unit_tests": 18,
+  "java_agent_checks": 27,
+  "apk_sha256": "9a1a487230f7979f441002cc885501f5eb79d1f859e12474cb6b14c93b239cac",
+  "public_download": "https://gofile.io/d/7OFCC99z",
+  "background_model_processes": false,
+  "private_upload_credentials_published": false
 }

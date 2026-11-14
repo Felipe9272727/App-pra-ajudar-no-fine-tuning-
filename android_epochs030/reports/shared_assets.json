@@ -1,0 +1,41 @@
+{
+  "source_apk_sha256": "6cb9927dca809c901947aed2c4ebd577d421de87e338f06c2714ea21a0f091db",
+  "full_archived_stream_verified": true,
+  "assets": [
+    {
+      "name": "tokenizer.json",
+      "bytes": 12807982,
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+    },
+    {
+      "name": "identity.json",
+      "bytes": 1864,
+      "sha256": "9a43ca881ff844d9a55fa4e0af6b21a763b4c228f4dd29e22a5e51abca931fd9"
+    },
+    {
+      "name": "LICENSE_QWEN.txt",
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    {
+      "name": "NOTICE.txt",
+      "bytes": 703,
+      "sha256": "d24dde7cf4fe3ef562c3e8b1a024621a344b20868bae7281a6a0fbb77df18f82"
+    },
+    {
+      "name": "LLVM_LICENSE.txt",
+      "bytes": 15142,
+      "sha256": "837f5d6ac67c8f7a5f43bf675a0f8afc1564600ebdc6f350411bc5dd790c2eda"
+    },
+    {
+      "name": "RUST_LICENSES.txt",
+      "bytes": 12471,
+      "sha256": "12bfc1331726c1b65d43e2fc688f62b1883df1ea1f263e89cf9ca62d713a5612"
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 834348,
+      "sha256": "bd2806d1430dbbe777955c8a32472ff061fb9e23c67785819c77f7c1a960d462"
+    }
+  ]
+}

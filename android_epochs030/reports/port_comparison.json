@@ -1,0 +1,61 @@
+{
+  "scope": "two already observed questions, Rust Linux host not phone; code prefix capped48 versus original study128; not a fresh matched quality benchmark",
+  "matches": {
+    "parent": [
+      {
+        "id": "N029V/chunks",
+        "ids_equal_observed_Python": true,
+        "actual_tokens": 48,
+        "expected_tokens": 48,
+        "actual_text": "def solve(xs, k):\n    \"\"\"\n    Given a list xs and integer k>0, split xs into consecutive lists of length k;\n    include the shorter last chunk.\n    \n    Parameters:\n        xs (list"
+      },
+      {
+        "id": "N029G/0",
+        "ids_equal_observed_Python": true,
+        "actual_tokens": 4,
+        "expected_tokens": 4,
+        "actual_text": "123"
+      }
+    ],
+    "experimental": [
+      {
+        "id": "N029V/chunks",
+        "ids_equal_observed_Python": false,
+        "actual_tokens": 22,
+        "expected_tokens": 26,
+        "actual_text": "def solve(xs,k):\n    return [x[:k] for x in xs[k::k]]"
+      },
+      {
+        "id": "N029G/0",
+        "ids_equal_observed_Python": true,
+        "actual_tokens": 4,
+        "expected_tokens": 4,
+        "actual_text": "133"
+      }
+    ]
+  },
+  "weight_hashes_verified": 546,
+  "experimental_changed_tensors": 381,
+  "equivalent_generation_claim": false,
+  "default_and_old_checkpoint_unchanged": true,
+  "experimental_chunk_probe": {
+    "passed": 1,
+    "total": 5,
+    "all_passed": false,
+    "category": "TypeError",
+    "error_types": [
+      "TypeError",
+      "WrongReturnValue"
+    ],
+    "case_passed": [
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "code": "def solve(xs,k):\n    return [x[:k] for x in xs[k::k]]"
+  },
+  "original_harness_issue": "Stopped only248044 and overran official248046 on general probe. Raw logs preserved; changed harness to honor both and reran only affected general probe. No code quality retries.",
+  "device_tested": false
+}
