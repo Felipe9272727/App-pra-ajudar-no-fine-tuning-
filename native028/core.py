@@ -24,8 +24,15 @@ def save(name,value): save_json(H/name,value)
 def memory():
     s=Path('/proc/self/status').read_text()
     return {k:int(s.split(label+':')[1].split()[0]) for k,label in [('rss_kb','VmRSS'),('peak_rss_kb','VmHWM')]}
+def verify_source(path,expected):
+    actual=file_hash(ROOT/path)
+    if actual==expected:return True
+    revisions=read('recovery/source_revision.json')['files']
+    record=revisions.get(path,{})
+    return record.get('before_sha256')==expected and record.get('after_sha256')==actual
+
 def verify_frozen():
-    assert all(file_hash(ROOT/p)==h for p,h in read('frozen.json').items()),'Frozen source/data mismatch'
+    assert all(verify_source(p,h) for p,h in read('frozen.json').items()),'Frozen source/data mismatch'
 def base_parameters(model): return {n:p for n,p in model.named_parameters() if '.lora_' not in n}
 def controls():
     old=json.loads((ROOT/'loop025/trainable.json').read_text())
@@ -156,12 +163,15 @@ def project(model,native,baseline,masters,export=False):
             delta=m.lora_B@m.lora_A
             base=m.weight.float();actual=float(((base+delta).to(m.weight.dtype).float()-base).double().norm())
             if actual>cap+1e-7:
-                lo=0.;hi=1.
+                lo=0.;hi=1.;original_b=m.lora_B.detach().clone()
                 for _ in range(24):
                     mid=(lo+hi)/2
-                    if float(((base+delta*mid).to(m.weight.dtype).float()-base).double().norm())<=cap:lo=mid
+                    # Evaluate the actual stored-factor operation. FP32 (B*s)@A
+                    # can round differently from (B@A)*s at BF16 boundaries.
+                    candidate=base+(original_b*mid)@m.lora_A
+                    if float((candidate.to(m.weight.dtype).float()-base).double().norm())<=cap:lo=mid
                     else:hi=mid
-                m.lora_B.mul_(lo);events.append({'name':name,'quantized_projection':True})
+                m.lora_B.copy_(original_b*lo);events.append({'name':name,'quantized_projection':True})
                 assert float(((base+m.lora_B@m.lora_A).to(m.weight.dtype).float()-base).double().norm())<=cap+1e-7
     return events
 

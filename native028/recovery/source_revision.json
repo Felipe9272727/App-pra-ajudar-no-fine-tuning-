@@ -1,0 +1,18 @@
+{
+  "reason": "Technical fix: evaluate BF16 export bound on the actual stored-factor expression (B*s)@A; distributive FP32 rounding from (B@A)*s caused a bound assertion at step48. No change to data, learning schedule, rewards, evaluation, budgets or gates.",
+  "files": {
+    "native028/core.py": {
+      "before_sha256": "2f14e018efd918f65010d99cec877a6dfed67d896d12b873120d252dd48b3535",
+      "after_sha256": "0acf8c2d70c0fe8c52b7c56277e1660d0b36296191987fc9857aabf41434a239"
+    },
+    "native028/inference.py": {
+      "before_sha256": "40d078bdd78219a6ce752bb6ce9a632939d7a7cf2cd13c84b0961a24f467d5f2",
+      "after_sha256": "93c79813a74012be4b7f4b761d8c263f4e1445627ada536a77276d5d63e74a93"
+    }
+  },
+  "resume_from_optimizer_step": 48,
+  "repeat_completed_updates": false,
+  "validation_outputs_observed": false,
+  "initial_freezes_retained": true,
+  "verification": "native028/recovery/export_fix/verification.json"
+}

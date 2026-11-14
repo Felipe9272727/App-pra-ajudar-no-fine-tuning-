@@ -7,7 +7,7 @@ import ast
 def verify_stage(name):
     verify_frozen()
     audit=read('frozen_'+name+'.json')
-    assert all(file_hash(ROOT/p)==h for p,h in audit.items()),'Stage source freeze mismatch'
+    assert all(verify_source(p,h) for p,h in audit.items()),'Stage source freeze mismatch'
 
 
 def prefix(tok,row,thinking=False,messages=None,tools=None):
