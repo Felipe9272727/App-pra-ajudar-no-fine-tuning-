@@ -13,6 +13,12 @@ def main():
     data={v:read('reports/validation_'+v+'.json') for v in variants}
     assert all(r['status']=='complete' for r in data.values())
     sft=read('reports/sft_training.json');policy=read('reports/policy_training.json')
+    samples=[sample for index in range(8) for sample in read(f'rollouts/group{index:02d}.json')['samples']]
+    assert len(samples)==32
+    fit={'all_cases_correct':sum(r['all_passed'] for r in samples),'samples':len(samples),
+        'thinking_closed':sum(r['thinking_closed'] for r in samples),'ended_eos':sum(r['ended_eos'] for r in samples),
+        'mean_tokens':sum(r['tokens'] for r in samples)/len(samples),
+        'scope':'TRAIN prompts, before each respective group update; not independent evaluation'}
     winner=selection['selected'];final=None;promote=False
     if winner:
         from decide import compare
@@ -43,7 +49,7 @@ def main():
             'factor_values':audit['sft_final']['factor_values'],'native_control_values':audit['sft_final']['native_values'],
             'both_actual_visits_recomputed':sft['both_actual_visits_recomputed'],
             'policy_groups':policy['groups'],'policy_samples':policy['samples'],'policy_updates':policy['updates'],
-            'policy_zero_variance_skips':policy['skipped_zero_variance']},
+            'policy_zero_variance_skips':policy['skipped_zero_variance'],'rollout_train_fit':fit},
         'validation':{v:r['summary'] for v,r in data.items()},'selection':selection,'final':final,
         'validated_research_candidate':winner if promote else None,
         'general_parent_stays_selected':True,'research_candidate_passed_both_gates':promote,'no_existing_checkpoint_overwritten':True,
@@ -64,6 +70,7 @@ def main():
         'Loop/mHC, conv7 e janelas256 preservados. Não há um conjunto conhecido de pesos exclusivo de pensamento.','',
         f'A etapa de política gerou 32 amostras em oito grupos de tarefas de TREINO: {policy["updates"]} atualizações reais, '
         f'{policy["skipped_zero_variance"]} grupos sem variância descartados. '
+        f'Nas32amostras de TREINO, {fit["all_cases_correct"]} passaram todos os casos; isso não é validação independente. '
         'Recompensas vêm de execução no sandbox; gabaritos não entram nos prompts de geração. '
         'Isto é um protótipo limitado de PPO relativo ao grupo, não reprodução de DAPO/OPD industrial.','',
         '## Comparação independente','',
