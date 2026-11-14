@@ -1,0 +1,26 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 68/473 [00:00<00:00, 675.21it/s]Loading weights:  36%|███▌      | 168/473 [00:00<00:00, 835.33it/s]Loading weights:  53%|█████▎    | 252/473 [00:00<00:00, 526.24it/s]Loading weights:  66%|██████▋   | 314/473 [00:00<00:00, 531.04it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 848.62it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL029 validation original False N029V/chunks 0 128
+EVAL029 validation original False N029V/anagram_groups 0 128
+EVAL029 validation original False N029V/sliding_max 2 128
+EVAL029 validation original False N029V/components 0 128
+EVAL029 validation original False N029G/0 False 4
+EVAL029 validation original False N029G/1 False 2
+EVAL029 validation original False N029G/2 True 2
+EVAL029 validation original False N029G/3 True 3
+EVAL029 validation original False N029G/4 True 5
+EVAL029 validation original False N029G/5 True 3
+EVAL029 validation original False N029G/6 True 2
+EVAL029 validation original False N029G/7 False 3
+EVAL029 validation original True N029V/chunks 0 192
+EVAL029 validation original True N029V/anagram_groups 0 192
+EVAL029 validation original True N029V/sliding_max 0 192
+EVAL029 validation original True N029V/components 0 192
+EVAL029 validation original True N029G/0 False 192
+EVAL029 validation original True N029G/1 False 192
+EVAL029 validation original True N029G/2 False 192
+EVAL029 validation original True N029G/3 False 192
