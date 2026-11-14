@@ -1,0 +1,42 @@
+[
+  {
+    "stage": "initial_factors",
+    "compressed_sha256": "122b20df2b44ce2c0f1bee1a828639fe7ae8b3d3efd04c68ecbc14b2e307c2b8",
+    "compressed_bytes": 9062890,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 35598613,
+    "cold_native_all699_hashes_verified": false
+  },
+  {
+    "stage": "epoch01",
+    "compressed_sha256": "f6382e8cb2c1d3edf653ef0b26007fecfb3b5a11e780cb9abe71d9d9a6e74ddc",
+    "compressed_bytes": 86454073,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 94581890,
+    "cold_native_all699_hashes_verified": true
+  },
+  {
+    "stage": "epoch02",
+    "compressed_sha256": "73b452641035c272aef3ecb76e7fd8b2fd75b1e261007bb32107ad04c4fe4b06",
+    "compressed_bytes": 86428053,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 94581890,
+    "cold_native_all699_hashes_verified": true
+  },
+  {
+    "stage": "epoch03",
+    "compressed_sha256": "d6731e91ac2a9e362535e9622e66f94bf3033478f9235c748ec6a4f07bf2b492",
+    "compressed_bytes": 86450311,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 94581890,
+    "cold_native_all699_hashes_verified": true
+  },
+  {
+    "stage": "epoch04",
+    "compressed_sha256": "9c0940b41d7a5b29d3570b17ac8fe8911b66d4b5cc7f0f4774f50806bfeac8e0",
+    "compressed_bytes": 86437166,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 94581890,
+    "cold_native_all699_hashes_verified": true
+  }
+]

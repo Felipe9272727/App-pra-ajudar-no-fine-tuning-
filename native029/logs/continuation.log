@@ -1,0 +1,27 @@
+PHASE029_START evaluate original
+PHASE029_END evaluate original
+PHASE029_START evaluate parent
+PHASE029_END evaluate parent
+PHASE029_START evaluate parent --split legacy
+PHASE029_END evaluate parent --split legacy
+PHASE029_START evaluate epoch01
+PHASE029_END evaluate epoch01
+PHASE029_START evaluate epoch01 --split legacy
+PHASE029_END evaluate epoch01 --split legacy
+PHASE029_START evaluate epoch02
+PHASE029_END evaluate epoch02
+PHASE029_START evaluate epoch02 --split legacy
+PHASE029_END evaluate epoch02 --split legacy
+PHASE029_START evaluate epoch03
+PHASE029_END evaluate epoch03
+PHASE029_START evaluate epoch03 --split legacy
+PHASE029_END evaluate epoch03 --split legacy
+PHASE029_START evaluate epoch04
+PHASE029_END evaluate epoch04
+PHASE029_START evaluate epoch04 --split legacy
+PHASE029_END evaluate epoch04 --split legacy
+PHASE029_START evaluate --select
+PHASE029_END evaluate --select
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+REPORT029_COMPLETE None
+FOUR_EPOCH029_ALL_WORKERS_CLOSED

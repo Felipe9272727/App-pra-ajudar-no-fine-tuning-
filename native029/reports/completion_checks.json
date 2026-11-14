@@ -1,0 +1,12 @@
+{
+  "all192steps_once": true,
+  "new_epochs": 4,
+  "target_token_presentations": 10796,
+  "all4epoch_manifests_present": true,
+  "both_loop_visits_backward_verified": true,
+  "selected_nonzero_gradient_tensors": 576,
+  "no_models_active": true,
+  "parent_file_unchanged": true,
+  "sealed_final_unqueried": true,
+  "selected_research_candidate": null
+}
