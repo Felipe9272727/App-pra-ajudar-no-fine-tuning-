@@ -1,0 +1,16 @@
+{
+  "status": "research_complete_main_model_only",
+  "checked_utc": "2026-11-14T02:17:19.334688+00:00",
+  "model_inference_performed": false,
+  "training_performed": false,
+  "weights_changed": false,
+  "phone_state_read": false,
+  "next_main_training_authorized_by_user": true,
+  "sources": {
+    "research027/AGENTS.md": "6f6fad0a70e772ac45d07a65e93ff7002606e84ba0690f0d6b90743854a4d353",
+    "research027/REPORT.md": "0b0592a4fcb7b7baee042cbce8d4c201f60ef16aaf33e49706ca3294ca442fc8",
+    "research027/collect_metadata.py": "98bcf36428f0bcd1bc27f9099b9287282fc6b7d37319d1e46181ad960b883426",
+    "research027/official_metadata.json": "78f5eeb4fc7d2b122286f85e124f9f7f8184082d104d2b0ad926ab7b7da99d77",
+    "research027/metadata_collection.log": "cb955a889b94fdb7e982553f95531cc0c7fdc087df02b3f200bc854d6c20e2e3"
+  }
+}
