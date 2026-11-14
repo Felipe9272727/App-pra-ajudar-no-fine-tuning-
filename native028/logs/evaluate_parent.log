@@ -1,0 +1,28 @@
+CPU_RUNTIME {"torch": "2.15.0+cpu", "threads": 4, "cpu_count": 3, "capability": "AVX512"}
+Loading weights:   0%|          | 0/675 [00:00<?, ?it/s]Loading weights:  11%|█▏        | 77/675 [00:00<00:00, 763.77it/s]Loading weights:  32%|███▏      | 215/675 [00:00<00:00, 1041.56it/s]Loading weights:  47%|████▋     | 318/675 [00:00<00:00, 931.73it/s] Loading weights:  61%|██████    | 412/675 [00:00<00:00, 841.52it/s]Loading weights:  74%|███████▎  | 497/675 [00:00<00:00, 825.97it/s]Loading weights:  87%|████████▋ | 585/675 [00:00<00:00, 839.56it/s]Loading weights: 100%|██████████| 675/675 [00:00<00:00, 890.52it/s]
+PHASE_START {"phase": "checkpoint_load:best.pt", "budget_seconds": 600, "started_unix": 1794628432.068286, "attempt": null, "pid": 64691}
+PHASE_END checkpoint_load:best.pt 0.005
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+EVAL028 validation parent False N028V/transpose 2 85
+EVAL028 validation parent False N028V/merge_intervals 0 128
+EVAL028 validation parent False N028V/decode_runs 0 126
+EVAL028 validation parent False N028V/zero_sum 5 90
+EVAL028 validation parent False N028VG/0 False 3
+EVAL028 validation parent False N028VG/1 False 2
+EVAL028 validation parent False N028VG/2 True 3
+EVAL028 validation parent False N028VG/3 True 3
+EVAL028 validation parent False N028VG/4 False 4
+EVAL028 validation parent False N028VG/5 True 3
+EVAL028 validation parent False N028VG/6 True 2
+EVAL028 validation parent False N028VG/7 True 4
+EVAL028 validation parent True N028V/transpose 0 192
+EVAL028 validation parent True N028V/merge_intervals 0 192
+EVAL028 validation parent True N028V/decode_runs 0 192
+EVAL028 validation parent True N028V/zero_sum 0 192
+EVAL028 validation parent True N028VG/0 False 192
+EVAL028 validation parent True N028VG/1 False 192
+EVAL028 validation parent True N028VG/2 False 192
+EVAL028 validation parent True N028VG/3 False 192
