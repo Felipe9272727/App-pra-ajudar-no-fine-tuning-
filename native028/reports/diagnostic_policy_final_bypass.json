@@ -1,0 +1,525 @@
+{
+  "variant": "policy_final",
+  "split": "diagnostic",
+  "rows": [
+    {
+      "ids": [
+        85160,
+        264,
+        49693,
+        5979,
+        13,
+        21539,
+        6761,
+        86201,
+        82,
+        3512,
+        4147,
+        7890,
+        13,
+        198,
+        248069,
+        271,
+        727,
+        11290,
+        30863,
+        1590,
+        198,
+        262,
+        460,
+        498,
+        633,
+        71766,
+        364,
+        2713,
+        303,
+        6761,
+        60,
+        248044
+      ],
+      "raw": "Transpose a rectangular matrix. Empty rows/columns become empty columns.\n</think>\n\ndef solve(rows):\n    return [row[:] for row in rows]",
+      "delivered": "def solve(rows):\n    return [row[:] for row in rows]",
+      "tokens": 32,
+      "ended_eos": true,
+      "hit_limit": false,
+      "thinking": true,
+      "thinking_closed": true,
+      "seconds_descriptive_only": 10.258504122990416,
+      "repeated_8gram_fraction": 0.0,
+      "second_exit_replaced_by_first": true,
+      "replacement_diagnostics": [
+        {
+          "relative_L2": 0.05906591936945915,
+          "cosine": 0.9983005523681641
+        },
+        {
+          "relative_L2": 0.05958803370594978,
+          "cosine": 0.9983665347099304
+        },
+        {
+          "relative_L2": 0.058314595371484756,
+          "cosine": 0.9984233379364014
+        },
+        {
+          "relative_L2": 0.06116921827197075,
+          "cosine": 0.9982237219810486
+        },
+        {
+          "relative_L2": 0.058762479573488235,
+          "cosine": 0.9984897375106812
+        },
+        {
+          "relative_L2": 0.05099983513355255,
+          "cosine": 0.9987878203392029
+        },
+        {
+          "relative_L2": 0.05696175992488861,
+          "cosine": 0.9984169006347656
+        },
+        {
+          "relative_L2": 0.06232469901442528,
+          "cosine": 0.9982931613922119
+        },
+        {
+          "relative_L2": 0.05396346002817154,
+          "cosine": 0.9985906481742859
+        },
+        {
+          "relative_L2": 0.062408383935689926,
+          "cosine": 0.998376727104187
+        },
+        {
+          "relative_L2": 0.05991702154278755,
+          "cosine": 0.9983479380607605
+        },
+        {
+          "relative_L2": 0.06246442720293999,
+          "cosine": 0.9981232285499573
+        },
+        {
+          "relative_L2": 0.06825976073741913,
+          "cosine": 0.9977559447288513
+        },
+        {
+          "relative_L2": 0.04972904920578003,
+          "cosine": 0.998795211315155
+        },
+        {
+          "relative_L2": 0.05678049474954605,
+          "cosine": 0.9984378814697266
+        },
+        {
+          "relative_L2": 0.06466025114059448,
+          "cosine": 0.9979312419891357
+        },
+        {
+          "relative_L2": 0.0668860599398613,
+          "cosine": 0.997900664806366
+        },
+        {
+          "relative_L2": 0.05429082363843918,
+          "cosine": 0.9985889196395874
+        },
+        {
+          "relative_L2": 0.05351889878511429,
+          "cosine": 0.998567521572113
+        },
+        {
+          "relative_L2": 0.05204877257347107,
+          "cosine": 0.9986457228660583
+        },
+        {
+          "relative_L2": 0.056840091943740845,
+          "cosine": 0.9984172582626343
+        },
+        {
+          "relative_L2": 0.05709006264805794,
+          "cosine": 0.9983842372894287
+        },
+        {
+          "relative_L2": 0.05613100156188011,
+          "cosine": 0.9984464645385742
+        },
+        {
+          "relative_L2": 0.06354595720767975,
+          "cosine": 0.9980238676071167
+        },
+        {
+          "relative_L2": 0.06571365147829056,
+          "cosine": 0.9979342222213745
+        },
+        {
+          "relative_L2": 0.06617484986782074,
+          "cosine": 0.9978219270706177
+        },
+        {
+          "relative_L2": 0.06671728938817978,
+          "cosine": 0.9978329539299011
+        },
+        {
+          "relative_L2": 0.06732944399118423,
+          "cosine": 0.9978357553482056
+        },
+        {
+          "relative_L2": 0.06367748230695724,
+          "cosine": 0.998045802116394
+        },
+        {
+          "relative_L2": 0.06032143160700798,
+          "cosine": 0.9982106685638428
+        },
+        {
+          "relative_L2": 0.05481429770588875,
+          "cosine": 0.9985029697418213
+        },
+        {
+          "relative_L2": 0.05092349648475647,
+          "cosine": 0.998702883720398
+        }
+      ],
+      "passed": 1,
+      "total": 5,
+      "all_passed": false,
+      "category": "WrongReturnValue",
+      "error_types": [
+        "WrongReturnValue"
+      ],
+      "case_passed": [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(rows):\n    return [row[:] for row in rows]",
+      "syntax_valid": true,
+      "id": "N028V/transpose",
+      "kind": "code",
+      "budget": 192
+    },
+    {
+      "ids": [
+        26487,
+        1754,
+        9581,
+        440,
+        279,
+        3555,
+        799,
+        13,
+        5875,
+        87502,
+        466,
+        29588,
+        26126,
+        10562,
+        13,
+        198,
+        248069,
+        271,
+        727,
+        11290,
+        10324,
+        82,
+        11,
+        10029,
+        1590,
+        198,
+        262,
+        460,
+        498,
+        1030,
+        2784,
+        8142,
+        8,
+        364,
+        264,
+        11,
+        292,
+        303,
+        10002,
+        10324,
+        82,
+        11,
+        1364,
+        7025,
+        248044
+      ],
+      "raw": "Compare each interval with the previous one. Overlapping or touching intervals merge.\n</think>\n\ndef solve(starts, ends):\n    return [min(a,b) for a, b in zip(starts,ends)]",
+      "delivered": "def solve(starts, ends):\n    return [min(a,b) for a, b in zip(starts,ends)]",
+      "tokens": 45,
+      "ended_eos": true,
+      "hit_limit": false,
+      "thinking": true,
+      "thinking_closed": true,
+      "seconds_descriptive_only": 13.84053789000609,
+      "repeated_8gram_fraction": 0.0,
+      "second_exit_replaced_by_first": true,
+      "replacement_diagnostics": [
+        {
+          "relative_L2": 0.05526082590222359,
+          "cosine": 0.9984734654426575
+        },
+        {
+          "relative_L2": 0.05645615607500076,
+          "cosine": 0.9984287619590759
+        },
+        {
+          "relative_L2": 0.056874219328165054,
+          "cosine": 0.9984335899353027
+        },
+        {
+          "relative_L2": 0.053422074764966965,
+          "cosine": 0.9986385703086853
+        },
+        {
+          "relative_L2": 0.05318840593099594,
+          "cosine": 0.9986343383789062
+        },
+        {
+          "relative_L2": 0.05532144755125046,
+          "cosine": 0.9986343383789062
+        },
+        {
+          "relative_L2": 0.05347074940800667,
+          "cosine": 0.9985837936401367
+        },
+        {
+          "relative_L2": 0.0540936104953289,
+          "cosine": 0.9986827969551086
+        },
+        {
+          "relative_L2": 0.04850376397371292,
+          "cosine": 0.9988234639167786
+        },
+        {
+          "relative_L2": 0.057429466396570206,
+          "cosine": 0.9984920024871826
+        },
+        {
+          "relative_L2": 0.05852947011590004,
+          "cosine": 0.9983426332473755
+        },
+        {
+          "relative_L2": 0.06666586548089981,
+          "cosine": 0.998035192489624
+        },
+        {
+          "relative_L2": 0.06087624281644821,
+          "cosine": 0.9982345700263977
+        },
+        {
+          "relative_L2": 0.07234428077936172,
+          "cosine": 0.9980831742286682
+        },
+        {
+          "relative_L2": 0.05617585778236389,
+          "cosine": 0.998512864112854
+        },
+        {
+          "relative_L2": 0.05016087368130684,
+          "cosine": 0.9987505674362183
+        },
+        {
+          "relative_L2": 0.056230392307043076,
+          "cosine": 0.9985112547874451
+        },
+        {
+          "relative_L2": 0.06449830532073975,
+          "cosine": 0.9979552626609802
+        },
+        {
+          "relative_L2": 0.0633581131696701,
+          "cosine": 0.9980639815330505
+        },
+        {
+          "relative_L2": 0.0513320118188858,
+          "cosine": 0.9987488985061646
+        },
+        {
+          "relative_L2": 0.055738069117069244,
+          "cosine": 0.9984610080718994
+        },
+        {
+          "relative_L2": 0.05651051178574562,
+          "cosine": 0.9984023571014404
+        },
+        {
+          "relative_L2": 0.06406889110803604,
+          "cosine": 0.9979689717292786
+        },
+        {
+          "relative_L2": 0.06493739038705826,
+          "cosine": 0.9979547262191772
+        },
+        {
+          "relative_L2": 0.057831376791000366,
+          "cosine": 0.9983276724815369
+        },
+        {
+          "relative_L2": 0.05424795299768448,
+          "cosine": 0.9985482096672058
+        },
+        {
+          "relative_L2": 0.0540037639439106,
+          "cosine": 0.9985432624816895
+        },
+        {
+          "relative_L2": 0.056740857660770416,
+          "cosine": 0.9984333515167236
+        },
+        {
+          "relative_L2": 0.0603034608066082,
+          "cosine": 0.9982434511184692
+        },
+        {
+          "relative_L2": 0.05768893286585808,
+          "cosine": 0.9984729290008545
+        },
+        {
+          "relative_L2": 0.057064805179834366,
+          "cosine": 0.998397171497345
+        },
+        {
+          "relative_L2": 0.05893740430474281,
+          "cosine": 0.9982999563217163
+        },
+        {
+          "relative_L2": 0.05822334811091423,
+          "cosine": 0.9983189105987549
+        },
+        {
+          "relative_L2": 0.06021755933761597,
+          "cosine": 0.9982545375823975
+        },
+        {
+          "relative_L2": 0.06877116858959198,
+          "cosine": 0.9979314804077148
+        },
+        {
+          "relative_L2": 0.06084835156798363,
+          "cosine": 0.9982856512069702
+        },
+        {
+          "relative_L2": 0.057662483304739,
+          "cosine": 0.9984160661697388
+        },
+        {
+          "relative_L2": 0.07309546321630478,
+          "cosine": 0.9975123405456543
+        },
+        {
+          "relative_L2": 0.06139833480119705,
+          "cosine": 0.9982373714447021
+        },
+        {
+          "relative_L2": 0.05100333318114281,
+          "cosine": 0.9987195134162903
+        },
+        {
+          "relative_L2": 0.050732068717479706,
+          "cosine": 0.9987145662307739
+        },
+        {
+          "relative_L2": 0.05354808643460274,
+          "cosine": 0.9985967874526978
+        },
+        {
+          "relative_L2": 0.05532931908965111,
+          "cosine": 0.9985364675521851
+        },
+        {
+          "relative_L2": 0.056367453187704086,
+          "cosine": 0.998412549495697
+        },
+        {
+          "relative_L2": 0.050721343606710434,
+          "cosine": 0.9987137317657471
+        }
+      ],
+      "passed": 0,
+      "total": 5,
+      "all_passed": false,
+      "category": "TypeError",
+      "error_types": [
+        "TypeError"
+      ],
+      "case_passed": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "code": "def solve(starts, ends):\n    return [min(a,b) for a, b in zip(starts,ends)]",
+      "syntax_valid": true,
+      "id": "N028V/merge_intervals",
+      "kind": "code",
+      "budget": 192
+    }
+  ],
+  "protocol": {
+    "sampling": false,
+    "threads": 4,
+    "eos_ids": [
+      248044,
+      248046
+    ],
+    "reference_or_cases_in_inputs": false,
+    "same_native_BF16_cache": true,
+    "bypass_all56_executions_retained": true
+  },
+  "metadata": {
+    "variant": "baseline",
+    "recipe": {
+      "gain": 0.05,
+      "beta": 0.0,
+      "liquid_mix": 1.0
+    },
+    "patch_sha256": null,
+    "architecture": {
+      "passes": 2,
+      "layer_executions": 56,
+      "physical_layers": 32,
+      "mhc_streams": 2,
+      "visit_gain_weights": [
+        0.949999988079071,
+        0.05000000074505806
+      ],
+      "conv_kernel": 7,
+      "learned_history_nonzero": 221184,
+      "local_window": 256,
+      "loaded_parameters": 1020252592,
+      "backward_passes": 0,
+      "limitations": "Qwen widths/weights, mHC routers initialized; eight inserted layers neutral; not full SenseNova/LFM3"
+    },
+    "native028_variant": "policy_final",
+    "checkpoint_sha256": "4dd01538d014b6c8b8917014f67e3f4d41944e0134d9bb2915771534a628941a",
+    "all699_hashes_verified": true
+  },
+  "status": "complete",
+  "summary": {
+    "False": {
+      "code_tasks": 0,
+      "code_total": 0,
+      "cases": 0,
+      "case_total": 0,
+      "general_correct": 0,
+      "general_total": 0,
+      "tokens": 0,
+      "unfinished_thinking": 0,
+      "truncated": 0
+    },
+    "True": {
+      "code_tasks": 0,
+      "code_total": 2,
+      "cases": 1,
+      "case_total": 10,
+      "general_correct": 0,
+      "general_total": 0,
+      "tokens": 77,
+      "unfinished_thinking": 0,
+      "truncated": 0
+    }
+  }
+}

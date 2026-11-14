@@ -1,0 +1,19 @@
+{
+  "all96_sft_step_ids_once": true,
+  "all8_policy_updates_real": true,
+  "arithmetic_audit": {
+    "sft_final": {
+      "rows": 2,
+      "same_ids": 2,
+      "same_case_bits": 2
+    },
+    "policy_final": {
+      "rows": 2,
+      "same_ids": 2,
+      "same_case_bits": 2
+    }
+  },
+  "all_primary_and_audit_model_workers_closed": true,
+  "selected_checkpoint_changed": false,
+  "sealed_final_queried": false
+}

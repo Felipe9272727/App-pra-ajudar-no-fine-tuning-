@@ -1,0 +1,42 @@
+[
+  {
+    "stage": "initial_factors",
+    "compressed_sha256": "f6e2e57e57ae82a68112fd23e7b2a5c8c51963f57d42cf806aad3d2beef59f4b",
+    "compressed_bytes": 9062886,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 35598613,
+    "cold_native_all699_hashes_verified": false
+  },
+  {
+    "stage": "recovery_step48",
+    "compressed_sha256": "82f8eb01f13d8caac2ef87545ce5a025dfc5153e74282690759cd81819c2e99e",
+    "compressed_bytes": 86369978,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 94489410,
+    "cold_native_all699_hashes_verified": false
+  },
+  {
+    "stage": "sft_epoch1",
+    "compressed_sha256": "80d4cb6a2d4b7d638cbea0e3ae58bd56bb65834c6395e176d998398aeecc9157",
+    "compressed_bytes": 86418677,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 94616706,
+    "cold_native_all699_hashes_verified": false
+  },
+  {
+    "stage": "sft_final",
+    "compressed_sha256": "0270ea8d23a89949516af502b63f62d00530c32d8d609ca6766e95ff72d60392",
+    "compressed_bytes": 86428327,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 94616706,
+    "cold_native_all699_hashes_verified": true
+  },
+  {
+    "stage": "policy_final",
+    "compressed_sha256": "4dd01538d014b6c8b8917014f67e3f4d41944e0134d9bb2915771534a628941a",
+    "compressed_bytes": 86668792,
+    "gzip_CRC_EOF_verified": true,
+    "uncompressed_bytes": 94596226,
+    "cold_native_all699_hashes_verified": true
+  }
+]
