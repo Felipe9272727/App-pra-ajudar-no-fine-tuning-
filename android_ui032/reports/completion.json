@@ -1,0 +1,10 @@
+{
+  "status": "complete_delivered_and_preserved",
+  "active_build_upload_or_test_workers": false,
+  "native_model_workers_started": false,
+  "download": "https://gofile.io/d/fNGVCZpE",
+  "verified_app_commit": "6f1e404952a1a2bc1011f3df951455306c3f7b93",
+  "verified_files": 55,
+  "main_index_commit": "0928f643966b5936c8c803d4ea65618cdf431694",
+  "physical_device_or_emulator_execution": false
+}
