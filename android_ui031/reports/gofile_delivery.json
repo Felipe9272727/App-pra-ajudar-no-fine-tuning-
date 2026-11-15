@@ -1,10 +1,10 @@
 {
   "status": "uploaded_metadata_verified_public_page_available",
-  "url": "https://gofile.io/d/fl8LUcK7",
-  "name": "LiquidSense-0.6.0-ui-preview.apk",
-  "bytes": 1969399331,
-  "sha256_local_signed_APK": "4c4d247fb0c63c3db8fef6779e27b0623f2172efe20a8efb44e1ab16a11c11a5",
-  "md5_local_and_remote": "fb7241ad30e16408029e7ae1826e212a",
+  "url": "https://gofile.io/d/QydCwORM",
+  "name": "LiquidSense-0.6.1-ui-preview.apk",
+  "bytes": 1969419805,
+  "sha256_local_signed_APK": "b8fd17c9e0f5b073fd04a7ffe47055f98a3c22e4848ed5c2c430488fea6f030d",
+  "md5_local_and_remote": "5fab2a876c63aa345f63aaa02a045d93",
   "public_page_HTTP": 200,
   "full_remote_redownload_performed": false,
   "phone_execution_verified": false

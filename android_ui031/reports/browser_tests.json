@@ -1,8 +1,16 @@
 {
   "status": "passed",
-  "checks": 29,
+  "checks": 37,
   "details": [
     "empty welcome screen",
+    "slash opens command suggestions",
+    "six local commands available",
+    "help is local",
+    "spaced slash clear dispatches empty context action",
+    "clear is never sent to the model",
+    "think command selects reasoning mode locally",
+    "models command opens real selector",
+    "unknown command is not sent to model",
     "all four legacy profiles grouped and available",
     "base modes disclose same weights",
     "experimental regression disclosed",

@@ -1,7 +1,7 @@
 """Upload the verified signed APK, keep guest-account data outside repository."""
 import hashlib,json,os,re,subprocess,urllib.request
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1];HERE=ROOT/'android_ui031';PRIVATE=Path('/tmp/liquid-gofile-ui031-upload')
+ROOT=Path(__file__).resolve().parents[1];HERE=ROOT/'android_ui031';PRIVATE=Path('/tmp/liquid-gofile-ui031-061-upload')
 def main():
  os.umask(0o077);PRIVATE.mkdir(mode=0o700,exist_ok=True)
  manifest=json.loads((HERE/'reports/apk_manifest.json').read_text());apk=Path(manifest['path']);assert apk.stat().st_size==manifest['bytes'];h=hashlib.sha256();md5=hashlib.md5()

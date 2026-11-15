@@ -1,0 +1,61 @@
+{
+  "status": "signed_UI031_APK_verified",
+  "path": "/dev/shm/liquid-android/ui031-apk/LiquidSense-0.6.0-ui-preview.apk",
+  "bytes": 1969399331,
+  "sha256": "4c4d247fb0c63c3db8fef6779e27b0623f2172efe20a8efb44e1ab16a11c11a5",
+  "package": "dev.liquidsense.chat.tools",
+  "versionCode": 4,
+  "versionName": "0.6.0-ui-preview",
+  "previous_APK_sha256": "9a1a487230f7979f441002cc885501f5eb79d1f859e12474cb6b14c93b239cac",
+  "native_libraries_unchanged": {
+    "lib/arm64-v8a/libliquid_sense.so": "a25f68b7e561d500b12eea88ee025f79a7648e7a2e82c33db5e2e0cd1f77527b",
+    "lib/arm64-v8a/libliquid_python.so": "f4799e029a0ac2e31e006759724fa89876440aacdd0dfb4e91ae91d8608d12a4"
+  },
+  "parent_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "experimental_patch_sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+  "new_training_updates": 0,
+  "same_previous_certificate": true,
+  "phone_execution_verified": false,
+  "UI_compiled": true,
+  "all_ZIP_CRC_verified": true,
+  "config": {
+    "use_validated_dense": false,
+    "model_parent": "general_best",
+    "neural_loop_visits": 56,
+    "physical_layers": 32,
+    "tools_variant": "preserved_general_tools_runtime",
+    "experimental": true,
+    "general_quality_promotion": false,
+    "context_tokens": 16384,
+    "generation_presets": {
+      "normal": {
+        "thinking": false,
+        "reasoning_tokens": 0,
+        "response_tokens": 2048
+      },
+      "profundo": {
+        "thinking": true,
+        "reasoning_tokens": 1024,
+        "response_tokens": 2048
+      },
+      "extenso": {
+        "thinking": true,
+        "reasoning_tokens": 2048,
+        "response_tokens": 4096
+      }
+    },
+    "default_general_profile": "normal",
+    "agent_max_rounds": 6,
+    "agent_max_actual_tools": 4,
+    "task_output_limit": 16384,
+    "experimental_model_id": "epochs029",
+    "experimental_source_archive_sha256": "73b452641035c272aef3ecb76e7fd8b2fd75b1e261007bb32107ad04c4fe4b06",
+    "experimental_patch_sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+    "experimental_checkpoint": "native029_epoch02",
+    "experimental_not_general_promotion": true,
+    "default_model_id": "tools",
+    "ui_version": "0.6.0",
+    "local_webview": true,
+    "UI_only_release": true
+  }
+}

@@ -18,6 +18,13 @@ with sync_playwright() as p:
     errors=[];page.on('pageerror',lambda e:errors.append(str(e)));page.add_init_script(mock);page.goto(f'http://127.0.0.1:{server.server_port}/');page.wait_for_function('window.Liquid && !document.getElementById("send").disabled===false')
     check(page.locator('#welcome').is_visible(),'empty welcome screen')
     page.screenshot(path=str(SHOTS/'welcome-mobile.png'))
+    page.locator('#message').fill('/');check(page.locator('#commands').is_visible(),'slash opens command suggestions');check(page.locator('.command-option').count()==6,'six local commands available')
+    page.locator('.command-option').filter(has_text='/help').click();check(page.locator('#sheet-title').inner_text()=='Comandos do chat','help is local');page.keyboard.press('Escape')
+    page.locator('#message').fill('/ clear');page.locator('#send').click();check(page.evaluate('calls.at(-1).type')=='newChat','spaced slash clear dispatches empty context action');check(page.evaluate('!calls.some(c=>c.type==="send")'),'clear is never sent to the model')
+    page.locator('#message').fill('/think extenso');page.locator('#send').click();check(page.locator('#reason-label').inner_text()=='Extenso','think command selects reasoning mode locally')
+    page.locator('#message').fill('/models');page.locator('#send').click();check(page.locator('[data-model]').count()==4,'models command opens real selector');page.keyboard.press('Escape')
+    before=page.evaluate('calls.length');page.locator('#message').fill('/inexistente');page.locator('#send').click();check(page.evaluate('calls.length')==before,'unknown command is not sent to model')
+
     page.locator('#model-button').click();check(page.locator('[data-model]').count()==4,'all four legacy profiles grouped and available')
     check('mesmos pesos' in page.locator('#sheet-body').inner_text().lower(),'base modes disclose same weights')
     check('Rust 1/5' in page.locator('#sheet-body').inner_text(),'experimental regression disclosed')

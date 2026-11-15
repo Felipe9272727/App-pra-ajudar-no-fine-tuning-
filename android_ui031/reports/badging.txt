@@ -1,4 +1,4 @@
-package: name='dev.liquidsense.chat.tools' versionCode='4' versionName='0.6.0-ui-preview' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
+package: name='dev.liquidsense.chat.tools' versionCode='5' versionName='0.6.1-ui-preview' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
 uses-permission: name='android.permission.INTERNET'
 minSdkVersion:'28'
 targetSdkVersion:'35'

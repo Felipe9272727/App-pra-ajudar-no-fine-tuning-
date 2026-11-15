@@ -1,0 +1,7 @@
+{
+  "old_SHA256": "4c4d247fb0c63c3db8fef6779e27b0623f2172efe20a8efb44e1ab16a11c11a5",
+  "archive": "android_ui031/apk_archive/manifest.json",
+  "immutable_commit": "883281cca5377a7e0e90fe818e410cba2de327a6",
+  "full_reconstruction_verified": true,
+  "only_redundant_build_cache_reused": true
+}
