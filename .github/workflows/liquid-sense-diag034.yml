@@ -1,0 +1,71 @@
+name: Liquid Sense diagnostic034 smoke
+on:
+  push:
+    branches: [codex/liquid-sense-device-diag-034-20261115]
+    paths: [android_install034/ci_request.json]
+permissions:
+  contents: read
+concurrency:
+  group: liquid-diag034
+  cancel-in-progress: true
+jobs:
+  android-install:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      OMP_NUM_THREADS: '4'
+      LS_CPU_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+      ANDROID_AVD_HOME: /home/runner/.android/avd
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: android_install034
+      - name: Free unused runner SDK disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/.ghcup /opt/ghc /usr/local/lib/android/sdk/ndk
+          df -h .
+      - name: Install emulator on standard public runner
+        run: |
+          test -e /dev/kvm
+          sudo chmod 666 /dev/kvm
+          echo y | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'emulator' 'platform-tools' 'system-images;android-35;google_apis;x86_64'
+          mkdir -p "$ANDROID_AVD_HOME"
+          echo no | "$ANDROID_HOME/cmdline-tools/latest/bin/avdmanager" create avd --force --name liquid033 --path "$ANDROID_AVD_HOME/liquid033.avd" --package 'system-images;android-35;google_apis;x86_64' --device pixel_6
+          printf 'avd.ini.encoding=UTF-8\npath=%s\ntarget=android-35\n' "$ANDROID_AVD_HOME/liquid033.avd" > "$ANDROID_AVD_HOME/liquid033.ini"
+          "$ANDROID_HOME/emulator/emulator" -list-avds
+          "$ANDROID_HOME/emulator/emulator" -avd liquid033 -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -memory 4096 -cores 2 -partition-size 8192 > "$RUNNER_TEMP/emulator033.log" 2>&1 &
+          emulator_pid=$!
+          sleep 5
+          if ! kill -0 "$emulator_pid"; then cat "$RUNNER_TEMP/emulator033.log"; exit 1; fi
+          echo "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
+      - name: Wait for actual Android boot
+        run: |
+          timeout 120s adb wait-for-device || { cat "$RUNNER_TEMP/emulator033.log"; exit 1; }
+          for i in $(seq 1 120); do
+            if [ "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1 ]; then exit 0; fi
+            sleep 2
+          done
+          exit 1
+      - name: Install and launch native diagnostic app
+        run: |
+          mkdir -p "$RUNNER_TEMP/install033-evidence"
+          cp android_install034/artifacts/diagnostic.apk.bin "$RUNNER_TEMP/diagnostic.apk"
+          adb install --no-incremental "$RUNNER_TEMP/diagnostic.apk" | tee "$RUNNER_TEMP/install033-evidence/install.txt"
+          adb shell am start -W -n dev.liquidsense.installcheck/.MainActivity | tee "$RUNNER_TEMP/install033-evidence/launch.txt"
+          sleep 5
+          adb shell pidof dev.liquidsense.installcheck | tee "$RUNNER_TEMP/install033-evidence/pid.txt"
+          adb shell screencap -p /sdcard/diag034.png
+          adb pull /sdcard/diag034.png "$RUNNER_TEMP/install033-evidence/screen.png"
+          adb logcat -d -t 600 > "$RUNNER_TEMP/install033-evidence/logcat.txt"
+      - name: Preserve installer and runtime evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-diagnostic034-evidence
+          path: |
+            ${{ runner.temp }}/install033-evidence/
+            ${{ runner.temp }}/emulator033.log
+          retention-days: 14

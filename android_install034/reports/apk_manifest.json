@@ -1,0 +1,12 @@
+{
+  "status": "signed_native_diagnostic_APK_built",
+  "path": "/dev/shm/liquid034/LiquidSense-Verificador-0.1.apk",
+  "bytes": 20890,
+  "sha256": "3181345443e30e0663fdd54ce42109327a8c12f8c5d654a4055f11513f06fa41",
+  "package": "dev.liquidsense.installcheck",
+  "versionCode": 1,
+  "no_model_assets": true,
+  "INTERNET_permission": false,
+  "reads_only_user_chosen_APK": true,
+  "phone_execution_verified": false
+}
