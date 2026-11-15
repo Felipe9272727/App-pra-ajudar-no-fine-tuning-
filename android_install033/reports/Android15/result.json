@@ -1,0 +1,12 @@
+{
+  "old062_installed": true,
+  "old062_installer_output": "Performing Streamed Install\nSuccess\n",
+  "baseline_available": true,
+  "new063_installed": true,
+  "new063_installer_output": "Performing Streamed Install\nSuccess\n",
+  "scope": "actual Android emulator PackageManager; not physical Xiaomi",
+  "source_manifest": "android_install033/apk_archive/manifest.json",
+  "private_data_preserved_on_update": true,
+  "activity_start_command_success": true,
+  "app_process_alive_after20s": true
+}

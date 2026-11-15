@@ -1,0 +1,101 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        2a669a9 dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity filter 6c2ab2e
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Domain verification status:
+
+Key Set Manager:
+  [dev.liquidsense.chat.tools]
+      Signing KeySets: 59
+
+Packages:
+  Package [dev.liquidsense.chat.tools] (9019148):
+    appId=10209
+    pkg=Package{279010a dev.liquidsense.chat.tools}
+    codePath=/data/app/~~0qM7ze5XgqYQIAwbGm1Sng==/dev.liquidsense.chat.tools-sJH2Ix7EK053YQqw1LCr5w==
+    resourcePath=/data/app/~~0qM7ze5XgqYQIAwbGm1Sng==/dev.liquidsense.chat.tools-sJH2Ix7EK053YQqw1LCr5w==
+    legacyNativeLibraryDir=/data/app/~~0qM7ze5XgqYQIAwbGm1Sng==/dev.liquidsense.chat.tools-sJH2Ix7EK053YQqw1LCr5w==/lib
+    extractNativeLibs=true
+    primaryCpuAbi=arm64-v8a
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=7 minSdk=28 targetSdk=35
+    minExtensionVersions=[]
+    versionName=0.6.3-install-preview
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=3
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesPackages=[dev.liquidsense.chat.fast]
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-11-15 04:22:02
+    lastUpdateTime=2026-11-15 04:22:09
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    appMetadataSource=0
+    signatures=PackageSignatures{a2e23d6 version:3, signatures:[8313865f], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    requested permissions:
+      android.permission.INTERNET
+    install permissions:
+      android.permission.INTERNET: granted=true
+    User 0: ceDataInode=500129 deDataInode=278996 installed=true hidden=false suspended=false distractionFlags=0 stopped=false notLaunched=false enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=/data/user/0/dev.liquidsense.chat.tools
+      firstInstallTime=2026-11-15 04:21:38
+      uninstallReason=0
+      overlay paths:
+        /product/overlay/EmulationPixel6/EmulationPixel6Overlay.apk
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+      legacy overlay paths:
+        /product/overlay/EmulationPixel6/EmulationPixel6Overlay.apk
+        /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+      gids=[3003]
+      runtime permissions:
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.as:
+      dev.liquidsense.chat.tools
+    com.google.android.settings.intelligence:
+      dev.liquidsense.chat.tools
+  queryable via interaction:
+    User 0:
+      [com.android.emulator.multidisplay,com.android.localtransport,com.android.settings,com.android.DeviceAsWebcam,com.android.providers.settings,com.android.inputdevices,com.android.server.telecom,com.android.dynsystem,android,com.android.keychain,com.android.location.fused]:
+        dev.liquidsense.chat.tools
+      [com.google.android.gms,com.google.android.gsf]:
+        dev.liquidsense.chat.tools
+      com.google.android.webview:
+        dev.liquidsense.chat.tools
+      com.google.android.inputmethod.latin:
+        dev.liquidsense.chat.tools
+      dev.liquidsense.chat.tools:
+        com.google.android.webview
+  queryable via uses-library:
+
+Dexopt state:
+  [dev.liquidsense.chat.tools]
+    path: /data/app/~~0qM7ze5XgqYQIAwbGm1Sng==/dev.liquidsense.chat.tools-sJH2Ix7EK053YQqw1LCr5w==/base.apk
+      x86_64: [status=verify] [reason=install] [primary-abi]
+        [location is /data/app/~~0qM7ze5XgqYQIAwbGm1Sng==/dev.liquidsense.chat.tools-sJH2Ix7EK053YQqw1LCr5w==/oat/x86_64/base.odex]
+
+Compiler stats:
+  [dev.liquidsense.chat.tools]
+     base.apk - 424

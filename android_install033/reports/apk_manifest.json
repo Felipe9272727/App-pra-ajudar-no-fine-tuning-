@@ -21,5 +21,9 @@
   "previous_APK_sha256": "614cdc6cfbce027947e4294ab9f0578b581d47b3615eefc72f1d88940be58590",
   "no_inherited_ZIP_records_or_signing_blocks": true,
   "phone_execution_verified": false,
-  "emulator_installation": "pending"
+  "emulator_installation": "passed_Android15_API35",
+  "emulator_activity_start": true,
+  "emulator_process_alive20s": true,
+  "emulator_update_private_marker_preserved": true,
+  "old062_install_refusal_reproduced": false
 }

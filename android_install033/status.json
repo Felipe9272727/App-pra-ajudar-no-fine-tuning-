@@ -1,0 +1,20 @@
+{
+  "status": "complete_actual_emulator_install_update_launch_passed",
+  "version": "0.6.3-install-preview",
+  "APK_sha256": "4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10",
+  "candidate_upload": "https://gofile.io/d/ttGQz5Os",
+  "CI_head_commit": "ac6f3d050cbe38c9e436a4adc9dc707570051ae7",
+  "first_attempt": "cancelled after no device; captured log proves missing AVD descriptor",
+  "second_attempt": "superseded after observing first cause",
+  "new_training_updates": 0,
+  "old_APK_preserved": true,
+  "physical_device_verified": false,
+  "CI_run_id": 43676111054,
+  "CI_job_id": 132696512482,
+  "download": "https://gofile.io/d/ttGQz5Os",
+  "actual_full_APK_installed": true,
+  "update_private_data_marker_preserved": true,
+  "app_launch_and_alive20s": true,
+  "old062_also_installed_in_emulator": true,
+  "phone_specific_failure_not_reproduced": true
+}

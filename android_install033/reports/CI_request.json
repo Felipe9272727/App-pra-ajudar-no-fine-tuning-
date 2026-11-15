@@ -1,0 +1,10 @@
+{
+  "run_id": 43674895719,
+  "job_id": 132692769354,
+  "trigger_commit": "5509a94387639a8d5beb92aee01780f39a63312e",
+  "runner": "ubuntu-24.04 standard public",
+  "machines": 1,
+  "emulator_cores": 2,
+  "status": "in_progress",
+  "URL": "https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/actions/runs/43674895719"
+}
