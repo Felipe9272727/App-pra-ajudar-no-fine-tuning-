@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Liquid Sense Fast Preview
+Signer #1 certificate SHA-256 digest: fcb504e5004b8e0be879b952d597248da3a731c481c1f24cd1ac01502df5ac5b
+Signer #1 certificate SHA-1 digest: bf2e90df3328d4a70a26fd82ff431342d7588ba4
+Signer #1 certificate MD5 digest: cf2bab9fcdb45185a850d160e951c41d
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 9ace77126912fe0639f2db1c251a20686dccb45cd0b7eb75675522c94f76ed91
+Signer #1 public key SHA-1 digest: 3af4849edd2dc883708018bf669cbc6652101df1
+Signer #1 public key MD5 digest: d6ddb197b7d39ccb192a91ca9641b798

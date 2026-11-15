@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": 8,
+  "details": [
+    "touch opens model picker",
+    "touch model choice reaches bridge",
+    "touch opens drawer",
+    "drawer new chat reaches bridge",
+    "touch new chat not disabled during generation",
+    "old finish cannot populate new pending chat",
+    "slash help works with touch",
+    "touch uses no blue browser highlight"
+  ],
+  "scope": "Chromium mobile emulation with touch input, simulated Java bridge; not Android device execution"
+}

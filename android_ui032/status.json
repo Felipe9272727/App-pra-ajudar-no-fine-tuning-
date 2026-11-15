@@ -1,0 +1,17 @@
+{
+  "status": "complete_signed_and_delivered",
+  "version": "0.6.2-ui-preview",
+  "versionCode": 6,
+  "download": "https://gofile.io/d/fNGVCZpE",
+  "APK_sha256": "614cdc6cfbce027947e4294ab9f0578b581d47b3615eefc72f1d88940be58590",
+  "new_training_updates": 0,
+  "weights_and_native_libraries_unchanged": true,
+  "browser_UI_checks": 51,
+  "touch_simulation_checks": 8,
+  "production_Java_state_checks": 11,
+  "Java_agent_checks": 27,
+  "Android_compile_signature_CRC_alignment_and_asset_checks": "passed",
+  "physical_device_or_emulator_execution": false,
+  "native_IME_device_behavior": "unverified_on_physical_device",
+  "model_workers_active": false
+}

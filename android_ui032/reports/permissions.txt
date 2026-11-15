@@ -1,0 +1,2 @@
+package: dev.liquidsense.chat.tools
+uses-permission: name='android.permission.INTERNET'

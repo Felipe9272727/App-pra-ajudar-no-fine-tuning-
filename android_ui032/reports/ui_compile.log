@@ -1,0 +1,10 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx384m
+warning: [options] bootstrap class path not set in conjunction with -source 8
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+4 warnings
+Picked up JAVA_TOOL_OPTIONS: -Xmx384m
+ANDROID_TOOLS_UI_DEX_COMPILED
