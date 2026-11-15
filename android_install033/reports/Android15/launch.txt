@@ -1,0 +1,7 @@
+Starting: Intent { cmp=dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity
+TotalTime: 2814
+WaitTime: 2845
+Complete

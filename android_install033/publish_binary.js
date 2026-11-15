@@ -8,7 +8,7 @@ async function(paths, message) {
   const repo='Felipe9272727/App-pra-ajudar-no-fine-tuning-',branch='codex/liquid-sense-install-033-20261115';
   const entries=[];
   for(const path of paths) {
-    if(!/^android_install033\/[a-zA-Z0-9_./-]+\.(pt|json|bin|jsonl|log|png)$/.test(path))throw Error('Unexpected tensor path');
+    if(!/^android_install033\/[a-zA-Z0-9_./-]+\.(pt|json|bin|jsonl|log|png|txt)$/.test(path))throw Error('Unexpected tensor path');
     const metaResult=await tools.exec_command({cmd:"python -c 'import pathlib,json,subprocess; p=pathlib.Path(\""+path+"\"); print(json.dumps({\"size\":p.stat().st_size,\"git_blob\":subprocess.check_output([\"git\",\"hash-object\",str(p)],text=True).strip()}))'",workdir:'/workspace/liquid-sense',max_output_tokens:2000});
     const meta=JSON.parse(metaResult.output);const parts=[];
     const offsets=[];for(let off=0;off<meta.size;off+=737280)offsets.push(off);

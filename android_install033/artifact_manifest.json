@@ -1,0 +1,366 @@
+{
+  "format": "sha256-artifact-catalog-v1",
+  "files": [
+    {
+      "path": "android_install033/emulator_smoke.py",
+      "bytes": 3543,
+      "sha256": "bae8a1d97eccef27d243f4ca076e7bcc50c80ab85bae6c79423e471e5bff4670"
+    },
+    {
+      "path": "android_install033/publish_binary.js",
+      "bytes": 3909,
+      "sha256": "765794d0079f3f82f00f73ee820ddd3beb6683b1162e8fee80806f368b261559"
+    },
+    {
+      "path": "android_install033/AGENTS.md",
+      "bytes": 993,
+      "sha256": "108c67d581fe9765bb73f1f71eeb56b581ea730ca6a96fceb95230d4c090ea00"
+    },
+    {
+      "path": "android_install033/compile_ui.py",
+      "bytes": 1345,
+      "sha256": "611ab0aafdce2036c900c019ae0bbe8603d967bcd7a899b4b7fc85ea3bc317e7"
+    },
+    {
+      "path": "android_install033/deliver.py",
+      "bytes": 2373,
+      "sha256": "984cd430fa45b4c5a7cac87e4056f9d933083ee04f4b9c242698de934f59d6be"
+    },
+    {
+      "path": "android_install033/ci_request.json",
+      "bytes": 535,
+      "sha256": "2fac422bae15035407e54176b72cdb7a830aa838a3ff721127ee6cb959c99a8f"
+    },
+    {
+      "path": "android_install033/portable_sources.json",
+      "bytes": 340,
+      "sha256": "6873bc61ab28668c4ea8873e611de504b9cdd5f2bae601a66b318fe7dde5b654"
+    },
+    {
+      "path": "android_install033/README.md",
+      "bytes": 2409,
+      "sha256": "7a8ce5a77e3691dd0572a971af8043145b46a4fc4db11bc4e02470435eedc4df"
+    },
+    {
+      "path": "android_install033/audit_structure.py",
+      "bytes": 2167,
+      "sha256": "dd7fd05f054f5469b50843cad19f1e362244217a523100fc78e43b4a8f815dfe"
+    },
+    {
+      "path": "android_install033/archive_apk.py",
+      "bytes": 2428,
+      "sha256": "1d416ce9a62ba3e9fa9102a5644715c4e48f7662c8e61dc604c611f2d63b78c2"
+    },
+    {
+      "path": "android_install033/CI_attempts.json",
+      "bytes": 1492,
+      "sha256": "c07be535d1136e5cc349602874355b188b697f8574e7a76d5f89a25d19e49c68"
+    },
+    {
+      "path": "android_install033/REPORT.md",
+      "bytes": 3424,
+      "sha256": "685e6d85969653ce52fb25989b6ab73622bc9718108746a242d652abbad9df7f"
+    },
+    {
+      "path": "android_install033/publish.js",
+      "bytes": 2352,
+      "sha256": "65d99861261279f61bcf1a04140f717cb4b801a81cba0a6e21c9edcc5f24950e"
+    },
+    {
+      "path": "android_install033/CleanSigner.java",
+      "bytes": 4094,
+      "sha256": "ce16246474ce9fe330e35466d3fae9ee39403876b1fb6d1b9640bac3294cb0ac"
+    },
+    {
+      "path": "android_install033/portable_restore.py",
+      "bytes": 4498,
+      "sha256": "653f18ba6d8c27048f565dc1d3c7c0367fe81e1e68238eb74476e60d95b3dc28"
+    },
+    {
+      "path": "android_install033/publish_nonce.py",
+      "bytes": 209,
+      "sha256": "f10d1f20fdd197e2d58eb6b58a204078af719da1bb3ce5059b25f336cdf03b48"
+    },
+    {
+      "path": "android_install033/status.json",
+      "bytes": 878,
+      "sha256": "721bcac0462c0cffc4a6d7ed79c064f88bb10c7cc29405180d19f305ea9d4ba1"
+    },
+    {
+      "path": "android_install033/build_apk.py",
+      "bytes": 7089,
+      "sha256": "8d85905054c1f2929ff8b20940fcbb9036fb1f26cfa4fd22ddbcb649206538c8"
+    },
+    {
+      "path": "android_install033/apk_archive/part00.zlib.bin",
+      "bytes": 6266420,
+      "sha256": "debfbdb4cf327357e8ddfa4741877d536a384246380b4ac51dfa1b1e5c1db258"
+    },
+    {
+      "path": "android_install033/apk_archive/part04.zlib.bin",
+      "bytes": 5740,
+      "sha256": "f7a026de095583d96f35d5ad3c87b851603320339b1420c3c3a116f6e7e92090"
+    },
+    {
+      "path": "android_install033/apk_archive/part02.zlib.bin",
+      "bytes": 52,
+      "sha256": "db75e09de68a85ac430df89d73449a0585952fd5d54631020933ea4bdeac7c0e"
+    },
+    {
+      "path": "android_install033/apk_archive/manifest.json",
+      "bytes": 1677,
+      "sha256": "1cc795bd34508901b6c7cd6047de95be2415262add690d26780604aee3ef4621"
+    },
+    {
+      "path": "android_install033/reports/permissions.txt",
+      "bytes": 88,
+      "sha256": "a34a34a8ac895478166dbe61f4becfdd66220b01fa64963cb8c4757f58c520d5"
+    },
+    {
+      "path": "android_install033/reports/structure.json",
+      "bytes": 287,
+      "sha256": "a0bfc13fd0c0d48256c98c66a3615003823659d9227690e6b3c7e0de86a4b559"
+    },
+    {
+      "path": "android_install033/reports/first_emulator_startup.log",
+      "bytes": 425,
+      "sha256": "48815ac6b378d316da30f4e8fbff61da0ed4ac1c371487b5fb58e81cdc7d9280"
+    },
+    {
+      "path": "android_install033/reports/apk_manifest.json",
+      "bytes": 1296,
+      "sha256": "8c26d1ef4a5c5256f45b4709180bd593158081df8c955dff73c18fe63ac3d088"
+    },
+    {
+      "path": "android_install033/reports/old062_structure.json",
+      "bytes": 693,
+      "sha256": "41c0e81ac98532a38d2d04016c7f4e15c2228e00e9bc2ba3d4fe28e964f5c0b9"
+    },
+    {
+      "path": "android_install033/reports/apk_verification.log",
+      "bytes": 1049,
+      "sha256": "ad922a2c11b7406eb57f7c2645f205764e893073b5706b5644832f5c4d9fad18"
+    },
+    {
+      "path": "android_install033/reports/delivery.log",
+      "bytes": 430,
+      "sha256": "f0036b746e4934d714da1d8189fae246ab2eedff4636f86d2460fe26264bd7b3"
+    },
+    {
+      "path": "android_install033/reports/signature_v2.txt",
+      "bytes": 467,
+      "sha256": "50b864126d582a86a67c5c9b36460b0231ef9d890705678942b8f3a5be1ab354"
+    },
+    {
+      "path": "android_install033/reports/ui_compile.log",
+      "bytes": 562,
+      "sha256": "eda9ea437529b0d77b1aa53f7f2702e93e8010746ba2661f11bc59cf7a1ca4b3"
+    },
+    {
+      "path": "android_install033/reports/previous_APK_preservation.json",
+      "bytes": 883,
+      "sha256": "e6e3c1b4849c6539f01ef9caba6fdc0256b0b908bbe5d7cd377ca52d6e50f8cf"
+    },
+    {
+      "path": "android_install033/reports/badging.txt",
+      "bytes": 786,
+      "sha256": "bd331f232f5f386c5ca2a7eee7288c8f9c379380f64a4ad5bfa35739e61fddcd"
+    },
+    {
+      "path": "android_install033/reports/apk_build.log",
+      "bytes": 929,
+      "sha256": "2195ce5790c15502408cce5b0eaa88e3edd83f1717cb678cf8b82d1830dfba12"
+    },
+    {
+      "path": "android_install033/reports/signature.txt",
+      "bytes": 950,
+      "sha256": "c9b2f5f8504f9ff5aa61381de9076af9a4b89bbc2967d6e3151370a9b02f0a82"
+    },
+    {
+      "path": "android_install033/reports/signature_v3.txt",
+      "bytes": 343,
+      "sha256": "f547c9997cf9a7861e67d231e9162e2584d32d45c768902e42a03d65efed7a8d"
+    },
+    {
+      "path": "android_install033/reports/archive.log",
+      "bytes": 92,
+      "sha256": "e6e905a3099ef2a6fe3bbe76aae6ed8e032377602278188c8de98699b5f5875b"
+    },
+    {
+      "path": "android_install033/reports/CI_request.json",
+      "bytes": 330,
+      "sha256": "ace26cab46b537d16195578836879888fb87ddeea28cbdb87ba407b2de620406"
+    },
+    {
+      "path": "android_install033/reports/signature_v1.txt",
+      "bytes": 343,
+      "sha256": "e5f581c13d94301cdeaec237b823888429d92c4b6cdee8515d5ce63929ee504a"
+    },
+    {
+      "path": "android_install033/reports/gofile_delivery.json",
+      "bytes": 450,
+      "sha256": "e0bd8b8d52e8794cb2084df1382c07bd6b512f80eacabef10956bab42dfdebdd"
+    },
+    {
+      "path": "android_install033/android/AndroidManifest.xml",
+      "bytes": 1215,
+      "sha256": "a6f493ee3ca72bc84ade982deca8983574150d0dfe5f351a531ee888c9d15028"
+    },
+    {
+      "path": "android_install033/reports/Android15/launch.txt",
+      "bytes": 226,
+      "sha256": "144efc29ad29a1be6b9e68eb05565de87069941e165693f77d8a13b2c80506d1"
+    },
+    {
+      "path": "android_install033/reports/Android15/pid.txt",
+      "bytes": 5,
+      "sha256": "51d2eca84c1807da8f6b1f2d12605e45c362dbe70545b199a0fb54623b02ad45"
+    },
+    {
+      "path": "android_install033/reports/Android15/update-marker.txt",
+      "bytes": 20,
+      "sha256": "281e8c3fbde16f62d48f217f3dc1b09a1f05de526c7e9c0e8513a8630e3f6841"
+    },
+    {
+      "path": "android_install033/reports/Android15/screen.png",
+      "bytes": 167674,
+      "sha256": "18339195001e387969898a3538f05f982bbafdc2b16ada7d45ca154264a410e2"
+    },
+    {
+      "path": "android_install033/reports/Android15/adb-root.txt",
+      "bytes": 24,
+      "sha256": "cbfc5f4f46947a84c46216ae8ee0bfaebce09bbac37337972e033b39056106eb"
+    },
+    {
+      "path": "android_install033/reports/Android15/emulator033.log",
+      "bytes": 9978,
+      "sha256": "bb274cd358529c51b6010d7ecfbeeaac653c02ca26f915b57102e86e483ad1c9"
+    },
+    {
+      "path": "android_install033/reports/Android15/old062.apk.install.txt",
+      "bytes": 36,
+      "sha256": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7"
+    },
+    {
+      "path": "android_install033/reports/Android15/ui.xml",
+      "bytes": 1797,
+      "sha256": "fb07cf83e3cb44f2d89a38bcbb7ec9d0e30d85699ea95e2473f49e5c45a5ab7b"
+    },
+    {
+      "path": "android_install033/reports/Android15/package.txt",
+      "bytes": 4430,
+      "sha256": "bb0d5987e06751cc96b0b5c05b53155c6a1c3c2bc29c67dbca5498f023477126"
+    },
+    {
+      "path": "android_install033/reports/Android15/logcat.txt",
+      "bytes": 390632,
+      "sha256": "87119a7b40987a47aa6cbd1ed05672237b6301557a01ca2389188cdeb87efca1"
+    },
+    {
+      "path": "android_install033/reports/Android15/properties.txt",
+      "bytes": 23921,
+      "sha256": "f9e677a973b63fe20db83c73ca383114a93f2ea3638cb82319e2b96194e2fca3"
+    },
+    {
+      "path": "android_install033/reports/Android15/new063.apk.install.txt",
+      "bytes": 36,
+      "sha256": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7"
+    },
+    {
+      "path": "android_install033/reports/Android15/result.json",
+      "bytes": 498,
+      "sha256": "7e82dd996e6baf78ac6fa0fc9ea0e6805a41f46667f3a9cac6380dfe04d7770f"
+    },
+    {
+      "path": "android_install033/reports/Android15/marker-create.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "android_install033/reports/attempt3/emulator033.log",
+      "bytes": 9904,
+      "sha256": "3d3a56be1a5018d357f54645fd900aa2ea210e2c74cbc9e6e83c8c2fe8ebfb04"
+    },
+    {
+      "path": "android_install033/reports/attempt3/properties.txt",
+      "bytes": 24062,
+      "sha256": "d93d1e35de5c809ee23837c2c8551a82e297f740aaa71c4f2e0486e195f09cb0"
+    },
+    {
+      "path": "android_install033/android/assets/chat/chat.js",
+      "bytes": 22780,
+      "sha256": "efe6cd547c884311d639a01e903a337a724cd288a0cbe24515d9669ba66b8fcd"
+    },
+    {
+      "path": "android_install033/android/assets/chat/chat.css",
+      "bytes": 16623,
+      "sha256": "f0ddef513b14b1c6a75154efe33da2149c2b237dad40445b3d21e8ab4d22eaa5"
+    },
+    {
+      "path": "android_install033/android/assets/chat/index.html",
+      "bytes": 4236,
+      "sha256": "1089fc8ecba99b44e0849c9b996fd2502a4f315cbce311d55a5eaf3f77814ebf"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/ToolExecutor.java",
+      "bytes": 11549,
+      "sha256": "ffffd20960128c8fbdedc03ce0a32dee6078a1be6260e4919c1ddd150e7c71e2"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/MainActivity.java",
+      "bytes": 19330,
+      "sha256": "fe4cd569e2655d90a7690c19b33d8e0fa7e271bbaa72155cadfff4c9c0368e5e"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/InferenceSettings.java",
+      "bytes": 732,
+      "sha256": "2fee230773c3c489f149491d85bde24805d93ea521c233ef78b34e9d088e5381"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/PythonService.java",
+      "bytes": 2422,
+      "sha256": "bb95f2be990f264f392fdadaa563312469efdbf783f27128ac72e89437f61d3e"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/ConversationBook.java",
+      "bytes": 1608,
+      "sha256": "e3b312bcf8eadb88cb92611f332cf079624e2f10f8acdbf892d4dc5559d3180e"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/AgentRunner.java",
+      "bytes": 7982,
+      "sha256": "1cd9fc6f034f633f9cfcf1c7234ccc12cb561321a6fae0f5d696b942b717a3c4"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/UiText.java",
+      "bytes": 605,
+      "sha256": "f7b0a40a9e72fe512ddc6ed06a45004c289070aaeca09d026362c0da1f7d1ccb"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/KeyboardLayout.java",
+      "bytes": 3595,
+      "sha256": "220b4efffaeae9fc3032c337c99f3d4ad41eeb733802c34555d672bd91c8f43c"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/NavigationQueue.java",
+      "bytes": 546,
+      "sha256": "7d575875129525d0164bb3305683da8dfc3a511c6055e646b8044c863ad769c5"
+    },
+    {
+      "path": "android_install033/android/src/dev/liquidsense/chat/PythonClient.java",
+      "bytes": 1455,
+      "sha256": "135a32ff4988e5cec3484d95b1b52531d7c101ea4b0eb4ec43908f58c6cd8f53"
+    },
+    {
+      "path": "android_install033/android/res/drawable/ic_launcher.xml",
+      "bytes": 536,
+      "sha256": "ac4a5cdd1e51a699e5a1129cbb60494671f0927a91a640ed4c361010a26bf6d0"
+    },
+    {
+      "path": "android_install033/android/res/values/styles.xml",
+      "bytes": 566,
+      "sha256": "1a05d97e26922cbc705bebb852460614eedddffbcaca1d9942a6297a0c90a65a"
+    }
+  ],
+  "excludes_itself_publish_counter_and_readback_receipt": true
+}
