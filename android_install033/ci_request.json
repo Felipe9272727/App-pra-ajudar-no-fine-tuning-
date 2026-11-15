@@ -1,9 +1,9 @@
 {
-  "request": 2,
+  "request": 3,
   "purpose": "actual Android15 emulator PackageManager install of old0.6.2 and clean0.6.3; preserve data/launch evidence",
   "new_APK_sha256": "4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10",
   "standard_public_runner_only": true,
   "machines": 1,
   "model_training_updates": 0,
-  "reason": "initial boot wait exceeded expected loop window; correct sparse checkout, free unused SDK disk and fail fast with emulator diagnostics"
+  "reason": "Captured emulator log proves AVD descriptor missing in ANDROID_AVD_HOME; use explicit path and descriptor before boot"
 }

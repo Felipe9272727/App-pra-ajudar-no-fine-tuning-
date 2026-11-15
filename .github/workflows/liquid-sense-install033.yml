@@ -40,7 +40,10 @@ jobs:
           test -e /dev/kvm
           sudo chmod 666 /dev/kvm
           echo y | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'emulator' 'platform-tools' 'system-images;android-35;google_apis;x86_64'
-          echo no | "$ANDROID_HOME/cmdline-tools/latest/bin/avdmanager" create avd --force --name liquid033 --package 'system-images;android-35;google_apis;x86_64' --device pixel_6
+          mkdir -p "$ANDROID_AVD_HOME"
+          echo no | "$ANDROID_HOME/cmdline-tools/latest/bin/avdmanager" create avd --force --name liquid033 --path "$ANDROID_AVD_HOME/liquid033.avd" --package 'system-images;android-35;google_apis;x86_64' --device pixel_6
+          printf 'avd.ini.encoding=UTF-8\npath=%s\ntarget=android-35\n' "$ANDROID_AVD_HOME/liquid033.avd" > "$ANDROID_AVD_HOME/liquid033.ini"
+          "$ANDROID_HOME/emulator/emulator" -list-avds
           "$ANDROID_HOME/emulator/emulator" -avd liquid033 -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -memory 4096 -cores 2 -partition-size 8192 > "$RUNNER_TEMP/emulator033.log" 2>&1 &
           emulator_pid=$!
           sleep 5
