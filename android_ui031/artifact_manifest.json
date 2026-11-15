@@ -1,0 +1,286 @@
+{
+  "format": "sha256-artifact-catalog-v1",
+  "files": [
+    {
+      "path": "android_ui031/publish_binary.js",
+      "bytes": 3890,
+      "sha256": "286ab9327245467a17933976c1f7fd709b08b10c2f46f354259e155f849459a2"
+    },
+    {
+      "path": "android_ui031/AGENTS.md",
+      "bytes": 1220,
+      "sha256": "40d60b2f9a0e16db1a129506ab548341b2b1f47ee0ea5dafd38300463635d681"
+    },
+    {
+      "path": "android_ui031/compile_ui.py",
+      "bytes": 1335,
+      "sha256": "9f0f3b7223aeb47e6c6744d8b804792a88fcab2f8f1aa3172b042d329fa3908a"
+    },
+    {
+      "path": "android_ui031/deliver.py",
+      "bytes": 2363,
+      "sha256": "834a11b17c03ef3fad11939ff48375dc90bedd5a1152c5d8c1b9792d1662124e"
+    },
+    {
+      "path": "android_ui031/RESEARCH.md",
+      "bytes": 3485,
+      "sha256": "0305dbf27f88d082e6711f22ce4da9ddf169ab43dab309bb0462d5b689c91c08"
+    },
+    {
+      "path": "android_ui031/README.md",
+      "bytes": 4016,
+      "sha256": "8893c584363590c49aa1481348ec7b0227a7d16173c8d99ebed7e2044d75b1ce"
+    },
+    {
+      "path": "android_ui031/archive_apk.py",
+      "bytes": 2536,
+      "sha256": "83d66efa273799ac27d3c610f6dcc0fb85bca102945c8c0e666445cf34c1f4ef"
+    },
+    {
+      "path": "android_ui031/publish.js",
+      "bytes": 2342,
+      "sha256": "6853f074792eadbc868e00c0d0635389d70e7dbe38fd6a3abb735aafe04a9968"
+    },
+    {
+      "path": "android_ui031/publish_nonce.py",
+      "bytes": 209,
+      "sha256": "f10d1f20fdd197e2d58eb6b58a204078af719da1bb3ce5059b25f336cdf03b48"
+    },
+    {
+      "path": "android_ui031/restore.py",
+      "bytes": 649,
+      "sha256": "242b335dba146a80a6713c1c272ca5d5e9ee7e2f150a4a68a5f909565a39d949"
+    },
+    {
+      "path": "android_ui031/status.json",
+      "bytes": 662,
+      "sha256": "dff8906648005b141bc57fc770458658260cda2956684c773288994d786ad55e"
+    },
+    {
+      "path": "android_ui031/build_apk.py",
+      "bytes": 8321,
+      "sha256": "2394a19ce4c723be7f61c59b08d3095008677fe43265fd32b02304748512740f"
+    },
+    {
+      "path": "android_ui031/screenshots/models-mobile.png",
+      "bytes": 62470,
+      "sha256": "6340652c8d694115d9d7d693953ef5f69c0f3bba26059bea71602579f961e1c2"
+    },
+    {
+      "path": "android_ui031/screenshots/chat-mobile.png",
+      "bytes": 52885,
+      "sha256": "2cfe21deb40421d2d17c1cf541e6a844496fc30482228c1cb323d7f89e60dad1"
+    },
+    {
+      "path": "android_ui031/screenshots/history-mobile.png",
+      "bytes": 37481,
+      "sha256": "9bb5792ed60f3c501fa68d146896f8a235b7d48b9fbe9aea8fa08d2f6a4b5432"
+    },
+    {
+      "path": "android_ui031/screenshots/welcome-desktop.png",
+      "bytes": 73808,
+      "sha256": "9311fcbdd5e94d6d763b8c2e1e97d835a1553041a8097544839536f6b87064cc"
+    },
+    {
+      "path": "android_ui031/screenshots/welcome-mobile.png",
+      "bytes": 43021,
+      "sha256": "508df7ad0e9677342d15c32d4183de8de6cf5bf3457c1f0464360259837104e7"
+    },
+    {
+      "path": "android_ui031/apk_archive/suffix.zlib.bin",
+      "bytes": 1882838,
+      "sha256": "7a86e1eb0a0760e3c44d93b951d36df54e66a835af02e6d3497fb64745c6673c"
+    },
+    {
+      "path": "android_ui031/apk_archive/manifest.json",
+      "bytes": 1738,
+      "sha256": "488ae1e1b7f5ce18243f680e622e056738e51d17123dcc46c5b65c0aa0f72e7a"
+    },
+    {
+      "path": "android_ui031/reports/alignment_recovery.json",
+      "bytes": 209,
+      "sha256": "7f5beb7e429b0e60412c68d91eb4a9f32ba1f2e475c0cb80d28f6857f3d35954"
+    },
+    {
+      "path": "android_ui031/reports/alignment_first_recovery.json",
+      "bytes": 233,
+      "sha256": "0da540ab80abc7e68a2af9a39c34afd5c9a9ee9d263cfb84a304ec9ce255a887"
+    },
+    {
+      "path": "android_ui031/reports/apk_final_build.log",
+      "bytes": 784,
+      "sha256": "85eb49f8cc0719f8c4a8ff91bf279ec03fc0d218f9f98f3aaab86d7625172a64"
+    },
+    {
+      "path": "android_ui031/reports/thought_tests.json",
+      "bytes": 31,
+      "sha256": "e1300b16d765086c7128f75cbae2264df95c14f7385d11359033e776087535a7"
+    },
+    {
+      "path": "android_ui031/reports/permissions.txt",
+      "bytes": 88,
+      "sha256": "a34a34a8ac895478166dbe61f4becfdd66220b01fa64963cb8c4757f58c520d5"
+    },
+    {
+      "path": "android_ui031/reports/browser_tests.json",
+      "bytes": 1371,
+      "sha256": "a1efc7e688ea3576b039cd208b532f9fac561c7ccbc602396d2d653f6944d23a"
+    },
+    {
+      "path": "android_ui031/reports/apk_manifest.json",
+      "bytes": 2314,
+      "sha256": "c310b35b42985cf3b8d4a43ca288ea77f8ff3a84d2c76c5891c297d66ea03c2a"
+    },
+    {
+      "path": "android_ui031/reports/delivery.log",
+      "bytes": 425,
+      "sha256": "fac56db38b563306f718a1dddbb1de4bb5a026d26e1baf30a111ce265e5a65f4"
+    },
+    {
+      "path": "android_ui031/reports/ui_compile.log",
+      "bytes": 562,
+      "sha256": "eda9ea437529b0d77b1aa53f7f2702e93e8010746ba2661f11bc59cf7a1ca4b3"
+    },
+    {
+      "path": "android_ui031/reports/previous_APK_preservation.json",
+      "bytes": 442,
+      "sha256": "4134b7ed51b81d7b9643a5f352c7f3f38ea5f48ee557df425b622bed0298e4d1"
+    },
+    {
+      "path": "android_ui031/reports/badging.txt",
+      "bytes": 781,
+      "sha256": "601abd444467760679b974092bee46bc8360433fd920d1a3360f7df0fffdf4be"
+    },
+    {
+      "path": "android_ui031/reports/apk_build.log",
+      "bytes": 1179,
+      "sha256": "7ceb85eeaa9bb6edd70669942d25cad679dc7d46b6e8711bbc453a0d4ceb2c74"
+    },
+    {
+      "path": "android_ui031/reports/signature.txt",
+      "bytes": 950,
+      "sha256": "c9b2f5f8504f9ff5aa61381de9076af9a4b89bbc2967d6e3151370a9b02f0a82"
+    },
+    {
+      "path": "android_ui031/reports/apk_seal_recovery.log",
+      "bytes": 2356,
+      "sha256": "56f14429607116ab5ec5cfe487b9fb484af33a0bddb2a22c3f7dda5d2d8f15af"
+    },
+    {
+      "path": "android_ui031/reports/file_origin_attempt.json",
+      "bytes": 214,
+      "sha256": "e4d04d856ee33073f77b73117202aad1e27475d5fad857fdf2399807b68e10d6"
+    },
+    {
+      "path": "android_ui031/reports/archive.log",
+      "bytes": 149,
+      "sha256": "12fbd0ff7ca405da8cae4d0a8db6dee4ddb43f534b4377dc035093b3af012eb3"
+    },
+    {
+      "path": "android_ui031/reports/apk_final_seal.log",
+      "bytes": 2356,
+      "sha256": "13451795fb0c8486ab7063db458d2225f9d3414f2ee828fb68242b11d7c12923"
+    },
+    {
+      "path": "android_ui031/reports/agent_tests.json",
+      "bytes": 78,
+      "sha256": "c5ddd4115479067804d1c794df3f4faaab5db1b03977b207eb37dc5688ac88eb"
+    },
+    {
+      "path": "android_ui031/reports/gofile_delivery.json",
+      "bytes": 445,
+      "sha256": "319d261155bc9ebc59e72d8f4ff3795dfa8c0a5da59cff683e3497682ef82cfc"
+    },
+    {
+      "path": "android_ui031/reports/https_local_origin.json",
+      "bytes": 392,
+      "sha256": "dbb84942fc103497335ae0ec54fb246285452f73998e0331112352f761245613"
+    },
+    {
+      "path": "android_ui031/reports/first_signed_build.json",
+      "bytes": 2314,
+      "sha256": "1396c822a3dfbcdf2baeface595e52f25f95a516571fb70d8d5426c46f1bdb2c"
+    },
+    {
+      "path": "android_ui031/reports/browser_tests.log",
+      "bytes": 21,
+      "sha256": "ee176a9034418959cf99db11f0ae8e09ab4c1c0344a1aae5bc561d9e198a36f4"
+    },
+    {
+      "path": "android_ui031/android/AndroidManifest.xml",
+      "bytes": 1210,
+      "sha256": "752d1178a8c1db1460b9f9738bcbfbf88695512018459d9481863f400f2a9ffb"
+    },
+    {
+      "path": "android_ui031/tests/browser_ui.py",
+      "bytes": 7552,
+      "sha256": "aef1b9bc3628122d2fac5ae592964571d587ef490a248c959172302b9994dcbf"
+    },
+    {
+      "path": "android_ui031/tests/UiTextTests.java",
+      "bytes": 874,
+      "sha256": "293e43676196b52f878f795e490fa0286b6d8deb6001982b40d998e8b4aa1127"
+    },
+    {
+      "path": "android_ui031/android/assets/chat/chat.js",
+      "bytes": 18373,
+      "sha256": "a4b3d3d9ff3ebed3431cb63e70cc756de164048642d2e364066825faab102f0f"
+    },
+    {
+      "path": "android_ui031/android/assets/chat/chat.css",
+      "bytes": 12366,
+      "sha256": "ee2e9b791d216b1732334569b1ea1a8d595b60d580c8ad506022589e1f50f3f2"
+    },
+    {
+      "path": "android_ui031/android/assets/chat/index.html",
+      "bytes": 4108,
+      "sha256": "ce519026e4636afb4ebdd59c86dd0ba8eeadcb7b52c99c1f0fac39a9ce901c0c"
+    },
+    {
+      "path": "android_ui031/android/src/dev/liquidsense/chat/ToolExecutor.java",
+      "bytes": 11549,
+      "sha256": "ffffd20960128c8fbdedc03ce0a32dee6078a1be6260e4919c1ddd150e7c71e2"
+    },
+    {
+      "path": "android_ui031/android/src/dev/liquidsense/chat/MainActivity.java",
+      "bytes": 18205,
+      "sha256": "208de82b6d9146b31ee68ab07e8537dadfa3f46ae6de269b34fc133e114f1ac2"
+    },
+    {
+      "path": "android_ui031/android/src/dev/liquidsense/chat/InferenceSettings.java",
+      "bytes": 732,
+      "sha256": "2fee230773c3c489f149491d85bde24805d93ea521c233ef78b34e9d088e5381"
+    },
+    {
+      "path": "android_ui031/android/src/dev/liquidsense/chat/PythonService.java",
+      "bytes": 2422,
+      "sha256": "bb95f2be990f264f392fdadaa563312469efdbf783f27128ac72e89437f61d3e"
+    },
+    {
+      "path": "android_ui031/android/src/dev/liquidsense/chat/AgentRunner.java",
+      "bytes": 7982,
+      "sha256": "1cd9fc6f034f633f9cfcf1c7234ccc12cb561321a6fae0f5d696b942b717a3c4"
+    },
+    {
+      "path": "android_ui031/android/src/dev/liquidsense/chat/UiText.java",
+      "bytes": 605,
+      "sha256": "f7b0a40a9e72fe512ddc6ed06a45004c289070aaeca09d026362c0da1f7d1ccb"
+    },
+    {
+      "path": "android_ui031/android/src/dev/liquidsense/chat/PythonClient.java",
+      "bytes": 1455,
+      "sha256": "135a32ff4988e5cec3484d95b1b52531d7c101ea4b0eb4ec43908f58c6cd8f53"
+    },
+    {
+      "path": "android_ui031/android/res/drawable/ic_launcher.xml",
+      "bytes": 536,
+      "sha256": "ac4a5cdd1e51a699e5a1129cbb60494671f0927a91a640ed4c361010a26bf6d0"
+    },
+    {
+      "path": "android_ui031/android/res/values/styles.xml",
+      "bytes": 566,
+      "sha256": "1a05d97e26922cbc705bebb852460614eedddffbcaca1d9942a6297a0c90a65a"
+    }
+  ],
+  "catalog_excludes_itself_and_mutable_publish_counter": true
+}
