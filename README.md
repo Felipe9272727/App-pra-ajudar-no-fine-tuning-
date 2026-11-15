@@ -1,5 +1,16 @@
 # Liquid Sense 0.8B LOOP
 
+## APK0.6.2 — teclado, novos chats, comandos e animações
+
+[**Baixar no Gofile — 1,97GB**](https://gofile.io/d/fNGVCZpE) · Android9+/ARM64.
+Interface inspirada em padrões do ChatGPT/Claude, com modelos agrupados, histórico pesquisável, fontes/pensamento recolhíveis e comandos locais `/clear`, `/new`, `/models`, `/think`, `/stop`, `/help`.
+
+Correções032: insets nativos de teclado/status/navigation, viewport adaptativo, novo chat/contexto aceito durante geração com interrupção explícita e bloqueio de saídas antigas, chats vazios visíveis, remoção do destaque azul e novas animações com movimento reduzido. Mesma assinatura/pacote; conversas, modelos e pesos preservados.
+
+51checks de UI,8de toque simulado,11da lógica Java e27do agente passaram, além de compilação/assinatura/CRC. **Sem teste em Android físico/emulador**; o novo caminho nativo de IME ainda depende de confirmação no aparelho. Não há novo treino ou ganho de qualidade do modelo.
+
+[Fontes, limites e reprodução](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/6f1e404952a1a2bc1011f3df951455306c3f7b93/android_ui032) · [entrega verificada](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/6f1e404952a1a2bc1011f3df951455306c3f7b93/android_ui032/reports/gofile_delivery.json).
+
 ## APK 0.5 — época 2 opcional, sem promoção geral
 
 [**Baixar no Gofile — 1,97 GB**](https://gofile.io/d/7OFCC99z) · Android9+/ARM64.

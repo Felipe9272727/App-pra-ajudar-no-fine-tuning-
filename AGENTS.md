@@ -1,3 +1,12 @@
+# AndroidUI032 COMPLETE — APK0.6.2 fixes delivered
+
+- User reported keyboard covering composer, unresponsive new chats, blue tap highlight and wanted more motion. Same Tools package/cert, versionCode6, public APK https://gofile.io/d/fNGVCZpE (1969473053bytes). SHA256614cdc6cfbce027947e4294ab9f0578b581d47b3615eefc72f1d88940be58590.
+- Branch codex/liquid-sense-ui-fixes-032-20261115;55files verified at immutable6f1e404952a1a2bc1011f3df951455306c3f7b93. Read android_ui032/README.md,status.json,reports,archive and remote verification.0310.6.1 remains preserved atc37e62b9a3f8d40bdffad33a2e5bd0edd7052878 and prior GofileQydCwORM; no old experiment/checkpoint/archive deleted.
+- KeyboardLayout explicitly measures native system/IME insets on API30+ and legacy resize/visible frame on28/29. JS also handles native/visual viewport and shrinking flex. Physical Android/emulator execution NOT performed; do not turn browser simulation into a claim of confirmed phone behavior.
+- New chat/clear/model/history navigation is queued instead of silently ignored during work; cancel current generation, suppress stale UI and archive old results before draining once. An actual in-flight HTTPS tool call may take time to return. Empty chats are now persistent/visible and history filter clears on changing thread.
+- Tap flash/overscroll disabled; motion added with reduced-motion support.51UIchecks,8Chromium-touch simulations,11production Java persistence/queue checks,27Java agent checks and actual Android build/signature/CRC/alignment pass. Bridge simulations are labelled. Local /clear,/new,/models,/think,/stop,/help preserved; clear empties active context and keeps old chat archive.
+- Same Rust/C libraries, base/epoch02weights and32physical/56executed hybrid architecture. No new training/general quality promotion. Keep stable best.pt46f6697. The known epoch02Rust/Python mismatch and retention regression remain; UI polish is not a neural gain. No model worker active; signing/upload secrets stay outside repo.
+
 # Android030 COMPLETE — optional epoch02 APK0.5 delivered
 
 - Signed Tools package dev.liquidsense.chat.tools, versionCode3, same previous certificate. Public APK: https://gofile.io/d/7OFCC99z (1969325396bytes). Stable/default general unchanged; experimental029epoch02 bundled as a separate Web/Python selector/history. Specialist015E remains optional via its installed app.
