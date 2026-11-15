@@ -1,0 +1,13 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx768m
+Note: /workspace/liquid-sense/android_install033/CleanSigner.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Picked up JAVA_TOOL_OPTIONS: -Xmx768m
+SIGNED_VERIFIED_PREFIX=1967547698 TAIL_BYTES=12705 TOTAL=1967560403
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/android_install033/build_apk.py", line 65, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/liquid-sense/android_install033/build_apk.py", line 52, in main
+    for scheme in ['v1 scheme (JAR signing)','v2 scheme (APK Signature Scheme v2)','v3 scheme (APK Signature Scheme v3)']:assert 'Verified using '+scheme+': true' in sig
+                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

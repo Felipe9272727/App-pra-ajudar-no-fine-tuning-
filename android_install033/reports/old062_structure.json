@@ -1,0 +1,30 @@
+{
+  "entries": 22,
+  "unreferenced_or_gap_regions": [
+    {
+      "before": "res/drawable/ic_launcher.xml",
+      "bytes": 1201
+    },
+    {
+      "before": "lib/arm64-v8a/libliquid_python.so",
+      "bytes": 1785479
+    },
+    {
+      "before": "assets/NATIVE030_LICENSES.txt",
+      "bytes": 27661
+    },
+    {
+      "before": "resources.arsc",
+      "bytes": 45972
+    },
+    {
+      "before": "AndroidManifest.xml",
+      "bytes": 53800
+    }
+  ],
+  "misaligned_stored_entries": [],
+  "contiguous_local_records": false,
+  "one_trailing_APK_signing_block_after_last_local_record": true,
+  "signer_zero_alignment_padding_bytes": 3999,
+  "first_local_entry": "res/drawable/ic_launcher.xml"
+}

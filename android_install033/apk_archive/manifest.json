@@ -1,0 +1,45 @@
+{
+  "format": "exact-signed-apk-segments-v2",
+  "name": "LiquidSense-0.6.3-install-preview.apk",
+  "bytes": 1967560403,
+  "sha256": "4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10",
+  "segments": [
+    {
+      "kind": "zlib",
+      "path": "android_install033/apk_archive/part00.zlib.bin",
+      "bytes": 15503448,
+      "sha256": "66fdbdadb7d407c0bdaff4e50e00029f365ef5de3225b98bfc7536adf7a6e76b",
+      "compressed_bytes": 6266420,
+      "compressed_sha256": "debfbdb4cf327357e8ddfa4741877d536a384246380b4ac51dfa1b1e5c1db258"
+    },
+    {
+      "kind": "parent_pack",
+      "manifest": "tooluse022/apk_archive/manifest.json",
+      "bytes": 1599290240,
+      "sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288"
+    },
+    {
+      "kind": "zlib",
+      "path": "android_install033/apk_archive/part02.zlib.bin",
+      "bytes": 52,
+      "sha256": "e1fdede9263ecf5ebfc949e43cd4a5603fec1032a310ba32f6b3533bb3d201c2",
+      "compressed_bytes": 52,
+      "compressed_sha256": "db75e09de68a85ac430df89d73449a0585952fd5d54631020933ea4bdeac7c0e"
+    },
+    {
+      "kind": "patch",
+      "manifest": "android_epochs030/patch_archive/manifest.json",
+      "bytes": 352753958,
+      "sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310"
+    },
+    {
+      "kind": "zlib",
+      "path": "android_install033/apk_archive/part04.zlib.bin",
+      "bytes": 12705,
+      "sha256": "359cefa92559d4c18003c36d319df036a09b0c43a60eb4484467a6d71f54a03c",
+      "compressed_bytes": 5740,
+      "compressed_sha256": "f7a026de095583d96f35d5ad3c87b851603320339b1420c3c3a116f6e7e92090"
+    }
+  ],
+  "full_reconstruction_verified": true
+}

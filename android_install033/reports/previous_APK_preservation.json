@@ -1,0 +1,23 @@
+{
+  "old_SHA256": "614cdc6cfbce027947e4294ab9f0578b581d47b3615eefc72f1d88940be58590",
+  "immutable_archive_commit": "64e8e4d11a166b508235e8dd22f7bd632a345c30",
+  "archive": "android_ui032/apk_archive/manifest.json",
+  "full_reconstruction_verified": true,
+  "logical_shared_payloads_extracted": [
+    "lib/arm64-v8a/libliquid_python.so",
+    "assets/LICENSE_QWEN.txt",
+    "assets/LLVM_LICENSE.txt",
+    "assets/NOTICE.txt",
+    "assets/RUST_LICENSES.txt",
+    "assets/THIRD_PARTY_NOTICES.txt",
+    "assets/identity.json",
+    "assets/tokenizer.json",
+    "assets/tools_prefix.txt",
+    "assets/MICROPYTHON_LICENSE.txt",
+    "lib/arm64-v8a/libliquid_sense.so",
+    "assets/NATIVE030_LICENSES.txt",
+    "assets/build_config.json"
+  ],
+  "retired_only_redundant_RAM_build_cache": "/dev/shm/liquid-android/ui032-apk/LiquidSense-0.6.2-ui-preview.apk",
+  "no_checkpoints_removed": true
+}

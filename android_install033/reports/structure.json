@@ -1,0 +1,9 @@
+{
+  "entries": 25,
+  "unreferenced_or_gap_regions": [],
+  "misaligned_stored_entries": [],
+  "contiguous_local_records": true,
+  "one_trailing_APK_signing_block_after_last_local_record": true,
+  "signer_zero_alignment_padding_bytes": 3366,
+  "first_local_entry": "AndroidManifest.xml"
+}
