@@ -1,0 +1,42 @@
+{
+  "attempts": [
+    {
+      "run_id": 43674895719,
+      "head": "5509a94387639a8d5beb92aee01780f39a63312e",
+      "status": "cancelled",
+      "evidence": "reports/first_emulator_startup.log",
+      "reason": "missing AVD descriptor; adb waited without device"
+    },
+    {
+      "run_id": 43675509632,
+      "head": "662fd493522eb15e277c38bb0f30a5bdf23173d3",
+      "status": "cancelled",
+      "reason": "superseded after first emulator log identified descriptor path"
+    },
+    {
+      "run_id": 43675682595,
+      "head": "c34b2537bc51e8ec4988ab5bef8397cef75d68f0",
+      "status": "failure_before_installer",
+      "evidence": "reports/attempt3",
+      "reason": "Android booted, but old archive fragments were not hydrated"
+    },
+    {
+      "run_id": 43676111054,
+      "head": "ac6f3d050cbe38c9e436a4adc9dc707570051ae7",
+      "status": "success",
+      "evidence": "reports/Android15",
+      "result": {
+        "old062_installed": true,
+        "old062_installer_output": "Performing Streamed Install\nSuccess\n",
+        "baseline_available": true,
+        "new063_installed": true,
+        "new063_installer_output": "Performing Streamed Install\nSuccess\n",
+        "scope": "actual Android emulator PackageManager; not physical Xiaomi",
+        "source_manifest": "android_install033/apk_archive/manifest.json",
+        "private_data_preserved_on_update": true,
+        "activity_start_command_success": true,
+        "app_process_alive_after20s": true
+      }
+    }
+  ]
+}
