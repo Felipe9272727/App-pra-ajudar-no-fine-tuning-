@@ -1,3 +1,24 @@
+# AndroidInstall034 — physical 0.6.3 also rejected; tiny diagnostic ready
+
+- Phone screenshots confirm 0.6.3 was rejected too. Root cause remains unknown:
+  Android15 emulator installed both0.6.2and0.6.3. Do not claim a phone fix or
+  rebuild/download another2GB APK without actual device error evidence.
+- Delivered separate native helper (20890bytes) https://gofile.io/d/IqxirO9A,
+  package dev.liquidsense.installcheck, SHA256
+  3181345443e30e0663fdd54ce42109327a8c12f8c5d654a4055f11513f06fa41.
+  Exact APK, source, reports and screenshot preserved on branch
+  codex/liquid-sense-device-diag-034-20261115 at 9f3566bbae9941094960928b9fbd17bdd61c170a.
+- Read android_install034/README.md,status.json and reports from that branch.
+  Helper installed/launched on actual Android15 emulator run43749143251,
+  job132918977825. File selection/hash/session flow was NOT executed there.
+- User must select existing downloaded0.6.3 in helper, wait for full hash,
+  use normal Android-confirmed PackageInstaller Session if integrity passes,
+  then copy report here. Captures bytes/SHA, installed/archive cert+version,
+  actual STATUS/LEGACY_STATUS/message. No INTERNET permission or chat access.
+  Never uninstall app/erase conversations; no automatic report upload.
+- Pending: receive user's physical report, diagnose actual refusal, then make
+  targeted correction. No weights/training/loop/model-quality changes.
+
 # AndroidInstall033 COMPLETE — full APK installed/updated/launched on actual Android emulator
 
 - User physical phone rejected0.6.2with generic invalid-package message.0.6.3fresh ZIP/v1v2v3/samecert/versionCode7delivered https://gofile.io/d/ttGQz5Os (1967560403bytes), SHA4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10. All weights/Rust/C and UI032fixes/commands retained, no training.

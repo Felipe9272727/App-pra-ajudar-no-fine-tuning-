@@ -1,5 +1,15 @@
 # Liquid Sense 0.8B LOOP
 
+## Instalação no celular — diagnóstico pendente
+
+A 0.6.3 também foi recusada no aparelho físico. O teste no emulador não reproduziu
+a falha. [Baixar verificador separado — 21 KB](https://gofile.io/d/IqxirO9A).
+Use o APK 0.6.3 já baixado: selecione no verificador, aguarde a conferência, tente
+atualizar pelo botão 2 e copie o relatório. Sem baixar os modelos novamente,
+sem acesso às conversas e sem envio automático. Abertura do verificador testada
+no Android 15 emulado; causa no aparelho depende do relatório.
+[Instruções, fonte e evidências](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/9f3566bbae9941094960928b9fbd17bdd61c170a/android_install034).
+
 ## APK0.6.3 — pacote reconstruído e instalado em Android15
 
 [**Baixar no Gofile — 1,97GB**](https://gofile.io/d/ttGQz5Os) · Android9+/ARM64.
