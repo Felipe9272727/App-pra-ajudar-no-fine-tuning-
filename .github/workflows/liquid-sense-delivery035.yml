@@ -1,0 +1,74 @@
+name: Liquid Sense exact APK delivery035
+on:
+  push:
+    branches: [codex/liquid-sense-delivery-035-20261115]
+    paths: [android_delivery035/ci_request.json]
+permissions:
+  contents: write
+concurrency:
+  group: liquid-delivery035
+  cancel-in-progress: false
+jobs:
+  delivery:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      OMP_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: liquid-sense-0.6.3-verified035
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            android_delivery035
+            android_install033
+            android_ui032/apk_archive
+            android_ui031/apk_archive
+            android_epochs030/patch_archive
+            tooluse022/apk_archive
+            tooluse022/archive_parts
+      - name: Recover immutable signed APK and wrap ZIP with exact checksums
+        run: |
+          mkdir -p "$RUNNER_TEMP/delivery035" "$RUNNER_TEMP/remote035"
+          python tooluse022/pack_archive.py restore
+          python android_install033/portable_restore.py --download-upstream --check-inputs
+          python android_install033/portable_restore.py --manifest android_install033/apk_archive/manifest.json --out "$RUNNER_TEMP/LiquidSense-0.6.3-install-preview.apk"
+          python android_delivery035/package.py --apk "$RUNNER_TEMP/LiquidSense-0.6.3-install-preview.apk" --out "$RUNNER_TEMP/delivery035"
+          df -h .
+      - name: Create separate prerelease draft without altering previous releases
+        run: |
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo 'Release tag already exists; inspect it before retrying.'
+            exit 1
+          fi
+          gh release create "$RELEASE_TAG" --target "$GITHUB_SHA" --draft --prerelease --title 'Liquid Sense0.6.3 — download verificado' --notes-file android_delivery035/RELEASE_NOTES.md
+          gh release upload "$RELEASE_TAG" "$RUNNER_TEMP/delivery035/LiquidSense-0.6.3-verificado.zip" "$RUNNER_TEMP/delivery035/SHA256SUMS.txt"
+      - name: Redownload draft ZIP and verify full ZIP plus contained APK
+        run: |
+          gh release download "$RELEASE_TAG" --pattern '*.zip' --dir "$RUNNER_TEMP/remote035"
+          python android_delivery035/package.py --out "$RUNNER_TEMP/delivery035" --remote "$RUNNER_TEMP/remote035/LiquidSense-0.6.3-verificado.zip" --stage authenticated_draft
+      - name: Publish verified draft and verify anonymous public download
+        run: |
+          gh release edit "$RELEASE_TAG" --draft=false --prerelease --latest=false
+          python - <<'PY'
+          import json,os,pathlib,subprocess
+          dest=pathlib.Path(os.environ['RUNNER_TEMP'])/'remote035/LiquidSense-0.6.3-verificado.zip'
+          manifest=pathlib.Path(os.environ['RUNNER_TEMP'])/'delivery035/delivery_manifest.json'
+          url=json.loads(manifest.read_text())['url']
+          subprocess.run(['curl','--fail','--show-error','--location','--proto','=https','--retry','2','--retry-delay','5','--max-time','900','--output',str(dest),url],check=True)
+          PY
+          python android_delivery035/package.py --out "$RUNNER_TEMP/delivery035" --remote "$RUNNER_TEMP/remote035/LiquidSense-0.6.3-verificado.zip" --stage public_anonymous
+          gh release upload "$RELEASE_TAG" "$RUNNER_TEMP/delivery035/delivery_manifest.json"
+      - name: Preserve delivery evidence, excluding duplicated large APK
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: delivery035-evidence
+          path: |
+            ${{ runner.temp }}/delivery035/delivery_manifest.json
+            ${{ runner.temp }}/delivery035/SHA256SUMS.txt
+          retention-days: 14

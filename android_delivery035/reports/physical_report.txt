@@ -1,0 +1,13 @@
+Liquid Sense · diagnóstico 034
+Android: 15 / SDK 35
+Aparelho: Xiaomi 2312DRA50G
+ABIs: [arm64-v8a, armeabi-v7a, armeabi]
+
+ARQUIVO ESCOLHIDO
+Bytes: 1967560403
+SHA256: 8303e126b3af7d3f4cc95f218729a7cbb0e7193acb508745754122866f535203
+Corresponde à 0.6.3 publicada: false
+
+App principal não encontrado pelo gerenciador.
+O parser deste Android não reconheceu o APK.
+Nenhuma instalação foi iniciada.
