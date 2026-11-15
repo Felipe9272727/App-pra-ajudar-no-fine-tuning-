@@ -1,3 +1,12 @@
+# AndroidInstall033 COMPLETE — full APK installed/updated/launched on actual Android emulator
+
+- User physical phone rejected0.6.2with generic invalid-package message.0.6.3fresh ZIP/v1v2v3/samecert/versionCode7delivered https://gofile.io/d/ttGQz5Os (1967560403bytes), SHA4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10. All weights/Rust/C and UI032fixes/commands retained, no training.
+- Branch codex/liquid-sense-install-033-20261115;73artifacts verified at immutable04990ad71bbc9a03829e6b31759a2297692aab3e. Read android_install033/README.md,REPORT.md,status.json,CI_attempts and reports/Android15. Old signed APKs remain byte-recoverable.
+- Real Android15/API35GoogleAPIsx86_64emulator supportsARM64via libndk_translation. Run43676111054success atcommitac6f3d050cbe38c9e436a4adc9dc707570051ae7. EXACT old0.6.2AND new0.6.3both installed. New update preserved test private-file marker; activity start ok,process alive20s,actual rendered chat screenshot captured. Do not conflate marker preservation with directly testing every existing conversation.
+- Phone-specific refusal NOT reproduced; precise Xiaomi/HyperOS/download cause unconfirmed. No physical-device test, keyboard interaction, new model quality or speed result. Screenshot/install/launch are real emulator evidence, not mocked bridge.
+- Future APK builds must use fresh logical ZIP entries, not append to an already signed APK. Old append builds contained superseded records/signing blocks. Permit only normal zero signer alignment padding. Verifyv1/v2/v3using exercising SDK ranges; default verifier may skip older schemes and show false without proving absence.
+- Reconstruct with portable_restore.py using pinned upstream SHA and verified tooluse022/archive_parts hydration. No Torch/model rebuilding/signing key required for restoring signed bytes. CI explicitly creates AVD descriptor and preflights fragments before emulator startup; failed harness attempts/logs retained. All CI/model workers closed, private signing/upload secrets remain outside repo.
+
 # AndroidUI032 COMPLETE — APK0.6.2 fixes delivered
 
 - User reported keyboard covering composer, unresponsive new chats, blue tap highlight and wanted more motion. Same Tools package/cert, versionCode6, public APK https://gofile.io/d/fNGVCZpE (1969473053bytes). SHA256614cdc6cfbce027947e4294ab9f0578b581d47b3615eefc72f1d88940be58590.

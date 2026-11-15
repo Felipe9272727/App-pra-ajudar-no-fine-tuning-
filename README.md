@@ -1,5 +1,14 @@
 # Liquid Sense 0.8B LOOP
 
+## APK0.6.3 — pacote reconstruído e instalado em Android15
+
+[**Baixar no Gofile — 1,97GB**](https://gofile.io/d/ttGQz5Os) · Android9+/ARM64.
+Novo ZIP limpo, assinaturasv1/v2/v3 verificadas e mesmo certificado para atualizar sobre o app atual. Mantém modelos, pesos, comandos e correções de interface.
+
+**Teste real de instalação:** o pacote completo instalou e atualizou em emulador Android15, preservou um arquivo de teste nos dados privados e abriu a tela inicial. [Evidências](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/04990ad71bbc9a03829e6b31759a2297692aab3e/android_install033/reports/Android15/result.json) · [captura do emulador](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/04990ad71bbc9a03829e6b31759a2297692aab3e/android_install033/reports/Android15/screen.png).
+
+O usuário relatou recusa da0.6.2no celular, mas a0.6.2também instalou nesse emulador. A causa específica no Xiaomi/HyperOS ou no arquivo baixado não foi reproduzida. Sem teste em aparelho físico. [Relatório e restauração](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/04990ad71bbc9a03829e6b31759a2297692aab3e/android_install033).
+
 ## APK0.6.2 — teclado, novos chats, comandos e animações
 
 [**Baixar no Gofile — 1,97GB**](https://gofile.io/d/fNGVCZpE) · Android9+/ARM64.
