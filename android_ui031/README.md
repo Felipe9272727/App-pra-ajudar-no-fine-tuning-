@@ -1,6 +1,6 @@
-# Liquid Sense Android0.6 — chat UI refresh
+# Liquid Sense Android0.6.1 — chat UI refresh
 
-[Download on Gofile — 1.97GB](https://gofile.io/d/fl8LUcK7) · Android9+/ARM64.
+[Download on Gofile — 1.97GB](https://gofile.io/d/QydCwORM) · Android9+/ARM64.
 
 A new local chat interface inspired by public ChatGPT/Claude interaction patterns.
 This release changes presentation and local conversation management. It does not
@@ -36,7 +36,7 @@ edit are byte-identical to0.5. General default remains unchanged; the epoch02
 retention failures and Rust/Python discrepancy remain disclosed in the selector.
 Specialist015E still requires its existing separate installed app.
 
-Validation:29Chromium UI checks with a mocked Java bridge, four actual-thought
+Validation:37Chromium UI checks with a mocked Java bridge, four actual-thought
 parser checks,27Java agent checks, secure local-asset origin test, real Android
 resource/Java/DEX compilation, APKv3 signature/certificate, ZIP alignment/CRC and
 full embedded asset/native-library hashes. Screenshots use mock UI fixtures and
@@ -44,12 +44,12 @@ are not evidence of model quality. No physical Android device/emulator execution
 is claimed. The Chromium environment blocks direct file URLs; production uses an
 intercepted HTTPS origin, tested separately.
 
-Same package dev.liquidsense.chat.tools,versionCode4,Android9+/ARM64 and previous
+Same package dev.liquidsense.chat.tools,versionCode5,Android9+/ARM64 and previous
 signing certificate. Install over0.5 to preserve Android application data.
 Check reports/gofile_delivery.json for the current verified public download.
 
 Exact signed APK SHA256:
-4c4d247fb0c63c3db8fef6779e27b0623f2172efe20a8efb44e1ab16a11c11a5
+b8fd17c9e0f5b073fd04a7ffe47055f98a3c22e4848ed5c2c430488fea6f030d
 
 The old0.5 signed APK remains fully recoverable from its immutable030archive;
 only its redundant RAM build cache was reused.031's exact archive reuses all
@@ -63,3 +63,23 @@ build_apk.py (requires a verified030build cache and the private signing key).
 Archive restoration does not need a signing key. Existing older public downloads
 and all prior sources remain. Gofile guest credentials and signing material are
 kept outside the project.
+
+## Local slash commands
+
+- `/clear` or `/ clear`: start with empty conversation context; keep the previous
+  conversation in the local archive. `/new` is an alias.
+- `/models`: open the actual model/profile selector.
+- `/think`: open reasoning presets; `/think normal`, `/think profundo`,
+  `/think extenso` select directly.
+- `/stop`: interrupt an active generation.
+- `/help`: list commands. Typing `/` opens discoverable suggestions.
+
+These commands execute in the app, never as model prompts. Unknown commands
+show a local error. During generation, stop it before clearing or switching.
+Empty context means new inference messages; the Rust prefix cache can only be
+reused for an identical valid token prefix, never an omitted earlier conversation.
+This is context reset, not permanent deletion of archived chats.
+
+The initial0.6.0UI APK remains preserved at its original Gofile link and exact
+`apk_archive/`;0.6.1has its own `apk_archive_061/`. Both old and new source states
+remain in Git. Restore defaults to0.6.1; pass `--0.6.0` to restore the initial UI.

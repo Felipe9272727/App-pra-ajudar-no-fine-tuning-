@@ -1,0 +1,46 @@
+{
+  "format": "exact-signed-apk-segments-v2",
+  "name": "LiquidSense-0.6.1-ui-preview.apk",
+  "bytes": 1969419805,
+  "sha256": "b8fd17c9e0f5b073fd04a7ffe47055f98a3c22e4848ed5c2c430488fea6f030d",
+  "segments": [
+    {
+      "kind": "zlib",
+      "path": "android_epochs030/apk_archive/prefix.zlib.bin",
+      "bytes": 15436016,
+      "sha256": "14a61cfa4e932b9d3d4a75e96a7f748dc31224124dc807f2ae86549e764747bb",
+      "compressed_bytes": 6198552,
+      "compressed_sha256": "c59ca242bb2dc19a6c322c1c6a46111b426bd59554f78f941a2029b30e97e985"
+    },
+    {
+      "kind": "patch",
+      "manifest": "android_epochs030/patch_archive/manifest.json",
+      "bytes": 352753958,
+      "sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310"
+    },
+    {
+      "kind": "zlib",
+      "path": "android_epochs030/apk_archive/bridge.zlib.bin",
+      "bytes": 3662,
+      "sha256": "9cf5c947e1b2691c6e1ed947ab11e9cf2bfbc88f51ed9c90e7affd3990c98827",
+      "compressed_bytes": 2786,
+      "compressed_sha256": "13a20edaa189247dea92e2d16507e54289b19542c9361fb553b45b46e1ada409"
+    },
+    {
+      "kind": "parent_pack",
+      "manifest": "tooluse022/apk_archive/manifest.json",
+      "bytes": 1599290240,
+      "sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288"
+    },
+    {
+      "kind": "zlib",
+      "path": "android_ui031/apk_archive_061/suffix.zlib.bin",
+      "bytes": 1935929,
+      "sha256": "18d3d880ab2f70a6e314af7a0192aac0621114430a855d54d2e988e501044f4c",
+      "compressed_bytes": 1898309,
+      "compressed_sha256": "1ab2ad83302b9833eeff2510460ebe9d36ec27e412dfde5a00972ba72c14ab4d"
+    }
+  ],
+  "all_segments_and_full_reconstruction_verified": true,
+  "previous_APK_exact_archive_retained": true
+}

@@ -12,7 +12,7 @@ def blocks(segment):
             raw=(parent.parent/p['path']).read_bytes();assert hashlib.sha256(raw).hexdigest()==p['sha256'];yield raw
     else:yield from model_parts(json.loads((ROOT/segment['manifest']).read_text()))
 def main():
-    m=json.loads((H/'reports/apk_manifest.json').read_text());old=json.loads((ROOT/'android_epochs030/apk_archive/manifest.json').read_text());dest=H/'apk_archive';dest.mkdir(exist_ok=True)
+    m=json.loads((H/'reports/apk_manifest.json').read_text());old=json.loads((ROOT/'android_epochs030/apk_archive/manifest.json').read_text());dest=H/'apk_archive_061';dest.mkdir(exist_ok=True)
     segments=old['segments'][:-1]
     for s in segments:
         if s['kind']=='zlib':s['path']='android_epochs030/apk_archive/'+s['path']
