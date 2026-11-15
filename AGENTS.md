@@ -1,3 +1,24 @@
+# AndroidDelivery035 — physical APK hash mismatch; delivery recovery
+
+- Phone report: Xiaomi Android15/SDK35, 1967560403bytes, SHA256
+  8303e126b3af7d3f4cc95f218729a7cbb0e7193acb508745754122866f535203.
+  Expected signed0.6.3 hash is4735be85...ade0e10. Same size but different bytes;
+  parser returned null. Helper blocked session as intended. Actual source of
+  alteration remains unknown. Missing queried package is NOT evidence of data
+  deletion. No uninstall/data wipe.
+- Recover exact immutable0.6.3 from preserved archive, wrap in ZIP with CRC+SHA,
+  host separately on GitHub Releases; no version bump, signing or weight changes.
+  Source branch codex/liquid-sense-delivery-035-20261115. Read its
+  android_delivery035/README.md,status.json,reports and release delivery manifest.
+- Original Gofile receipt checked MD5/size, NOT full download. Current content
+  API refused premium/rate-limited; stop retries, no bypass. Do not blame host,
+  phone or network without direct evidence.
+- Both draft and anonymous public FULL redownload passed, including ZIP and
+  contained APK SHA256, run43750305576/job132922568159. Evidence at 9e8871b5f4c7bdac9442c8e054001560dd52ce73.
+  https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/tag/liquid-sense-0.6.3-verified035
+  User must download ZIP anew, extract, then install/select extracted APK in
+  helper034. Physical installation still pending. No uninstall/data wipe.
+
 # AndroidInstall034 — physical 0.6.3 also rejected; tiny diagnostic ready
 
 - Phone screenshots confirm 0.6.3 was rejected too. Root cause remains unknown:

@@ -1,5 +1,15 @@
 # Liquid Sense 0.8B LOOP
 
+## APK 0.6.3 — download recuperado e verificado
+
+O arquivo escolhido no Xiaomi tinha o tamanho esperado, mas SHA256 diferente.
+[Baixar ZIP verificado — 1,97 GB](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.3-verified035/LiquidSense-0.6.3-verificado.zip).
+Extraia e abra o APK. Se recusado, confira o APK extraído com o verificador034 e
+copie o relatório. Não desinstale o app anterior. O download público completo do
+ZIP e o SHA256 do APK interno passaram; a instalação no Xiaomi continua pendente.
+Mesmos app, assinatura e pesos. O ponto da alteração na cópia anterior não foi
+identificado. [Relatório e evidências](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/9e8871b5f4c7bdac9442c8e054001560dd52ce73/android_delivery035).
+
 ## Instalação no celular — diagnóstico pendente
 
 A 0.6.3 também foi recusada no aparelho físico. O teste no emulador não reproduziu
