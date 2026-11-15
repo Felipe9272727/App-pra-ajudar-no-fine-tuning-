@@ -1,0 +1,11 @@
+{
+  "status": "complete_signed_delivered_preserved_and_actual_emulator_verified",
+  "download": "https://gofile.io/d/ttGQz5Os",
+  "verified_source_commit": "04990ad71bbc9a03829e6b31759a2297692aab3e",
+  "verified_files": 73,
+  "main_index_commit": "42a8bf55474b99da7cb1b7e74e0f98bf7fbceed1",
+  "CI_run_success": 43676111054,
+  "all_prior_CI_runs_terminal": true,
+  "native_training_workers_started": false,
+  "physical_device_error_not_reproduced": true
+}
