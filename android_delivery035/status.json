@@ -1,0 +1,11 @@
+{
+  "physical_file_integrity_match": false,
+  "bytes_match": true,
+  "phone_parser_recognized": false,
+  "session_install_attempted": false,
+  "original_host_full_download_verified": false,
+  "delivery_recovery_CI_run": 43750122544,
+  "delivery_status": "running",
+  "weights_modified": false,
+  "physical_installation_verified": false
+}
