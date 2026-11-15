@@ -7,7 +7,7 @@ permissions:
   contents: read
 concurrency:
   group: liquid-install033
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   android-install:
     if: github.event.repository.private == false
@@ -22,7 +22,6 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-          filter: blob:none
           sparse-checkout: |
             android_install033
             android_ui032/apk_archive
@@ -32,6 +31,10 @@ jobs:
             tooluse022/apk_archive
       - name: Restore exact pinned public upstream bytes
         run: python android_install033/portable_restore.py --download-upstream
+      - name: Free unused runner SDK disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/.ghcup /opt/ghc /usr/local/lib/android/sdk/ndk
+          df -h .
       - name: Install emulator on standard public runner
         run: |
           test -e /dev/kvm
@@ -39,10 +42,13 @@ jobs:
           echo y | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'emulator' 'platform-tools' 'system-images;android-35;google_apis;x86_64'
           echo no | "$ANDROID_HOME/cmdline-tools/latest/bin/avdmanager" create avd --force --name liquid033 --package 'system-images;android-35;google_apis;x86_64' --device pixel_6
           "$ANDROID_HOME/emulator/emulator" -avd liquid033 -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -memory 4096 -cores 2 -partition-size 8192 > "$RUNNER_TEMP/emulator033.log" 2>&1 &
+          emulator_pid=$!
+          sleep 5
+          if ! kill -0 "$emulator_pid"; then cat "$RUNNER_TEMP/emulator033.log"; exit 1; fi
           echo "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
       - name: Wait for actual Android boot
         run: |
-          adb wait-for-device
+          timeout 120s adb wait-for-device || { cat "$RUNNER_TEMP/emulator033.log"; exit 1; }
           for i in $(seq 1 120); do
             if [ "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1 ]; then exit 0; fi
             sleep 2
