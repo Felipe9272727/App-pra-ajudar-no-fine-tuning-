@@ -1,0 +1,19 @@
+{
+  "status": "phone_install_cause_pending_user_report",
+  "helper_APK": {
+    "bytes": 20890,
+    "sha256": "3181345443e30e0663fdd54ce42109327a8c12f8c5d654a4055f11513f06fa41",
+    "url": "https://gofile.io/d/IqxirO9A",
+    "package": "dev.liquidsense.installcheck"
+  },
+  "target_APK": "0.6.3-install-preview",
+  "large_APK_rebuilt": false,
+  "weights_modified": false,
+  "phone_installation_verified": false,
+  "helper_emulator_smoke": "installed_and_launched_on_Android15_API35",
+  "CI_run": 43749143251,
+  "CI_job": 132918977825,
+  "CI_source": "880914d279dec16664a14bef05aa7f958fef3ece",
+  "helper_file_selection_and_session_tested": false,
+  "phone_report_received": false
+}

@@ -1,0 +1,642 @@
+--------- beginning of main
+11-15 18:53:53.012  2300  2315 W LegacyVoicePolicyManage: The requested voice is not available for this app identifier
+11-15 18:53:53.012  2300  2315 W LegacyVoicePolicyManage: The requested voice is not available for this app identifier
+11-15 18:53:53.013  2300  2315 W RankedDispatcher: The requested voice is not available for this app identifier
+11-15 18:53:53.013  2300  2315 I GoogleTTSServiceImpl: For default lang en-us is name en-US-language (en-us-x-iog-server)
+11-15 18:53:53.013  1456  2462 I TextToSpeech: Setting up the connection to TTS engine...
+11-15 18:53:53.013  1456  1456 I AiAiCaptions: TtsSynthesizerImpl::onInit(): status: true(0).
+11-15 18:53:53.016  1065  1065 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-15 18:53:53.018  2300  2463 I SP      : Fetching en-us:en-us-x-multi-r70 from assets with params: {m:*:*:*, *, p {absolute:0}}
+--------- beginning of system
+11-15 18:53:53.023   558  1121 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10137, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.024  1483  1848 I SRMClientModule: SRMc: Instantiating SodaResourceManagerClient with account-scope.
+11-15 18:53:53.025  2464  2464 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+11-15 18:53:53.034  1640  1640 I BgTaskExecutorImpl: (REDACTED) Starting %s background task %s.
+11-15 18:53:53.036  1214  1565 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+11-15 18:53:53.039  1214  1214 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.account.workaccount.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-15 18:53:53.039  2464  2464 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+11-15 18:53:53.039  2441  2441 D nativeloader: Configuring clns-shared-7 for other apk /system/priv-app/CalendarProvider/CalendarProvider.apk. target_sdk_version=35, uses_libraries=, library_path=/system/priv-app/CalendarProvider/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.android.providers.calendar:/system/priv-app/CalendarProvider:/system/lib64:/system_ext/lib64
+11-15 18:53:53.040  2464  2464 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+11-15 18:53:53.041  1640  1640 I BgTaskExecutorImpl: (REDACTED) Starting %s background task %s.
+11-15 18:53:53.042  1214  1214 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.account.workaccount.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-15 18:53:53.043  1483  1848 I HDM.HotwordInfoProvider: #getHotwordInformation 
+11-15 18:53:53.043  1214  2410 D TrafficStats: tagSocket(128) with statsTag=0x6001, statsUid=10143
+11-15 18:53:53.044  1456  1456 D CompatChangeReporter: Compat change id reported: 291868760; UID 10135; state: ENABLED
+11-15 18:53:53.047  1214  2410 D TrafficStats: tagSocket(162) with statsTag=0x6001, statsUid=10143
+11-15 18:53:53.048  1065  1065 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-15 18:53:53.049   558  1689 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.053  1640  2476 I SodaSilentEnrollment: (REDACTED) Executing HotwordSilentEnrollment, updateOnly: %b
+11-15 18:53:53.053  1640  2476 I SodaEnrollmentClient: #enroll
+11-15 18:53:53.053   558   574 D FileUtils: Rounded bytes from 4110737408 to 8000000000
+11-15 18:53:53.055   558   977 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.055   558  1121 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.055   558  1121 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.056  1214  2433 I TetheringManager: registerTetheringEventCallback:com.google.android.gms
+11-15 18:53:53.057   558   977 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.057  1640  1640 W A       : (REDACTED) Queue length for executor %s is now %d. Perhaps some tasks are too long, or the pool is too small.
+11-15 18:53:53.060  1483  1848 I HDM.HotwordInfoProvider: #getHotwordInformation bindService
+11-15 18:53:53.061  2441  2441 D CompatChangeReporter: Compat change id reported: 202956589; UID 10101; state: ENABLED
+11-15 18:53:53.071  1214  1570 I Nearby  : Beginning attempt #1 for RestoreDeviceName... [CONTEXT service_id=49 ]
+11-15 18:53:53.072  2464  2464 D nativeloader: Configuring clns-shared-7 for other apk /system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk. target_sdk_version=35, uses_libraries=, library_path=/system_ext/priv-app/WallpaperPickerGoogleRelease/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.apps.wallpaper:/system_ext/priv-app/WallpaperPickerGoogleRelease:/system/lib64:/system_ext/lib64
+11-15 18:53:53.073  1065  1065 D CarrierSvcBindHelper: onPackageModified: com.android.stk
+11-15 18:53:53.073  1065  1065 D CarrierSvcBindHelper: No carrier app for: 0
+11-15 18:53:53.076  1065  1284 D ImsResolver: maybeAddedImsService, packageName: com.google.android.providers.media.module
+11-15 18:53:53.076  1214  2410 D TrafficStats: tagSocket(159) with statsTag=0x6001, statsUid=10143
+11-15 18:53:53.086  1483  1483 I HDM.HotwordInfoProvider: (REDACTED) Connected to HotwordService. ComponentName %s, service %s
+11-15 18:53:53.088   558  1689 D ConditionProviders: Disabling component com.google.android.apps.wellbeing/.azr.impl.AzrConditionProviderService
+11-15 18:53:53.089  2464  2464 D CompatChangeReporter: Compat change id reported: 202956589; UID 10175; state: ENABLED
+11-15 18:53:53.103  1483  2110 I HDM.HotwordInfoProvider: Handing HotwordService connection in executor.
+11-15 18:53:53.105  1065  1065 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-15 18:53:53.105   558  1513 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10137, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.108  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.SearchActivity}
+11-15 18:53:53.113  1065  1065 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-15 18:53:53.114   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.114   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.114   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.114   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.114   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.114  1065  1065 D CarrierSvcBindHelper: onPackageModified: com.google.android.as
+11-15 18:53:53.114  1065  1065 D CarrierSvcBindHelper: No carrier app for: 0
+11-15 18:53:53.115  1065  1284 D ImsResolver: maybeAddedImsService, packageName: com.android.stk
+11-15 18:53:53.115  2441  2441 V GraphicsEnvironment: Currently set values for:
+11-15 18:53:53.115  2441  2441 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-15 18:53:53.115  2441  2441 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-15 18:53:53.115  2441  2441 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+11-15 18:53:53.115  2441  2441 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-15 18:53:53.119  1214  1570 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore default scan mode.
+11-15 18:53:53.123  1214  1598 I ProximityAuth: [SimStateChangedIntentOperation] Handling intent Intent { act=android.intent.action.SIM_STATE_CHANGED flg=0x15000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+11-15 18:53:53.123  1214  1598 I ProximityAuth: [MessageProcessorManager] MessageProcessorManager instantiated for user UserHandle{0}
+11-15 18:53:53.124  1214  1214 W ActivityThread: getPackageInfo() called with an older ApplicationInfo than the cached version for package com.google.android.gms
+11-15 18:53:53.124  1214  1703 I ebvk$a  : Unable to retrieve flag snapshot for com.google.android.gms.dtdi#com.google.android.gms, using defaults.
+11-15 18:53:53.124  1214  1703 I ebvk$a  : Unable to retrieve flag snapshot for com.google.android.gms.auth.proximity, using defaults.
+11-15 18:53:53.129  1456  1586 I AiAiEcho: AppPredictionInputConnectorImpl#createPredictionSession
+11-15 18:53:53.131   908   908 W SubscriptionInfo: MCC string is not a number
+11-15 18:53:53.131  1214  1570 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore device name
+11-15 18:53:53.131  2464  2464 V GraphicsEnvironment: Currently set values for:
+11-15 18:53:53.131  2464  2464 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-15 18:53:53.135  2464  2464 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-15 18:53:53.135  2464  2464 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+11-15 18:53:53.135  2464  2464 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-15 18:53:53.143   908   908 W SubscriptionInfo: MNC string is not a number
+11-15 18:53:53.143  1065  1065 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-15 18:53:53.145   558  1514 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10137, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.155  2300  2405 I Phlogger: Unable to retrieve flag snapshot for com.google.android.libraries.consentverifier#com.google.android.tts, using defaults.
+11-15 18:53:53.156  1424  2065 W AppLinksIntentOperation: SC+ verification of app links not yet enabled [CONTEXT service_id=244 ]
+11-15 18:53:53.163  1065  1065 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-15 18:53:53.164   558  1689 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.165   558  1514 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.165   558  1514 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.167   558   574 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.167   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.167   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.167   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.169  1214  2475 I HeterodyneSyncScheduler: Cancel all previously scheduled polling [CONTEXT service_id=51 ]
+11-15 18:53:53.170  1214  2475 I HeterodyneSyncScheduler: Scheduling Phenotype for first execution 10672 seconds from now (1794768833170) [CONTEXT service_id=51 ]
+11-15 18:53:53.171  1214  2173 I Auth    : [WorkAccountServiceImpl] init work authenticator
+11-15 18:53:53.176  1456  1586 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+11-15 18:53:53.182  1456  1586 I AiAiEcho: EchoTargets: 
+11-15 18:53:53.182  1456  1586 I AiAiEcho: Filtered by AiAi flag check: 
+11-15 18:53:53.182  1456  1586 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+11-15 18:53:53.183  1456  1586 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+11-15 18:53:53.183  1456  1586 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-15 18:53:53.183  1456  1586 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+11-15 18:53:53.183  1456  1586 I AiAiEcho: EchoTargets: 
+11-15 18:53:53.183  1456  1586 I AiAiEcho: Filtered by AiAi flag check: 
+11-15 18:53:53.183  1456  1586 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+11-15 18:53:53.183  1456  1586 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+11-15 18:53:53.183  1456  1586 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-15 18:53:53.184  1456  1586 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+11-15 18:53:53.184  1456  1586 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+11-15 18:53:53.190  1214  1214 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.clearcut.bootcount.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+11-15 18:53:53.190  1214  1214 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.clearcut.bootcount.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+11-15 18:53:53.192   558   570 I system_server: Background concurrent mark compact GC freed 32MB AllocSpace bytes, 136(2980KB) LOS objects, 43% free, 31MB/55MB, paused 21.678ms,38.340ms total 1.850s
+11-15 18:53:53.193  1065  1065 D CarrierSvcBindHelper: onPackageModified: com.google.android.apps.wellbeing
+11-15 18:53:53.197  1065  1065 D CarrierSvcBindHelper: No carrier app for: 0
+11-15 18:53:53.199  1424  1661 I ebvk$a  : Unable to retrieve flag snapshot for com.google.android.gms.statementservice, using defaults.
+11-15 18:53:53.200  1065  1284 D ImsResolver: maybeAddedImsService, packageName: com.google.android.as
+11-15 18:53:53.202   558  1513 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.202   558  1513 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.208   908   908 W SubscriptionInfo: MCC string is not a number
+11-15 18:53:53.208  2441  2441 I CalendarDatabaseHelper: Bootstrapping database
+11-15 18:53:53.209   908   908 W SubscriptionInfo: MNC string is not a number
+11-15 18:53:53.221  1214  2474 W ChimeraUtils: Module com.google.android.gms.backup_base missing resource null(0)
+11-15 18:53:53.225  1214  2474 V Backup  : [BackupAccountNotifier] Handling new intent. Show notification: true
+11-15 18:53:53.229   908   908 W SubscriptionInfo: MCC string is not a number
+11-15 18:53:53.230  1065  1065 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-15 18:53:53.230  1214  1570 I Nearby  : Beginning attempt #1 for RestoreDeviceName... [CONTEXT service_id=49 ]
+11-15 18:53:53.233  2300  2386 D CompatChangeReporter: Compat change id reported: 253665015; UID 10165; state: ENABLED
+11-15 18:53:53.235   558  1121 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10137, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.243  2441  2441 I CalendarProvider2: Created com.android.providers.calendar.CalendarAlarmManager@a766071(com.android.providers.calendar.CalendarProvider2@e2fae56)
+11-15 18:53:53.243   558  1121 D CompatChangeReporter: Compat change id reported: 253665015; UID 10165; state: ENABLED
+11-15 18:53:53.248  1214  2173 I Auth    : [WorkAccountServiceImpl] updating authenticator enabled state to: false
+11-15 18:53:53.251   558  1683 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.252  1214  1519 W GetConfigSnapshotOp: Succeeded but not registered: com.google.android.tts#com.google.android.tts [CONTEXT service_id=51 ]
+11-15 18:53:53.259   558  1683 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.260  1065  1065 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-15 18:53:53.261  1214  1570 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore default scan mode.
+11-15 18:53:53.261   908   908 W SubscriptionInfo: MNC string is not a number
+11-15 18:53:53.261   558  1689 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.265   558   977 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.266  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.VoiceSearchActivity}
+11-15 18:53:53.268  1214  1214 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.clearcut.bootcount.service.START pkg=com.google.android.gms }
+11-15 18:53:53.268   558  1492 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.268  1640  1640 W JobService: onNetworkChanged() not implemented in com.google.android.apps.gsa.tasks.BackgroundTasksJobService. Must override in a subclass.
+11-15 18:53:53.269  1214  1214 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.clearcut.bootcount.service.START pkg=com.google.android.gms }
+11-15 18:53:53.270   908   908 W SubscriptionInfo: MCC string is not a number
+11-15 18:53:53.271   558  1681 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.271   558  1681 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.273  2464  2473 D DefaultGoogleWallpaperPreferences: Defaults not available
+11-15 18:53:53.276  1214  1570 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore device name
+11-15 18:53:53.276   558   589 D CompatChangeReporter: Compat change id reported: 151861875; UID 10111; state: ENABLED
+11-15 18:53:53.276   558   589 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10111, packageName = null, attributionTag = null, token = android.os.Binder@e1b3e19, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-15 18:53:53.283  2300  2386 I SyncWorkManagerOneTimeS: Successfully scheduled next onetime workers
+11-15 18:53:53.291  1214  1214 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.usagereporting.service.START pkg=com.google.android.gms }
+11-15 18:53:53.291  1214  1214 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.usagereporting.service.START pkg=com.google.android.gms }
+11-15 18:53:53.294   908   908 W SubscriptionInfo: MNC string is not a number
+11-15 18:53:53.304  1065  1065 D CarrierSvcBindHelper: onPackageModified: com.google.android.gms
+11-15 18:53:53.311  2441  2441 I CalendarUpgradeReceiver: Creating or opening calendar database
+11-15 18:53:53.311   558   579 I PreBootBroadcaster: Pre-boot of {com.android.providers.contacts/com.android.providers.contacts.ContactsUpgradeReceiver} for user 0
+11-15 18:53:53.312  1065  1284 D ImsResolver: maybeAddedImsService, packageName: com.google.android.apps.wellbeing
+11-15 18:53:53.312  1065  1065 D CarrierSvcBindHelper: No carrier app for: 0
+11-15 18:53:53.312   362   362 D Zygote  : Forked child process 2499
+11-15 18:53:53.313  2300  2311 W RankedDispatcher: The requested voice is not available for this app identifier
+11-15 18:53:53.314  2300  2311 I GoogleTTSServiceImpl: currentLocale = en-US
+11-15 18:53:53.314   558   590 I ActivityManager: Start proc 2499:com.android.carrierdefaultapp/u0a111 for broadcast {com.android.carrierdefaultapp/com.android.carrierdefaultapp.CarrierDefaultBroadcastReceiver}
+11-15 18:53:53.317  2464  2498 D DefaultGoogleWallpaperPreferences: Initializing defaults
+11-15 18:53:53.329  1214  1519 W GetConfigSnapshotOp: Succeeded but not registered: com.google.android.apps.search.transcription.device#com.google.android.googlequicksearchbox [CONTEXT service_id=51 ]
+11-15 18:53:53.330  1065  1065 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-15 18:53:53.330   558  1683 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10137, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.331  1214  1570 W GetConfigSnapshotOp: Succeeded but not registered: com.google.android.libraries.performance.primes#com.google.android.tts [CONTEXT service_id=51 ]
+11-15 18:53:53.338  2300  2455 I VoiceDataManager: Already downloading en-us, ignoring async download request...
+11-15 18:53:53.340  1483  1926 I ApaPinning: (REDACTED) Lifecycle instances have been resolved: %s.
+11-15 18:53:53.341  1065  1065 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-15 18:53:53.342   558   574 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.346   558   574 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.349  2492  2492 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-15 18:53:53.349  2492  2492 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-15 18:53:53.352   558   574 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.352   558   574 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.352   908   908 I Choreographer: Skipped 57 frames!  The application may be doing too much work on its main thread.
+11-15 18:53:53.353   558   571 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-15 18:53:53.353   558   977 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.357  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.deskclock/com.android.deskclock.DeskClock}
+--------- beginning of kernel
+11-15 18:53:53.503     0     0 I servicemanager: Caller(pid=2492,uid=2000,sid=u:r:shell:s0) Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest. No alternative instances declared in VINTF.
+11-15 18:53:53.363  1065  1065 D CarrierSvcBindHelper: onPackageModified: com.google.android.googlesdksetup
+11-15 18:53:53.363  1065  1065 D CarrierSvcBindHelper: No carrier app for: 0
+11-15 18:53:53.367  1483  1926 I ApaPinning: (REDACTED) Running '%s' over %s.
+11-15 18:53:53.368  1483  1926 I ApaPinning: (REDACTED) Running '%s' over %s.
+11-15 18:53:53.371  1065  1284 D ImsResolver: maybeAddedImsService, packageName: com.google.android.gms
+11-15 18:53:53.372   152   152 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-15 18:53:53.373  1065  1065 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-15 18:53:53.373   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10137, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.374  1065  1065 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-15 18:53:53.374   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.374   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.374   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.374   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.374   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.374  2492  2509 I Gralloc4: mapper 4.x is not supported
+11-15 18:53:53.376  1483  1926 I Ma-Entry-Triggering-Pinning: #onCreate
+11-15 18:53:53.377  1424  1780 W Auth    : [PubsubPeriodicSyncherRuntimeInit] Initializing periodic tasks, IntentAction=com.google.android.chimera.IntentOperation.NEW_MODULE, InitRuntimeState=12
+11-15 18:53:53.379  1424  1817 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): com.google.android.chimera.IntentOperation.NEW_MODULE
+11-15 18:53:53.380  1483  1848 I ApaPinning: (REDACTED) Running '%s' over %s.
+11-15 18:53:53.381  1424  1817 I Auth    : [SupervisedAccountIntentOperation] This operation is disabled
+11-15 18:53:53.381  1065  1065 D CarrierSvcBindHelper: onPackageModified: com.android.systemui
+11-15 18:53:53.381  1065  1065 D CarrierSvcBindHelper: No carrier app for: 0
+11-15 18:53:53.383  1424  1774 W gle.android.gms: Long monitor contention with owner [com.google.android.gms.chimera.container.intentoperation.GmsIntentOperationChimeraService-Executor] idle (1817) at void pkf.run()(:com.google.android.gms@242335041@24.23.35 (190800-646585959):73) waiters=0 in void pkf.run() for 2.893s
+11-15 18:53:53.391   558  1683 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.392   558  1683 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.392  1483  1926 I Ma-Entry-Triggering-Pinning: (REDACTED) Connect Request %s
+11-15 18:53:53.399  1065  1284 D ImsResolver: maybeAddedImsService, packageName: com.google.android.googlesdksetup
+11-15 18:53:53.408  1065  1065 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-15 18:53:53.408   558  1681 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10137, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.409  1065  1065 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-15 18:53:53.409   558  1681 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.409   558  1681 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.409   558  1681 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.409   558  1681 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.409   558  1681 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.409   558   588 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-15 18:53:53.409   558   844 W system_server: Long monitor contention with owner android.bg (588) at boolean android.os.MessageQueue.enqueueMessage(android.os.Message, long)(MessageQueue.java:695) waiters=0 in android.os.Message android.os.MessageQueue.next() for 499ms
+11-15 18:53:53.410  1456  1456 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.googlesdksetup.
+11-15 18:53:53.410  1456  2187 I AiAiEcho: AppIndexer Package:[com.google.android.googlesdksetup] UserProfile:[0] Enabled:[true].
+11-15 18:53:53.411  1456  2187 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.googlesdksetup], userId:[0], reason:[package is updated.].
+11-15 18:53:53.411   558  1681 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.411   558  1681 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.412  1424  1916 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): com.google.android.gms.chimera.container.CONTAINER_UPDATED
+11-15 18:53:53.412  1424  1916 I Auth    : [SupervisedAccountIntentOperation] This operation is disabled
+11-15 18:53:53.414   558   588 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-15 18:53:53.417  2300  2455 I GoogleTTSServiceImpl: Synthesis request for locale eng-USA and name en-US-language
+11-15 18:53:53.417   908  1058 D EGL_emulation: app_time_stats: avg=719.17ms min=263.25ms max=970.54ms count=3
+11-15 18:53:53.418  1456  1456 I AiAiEcho: AppFetcherImpl onPackageChanged com.android.systemui.
+11-15 18:53:53.418  1456  2186 I AiAiEcho: AppIndexer Package:[com.android.systemui] UserProfile:[0] Enabled:[true].
+11-15 18:53:53.418  1456  2186 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.android.systemui], userId:[0], reason:[package is updated.].
+11-15 18:53:53.423   558  2051 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.424   558  2051 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.425  1483  1848 I ApaPinning: (REDACTED) Running '%s' over %s.
+11-15 18:53:53.426  1483  1848 I Ma-fcf  : (REDACTED) #FCF: Demo mode check status : %s
+11-15 18:53:53.428  1065  1065 D CarrierSvcBindHelper: onPackageModified: com.google.android.cellbroadcastreceiver
+11-15 18:53:53.430  1065  1065 D CarrierSvcBindHelper: No carrier app for: 0
+11-15 18:53:53.430   558  1514 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.430   558  1514 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.432  2300  2455 I VoiceDataManager: Download voice sync en-us-x-iog-lstm-embedded
+11-15 18:53:53.432  2300  2455 I VoiceDataDownloader: fetch bundled voice en-us
+11-15 18:53:53.432  2300  2455 I VoiceDataDownloader: fetchVoiceInternal en-us
+11-15 18:53:53.433  2300  2460 I VoiceDataDownloader: Download of en-us started.
+11-15 18:53:53.433   908   908 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+11-15 18:53:53.433   908   908 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+11-15 18:53:53.433   908   908 I ThemeOverlayController: Wallpaper changed from background app, keep deferring color events. Accepting: true
+11-15 18:53:53.434  2300  2460 I VoiceDataDownloader: Registered slicing strategy for en-us
+11-15 18:53:53.434  2300  2460 I VoiceDataDownloader: Getting pack name en-us-x-multi-r70
+11-15 18:53:53.434  2300  2460 I VoiceDataDownloader: Adding pack en-us-x-multi-r70 to superpack.
+11-15 18:53:53.435  2300  2460 I VoiceDataDownloader: Getting pack name en-us-x-multi-seanet-r70
+11-15 18:53:53.435  2300  2460 I VoiceDataDownloader: Adding pack en-us-x-multi-seanet-r70 to superpack.
+11-15 18:53:53.435  2300  2460 I VoiceDataDownloader: Getting pack name en-us-x-afh-r70
+11-15 18:53:53.435  2300  2460 I VoiceDataDownloader: Adding pack en-us-x-afh-r70 to superpack.
+11-15 18:53:53.436  1483  1926 I Ma-fcf  : (REDACTED) #FCF: Managed profile check status : %s
+11-15 18:53:53.436  2300  2460 I VoiceDataDownloader: Getting pack name en-us-x-fis-r70
+11-15 18:53:53.436  2300  2460 I VoiceDataDownloader: Adding pack en-us-x-fis-r70 to superpack.
+11-15 18:53:53.436  2300  2460 I VoiceDataDownloader: Getting pack name en-us-x-afh-seanet-r70
+11-15 18:53:53.436  2300  2460 I VoiceDataDownloader: Adding pack en-us-x-afh-seanet-r70 to superpack.
+11-15 18:53:53.436  2300  2460 I VoiceDataDownloader: Getting pack name en-us-x-fis-seanet-r70
+11-15 18:53:53.438  2300  2460 I VoiceDataDownloader: Adding pack en-us-x-fis-seanet-r70 to superpack.
+11-15 18:53:53.439  2300  2460 I VoiceDataDownloader: Getting pack name en-us-x-news-lemonbalm-r70
+11-15 18:53:53.439  2300  2460 I VoiceDataDownloader: Adding pack en-us-x-news-lemonbalm-r70 to superpack.
+11-15 18:53:53.439  2300  2460 I VoiceDataDownloader: Getting pack name en-us-x-news-darwinnrio-lemonbalm-r70
+11-15 18:53:53.439  2300  2460 I VoiceDataDownloader: Adding pack en-us-x-news-darwinnrio-lemonbalm-r70 to superpack.
+11-15 18:53:53.439  2300  2460 I VoiceDataDownloader: Getting pack name en-us-x-multi-locomel-r70
+11-15 18:53:53.439  2300  2460 I VoiceDataDownloader: Adding pack en-us-x-multi-locomel-r70 to superpack.
+11-15 18:53:53.439  2300  2460 I VoiceDataDownloader: Syncing superpack en-us
+11-15 18:53:53.439  2300  2463 I SP      : Registering en-us.70, url: null, constraints: *:*:*:*, flags: *, requested: 70, current: 70
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: Stub APK not found: 
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: android.content.pm.PackageManager$NameNotFoundException: com.google.pixel.livewallpaper
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at android.app.ApplicationPackageManager.getApplicationInfoAsUser(ApplicationPackageManager.java:524)
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at android.app.ApplicationPackageManager.getApplicationInfo(ApplicationPackageManager.java:507)
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at android.app.ApplicationPackageManager.getApplicationInfo(ApplicationPackageManager.java:501)
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at com.google.android.apps.wallpaper.module.WallpaperCategoryProvider$GoogleFetchCategoriesTask.doInBackground(go/retraceme d6f212a037a92e27b871ef330d2431eb86fce3cd6929ce7659e77740cd8f14d3:60)
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at android.os.AsyncTask$3.call(AsyncTask.java:394)
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:305)
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-15 18:53:53.439  2464  2503 W WPCategoryProvider: 	at java.lang.Thread.run(Thread.java:1012)
+11-15 18:53:53.440  1065  1284 D ImsResolver: maybeAddedImsService, packageName: com.android.systemui
+11-15 18:53:53.441  1483  1926 I Ma-fcf-tngMaStatus: (REDACTED) #FCF evaluate: %s
+11-15 18:53:53.441  1483  1926 I Ma-fcf-tngMaStatus: (REDACTED) TngMaStatusChecker#evaluateInternal completed in %s millis
+11-15 18:53:53.441   558  1683 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.441   558  1683 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.442  2300  2463 I SP      : Syncing en-us (70) with slices: [{en-us-x-multi-r70, m:*:*:*}], metadata: false
+11-15 18:53:53.442  1424  2058 I Blockstore: [BlockstoreModuleInitIntentOperation] Container update. Module updated: true [CONTEXT service_id=258 ]
+11-15 18:53:53.447   558  1492 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.447   558  1492 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.447  1424  1817 V Backup  : [CustomDownloadSchedulingIO] Received Action: com.google.android.gms.chimera.container.CONTAINER_UPDATED
+11-15 18:53:53.455  1424  1661 I ebvk$a  : Unable to retrieve flag snapshot for com.google.android.gms.auth.api.credentials, using defaults.
+11-15 18:53:53.455  1065  1065 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-15 18:53:53.455   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10137, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.455  1424  1817 V Backup  : [CustomDownloadSchedulingIO] customBackupDownloadEnableSuwTriggerWithGmsUpdateCheck flag on
+11-15 18:53:53.455   558  1492 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.455   558  1492 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.456  1065  1065 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-15 18:53:53.456   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.456   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.456   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.456   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.456   558  2051 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.457  1483  1848 I Ma-Entry-Triggering-Pinning: (REDACTED) Connecting: %s
+11-15 18:53:53.459  1424  1817 V Backup  : [CustomDownloadSchedulingIO] Flag to run custom backup downloads is off.
+11-15 18:53:53.459  1214  2193 I ebvk$a  : Unable to retrieve flag snapshot for com.google.android.libraries.consentverifier#com.google.android.gms, using defaults.
+11-15 18:53:53.459  1483  1848 I Ma-fcf-headphone-integration: Headphone voice queries disabled: HEADPHONE_VOICE_QUERIES flag not enabled
+11-15 18:53:53.459  1483  1848 I Ma-fcf-headphone-integration: Headphone notification anouncement disabled: ENABLE_NOTIFICATION_ANNOUNCEMENT flag not enabled
+11-15 18:53:53.459  1483  1848 I Ma-Entry-Triggering: #unregisterBluetoothDevicesAvailabilityListener
+11-15 18:53:53.460  1424  1916 V Backup  : [G1ModuleInitIntentOperation] Running restore operation is disabled by flag
+11-15 18:53:53.462  2300  2463 I SP      : Fetching en-us:en-us-x-multi-r70 from assets with params: {m:*:*:*, *, p {absolute:0}}
+11-15 18:53:53.462  1065  1065 D CarrierSvcBindHelper: onPackageModified: com.google.android.inputmethod.latin
+11-15 18:53:53.462  1065  1065 D CarrierSvcBindHelper: No carrier app for: 0
+11-15 18:53:53.462  2300  2463 I SP      : GC for 'en-us' (10) with ttl of 0 ms took 0 ms (0/0/0)
+11-15 18:53:53.462  1483  1848 I Ma-Entry-Triggering: enableBluetoothRouteIntegration disabled
+11-15 18:53:53.463  1483  1848 I Ma-Entry-Triggering: #unregisterBistoDevicesAvailabilityListener
+11-15 18:53:53.463  1483  1848 I Ma-fcf-headphone-integration: Headphone voice queries disabled: HEADPHONE_VOICE_QUERIES flag not enabled
+11-15 18:53:53.464  1483  1848 I Ma-fcf-headphone-integration: Headphone notification anouncement disabled: ENABLE_NOTIFICATION_ANNOUNCEMENT flag not enabled
+11-15 18:53:53.465  1065  1284 D ImsResolver: maybeAddedImsService, packageName: com.google.android.cellbroadcastreceiver
+11-15 18:53:53.466  1483  1848 I Ma-Entry-Triggering: enableBistoRouteIntegration disabled
+11-15 18:53:53.467  1483  1848 I Ma-Entry-Triggering: #unregisterActivityTransitions
+11-15 18:53:53.468  1483  1848 I Ma-Entry-Triggering: #unsubscribeFromHeadsetEventsForEarcons
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: failed to download voice en-us
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: bvf: Failed to sync packs (Reason=SYNC_PACK_FAILED)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at bvn.a(PG:61)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at gkk.a(PG:18)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at hie.run(PG:37)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at java.lang.Thread.run(Thread.java:1012)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: Caused by: java.util.concurrent.CancellationException: Task was cancelled.
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at hgm.r(PG:33)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at hgm.get(PG:3)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at a.h(PG:2)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at fpx.U(PG:10)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	at hie.run(PG:24)
+11-15 18:53:53.468  2300  2460 I VoiceDataManager: 	... 3 more
+11-15 18:53:53.469  1065  1065 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-15 18:53:53.469   558  1121 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10137, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.469  1483  1848 I Ma-Entry-Triggering: #enableGmmTravelModeLogging flag disabled.
+11-15 18:53:53.470  1065  1065 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-15 18:53:53.470   558  1121 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.470  1483  1848 I Ma-Robin: #unregisterShellAppInstallationReceiver
+11-15 18:53:53.470   558  1121 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.470  1483  1848 I Ma-Entry-Triggering: (REDACTED) Disconnect Reasons: %s
+11-15 18:53:53.470   558  1121 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.470  1483  1848 I Ma-Entry-Triggering: Client Already disconnected
+11-15 18:53:53.470  1483  1848 I Ma-Entry-Triggering: (REDACTED) Updated TngActivationStateResult %s
+11-15 18:53:53.470  1483  1848 I Ma-Entry-Triggering: (REDACTED) Emit result=%s
+11-15 18:53:53.470  1483  1848 I Ma-Entry-Triggering: Scheduling removing Phenotype experience experiments id
+11-15 18:53:53.471  1483  1848 I Ma-fcf-headphone-integration: Headphone voice queries disabled: HEADPHONE_VOICE_QUERIES flag not enabled
+11-15 18:53:53.474  1483  1848 I Ma-fcf-headphone-integration: Headphone notification anouncement disabled: ENABLE_NOTIFICATION_ANNOUNCEMENT flag not enabled
+11-15 18:53:53.474  1483  1848 I Ma-Entry-Triggering: #registerBluetoothDevicesAvailabilityListener
+11-15 18:53:53.474   558  1121 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.476  2300  2460 I VoiceGenerator: Cache cleared
+11-15 18:53:53.476  1483  1848 I Ma-Entry-Triggering: enableBluetoothRouteIntegration disabled
+11-15 18:53:53.476  1483  1848 I Ma-Entry-Triggering: #registerBistoDevicesAvailabilityListener
+11-15 18:53:53.476  1483  1848 I Ma-fcf-headphone-integration: Headphone voice queries disabled: HEADPHONE_VOICE_QUERIES flag not enabled
+11-15 18:53:53.476  1483  1848 I Ma-fcf-headphone-integration: Headphone notification anouncement disabled: ENABLE_NOTIFICATION_ANNOUNCEMENT flag not enabled
+11-15 18:53:53.476  1483  1848 I Ma-Entry-Triggering: enableBistoRouteIntegration disabled
+11-15 18:53:53.476  1483  1848 I Ma-Entry-Triggering: #subscribeToHeadsetEventsForEarcons flag disabled.
+11-15 18:53:53.477   558   574 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-15 18:53:53.481  1065  1284 D ImsResolver: maybeAddedImsService, packageName: com.google.android.inputmethod.latin
+11-15 18:53:53.481  1065  1065 V SimultaneousCallingTracker: Received EVENT 101
+11-15 18:53:53.481  1065  1065 D SimultaneousCallingTracker: Ignoring updatePhoneMapAndSimultaneousCallSupportMap since device is not DSDA capable.
+11-15 18:53:53.482  1483  1848 I Ma-Entry-Triggering: #registerActivityTransitions
+11-15 18:53:53.482  1483  1848 I Ma-Entry-Triggering: #enableGmmTravelModeLogging flag disabled.
+11-15 18:53:53.482  1483  1848 I Ma-Robin: #registerShellAppInstallationReceiver
+11-15 18:53:53.482  1483  1848 I Ma-Entry-Triggering: (REDACTED) Connect Reason: %s
+11-15 18:53:53.482  1483  1848 I Ma-Entry-Triggering: Connecting to Triggering Service.
+11-15 18:53:53.483  1483  1848 I Ma-fcf-headphone-integration: Headphone voice queries disabled: HEADPHONE_VOICE_QUERIES flag not enabled
+11-15 18:53:53.485  1483  1848 I Ma-fcf-headphone-integration: Headphone notification anouncement disabled: ENABLE_NOTIFICATION_ANNOUNCEMENT flag not enabled
+11-15 18:53:53.486  1483  1848 I Ma-Entry-Triggering-Earcon: #getEarcons
+11-15 18:53:53.487  1483  1848 I Ma-Entry-Triggering-Earcon: #getEarcons - Headset earcon flag disabled.
+11-15 18:53:53.498  1483  1730 I WearablesPin: Wearables Pin created
+11-15 18:53:53.498  1483  1926 I Ma-Entry-Triggering: Listening for setting changes changes
+11-15 18:53:53.502  1483  1926 I ApaPinning: (REDACTED) Completed '%s' over %s: %s.
+11-15 18:53:53.505  1483  1848 I TRG.Connections: (REDACTED) New connection(%s) added, total(%d).
+11-15 18:53:53.507  1483  1848 I TRG.ManagedLifecycle: (REDACTED) Initialize triggering managed lifecycle(%s)
+11-15 18:53:53.509  1483  1926 I TRG.ManagedLifecycle: (REDACTED) Initialize triggering managed lifecycle(%s)
+11-15 18:53:53.511  1483  1848 I TRG.ManagedLifecycle: (REDACTED) Initialize triggering managed lifecycle(%s)
+11-15 18:53:53.513  1483  1848 I TRG.ManagedLifecycle: (REDACTED) Initialize triggering managed lifecycle(%s)
+11-15 18:53:53.514  1483  1848 I TRG.ManagedLifecycle: (REDACTED) Initialize triggering managed lifecycle(%s)
+11-15 18:53:53.515  1424  1777 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: 
+11-15 18:53:53.519  1483  1848 I TRG.Check.SameClient: (REDACTED) Using '%s' policy for same client allowance check.
+11-15 18:53:53.519  1483  1848 I TRG.ManagedLifecycle: (REDACTED) Initialize triggering managed lifecycle(%s)
+11-15 18:53:53.519  1483  1848 I TRG.ManagedLifecycle: (REDACTED) Initialize triggering managed lifecycle(%s)
+11-15 18:53:53.521  1214  1219 W .gms.persistent: Missing inline cache for void com.google.android.location.internal.server.GoogleLocationChimeraService.a(android.content.Intent, boolean)
+11-15 18:53:53.521  1065  1094 W m.android.phone: Suspending all threads took: 8.959ms
+11-15 18:53:53.526  1483  1926 I TRG.ManagedLifecycle: (REDACTED) Initialize triggering managed lifecycle(%s)
+11-15 18:53:53.528  1483  1926 I A       : (REDACTED) %s flow started.
+11-15 18:53:53.530  1483  1926 I TRG.ClientOracle: Preferred client mapping subscription started.
+11-15 18:53:53.531  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.stk/com.android.stk.StkMain}
+11-15 18:53:53.534  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.documentsui/com.android.documentsui.LauncherActivity}
+11-15 18:53:53.535   558   579 I ServiceWatcher: [RealLocationTimeZoneProviderProxy] connected to {com.google.android.gms/com.google.android.gms.geotimezone.GeoTimeZoneService}
+11-15 18:53:53.538  1483  1931 I A       : #onCreate
+11-15 18:53:53.540  1483  1848 I ApaPinning: (REDACTED) Completed '%s' over %s: %s.
+11-15 18:53:53.544  1446  1807 W MediaProvider: isAppCloneUserPair for user 0: false
+11-15 18:53:53.558  1424  1817 I SyncIntentOperation: Handling the intent: Intent { act=com.google.android.gms.chimera.container.CONTAINER_UPDATED pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.GmsIntentOperationService }. [CONTEXT service_id=80 ]
+11-15 18:53:53.563  2499  2499 I rrierdefaultapp: Using CollectorTypeCMC GC.
+11-15 18:53:53.564  2499  2499 W rrierdefaultapp: Unexpected CPU variant for x86: x86_64.
+11-15 18:53:53.564  2499  2499 W rrierdefaultapp: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+11-15 18:53:53.567  2499  2499 E rrierdefaultapp: Not starting debugger since process cannot load the jdwp agent.
+11-15 18:53:53.570  2499  2499 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-15 18:53:53.579  1065  1094 I m.android.phone: Background concurrent mark compact GC freed 4933KB AllocSpace bytes, 2(104KB) LOS objects, 49% free, 3336KB/6673KB, paused 9.175ms,54.064ms total 114.792ms
+11-15 18:53:53.580  1065  1065 W FeatureConnection: getRegistrationTech: ImsRegistration is null
+11-15 18:53:53.580  1065  1065 I ImsExternalCallTracker: handleVideoCapabilitiesChanged : isVideoCapable = false
+11-15 18:53:53.580  1065  1065 D ImsExternalCallTracker: refreshCallPullState
+11-15 18:53:53.580  1065  1065 I Telephony: handleVideoCapabilitesChanged. Video capability - false
+11-15 18:53:53.585   558  1689 D CompatChangeReporter: Compat change id reported: 297989574; UID 10143; state: ENABLED
+11-15 18:53:53.587   558   588 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-15 18:53:53.587  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity}
+11-15 18:53:53.591  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.apps.maps/com.google.android.maps.MapsActivity}
+11-15 18:53:53.592   558  1514 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.592   558  1514 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.597  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.contacts/com.android.contacts.activities.PeopleActivity}
+11-15 18:53:53.600  1456  1809 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-15 18:53:53.600  1456  1809 I AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-15 18:53:53.603  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.apps.messaging/com.google.android.apps.messaging.ui.ConversationListActivity}
+11-15 18:53:53.604   558  1513 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.604   558  1513 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.604   558  1689 D SystemServerTiming: getUserSwitchability-0
+11-15 18:53:53.604   558  1689 D SystemServerTiming: TM.isInCall
+11-15 18:53:53.605   558  1689 V SystemServerTiming: TM.isInCall took to complete: 0ms
+11-15 18:53:53.605   558  1689 D SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH
+11-15 18:53:53.605   558  1689 V SystemServerTiming: hasUserRestriction-DISALLOW_USER_SWITCH took to complete: 0ms
+11-15 18:53:53.605  1424  2064 I Backup  : [CallLogFlagSetter] Not enabling because user_full_data_backup_aware not set.
+11-15 18:53:53.606   558  1689 D SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED
+11-15 18:53:53.606   558  1689 V SystemServerTiming: getInt-ALLOW_USER_SWITCHING_WHEN_SYSTEM_USER_LOCKED took to complete: 0ms
+11-15 18:53:53.607  1214  1219 W .gms.persistent: Missing inline cache for void com.google.android.location.internal.server.GoogleLocationChimeraService.a(android.content.Intent, boolean)
+11-15 18:53:53.607   558  1689 D SystemServerTiming: isUserUnlocked-USER_SYSTEM
+11-15 18:53:53.607   558  1689 V SystemServerTiming: isUserUnlocked-USER_SYSTEM took to complete: 0ms
+11-15 18:53:53.607   558  1689 V SystemServerTiming: getUserSwitchability-0 took to complete: 2ms
+11-15 18:53:53.614  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.dialer/com.google.android.dialer.extensions.GoogleDialtactsActivity}
+11-15 18:53:53.619   558  2051 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.619   558  2051 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.623   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '/data/resource-cache/com.android.systemui-neutral-gBQY.frro' with 2 weak references
+11-15 18:53:53.623   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '/data/resource-cache/com.android.systemui-accent-W6Vr.frro' with 2 weak references
+11-15 18:53:53.623   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '/data/resource-cache/com.android.systemui-dynamic-aCAt.frro' with 2 weak references
+11-15 18:53:53.623   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/Velvet/Velvet.apk' with 1 weak references
+11-15 18:53:53.624   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/LatinIMEGooglePrebuilt/LatinIMEGooglePrebuilt.apk' with 1 weak references
+11-15 18:53:53.632  1065  1065 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=-1
+11-15 18:53:53.632  1065  1065 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+11-15 18:53:53.633  1065  1065 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+11-15 18:53:53.635  1214  1519 I ebvk$a  : Unable to retrieve flag snapshot for com.google.android.gms.geotimezone, using defaults.
+11-15 18:53:53.637   558  1492 D CompatChangeReporter: Compat change id reported: 271850009; UID 10165; state: ENABLED
+11-15 18:53:53.639  1214  1565 I ChimeraSrvcProxy: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl
+11-15 18:53:53.639  1214  1565 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+11-15 18:53:53.639   558  1492 D ConnectivityService: requestNetwork for uid/pid:1000/558 asUid: 10165 activeRequest: null callbackRequest: 65 [NetworkRequest [ REQUEST id=66, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10165 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false
+11-15 18:53:53.640  1214  2124 W SystemServiceRegistry: No service published for: wifirtt
+11-15 18:53:53.641   558   829 D ConnectivityService: NetReassign [66 : null → 100] [c 0] [a 0] [i 0]
+11-15 18:53:53.641   558   822 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=66, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10165 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+11-15 18:53:53.641   558   822 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=66, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10165 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+11-15 18:53:53.641   558   822 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=66, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10165 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+11-15 18:53:53.641   558   822 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=66, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10165 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+11-15 18:53:53.648   558   582 D ColorDisplayService: Setting saturation level: 100
+11-15 18:53:53.648   558   582 D ColorDisplayService: GlobalSaturationTintController Animation cancelled: true to matrix: 
+11-15 18:53:53.648   558   582 D ColorDisplayService:        1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 min matrix coefficients: 
+11-15 18:53:53.648   558   582 D ColorDisplayService:        1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 max matrix coefficients: 
+11-15 18:53:53.648   558   582 D ColorDisplayService:        1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+11-15 18:53:53.649  1065  1065 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+11-15 18:53:53.649  1065  1065 I Telephony:  isRttSupported: false
+11-15 18:53:53.649  1065  1065 I Telephony:  alwaysAllowWhileRoaming: false
+11-15 18:53:53.649  1065  1065 I Telephony:  isRoaming: false
+11-15 18:53:53.649  1065  1065 I Telephony:  isOnWfc: false
+11-15 18:53:53.650  1456  1456 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.cellbroadcastreceiver.
+11-15 18:53:53.651  1367  1401 D CompatChangeReporter: Compat change id reported: 263076149; UID 10142; state: ENABLED
+11-15 18:53:53.655   558   588 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-15 18:53:53.657  1456  2188 I AiAiEcho: AppIndexer Package:[com.google.android.cellbroadcastreceiver] UserProfile:[0] Enabled:[true].
+11-15 18:53:53.657  1456  2188 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.cellbroadcastreceiver], userId:[0], reason:[package is updated.].
+11-15 18:53:53.659  1456  1456 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.inputmethod.latin.
+11-15 18:53:53.659  1456  2160 I AiAiEcho: AppIndexer Package:[com.google.android.inputmethod.latin] UserProfile:[0] Enabled:[true].
+11-15 18:53:53.662  1456  2160 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.inputmethod.latin], userId:[0], reason:[package is updated.].
+11-15 18:53:53.663  1424  1428 W gle.android.gms: Suspending all threads took: 116.239ms
+11-15 18:53:53.672   558   588 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-15 18:53:53.672   558   588 D ShortcutService: Getting shortcuts for launcher= com.google.android.apps.nexuslauncheruser=0 pkg=com.google.android.googlequicksearchbox
+11-15 18:53:53.680  2214  2224 I DynamiteModule: Considering local module com.google.android.gms.googlecertificates:7 and remote module com.google.android.gms.googlecertificates:7
+11-15 18:53:53.680  2214  2224 I DynamiteModule: Selected local version of com.google.android.gms.googlecertificates
+11-15 18:53:53.691  1367  1419 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=a7776c4d-6c88-478b-9ae8-90d7e6ac3e7e, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker,TikTokWorker#com.google.android.apps.wellbeing.winddown.impl.WindDownBedtimeSynchronizerWorker } ]
+11-15 18:53:53.699  1214  2523 I Auth    : [Change, AccountsChange] First snapshot
+11-15 18:53:53.701  1065  1065 I Telephony: TelecomAccountRegistry$AccountEntry: registerPstnPhoneAccount: Registering account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: *** SC Restrictions: [ ]] with Telecom. subId=1
+11-15 18:53:53.715   558  1683 W JobScheduler: Job didn't exist in JobStore: e9d0814 #u0a142/4 com.google.android.apps.wellbeing/androidx.work.impl.background.systemjob.SystemJobService
+11-15 18:53:53.715  2499  2499 D nativeloader: Configuring clns-shared-7 for other apk /system/app/CarrierDefaultApp/CarrierDefaultApp.apk. target_sdk_version=35, uses_libraries=, library_path=/system/app/CarrierDefaultApp/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.android.carrierdefaultapp:/system/app/CarrierDefaultApp:/system/lib64:/system_ext/lib64
+11-15 18:53:53.716  2499  2499 D CompatChangeReporter: Compat change id reported: 202956589; UID 10111; state: ENABLED
+11-15 18:53:53.718  1214  2474 W ctxmgr  : [FencePendingIntentCache]Sending CONTEXT_MANAGER_RESTARTED broadcast to com.google.android.apps.wellbeing [CONTEXT service_id=47 ]
+11-15 18:53:53.724   558  2051 I Telecom : TelecomServiceImpl$1: registerPhoneAccount: account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: *** SC Restrictions: [ ]]: TSI.rPA(cap)@AGg🔒
+11-15 18:53:53.725   558  2051 I Telecom : PhoneAccountRegistrar: Modify account: [ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}]: TSI.rPA(cap)@AGg🔒
+11-15 18:53:53.725   558  2051 I Telecom : CallsManager: handlePhoneAccountChanged: phoneAccount=[[X] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: *** SC Restrictions: [ ]]: TSI.rPA(cap)@AGg🔒
+11-15 18:53:53.726   558  2051 I Telecom : PhoneAccountRegistrar: getSimCallManager: SimCallManager for subId 1 queried, returning: null: TSI.rPA(cap)@AGg🔒
+11-15 18:53:53.726   558  2051 I Telecom : PhoneAccountRegistrar: Notifying telephony of voice service override change for 1 SIMs, hasService = false: TSI.rPA(cap)@AGg🔒
+11-15 18:53:53.726  1065  1065 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {595b1b1}, hasService=false, callingPackage=com.android.server.telecom
+11-15 18:53:53.726  1065  1065 D CarrierConfigLoader: EVENT_CONNECTED_TO_DEFAULT phoneId: 0
+11-15 18:53:53.727  1065  1065 D CarrierConfigLoader: Fetch config for default app: com.android.carrierconfig, carrierId=1
+11-15 18:53:53.727  1523  1581 D DefaultCarrierConfigService: Config being fetched
+11-15 18:53:53.732  1070  1252 I HeadsetPhoneState: stopListenForPhoneState(), no listener indicates nothing is listening
+11-15 18:53:53.732  1070  1252 W HeadsetPhoneState: startListenForPhoneState, no event to listen
+11-15 18:53:53.732   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/GoogleTTS/GoogleTTS.apk' with 1 weak references
+11-15 18:53:53.732   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/app/AccessibilityMenu/AccessibilityMenu.apk' with 1 weak references
+11-15 18:53:53.732   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '/product/overlay/AccessibilityMenu__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+11-15 18:53:53.732   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/talkback/talkback.apk' with 1 weak references
+11-15 18:53:53.733   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '/vendor/overlay/EmulatorTalkBackOverlay/EmulatorTalkBackOverlay.apk' with 1 weak references
+11-15 18:53:53.733   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/DevicePersonalizationPrebuiltPixel2021-aiai_20240329.00_RC16/DevicePersonalizationPrebuiltPixel2021-aiai_20240329.00_RC16.apk' with 1 weak references
+11-15 18:53:53.733   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/InputDevices/InputDevices.apk' with 1 weak references
+11-15 18:53:53.733   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/PrebuiltGmail/PrebuiltGmail.apk' with 1 weak references
+11-15 18:53:53.733   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Drive/Drive.apk' with 1 weak references
+11-15 18:53:53.733   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk' with 1 weak references
+11-15 18:53:53.734   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk' with 1 weak references
+11-15 18:53:53.734   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '/vendor/overlay/SystemUIGoogle__sdk_gphone64_x86_64__auto_generated_rro_vendor.apk' with 1 weak references
+11-15 18:53:53.734   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '/product/overlay/SystemUIGoogle__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+11-15 18:53:53.734   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '/product/overlay/SystemUIEmulationPixel6/SystemUIEmulationPixel6Overlay.apk' with 1 weak references
+11-15 18:53:53.734   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~c7CMtQZDsfz6TNaLsSGoVA==/com.android.chrome-X8aZJuP3jhiRtrPhpBJdBw==/Chrome.apk' with 1 weak references
+11-15 18:53:53.734   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~27_YVkwJCxuKEmv0wR-sIQ==/com.google.android.trichromelibrary_636771938-N-opbcd9vyUHOOD2ok93Vw==/TrichromeLibrary.apk' with 1 weak references
+11-15 18:53:53.734   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Maps/Maps.apk' with 1 weak references
+11-15 18:53:53.734   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Photos/Photos.apk' with 1 weak references
+11-15 18:53:53.743  2214  2522 I ebvk$a  : Unable to retrieve flag snapshot for com.google.android.gms.gmscompliance, using defaults.
+11-15 18:53:53.750   558  1121 D CompatChangeReporter: Compat change id reported: 297989574; UID 10178; state: ENABLED
+11-15 18:53:53.753  2499  2499 V GraphicsEnvironment: Currently set values for:
+11-15 18:53:53.753  2499  2499 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-15 18:53:53.753  2499  2499 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-15 18:53:53.753  2499  2499 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+11-15 18:53:53.755  2499  2499 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-15 18:53:53.775  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.calendar/com.android.calendar.AllInOneActivity}
+11-15 18:53:53.775   558   829 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+11-15 18:53:53.776  1367  1478 W PowerStateManagerModule: <DWB> Context manager broadcast triggered power state fence restoration
+11-15 18:53:53.776  1367  1478 W PowerStateManagerImpl: <DWB> Context manager requested to re-register fence
+11-15 18:53:53.779  1214  1214 W .gms.persistent: Accessing hidden method Landroid/net/ConnectivityManager;->isNetworkTypeMobile(I)Z (max-target-p, reflection, denied)
+11-15 18:53:53.779  1214  1214 W .gms.persistent: Accessing hidden method Landroid/os/PowerManager;->isLightDeviceIdleMode()Z (max-target-s, reflection, denied)
+11-15 18:53:53.780  1367  1447 W AutoDndManagerModule: <DWB> Context manager broadcast triggered fence restoration
+11-15 18:53:53.780  1367  1447 W AutoDndManagerImpl: <DWB> Context manager requested to re-register fence
+11-15 18:53:53.792  2499  2499 D CarrierDefaultBroadcastReceiver: onReceive intent: android.telephony.action.CARRIER_SIGNAL_RESET
+11-15 18:53:53.805  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.google.android.apps.docs/com.google.android.apps.docs.app.NewMainProxyActivity}
+11-15 18:53:53.812  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.camera2/com.android.camera.CameraLauncher}
+11-15 18:53:53.816  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.settings/com.android.settings.Settings}
+11-15 18:53:53.819  1640  1933 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+11-15 18:53:53.822  1193  1241 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.chrome/com.google.android.apps.chrome.Main}
+11-15 18:53:53.823  1483  1495 W hbox:interactor: Suspending all threads took: 247.603ms
+11-15 18:53:53.827  1640  1934 I GsaConfigFlagsSyncer: Flags not sync'ed yet, syncing.
+11-15 18:53:53.842  1424  1817 I SyncIntentOperation: Setting component enabled: com.google.android.gms.chromesync.sync.GcmBroadcastReceiver [CONTEXT service_id=80 ]
+11-15 18:53:53.847   361  2530 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10175 0}
+11-15 18:53:53.847   361  2532 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-15 18:53:53.847   361  2531 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-15 18:53:53.849   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk' with 1 weak references
+11-15 18:53:53.850   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/YouTubeMusicPrebuilt/YouTubeMusicPrebuilt.apk' with 1 weak references
+11-15 18:53:53.854   361  2532 I resolv  : res_nsend: used send_dg 157 terrno: 0
+11-15 18:53:53.854   361  2532 I resolv  : doQuery: rcode=0, ancount=7, return value=157
+11-15 18:53:53.855   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/GoogleContacts/GoogleContacts.apk' with 1 weak references
+11-15 18:53:53.856  1424  1661 I ebvk$a  : Unable to retrieve flag snapshot for com.google.android.gms.phenotype, using defaults.
+11-15 18:53:53.857  1640  1934 W JobInfo : Job 'com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService#-151' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-15 18:53:53.858  1193  1241 D LoaderTask: loadAllApps
+11-15 18:53:53.858  1193  1241 D LoaderTask: bindAllApps
+11-15 18:53:53.865  1424  1424 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.checkin.START pkg=com.google.android.gms }
+11-15 18:53:53.866  1424  1424 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.checkin.START pkg=com.google.android.gms }
+11-15 18:53:53.870  2499  2499 D CompatChangeReporter: Compat change id reported: 330583731; UID 10111; state: ENABLED
+11-15 18:53:53.871   558   574 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-15 18:53:53.871   558  2052 W JobScheduler: Job didn't exist in JobStore: c7d9810 #u0a144/-151 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService
+11-15 18:53:53.871   558   575 W JobInfo : Job 'com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService#-151' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-15 18:53:53.872   558   588 D ShortcutService: Getting shortcuts for launcher= com.google.android.asuser=0 pkg=com.google.android.googlequicksearchbox
+11-15 18:53:53.872   361  2531 I resolv  : res_nsend: used send_dg 173 terrno: 0
+11-15 18:53:53.872   361  2531 I resolv  : doQuery: rcode=0, ancount=5, return value=173
+11-15 18:53:53.873   558  1474 D SearchUiPerUserService: Creating SearchSessionInfo for session Id=com.google.android.apps.nexuslauncher:9dc11d48-0d59-4e02-9d60-cec673ef8675,0
+11-15 18:53:53.873   558  2007 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.873   558  2007 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.875  2464  2505 D TrafficStats: tagSocket(86) with statsTag=0x9234ceef, statsUid=-1
+11-15 18:53:53.875   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/PrebuiltDeskClockGoogle/PrebuiltDeskClockGoogle.apk' with 1 weak references
+11-15 18:53:53.877  1424  1661 I ebvk$a  : Unable to retrieve flag snapshot for com.google.android.gms.checkin, using defaults.
+11-15 18:53:53.892   558   588 D ShortcutService: Getting shortcuts for launcher= com.android.systemuiuser=0 pkg=com.google.android.googlequicksearchbox
+11-15 18:53:53.894   558  1474 D CompatChangeReporter: Compat change id reported: 297989574; UID 10111; state: ENABLED
+11-15 18:53:53.894   558   574 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-15 18:53:53.895   558  1697 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.895   558  1697 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.895   908   948 I HWUI    : Davey! duration=1033ms; Flags=0, FrameTimelineVsyncId=3806, IntendedVsync=39887417304, Vsync=40837417266, InputEventId=0, HandleInputStart=40857845370, AnimationStart=40857845843, PerformTraversalsStart=40865429853, DrawStart=40915195092, FrameDeadline=39970750634, FrameInterval=40853932542, FrameStartTime=16666666, SyncQueued=40915415130, SyncStart=40915865269, IssueDrawCommandsStart=40915897677, SwapBuffers=40916715148, FrameCompleted=40920899059, DequeueBufferDuration=2831, QueueBufferDuration=118075, GpuCompleted=40920899059, SwapBuffersCompleted=40918736191, DisplayPresentTime=0, CommandSubmissionCompleted=40916715148, 
+11-15 18:53:53.895   558  1492 D SearchUiPerUserService: Storing callback for session Id=com.google.android.apps.nexuslauncher:9dc11d48-0d59-4e02-9d60-cec673ef8675,0 and callback=android.os.BinderProxy@f8633a5
+11-15 18:53:53.895   361   413 I netd    : tetherGetStats() -> {[]} <0.35ms>
+11-15 18:53:53.904  1424  2116 I Blockstore: [BlockstoreModuleInitIntentOperation] scheduleOneOffTaskIfAlreadyScheduled finished [CONTEXT service_id=258 ]
+11-15 18:53:53.906   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/SettingsIntelligenceGooglePrebuilt/SettingsIntelligenceGooglePrebuilt.apk' with 1 weak references
+11-15 18:53:53.906   558   572 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/YouTube/YouTube.apk' with 1 weak references
+11-15 18:53:53.908  1193  1241 D LoaderTask: update icon cache
+11-15 18:53:53.908  1193  1241 D LoaderTask: save shortcuts in icon cache
+11-15 18:53:53.908  1193  1241 D LoaderTask: step 2 complete
+11-15 18:53:53.909  1456  1456 I AiAiEcho: SearchContextManagerImpl::setSearchContext resultTypes=[141151] extras=[Bundle[{launcher.maxInlineIcons=3, dynamic_ranking_m3_enabled=true, qs_tiles_asi_enabled=true, allowlist_enabled=false, one_search_enabled=true, system_clock=true, version_code=12, gms_play_query_lower_bound=2, gms_play_query_upper_bound=20, recent_search_block_enabled=true, gms_play_feature_supported=true, launcher.gridSize=4, showhiddentargets_enabled=false, ose_info=1}]] sessionId=[com.google.android.apps.nexuslauncher:9dc11d48-0d59-4e02-9d60-cec673ef8675,0]
+11-15 18:53:53.909   558  2007 D ShortcutService: Getting shortcuts for launcher= com.google.android.apps.nexuslauncheruser=0 pkg=null
+11-15 18:53:53.914   908   916 I ndroid.systemui: Compiler allocated 5162KB to compile java.lang.Object com.google.android.systemui.dagger.DaggerSysUIGoogleGlobalRootComponent$WMComponentImpl$SwitchingProvider.get6()
+11-15 18:53:53.927  1483  1926 I A       : (REDACTED) %s flow started.
+11-15 18:53:53.927  1193  1240 D SearchTargetUtil: query= size=1
+11-15 18:53:53.928  1483  1926 I Ma-Robin: (REDACTED) isRobinEligible:%s, isRobinOptIn:%s, isLauncherIconEnabled:%s, isImageComponentEnabled:%s
+11-15 18:53:53.928  1193  1240 D SearchTargetUtil: layoutType=icon_row resultType=4096 packageName= extras=Bundle{aiai_settings_enabled=true,icon_container_enabled=true,zero_state_query_ready=true,zero_state_all_apps_web_suggest_count=3,rank=1.0,toast_settings_toggle_values=16777476,key_ipc_start=41425,hide_subtitle=true,enable_launch_animations=true,zero_state_qsb_web_suggest_count=10,}ParentID: null targetID: SESSION_INFO:0::zero_state_flags
+11-15 18:53:53.939  1193  1241 D LoaderTask: loadDeepShortcuts
+11-15 18:53:53.939  1193  1241 D LoaderTask: bindDeepShortcuts
+11-15 18:53:53.939  1193  1241 D LoaderTask: save deep shortcuts in icon cache
+11-15 18:53:53.948  2499  2499 D CarrierDefaultBroadcastReceiver: apply carrier action idx: 6
+11-15 18:53:53.948  2499  2499 D CarrierActionUtils: onCancelAllNotifications
+11-15 18:53:53.952   558  1474 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.952   558  1474 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.953  1193  1241 D LoaderTask: step 3 complete
+11-15 18:53:53.957   558  1513 I AppWidgetServiceImpl: getInstalledProvidersForProfiles() 0
+11-15 18:53:53.958  2499  2499 D CarrierDefaultBroadcastReceiver: apply carrier action idx: 8
+11-15 18:53:53.958  2499  2499 D CarrierActionUtils: onDisableDefaultURLHandler
+11-15 18:53:53.959  1483  1848 I TRG.RoutingOracle: (REDACTED) Client connections changed: %s.
+11-15 18:53:53.964  1483  1848 I TRG.RoutingOracle: (REDACTED) Connection state changed: %s.
+11-15 18:53:53.965  1483  1848 I TRG.SourceDefinitions: (REDACTED) Enabled invocation sources: %s.
+11-15 18:53:53.967   558  1474 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.967   558  1474 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.969   558  1108 W JobInfo : Job 'com.google.android.providers.media.module/com.android.providers.media.MediaService#-300' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-15 18:53:53.971   558   579 I ActivityManager: Broadcast completed: result=0
+11-15 18:53:53.972  1340  1601 I DeviceStatusMonitor: DeviceStatusMonitor.handleBroadcast():123 onReceive() : Action = android.net.conn.CONNECTIVITY_CHANGE
+11-15 18:53:53.974   558   589 D CompatChangeReporter: Compat change id reported: 151861875; UID 10102; state: ENABLED
+11-15 18:53:53.974   558   589 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10102, packageName = null, attributionTag = null, token = android.os.Binder@e1b3e19, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-15 18:53:53.980  1340  1601 I DeviceStatusMonitor: DeviceStatusMonitor.notifyIfNetworkChanged():180 notifyIfNetworkChanged: newState = NON_METERED, airplaneModeOn = false, notifyAnyway = false
+11-15 18:53:53.980   558  1697 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.980   558  1697 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.984  1340  1601 I NetworkInfoNotification: NetworkInfoNotification$Listener.onReceive():107 onNetworkAvailable: networkState = NON_METERED, isAirplaneModeOn = false
+11-15 18:53:53.984  1340  1601 I LatinImeEntryActivation: LatinImeActivationContentObserver.activeLanguagesHaveChanged():70 Active entries changed: [] -> {en-US}
+11-15 18:53:53.984  1340  1601 I SuperDelight: SuperDelightManager.syncBundledLanguageModels():729 syncBundledLanguageModels(): clearing bundled_delight selection
+11-15 18:53:53.984  1340  1601 I LmManager: LmManager.asyncUpdateEnabledLanguageModels():96 asyncUpdateEnabledLanguageModels()
+11-15 18:53:53.986   558   576 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-15 18:53:53.986   558   576 D PackageManager: Clear ephemeral installer activity
+11-15 18:53:53.988  1483  1483 I A       : (REDACTED) Created gRPC endpoint for service %s
+11-15 18:53:53.993   362   362 D Zygote  : Forked child process 2536
+11-15 18:53:53.993  1214  1565 I ChimeraSrvcProxy: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl
+11-15 18:53:53.993  1214  1565 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+11-15 18:53:53.994  1340  1601 I SuperDelight: SuperDelightManager.initializeDelightSuperpacks():338 initializeDelightSuperpacks()
+11-15 18:53:53.995  1340  1601 I SuperDelight: SuperDelightManager.getDelightMetadataUriAndVersion():1009 getDelightMetadataUriAndVersion(): Phenotype : 2024043000 : https://www.gstatic.com/android/keyboard/dictionarypack/GalileoGalilei-normal/metadata.json
+11-15 18:53:53.996  1340  1601 I SuperDelight: SuperDelightAppsSuperpacksManager.initializeDelightAppsSuperpacks():92 initializeDelightAppsSuperpacks()
+11-15 18:53:53.996  1340  1601 I SuperDelight: SuperDelightManager.initializeOverridesSuperpacks():400 initializeOverridesSuperpacks()
+11-15 18:53:53.996  1340  1340 I NetworkInfoNotification: NetworkInfoNotification$Listener.onReceive():107 onNetworkAvailable: networkState = NON_METERED, isAirplaneModeOn = false
+11-15 18:53:53.996  1340  1340 I NetworkInfoNotification: NetworkInfoNotification$Listener.onReceive():107 onNetworkAvailable: networkState = NON_METERED, isAirplaneModeOn = false
+11-15 18:53:53.998  1483  1926 I Ma-Robin: (REDACTED) %s was not found: %s
+11-15 18:53:54.003  1483  1926 I TRG.InvocationSink: Pre-warming invocation sink grpc service.
+11-15 18:53:54.005  2536  2536 I externalstorage: Using CollectorTypeCMC GC.
+11-15 18:53:54.007  2536  2536 W externalstorage: Unexpected CPU variant for x86: x86_64.
+11-15 18:53:54.007  2536  2536 W externalstorage: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+11-15 18:53:54.009  2536  2536 E externalstorage: Not starting debugger since process cannot load the jdwp agent.
+11-15 18:53:54.021  1483  1848 I TRG.RoutingOracle: (REDACTED) Invocations routing has changed
+11-15 18:53:54.021  1483  1848 I TRG.RoutingOracle: %s
+11-15 18:53:54.028  1340  1601 I SuperDelight: SuperDelightManager.lambda$registerAndUpgradeSuperpacks$5():474 SuperDelightManager#registerAndUpgradeSuperpacks(delight): current -1, required 2024043000
+11-15 18:53:54.029  1340  1604 I SuperDelight: SuperDelightManager.lambda$syncOverridesLanguageModels$14():683 SuperDelightManager#syncOverridesLanguageModels(): Superpack delight_overrides not found or negative version provided
+11-15 18:53:54.029  1340  1590 I SP      : Registering delight.2024043000, url: https://www.gstatic.com/android/keyboard/dictionarypack/GalileoGalilei-normal/metadata.json, constraints: m:*:*:*, flags: *, requested: 2024043000, current: -1
+11-15 18:53:54.035  1340  1601 I SuperDelight: SuperDelightManager.initializeBundledDelightSuperpacks():374 initializeBundledDelightSuperpacks()
+11-15 18:53:54.035  1340  1604 I SuperDelight: SuperDelightManager$2.onSuccess():631 delight_overrides sync success, adding to data file manager
+11-15 18:53:54.038  2536  2536 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok

@@ -1,0 +1,7 @@
+Starting: Intent { cmp=dev.liquidsense.installcheck/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: dev.liquidsense.installcheck/.MainActivity
+TotalTime: 1867
+WaitTime: 1886
+Complete
