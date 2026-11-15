@@ -28,6 +28,7 @@ jobs:
             android_install033
             android_ui032/apk_archive
             android_ui031/apk_archive
+            android_epochs030/apk_archive
             android_epochs030/patch_archive
             tooluse022/apk_archive
             tooluse022/archive_parts
