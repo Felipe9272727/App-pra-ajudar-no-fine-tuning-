@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/android_ui031/build_apk.py", line 88, in <module>
+    if '--refresh-ui' in sys.argv:refresh_ui()
+                                  ^^^^^^^^^^^^
+  File "/workspace/liquid-sense/android_ui031/build_apk.py", line 86, in refresh_ui
+    seal(prior,m['native_libraries_unchanged'],m['config'])
+  File "/workspace/liquid-sense/android_ui031/build_apk.py", line 40, in seal
+    classes=OUT/'signclasses';classes.mkdir();jar=BT/'lib/apksigner.jar'
+                              ^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/dev/shm/liquid-android/ui031-apk/signclasses'

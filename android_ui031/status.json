@@ -1,0 +1,18 @@
+{
+  "status": "complete_signed_and_delivered",
+  "app_version": "0.6.0-ui-preview",
+  "versionCode": 4,
+  "download": "https://gofile.io/d/fl8LUcK7",
+  "APK_sha256": "4c4d247fb0c63c3db8fef6779e27b0623f2172efe20a8efb44e1ab16a11c11a5",
+  "native_and_model_bytes_unchanged": true,
+  "new_training_updates": 0,
+  "general_promotion": false,
+  "browser_UI_checks": 29,
+  "thought_parser_checks": 4,
+  "agent_checks": 27,
+  "secure_asset_origin_test": "passed",
+  "Android_compilation_signature_and_ZIP_checks": "passed",
+  "physical_device_or_emulator_execution": false,
+  "model_workers_active": false,
+  "private_guest_and_signing_credentials_outside_repo": true
+}

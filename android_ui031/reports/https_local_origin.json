@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "secure_origin": true,
+  "requests_fulfilled_only_from_bundled_assets": [
+    "https://appassets.androidplatform.net/chat/index.html",
+    "https://appassets.androidplatform.net/chat/chat.css",
+    "https://appassets.androidplatform.net/chat/chat.js"
+  ],
+  "scope": "Chromium HTTPS interception mirroring Android asset handler, mocked bridge; no physical device"
+}

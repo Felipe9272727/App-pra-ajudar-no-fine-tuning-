@@ -1,0 +1,8 @@
+{
+  "old_APK_sha256": "9a1a487230f7979f441002cc885501f5eb79d1f859e12474cb6b14c93b239cac",
+  "exact_archive": "android_epochs030/apk_archive/manifest.json",
+  "verified_remote_commit": "3a73e4795bdbdcd9a14479336416aa04d75d6fd5",
+  "full_reconstruction_stream_verified": true,
+  "retiring_only_redundant_RAM_build_copy": "/dev/shm/liquid-android/epochs030-apk/LiquidSense-0.5.0-epochs-preview.apk",
+  "checkpoint_and_archives_deleted": false
+}

@@ -1,0 +1,6 @@
+{
+  "cause": "append-mode reader moved file pointer before calculating resource padding",
+  "repaired_small_entries": [],
+  "large_model_assets_unchanged": true,
+  "no_training_or_inference_restarted": true
+}

@@ -1,0 +1,13 @@
+{"status": "all_exact_signed_APK_segments_verified", "bytes": 1969325396, "sha256": "9a1a487230f7979f441002cc885501f5eb79d1f859e12474cb6b14c93b239cac", "new_weight_fragments": 85, "source_weights_unchanged": true, "duplicate_APK_created": false}
+Traceback (most recent call last):
+  File "/workspace/liquid-sense/android_ui031/build_apk.py", line 51, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/liquid-sense/android_ui031/build_apk.py", line 34, in main
+    run(BT/'zipalign','-c','-P','16','4',unsigned)
+  File "/workspace/liquid-sense/android_epochs030/build_apk.py", line 14, in run
+    def run(*args):subprocess.run([str(a) for a in args],check=True,env=ENV)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/dev/shm/liquid-android/tooling/android/build-tools/zipalign', '-c', '-P', '16', '4', '/dev/shm/liquid-android/ui031-apk/unsigned.apk']' returned non-zero exit status 1.
