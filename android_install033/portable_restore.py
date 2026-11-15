@@ -45,7 +45,21 @@ def restore(manifest_path,out):
             for raw in segment_blocks(s,manifest_path):f.write(raw);h.update(raw);sh.update(raw);size+=len(raw);n+=len(raw)
             assert size==s['bytes'] and sh.hexdigest()==s['sha256']
     assert n==m['bytes'] and h.hexdigest()==m['sha256'];temp.rename(out);print(json.dumps({'restored':str(out),'bytes':n,'sha256':h.hexdigest()}),flush=True)
+def check_inputs():
+    pack=read('tooluse022/apk_archive/manifest.json')
+    for p in pack['pack']['parts']:
+        if 'compressed'in p:
+            raw=zlib.decompress((ROOT/'tooluse022/apk_archive'/p['compressed']).read_bytes());assert len(raw)==p['bytes'] and hashlib.sha256(raw).hexdigest()==p['sha256']
+    patch=read('android_epochs030/patch_archive/manifest.json')
+    for p in patch['parts']:
+        path=ROOT/'android_epochs030/patch_archive'/p['path'];assert path.stat().st_size==p['bytes'] and hashfile(path)==p['sha256']
+    for path in ['android_ui032/apk_archive/manifest.json','android_ui031/apk_archive/manifest.json','android_install033/apk_archive/manifest.json']:
+        for segment in read(path)['segments']:
+            if segment['kind']=='zlib':
+                name=segment['path'];name=name if name.startswith('android_') else (Path(path).parent/name).as_posix();assert hashfile(ROOT/name)==segment['compressed_sha256']
+    print('ALL_RECONSTRUCTION_INPUTS_PRESENT_AND_HASH_VERIFIED',flush=True)
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--download-upstream',action='store_true');p.add_argument('--manifest');p.add_argument('--out',type=Path);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--download-upstream',action='store_true');p.add_argument('--check-inputs',action='store_true');p.add_argument('--manifest');p.add_argument('--out',type=Path);a=p.parse_args()
     if a.download_upstream:download_upstream()
+    if a.check_inputs:check_inputs()
     if a.manifest:assert a.out;restore(a.manifest,a.out)

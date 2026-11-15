@@ -29,8 +29,11 @@ jobs:
             android_epochs030/apk_archive
             android_epochs030/patch_archive
             tooluse022/apk_archive
+            tooluse022/archive_parts
       - name: Restore exact pinned public upstream bytes
-        run: python android_install033/portable_restore.py --download-upstream
+        run: |
+          python tooluse022/pack_archive.py restore
+          python android_install033/portable_restore.py --download-upstream --check-inputs
       - name: Free unused runner SDK disk space
         run: |
           sudo rm -rf /usr/share/dotnet /usr/local/.ghcup /opt/ghc /usr/local/lib/android/sdk/ndk
