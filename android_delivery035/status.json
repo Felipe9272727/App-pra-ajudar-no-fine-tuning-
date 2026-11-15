@@ -4,8 +4,30 @@
   "phone_parser_recognized": false,
   "session_install_attempted": false,
   "original_host_full_download_verified": false,
-  "delivery_recovery_CI_run": 43750122544,
-  "delivery_status": "running",
+  "delivery_recovery_CI_run": 43750305576,
+  "delivery_status": "exact_APK_recovered_ZIP_published_and_fully_redownload_verified",
   "weights_modified": false,
-  "physical_installation_verified": false
+  "physical_installation_verified": false,
+  "attempts": [
+    {
+      "run": 43750122544,
+      "conclusion": "failed_before_restoration_or_publication",
+      "reason": "preflight expected preserved Android030 prefix outside sparse checkout",
+      "fix": "include Android030 apk_archive directory"
+    }
+  ],
+  "CI_job": 132922568159,
+  "CI_source": "44d303769d4fdff21093a0409b5b6f729197e476",
+  "url": "https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.3-verified035/LiquidSense-0.6.3-verificado.zip",
+  "full_public_redownload_verified": true,
+  "zip": {
+    "name": "LiquidSense-0.6.3-verificado.zip",
+    "bytes": 1967561424,
+    "sha256": "52966dccfc9ec1dd6f4eaeabadaa3615c31e286034d84c04a74690042724f307"
+  },
+  "expected_APK": {
+    "name": "LiquidSense-0.6.3-install-preview.apk",
+    "bytes": 1967560403,
+    "sha256": "4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10"
+  }
 }

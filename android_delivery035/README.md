@@ -1,10 +1,10 @@
 # Entrega035 — diferença de SHA256 confirmada no aparelho
 
-O relatório físico do Xiaomi com Android15 identificou um arquivo de
-1967560403bytes, exatamente o tamanho esperado, com SHA256:
+O relatório físico do Xiaomi com Android 15 identificou um arquivo de
+1.967.560.403 bytes, exatamente o tamanho esperado, com SHA256:
 `8303e126b3af7d3f4cc95f218729a7cbb0e7193acb508745754122866f535203`.
 
-O APK0.6.3 assinado e preservado tem SHA256:
+O APK 0.6.3 assinado e preservado tem SHA256:
 `4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10`.
 
 Portanto, o arquivo escolhido não é idêntico ao publicado. O parser local também

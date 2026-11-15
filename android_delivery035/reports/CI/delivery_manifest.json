@@ -1,0 +1,22 @@
+{
+  "purpose": "same_exact_signed_APK_with_new_delivery_transport",
+  "apk": {
+    "name": "LiquidSense-0.6.3-install-preview.apk",
+    "bytes": 1967560403,
+    "sha256": "4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10"
+  },
+  "zip": {
+    "name": "LiquidSense-0.6.3-verificado.zip",
+    "bytes": 1967561424,
+    "sha256": "52966dccfc9ec1dd6f4eaeabadaa3615c31e286034d84c04a74690042724f307"
+  },
+  "url": "https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.3-verified035/LiquidSense-0.6.3-verificado.zip",
+  "archive_source_commit": "04990ad71bbc9a03829e6b31759a2297692aab3e",
+  "full_public_redownload_verified": true,
+  "physical_installation_verified": false,
+  "model_weights_changed": false,
+  "verified_remote_stages": [
+    "authenticated_draft",
+    "public_anonymous"
+  ]
+}
