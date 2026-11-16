@@ -1,0 +1,2 @@
+INSTRUMENTATION_RESULT: error=java.io.IOException: CI unknown-sources permission not granted
+INSTRUMENTATION_CODE: 0

@@ -1,0 +1,8 @@
+INSTRUMENTATION_RESULT: claim=old036 production Session path reproduced EBADF with full pinned APK
+INSTRUMENTATION_RESULT: old_report=CI037: reproduce old036 double-close with full cached APK
+
+Falha ao entregar sessão: write failed: EBADF (Bad file descriptor)
+
+INSTRUMENTATION_RESULT: permission_activity=dev.liquidsense.installcheck=true
+INSTRUMENTATION_RESULT: permission_context=dev.liquidsense.installcheck=true
+INSTRUMENTATION_CODE: -1

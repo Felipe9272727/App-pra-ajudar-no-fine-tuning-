@@ -1,0 +1,1 @@
+Uid mode: REQUEST_INSTALL_PACKAGES: allow

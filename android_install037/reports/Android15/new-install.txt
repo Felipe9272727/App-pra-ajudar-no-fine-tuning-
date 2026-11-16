@@ -1,0 +1,21 @@
+INSTRUMENTATION_RESULT: claim=Old error reproduced, same cached APK and helper data preserved across update, production full Session write/fsync/single close/readback/commit, normal installer UI confirmation and final STATUS_SUCCESS passed. Physical Xiaomi result still pending.
+INSTRUMENTATION_RESULT: confirmation=Clicked Install/Update in normal Android packageinstaller UI
+INSTRUMENTATION_RESULT: installed=dev.liquidsense.chat.tools 0.6.3-install-preview / 7
+INSTRUMENTATION_RESULT: new_report=CI037: reproduce old036 double-close with full cached APK
+
+Falha ao entregar sessão: write failed: EBADF (Bad file descriptor)
+    
+SESSÃO 037: 2107721076
+Arquivo base.apk na sessão: 1967560403 bytes
+SHA256 dentro da sessão: 4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10
+Saída fechada uma vez, antes do commit.
+
+RESULTADO REAL DO INSTALADOR 037
+Status: 0
+Código legado: 1
+Mensagem: INSTALL_SUCCEEDED: Session installed
+Atualização concluída. O Android preserva os dados do app atualizado.
+
+INSTRUMENTATION_RESULT: permission_activity=dev.liquidsense.installcheck=true
+INSTRUMENTATION_RESULT: permission_context=dev.liquidsense.installcheck=true
+INSTRUMENTATION_CODE: -1
