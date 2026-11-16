@@ -1,0 +1,13 @@
+{
+  "status": "Android_repair_validation_running",
+  "run": 43795758655,
+  "user_ZIP_hash_mismatch_confirmed": true,
+  "extractor": "ZArchiver",
+  "original_difference_location": "unknown",
+  "13_local_core_and_Java_ZIP_tests": "passed",
+  "native_unzip_test": "passed",
+  "current_public_ZIP_SHA": "matches",
+  "local_Java_HTTPS_probe": "connection_refused_in_execution_environment; actual Android HTTPS probe pending in CI",
+  "phone_repair_tested": false,
+  "model_weights_changed": false
+}

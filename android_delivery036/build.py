@@ -23,5 +23,5 @@ def main():
  r=run(BT/'aapt2','dump','permissions',final);(H/'reports/permissions.txt').write_text(r.stdout);assert 'android.permission.INTERNET' in r.stdout
  run(BT/'zipalign','-c','4',final)
  with zipfile.ZipFile(final) as z:assert z.testzip() is None
- m={'status':'signed_native_diagnostic_APK_built','path':str(final),'bytes':final.stat().st_size,'sha256':hashlib.sha256(final.read_bytes()).hexdigest(),'package':'dev.liquidsense.installcheck','versionCode':2,'no_model_assets':True,'INTERNET_permission':True,'reads_only_user_chosen_APK':True,'phone_execution_verified':False};(H/'reports/apk_manifest.json').write_text(json.dumps(m,indent=2)+'\n');print(json.dumps(m))
+ m={'status':'signed_native_diagnostic_APK_built','path':str(final),'bytes':final.stat().st_size,'sha256':hashlib.sha256(final.read_bytes()).hexdigest(),'package':'dev.liquidsense.installcheck','versionCode':2,'no_model_assets':True,'INTERNET_permission':True,'reads_only_user_chosen_ZIP':True,'phone_execution_verified':False};(H/'reports/apk_manifest.json').write_text(json.dumps(m,indent=2)+'\n');print(json.dumps(m))
 if __name__=='__main__':main()

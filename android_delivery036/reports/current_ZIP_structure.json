@@ -1,0 +1,29 @@
+{
+  "entries": [
+    {
+      "name": "LiquidSense-0.6.3-install-preview.apk",
+      "bytes": 1967560403,
+      "CRC32": "61f927dc",
+      "compression": 0,
+      "ZIP_min_version": 20,
+      "flags": 0,
+      "extra": "",
+      "header_offset": 0
+    },
+    {
+      "name": "LEIA-ME.txt",
+      "bytes": 751,
+      "CRC32": "8b6ea6c0",
+      "compression": 0,
+      "ZIP_min_version": 20,
+      "flags": 0,
+      "extra": "",
+      "header_offset": 1967560470
+    }
+  ],
+  "outer_ZIP64_required": false,
+  "less_than_signed_32bit_size_limit": true,
+  "python_sha256_match": true,
+  "native_unzip_t_passed": true,
+  "Java_ZipInputStream_CRC_passed": true
+}
