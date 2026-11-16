@@ -1,4 +1,14 @@
-# Session037 — reparar a instalação sem repetir o reparo dos pesos/arquivo
+# Reparador0.3publicado — instalação final aprovada no Android15emulado
+
+[Baixar atualização — 37KB](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-session037/LiquidSense-Reparador-0.3.apk). Instale sobre o reparador existente
+e toque diretamente no botão3: o APK já reparado é preservado.
+Comparação real:036reproduziu EBADF;037preservou cache/dados do helper,
+conferiu1967560403bytes e SHA dentro da sessão, confirmou a instalação na UI
+normal do Android e recebeu Status0. Pacote/version7instalado, chat aberto.
+CI43798804632/job133073727510. O resultado físico no Xiaomi ainda é pendente.
+SHA256 do helper: 084e6b13a28df286c8f9b2cd68c3a541d4dfc31e70a132ad949c5a21d5a430ac.
+
+# Session037 — corrigir a instalação preservando o APK já reparado
 
 O novo relatório físico confirma que o reparador036funcionou até a preparação:
 32de235blocos foram recuperados (268435456bytes,256MiB). O ZIP completo, CRC/SHA
