@@ -5,5 +5,8 @@
   "bug": "explicit close followed by automatic second close of FileBridge output; catch abandoned session after commit",
   "output_lifecycle_fixed": true,
   "cache_filename_and_valid036_flag_preserved": true,
-  "new_main_APK_or_model": false
+  "new_main_APK_or_model": false,
+  "reference_APK_sha256": "4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10",
+  "main_APK_bytes": 1967560403,
+  "initial_CI_source": "c50b261cb8602d961d9e7adbe2eae89e58f7d109"
 }
