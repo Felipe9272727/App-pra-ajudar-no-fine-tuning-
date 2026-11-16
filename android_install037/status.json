@@ -1,7 +1,7 @@
 {
   "status": "old_EBADF_reproduced_new_full_Session_install_and_launch_passed",
   "phone_block_repair_succeeded": true,
-  "phone_main_installation_succeeded": false,
+  "phone_main_installation_succeeded": true,
   "bug": "explicit close followed by automatic second close of FileBridge output; catch abandoned session after commit",
   "output_lifecycle_fixed": true,
   "cache_filename_and_valid036_flag_preserved": true,
@@ -41,6 +41,8 @@
   "url": "https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-session037/LiquidSense-Reparador-0.3.apk",
   "helper_bytes": 37340,
   "helper_sha256": "084e6b13a28df286c8f9b2cd68c3a541d4dfc31e70a132ad949c5a21d5a430ac",
-  "phone_final_installation_verified": false,
-  "model_quality_tested": false
+  "phone_final_installation_verified": true,
+  "model_quality_tested": false,
+  "phone_final_installation_confirmation_source": "user reported installation succeeded after helper0.3",
+  "phone_automated_measurements": false
 }

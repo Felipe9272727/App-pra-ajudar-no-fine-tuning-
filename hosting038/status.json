@@ -1,0 +1,33 @@
+{
+  "status": "official_hosting_research_complete_no_deployment",
+  "checked_on": "2026-11-16",
+  "phone_installation": {
+    "confirmed": true,
+    "source": "user message: agora foi",
+    "automated_device_measurement": false,
+    "helper_version": "0.3",
+    "main_APK": "0.6.3-install-preview"
+  },
+  "model_weights_changed": false,
+  "new_training": false,
+  "deployment_created": false,
+  "GPU_speed_benchmark_run": false,
+  "recommendation": "ZeroGPU free demo if eligible; validate GPU port/parity/latency before app integration",
+  "providers": {
+    "HF_ZeroGPU": {
+      "free_personal_spaces": 2,
+      "verified_email_required": true,
+      "account_age_days_over": 30,
+      "free_daily_GPU_minutes": 5,
+      "shared_queue": true
+    },
+    "Modal_Starter": {
+      "monthly_compute_credits_USD": 30,
+      "payment_method_required": true,
+      "not_unlimited_free": true
+    },
+    "Colab_free": {
+      "permanent_app_backend_recommended": false
+    }
+  }
+}
