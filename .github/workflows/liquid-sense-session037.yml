@@ -67,6 +67,11 @@ jobs:
           adb install --no-incremental "$RUNNER_TEMP/old.apk"
           adb install --no-incremental "$RUNNER_TEMP/test.apk"
           adb shell appops set dev.liquidsense.installcheck REQUEST_INSTALL_PACKAGES allow
+          adb shell appops set --uid dev.liquidsense.installcheck REQUEST_INSTALL_PACKAGES allow
+          adb shell appops set dev.liquidsense.installcheck.smoke REQUEST_INSTALL_PACKAGES allow
+          adb shell appops set --uid dev.liquidsense.installcheck.smoke REQUEST_INSTALL_PACKAGES allow
+          adb shell appops get dev.liquidsense.installcheck REQUEST_INSTALL_PACKAGES | tee "$RUNNER_TEMP/session037-evidence/permission-helper.txt"
+          adb shell appops get dev.liquidsense.installcheck.smoke REQUEST_INSTALL_PACKAGES | tee "$RUNNER_TEMP/session037-evidence/permission-test.txt"
           adb shell am start -W -n dev.liquidsense.installcheck/.MainActivity
           adb root
           adb wait-for-device
