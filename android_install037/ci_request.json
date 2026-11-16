@@ -1,1 +1,1 @@
-{"request": 1, "purpose": "reproduce old double-close with exact full APK; preserve cache across update; test actual final PackageInstaller Session confirmation and STATUS_SUCCESS"}
+{"request": 2, "purpose": "reproduce old double-close with exact full APK; preserve cache across update; test actual final PackageInstaller Session confirmation and STATUS_SUCCESS", "reason": "workflow and all sources now present; no previous workflow run exists"}
