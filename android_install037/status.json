@@ -1,5 +1,5 @@
 {
-  "status": "full_Android_session_test_pending",
+  "status": "old_EBADF_reproduced_new_full_Session_install_and_launch_passed",
   "phone_block_repair_succeeded": true,
   "phone_main_installation_succeeded": false,
   "bug": "explicit close followed by automatic second close of FileBridge output; catch abandoned session after commit",
@@ -8,5 +8,39 @@
   "new_main_APK_or_model": false,
   "reference_APK_sha256": "4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10",
   "main_APK_bytes": 1967560403,
-  "initial_CI_source": "c50b261cb8602d961d9e7adbe2eae89e58f7d109"
+  "initial_CI_source": "c50b261cb8602d961d9e7adbe2eae89e58f7d109",
+  "attempts": [
+    {
+      "run": 43797887449,
+      "job": 133070778588,
+      "result": "failed_test_precondition",
+      "evidence": "no old install attempt or error recorded",
+      "reason": "prewarmed Activity retained apkValid=false before seeded cache",
+      "fix": "fresh Activity and explicit valid/permission preconditions; production APK unchanged"
+    },
+    {
+      "run": 43798322564,
+      "job": 133072198066,
+      "result": "failed_test_permission_precondition",
+      "reason": "instrumented PackageManager context reported unknown-sources permission missing before installation",
+      "fix": "test manifest and both test identities request/grant permission; assert actual Activity permission",
+      "production_APK_changed": false
+    }
+  ],
+  "second_request_source": "8c6171fe23f6f225d317cf8c88519e13afd3450f",
+  "third_request_source": "013cff19c14187b14b18a4a12e565ef2ff1b0437",
+  "run": 43798804632,
+  "job": 133073727510,
+  "source": "013cff19c14187b14b18a4a12e565ef2ff1b0437",
+  "old036_result": "EBADF reproduced with full exact APK",
+  "new037_result": "STATUS_SUCCESS=0; target version7 installed; native chat UI rendered",
+  "normal_Android_confirmation_UI": true,
+  "cached_APK_and_helper_data_preserved": true,
+  "staged_APK_readback_SHA_verified": true,
+  "public_download_verified": true,
+  "url": "https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-session037/LiquidSense-Reparador-0.3.apk",
+  "helper_bytes": 37340,
+  "helper_sha256": "084e6b13a28df286c8f9b2cd68c3a541d4dfc31e70a132ad949c5a21d5a430ac",
+  "phone_final_installation_verified": false,
+  "model_quality_tested": false
 }
