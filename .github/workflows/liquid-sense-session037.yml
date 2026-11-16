@@ -104,6 +104,14 @@ jobs:
           assert len(raw)==m['bytes'] and hashlib.sha256(raw).hexdigest()==m['sha256']
           (pathlib.Path(os.environ['RUNNER_TEMP'])/'session037-evidence/delivery.json').write_text(json.dumps({'url':url,'bytes':len(raw),'sha256':m['sha256'],'full_public_download_verified':True,'phone_final_install_verified':False},indent=2)+'\n')
           PY
+      - name: Capture final diagnostic state even on failure
+        if: always()
+        run: |
+          if command -v adb >/dev/null; then
+            adb logcat -d -t 800 > "$RUNNER_TEMP/session037-evidence/final-logcat.txt" || true
+            adb shell screencap -p /sdcard/final037.png || true
+            adb pull /sdcard/final037.png "$RUNNER_TEMP/session037-evidence/final.png" || true
+          fi
       - name: Preserve full installation evidence
         if: always()
         uses: actions/upload-artifact@v4
