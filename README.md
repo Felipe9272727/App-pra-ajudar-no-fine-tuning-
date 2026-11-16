@@ -1,5 +1,18 @@
 # Liquid Sense 0.8B LOOP
 
+## Reparador 0.2 — usar o ZIP já baixado
+
+[Baixar reparador — 33 KB](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-integrity036/LiquidSense-Reparador-0.2.apk). Atualiza o verificador anterior.
+O ZIP lido no aparelho tem o tamanho esperado e outro SHA256. A origem da
+diferença ainda é desconhecida; o arquivo público passou novamente em SHA e CRC.
+Escolha o ZIP existente: o reparador mostra o volume necessário e recupera somente
+os blocos diferentes por HTTPS após seu toque. Confere e extrai o APK internamente.
+Se muitos blocos diferirem, pode precisar de bastante download; mostra antes.
+Não lê chats nem envia arquivos/relatórios. Não desinstale o app principal.
+Update e reparo de um bloco de 8 MiB passaram no Android 15 emulado; resultado
+no Xiaomi continua pendente. Pesos inalterados.
+[Histórico, código e evidências](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/24eae908bb61c0cedeeefe7ec2a1c0ae9b7c5a46/android_delivery036).
+
 ## APK 0.6.3 — download recuperado e verificado
 
 O arquivo escolhido no Xiaomi tinha o tamanho esperado, mas SHA256 diferente.

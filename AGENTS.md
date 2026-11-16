@@ -1,3 +1,32 @@
+# AndroidIntegrity036 — repeated phone ZIP mismatch; block repair helper ready
+
+- User DID download our link. ZIP035phone bytes1967561424match; SHA
+  b7b6e7c797b9a48741ec98bc2784ec833caebf6a12d068ffc39d58909de7ef79
+  differs from published52966dccfc9ec1dd6f4eaeabadaa3615c31e286034d84c04a74690042724f307.
+  ZArchiver: CRCinvalid. New independent download+nativeunzip+Java CRC passed.
+  Origin of alteration unknown: no blame of user/extractor/network/storage.
+- Compared UI031→032→033: same~1.97GB, weights, Rust/Python, package/cert.
+  Old UI opened on phone; exact0.6.0vs0.6.1unknown. First explicit failed0.6.2,
+  0.6.3fresh packaging,035outerZIP. No inference/model regression established.
+- New SAMEPACKAGE helper update0.2/version2,33244bytes, SHA256
+  4f2a774b6b1a4b3a13cbcbdc84014dcc1a49ce9be165e1c9a34c69cef13f85b7:
+  https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-integrity036/LiquidSense-Reparador-0.2.apk
+- Read android_delivery036 on codex/liquid-sense-integrity-036-20261116,
+  44files verified at24eae908bb61c0cedeeefe7ec2a1c0ae9b7c5a46. Android15run43796079215/job133065078317
+  PASSED helper update, production scan, actual HTTPS8MiBblock repair,
+  full ZIP SHA, extraction CRC/APK SHA, reread and Android parser.
+  Public tiny APK download verified.13local core/JavaZIPtests andunzip passed.
+  First CI-only testresource alignment failure preserved. LocalJava HTTPS
+  probe refused direct connection; actual Android HTTPS test passed instead.
+- User updates helper, selects EXISTINGZIP, waits. Shows original-read and
+  cache-reread hashes and requiredMiB. Button2repairs only differing blocks in
+  private copy; if all differ, may need nearly2GB, amount shown before download.
+  Button3normal Android install; button4report. No uninstall/chats access/upload.
+  INTERNET added for pinned public HTTPS ranges only. OriginalZIP preserved.
+- Pending user's physical block/repair/install result and origin of alteredbytes.
+  File-picker taps, final main-app Session install and Xiaomi repair untested.
+  Do not claim these from emulator scan/repair. No model changes/full rebuild.
+
 # AndroidDelivery035 — physical APK hash mismatch; delivery recovery
 
 - Phone report: Xiaomi Android15/SDK35, 1967560403bytes, SHA256
