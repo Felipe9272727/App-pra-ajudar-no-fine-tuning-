@@ -1,1 +1,1 @@
-{"request": 1, "purpose": "actual Android15 helper update, pinned ZIP block scan/HTTPS recovery/extraction; publish only tiny production helper after pass"}
+{"request": 2, "purpose": "actual Android15 helper update, pinned ZIP block scan/HTTPS recovery/extraction; publish only tiny production helper after pass", "retry_reason": "CI-only instrumentation resources must be uncompressed and aligned; production helper update passed"}

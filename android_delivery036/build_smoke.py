@@ -8,8 +8,10 @@ def main():
  unsigned=out/'unsigned.apk';final=out/'smoke.apk'
  with zipfile.ZipFile(unsigned,'w',compression=zipfile.ZIP_DEFLATED) as z:
   with zipfile.ZipFile(out/'resources.apk') as res:
-   for i in res.infolist():z.writestr(i.filename,res.read(i))
+   for i in sorted(res.infolist(),key=lambda i:(i.filename!='AndroidManifest.xml',i.filename)):
+    raw=res.read(i);kind=zipfile.ZIP_STORED if i.filename=='resources.arsc' else zipfile.ZIP_DEFLATED;z.writestr(aligned_info(z,i.filename,len(raw),kind),raw)
   z.write(dex/'classes.dex','classes.dex')
+ run(BT/'zipalign','-c','4',unsigned)
  run('java','-jar',BT/'lib/apksigner.jar','sign','--ks','/tmp/liquid-fast020-signing/preview.p12','--ks-key-alias','liquid-sense-fast','--ks-pass','file:/tmp/liquid-fast020-signing/password','--min-sdk-version','28','--out',final,unsigned)
  run('java','-jar',BT/'lib/apksigner.jar','verify',final)
  print(json.dumps({'test_only_APK':str(final),'bytes':final.stat().st_size,'sha256':hashlib.sha256(final.read_bytes()).hexdigest()}))

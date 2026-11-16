@@ -79,6 +79,7 @@ jobs:
           adb shell am instrument -w dev.liquidsense.installcheck.smoke/dev.liquidsense.installcheck.Smoke | tee "$RUNNER_TEMP/repair036-evidence/instrumentation.txt"
           grep -q 'INSTRUMENTATION_CODE: -1' "$RUNNER_TEMP/repair036-evidence/instrumentation.txt"
           grep -q 'APK íntegro' "$RUNNER_TEMP/repair036-evidence/instrumentation.txt"
+          adb shell am start -W -n dev.liquidsense.installcheck/.MainActivity
           adb shell screencap -p /sdcard/repair036.png
           adb pull /sdcard/repair036.png "$RUNNER_TEMP/repair036-evidence/screen.png"
           adb logcat -d -t 600 > "$RUNNER_TEMP/repair036-evidence/logcat.txt"
