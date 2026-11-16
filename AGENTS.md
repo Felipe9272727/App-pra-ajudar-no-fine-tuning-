@@ -1,3 +1,30 @@
+# AndroidSession037 COMPLETE — fix our double close; final phone install pending
+
+- Phone036repair succeeded:32/235blocks,256MiB; full ZIP and APK CRC/SHA+reread
+  passed. Preserve verified.apk in helper cache and valid036; no new repair.
+- Our036Session code closed FileBridge output explicitly AND automatically,
+  then catch abandoned after commit. AOSP close is not idempotent; reproduced
+  actual EBADF in Android15 with full exact APK.037nests stream scope so it
+  closes ONCE before commit, reads staged base.apk size+SHA, never abandons
+  after a commit attempt and correlates callbacks with its own session ID.
+- Delivered helper0.3/code3,37340bytes,SHA256
+  084e6b13a28df286c8f9b2cd68c3a541d4dfc31e70a132ad949c5a21d5a430ac:
+  https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-session037/LiquidSense-Reparador-0.3.apk
+- Read android_install037 on codex/liquid-sense-session-037-20261116.
+  48files verified at9a324b008124768c0dcd758fc2d35948103a6cef. CI43798804632/job133073727510:
+  old036EBADF reproduced;037update kept cached APK+helper marker; staged
+  1967560403bytes and SHA4735be85...ade0e10verified; NORMAL installer UI clicked;
+  final STATUS_SUCCESS0, Tools version7installed, actual chat UI opened.
+  Public tiny APK download verified. Two initial test-precondition failures
+  (prewarmed Activity, instrumented unknown-source permission) preserved.
+- User updates helper IN PLACE, no uninstall/clear data. Open and go DIRECTLY
+  to button3; do not reselect ZIP or repeat button2. Confirm Android installer.
+  Button4copies new037result if failure. Existing report may include old errors;
+  inspect newest037session. Main app/weights unchanged. Cached APK already good.
+- Pending actual final Xiaomi installation. Physical block repair IS confirmed;
+  do not call it pending. No model-quality/speed, keyboard or live neural tests
+  claimed from installation/launch. All CI runs closed. Older releases retained.
+
 # AndroidIntegrity036 — repeated phone ZIP mismatch; block repair helper ready
 
 - User DID download our link. ZIP035phone bytes1967561424match; SHA

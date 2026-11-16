@@ -1,5 +1,18 @@
 # Liquid Sense 0.8B LOOP
 
+## Reparador 0.3 — instalação corrigida, manter APK recuperado
+
+[Baixar atualização — 37 KB](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-session037/LiquidSense-Reparador-0.3.apk). Instale sobre o reparador anterior,
+**sem desinstalar nem limpar dados**. Abra e toque diretamente no **botão 3**.
+O APK reparado fica preservado; não escolha o ZIP de novo nem repita o reparo.
+
+Corrige nosso fechamento duplicado da saída da sessão, que causava EBADF e
+abandono após commit. Comparação no Android 15 emulado: versão antiga reproduziu
+o erro; nova recebeu Status 0 e abriu o chat após a confirmação normal do Android.
+SHA do APK também conferido dentro da sessão. Resultado final no Xiaomi ainda
+precisa ser confirmado. O reparo físico dos 32 blocos já passou. Pesos inalterados.
+[Relatório e evidências](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/9a324b008124768c0dcd758fc2d35948103a6cef/android_install037).
+
 ## Reparador 0.2 — usar o ZIP já baixado
 
 [Baixar reparador — 33 KB](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-integrity036/LiquidSense-Reparador-0.2.apk). Atualiza o verificador anterior.
