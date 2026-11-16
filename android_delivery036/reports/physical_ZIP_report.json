@@ -1,0 +1,10 @@
+{
+  "extractor": "ZArchiver",
+  "bytes": 1967561424,
+  "reported_sha256": "b7b6e7c797b9a48741ec98bc2784ec833caebf6a12d068ffc39d58909de7ef79",
+  "expected_sha256": "52966dccfc9ec1dd6f4eaeabadaa3615c31e286034d84c04a74690042724f307",
+  "byte_count_match": true,
+  "sha_match": false,
+  "downloaded_from_provided_link": true,
+  "location_of_difference": "unknown"
+}

@@ -1,0 +1,3 @@
+package: dev.liquidsense.installcheck
+uses-permission: name='android.permission.REQUEST_INSTALL_PACKAGES'
+uses-permission: name='android.permission.INTERNET'

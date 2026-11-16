@@ -1,0 +1,14 @@
+PASS pristine content
+PASS one changed byte locates exactly one block
+PASS repair downloads only bad block
+PASS poisoned network bytes rejected before write
+PASS truncated response rejected
+PASS truncation locates missing blocks
+PASS truncated file recovered
+PASS extra trailing bytes detectable
+PASS excess bytes removed only in cache without downloads
+PASS HTTP rejected
+PASS unexpected remote host rejected
+PASS full ZIP Java streaming CRC and APK SHA
+PASS exact two public ZIP entries
+TOTAL_PASS 13

@@ -1,0 +1,4 @@
+Archive:  /dev/shm/LiquidSense-0.6.3-verificado.zip
+    testing: LiquidSense-0.6.3-install-preview.apk   OK
+    testing: LEIA-ME.txt              OK
+No errors detected in compressed data of /dev/shm/LiquidSense-0.6.3-verificado.zip.

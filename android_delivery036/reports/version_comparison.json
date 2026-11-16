@@ -1,0 +1,71 @@
+{
+  "evidence_limit": "user screenshot demonstrates 0.6-series UI opened, but exact 0.6.0 vs 0.6.1 not visible; do not invent known-good exact version",
+  "versions": [
+    {
+      "source": "android_ui031/releases/0.6.0/apk_manifest.json",
+      "version": "0.6.0-ui-preview",
+      "versionCode": 4,
+      "bytes": 1969399331,
+      "sha256": "4c4d247fb0c63c3db8fef6779e27b0623f2172efe20a8efb44e1ab16a11c11a5",
+      "package": "dev.liquidsense.chat.tools",
+      "base_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+      "patch_sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+      "native_libraries": {
+        "lib/arm64-v8a/libliquid_sense.so": "a25f68b7e561d500b12eea88ee025f79a7648e7a2e82c33db5e2e0cd1f77527b",
+        "lib/arm64-v8a/libliquid_python.so": "f4799e029a0ac2e31e006759724fa89876440aacdd0dfb4e91ae91d8608d12a4"
+      },
+      "matches_last_opened_UI_runtime": true
+    },
+    {
+      "source": "android_ui031/reports/apk_manifest.json",
+      "version": "0.6.1-ui-preview",
+      "versionCode": 5,
+      "bytes": 1969419805,
+      "sha256": "b8fd17c9e0f5b073fd04a7ffe47055f98a3c22e4848ed5c2c430488fea6f030d",
+      "package": "dev.liquidsense.chat.tools",
+      "base_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+      "patch_sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+      "native_libraries": {
+        "lib/arm64-v8a/libliquid_sense.so": "a25f68b7e561d500b12eea88ee025f79a7648e7a2e82c33db5e2e0cd1f77527b",
+        "lib/arm64-v8a/libliquid_python.so": "f4799e029a0ac2e31e006759724fa89876440aacdd0dfb4e91ae91d8608d12a4"
+      },
+      "matches_last_opened_UI_runtime": true
+    },
+    {
+      "source": "android_ui032/reports/apk_manifest.json",
+      "version": "0.6.2-ui-preview",
+      "versionCode": 6,
+      "bytes": 1969473053,
+      "sha256": "614cdc6cfbce027947e4294ab9f0578b581d47b3615eefc72f1d88940be58590",
+      "package": "dev.liquidsense.chat.tools",
+      "base_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+      "patch_sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+      "native_libraries": {
+        "lib/arm64-v8a/libliquid_sense.so": "a25f68b7e561d500b12eea88ee025f79a7648e7a2e82c33db5e2e0cd1f77527b",
+        "lib/arm64-v8a/libliquid_python.so": "f4799e029a0ac2e31e006759724fa89876440aacdd0dfb4e91ae91d8608d12a4"
+      },
+      "matches_last_opened_UI_runtime": true
+    },
+    {
+      "source": "android_install033/reports/apk_manifest.json",
+      "version": "0.6.3-install-preview",
+      "versionCode": 7,
+      "bytes": 1967560403,
+      "sha256": "4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10",
+      "package": "dev.liquidsense.chat.tools",
+      "base_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+      "patch_sha256": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310",
+      "native_libraries": {
+        "lib/arm64-v8a/libliquid_sense.so": "a25f68b7e561d500b12eea88ee025f79a7648e7a2e82c33db5e2e0cd1f77527b",
+        "lib/arm64-v8a/libliquid_python.so": "f4799e029a0ac2e31e006759724fa89876440aacdd0dfb4e91ae91d8608d12a4"
+      },
+      "matches_last_opened_UI_runtime": true
+    }
+  ],
+  "same_size_already_before_refusal": true,
+  "first_explicit_physical_rejected_version": "0.6.2",
+  "0.6.3_phone_SHA_mismatch": true,
+  "0.6.2_and_0.6.3_emulator_install_passed": true,
+  "new_failure_stage": "outer ZIP extraction CRC",
+  "current_phone_ZIP_SHA": "awaiting_user"
+}

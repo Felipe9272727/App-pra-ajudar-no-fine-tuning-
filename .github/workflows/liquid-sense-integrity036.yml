@@ -1,0 +1,105 @@
+name: Liquid Sense Android block repair036
+on:
+  push:
+    branches: [codex/liquid-sense-integrity-036-20261116]
+    paths: [android_delivery036/ci_request.json]
+permissions:
+  contents: write
+concurrency:
+  group: liquid-integrity036
+  cancel-in-progress: false
+jobs:
+  android-repair:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+      ANDROID_AVD_HOME: /home/runner/.android/avd
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: liquid-sense-integrity036
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            android_delivery036
+            android_install034/artifacts
+      - name: Download exact public fixture and introduce one controlled bad block
+        run: |
+          mkdir -p "$RUNNER_TEMP/repair036-evidence"
+          python - <<'PY'
+          import pathlib,json,urllib.request,hashlib,os
+          profile=json.loads(pathlib.Path('android_delivery036/android/assets/integrity.json').read_text())
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'smoke-input.zip'
+          urllib.request.urlretrieve(profile['url'],p)
+          with p.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()==profile['sha256']
+          with p.open('r+b') as f:
+            f.seek(8388608+123);b=f.read(1);f.seek(8388608+123);f.write(bytes([b[0]^1]))
+          print('Fixture: exactly one changed byte in block 1; user files untouched')
+          PY
+      - name: Start standard Android15 emulator
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/.ghcup /opt/ghc /usr/local/lib/android/sdk/ndk
+          test -e /dev/kvm
+          sudo chmod 666 /dev/kvm
+          echo y | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'emulator' 'platform-tools' 'system-images;android-35;google_apis;x86_64'
+          mkdir -p "$ANDROID_AVD_HOME"
+          echo no | "$ANDROID_HOME/cmdline-tools/latest/bin/avdmanager" create avd --force --name liquid036 --path "$ANDROID_AVD_HOME/liquid036.avd" --package 'system-images;android-35;google_apis;x86_64' --device pixel_6
+          printf 'avd.ini.encoding=UTF-8\npath=%s\ntarget=android-35\n' "$ANDROID_AVD_HOME/liquid036.avd" > "$ANDROID_AVD_HOME/liquid036.ini"
+          "$ANDROID_HOME/emulator/emulator" -avd liquid036 -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -memory 4096 -cores 2 -partition-size 12288 > "$RUNNER_TEMP/repair036-evidence/emulator.log" 2>&1 &
+          emulator_pid=$!
+          sleep 5
+          if ! kill -0 "$emulator_pid"; then cat "$RUNNER_TEMP/repair036-evidence/emulator.log"; exit 1; fi
+          echo "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
+      - name: Boot and test actual helper update plus recovery flow
+        run: |
+          timeout 120s adb wait-for-device
+          for i in $(seq 1 120); do
+            if [ "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1 ]; then break; fi
+            sleep 2
+          done
+          test "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1
+          cp android_install034/artifacts/diagnostic.apk.bin "$RUNNER_TEMP/old.apk"
+          cp android_delivery036/artifacts/repair.apk.bin "$RUNNER_TEMP/repair.apk"
+          cp android_delivery036/artifacts/smoke.apk.bin "$RUNNER_TEMP/test.apk"
+          adb install --no-incremental "$RUNNER_TEMP/old.apk" | tee "$RUNNER_TEMP/repair036-evidence/install-old.txt"
+          adb install --no-incremental -r "$RUNNER_TEMP/repair.apk" | tee "$RUNNER_TEMP/repair036-evidence/update.txt"
+          adb install --no-incremental "$RUNNER_TEMP/test.apk"
+          adb shell am start -W -n dev.liquidsense.installcheck/.MainActivity | tee "$RUNNER_TEMP/repair036-evidence/launch.txt"
+          adb root
+          adb wait-for-device
+          repair_uid=$(adb shell cmd package list packages -U dev.liquidsense.installcheck | sed -n 's/^package:dev.liquidsense.installcheck uid:\([0-9]*\).*/\1/p' | tr -d '\r')
+          test -n "$repair_uid"
+          adb push "$RUNNER_TEMP/smoke-input.zip" /data/user/0/dev.liquidsense.installcheck/cache/smoke-input.zip
+          adb shell chown "$repair_uid:$repair_uid" /data/user/0/dev.liquidsense.installcheck/cache/smoke-input.zip
+          adb shell chmod 600 /data/user/0/dev.liquidsense.installcheck/cache/smoke-input.zip
+          adb shell am instrument -w dev.liquidsense.installcheck.smoke/dev.liquidsense.installcheck.Smoke | tee "$RUNNER_TEMP/repair036-evidence/instrumentation.txt"
+          grep -q 'INSTRUMENTATION_CODE: -1' "$RUNNER_TEMP/repair036-evidence/instrumentation.txt"
+          grep -q 'APK íntegro' "$RUNNER_TEMP/repair036-evidence/instrumentation.txt"
+          adb shell screencap -p /sdcard/repair036.png
+          adb pull /sdcard/repair036.png "$RUNNER_TEMP/repair036-evidence/screen.png"
+          adb logcat -d -t 600 > "$RUNNER_TEMP/repair036-evidence/logcat.txt"
+      - name: Publish only small production helper after Android recovery passed
+        run: |
+          gh release create "$RELEASE_TAG" --target "$GITHUB_SHA" --prerelease --title 'Liquid Sense · Reparador0.2' --notes-file android_delivery036/RELEASE_NOTES.md
+          cp android_delivery036/artifacts/repair.apk.bin "$RUNNER_TEMP/LiquidSense-Reparador-0.2.apk"
+          gh release upload "$RELEASE_TAG" "$RUNNER_TEMP/LiquidSense-Reparador-0.2.apk"
+          python - <<'PY'
+          import pathlib,urllib.request,hashlib,json,os
+          manifest=json.loads(pathlib.Path('android_delivery036/reports/apk_manifest.json').read_text())
+          url='https://github.com/'+os.environ['GH_REPO']+'/releases/download/'+os.environ['RELEASE_TAG']+'/LiquidSense-Reparador-0.2.apk'
+          with urllib.request.urlopen(url,timeout=45) as r:raw=r.read()
+          assert len(raw)==manifest['bytes'] and hashlib.sha256(raw).hexdigest()==manifest['sha256']
+          out=pathlib.Path(os.environ['RUNNER_TEMP'])/'repair036-evidence/delivery.json'
+          out.write_text(json.dumps({'url':url,'bytes':len(raw),'sha256':manifest['sha256'],'full_public_download_verified':True,'phone_repair_verified':False},indent=2)+'\n')
+          PY
+      - name: Preserve actual Android recovery and delivery evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: repair036-evidence
+          path: ${{ runner.temp }}/repair036-evidence/
+          retention-days: 14
