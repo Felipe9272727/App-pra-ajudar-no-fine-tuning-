@@ -1,0 +1,40 @@
+INSTRUMENTATION_RESULT: claim=Production Android scan/HTTPS range repair/ZIP extraction/APK validation passed. File picker UI and physical phone installation not tested.
+INSTRUMENTATION_RESULT: recovery=Liquid Sense · diagnóstico 036
+Android: 15 / SDK 35
+Aparelho: Google sdk_gphone64_x86_64
+ABIs: [x86_64, arm64-v8a]
+
+ZIP ESCOLHIDO
+Bytes: 1967561424
+SHA256 do arquivo escolhido: 2441a83f596c527e591e78afa05ca12d17b3404297b2ed773db67310efd36d00
+SHA256 da cópia relida: 2441a83f596c527e591e78afa05ca12d17b3404297b2ed773db67310efd36d00
+Leitura original igual à cópia: true
+ZIP completo íntegro: false
+Blocos diferentes: 1 / 235
+Download necessário: 8388608 bytes
+Índices dos blocos diferentes (começam em 0): [1]
+
+Toque em 2 para baixar somente esses blocos via HTTPS e conferir tudo antes de extrair.
+Reparo: tamanho e SHA256 completo do ZIP conferidos.
+
+APK íntegro: CRC e SHA256 corretos, relido após gravação.
+Pacote: dev.liquidsense.chat.tools / versão 0.6.3-install-preview
+Toque em 3 para abrir a instalação normal do Android.
+
+INSTRUMENTATION_RESULT: scan=Liquid Sense · diagnóstico 036
+Android: 15 / SDK 35
+Aparelho: Google sdk_gphone64_x86_64
+ABIs: [x86_64, arm64-v8a]
+
+ZIP ESCOLHIDO
+Bytes: 1967561424
+SHA256 do arquivo escolhido: 2441a83f596c527e591e78afa05ca12d17b3404297b2ed773db67310efd36d00
+SHA256 da cópia relida: 2441a83f596c527e591e78afa05ca12d17b3404297b2ed773db67310efd36d00
+Leitura original igual à cópia: true
+ZIP completo íntegro: false
+Blocos diferentes: 1 / 235
+Download necessário: 8388608 bytes
+Índices dos blocos diferentes (começam em 0): [1]
+
+Toque em 2 para baixar somente esses blocos via HTTPS e conferir tudo antes de extrair.
+INSTRUMENTATION_CODE: -1
