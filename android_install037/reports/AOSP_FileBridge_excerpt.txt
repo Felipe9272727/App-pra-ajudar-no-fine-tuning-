@@ -1,0 +1,56 @@
+Source: https://android.googlesource.com/platform/frameworks/base/+/android-15.0.0_r1/core/java/android/os/FileBridge.java?format=TEXT
+public static class FileBridgeOutputStream extends OutputStream {
+        private final ParcelFileDescriptor mClientPfd;
+        private final FileDescriptor mClient;
+        private final ByteBuffer mTempBuffer = ByteBuffer.allocateDirect(MSG_LENGTH);
+        private final byte[] mTemp = mTempBuffer.hasArray()
+                                     ? mTempBuffer.array()
+                                     : new byte[MSG_LENGTH];
+
+        public FileBridgeOutputStream(ParcelFileDescriptor clientPfd) {
+            mClientPfd = clientPfd;
+            mClient = clientPfd.getFileDescriptor();
+        }
+
+        @Override
+        public void close() throws IOException {
+            try {
+                writeCommandAndBlock(CMD_CLOSE, "close()");
+            } finally {
+                IoUtils.closeQuietly(mClientPfd);
+            }
+        }
+
+        public void fsync() throws IOException {
+            writeCommandAndBlock(CMD_FSYNC, "fsync()");
+        }
+
+        private void writeCommandAndBlock(int cmd, String cmdString) throws IOException {
+            Memory.pokeInt(mTemp, 0, cmd, ByteOrder.BIG_ENDIAN);
+            IoBridge.write(mClient, mTemp, 0, MSG_LENGTH);
+
+            // Wait for server to ack
+            if (IoBridge.read(mClient, mTemp, 0, MSG_LENGTH) == MSG_LENGTH) {
+                if (Memory.peekInt(mTemp, 0, ByteOrder.BIG_ENDIAN) == cmd) {
+                    return;
+                }
+            }
+
+            throw new IOException("Failed to execute " + cmdString + " across bridge");
+        }
+
+        @Override
+        public void write(byte[] buffer, int byteOffset, int byteCount) throws IOException {
+            ArrayUtils.throwsIfOutOfBounds(buffer.length, byteOffset, byteCount);
+            Memory.pokeInt(mTemp, 0, CMD_WRITE, ByteOrder.BIG_ENDIAN);
+            Memory.pokeInt(mTemp, 4, byteCount, ByteOrder.BIG_ENDIAN);
+            IoBridge.write(mClient, mTemp, 0, MSG_LENGTH);
+            IoBridge.write(mClient, buffer, byteOffset, byteCount);
+        }
+
+        @Override
+        public void write(int oneByte) throws IOException {
+            Streams.writeSingleByte(this, oneByte);
+        }
+    }
+}

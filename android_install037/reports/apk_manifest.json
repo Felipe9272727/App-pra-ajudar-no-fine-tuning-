@@ -1,0 +1,12 @@
+{
+  "status": "signed_native_diagnostic_APK_built",
+  "path": "/dev/shm/liquid037/LiquidSense-Reparador-0.3.apk",
+  "bytes": 37340,
+  "sha256": "084e6b13a28df286c8f9b2cd68c3a541d4dfc31e70a132ad949c5a21d5a430ac",
+  "package": "dev.liquidsense.installcheck",
+  "versionCode": 3,
+  "no_model_assets": true,
+  "INTERNET_permission": true,
+  "reads_only_user_chosen_ZIP": true,
+  "phone_execution_verified": false
+}

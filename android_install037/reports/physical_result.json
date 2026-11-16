@@ -1,0 +1,59 @@
+{
+  "device": "Xiaomi 2312DRA50G",
+  "SDK": 35,
+  "blocks_repaired": 32,
+  "total_blocks": 235,
+  "repair_bytes": 268435456,
+  "bad_indices": [
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168
+  ],
+  "ZIP_SHA_after_repair": "passed",
+  "APK_CRC_SHA_and_reread": "passed",
+  "target_package": "dev.liquidsense.chat.tools",
+  "target_version": "0.6.3-install-preview",
+  "session_error": "write failed: EBADF (Bad file descriptor)",
+  "callbacks": [
+    {
+      "status": 3,
+      "legacy": -115,
+      "message": "INSTALL_FAILED_ABORTED: Session was abandoned"
+    },
+    {
+      "status": 4,
+      "legacy": -2,
+      "message": "INSTALL_FAILED_INVALID_APK: No packages staged"
+    }
+  ],
+  "phone_installation_succeeded": false
+}
