@@ -1,3 +1,12 @@
+# Reparador publicado e teste Android aprovado
+
+[Baixar reparador0.2 — 33KB](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-integrity036/LiquidSense-Reparador-0.2.apk). Atualiza o verificador034.
+CI43796079215/job133065078317 passou: update034→036, leitura do ZIP com um byte
+alterado, detecção de1/235blocos, recuperação HTTPS de8MiB, SHA completo do ZIP,
+extração CRC/SHA do APK, releitura e reconhecimento pelo Android.
+Download público do helper conferido; SHA256 4f2a774b6b1a4b3a13cbcbdc84014dcc1a49ce9be165e1c9a34c69cef13f85b7.
+Ainda falta teste no Xiaomi e confirmação da instalação do app principal.
+
 # Integridade036 — comparar o histórico e reparar o ZIP existente
 
 O usuário confirmou que baixou exatamente o link fornecido. O relatório não
@@ -52,7 +61,7 @@ podem ser removidos depois; não apague dados do app principal.
 ## Validação e limites
 
 Treze testes locais verificam localização de um byte alterado, recuperação parcial,
-respostas malformadas, interrupção, excesso de dados, rejeição de destino HTTP ou
+respostas malformadas, arquivo truncado, excesso de dados, rejeição de destino HTTP ou
 não autorizado e leitura CRC/SHA completa do ZIP pela API Java. `unzip -t` também
 passou. A requisição Range pelo cliente Python respeitou os bytes esperados. O
 probe Java HTTPS local recebeu connection-refused neste ambiente; está preservado,
