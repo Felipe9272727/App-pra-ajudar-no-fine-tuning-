@@ -1,0 +1,726 @@
+--------- beginning of system
+11-16 03:12:18.740   562  1491 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_FULLSCREEN_OVERRIDE
+11-16 03:12:18.740   562  1491 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE
+--------- beginning of main
+11-16 03:12:18.740   562  1491 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@f5ca687, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 03:12:18.741   562  1491 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+11-16 03:12:18.742  1224  1224 D StateManager: createAtomicAnimation - fromState: Background, toState: Normal, partial trace:
+11-16 03:12:18.742  1224  1224 D StateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.prepareToAnimate(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:22)
+11-16 03:12:18.742  1224  1224 D StateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.<init>(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:11)
+11-16 03:12:18.742  1224  1224 D StateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:735)
+11-16 03:12:18.744   562   650 D ActivityManager: sync unfroze 1640 com.google.android.googlequicksearchbox:search for 6
+11-16 03:12:18.749   562  1491 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+11-16 03:12:18.771  1224  1224 D SsBaseTemplateCard: No text view can be set up
+11-16 03:12:18.772  1224  1224 D SsBaseTemplateCard: Passed-in item info is null
+11-16 03:12:18.772  1224  1224 D SsBaseTemplateCard: Passed-in item info is null
+11-16 03:12:18.772  1224  1224 D SsBaseTemplateCard: Passed-in item info is null
+11-16 03:12:18.772  1224  1224 I SsBaseTemplateCard: Secondary card pane is null
+11-16 03:12:18.774   562  1491 V SplashScreenExceptionList: SplashScreen checking exception for package dev.liquidsense.installcheck (target sdk:35) -> false
+11-16 03:12:18.775   562  1491 I ActivityTaskManager: Add Task{2372626 #9 type=standard A=10209:dev.liquidsense.installcheck} to hidden list because adding Task{9ec4988 #10 type=standard A=10209:dev.liquidsense.installcheck}
+11-16 03:12:18.775   919   985 W Looper  : Drained
+11-16 03:12:18.776   562  1491 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=dev.liquidsense.installcheck/.MainActivity} with LAUNCH_MULTIPLE from uid 0 (BAL_ALLOW_ALLOWLISTED_UID) result code=0
+11-16 03:12:18.805  4244  4244 D nativeloader: Configuring clns-7 for other apk /system_ext/framework/SatelliteClient.jar. target_sdk_version=35, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltBugle/lib/x86_64:/product/priv-app/PrebuiltBugle/PrebuiltBugle.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.apps.messaging
+11-16 03:12:18.808   919   985 V WindowManagerShell: Transition requested (#29): android.os.BinderProxy@ad730b8 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=10 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=dev.liquidsense.installcheck/.MainActivity } baseActivity=ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity} topActivity=ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity} origActivity=null realActivity=ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity} numActivities=1 lastActiveTime=251386 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@4c7fe91} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{dddc1f6 dev.liquidsense.installcheck.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= falseisLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=1080 topActivityLetterboxHeight=2400 isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatControlState=hidden freeformCameraCompatMode=inactive}}}, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 29 }
+11-16 03:12:18.816   562   690 I ImeTracker: com.google.android.apps.nexuslauncher:6c7ec5f: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-16 03:12:18.816   562   690 I ImeTracker: com.google.android.apps.nexuslauncher:6c7ec5f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-16 03:12:18.818   562   585 W ProcessStats: Tracking association SourceState{87c0507 com.google.android.apps.nexuslauncher/10179 BTop #5605} whose proc state 2 is better than process ProcessState{796daee com.google.android.googlequicksearchbox:search/10144 pkg=com.google.android.googlequicksearchbox} proc state 14 (0 skipped)
+11-16 03:12:18.821  1224  1224 W SplitSelectStateCtor: Missing session instanceIds
+11-16 03:12:18.821  1224  1224 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+11-16 03:12:18.833  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3157 
+11-16 03:12:18.841   919   985 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=false, height=527
+11-16 03:12:18.853   919  1028 D SplashScreenView: Build android.window.SplashScreenView{afbae63 V.E...... ......ID 0,0-0,0}
+11-16 03:12:18.853   919  1028 D SplashScreenView: Icon: view: android.widget.ImageView{fdd9a60 V.ED..... ......I. 0,0-0,0 #1020504 android:id/splashscreen_icon_view} drawable: com.android.wm.shell.startingsurface.SplashscreenIconDrawableFactory$ImmobileIconDrawable@ca42b19 size: 420
+11-16 03:12:18.853   919  1028 D SplashScreenView: Branding: view: android.view.View{55e27de G.ED..... ......I. 0,0-0,0 #1020503 android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-16 03:12:18.857  1640  1679 I IPCThreadState: oneway function results for code 2 on binder at 0x79638a0a3140 will be dropped but finished with status UNKNOWN_TRANSACTION
+11-16 03:12:18.861  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 0, locked = false
+11-16 03:12:18.861  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1986 onStartInput(EditorInfo{EditorInfo{packageName=com.google.android.apps.nexuslauncher, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+11-16 03:12:18.862   562   586 W ActivityTaskManager: Unable to send transaction to client proc dev.liquidsense.installcheck: no app thread
+11-16 03:12:18.871  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 1, locked = false
+11-16 03:12:18.872  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.onStartInputInternal():2077 Reset input view per cached request.
+11-16 03:12:18.872  1640  1640 I A       : (REDACTED) Created gRPC endpoint for service %s
+11-16 03:12:18.872  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.clearInputMethodServiceData():1613 clearInputMethodServiceData for resetInputView
+11-16 03:12:18.875  4244  4244 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+11-16 03:12:18.877  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.discardAllKeyboardViewAndInputView():1818 discardAllKeyboardViewAndInputView()
+11-16 03:12:18.877  1368  1368 I KeyboardModeManager: KeyboardModeManager.setInputViewKeyboardViewHolderProvider():625 setInputView() : supportsOneHandedMode=true supportsSplitMode=true
+11-16 03:12:18.877  4244  4244 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+11-16 03:12:18.878  1368  1368 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():104 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-16 03:12:18.878  1368  1368 I KeyboardModeManager: KeyboardModeManager.setInputViewKeyboardViewHolderProvider():613 setInputView() : supportsOneHandedMode=true, supportSplitMode=true
+11-16 03:12:18.878  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.initializeInputMethodServiceData():1382 initializeInputMethodServiceData for kct{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_cache_additional_ime_defs_for_condition_change=false_cache_ime_defs_for_condition_change=false_device=phone_device_size=default_enable_flick_symbols=false_enable_more_candidates_view_for_multilingual=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_digits=true_enable_secondary_symbols=false_enable_show_foldable_layout_on_small_tablet=true_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_rtl_layout=false_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+11-16 03:12:18.889   562   842 D ConnectivityService: releasing NetworkRequest [ REQUEST id=118, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Forbidden: LOCAL_NETWORK Uid: 10144 RequestorUid: 10144 RequestorPkg: com.google.android.googlequicksearchbox UnderlyingNetworks: Null] ] (release request)
+11-16 03:12:18.890   562   842 I ConnectivityService: Update capabilities for net 101 : -FOREGROUND
+11-16 03:12:18.890   562   585 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@f5ca687, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 03:12:18.895  1368  1368 I StyledKeyboardThemeBuilder: StyledKeyboardThemeBuilder.build():132 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-gm3-light-fffefbff-ff475d92-21eef06c8465a51eb0abebf952ba428b]
+11-16 03:12:18.897   364   417 I netd    : networkSetPermissionForNetwork(101, 1) <7.00ms>
+11-16 03:12:18.906  1368  1368 I KeyboardThemeProvider: KeyboardThemeProvider.applyKeyboardTheme():27 Apply keyboard theme: theme_border_stylesheet_noshadow_gsans_pillkey_silkpopup_hover_light_phone_bottom4dp_navredesign_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-gm3-light-fffefbff-ff475d92-21eef06c8465a51eb0abebf952ba428b_port
+11-16 03:12:18.908  1368  1368 I AndroidIME: InputBundleManager.loadActiveInputBundleId():450 loadActiveInputBundleId: und-Latn-x-password, password
+11-16 03:12:18.908  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.onCreateInputView():1884 onCreateInputView()
+11-16 03:12:18.911   562   842 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:18.911   562   842 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:18.992   562  1602 D CoreBackPreview: Window{d868dff u0 Splash Screen dev.liquidsense.installcheck}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@ad5ba15, mPriority=0, mIsAnimationCallback=false}
+11-16 03:12:19.022   562   585 W ActivityManager: Slow operation: 134ms so far, now at startProcess: done creating new process record
+11-16 03:12:19.025   562   585 W ActivityManager: Slow operation: 137ms so far, now at startProcess: stepping in to startProcess
+11-16 03:12:19.027   562   585 W ActivityManager: Slow operation: 139ms so far, now at startProcess: done starting proc!
+11-16 03:12:19.039   562  1602 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:12:19.050  4244  4244 D nativeloader: InitLlndkLibrariesProduct: libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libapexsupport.so:libbinder_ndk.so:libc.so:libcgrouprc.so:libclang_rt.asan-x86_64-android.so:libcom.android.tethering.connectivity_native.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libselinux.so:libsync.so:libvendorsupport.so:libvndksupport.so:libvulkan.so
+11-16 03:12:19.050  4244  4244 D nativeloader: Configuring product-clns-8 for unbundled product apk /product/priv-app/PrebuiltBugle/PrebuiltBugle.apk. target_sdk_version=35, uses_libraries=, library_path=/product/priv-app/PrebuiltBugle/lib/x86_64:/product/priv-app/PrebuiltBugle/PrebuiltBugle.apk!/lib/x86_64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.apps.messaging:/product/lib64:/system/product/lib64
+11-16 03:12:19.051  4244  4244 D nativeloader: InitVndkspLibrariesProduct: VNDK is deprecated with product
+11-16 03:12:19.052  4244  4244 D CompatChangeReporter: Compat change id reported: 202956589; UID 10135; state: ENABLED
+11-16 03:12:19.078  4244  4244 V GraphicsEnvironment: Currently set values for:
+11-16 03:12:19.082  4244  4244 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-16 03:12:19.082  4244  4244 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-16 03:12:19.082  4244  4244 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+11-16 03:12:19.083  4244  4244 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-16 03:12:19.087  4244  4244 I MultiDex: Installing application
+11-16 03:12:19.091   365   365 D Zygote  : Forked child process 4266
+11-16 03:12:19.092   562   597 W ActivityManager: Slow operation: 66ms so far, now at startProcess: returned from zygote!
+11-16 03:12:19.092  4244  4244 I MultiDex: VM with version 2.1.0 has multidex support
+11-16 03:12:19.092  4244  4244 I MultiDex: VM has multidex support, MultiDex support library is disabled.
+11-16 03:12:19.092   562   597 W ActivityManager: Slow operation: 66ms so far, now at startProcess: done updating battery stats
+11-16 03:12:19.092   562   597 W ActivityManager: Slow operation: 66ms so far, now at startProcess: building log message
+11-16 03:12:19.092   562   597 I ActivityManager: Start proc 4266:dev.liquidsense.installcheck/u0a209 for next-top-activity {dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity}
+11-16 03:12:19.092   562   597 W ActivityManager: Slow operation: 67ms so far, now at startProcess: starting to update pids map
+11-16 03:12:19.092   562   597 W ActivityManager: Slow operation: 67ms so far, now at startProcess: done updating pids map
+11-16 03:12:19.119  4244  4244 D PrimesLoggerHolder: Primes instant initialization
+11-16 03:12:19.209  4266  4266 I se.installcheck: Using CollectorTypeCMC GC.
+11-16 03:12:19.210  4266  4266 W se.installcheck: Unexpected CPU variant for x86: x86_64.
+11-16 03:12:19.210  4266  4266 W se.installcheck: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+11-16 03:12:19.212  4266  4266 E se.installcheck: Not starting debugger since process cannot load the jdwp agent.
+11-16 03:12:19.215  4266  4266 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-16 03:12:19.228   398   465 I RanchuHwc: logCompositionFallbackIfChanged: layer 17 CompositionType fallback from 2 to 1
+11-16 03:12:19.228   398   465 I RanchuHwc: logCompositionFallbackIfChanged: layer 18 CompositionType fallback from 2 to 1
+11-16 03:12:19.308  4244  4244 I dfmd    : SslGuard completed installation.
+11-16 03:12:19.329  1224  1224 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+11-16 03:12:19.333  1224  1703 D EGL_emulation: app_time_stats: avg=182287.73ms min=182287.73ms max=182287.73ms count=1
+11-16 03:12:19.340   919   985 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#28) android.os.BinderProxy@9603d2b@0
+11-16 03:12:19.341   562   582 V WindowManager: Finish Transition (#28): created at 11-16 03:12:18.396 collect-started=0.056ms request-sent=0.3ms started=18.537ms ready=178.279ms sent=193.138ms finished=944.563ms
+11-16 03:12:19.342  1368  1368 I KeyboardModeManager: KeyboardModeManager.setInputViewKeyboardViewHolderProvider():625 setInputView() : supportsOneHandedMode=true supportsSplitMode=true
+11-16 03:12:19.342  1368  1368 I AndroidIME: KeyboardViewManager.updateKeyboardBackgroundFrameVisibility():314 Set background frame visibility. old:8, new:8
+11-16 03:12:19.343  1368  1368 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():104 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-16 03:12:19.343  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.343  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.343  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.348   562  1602 E IPCThreadState: Binder transaction failure. id: 367019, BR_*: 29189, error: -22 (Invalid argument)
+11-16 03:12:19.348   562  1602 W ActivityManager: pid 562 system sent binder code 7 with flags 1 to frozen apps and got error -32
+--------- beginning of kernel
+11-16 03:12:19.500     0     0 I binder  : 1602:562 cannot find target node
+11-16 03:12:19.504     0     0 I binder  : 562:1602 transaction async to 0:0 failed 367019/29189/-22, size 64-0 line 3344
+11-16 03:12:19.371   562  1602 W WindowManager: Exception thrown during dispatchAppVisibility Window{9f7880b u0 dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity EXITING}
+11-16 03:12:19.371   562  1602 W WindowManager: android.os.DeadObjectException
+11-16 03:12:19.371   562  1602 W WindowManager: 	at android.os.BinderProxy.transactNative(Native Method)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at android.os.BinderProxy.transact(BinderProxy.java:586)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at android.view.IWindow$Stub$Proxy.dispatchAppVisibility(IWindow.java:553)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.WindowState.sendAppVisibilityToClients(WindowState.java:3253)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.WindowContainer.sendAppVisibilityToClients(WindowContainer.java:1289)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.WindowToken.setClientVisible(WindowToken.java:403)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.ActivityRecord.setClientVisible(ActivityRecord.java:7166)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.ActivityRecord.postApplyAnimation(ActivityRecord.java:5881)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.ActivityRecord.commitVisibility(ActivityRecord.java:5823)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.Transition.finishTransition(Transition.java:1286)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.TransitionController.finishTransition(TransitionController.java:937)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.finishTransition(WindowOrganizerController.java:494)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at android.window.IWindowOrganizerController$Stub.onTransact(IWindowOrganizerController.java:289)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.onTransact(WindowOrganizerController.java:204)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at android.os.Binder.execTransactInternal(Binder.java:1505)
+11-16 03:12:19.371   562  1602 W WindowManager: 	at android.os.Binder.execTransact(Binder.java:1444)
+11-16 03:12:19.373   562  1602 W Process : Unable to open /proc/3121/status
+11-16 03:12:19.387  4244  4244 I Bugle   : BugleApplicationBase: Bugle version: messages.android_20240528_00_rc01_alldpi.x86_64.phone , Bugle version code: 235003880
+11-16 03:12:19.391  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.407  4244  4244 I Bugle   : DarkModeManager: setDarkMode: -1
+11-16 03:12:19.410  1368  1368 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():104 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-16 03:12:19.411  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.417   919   985 V WindowManagerShell: Track 0 became idle
+11-16 03:12:19.417  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.417  1368  1368 I KeyboardModeManager: KeyboardModeManager.setInputViewKeyboardViewHolderProvider():613 setInputView() : supportsOneHandedMode=true, supportSplitMode=true
+11-16 03:12:19.418   919   985 W Looper  : Slow dispatch took 78ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.RemoteTransitionHandler$1$$ExternalSyntheticLambda0@1295124 m=0
+11-16 03:12:19.418   919   985 W Looper  : Slow delivery took 30ms wmshell.main h=android.os.Handler c=com.android.wm.shell.pip.PinnedStackListenerForwarder$PinnedTaskListenerImpl$$ExternalSyntheticLambda1@b28b48d m=0
+11-16 03:12:19.419   562   650 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:12:19.422   562   650 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:12:19.432   919   985 W Looper  : Drained
+11-16 03:12:19.444  1224  1224 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=10, baseIntent=Intent { flg=0x10000000 cmp=dev.liquidsense.installcheck/.MainActivity }
+11-16 03:12:19.453  1368  1368 I KeyboardModeManager: KeyboardModeManager.setInputViewKeyboardViewHolderProvider():625 setInputView() : supportsOneHandedMode=true supportsSplitMode=true
+11-16 03:12:19.457  1368  1368 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():104 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-16 03:12:19.458  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.458  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.458  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.458  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.458  1368  1368 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():104 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-16 03:12:19.458  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.459  1368  1368 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():45 leave 281 height for app when ime window height:2272, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1875
+11-16 03:12:19.459  1368  1368 I KeyboardModeManager: KeyboardModeManager.setInputViewKeyboardViewHolderProvider():613 setInputView() : supportsOneHandedMode=true, supportSplitMode=true
+11-16 03:12:19.459  1368  1368 I AndroidIME: InputBundleManager.loadActiveInputBundleId():450 loadActiveInputBundleId: und-Latn-x-password, password
+11-16 03:12:19.461   562   652 W PackageConfigPersister: App-specific configuration not found for packageName: com.google.android.apps.nexuslauncher and userId: 0
+11-16 03:12:19.473   919  2214 V WindowManagerShell: onTransitionReady(transaction=2413771621096)
+11-16 03:12:19.474   919   985 V WindowManagerShell: onTransitionReady (#29) android.os.BinderProxy@ad730b8: {id=29 t=OPEN f=0x0 trk=1 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@6f90c89} m=OPEN f=NONE leash=Surface(name=Task=10)/@0x9660642 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@4d2448e} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xf64f653 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+11-16 03:12:19.474   919   985 V WindowManagerShell: Playing animation for (#29) android.os.BinderProxy@ad730b8@1
+11-16 03:12:19.474   919   985 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@6ff4b7e
+11-16 03:12:19.474   562   582 V WindowManager: Sent Transition (#29) createdAt=11-16 03:12:18.753 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=10 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=dev.liquidsense.installcheck/.MainActivity } baseActivity=ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity} topActivity=ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity} origActivity=null realActivity=ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity} numActivities=1 lastActiveTime=251386 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{3f74bfc Task{9ec4988 #10 type=standard A=10209:dev.liquidsense.installcheck}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{a5a5285 dev.liquidsense.installcheck.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= falseisLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=1080 topActivityLetterboxHeight=2400 isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatControlState=hidden freeformCameraCompatMode=inactive}}}, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 29 }
+11-16 03:12:19.474   919   985 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@7b7d92c
+11-16 03:12:19.474   919   985 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@17b0ff5
+11-16 03:12:19.474   919   985 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@cc0a18a
+11-16 03:12:19.474   919   985 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@9f903fb
+11-16 03:12:19.474   919   985 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+11-16 03:12:19.474   919   985 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@d5f5c18
+11-16 03:12:19.474   919   985 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@239b671
+11-16 03:12:19.475   919   985 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=29 t=OPEN f=0x0 trk=1 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@6f90c89} m=OPEN f=NONE leash=Surface(name=Task=10)/@0x9660642 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@4d2448e} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xf64f653 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+11-16 03:12:19.475   562   582 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+11-16 03:12:19.475   562   582 V WindowManager:     info={id=29 t=OPEN f=0x0 trk=1 r=[0@Point(0, 0)] c=[
+11-16 03:12:19.475   562   582 V WindowManager:         {WCT{RemoteToken{3f74bfc Task{9ec4988 #10 type=standard A=10209:dev.liquidsense.installcheck}}} m=OPEN f=NONE leash=Surface(name=Task=10)/@0x65aadce sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},
+11-16 03:12:19.475   562   582 V WindowManager:         {WCT{RemoteToken{69cff1a Task{ac90294 #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x8214896 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}
+11-16 03:12:19.475   562   582 V WindowManager:     ]}
+11-16 03:12:19.475   919   985 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[OPEN,TO_FRONT] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@aed26a3, appThread = android.app.IApplicationThread$Stub$Proxy@dd14da0, debugName = OverlaySwipeBack }}
+11-16 03:12:19.475   919   985 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@184fd59, appThread = android.app.IApplicationThread$Stub$Proxy@6a72d1e, debugName = LauncherToDream }}
+11-16 03:12:19.476   919   985 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@82189ff, appThread = android.app.IApplicationThread$Stub$Proxy@88da3cc, debugName = QuickstepLaunchHome }}
+11-16 03:12:19.476   919   985 V WindowManagerShell:  Delegate animation for (#29) to null
+11-16 03:12:19.476   919   985 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultTransitionHandler@599630
+11-16 03:12:19.476   919   985 V WindowManagerShell: start default transition animation, info = {id=29 t=OPEN f=0x0 trk=1 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@6f90c89} m=OPEN f=NONE leash=Surface(name=Task=10)/@0x9660642 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@4d2448e} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xf64f653 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+11-16 03:12:19.477   562   650 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:12:19.481   364   417 I netd    : tetherGetStats() -> {[]} <0.47ms>
+11-16 03:12:19.559   919   985 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@35ce845 animAttr=0x13 type=OPEN isEntrance=false
+11-16 03:12:19.566  4266  4266 W se.installcheck: ClassLoaderContext classpath size mismatch. expected=1, found=0 (PCL[/data/app/~~g7dJL_YFPes0dUnTgM039A==/dev.liquidsense.installcheck.smoke-G9kZn11cWxbtP133yPeBrg==/base.apk*1635359319] | PCL[])
+11-16 03:12:19.568  4266  4266 I se.installcheck: Failed to add image file: Class loader contexts don't match: PCL[/data/app/~~g7dJL_YFPes0dUnTgM039A==/dev.liquidsense.installcheck.smoke-G9kZn11cWxbtP133yPeBrg==/base.apk*1635359319]
+11-16 03:12:19.572  4266  4266 D nativeloader: Configuring clns-7 for other apk /data/app/~~-AkMSDM_moV-sDyL3KFYCg==/dev.liquidsense.installcheck-SCASS7m7Dbq47q3aKI3Lcg==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~-AkMSDM_moV-sDyL3KFYCg==/dev.liquidsense.installcheck-SCASS7m7Dbq47q3aKI3Lcg==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/dev.liquidsense.installcheck
+11-16 03:12:19.573  4266  4266 D CompatChangeReporter: Compat change id reported: 202956589; UID 10209; state: ENABLED
+11-16 03:12:19.575  1640  1829 W A       : CompleteServer request has failed and can't show offline suggestions.
+11-16 03:12:19.575  1640  1829 W A       : java.util.NoSuchElementException: Expected at least one element
+11-16 03:12:19.575  1640  1829 W A       : 	at kotlinx.coroutines.b.cs.a(PG:104)
+11-16 03:12:19.575  1640  1829 W A       : 	at kotlinx.coroutines.b.ch.jd(PG:11)
+11-16 03:12:19.575  1640  1829 W A       : 	at n.c.b.a.a.q(PG:12)
+11-16 03:12:19.575  1640  1829 W A       : 	at kotlinx.coroutines.d.am.x(PG:7)
+11-16 03:12:19.575  1640  1829 W A       : 	at kotlinx.coroutines.a.q(PG:14)
+11-16 03:12:19.575  1640  1829 W A       : 	at n.c.b.a.a.q(PG:36)
+11-16 03:12:19.575  1640  1829 W A       : 	at kotlinx.coroutines.bh.run(PG:112)
+11-16 03:12:19.575  1640  1829 W A       : 	at com.google.apps.tiktok.f.y.run(PG:3)
+11-16 03:12:19.575  1640  1829 W A       : 	at com.google.apps.tiktok.tracing.fl.run(PG:24)
+11-16 03:12:19.575  1640  1829 W A       : 	at com.google.android.libraries.k.x.run(PG:3)
+11-16 03:12:19.575  1640  1829 W A       : 	at com.google.common.n.c.c.run(PG:50)
+11-16 03:12:19.575  1640  1829 W A       : 	at com.google.android.libraries.k.e.run(PG:8)
+11-16 03:12:19.575  1640  1829 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+11-16 03:12:19.575  1640  1829 W A       : 	at com.google.android.libraries.k.d.b.run(PG:74)
+11-16 03:12:19.581  1640  1829 W A       : #getSuggestions failed
+11-16 03:12:19.581  1640  1829 W A       : java.util.NoSuchElementException: Expected at least one element
+11-16 03:12:19.581  1640  1829 W A       : 	at kotlinx.coroutines.b.cs.a(PG:104)
+11-16 03:12:19.581  1640  1829 W A       : 	at kotlinx.coroutines.b.ch.jd(PG:11)
+11-16 03:12:19.581  1640  1829 W A       : 	at n.c.b.a.a.q(PG:12)
+11-16 03:12:19.581  1640  1829 W A       : 	at kotlinx.coroutines.d.am.x(PG:7)
+11-16 03:12:19.581  1640  1829 W A       : 	at kotlinx.coroutines.a.q(PG:14)
+11-16 03:12:19.581  1640  1829 W A       : 	at n.c.b.a.a.q(PG:36)
+11-16 03:12:19.581  1640  1829 W A       : 	at kotlinx.coroutines.bh.run(PG:112)
+11-16 03:12:19.581  1640  1829 W A       : 	at com.google.apps.tiktok.f.y.run(PG:3)
+11-16 03:12:19.581  1640  1829 W A       : 	at com.google.apps.tiktok.tracing.fl.run(PG:24)
+11-16 03:12:19.581  1640  1829 W A       : 	at com.google.android.libraries.k.x.run(PG:3)
+11-16 03:12:19.581  1640  1829 W A       : 	at com.google.common.n.c.c.run(PG:50)
+11-16 03:12:19.581  1640  1829 W A       : 	at com.google.android.libraries.k.e.run(PG:8)
+11-16 03:12:19.581  1640  1829 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+11-16 03:12:19.581  1640  1829 W A       : 	at com.google.android.libraries.k.d.b.run(PG:74)
+11-16 03:12:19.585  4244  4244 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+11-16 03:12:19.585  4244  4244 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+11-16 03:12:19.589   919   985 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@e68c3c1 animAttr=0x12 type=OPEN isEntrance=true
+11-16 03:12:19.592   919   985 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@599630
+11-16 03:12:19.592   919   985 W Looper  : Slow dispatch took 118ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0@4b87aa7 m=0
+11-16 03:12:19.592   919   985 W Looper  : Slow delivery took 113ms wmshell.main h=android.os.Handler c=android.window.TaskOrganizer$1$$ExternalSyntheticLambda7@c154b54 m=0
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: Unable to get suggestions from AGA
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: io.grpc.StatusRuntimeException: UNKNOWN
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: 	at k3.e.a(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:77)
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: 	at i3.l.b(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:43)
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: 	at i3.l.a(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:27)
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: 	at i3.z.run(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:7)
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: 	at i3.m2.run(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:19)
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-16 03:12:19.593  1224  4288 E OneSearchSuggestProvider: 	at java.lang.Thread.run(Thread.java:1012)
+11-16 03:12:19.606  1224  1224 I TopTaskTracker: onTaskRemoved: taskId=9
+11-16 03:12:19.606  1224  1224 I TopTaskTracker: onTaskRemoved: taskId=9
+11-16 03:12:19.607   919  1017 W Looper  : Drained
+11-16 03:12:19.607  4266  4266 V GraphicsEnvironment: Currently set values for:
+11-16 03:12:19.613  4266  4266 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-16 03:12:19.613  4266  4266 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-16 03:12:19.613  4266  4266 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+11-16 03:12:19.613  4266  4266 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-16 03:12:19.624   562  1602 D FileUtils: Rounded bytes from 4110745600 to 8000000000
+11-16 03:12:19.626  4244  4291 I Phlogger: Unable to retrieve flag snapshot for com.google.android.libraries.performance.primes#com.google.android.apps.messaging, using defaults.
+11-16 03:12:19.637   919   985 W Looper  : Drained
+11-16 03:12:19.641   562   650 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ENABLE_FAKE_FOCUS
+11-16 03:12:19.641   562   650 D CompatChangeReporter: Compat change id reported: 324203798; UID 10209; state: ENABLED
+11-16 03:12:19.672  1224  1703 D EGL_emulation: app_time_stats: avg=136.65ms min=23.92ms max=448.22ms count=8
+11-16 03:12:19.681  1224  1224 D SearchTargetUtil: query= size=0
+11-16 03:12:19.703   562   842 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:19.703   562   842 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:19.705   562   842 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:19.705   562   842 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:19.705   562   842 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:19.765   919  1017 W Looper  : Slow delivery took 36ms wmshell.anim h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver@e061f99 m=0
+11-16 03:12:19.779  4266  4266 D CompatChangeReporter: Compat change id reported: 279646685; UID 10209; state: ENABLED
+11-16 03:12:19.780   919  1017 W Looper  : Drained
+11-16 03:12:19.873  1178  1190 I ChimeraSrvcProxy: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl
+11-16 03:12:19.873  1178  1190 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+11-16 03:12:19.897   919   985 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#29) android.os.BinderProxy@ad730b8@1
+11-16 03:12:19.899   562   582 V WindowManager: Finish Transition (#29): created at 11-16 03:12:18.753 collect-started=0.031ms request-sent=22.224ms started=63.945ms ready=712.5ms sent=717.524ms finished=1145.977ms
+11-16 03:12:19.905   919   985 V WindowManagerShell: Track 1 became idle
+11-16 03:12:19.906   919   985 V WindowManagerShell: All active transition animations finished
+11-16 03:12:19.965   435   435 E BpTransactionCompletedListener: Failed to transact (-32)
+11-16 03:12:20.100  4266  4266 D CompatChangeReporter: Compat change id reported: 63938206; UID 10209; state: ENABLED
+11-16 03:12:20.197  1224  1224 D VRI[NexusLauncherActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-16 03:12:20.205  1224  1224 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=7}
+11-16 03:12:20.207  4244  4283 D CompatChangeReporter: Compat change id reported: 279646685; UID 10135; state: ENABLED
+11-16 03:12:20.207  4244  4283 I Bugle   : Initializing EmojiCompat
+11-16 03:12:20.224  4244  4292 I Bugle   : DatabaseHelperBasic: sqlite version is 3.44.3
+11-16 03:12:20.237   919  1062 D EGL_emulation: app_time_stats: avg=4689.34ms min=4689.34ms max=4689.34ms count=1
+11-16 03:12:20.242  1178  1190 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-16 03:12:20.242  4244  4283 I CarrierServices: Initializing Carrier Services Library. [CONTEXT thread_id=53 ]
+11-16 03:12:20.253  1178  1190 I FontLog : Query [Noto Color Emoji Compat] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-16 03:12:20.253  1178  2131 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-16 03:12:20.253  1178  2131 I FontLog : Query [Noto Color Emoji Compat] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-16 03:12:20.274  1178  1190 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-16 03:12:20.274  1178  2131 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-16 03:12:20.277  1178  1190 I FontLog : Pulling font file for id = 7, cache size = 8 [CONTEXT service_id=132 ]
+11-16 03:12:20.283   562  1602 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:12:20.286  1178  1190 I FontLog : Pulling font file for id = 8, cache size = 8 [CONTEXT service_id=132 ]
+11-16 03:12:20.290  4266  4266 W HWUI    : Unknown dataspace 0
+11-16 03:12:20.292   562  1602 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:12:20.299   562   652 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:12:20.309  4244  4292 D MddListenableWorkerFactory: createWorker for class: com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-16 03:12:20.313  1178  1190 I FontLog : Pulling font file for id = 7, cache size = 8 [CONTEXT service_id=132 ]
+11-16 03:12:20.332   562  1602 D CoreBackPreview: Window{9bc7263 u0 dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@79c8f19, mPriority=0, mIsAnimationCallback=false}
+11-16 03:12:20.351  1178  2253 I FontLog : Pulling font file for id = 8, cache size = 8 [CONTEXT service_id=132 ]
+11-16 03:12:20.358  4244  4291 I Bugle   : DatabaseHelperBasic: sqlite version is 3.44.3
+11-16 03:12:20.360  1224  1703 D EGL_emulation: app_time_stats: avg=159.38ms min=6.51ms max=626.02ms count=6
+11-16 03:12:20.467  4244  4284 D CompatChangeReporter: Compat change id reported: 312399441; UID 10135; state: ENABLED
+11-16 03:12:20.481  4266  4294 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+11-16 03:12:20.482  4266  4294 I EGL_emulation: Opening libGLESv2_emulation.so
+11-16 03:12:20.498  4244  4283 I CarrierServices: Initializing Carrier Services Logging. [CONTEXT thread_id=53 ]
+11-16 03:12:20.517  4266  4294 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-16 03:12:20.521  4244  4292 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+11-16 03:12:20.531  4244  4304 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+11-16 03:12:20.537  4244  4291 I BugleDataModel: HeavyWorkQueueEmptyObserver: Starting observation of WorkQueueWorkManagerTable
+11-16 03:12:20.703     0     0 I servicemanager: Caller(pid=4266,uid=10209,sid=u:r:untrusted_app:s0:c209,c256,c512,c768) Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest. No alternative instances declared in VINTF.
+11-16 03:12:20.557   154   154 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-16 03:12:20.558  4266  4294 I Gralloc4: mapper 4.x is not supported
+11-16 03:12:20.589  4244  4283 I LogSaver: LogSaver new instance with filename: carrier_services
+11-16 03:12:20.601  4244  4283 I BugleBackup: Registering preference change listener for "bugle".
+11-16 03:12:20.615  4244  4291 I BugleRcs: couldn't get package info for carrier services package with name com.google.android.ims
+11-16 03:12:20.615  4244  4291 I BugleRcs: android.content.pm.PackageManager$NameNotFoundException: com.google.android.ims
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at android.app.ApplicationPackageManager.getPackageInfoAsUser(ApplicationPackageManager.java:273)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:233)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:227)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at bvlg.<init>(PG:48)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at bvlg.a(PG:10)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at bhqn.d(PG:27)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at aguf.run(PG:18)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at dkqk.run(PG:21)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at dqsy.a(PG:3)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at dqrv.run(PG:21)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at dqsz.run(PG:5)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at crzm.run(PG:3)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at cryq.run(PG:6)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at java.lang.Thread.run(Thread.java:1012)
+11-16 03:12:20.615  4244  4291 I BugleRcs: 	at csaw.run(PG:64)
+11-16 03:12:20.626  4244  4304 I SimStateUpdateHandler: Handling SimStateUpdate. Request for 3 work type received.
+11-16 03:12:20.627  4244  4304 I SimStateUpdateHandler: Handling update phone SIM state.
+11-16 03:12:20.627  4244  4304 I BugleSimStateTracker: Updating PhoneSimState
+11-16 03:12:20.633   562   652 D CompatChangeReporter: Compat change id reported: 297989574; UID 10135; state: ENABLED
+11-16 03:12:20.653  4244  4304 I Bugle   : TelephonyManagerFactory: Returning per-subscription TelephonyManager (>= N) subscription{id:1}
+11-16 03:12:20.655  4244  4304 D CompatChangeReporter: Compat change id reported: 330583731; UID 10135; state: ENABLED
+11-16 03:12:20.678  4244  4304 I BugleSimStateTracker: Is carrier config for identified carrier: true
+11-16 03:12:20.696  4244  4304 W SharedPreferencesSimSta: SharedPreferencesSimStateStore: can't get simId for null SimSubscriptionInfo when setting PhoneDefaults.
+11-16 03:12:20.696  4244  4304 W SharedPreferencesSimSta: SharedPreferencesSimStateStore: can't get simId for null SimSubscriptionInfo when setting PhoneDefaults.
+11-16 03:12:20.696  4244  4304 W SharedPreferencesSimSta: SharedPreferencesSimStateStore: can't get simId for null SimSubscriptionInfo when setting PhoneDefaults.
+11-16 03:12:20.696  4244  4304 W SharedPreferencesSimSta: SharedPreferencesSimStateStore: can't get simId for null SimSubscriptionInfo when setting PhoneDefaults.
+11-16 03:12:20.699  1178  3870 W BpBinder: Large outgoing transaction of 406536 bytes, interface descriptor , code 4
+11-16 03:12:20.716  4244  4291 D CompatChangeReporter: Compat change id reported: 303742236; UID 10135; state: ENABLED
+11-16 03:12:20.719  4244  4291 I Bugle   : TelephonySyncManager: setting full sync. inProgress: true, before: true
+11-16 03:12:20.720  4244  4304 I BugleSimStateTracker: Looking up Fi through package names.
+11-16 03:12:20.732  4244  4304 I BugleSimStateTracker: default call SIM: redacted-pii:sim_id[chars:20,last3:897], default sms SIM redacted-pii:sim_id[chars:20,last3:897]. default data SIM redacted-pii:sim_id[chars:20,last3:897].
+11-16 03:12:20.745  4244  4291 I Bugle   : TelephonySyncManager: Starting full sync, reason: 2
+11-16 03:12:20.755  4244  4292 I Phlogger: Unable to retrieve flag snapshot for com.google.android.libraries.consentverifier#com.google.android.apps.messaging, using defaults.
+11-16 03:12:20.806  4244  4304 I BugleSimStateTracker: Looking up Fi through package names.
+11-16 03:12:20.821  4244  4304 W SharedPreferencesSimSta: SharedPreferencesSimStateStore: No loggable guid found for sim id
+11-16 03:12:20.837  4244  4272 I BugleDataModel: ForwardSyncBatchExecutor: Starting batch for messages. lowerBoundTimeMillis: -1, upperBoundTimeMillis: 1794798580324, maxMessagesToUpdate: 80, maxMessagesToScan: 4000, batchId: d270d3a7-ce33-4d7b-a079-5748ca2fd090, syncId: 02ec0ff2-d743-44d5-bab1-636fe48716ed, bugle_conversation_matching: true, firstFullSyncStartTimestamp: 1794798580324, syncReason: 7
+11-16 03:12:20.839  4244  4304 I BugleSimStateTracker: allNewlyBuiltSimSubscriptionInfos (simId, loggableGuid): [(redacted-pii:sim_id[chars:20,last3:897], d1c70521-b7b3-47bf-8495-825f2d467830)]
+11-16 03:12:20.840  4244  4304 I BugleSimStateTracker: Storing updatedSimSubscriptionInfos: [(redacted-pii:sim_id[chars:20,last3:897], d1c70521-b7b3-47bf-8495-825f2d467830)]
+11-16 03:12:20.843  4244  4272 W BugleDataModel: ForwardSyncBatchExecutor: Ignoring orphan sync batch for messages from -1 to 1794798580324, batchId: d270d3a7-ce33-4d7b-a079-5748ca2fd090, syncId: 02ec0ff2-d743-44d5-bab1-636fe48716ed
+11-16 03:12:20.846  4244  4304 I BugleSimStateTracker: Default call SIM changed. Broadcasting SIM SWAP. Old simId redacted-pii:sim_id[chars:0,last3:], new simId: redacted-pii:sim_id[chars:20,last3:897]
+11-16 03:12:20.853  4244  4268 I BugleDataModel: ForwardSyncBatchExecutor: Starting batch for messages. lowerBoundTimeMillis: -1, upperBoundTimeMillis: 1794798739745, maxMessagesToUpdate: 80, maxMessagesToScan: 4000, batchId: e41cceb5-6905-4bef-8766-8709efb1ad9d, syncId: 02ec0ff2-d743-44d5-bab1-636fe48716ed, bugle_conversation_matching: true, firstFullSyncStartTimestamp: 1794798580324, syncReason: 2
+11-16 03:12:20.856   562  1602 W ActivityManager: Background start not allowed: service Intent { cmp=com.google.android.apps.messaging/com.google.apps.tiktok.concurrent.AndroidFuturesService (has extras) } to com.google.android.apps.messaging/com.google.apps.tiktok.concurrent.AndroidFuturesService from pid=4244 uid=10135 pkg=com.google.android.apps.messaging startFg?=false
+11-16 03:12:20.857  4244  4285 I BugleWorkQueue: WorkQueueLocalExecutor: unable to attach service -- probably in background already
+11-16 03:12:20.863  4244  4292 I BugleRcsProvisioning: BugleSystemBindingManager: onBuglePhenotypeFlagChanged
+11-16 03:12:20.872   562  1601 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-16 03:12:20.872   562  1601 D PackageManager: Clear ephemeral installer activity
+11-16 03:12:20.877  4244  4304 I BugleSimStateTracker: Default SMS SIM changed. Old simId redacted-pii:sim_id[chars:0,last3:], new simId: redacted-pii:sim_id[chars:20,last3:897]
+11-16 03:12:20.884  4244  4272 I BugleRcsEngine: SystemBinding enabled: true [CONTEXT log_prefix="SystemBindingManager" thread_id=51 ]
+11-16 03:12:20.889  4244  4285 I BugleRcsEngine: System Binding updated [CONTEXT thread_id=55 ]
+11-16 03:12:20.908  4244  4292 I BugleTransport: onBuglePhenotypeFlagChanged: kicking off updateActiveTransport
+11-16 03:12:20.910  4244  4304 I BugleSimStateTracker: Broadcasting SIM_LOADED event for newly loaded SIMs: [(redacted-pii:sim_id[chars:20,last3:897], d1c70521-b7b3-47bf-8495-825f2d467830)]
+11-16 03:12:20.919  4244  4290 I BugleRcsEngine: RCS Configuration storage in Bugle is disabled by p/h flag, using ProvisioningEngineStateCacheUtil.getProvisioningConfigurationForGivenSimIfExist() [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=57 ]
+11-16 03:12:20.921  4244  4291 D CompatChangeReporter: Compat change id reported: 311402873; UID 10135; state: ENABLED
+11-16 03:12:20.921  4244  4291 D CompatChangeReporter: Compat change id reported: 323349338; UID 10135; state: ENABLED
+11-16 03:12:20.922   562  1601 D CompatChangeReporter: Compat change id reported: 311402873; UID 10135; state: ENABLED
+11-16 03:12:20.922   562  1601 D CompatChangeReporter: Compat change id reported: 323349338; UID 10135; state: ENABLED
+11-16 03:12:20.928  4244  4284 I BugleRcsEngine: RCS Configuration storage in Bugle is disabled by p/h flag, using ProvisioningEngineStateCacheUtil.getProvisioningConfigurationForGivenSimIfExist() [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=54 ]
+11-16 03:12:20.929   562   652 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-16 03:12:20.929   562   652 D PackageManager: Clear ephemeral installer activity
+11-16 03:12:20.941  4266  4266 I Choreographer: Skipped 35 frames!  The application may be doing too much work on its main thread.
+11-16 03:12:20.943  4244  4250 W .apps.messaging: Missing inline cache for int dxcg.a(java.lang.Object)
+11-16 03:12:20.957  4244  4290 W BugleAction: Failed to get msisdn from Bugle
+11-16 03:12:20.973  4266  4281 I HWUI    : Davey! duration=735ms; Flags=1, FrameTimelineVsyncId=42020, IntendedVsync=252822696494, Vsync=252939363156, InputEventId=0, HandleInputStart=252939735830, AnimationStart=252939736531, PerformTraversalsStart=252939739749, DrawStart=253198124727, FrameDeadline=252839363160, FrameInterval=252939673829, FrameStartTime=16666666, SyncQueued=253205527721, SyncStart=253206995740, IssueDrawCommandsStart=253211812670, SwapBuffers=253429673263, FrameCompleted=253559936035, DequeueBufferDuration=3561, QueueBufferDuration=201662, GpuCompleted=253559936035, SwapBuffersCompleted=253551874746, DisplayPresentTime=72904454231359566, CommandSubmissionCompleted=253429673263, 
+11-16 03:12:21.006  1224  1224 D BaseDepthController: setSurface:
+11-16 03:12:21.006  1224  1224 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-16 03:12:21.006  1224  1224 D BaseDepthController: 	mSurface: null
+11-16 03:12:21.006  1224  1224 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+11-16 03:12:21.007  4244  4290 I Bugle   : RcsAvailabilityUtilForProvisioningEngineV2: updateAvailabilityAsync, hint: NO_HINT
+11-16 03:12:21.009   364   417 I netd    : tetherGetStats() -> {[]} <3.78ms>
+11-16 03:12:21.015  1224  1224 D StateManager: goToState - fromState: Normal, toState: Normal, partial trace:
+11-16 03:12:21.015  1224  1224 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:4)
+11-16 03:12:21.015  1224  1224 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:1)
+11-16 03:12:21.015  1224  1224 D StateManager: 	at com.android.launcher3.statemanager.StatefulActivity.onStop(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:34)
+11-16 03:12:21.015  1224  1224 D StatsLog: LAUNCHER_ONSTOP
+11-16 03:12:21.019  4244  4290 I RcsAvailabilityUpdaterL: updateAvailabilityAsync: scheduling updateRcsAvailability call. Hint: NO_HINT, enableWelcomePopupWithoutGoogleTos: false, reshowSuccessPopup: false
+11-16 03:12:21.024   562  1601 I AppWidgetServiceImpl: setAppWidgetHidden() 0
+11-16 03:12:21.024   562   582 I ActivityTaskManager: Displayed dev.liquidsense.installcheck/.MainActivity for user 0: +2s207ms
+11-16 03:12:21.034  1224  1224 D StatsLog: LAUNCHER_GOOGLE_SEARCH_RESTORE_LIST_SIZE_AFTER_ACTIVITY_RESTART
+11-16 03:12:21.035  4244  4284 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+11-16 03:12:21.089   562  1601 W ContentProviderHelper: Slow operation: 54ms so far, now at getContentProviderImpl: done!
+11-16 03:12:21.154  1224  2014 D OneSearchSuggestProvider: Shut down the binder channel
+11-16 03:12:21.155  1224  1248 I IPCThreadState: oneway function results for code 2 on binder at 0x79638a07e510 will be dropped but finished with status UNKNOWN_TRANSACTION
+11-16 03:12:21.173  4244  4304 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=fbbe264b-3db2-4d64-a570-abc4a9e52990, tags={ com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,sim_state_update_queue-WORK_TYPE_UPDATE_PHONE_SIMS_STATE } ]
+11-16 03:12:21.193   919   985 W Looper  : Slow delivery took 48ms wmshell.main h=android.os.Handler c=com.android.wm.shell.pip.PinnedStackListenerForwarder$PinnedTaskListenerImpl$$ExternalSyntheticLambda1@bfeb0ec m=0
+11-16 03:12:21.207  4244  4316 D MddListenableWorkerFactory: createWorker for class: com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-16 03:12:21.213   562   690 I ImeTracker: dev.liquidsense.installcheck:7daf2375: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-16 03:12:21.254  4244  4290 W Bugle   : Bugle: SubscriptionMetadataUtils get: unexpected subId = -2, replacing with -1
+11-16 03:12:21.256  1084  1269 V MmsProvider: accessRestricted=false
+11-16 03:12:21.278  4244  4290 I Bugle   : TelephonyManagerFactory: Returning per-subscription TelephonyManager (>= N) subscription{id:-1}
+11-16 03:12:21.289  1224  1224 D InsetsController: hide(ime(), fromIme=true)
+11-16 03:12:21.289  1224  1224 I ImeTracker: dev.liquidsense.installcheck:7daf2375: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+11-16 03:12:21.338  4244  4290 W Bugle   : Bugle: SubscriptionMetadataUtils get: unexpected subId = -2, replacing with -1
+11-16 03:12:21.351  4244  4316 D MddListenableWorkerFactory: createWorker for class: com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim
+11-16 03:12:21.358  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3157 
+11-16 03:12:21.405  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 0, locked = false
+11-16 03:12:21.405  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1986 onStartInput(EditorInfo{EditorInfo{packageName=dev.liquidsense.installcheck, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+11-16 03:12:21.476  4244  4290 I BugleBackup: Registering preference change listener for "buglesub_-1".
+11-16 03:12:21.553  4244  4290 W Bugle   : Bugle: SubscriptionMetadataUtils get: unexpected subId = -2, replacing with -1
+11-16 03:12:21.558  1368  1368 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 1, locked = false
+11-16 03:12:21.558  1368  1368 I AndroidIME: InputBundleManager.loadActiveInputBundleId():450 loadActiveInputBundleId: und-Latn-x-password, password
+11-16 03:12:21.562   562  2003 W PackageConfigPersister: App-specific configuration not found for packageName: dev.liquidsense.installcheck and userId: 0
+11-16 03:12:21.601  4244  4316 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=ea4ba738-7410-4272-8057-a2261ce4a354, tags={ com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,data_upgrade- } ]
+11-16 03:12:21.691  4244  4290 W Bugle   : Bugle: SubscriptionMetadataUtils get: unexpected subId = -2, replacing with -1
+11-16 03:12:21.711   562  1034 W JobScheduler: Job didn't exist in JobStore: 59e21a2 {androidx.work.systemjobscheduler} #u0a135/1005 @androidx.work.systemjobscheduler@com.google.android.apps.messaging/androidx.work.impl.background.systemjob.SystemJobService
+11-16 03:12:21.787   919  1027 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@cee86db
+11-16 03:12:21.787   562  1034 W InputManager-JNI: Input channel object 'd868dff Splash Screen dev.liquidsense.installcheck (client)' was disposed without first being removed with the input manager!
+11-16 03:12:21.789   562  2003 D CoreBackPreview: Window{d868dff u0 Splash Screen dev.liquidsense.installcheck EXITING}: Setting back callback null
+11-16 03:12:21.804  4244  4268 I ShortcutBadger: Checking if platform supports badge counters, attempt 1/3.
+11-16 03:12:21.807  4244  4290 I Bugle   : getRawTelephonyPhoneNumber redacted-pii[0-chars] [CONTEXT sub_id=-1 ]
+11-16 03:12:21.807  4244  4290 I BugleBackup: Registering preference change listener for "buglesub_1".
+11-16 03:12:21.809  4244  4283 W .apps.messaging: Long monitor contention with owner Blocking Thread #7 (4314) at java.lang.Object ddhi.f()(PG:538) waiters=0 in java.lang.Object ddhi.f() for 524ms
+11-16 03:12:21.811  4244  4283 I BugleRcsEngine: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: -1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false] [CONTEXT thread_id=53 ]
+11-16 03:12:21.811  4244  4314 I BugleRcsEngine: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: -1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false] [CONTEXT thread_id=70 ]
+11-16 03:12:21.823  4244  4283 I RcsAvailabilityUpdaterL: RcsAvailability configuration availability and enabled status: simId: redacted-pii:sim_id[chars:0,last3:], SipConnectionType: DUAL_REG, isConfigurationAvailableAndEnabled: false
+11-16 03:12:21.827  4244  4283 I RcsAvailabilityUpdaterL: updateRcsAvailability: currentAvailability: 1, newAvailability: 9, hint: NO_HINT
+11-16 03:12:21.846  4244  4314 I RcsAvailabilityUpdaterL: RcsAvailability configuration availability and enabled status: simId: redacted-pii:sim_id[chars:0,last3:], SipConnectionType: DUAL_REG, isConfigurationAvailableAndEnabled: false
+11-16 03:12:21.846  4244  4314 I RcsAvailabilityUpdaterL: updateRcsAvailability: currentAvailability: 1, newAvailability: 9, hint: NO_HINT
+11-16 03:12:21.866  4244  4290 W BugleAction: No default number, returning empty msisdn
+11-16 03:12:21.886   562   620 I AppsFilter: interaction: PackageSetting{3062d09 com.android.microdroid.empty_payload/10191} -> PackageSetting{fdcba23 com.google.android.apps.messaging/10135} BLOCKED
+11-16 03:12:21.889  4244  4316 I BugleTransport: isChatAvailable: RcsAvailability is DISABLED_SIM_ABSENT (RCS is disabled due to SIM absent)
+11-16 03:12:21.895  4244  4290 I BugleRcsEngine: isRcsAvailableForSubId called with an invalid sub id: -2 [CONTEXT log_prefix="RcsProvisioningManager" thread_id=57 ]
+11-16 03:12:21.896  4244  4268 I ShortcutBadger: Checking if platform supports badge counters, attempt 2/3.
+11-16 03:12:21.904  4244  4316 I BugleTransport: updateActiveTransport: refreshing chat transport
+11-16 03:12:21.917  4244  4268 I ShortcutBadger: Checking if platform supports badge counters, attempt 3/3.
+11-16 03:12:21.924  4244  4316 I BugleTransport: Tachygram is disabled because the RCS Configuration is empty [CONTEXT ratelimit_period="5 SECONDS" ]
+11-16 03:12:21.933  4244  4316 I BugleTransport: Enabled chat transport is TRANSPORT_RCS [CONTEXT group_by="TRANSPORT_RCS" ratelimit_period="5 SECONDS" ]
+11-16 03:12:21.936  4244  4316 I BugleTransport: refreshChatTransport: isChatAvailable: false, enabledTransport: 1, configuration: <empty>
+11-16 03:12:21.947  4244  4268 W ShortcutBadger: Badge counter seems not supported in this platform: unable to resolve intent: Intent { act=android.intent.action.BADGE_COUNT_UPDATE (has extras) }
+11-16 03:12:21.954  1224  1703 D EGL_emulation: app_time_stats: avg=531.26ms min=39.84ms max=1496.72ms count=3
+11-16 03:12:21.959   562   673 I RoleService: Granting default roles...
+11-16 03:12:21.974  1084  1084 D CarrierSvcBindHelper: onPackageModified: com.google.android.apps.messaging
+11-16 03:12:21.974  1084  1084 D CarrierSvcBindHelper: No carrier app for: 0
+11-16 03:12:21.985  1084  1084 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-16 03:12:21.985   562   650 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10135, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:12:21.988   562   869 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_CHANGED on user 0
+11-16 03:12:21.989   562   884 D ShortcutService: received package broadcast intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 (has extras) }
+11-16 03:12:21.989   562   884 D ShortcutService: changing package: com.google.android.apps.messaging userId0
+11-16 03:12:21.989   562   884 D ShortcutService: handlePackageChanged: com.google.android.apps.messaging user=0
+11-16 03:12:21.990   562   884 D ShortcutService: rescanPackageIfNeeded 0@com.google.android.apps.messaging, forceRescan=true , isNewApp=false
+11-16 03:12:22.009  4266  4294 D EGL_emulation: app_time_stats: avg=135.30ms min=61.47ms max=213.93ms count=7
+11-16 03:12:22.042  4244  4283 I RcsClientLib: Connecting RcsEngineLifecycleService
+11-16 03:12:22.043  4244  4283 W RcsClientLib: No CS.apk RCS service found. Is RCS running in Bugle?
+11-16 03:12:22.043   562  1059 W Role    : Default holder doesn't have required signing certificate: com.google.android.retaildemo:6547c73dee150c103980bfdffe55cc9a011d785dd694a5f99afd8205bcaf1f80
+11-16 03:12:22.044  4244  4283 I RcsClientLib: shouldUseCarrierServicesJibeService: false, CarrierServices rcs service found: false
+11-16 03:12:22.044   562  1059 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+11-16 03:12:22.046   562  1059 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+11-16 03:12:22.057   919   919 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+11-16 03:12:22.081  1084  1084 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-16 03:12:22.173   562   907 D ActivityManager: sync unfroze 920 com.google.android.permissioncontroller for 6
+11-16 03:12:22.174   562   652 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:12:22.183   562   652 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:12:22.185   562   907 W Looper  : Slow dispatch took 132ms android.perm h=android.os.Handler c=com.android.internal.infra.ServiceConnector$Impl$$ExternalSyntheticLambda2@cf273a m=0
+11-16 03:12:22.186   562   652 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:12:22.186   562   652 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:12:22.186   562   652 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:12:22.218   562   884 E system_server: No package ID 7f found for resource ID 0x7f0803ff.
+11-16 03:12:22.218   562   884 E system_server: No package ID 7f found for resource ID 0x7f1510ad.
+11-16 03:12:22.218   562   884 E system_server: No package ID 7f found for resource ID 0x7f1510ad.
+11-16 03:12:22.218   562   884 E system_server: No package ID 7f found for resource ID 0x7f1510ac.
+11-16 03:12:22.218   562   884 D ShortcutService: Package com.google.android.apps.messaging has 1 manifest shortcut(s), and 2 share target(s)
+11-16 03:12:22.218   562   884 D ShortcutService: Package com.google.android.apps.messaging updated, version 235003880 -> 235003880
+11-16 03:12:22.219   562   884 D ShortcutService: Package com.google.android.apps.messaging: publishing manifest shortcuts
+11-16 03:12:22.222  1178  1182 I .gms.persistent: Background concurrent mark compact GC freed 24MB AllocSpace bytes, 32(924KB) LOS objects, 49% free, 19MB/38MB, paused 306us,2.563ms total 964.593ms
+11-16 03:12:22.239   364   417 I netd    : tetherGetStats() -> {[]} <2.25ms>
+11-16 03:12:22.239   365   365 D Zygote  : Forked child process 4326
+11-16 03:12:22.244   562   597 W ActivityManager: Slow operation: 59ms so far, now at startProcess: returned from zygote!
+11-16 03:12:22.266   919   985 W Looper  : Drained
+11-16 03:12:22.267  1492  1492 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.apps.messaging.
+11-16 03:12:22.271  4326  4326 I s.messaging:rcs: Using CollectorTypeCMC GC.
+11-16 03:12:22.272  4326  4326 W s.messaging:rcs: Unexpected CPU variant for x86: x86_64.
+11-16 03:12:22.272  4326  4326 W s.messaging:rcs: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+11-16 03:12:22.305  1084  1289 D ImsResolver: maybeAddedImsService, packageName: com.google.android.apps.messaging
+11-16 03:12:22.326  2499  2521 I adbd    : jdwp connection from 4326
+11-16 03:12:22.326   562   597 W ActivityManager: Slow operation: 141ms so far, now at startProcess: done updating battery stats
+11-16 03:12:22.326  1224  1272 D PackageUpdatedTask: Package updated: mOp=UPDATE packages=[com.google.android.apps.messaging]
+11-16 03:12:22.328   562   597 W ActivityManager: Slow operation: 143ms so far, now at startProcess: building log message
+11-16 03:12:22.332   562   597 I ActivityManager: Start proc 4326:com.google.android.apps.messaging:rcs/u0a135 for service {com.google.android.apps.messaging/com.google.android.ims.service.JibeService}
+11-16 03:12:22.332   562   597 W ActivityManager: Slow operation: 147ms so far, now at startProcess: starting to update pids map
+11-16 03:12:22.352   562   597 W ActivityManager: Slow operation: 168ms so far, now at startProcess: done updating pids map
+11-16 03:12:22.356   919  1062 D EGL_emulation: app_time_stats: avg=524.12ms min=20.92ms max=1997.42ms count=4
+11-16 03:12:22.358  1492  4328 I AiAiEcho: AppIndexer Package:[com.google.android.apps.messaging] UserProfile:[0] Enabled:[true].
+11-16 03:12:22.358  1492  4328 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.apps.messaging], userId:[0], reason:[package is updated.].
+11-16 03:12:22.374  1178  1184 W .gms.persistent: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/PrebuiltBugle/PrebuiltBugle.apk' with 1 weak references
+11-16 03:12:22.385  4326  4326 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-16 03:12:22.390   562   595 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-16 03:12:22.396   562   562 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:22.396   562   562 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:22.398   562   562 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:22.399   562   562 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:12:22.437   920  4325 I PermissionControllerServiceImpl: Updating user sensitive for uid 10135
+11-16 03:12:22.442   562  1059 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.WALLET
+11-16 03:12:22.451   562  1059 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.devicelockcontroller, role: android.app.role.SYSTEM_FINANCED_DEVICE_CONTROLLER
+11-16 03:12:22.472   562  2003 D OomAdjuster: Not killing cached processes
+11-16 03:12:22.489  4326  4326 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+11-16 03:12:22.494  1084  1269 V MmsProvider: accessRestricted=false
+11-16 03:12:22.495  4326  4326 D nativeloader: Configuring clns-7 for other apk /system_ext/framework/SatelliteClient.jar. target_sdk_version=35, uses_libraries=ALL, library_path=/product/priv-app/PrebuiltBugle/lib/x86_64:/product/priv-app/PrebuiltBugle/PrebuiltBugle.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.apps.messaging
+11-16 03:12:22.497  4326  4326 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+11-16 03:12:22.498  4326  4326 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+11-16 03:12:22.498   562   884 D ShortcutService: Saving package item com.google.android.apps.messaging to /data/system_ce/0/shortcut_service/packages/com.google.android.apps.messaging.xml
+11-16 03:12:22.503   562   595 D ShortcutService: Getting shortcuts for launcher= com.android.systemuiuser=0 pkg=com.google.android.apps.messaging
+11-16 03:12:22.514  4326  4326 D nativeloader: InitLlndkLibrariesProduct: libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libapexsupport.so:libbinder_ndk.so:libc.so:libcgrouprc.so:libclang_rt.asan-x86_64-android.so:libcom.android.tethering.connectivity_native.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libselinux.so:libsync.so:libvendorsupport.so:libvndksupport.so:libvulkan.so
+11-16 03:12:22.514  4326  4326 D nativeloader: Configuring product-clns-8 for unbundled product apk /product/priv-app/PrebuiltBugle/PrebuiltBugle.apk. target_sdk_version=35, uses_libraries=, library_path=/product/priv-app/PrebuiltBugle/lib/x86_64:/product/priv-app/PrebuiltBugle/PrebuiltBugle.apk!/lib/x86_64:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.apps.messaging:/product/lib64:/system/product/lib64
+11-16 03:12:22.515  4326  4326 D nativeloader: InitVndkspLibrariesProduct: VNDK is deprecated with product
+11-16 03:12:22.516  4326  4326 D CompatChangeReporter: Compat change id reported: 202956589; UID 10135; state: ENABLED
+11-16 03:12:22.516   562   595 D ShortcutService: Getting shortcuts for launcher= com.google.android.asuser=0 pkg=com.google.android.apps.messaging
+11-16 03:12:22.521   562   595 D ShortcutService: Getting shortcuts for launcher= com.google.android.apps.nexuslauncheruser=0 pkg=com.google.android.apps.messaging
+11-16 03:12:22.522  4326  4326 V GraphicsEnvironment: Currently set values for:
+11-16 03:12:22.522  4326  4326 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-16 03:12:22.522  4326  4326 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-16 03:12:22.522  4326  4326 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+11-16 03:12:22.522  4326  4326 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-16 03:12:22.528  4326  4326 I MultiDex: Installing application
+11-16 03:12:22.529  4326  4326 I MultiDex: VM with version 2.1.0 has multidex support
+11-16 03:12:22.529  4326  4326 I MultiDex: VM has multidex support, MultiDex support library is disabled.
+11-16 03:12:22.542  1224  1224 D StatsLog: LAUNCHER_ALLAPPS_COUNT
+11-16 03:12:22.547  1084  1269 V MmsProvider: accessRestricted=false
+11-16 03:12:22.554  4244  4268 I BugleDataModel: ForwardSyncBatchExecutor: All messages now in sync, batchId: e41cceb5-6905-4bef-8766-8709efb1ad9d, syncId: 02ec0ff2-d743-44d5-bab1-636fe48716ed
+11-16 03:12:22.561   562  2003 D FileUtils: Rounded bytes from 4110745600 to 8000000000
+11-16 03:12:22.562  4244  4283 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=758d59d4-6e44-48bf-ad63-dc7176cb4443, tags={ com.google.android.apps.messaging.shared.datamodel.workqueue.WorkQueueWorkerShim,forward_sync_batch- } ]
+11-16 03:12:22.563  4244  4268 I Bugle   : TelephonySyncManager: setting full sync. inProgress: false, before: true
+11-16 03:12:22.570  4326  4326 D PrimesLoggerHolder: Primes instant initialization
+11-16 03:12:22.570  4244  4268 I BugleDataModel: ActionExecutorImpl: Starting ActionService
+11-16 03:12:22.571   562   579 W ActivityManager: Background start not allowed: service Intent { cmp=com.google.android.apps.messaging/.shared.datamodel.action.execution.ActionExecutorImpl$EmptyService } to com.google.android.apps.messaging/.shared.datamodel.action.execution.ActionExecutorImpl$EmptyService from pid=4244 uid=10135 pkg=com.google.android.apps.messaging startFg?=false
+11-16 03:12:22.572   562  2003 D CompatChangeReporter: Compat change id reported: 311208629; UID 10135; state: ENABLED
+11-16 03:12:22.572  4244  4268 I BugleAction: ActionSchedulerImpl: class com.google.android.apps.messaging.shared.datamodel.action.FillPartSizeAction-FillPartSizeAction:255179001 deferred since it was started from unsafe context
+11-16 03:12:22.575  4244  4268 W JobInfo : Job 'com.google.android.apps.messaging/.shared.datamodel.action.execution.ActionJobService#-218796413' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-16 03:12:22.579   562  2003 W JobInfo : Job 'com.google.android.apps.messaging/.shared.datamodel.action.execution.ActionJobService#-218796413' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-16 03:12:22.584  4244  4268 I BugleSearch: Queues icing index rebuild work item. [CONTEXT class_name="IcingSyncManagerListener" ]
+11-16 03:12:22.597  4326  4326 I dfmd    : SslGuard completed installation.
+11-16 03:12:22.600  4244  4285 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-16 03:12:22.612  4326  4326 I Bugle   : BugleApplicationBase: Bugle version: messages.android_20240528_00_rc01_alldpi.x86_64.phone , Bugle version code: 235003880
+11-16 03:12:22.614   562   675 D ActivityManager: sync unfroze 1335 com.google.android.gms for 6
+11-16 03:12:22.626  4326  4347 D nativeloader: Load /product/priv-app/PrebuiltBugle/PrebuiltBugle.apk!/lib/x86_64/libnative_crash_handler_jni.so using ns product-clns-8 from class loader (caller=/product/priv-app/PrebuiltBugle/PrebuiltBugle.apk!classes5.dex): ok
+11-16 03:12:22.660  4244  4244 I BugleDataModel: ActionExecutorImpl: Starting ActionService
+11-16 03:12:22.670  4244  4244 I BugleDataModel: ActionExecutorImpl: ACTION_EXECUTE_QUEUED_FillPartSizeAction
+11-16 03:12:22.673   562  2003 D FileUtils: Rounded bytes from 4110745600 to 8000000000
+11-16 03:12:22.693  4326  4361 I CarrierServices: Creating JibeServiceComponent [CONTEXT thread_id=59 ]
+11-16 03:12:22.694  4326  4326 I CarrierServices: onBind in state STARTING, intent action = com.google.android.ims.rcs.engine.IRcsEngineTemporaryController [CONTEXT log_prefix="JibeService" thread_id=2 ]
+11-16 03:12:22.697  4244  4283 I RcsClientLib: com.google.android.rcs.client.lifecycle.RcsEngineLifecycleService connected
+11-16 03:12:22.699  4326  4326 I CarrierServices: SystemBindingService onCreate
+11-16 03:12:22.701  4244  4317 I BugleDataModel: ExecuteActionRunnable: running action FillPartSizeAction
+11-16 03:12:22.703  4244  4283 W RcsClientLib: Error while stopping RCS engine.
+11-16 03:12:22.703  4244  4283 W RcsClientLib: java.lang.IllegalStateException: JibeService Not Initialized
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3250)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at android.os.Parcel.createException(Parcel.java:3226)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at android.os.Parcel.readException(Parcel.java:3209)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at android.os.Parcel.readException(Parcel.java:3151)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at com.google.android.aidl.BaseProxy.transactAndReadExceptionReturnVoid(PG:11)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at com.google.android.ims.rcs.engine.IRcsEngineTemporaryController$Stub$Proxy.triggerStopRcsStack(PG:9)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at com.google.android.rcs.client.lifecycle.RcsEngineLifecycleService.triggerStopRcsStack(PG:10)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at blzw.call(PG:5)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at dksu.a(PG:3)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at dkqd.a(PG:13)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at dqsx.a(PG:3)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at dqrv.run(PG:21)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at dqsz.run(PG:5)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at crzm.run(PG:3)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at cryq.run(PG:6)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at java.lang.Thread.run(Thread.java:1012)
+11-16 03:12:22.703  4244  4283 W RcsClientLib: 	at csaw.run(PG:64)
+11-16 03:12:22.712   562   595 I AppBindingService: Connected: com.google.android.apps.messaging/com.google.android.ims.binding.SystemBindingService u0
+11-16 03:12:22.717  4318  4318 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-16 03:12:22.717  4318  4318 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-16 03:12:22.718  4326  4363 D CompatChangeReporter: Compat change id reported: 303742236; UID 10135; state: ENABLED
+11-16 03:12:22.722  4244  4317 I BugleDataModel: ActionExecutorImpl: ACTION_BACKGROUND_QUEUED_FillPartSizeAction
+11-16 03:12:22.896     0     0 I servicemanager: Caller(pid=4318,uid=0,sid=u:r:su:s0) Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest. No alternative instances declared in VINTF.
+11-16 03:12:22.743   154   154 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-16 03:12:22.743  4318  4366 I Gralloc4: mapper 4.x is not supported
+11-16 03:12:22.749  4244  4304 I BugleDataModel: ActionExecutorImpl: ACTION_RESPONSE_QUEUED_FillPartSizeAction
+11-16 03:12:22.749   562  2003 D ConnectivityService: requestNetwork for uid/pid:10135/4326 activeRequest: null callbackRequest: 119 [NetworkRequest [ TRACK_DEFAULT id=120, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10135 RequestorUid: 10135 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ], NetworkRequest [ REQUEST id=121, [ Transports: SATELLITE Capabilities: INTERNET&TRUSTED&NOT_VCN_MANAGED Uid: 10135 RequestorUid: 10135 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false
+11-16 03:12:22.766   562   842 D ConnectivityService: NetReassign [120 : null → 100] [c 0] [a 8] [i 1]
+11-16 03:12:22.767  4244  4283 I BugleDataModel: ActionExecutorImpl: Stopping ActionService
+11-16 03:12:22.781  4326  4363 I CarrierServices: SystemBindingService: Starting JibeService
+11-16 03:12:22.791  4326  4361 I CarrierServices: Processing an intent [CONTEXT log_prefix="(Sim)" thread_id=59 ]
+11-16 03:12:22.793  4326  4361 I CarrierServices: SIM state LOADED [CONTEXT log_prefix="(Sim)" thread_id=59 ]
+11-16 03:12:22.797  1335  3632 I GMS_MM_Logger: Memory Metric Logging not allowed. Stopping.
+11-16 03:12:22.813  4326  4363 I CarrierServices: Broadcasting provisioning intent rcs.intent.action.rcsSystemBinding to Bugle with extras redacted-pii:[null] from source SYSTEM_BINDING_SERVICE [CONTEXT log_prefix="EngineBroadcaster" thread_id=61 ]
+11-16 03:12:22.826  4244  4285 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-16 03:12:22.830  1178  4303 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService started execution. cause:4 exec_start_elapsed_seconds: 255 [CONTEXT service_id=218 ]
+11-16 03:12:22.830  1178  4303 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:4 exec_start_elapsed_seconds: 255 [CONTEXT service_id=218 ]
+11-16 03:12:22.836  4326  4361 I CarrierServices: Broadcasting provisioning intent rcs.intent.action.rcsSimSwap to Bugle with extras redacted-pii:[chars:86] from source SIM_STATE_TRACKER [CONTEXT log_prefix="EngineBroadcaster" thread_id=59 ]
+11-16 03:12:22.840  4326  4361 I CarrierServices: SIM changed: true. current id: redacted-pii:sim_id[chars:20,last3:897]; stored id: redacted-pii:sim_id[chars:0,last3:]; isFiDevice: false; subId: 1; slotIndex: 0 [CONTEXT log_prefix="(Sim)" thread_id=59 ]
+11-16 03:12:22.849  1178  4303 W TapAndPay: NfcAdapter is null while obtaining CardEmulation instance. [CONTEXT service_id=79 ]
+11-16 03:12:22.849  1178  4303 W TapAndPay: java.lang.NullPointerException: NfcAdapter is null
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at android.nfc.cardemulation.CardEmulation.getInstance(CardEmulation.java:170)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at dhwn.<init>(:com.google.android.gms@242335041@24.23.35 (190800-646585959):15)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at com.google.android.gms.tapandpay.hce.task.TapAndPayAidRegistrationTaskOperation.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):50)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskChimeraService.a(:com.google.android.gms@242335041@24.23.35 (190800-646585959):32)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at bpjj.call(:com.google.android.gms@242335041@24.23.35 (190800-646585959):32)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at angs.c(:com.google.android.gms@242335041@24.23.35 (190800-646585959):50)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at angs.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):76)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at anmg.run(:com.google.android.gms@242335041@24.23.35 (190800-646585959):8)
+11-16 03:12:22.849  1178  4303 W TapAndPay: 	at java.lang.Thread.run(Thread.java:1012)
+11-16 03:12:22.853   562  2003 D FileUtils: Rounded bytes from 4110745600 to 8000000000
+11-16 03:12:22.870  4326  4361 I CarrierServices: Skipping writing to Msisdn because this is not main bugle process. [CONTEXT log_prefix="(Sim)" thread_id=59 ]
+11-16 03:12:22.871  4326  4361 I CarrierServices: Updated SIM info: currentSimId: redacted-pii:sim_id[chars:20,last3:897]; imsi: redacted-pii:imsi[chars:15]; rawMsisdn: redacted-pii:phone_number[chars:12,last2:67]; formattedMsisdn: redacted-pii:phone_number[chars:0,last2:]; mccmnc: redacted-pii:sim_operator[chars:6]; gid1: redacted-pii:sim_gid[chars:0]; isFiDevice: false; subId: 1; slotIndex: 0 [CONTEXT log_prefix="(Sim)" thread_id=59 ]
+11-16 03:12:22.874  4326  4361 I CarrierServices: First update of the SIM info. [CONTEXT log_prefix="(Sim)" thread_id=59 ]
+11-16 03:12:22.876  4244  4283 I BugleTransport: onSystemBound: kicking off updateActiveTransport
+11-16 03:12:22.877  4244  4283 I BugleRcsProvisioning: RcsProvisioningTrigger: System bound to :rcs process. Schedule provisioning.
+11-16 03:12:22.880  4326  4361 I CarrierServices: Broadcasting Intent { act=com.google.android.ims.SIM_LOADED (has extras) } [CONTEXT log_prefix="(Sim)" thread_id=59 ]
+11-16 03:12:22.881  4326  4361 I CarrierServices: Initializing Carrier Services Library. [CONTEXT thread_id=59 ]
+11-16 03:12:22.885  4326  4361 I CarrierServices: Initializing Carrier Services Logging. [CONTEXT thread_id=59 ]
+11-16 03:12:22.889  4326  4361 I LogSaver: LogSaver new instance with filename: carrier_services
+11-16 03:12:22.897  1178  4303 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:4 result: 3 elapsed_millis: 82 uptime_millis: 82 exec_start_elapsed_seconds: 255 [CONTEXT service_id=218 ]
+11-16 03:12:22.900  4326  4361 D CompatChangeReporter: Compat change id reported: 312399441; UID 10135; state: ENABLED
+11-16 03:12:22.902  4326  4361 I BugleRcsEngine: Initializing RCS Engine for Bugle host. [CONTEXT log_prefix="RcsEngineProxyImpl:[e99a1d1d-4e52]" thread_id=59 ]
+11-16 03:12:22.905  4326  4361 I BugleRcsEngine: Processing an intent [CONTEXT log_prefix="(Sim)" thread_id=59 ]
+11-16 03:12:22.905  4326  4361 I BugleRcsEngine: Ignoring duplicate SIM state: LOADED [CONTEXT log_prefix="(Sim)" thread_id=59 ]
+11-16 03:12:22.927  4244  4304 I BugleRcsEngine: RCS Configuration storage in Bugle is disabled by p/h flag, using ProvisioningEngineStateCacheUtil.getProvisioningConfigurationForGivenSimIfExist() [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=64 ]
+11-16 03:12:22.927  4244  4316 I BugleTransport: isChatAvailable: RcsAvailability is DISABLED_SIM_ABSENT (RCS is disabled due to SIM absent)
+11-16 03:12:22.929  4244  4317 I BugleRcsEngine: RCS Configuration storage in Bugle is disabled by p/h flag, using ProvisioningEngineStateCacheUtil.getProvisioningConfigurationForGivenSimIfExist() [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=71 ]
+11-16 03:12:22.933  4244  4283 I BugleRcsProvisioning: scheduleProvisioning using legacy code path
+11-16 03:12:22.941   562   827 D ActivityManager: sync unfroze 2193 com.google.android.gms.unstable for 6
+11-16 03:12:22.956  4326  4361 W BugleRcsEngine: enableRcsEngineInitializationByBugle is disabled, directly initializing new DUAL_REG RcsEngine [CONTEXT log_prefix="RcsEngineProxyImpl:[e99a1d1d-4e52]" thread_id=59 ]
+11-16 03:12:22.975  4326  4370 I BugleRcsEngine: do not delay first event [CONTEXT thread_id=65 ]
+11-16 03:12:22.978  4326  4370 I BugleRcsEngine: Processing an intent [CONTEXT log_prefix="(Sim)" thread_id=65 ]
+11-16 03:12:22.989  4326  4370 I BugleRcsEngine: Ignoring duplicate SIM state: LOADED [CONTEXT log_prefix="(Sim)" thread_id=65 ]
+11-16 03:12:23.004  4326  4363 I BugleRcsEngine: SIM delay is not enabled [CONTEXT thread_id=61 ]
+11-16 03:12:23.011  4326  4363 I BugleRcsEngine: process intent: android.intent.action.SIM_STATE_CHANGED [CONTEXT log_prefix="(Sim)" thread_id=61 ]
+11-16 03:12:23.017  4244  4283 I BugleRcsEngine: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: -1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false] [CONTEXT thread_id=53 ]
+11-16 03:12:23.017  4244  4283 I BugleRcsProvisioning: RcsProvisioningTrigger: DR is active, initializing DR provisioning. DUAL_REG
+11-16 03:12:23.021  4326  4370 I BugleRcsEngine: Processing an intent [CONTEXT log_prefix="(Sim)" thread_id=65 ]
+11-16 03:12:23.022  4326  4370 I BugleRcsEngine: Ignoring duplicate SIM state: LOADED [CONTEXT log_prefix="(Sim)" thread_id=65 ]
+11-16 03:12:23.028   562  2522 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+11-16 03:12:23.033  4326  4361 I BugleRcsEngine: Initializing Carrier Services Logging. [CONTEXT thread_id=59 ]
+11-16 03:12:23.033  4326  4361 D BugleRcsEngine: log_saver already enabled
+11-16 03:12:23.039  4326  4361 I BugleRcsEngine: RcsEngine SipConnectionType set to DUAL_REG [CONTEXT thread_id=59 ]
+11-16 03:12:23.040  4326  4361 I BugleRcsEngine: instantiated in package: com.google.android.apps.messaging [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]" thread_id=59 ]
+11-16 03:12:23.042  4326  4361 I BugleRcsEngine: setting active RCS Engine to DUAL_REG instance [CONTEXT log_prefix="RcsEngineProxyImpl:[e99a1d1d-4e52]" thread_id=59 ]
+11-16 03:12:23.042  4326  4361 I BugleRcsEngine: Initializing RcsEngine. [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]" thread_id=59 ]
+11-16 03:12:23.043   562   652 D ConnectivityService: requestNetwork for uid/pid:10135/4326 activeRequest: null callbackRequest: 122 [NetworkRequest [ TRACK_DEFAULT id=123, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED Uid: 10135 RequestorUid: 10135 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ], NetworkRequest [ REQUEST id=124, [ Transports: SATELLITE Capabilities: INTERNET&TRUSTED&NOT_VCN_MANAGED Uid: 10135 RequestorUid: 10135 RequestorPkg: com.google.android.apps.messaging UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647 isUidTracked: false
+11-16 03:12:23.045  4244  4311 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.rcsprovisioning.RcsProvisioningBroadcastReceiver@45d6a92
+11-16 03:12:23.056  4244  4317 I BugleRcsProvisioning: RcsProvisioningTrigger: SIM swap detected, restarting provisioning
+11-16 03:12:23.059  4244  4317 I BugleRcsProvisioning: RcsProvisioningTrigger: updateRcsAvailabilityForProvisioningId : rcsProvisioningId = redacted-pii:sim_id[chars:35,last3:97)] hint = SIM_SWAP, logTriggerEvent = true 
+11-16 03:12:23.059  4326  4361 I BugleRcsEngine: Initializing RBM resource permissions. [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]" thread_id=59 ]
+11-16 03:12:23.060  4244  4304 W BugleAction: Failed to get msisdn from Bugle
+11-16 03:12:23.061  4244  4304 W Bugle   : Bugle: SubscriptionMetadataUtils get: unexpected subId = -2, replacing with -1
+11-16 03:12:23.064  4244  4304 W Bugle   : Bugle: SubscriptionMetadataUtils get: unexpected subId = -2, replacing with -1
+11-16 03:12:23.064   562   842 D ConnectivityService: NetReassign [123 : null → 100] [c 15] [a 1] [i 4]
+11-16 03:12:23.068  4244  4304 W Bugle   : Bugle: SubscriptionMetadataUtils get: unexpected subId = -2, replacing with -1
+11-16 03:12:23.069  4244  4304 I Bugle   : getRawTelephonyPhoneNumber redacted-pii[0-chars] [CONTEXT sub_id=-1 ]
+11-16 03:12:23.070  4244  4304 W BugleAction: No default number, returning empty msisdn
+11-16 03:12:23.071  4244  4304 I BugleRcsEngine: isRcsAvailableForSubId called with an invalid sub id: -2 [CONTEXT log_prefix="RcsProvisioningManager" thread_id=64 ]
+11-16 03:12:23.071  4244  4283 I BugleTransport: updateActiveTransport: refreshing chat transport
+11-16 03:12:23.071  4244  4283 I BugleTransport: refreshChatTransport: isChatAvailable: false, enabledTransport: 1, configuration: <empty>
+11-16 03:12:23.073  4326  4373 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]>Handler" thread_id=66 ]
+11-16 03:12:23.080  4244  4317 I BugleRcsEngine: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false] [CONTEXT thread_id=71 ]
+11-16 03:12:23.081  4244  4290 I BugleRcsEngine: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: -1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false] [CONTEXT thread_id=57 ]
+11-16 03:12:23.085  4326  4365 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=63 ]
+11-16 03:12:23.088  4326  4361 D CompatChangeReporter: Compat change id reported: 311402873; UID 10135; state: ENABLED
+11-16 03:12:23.088  4326  4373 I BugleRcsEngine: RCS Configuration storage in Bugle is disabled by p/h flag, using ProvisioningEngineStateCacheUtil.getProvisioningConfigurationForGivenSimIfExist() [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=66 ]
+11-16 03:12:23.088  4326  4361 D CompatChangeReporter: Compat change id reported: 323349338; UID 10135; state: ENABLED
+11-16 03:12:23.089  4244  4290 I BugleRcsEngine: Skipping provisioning scheduling since RCS is disabled [CONTEXT thread_id=57 ]
+11-16 03:12:23.095   364  4374 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+11-16 03:12:23.095  4244  4317 I RcsAvailabilityUpdaterL: RcsAvailability configuration availability and enabled status: simId: redacted-pii:sim_id[chars:20,last3:897], SipConnectionType: DUAL_REG, isConfigurationAvailableAndEnabled: false
+11-16 03:12:23.096  4244  4290 I RcsClientLib: Connecting RcsEngineLifecycleService
+11-16 03:12:23.097  4244  4290 W RcsClientLib: No CS.apk RCS service found. Is RCS running in Bugle?
+11-16 03:12:23.097  4244  4290 I RcsClientLib: shouldUseCarrierServicesJibeService: false, CarrierServices rcs service found: false
+11-16 03:12:23.098  2193  4371 D TrafficStats: tagSocket(99) with statsTag=0x1809, statsUid=-1
+11-16 03:12:23.099   562   650 D FileUtils: Rounded bytes from 4110745600 to 8000000000
+11-16 03:12:23.101  4326  4365 I BugleRcsEngine: Connected state: [1], networkType: [WIFI] [CONTEXT thread_id=63 ]
+11-16 03:12:23.103  1335  4375 I TelephonySpamChimeraSer: Running Telephony Spam Chimera Service [CONTEXT service_id=150 ]
+11-16 03:12:23.105  1178  4368 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.telephonyspam.sync.SpamListSyncTaskService started execution. cause:5 exec_start_elapsed_seconds: 255 [CONTEXT service_id=218 ]
+11-16 03:12:23.114  2193  4371 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+11-16 03:12:23.108  2193  2193 W binder:2193_A: type=1400 audit(0.0:61): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=318 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+11-16 03:12:23.114  2193  4371 W libc    : Access denied finding property "service.adb.tls.port"
+11-16 03:12:23.117  4326  4361 D BugleRcsEngine: log_saver already enabled
+11-16 03:12:23.112  2193  2193 W binder:2193_A: type=1400 audit(0.0:62): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=63 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+11-16 03:12:23.122   562   827 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-16 03:12:23.123  1178  4369 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.telephonyspam.sync.SpamListSyncTaskService finished executing. cause:5 result: 2 elapsed_millis: 73 uptime_millis: 73 exec_start_elapsed_seconds: 255 [CONTEXT service_id=218 ]
+11-16 03:12:23.124   562   827 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-16 03:12:23.126  4326  4373 W BugleRcsEngine: Unable to send RCS extension log [CONTEXT thread_id=66 ]
+11-16 03:12:23.130  4326  4373 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]>Handler" thread_id=66 ]
+11-16 03:12:23.133  4326  4363 W BugleRcsEngine: Unable to send RCS extension log [CONTEXT thread_id=61 ]
+11-16 03:12:23.133   562  2003 W JobInfo : Job 'com.google.android.providers.media.module/com.android.providers.media.MediaService#-300' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-16 03:12:23.134   562   582 I ActivityManager: Broadcast completed: result=0
+11-16 03:12:23.135  4326  4363 W BugleRcsEngine: ProvisioningEngineMetricsStorage, the wrapper class for proto data store, is null [CONTEXT thread_id=61 ]
+11-16 03:12:23.136  4244  4304 I RcsClientLib: com.google.android.rcs.client.lifecycle.RcsEngineLifecycleService connected
+11-16 03:12:23.137  1178  3870 W GmsUrlRequestImpl: Content-Type header is overwritten.
+11-16 03:12:23.137  4326  4361 W BugleRcsEngine: Ignoring start action: com.google.android.ims.SIM_LOADED [CONTEXT log_prefix="JibeService" thread_id=59 ]
+11-16 03:12:23.137  4326  4373 I BugleRcsEngine: RCS Configuration storage in Bugle is disabled by p/h flag, using ProvisioningEngineStateCacheUtil.getProvisioningConfigurationForGivenSimIfExist() [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=66 ]
+11-16 03:12:23.140  1489  2049 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+11-16 03:12:23.141  4244  4317 I RcsAvailabilityUpdaterL: updateAvailabilityForRcsProvisioningId. SimId: redacted-pii:sim_id[chars:20,last3:897], currentAvailability: 1, newAvailability: 2, hint: SIM_SWAP
+11-16 03:12:23.144  4326  4363 W BugleRcsEngine: Unable to send provisioning event log [CONTEXT thread_id=61 ]
+11-16 03:12:23.147  4326  4339 I BugleRcsEngine: triggerStopRcsStack for msisdn:redacted-pii:phone_number[chars:0,last2:] [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]" thread_id=41 ]
+11-16 03:12:23.148  4326  4373 I BugleRcsEngine: handleMessage processing message:[STOP_RCS_STACK] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]>Handler" thread_id=66 ]
+11-16 03:12:23.148   364  4380 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10143 0}
+11-16 03:12:23.148  4326  4373 I BugleRcsEngine: RCS engine STOP RCS stack [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]>Handler" thread_id=66 ]
+11-16 03:12:23.148   364  4381 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-16 03:12:23.148   364  4381 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x76927400b310
+11-16 03:12:23.149   364  4381 I resolv  : doQuery: rcode=0, ancount=8, return value=264
+11-16 03:12:23.149   364  4382 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-16 03:12:23.149   364  4382 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7691f400c2d0
+11-16 03:12:23.149   364  4382 I resolv  : doQuery: rcode=0, ancount=8, return value=168
+11-16 03:12:23.150  4326  4373 I BugleRcsEngine: imsModule is null, shutdown not required [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]" thread_id=66 ]
+11-16 03:12:23.150  4326  4373 I BugleRcsEngine: skipping imsModule.stop [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]" thread_id=66 ]
+11-16 03:12:23.150  4326  4373 I BugleRcsEngine: handleMessage processing message:[NOTIFY_UPTIME_IGNORE_STATE_CHANGED] with [non-null]:RcsEngineImpl reference [CONTEXT log_prefix="RcsEngineImpl[DUAL_REG]:[41e61218-44e3]>Handler" thread_id=66 ]
+11-16 03:12:23.151  1178  2492 D TrafficStats: tagSocket(294) with statsTag=0x401, statsUid=10143
+11-16 03:12:23.151  4326  4373 I BugleRcsEngine: RCS Configuration storage in Bugle is disabled by p/h flag, using ProvisioningEngineStateCacheUtil.getProvisioningConfigurationForGivenSimIfExist() [CONTEXT log_prefix="ProvisioningEngineDataRetriever" thread_id=66 ]
+11-16 03:12:23.152  4244  4317 I BugleRcsEngine: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: -1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false] [CONTEXT thread_id=71 ]
+11-16 03:12:23.152  4244  4317 I BugleRcsEngine: RcsAvailabilityLogWorkerScheduler is cancelled [CONTEXT thread_id=71 ]
+11-16 03:12:23.152  4244  4311 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of com.google.android.apps.messaging.rcsprovisioning.RcsProvisioningBroadcastReceiver@bab628c
+11-16 03:12:23.153  4244  4311 I RcsClientLib: Disconnecting RcsEngineLifecycleService
+11-16 03:12:23.159  4244  4283 I BugleRcsProvisioning: RcsProvisioningTrigger: onRcsAvailabilityUpdate : availability is updated to RCS is disabled for this carrier by Google, lastAvailabilityLocal is null, simId hash = -3565622821357479756, simId = redacted-pii:sim_id[chars:20,last3:897], isPev3Enabled = true
+11-16 03:12:23.162  4244  4283 I BugleRcsEngine: Receive onRcsAvailabilityUpdate, SIM = redacted-pii:sim_id[chars:20,last3:897], availability = RcsAvailability{mAvailability=DISABLED_VIA_GSERVICES (RCS is disabled for this carrier by Google)} [CONTEXT log_prefix="RcsProvisioningManager" thread_id=53 ]
+11-16 03:12:23.175  4244  4304 I BugleTransport: onRcsAvailabilityUpdate: kicking off updateActiveTransport for simId:redacted-pii:sim_id[chars:20,last3:897]
+11-16 03:12:23.178  4244  4283 I BugleRcsProvisioning: RcsProvisioningTrigger: onRcsAvailabilityUpdate : isPreviousDisabled = true, isCurrentDisabled = true, config[simId:redacted-pii:sim_id[chars:20,last3:897]] = [Type: 0, Version: 0, Validity: 0, Last updated: 0, Remaining validity: 0, Reconfiguration requested: false, Messaging technology: SIMPLE_IM, rcsVolteSingleRegistration: false], hasToken: false, isValidAndUpdated: false
+11-16 03:12:23.178  4244  4291 I BugleTransport: isChatAvailable: RcsAvailability is DISABLED_SIM_ABSENT (RCS is disabled due to SIM absent)
+11-16 03:12:23.180  4244  4290 W BugleRcs: getAvailableProvisioningIds: accessing uninitialized provisioning identities.
+11-16 03:12:23.181  4244  4304 I BugleRcsEngine: AvailabilityObserver.onUpdate : Notify RcsAvailabilityListener brtj@f8cd49d onRcsAvailabilityUpdate, SIM = redacted-pii:sim_id[chars:20,last3:897], availability = 2 [CONTEXT log_prefix="RcsProvisioningManager" thread_id=64 ]
+11-16 03:12:23.183  4244  4290 W BugleRcs: getAvailableProvisioningIds: accessing uninitialized provisioning identities.
+11-16 03:12:23.184  4244  4290 W BugleRcs: getAvailableProvisioningIds: accessing uninitialized provisioning identities.
+11-16 03:12:23.185  4244  4290 I BugleRcsEngine: CommonRcsProvisioningChangeListenerHandler.notifyListener : Notify RcsProvisioningChangeListener bjbz@62c8d12 onRcsProvisioningChange, SIM = redacted-pii:sim_id[chars:35,last3:97)], available rcs provisioning ids  =  [CONTEXT log_prefix="RcsProvisioningManager" thread_id=57 ]
+11-16 03:12:23.186  1335  3632 I ChimeraConfigurator: Starting update, reason: 1 urgentFeatures: 
+11-16 03:12:23.193  4244  4314 I BugleRcsEngine: Cancel All Provisioning work operation result is: SUCCESS, trigger is SIM_SWAP [CONTEXT thread_id=70 ]
+11-16 03:12:23.193  4244  4316 W BugleAction: Failed to get msisdn from Bugle
+11-16 03:12:23.194  1178  4303 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.chimera.container.ConfigService started execution. cause:5 exec_start_elapsed_seconds: 255 [CONTEXT service_id=218 ]
