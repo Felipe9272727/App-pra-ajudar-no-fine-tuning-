@@ -1,0 +1,9 @@
+{
+  "status": "full_Android_session_test_pending",
+  "phone_block_repair_succeeded": true,
+  "phone_main_installation_succeeded": false,
+  "bug": "explicit close followed by automatic second close of FileBridge output; catch abandoned session after commit",
+  "output_lifecycle_fixed": true,
+  "cache_filename_and_valid036_flag_preserved": true,
+  "new_main_APK_or_model": false
+}
