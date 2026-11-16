@@ -1,5 +1,15 @@
 # Liquid Sense 0.8B LOOP
 
+## Instalação confirmada; próxima etapa: velocidade e hospedagem
+
+O usuário confirmou que o reparador0.3permitiu instalar no Xiaomi. A instalação
+física não está mais pendente; velocidade/qualidade no aparelho não foram medidas.
+[Pesquisa de hospedagem gratuita](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/f15b503eb3bb9b3b47ef2cf27c7dfa6e9d7cbe77/hosting038):
+ZeroGPU aceita contas pessoais elegíveis, com5minutosGPU/dia; Modal oferece
+$30mensais em créditos, mas exige meio de pagamento e limite de uso para evitar
+cobrança. GPU requer adaptação e validação do motor personalizado do Liquid Sense.
+Nenhum treino, mudança de pesos, deploy ou ganho de velocidade foi feito nesta etapa.
+
 ## Reparador 0.3 — instalação corrigida, manter APK recuperado
 
 [Baixar atualização — 37 KB](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-session037/LiquidSense-Reparador-0.3.apk). Instale sobre o reparador anterior,

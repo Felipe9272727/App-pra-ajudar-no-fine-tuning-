@@ -1,3 +1,25 @@
+# Hosting038 — installation confirmed by user; free GPU research before training
+
+- User explicitly confirms helper0.3fixed final installation on Xiaomi. Record
+  phone installation as USER-REPORTED success, not pending. No automatic phone
+  speed/quality/keyboard claim.037status updated in038branch; past CI preserved.
+- User wants more improvements but asks FIRST about free/faster hosting. Research
+  completed, no new training, checkpoint promotion, app update or deployment.
+  Read hosting038/REPORT.md,status.json on
+  codex/liquid-sense-hosting-038-20261116 atf15b503eb3bb9b3b47ef2cf27c7dfa6e9d7cbe77.
+- Official docs checked2026-11-16: HFZeroGPU permits2free personalGradioSpaces
+  for accounts in good standing, verifiedemail, age>30days; free5minGPU/day,
+  shared queues. Do not reuse obsolete PRO-only claim or assume CPUBasicnew
+  computeSpaces require no paid plan. ModalStarter$30monthlycompute credits,
+  payment method required; spending/usage limit needed to stay within credits.
+  Colabfree is for interactive notebooks, not continuous appweb backend.
+- Current custom Rust runtimeCPU does not automatically use a hostedGPU. Need
+  compatible GPU execution and same checkpoint+loop/controllers. Existing030
+  Python/Rust generation divergence means parity/quality must be tested. Measure
+  TTFT,tokens/s,total(coldstart,queue,network) before speed claims. Suggested
+  next step: isolatedZeroGPU demo if accounteligible, optionalLocal/Online later.
+  No account credentials provided/requested; no paid resources or endpoint used.
+
 # AndroidSession037 COMPLETE — fix our double close; final phone install pending
 
 - Phone036repair succeeded:32/235blocks,256MiB; full ZIP and APK CRC/SHA+reread
