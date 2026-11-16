@@ -1,0 +1,870 @@
+--------- beginning of main
+11-16 03:39:09.345  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/PrebuiltGoogleAdservicesTvp/PrebuiltGoogleAdservicesTvp.apk' with 1 weak references
+11-16 03:39:09.345  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /apex/com.android.healthfitness/priv-app/HealthConnectControllerGoogle@350820300/HealthConnectControllerGoogle.apk' with 1 weak references
+11-16 03:39:09.345  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/KidsSupervisionStub/KidsSupervisionStub.apk' with 1 weak references
+11-16 03:39:09.345  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/priv-app/StorageManager/StorageManager.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '/product/overlay/StorageManager__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/BookmarkProvider/BookmarkProvider.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/priv-app/SettingsGoogle/SettingsGoogle.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '/product/overlay/SettingsGoogle__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/SettingsIntelligenceGooglePrebuilt/SettingsIntelligenceGooglePrebuilt.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /apex/com.android.uwb/priv-app/ServiceUwbResourcesGoogle@350820300/ServiceUwbResourcesGoogle.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /apex/com.android.wifi/priv-app/ServiceWifiResourcesGoogle@350820300/ServiceWifiResourcesGoogle.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/priv-app/ThemePicker/ThemePicker.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/priv-app/WallpaperPickerGoogleRelease/WallpaperPickerGoogleRelease.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/OdadPrebuilt/OdadPrebuilt.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/TeleService/TeleService.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '/vendor/overlay/TeleService__sdk_gphone64_x86_64__auto_generated_rro_vendor.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '/product/overlay/TeleService__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/Shell/Shell.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/BlockedNumberProvider/BlockedNumberProvider.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/UserDictionaryProvider/UserDictionaryProvider.apk' with 1 weak references
+11-16 03:39:09.346  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/app/EmergencyInfoGoogleNoUi/EmergencyInfoGoogleNoUi.apk' with 1 weak references
+11-16 03:39:09.347  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk' with 1 weak references
+11-16 03:39:09.347  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/FusedLocation/FusedLocation.apk' with 1 weak references
+11-16 03:39:09.347  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '/vendor/overlay/SystemUIGoogle__sdk_gphone64_x86_64__auto_generated_rro_vendor.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '/product/overlay/SystemUIGoogle__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '/product/overlay/SystemUIEmulationPixel6/SystemUIEmulationPixel6Overlay.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/YouTubeMusicPrebuilt/YouTubeMusicPrebuilt.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/BluetoothMidiService/BluetoothMidiService.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/Traceur/Traceur.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /apex/com.android.cellbroadcast/priv-app/GoogleCellBroadcastApp@350820300/GoogleCellBroadcastApp.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/ContactsProvider/ContactsProvider.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '/product/overlay/ContactsProvider__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/LatinIMEGooglePrebuilt/LatinIMEGooglePrebuilt.apk' with 1 weak references
+11-16 03:39:09.358  1364  1382 W .apps.wellbeing: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/GoogleRestorePrebuilt-v526684/GoogleRestorePrebuilt-v526684.apk' with 1 weak references
+--------- beginning of kernel
+11-16 03:39:09.507     0     0 I servicemanager: Caller(pid=2466,uid=10101,sid=u:r:priv_app:s0:c512,c768) Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest. No alternative instances declared in VINTF.
+11-16 03:39:09.359   148   148 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-16 03:39:09.359  2466  4457 I Gralloc4: mapper 4.x is not supported
+11-16 03:39:09.381  1091  1099 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk' with 1 weak references
+11-16 03:39:09.381  1091  1099 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/AndroidAutoStubPrebuilt/AndroidAutoStubPrebuilt.apk' with 1 weak references
+11-16 03:39:09.382  1091  1099 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/DevicePersonalizationPrebuiltPixel2021-aiai_20240329.00_RC16/DevicePersonalizationPrebuiltPixel2021-aiai_20240329.00_RC16.apk' with 1 weak references
+11-16 03:39:09.382  1091  1099 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/WellbeingPrebuilt/WellbeingPrebuilt.apk' with 1 weak references
+11-16 03:39:09.382  1091  1099 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/SafetyHubPrebuilt/SafetyHubPrebuilt.apk' with 1 weak references
+11-16 03:39:09.382  1091  1099 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /apex/com.android.extservices/priv-app/GoogleExtServices@350820300/GoogleExtServices.apk' with 1 weak references
+11-16 03:39:09.392  1337  1345 I putmethod.latin: JIT allocated 54KB for compiled code of boolean fjt.a(kwp, java.lang.Object[])
+11-16 03:39:09.392  1337  1345 I putmethod.latin: Compiler allocated 4801KB to compile boolean fjt.a(kwp, java.lang.Object[])
+11-16 03:39:09.867   554   573 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10101 pid=0
+11-16 03:39:09.867   554   573 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10101 => denied (168 us)
+11-16 03:39:09.867   554   573 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10101 pid=0
+11-16 03:39:09.867   554   573 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10101 => denied (40 us)
+11-16 03:39:09.867   554   573 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10101 pid=0
+11-16 03:39:09.867   554   573 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10101 => denied (11 us)
+--------- beginning of system
+11-16 03:39:09.868   554   573 D CoreBackPreview: Window{ee0d1e0 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@e9e5f6a, mPriority=0, mIsAnimationCallback=false}
+11-16 03:39:09.873   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE
+11-16 03:39:09.874   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_FULLSCREEN_OVERRIDE
+11-16 03:39:09.874   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE
+11-16 03:39:09.874   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+11-16 03:39:09.875   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+11-16 03:39:09.877   554  1654 I ActivityTaskManager: START u0 {act=android.content.pm.action.CONFIRM_INSTALL flg=0x2010001 pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity (has extras)} with LAUNCH_MULTIPLE from uid 10101 (BAL_ALLOW_VISIBLE_WINDOW) result code=0
+11-16 03:39:09.880  2466  2494 I HWUI    : Davey! duration=715ms; Flags=1, FrameTimelineVsyncId=45413, IntendedVsync=198763699382, Vsync=198797032714, InputEventId=0, HandleInputStart=198807642420, AnimationStart=198807642681, PerformTraversalsStart=198807642821, DrawStart=198989804394, FrameDeadline=198780366048, FrameInterval=198807626366, FrameStartTime=16666666, SyncQueued=198990874878, SyncStart=198991942212, IssueDrawCommandsStart=198992292891, SwapBuffers=199359297792, FrameCompleted=199480571857, DequeueBufferDuration=2985, QueueBufferDuration=283470, GpuCompleted=199480571857, SwapBuffersCompleted=199466815898, DisplayPresentTime=72904454231359566, CommandSubmissionCompleted=199359297792, 
+11-16 03:39:09.880  2466  2494 I HWUI    : Davey! duration=716ms; Flags=1, FrameTimelineVsyncId=45413, IntendedVsync=198763699382, Vsync=198797032714, InputEventId=0, HandleInputStart=198807642420, AnimationStart=198807642681, PerformTraversalsStart=198807642821, DrawStart=199473533177, FrameDeadline=198780366048, FrameInterval=198807626366, FrameStartTime=16666666, SyncQueued=199473583301, SyncStart=199473777648, IssueDrawCommandsStart=199473810798, SwapBuffers=199473922272, FrameCompleted=199480569683, DequeueBufferDuration=1171, QueueBufferDuration=123683, GpuCompleted=199480569683, SwapBuffersCompleted=199474422382, DisplayPresentTime=0, CommandSubmissionCompleted=199473922272, 
+11-16 03:39:09.881  2466  2466 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
+11-16 03:39:09.884   554  1656 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ENABLE_FAKE_FOCUS
+11-16 03:39:09.915  2466  4456 I HWUI    : Davey! duration=700ms; Flags=0, FrameTimelineVsyncId=45449, IntendedVsync=198813699380, Vsync=199480366020, InputEventId=0, HandleInputStart=199486434396, AnimationStart=199486434916, PerformTraversalsStart=199486508445, DrawStart=199486920375, FrameDeadline=199513699352, FrameInterval=199486259307, FrameStartTime=16666666, SyncQueued=199487081082, SyncStart=199487299741, IssueDrawCommandsStart=199487342975, SwapBuffers=199487985025, FrameCompleted=199514596169, DequeueBufferDuration=3586, QueueBufferDuration=5230449, GpuCompleted=199514596169, SwapBuffersCompleted=199510079932, DisplayPresentTime=144115222452437076, CommandSubmissionCompleted=199487985025, 
+11-16 03:39:09.917   554  1654 D CoreBackPreview: Window{9aef0a4 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@b79d24b, mPriority=0, mIsAnimationCallback=false}
+11-16 03:39:09.957   554  1650 D CoreBackPreview: Window{9ddb03c u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@1f39428, mPriority=0, mIsAnimationCallback=false}
+11-16 03:39:10.003   912  2257 V WindowManagerShell: onTransitionReady(transaction=2379411882810)
+11-16 03:39:10.004   912   965 V WindowManagerShell: onTransitionReady (#29) android.os.BinderProxy@6412a12: {id=29 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{null m=OPEN f=TRANSLUCENT|FILLS_TASK|NO_ANIMATION p=WCT{android.window.IWindowContainerToken$Stub$Proxy@a510b55} leash=Surface(name=ActivityRecord{d4afcf8 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity)/@0x8c61e99 sb=Rect(0, 0 - 0, 0) eb=Rect(0, 0 - 1080, 2400) d=-1->0 r=-1->0:-1 bc=fff1f0f7 component=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity},{WCT{android.window.IWindowContainerToken$Stub$Proxy@eb3e96a} m=CHANGE f=MOVE_TO_TOP leash=Surface(name=Task=10)/@0xd03d55e sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+11-16 03:39:10.004   912   965 V WindowManagerShell: Playing animation for (#29) android.os.BinderProxy@6412a12@0
+11-16 03:39:10.004   912   965 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@bb4e92f
+11-16 03:39:10.004   912   965 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@46dcb3c
+11-16 03:39:10.004   912   965 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@31400c5
+11-16 03:39:10.004   912   965 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@51e8a1a
+11-16 03:39:10.004   912   965 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@630e94b
+11-16 03:39:10.004   912   965 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+11-16 03:39:10.004   912   965 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@4ea5f28
+11-16 03:39:10.004   912   965 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@1b8e441
+11-16 03:39:10.004   912   965 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=29 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{null m=OPEN f=TRANSLUCENT|FILLS_TASK|NO_ANIMATION p=WCT{android.window.IWindowContainerToken$Stub$Proxy@a510b55} leash=Surface(name=ActivityRecord{d4afcf8 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity)/@0x8c61e99 sb=Rect(0, 0 - 0, 0) eb=Rect(0, 0 - 1080, 2400) d=-1->0 r=-1->0:-1 bc=fff1f0f7 component=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity},{WCT{android.window.IWindowContainerToken$Stub$Proxy@eb3e96a} m=CHANGE f=MOVE_TO_TOP leash=Surface(name=Task=10)/@0xd03d55e sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+11-16 03:39:10.004   912   965 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[OPEN,TO_FRONT] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@5b4de5b, appThread = android.app.IApplicationThread$Stub$Proxy@f2496f8, debugName = OverlaySwipeBack }}
+11-16 03:39:10.004   912   965 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@46407d1, appThread = android.app.IApplicationThread$Stub$Proxy@59f3236, debugName = LauncherToDream }}
+11-16 03:39:10.004   912   965 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@1d90537, appThread = android.app.IApplicationThread$Stub$Proxy@8882aa4, debugName = QuickstepLaunchHome }}
+11-16 03:39:10.005   554   577 I ActivityTaskManager: Displayed com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity for user 0: +908ms
+11-16 03:39:10.005   554   577 V WindowManager: Sent Transition (#29) createdAt=11-16 03:39:08.839 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=11 displayId=0 isRunning=true baseIntent=Intent { act=android.content.pm.action.CONFIRM_INSTALL flg=0x10800000 pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.InstallStart } baseActivity=ComponentInfo{com.google.android.packageinstaller/com.android.packageinstaller.InstallStart} topActivity=ComponentInfo{com.google.android.packageinstaller/com.android.packageinstaller.InstallStart} origActivity=null realActivity=ComponentInfo{com.google.android.packageinstaller/com.android.packageinstaller.InstallStart} numActivities=1 lastActiveTime=198461 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{5c03fc3 Task{e30fdb9 #11 type=standard A=10101:com.google.android.packageinstaller}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{a1ac040 com.android.packageinstaller.InstallStart} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=true appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= falseisLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=1080 topActivityLetterboxHeight=2400 isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatControlState=hidden freeformCameraCompatMode=inactive}}}, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 29 }
+11-16 03:39:10.005   554   577 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+11-16 03:39:10.005   554   577 V WindowManager:     info={id=29 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+11-16 03:39:10.005   554   577 V WindowManager:         {null m=OPEN f=TRANSLUCENT|FILLS_TASK|NO_ANIMATION p=WCT{RemoteToken{46a248d Task{d8ec7fc #10 type=standard A=10209:dev.liquidsense.installcheck}}} leash=Surface(name=ActivityRecord{d4afcf8 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity)/@0xb88247d sb=Rect(0, 0 - 0, 0) eb=Rect(0, 0 - 1080, 2400) d=-1->0 r=-1->0:-1 bc=fff1f0f7 component=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity},
+11-16 03:39:10.005   554   577 V WindowManager:         {WCT{RemoteToken{46a248d Task{d8ec7fc #10 type=standard A=10209:dev.liquidsense.installcheck}}} m=CHANGE f=MOVE_TO_TOP leash=Surface(name=Task=10)/@0x92a72f4 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}
+11-16 03:39:10.005   554   577 V WindowManager:     ]}
+11-16 03:39:10.006   912   965 V WindowManagerShell:  Delegate animation for (#29) to null
+11-16 03:39:10.006   912   965 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultTransitionHandler@c8b2de6
+11-16 03:39:10.006   912   965 V WindowManagerShell: start default transition animation, info = {id=29 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{null m=OPEN f=TRANSLUCENT|FILLS_TASK|NO_ANIMATION p=WCT{android.window.IWindowContainerToken$Stub$Proxy@a510b55} leash=Surface(name=ActivityRecord{d4afcf8 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity)/@0x8c61e99 sb=Rect(0, 0 - 0, 0) eb=Rect(0, 0 - 1080, 2400) d=-1->0 r=-1->0:-1 bc=fff1f0f7 component=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity},{WCT{android.window.IWindowContainerToken$Stub$Proxy@eb3e96a} m=CHANGE f=MOVE_TO_TOP leash=Surface(name=Task=10)/@0xd03d55e sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1}]}
+11-16 03:39:10.008   554  1654 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:10.008   912   965 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#29) android.os.BinderProxy@6412a12@0
+11-16 03:39:10.101   554   577 V WindowManager: Finish Transition (#29): created at 11-16 03:39:08.839 collect-started=0.02ms request-sent=17.55ms started=21.204ms ready=1046.102ms sent=1163.087ms finished=1261.127ms
+11-16 03:39:10.124   912   965 V WindowManagerShell: Track 0 became idle
+11-16 03:39:10.124   912   965 V WindowManagerShell: All active transition animations finished
+11-16 03:39:10.124   912   965 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@c8b2de6
+11-16 03:39:10.124   912   965 V WindowManagerShell: Track 0 became idle
+11-16 03:39:10.124   912   965 V WindowManagerShell: All active transition animations finished
+11-16 03:39:10.124   912   965 W Looper  : Slow dispatch took 120ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0@1243bc2 m=0
+11-16 03:39:10.148   554  1656 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:10.148   554  1656 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:10.148   554  1656 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:10.148   554  1654 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:10.442  2466  2466 D VRI[PackageInstallerActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-16 03:39:10.585   912   965 V WindowManagerShell: Transition requested (#30): android.os.BinderProxy@aebdd3 TransitionRequestInfo { type = CLOSE, triggerTask = null, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 30 }
+11-16 03:39:10.589  2466  2466 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@44a3f87
+11-16 03:39:10.597   554   573 D CoreBackPreview: Window{9aef0a4 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}: Setting back callback null
+11-16 03:39:10.638   427   427 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-16 03:39:10.640   554  1650 W InputManager-JNI: Input channel object '9aef0a4 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity (client)' was disposed without first being removed with the input manager!
+11-16 03:39:10.651   554   580 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+11-16 03:39:10.685   423   423 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000004) and output flags (00000002)
+11-16 03:39:10.690   912  2045 V WindowManagerShell: onTransitionReady(transaction=2379411882851)
+11-16 03:39:10.691   912   965 V WindowManagerShell: onTransitionReady (#30) android.os.BinderProxy@aebdd3: {id=30 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{null m=CLOSE f=TRANSLUCENT|FILLS_TASK leash=Surface(name=ActivityRecord{d4afcf8 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity)/@0xc6f4d10 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 bc=fff1f0f7 component=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}]}
+11-16 03:39:10.691   912   965 V WindowManagerShell: Playing animation for (#30) android.os.BinderProxy@aebdd3@0
+11-16 03:39:10.692   912   965 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@bb4e92f
+11-16 03:39:10.692   912   965 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@46dcb3c
+11-16 03:39:10.692   912   965 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@31400c5
+11-16 03:39:10.692   912   965 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@51e8a1a
+11-16 03:39:10.692   912   965 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@630e94b
+11-16 03:39:10.692   912   965 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+11-16 03:39:10.692   912   965 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@4ea5f28
+11-16 03:39:10.692   912   965 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@1b8e441
+11-16 03:39:10.692   912   965 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=30 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{null m=CLOSE f=TRANSLUCENT|FILLS_TASK leash=Surface(name=ActivityRecord{d4afcf8 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity)/@0xc6f4d10 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 bc=fff1f0f7 component=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}]}
+11-16 03:39:10.697   912   965 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[OPEN,TO_FRONT] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@5b4de5b, appThread = android.app.IApplicationThread$Stub$Proxy@f2496f8, debugName = OverlaySwipeBack }}
+11-16 03:39:10.701   912   965 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@46407d1, appThread = android.app.IApplicationThread$Stub$Proxy@59f3236, debugName = LauncherToDream }}
+11-16 03:39:10.701   912   965 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@1d90537, appThread = android.app.IApplicationThread$Stub$Proxy@8882aa4, debugName = QuickstepLaunchHome }}
+11-16 03:39:10.702   912   965 V WindowManagerShell:  Delegate animation for (#30) to null
+11-16 03:39:10.702   912   965 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultTransitionHandler@c8b2de6
+11-16 03:39:10.702   912   965 V WindowManagerShell: start default transition animation, info = {id=30 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{null m=CLOSE f=TRANSLUCENT|FILLS_TASK leash=Surface(name=ActivityRecord{d4afcf8 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity)/@0xc6f4d10 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 bc=fff1f0f7 component=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}]}
+11-16 03:39:10.702   912   965 V WindowManagerShell: loadAnimation: anim=null animAttr=0x7 type=CLOSE isEntrance=false
+11-16 03:39:10.706   912   965 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#30) android.os.BinderProxy@aebdd3@0
+11-16 03:39:10.715  2466  2466 D VRI[PackageInstallerActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-16 03:39:10.720   912   965 V WindowManagerShell: Track 0 became idle
+11-16 03:39:10.720   912   965 V WindowManagerShell: All active transition animations finished
+11-16 03:39:10.720   912   965 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@c8b2de6
+11-16 03:39:10.721   912   965 V WindowManagerShell: Track 0 became idle
+11-16 03:39:10.721   912   965 V WindowManagerShell: All active transition animations finished
+11-16 03:39:10.721   912   965 W Looper  : Slow dispatch took 31ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0@f1d642f m=0
+11-16 03:39:10.721   554   577 V WindowManager: Sent Transition (#30) createdAt=11-16 03:39:10.579 via request=TransitionRequestInfo { type = CLOSE, triggerTask = null, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 30 }
+11-16 03:39:10.722   554   577 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+11-16 03:39:10.722   554   577 V WindowManager:     info={id=30 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+11-16 03:39:10.722   554   577 V WindowManager:         {null m=CLOSE f=TRANSLUCENT|FILLS_TASK leash=Surface(name=ActivityRecord{d4afcf8 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity)/@0xb88247d sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 bc=fff1f0f7 component=com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}
+11-16 03:39:10.722   554   577 V WindowManager:     ]}
+11-16 03:39:10.722   554   577 V WindowManager: Finish Transition (#30): created at 11-16 03:39:10.579 collect-started=0.033ms request-sent=4.322ms started=10.396ms ready=89.477ms sent=94.092ms finished=128.366ms
+11-16 03:39:10.747   554   573 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:10.748   554   573 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:10.751  1217  1217 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.scheduler.ACTION_PROXY_SCHEDULE dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+11-16 03:39:10.782   554   634 D NativeLibraryHelper: Punching extracted elf file libliquid_python.so on fs:61267
+11-16 03:39:10.782   554   634 D FileSystemUtils: Punching holes in file: /data/app/vmdl2107721076.tmp/lib/arm64/libliquid_python.so programHeaderOffset: 64 programHeaderNum: 9
+11-16 03:39:10.783   554   634 D FileSystemUtils: Total number of LOAD segments 4
+11-16 03:39:10.783   554   634 D FileSystemUtils: Size before punching holes st_blocks: 4848, st_blksize: 4096, st_size: 2474112
+11-16 03:39:10.783   554   634 D FileSystemUtils: Size after punching holes st_blocks: 4848, st_blksize: 4096, st_size: 2474112
+11-16 03:39:10.786  2466  2466 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@e9d8bbd
+11-16 03:39:10.786   554  1656 D CoreBackPreview: Window{9ddb03c u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}: Setting back callback null
+11-16 03:39:10.789  3365  3365 I BugleDataModel: ActionExecutorImpl: Starting ActionService
+11-16 03:39:10.798  3365  3365 I BugleDataModel: ActionExecutorImpl: ACTION_EXECUTE_QUEUED_CountryCodeDetectorAction
+11-16 03:39:10.803  3365  3365 I BugleDataModel: ActionExecutorImpl: ACTION_EXECUTE_QUEUED_SelfParticipantsRefreshAction
+11-16 03:39:10.814   554   573 W InputManager-JNI: Input channel object '9ddb03c com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity (client)' was disposed without first being removed with the input manager!
+11-16 03:39:10.826   423   449 D audioserver: logFgsApiBegin: FGS Logger Transaction failed, -129
+11-16 03:39:10.827   554  1559 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 15
+11-16 03:39:10.828  3365  3474 I BugleDataModel: ExecuteActionRunnable: running action CountryCodeDetectorAction
+11-16 03:39:10.902  3365  3474 I BugleDataModel: ActionExecutorImpl: ACTION_BACKGROUND_QUEUED_CountryCodeDetectorAction
+11-16 03:39:10.914  3365  3474 I BugleDataModel: ExecuteActionRunnable: running action SelfParticipantsRefreshAction
+11-16 03:39:10.927  3365  3474 I BugleDataModel: ActionExecutorImpl: ACTION_BACKGROUND_QUEUED_SelfParticipantsRefreshAction
+11-16 03:39:10.929  3365  4475 I Bugle   : CountryCodeDetector: updateSmsNetworkCountry from default subscription network country. detected country: us
+11-16 03:39:10.930   554   634 D NativeLibraryHelper: Punching extracted elf file libliquid_sense.so on fs:61267
+11-16 03:39:10.930   554   634 D FileSystemUtils: Punching holes in file: /data/app/vmdl2107721076.tmp/lib/arm64/libliquid_sense.so programHeaderOffset: 64 programHeaderNum: 9
+11-16 03:39:10.930   554   634 D FileSystemUtils: Total number of LOAD segments 4
+11-16 03:39:10.930   554   634 D FileSystemUtils: Size before punching holes st_blocks: 9704, st_blksize: 4096, st_size: 4962472
+11-16 03:39:10.930   554   634 D FileSystemUtils: Size after punching holes st_blocks: 9704, st_blksize: 4096, st_size: 4962472
+11-16 03:39:10.937   554   613 E PackageManager: No required verifiers
+11-16 03:39:10.938  3365  4475 I BugleDataModel: ActionExecutorImpl: ACTION_RESPONSE_QUEUED_CountryCodeDetectorAction
+11-16 03:39:10.940  3365  4475 I BugleDataModel: ParticipantRefresh: ContactContentObserver created
+11-16 03:39:10.941  3365  4475 I BugleDataModel: ParticipantFullRefresh: Start participant refresh. refreshMode: SELF_ONLY
+11-16 03:39:10.942   554   613 I PackageManager: Integrity check passed for file:///data/app/vmdl2107721076.tmp
+11-16 03:39:10.965  3365  4475 I BugleDataModel: SubscriptionsTracker#refreshSelfParticipantList([1])
+11-16 03:39:10.966  4121  4165 D EGL_emulation: app_time_stats: avg=134.41ms min=16.00ms max=1361.91ms count=14
+11-16 03:39:10.994   554   613 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+11-16 03:39:10.994   554   613 D PackageManager: Clear ephemeral installer activity
+11-16 03:39:11.004   554   676 I ImeTracker: dev.liquidsense.installcheck:e7126ab3: onRequestHide at ORIGIN_SERVER reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR fromUser false
+11-16 03:39:11.004   554   676 I ImeTracker: dev.liquidsense.installcheck:e7126ab3: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-16 03:39:11.157     0     0 I logd    : start watching /data/system/packages.list ...
+11-16 03:39:11.163     0     0 I servicemanager: Caller(pid=554,uid=1000,sid=u:r:system_server:s0) Since 'artd' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+11-16 03:39:11.169     0     0 I logd    : ReadPackageList, total packages: 219
+11-16 03:39:11.181     0     0 I init    : starting service 'artd'...
+11-16 03:39:11.017  1337  1337 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3157 
+11-16 03:39:11.017  1337  1337 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 0, locked = false
+11-16 03:39:11.017  1337  1337 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1986 onStartInput(EditorInfo{EditorInfo{packageName=dev.liquidsense.installcheck, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+11-16 03:39:11.019  1337  1337 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 1, locked = false
+11-16 03:39:11.019  1337  1337 I AndroidIME: InputBundleManager.loadActiveInputBundleId():450 loadActiveInputBundleId: und-Latn-x-password, password
+11-16 03:39:11.019   554  1559 W PackageConfigPersister: App-specific configuration not found for packageName: dev.liquidsense.installcheck and userId: 0
+11-16 03:39:11.024   355   355 I netd    : tetherGetStats() -> {[]} <0.70ms>
+11-16 03:39:11.038  3365  4475 I BugleDataModel: SubscriptionsTracker: insertSelfParticipant. participantId: 2, selfParticipantId: 2, subId: 1
+11-16 03:39:11.199     0     0 I init    : ... started service 'artd' has pid 4479
+11-16 03:39:11.219     0     0 I init    : Control message: Processed ctl.interface_start for 'aidl/artd' from pid: 143 (/system/bin/servicemanager)
+11-16 03:39:11.080  3365  4475 I Bugle   : getRawTelephonyPhoneNumber redacted-pii[12-chars] [CONTEXT sub_id=1 ]
+11-16 03:39:11.083  3365  4475 I Bugle   : SubscriptionUtils.getCanonicalForSelf: self=redacted-pii[12-chars], country=US [CONTEXT sub_id=1 ]
+11-16 03:39:11.094   423   538 D audioserver: logFgsApiEnd: FGS Logger Transaction failed, -129
+11-16 03:39:11.095  4479  4479 I artd    : Starting artd
+11-16 03:39:11.099  3365  4475 I Bugle   : CountryCodeDetector: updateSmsNetworkCountry from default subscription network country. detected country: us
+11-16 03:39:11.101  4479  4479 I AidlLazyServiceRegistrar: Registering service artd
+11-16 03:39:11.112  4479  4479 I AidlLazyServiceRegistrar: Process has 1 (of 1 available) client(s) in use after notification artd has clients: 1
+11-16 03:39:11.259     0     0 I servicemanager: Notifying artd they do (previously: don't) have clients when service is guaranteed to be in use
+11-16 03:39:11.270     0     0 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-16 03:39:11.120  3365  4475 I Bugle   : getRawTelephonyPhoneNumber redacted-pii[12-chars] [CONTEXT sub_id=1 ]
+11-16 03:39:11.126  3365  4475 I Bugle   : getRawTelephonyPhoneNumber redacted-pii[12-chars] [CONTEXT sub_id=1 ]
+11-16 03:39:11.132  3365  4475 I Bugle   : SubscriptionUtils.getCanonicalForSelf: self=redacted-pii[12-chars], country=US [CONTEXT sub_id=1 ]
+11-16 03:39:11.143  3365  4475 I Bugle   : getRawTelephonyPhoneNumber redacted-pii[12-chars] [CONTEXT sub_id=1 ]
+11-16 03:39:11.144  4479  4481 I artd    : Merge skipped because there are no existing profiles
+11-16 03:39:11.145   554   613 I ArtService: Adjusting the compiler filter for 'dev.liquidsense.chat.tools' from 'speed-profile' to 'verify' because there is no valid profile
+11-16 03:39:11.154  4479  4481 I artd    : Dex parent of /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk is not writable: Permission denied
+11-16 03:39:11.155  4479  4481 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.dex)
+11-16 03:39:11.155  4479  4481 I artd    : Loading /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.dex with executable: 0
+11-16 03:39:11.157  4479  4481 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.dex: File /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.vdex does not exist.
+11-16 03:39:11.157  4479  4481 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex)
+11-16 03:39:11.157  4479  4481 I artd    : Loading /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex with executable: 0
+11-16 03:39:11.157  4479  4481 I artd    : OatFileAssistant test for existing oat file /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex: File /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.vdex does not exist.
+11-16 03:39:11.157  4479  4481 I artd    : GetBestInfo checking vdex in dalvik-cache (/data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.vdex)
+11-16 03:39:11.157  4479  4481 I artd    : unable to open vdex file /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.vdex: File /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.vdex does not exist.
+11-16 03:39:11.157  4479  4481 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.vdex: File /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.vdex does not exist.
+11-16 03:39:11.157  4479  4481 I artd    : GetBestInfo checking vdex next to the dex file (/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.vdex)
+11-16 03:39:11.157  4479  4481 I artd    : unable to open vdex file /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.vdex: File /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.vdex does not exist.
+11-16 03:39:11.157  4479  4481 I artd    : OatFileAssistant test for existing oat file /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.vdex: File /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.vdex does not exist.
+11-16 03:39:11.157  4479  4481 I artd    : GetBestInfo checking dm (/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.dm)
+11-16 03:39:11.157  4479  4481 W ziparchive: Unable to open '/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.dm': No such file or directory
+11-16 03:39:11.157  4479  4481 I artd    : OatFileAssistant test for existing oat file /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.dm: I/O error
+11-16 03:39:11.157  4479  4481 I artd    : GetBestInfo checking dm (/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.dm)
+11-16 03:39:11.157  4479  4481 W ziparchive: Unable to open '/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.dm': No such file or directory
+11-16 03:39:11.157  4479  4481 I artd    : OatFileAssistant test for existing oat file /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.dm: I/O error
+11-16 03:39:11.157  4479  4481 I artd    : GetBestInfo no usable artifacts
+11-16 03:39:11.158  3365  4475 I BugleDataModel: SubscriptionsTracker bindToTrackingMap bound participants: [ParticipantId=1 subId=-1, ParticipantId=2 subId=1]
+11-16 03:39:11.163  3365  4475 I Bugle   : getRawTelephonyPhoneNumber redacted-pii[12-chars] [CONTEXT sub_id=1 ]
+11-16 03:39:11.164  3365  4475 I Bugle   : SubscriptionUtils.getCanonicalForSelf: self=redacted-pii[12-chars], country=US [CONTEXT sub_id=1 ]
+11-16 03:39:11.177  4479  4481 I artd    : Running dex2oat: /apex/com.android.art/bin/art_exec --drop-capabilities --set-task-profile=Dex2OatBootComplete --set-priority=background --keep-fds=7:8:9:10 -- /apex/com.android.art/bin/dex2oat64 --zip-fd=7 --zip-location=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk --oat-fd=8 --oat-location=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex --output-vdex-fd=9 --swap-fd=10 --class-loader-context=PCL[] --classpath-dir=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw== --instruction-set=x86_64 --instruction-set-features=default --instruction-set-variant=x86_64 --compiler-filter=verify --compilation-reason=install --compact-dex-level=none --max-image-block-size=524288 --resolve-startup-const-strings=true --generate-mini-debug-info --runtime-arg -Xtarget-sdk-version:35 --runtime-arg -Xhidden-api-policy:enabled --runtime-arg -Xms64m --runtime-arg -Xmx512m --comments=app-name:dev.liquidsense.chat.tools,app-version-name:0.6.3-install-preview,app-version-code:7,art-version:350820300
+11-16 03:39:11.177  4479  4481 I artd    : Opened FDs: 7:/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk 8:/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex.oVXlQ0.tmp 9:/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.vdex.BTKhuF.tmp 10:/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex.swap.NKRFZE.tmp 
+11-16 03:39:11.203  4482  4482 W dex2oat64: Obsolete flag --compact-dex-level ignored
+11-16 03:39:11.203  4482  4482 W dex2oat64: Unexpected CPU variant for x86: x86_64.
+11-16 03:39:11.203  4482  4482 W dex2oat64: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+11-16 03:39:11.204  4482  4482 W dex2oat64: Mismatch between dex2oat instruction set features to use (ISA: X86_64 Feature string: -ssse3,-sse4.1,-sse4.2,-avx,-avx2,-popcnt) and those from CPP defines (ISA: X86_64 Feature string: ssse3,sse4.1,sse4.2,-avx,-avx2,popcnt) for the command line:
+11-16 03:39:11.204  4482  4482 W dex2oat64: /apex/com.android.art/bin/dex2oat64 --zip-fd=7 --zip-location=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk --oat-fd=8 --oat-location=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex --output-vdex-fd=9 --swap-fd=10 --class-loader-context=PCL[] --classpath-dir=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw== --instruction-set=x86_64 --instruction-set-features=default --instruction-set-variant=x86_64 --compiler-filter=verify --compilation-reason=install --compact-dex-level=none --max-image-block-size=524288 --resolve-startup-const-strings=true --generate-mini-debug-info --runtime-arg -Xtarget-sdk-version:35 --runtime-arg -Xhidden-api-policy:enabled --runtime-arg -Xms64m --runtime-arg -Xmx512m --comments=app-name:dev.liquidsense.chat.tools,app-version-name:0.6.3-install-preview,app-version-code:7,art-version:350820300
+11-16 03:39:11.204  4482  4482 I dex2oat64: /apex/com.android.art/bin/dex2oat64 --output-vdex-fd=9 --class-loader-context=PCL[] --classpath-dir=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw== --compiler-filter=verify --compilation-reason=install --compact-dex-level=none --max-image-block-size=524288 --resolve-startup-const-strings=true --generate-mini-debug-info --comments=app-name:dev.liquidsense.chat.tools,app-version-name:0.6.3-install-preview,app-version-code:7,art-version:350820300
+11-16 03:39:11.206  4482  4482 I dex2oat64: Using CollectorTypeCMC GC.
+11-16 03:39:11.230  3365  4475 I BugleDataModel: ParticipantRefresh: No match contact, clear contact info
+11-16 03:39:11.240  3365  4475 I Bugle   : getRawTelephonyPhoneNumber redacted-pii[12-chars] [CONTEXT sub_id=1 ]
+11-16 03:39:11.241  3365  4475 I Bugle   : SubscriptionUtils.getCanonicalForSelf: self=redacted-pii[12-chars], country=US [CONTEXT sub_id=1 ]
+11-16 03:39:11.262  3365  4475 I BugleDataModel: ParticipantRefresh: No match contact, clear contact info
+11-16 03:39:11.264  4482  4482 I dex2oat64: dex2oat took 61.782ms (35.310ms cpu) (threads: 2) arena alloc=0B (0B) java alloc=96KB (98304B) native alloc=594KB (609120B) free=1166KB (1194640B)
+11-16 03:39:11.266  3365  4475 I BugleDataModel: ParticipantFullRefresh: Number of participants refreshed: 2
+11-16 03:39:11.268  4479  4481 I artd    : dex2oat returned code 0
+11-16 03:39:11.271   554   613 I ArtService: Dexopt result: [packageName = dev.liquidsense.chat.tools] DexContainerFileDexoptResult{dexContainerFile=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk, primaryAbi=true, abi=x86_64, actualCompilerFilter=verify, status=PERFORMED, dex2oatWallTimeMillis=92, dex2oatCpuTimeMillis=40, sizeBytes=124976, sizeBeforeBytes=0, extendedStatusFlags=[]}
+11-16 03:39:11.272   554   613 V BackupManagerService: [UserID:0] restoreAtInstall pkg=dev.liquidsense.chat.tools token=4 restoreSet=0
+11-16 03:39:11.272  3365  3474 I BugleDataModel: ActionExecutorImpl: Stopping ActionService
+11-16 03:39:11.273  3365  4475 I BugleDataModel: ActionExecutorImpl: ACTION_RESPONSE_QUEUED_SelfParticipantsRefreshAction
+11-16 03:39:11.277  3365  4487 I Bugle   : getRawTelephonyPhoneNumber redacted-pii[12-chars] [CONTEXT sub_id=1 ]
+11-16 03:39:11.279   554   554 I TransportConnection: BackupTransportService#3: Notifying [BMS.restoreAtInstall] transport = BackupTransportClient
+11-16 03:39:11.279  1396  1396 D Backup  : [BackupScheduler] Setting backup scheduler enabled=true due to desired state 1
+11-16 03:39:11.279  1396  1396 I Backup  : [GmsBackupAccountManager] Backup account not found in gmscore.
+11-16 03:39:11.281  1396  1396 V Backup  : [GmsBackupTransport] currentDestinationString: null
+11-16 03:39:11.281   554  1654 D BackupTransportManager: [UserID:0] Transport com.google.android.gms/.backup.BackupTransportService updated its attributes
+11-16 03:39:11.282  1396  2918 V Backup  : [LoggingUtil] Skipping agent logs: package is not allowlisted
+11-16 03:39:11.283  1396  2918 V Backup  : [LoggingUtil] Skipping agent logs: package is not allowlisted
+11-16 03:39:11.284  1217  4488 W ChimeraUtils: Module com.google.android.gms.backup_base missing resource null(0)
+11-16 03:39:11.284   554   613 V BackupManagerService: [UserID:0] Finishing install immediately
+11-16 03:39:11.286   554   613 I AppsFilter: interaction: PackageSetting{5bad5a com.android.microdroid.empty_payload/10189} -> PackageSetting{3e51d8c dev.liquidsense.chat.tools/10211} BLOCKED
+11-16 03:39:11.287   554   613 D PackageInstallerSession: Marking session 2107721076 as applied
+11-16 03:39:11.287  3365  4487 I Bugle   : SubscriptionUtils.getCanonicalForSelf: self=redacted-pii[12-chars], country=US [CONTEXT sub_id=1 ]
+11-16 03:39:11.289   554  1654 D CompatChangeReporter: Compat change id reported: 151861875; UID 10209; state: ENABLED
+11-16 03:39:11.289   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE
+11-16 03:39:11.289   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_FULLSCREEN_OVERRIDE
+11-16 03:39:11.289   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE
+11-16 03:39:11.289   554  1654 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10209, packageName = null, attributionTag = null, token = android.os.Binder@c04508b, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 03:39:11.290   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+11-16 03:39:11.290   554  1654 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+11-16 03:39:11.291  1162  1210 D SessionCommitReceiver: Removing PromiseIcon for package: dev.liquidsense.chat.tools, install reason: 0, alreadyAddedPromiseIcon: false
+11-16 03:39:11.294  1217  4488 V Backup  : [BackupAccountNotifier] Handling new intent. Show notification: true
+11-16 03:39:11.295   912   933 D KeyguardService: setOccluded(false)
+11-16 03:39:11.296   912   933 D KeyguardViewMediator: setOccluded(false)
+11-16 03:39:11.296   554  1654 I ActivityTaskManager: START u0 {flg=0x30000000 cmp=dev.liquidsense.installcheck/.MainActivity} with LAUNCH_MULTIPLE from uid 10209 (BAL_ALLOW_VISIBLE_WINDOW) result code=3
+11-16 03:39:11.296   912   965 D WindowManagerShell: onActivityRestartAttempt: ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity}
+11-16 03:39:11.296   912   912 D KeyguardViewMediator: handleSetOccluded(false)
+11-16 03:39:11.296   912   912 D KeyguardViewMediator: KeyguardViewMediator queue processing message: SET_OCCLUDED
+11-16 03:39:11.298  1081  1081 D CarrierSvcBindHelper: onPackageAdded: dev.liquidsense.chat.tools
+11-16 03:39:11.298  1081  1081 D CarrierSvcBindHelper: No carrier app for: 0
+11-16 03:39:11.300   554   836 E AppOps  : attributionTag VCN not declared in manifest of android
+11-16 03:39:11.301   554   859 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_ADDED on user 0
+11-16 03:39:11.302   554   886 I SdkSandboxManager: No SDKs used. Skipping SDK data reconcilation for CallingInfo{mUid=10211, mPackageName='dev.liquidsense.chat.tools, mAppProcessToken='null'}
+11-16 03:39:11.308   554   554 D TransparencyService: Not an update. Skipping...
+11-16 03:39:11.316   554   898 D ActivityManager: sync unfroze 913 com.google.android.permissioncontroller for 6
+11-16 03:39:11.320   554   660 I RoleService: Granting default roles...
+11-16 03:39:11.332   554  1028 W Role    : Default holder doesn't have required signing certificate: com.google.android.retaildemo:6547c73dee150c103980bfdffe55cc9a011d785dd694a5f99afd8205bcaf1f80
+11-16 03:39:11.332   554  1028 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+11-16 03:39:11.336   554  1028 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+11-16 03:39:11.358  1081  1081 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-16 03:39:11.361   554  1559 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10135, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.362   554  1028 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.WALLET
+11-16 03:39:11.377   554  1028 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.devicelockcontroller, role: android.app.role.SYSTEM_FINANCED_DEVICE_CONTROLLER
+11-16 03:39:11.380   554   554 I AppsFilter: interaction: PackageSetting{571bb5a com.android.microdroid.empty_payload/10189} -> PackageSetting{a1e618b dev.liquidsense.chat.tools/10211} BLOCKED
+11-16 03:39:11.385   554   871 D ShortcutService: received package broadcast intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) }
+11-16 03:39:11.385   554   871 D ShortcutService: adding package: dev.liquidsense.chat.tools userId0
+11-16 03:39:11.385   554   871 D ShortcutService: handlePackageAdded: dev.liquidsense.chat.tools user=0
+11-16 03:39:11.385   554   871 D ShortcutService: rescanPackageIfNeeded 0@dev.liquidsense.chat.tools, forceRescan=true , isNewApp=true
+11-16 03:39:11.387   554   859 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_CHANGED on user 0
+11-16 03:39:11.389   554   871 D ShortcutService: Package dev.liquidsense.chat.tools has 0 manifest shortcut(s), and 0 share target(s)
+11-16 03:39:11.390  1081  1081 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-16 03:39:11.390   554   871 D ShortcutService: received package broadcast intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x5000010 (has extras) }
+11-16 03:39:11.390   554   871 D ShortcutService: changing package: dev.liquidsense.chat.tools userId0
+11-16 03:39:11.390   554   871 D ShortcutService: handlePackageChanged: dev.liquidsense.chat.tools user=0
+11-16 03:39:11.390   554   871 D ShortcutService: rescanPackageIfNeeded 0@dev.liquidsense.chat.tools, forceRescan=true , isNewApp=true
+11-16 03:39:11.390   554  1559 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.391   554   871 D ShortcutService: Package dev.liquidsense.chat.tools has 0 manifest shortcut(s), and 0 share target(s)
+11-16 03:39:11.391   554  1559 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.392   554  1559 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.393   554  1559 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.393   554  1559 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.399  1081  1282 D ImsResolver: maybeAddedImsService, packageName: dev.liquidsense.chat.tools
+11-16 03:39:11.401   913  4492 I PermissionControllerServiceImpl: Updating user sensitive for uid 10211
+11-16 03:39:11.402   913  4492 I PermissionControllerServiceImpl: Updating user sensitive for uid 10211
+11-16 03:39:11.409   913   913 I SafetyLabelChangedBroadcastReceiver: received broadcast packageName: dev.liquidsense.chat.tools, current user: UserHandle{0}, packageChangeEvent: NEW_INSTALL, intent user: UserHandle{0}
+11-16 03:39:11.412  1081  1081 D CarrierSvcBindHelper: onPackageModified: dev.liquidsense.chat.tools
+11-16 03:39:11.412  1081  1081 D CarrierSvcBindHelper: No carrier app for: 0
+11-16 03:39:11.414  1081  1081 E SmsApplication: com.google.android.apps.messaging lost android:read_cell_broadcasts:  (fixing)
+11-16 03:39:11.414   554  1559 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 10135, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.415  1081  1081 E CellBroadcastUtils: getDefaultCellBroadcastReceiverPackageName: no package found
+11-16 03:39:11.415   554  1654 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.415   554  1654 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.415   554  1654 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = RECEIVE_WAP_PUSH, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.415   554  1559 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = SEND_SMS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.415   554  1559 W AppOpService: Ignored setUidMode call for runtime permission app op: uid = 1001, code = READ_CELL_BROADCASTS, mode = allow, callingUid = 1001, oldMode = allow
+11-16 03:39:11.417  3365  4487 I BugleSelfIdentity: Create new MyIdentity 7b7293e7-bb42-4054-bad6-c5972804c677, existing identities on SIM 0 [CONTEXT sub_id=1 ]
+11-16 03:39:11.417  1081  1282 D ImsResolver: maybeAddedImsService, packageName: dev.liquidsense.chat.tools
+11-16 03:39:11.428   554   588 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-16 03:39:11.428  1460  2241 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+11-16 03:39:11.429  1162  1210 D PackageUpdatedTask: Package updated: mOp=ADD packages=[dev.liquidsense.chat.tools]
+11-16 03:39:11.429   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.429   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.429   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.430  1460  1693 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+11-16 03:39:11.430  1460  1693 I AiAiEcho: EchoTargets: 
+11-16 03:39:11.430  1460  1693 I AiAiEcho: Filtered by AiAi flag check: 
+11-16 03:39:11.430  1460  1693 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+11-16 03:39:11.430  1460  1693 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+11-16 03:39:11.430  1460  1693 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-16 03:39:11.430  1460  1693 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+11-16 03:39:11.430  1460  1693 I AiAiEcho: EchoTargets: 
+11-16 03:39:11.430  1460  1693 I AiAiEcho: Filtered by AiAi flag check: 
+11-16 03:39:11.430  1460  1693 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+11-16 03:39:11.430  1460  1693 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+11-16 03:39:11.430  1460  1693 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-16 03:39:11.431  1460  1693 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+11-16 03:39:11.431  1460  1693 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+11-16 03:39:11.431   554   588 W PackageManager: Failed registering loading progress callback. Package is fully loaded.
+11-16 03:39:11.431   912   912 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+11-16 03:39:11.433   554   588 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-16 03:39:11.433  1460  1460 I AiAiEcho: AppFetcherImplV2 updateApps package:[dev.liquidsense.chat.tools], userId:[0], reason:[package is added.].
+11-16 03:39:11.433   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.433   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.433   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.436   554  1654 D ShortcutService: Getting shortcuts for launcher= com.google.android.asuser=0 pkg=null
+11-16 03:39:11.437  1460  1460 I AiAiEcho: AppFetcherImpl onPackageChanged dev.liquidsense.chat.tools.
+11-16 03:39:11.438  1460  2382 I AiAiEcho: AppIndexer Package:[dev.liquidsense.chat.tools] UserProfile:[0] Enabled:[true].
+11-16 03:39:11.438  1460  2382 I AiAiEcho: AppFetcherImplV2 updateApps package:[dev.liquidsense.chat.tools], userId:[0], reason:[package is updated.].
+11-16 03:39:11.442   554   573 I AppWidgetServiceImpl: getInstalledProvidersForProfiles() 0
+11-16 03:39:11.443   554   573 W ParceledListSlice: Element #25 is 19764 bytes.
+11-16 03:39:11.443   554   573 W ParceledListSlice: Element #26 is 19800 bytes.
+11-16 03:39:11.443   554   573 W ParceledListSlice: Element #27 is 19644 bytes.
+11-16 03:39:11.443   554   573 W ParceledListSlice: Element #28 is 19552 bytes.
+11-16 03:39:11.443   554   573 W ParceledListSlice: Element #29 is 19664 bytes.
+11-16 03:39:11.444  1460  1904 W PackageManager: Failure retrieving text 0x7f130786 in package com.android.systemui
+11-16 03:39:11.444  1460  1904 W PackageManager: android.content.res.Resources$NotFoundException: String resource ID #0x7f130786
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at android.content.res.Resources.getText(Resources.java:466)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at android.app.ApplicationPackageManager.getText(ApplicationPackageManager.java:2405)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at android.appwidget.AppWidgetProviderInfo.loadDescription(AppWidgetProviderInfo.java:484)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at kml.a(PG:341)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at kmg.b(PG:39)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at aaer.g(PG:13)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at kotlinx.coroutines.DispatchedTask.run(PG:114)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at wqm.a(PG:3)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at wpo.run(PG:21)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at wqn.run(PG:5)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:307)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at hqv.run(PG:221)
+11-16 03:39:11.444  1460  1904 W PackageManager: 	at java.lang.Thread.run(Thread.java:1012)
+11-16 03:39:11.454  1460  1904 I AiAiEcho: EchoSearch: WidgetFetcherImpl is initialized with [33] widgets [reason=package added for userId: 0]
+11-16 03:39:11.459   554   573 I AppWidgetServiceImpl: getInstalledProvidersForProfiles() 0
+11-16 03:39:11.464  1460  1749 I AiAiStatsd: Successfully logged feature enablement for HYBRID_HOTSEAT.
+11-16 03:39:11.468  1162  1210 D PackageUpdatedTask: Package updated: mOp=UPDATE packages=[dev.liquidsense.chat.tools]
+11-16 03:39:11.468  1460  1749 I AiAiStatsd: Successfully logged feature enablement for ECHO_ALL_APPS.
+11-16 03:39:11.508   554   569 I system_server: Background concurrent mark compact GC freed 13MB AllocSpace bytes, 29(608KB) LOS objects, 47% free, 26MB/50MB, paused 497us,937us total 221.246ms
+11-16 03:39:11.510   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/InputDevices/InputDevices.apk' with 1 weak references
+11-16 03:39:11.511   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/LatinIMEGooglePrebuilt/LatinIMEGooglePrebuilt.apk' with 1 weak references
+11-16 03:39:11.511   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/GoogleTTS/GoogleTTS.apk' with 1 weak references
+11-16 03:39:11.511   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/Velvet/Velvet.apk' with 1 weak references
+11-16 03:39:11.511   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk' with 1 weak references
+11-16 03:39:11.511   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/PrebuiltGmail/PrebuiltGmail.apk' with 1 weak references
+11-16 03:39:11.512   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Drive/Drive.apk' with 1 weak references
+11-16 03:39:11.512   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/CalendarGooglePrebuilt/CalendarGooglePrebuilt.apk' with 1 weak references
+11-16 03:39:11.512   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/app/AccessibilityMenu/AccessibilityMenu.apk' with 1 weak references
+11-16 03:39:11.512   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '/product/overlay/AccessibilityMenu__sdk_gphone64_x86_64__auto_generated_rro_product.apk' with 1 weak references
+11-16 03:39:11.512   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/talkback/talkback.apk' with 1 weak references
+11-16 03:39:11.512   554   571 W system_server: ApkAssets: Deleting an ApkAssets object '/vendor/overlay/EmulatorTalkBackOverlay/EmulatorTalkBackOverlay.apk' with 1 weak references
+11-16 03:39:11.618   554   573 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+11-16 03:39:11.619   554   573 D AccessibilityManagerService: restoreCurrentUserForTestAutomationIfNeededLocked(): ignoring because device doesn't support visible background users
+11-16 03:39:11.619  1460  2241 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+11-16 03:39:11.619   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.619  1460  1693 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+11-16 03:39:11.620   554   573 I ActivityManager: Force stopping dev.liquidsense.installcheck appid=10209 user=0: finished inst
+11-16 03:39:11.621  4076  4076 I app_process: System.exit called, status: 0
+11-16 03:39:11.622  4076  4076 I AndroidRuntime: VM exiting with result code 0.
+11-16 03:39:11.622   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.622   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.622   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.623   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.623   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.623  1460  1693 I AiAiEcho: EchoTargets: 
+11-16 03:39:11.623  1460  1693 I AiAiEcho: Filtered by AiAi flag check: 
+11-16 03:39:11.623  1460  1693 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+11-16 03:39:11.624  1460  1693 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+11-16 03:39:11.624   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.626   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.626   554   554 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:11.626   554   554 D BatterySaverPolicy: accessibility changed to false, updating policy.
+11-16 03:39:11.626  1460  1693 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-16 03:39:11.778     0     0 I binder  : 554:573 ioctl 400c620e 7f33404ee354 returned -11
+11-16 03:39:11.782     0     0 I binder  : 554:573 ioctl 400c620e 7f33404ee354 returned -11
+11-16 03:39:11.627  1460  1693 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+11-16 03:39:11.627   554   573 E ActivityManager: Unable to freeze binder for 4121: -11
+11-16 03:39:11.628   554   573 I ActivityManager: Killing 4121:dev.liquidsense.installcheck/u0a209 (adj 0): stop dev.liquidsense.installcheck due to finished inst
+11-16 03:39:11.629   554   573 W ActivityTaskManager: Force removing ActivityRecord{1528615 u0 dev.liquidsense.installcheck/.MainActivity t10 f}}: app died, no saved state
+11-16 03:39:11.627  1460  1693 I AiAiEcho: EchoTargets: 
+11-16 03:39:11.627  1460  1693 I AiAiEcho: Filtered by AiAi flag check: 
+11-16 03:39:11.627  1460  1693 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+11-16 03:39:11.629  1460  1693 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:  [CONTEXT ratelimit_period="10 SECONDS" ]
+11-16 03:39:11.629  1460  1693 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+11-16 03:39:11.630   554   578 D DisplayManagerService: Drop pending events for gone uid 10209
+11-16 03:39:11.632   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 03:39:11.632  2466  2466 D VRI[PackageInstallerActivity]: visibilityChanged oldVisibility=false newVisibility=true
+11-16 03:39:11.634  1460  1693 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+11-16 03:39:11.634  1460  1693 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+11-16 03:39:11.635   912   965 V WindowManagerShell: Transition requested (#32): android.os.BinderProxy@f642a3c TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=10 displayId=0 isRunning=false baseIntent=Intent { flg=0x10008000 cmp=dev.liquidsense.installcheck/.MainActivity } baseActivity=null topActivity=null origActivity=null realActivity=ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity} numActivities=0 lastActiveTime=200268 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@8ec73c5} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= falseisLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatControlState=hidden freeformCameraCompatMode=inactive}}}, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 32 }
+11-16 03:39:11.640  1162  1162 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=11, baseIntent=Intent { act=android.content.pm.action.CONFIRM_INSTALL flg=0x10800000 pkg=com.google.android.packageinstaller cmp=com.google.android.packageinstaller/com.android.packageinstaller.InstallStart }
+11-16 03:39:11.798     0     0 W binder_debug: 25 callbacks suppressed
+11-16 03:39:11.798     0     0 I binder  : release 4076:4120 transaction 383015 in, still active
+11-16 03:39:11.642   427   427 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-16 03:39:11.644  2466  4457 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+11-16 03:39:11.644  2466  4457 I EGL_emulation: Opening libGLESv2_emulation.so
+11-16 03:39:11.659  2466  4457 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-16 03:39:11.661   912   912 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+11-16 03:39:11.661   554  4493 W ActivityManager: pid 554 system sent binder code 2 with flags 0 to frozen apps and got error -32
+11-16 03:39:11.661   554  4493 I ActivityManager: Failure reporting to instrumentation watcher: comp=ComponentInfo{dev.liquidsense.installcheck.smoke/dev.liquidsense.installcheck.Smoke} results=Bundle[mParcelledData.dataSize=2128]
+11-16 03:39:11.664   361   361 I Zygote  : Process 4121 exited due to signal 9 (Killed)
+11-16 03:39:11.816     0     0 I binder  : send failed reply for transaction 383015 to 554:4493
+11-16 03:39:11.821     0     0 I binder  : undelivered transaction 383092, process died.
+11-16 03:39:11.823     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+11-16 03:39:11.824     0     0 I binder  : undelivered transaction 383161, process died.
+11-16 03:39:11.668   554  1559 I WindowManager: WIN DEATH: Window{6ecf69b u0 dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity}
+11-16 03:39:11.669   554  1559 W InputManager-JNI: Input channel object '6ecf69b dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity (client)' was disposed without first being removed with the input manager!
+11-16 03:39:11.669   554  1559 I ImeTracker: dev.liquidsense.installcheck:4b5fc468: onRequestHide at ORIGIN_SERVER reason HIDE_REMOVE_CLIENT fromUser false
+11-16 03:39:11.670   554  1568 V ActivityManager: Got obituary of 4121:dev.liquidsense.installcheck
+11-16 03:39:11.670   554  1559 I ImeTracker: dev.liquidsense.installcheck:4b5fc468: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-16 03:39:11.671   554   580 W ActivityManager: setHasOverlayUi called on unknown pid: 4121
+11-16 03:39:11.672   554   581 W ActivityTaskManager: Unable to send transaction to client proc dev.liquidsense.installcheck: no app thread
+11-16 03:39:11.672   554  1654 I AppWidgetServiceImpl: startListening() 0
+11-16 03:39:11.673   912   965 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=false, height=527
+11-16 03:39:11.674   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 03:39:11.675  1162  1162 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=6}
+11-16 03:39:11.675   554   830 D InetDiagMessage: Destroyed live tcp sockets for uids={10209} in 44ms
+11-16 03:39:11.679   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 03:39:11.683   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 03:39:11.683   554   830 D InetDiagMessage: Destroyed live tcp sockets for uids={20209} in 8ms
+11-16 03:39:11.691   554   580 V WindowManager: Unknown focus tokens, dropping reportFocusChanged
+11-16 03:39:11.692   554   591 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_10209/pid_4121
+11-16 03:39:11.694  1162  1162 I SsCardPagerAdapter: [rmv] Rendering flag - enabled: false 
+11-16 03:39:11.694  1162  1162 I SsCardPagerAdapter: Use UI template for the feature: 1
+11-16 03:39:11.721  1162  1162 D SsBaseTemplateCard: No text view can be set up
+11-16 03:39:11.721  1162  1162 D SsBaseTemplateCard: Passed-in item info is null
+11-16 03:39:11.721  1162  1162 D SsBaseTemplateCard: Passed-in item info is null
+11-16 03:39:11.721  1162  1162 D SsBaseTemplateCard: Passed-in item info is null
+11-16 03:39:11.721  1162  1162 I SsBaseTemplateCard: Secondary card pane is null
+11-16 03:39:11.739  1162  1162 D BaseDepthController: setSurface:
+11-16 03:39:11.739  1162  1162 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-16 03:39:11.739  1162  1162 D BaseDepthController: 	mSurface: Surface(name=com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity)/@0x8d1fdd
+11-16 03:39:11.800  1490  1490 I GsaVoiceInteractionSrv: (REDACTED) O received %s
+11-16 03:39:11.801   912   912 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+11-16 03:39:11.804   912   912 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+11-16 03:39:11.827   554  1650 D ActivityManager: sync unfroze 1758 com.google.android.googlequicksearchbox:search for 6
+11-16 03:39:11.847  4479  4480 I artd    : Dex parent of /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk is not writable: Permission denied
+11-16 03:39:11.847  4479  4480 I artd    : GetBestInfo checking odex in dalvik-cache (/data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.dex)
+11-16 03:39:11.847  4479  4480 I artd    : Loading /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.dex with executable: 0
+11-16 03:39:11.847  4479  4480 I artd    : OatFileAssistant test for existing oat file /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.dex: File /data/dalvik-cache/x86_64/data@app@~~4arnjxNIIPi1bHDHfbzlJA==@dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==@base.apk@classes.vdex does not exist.
+11-16 03:39:11.847  4479  4480 I artd    : GetBestInfo checking odex next to the dex file (/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex)
+11-16 03:39:11.847  4479  4480 I artd    : Loading /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex with executable: 0
+11-16 03:39:11.847  4479  4480 I artd    : Successfully loaded /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex with executable: 0
+11-16 03:39:11.848  4479  4480 I artd    : /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/oat/x86_64/base.odex is kOatUpToDate with filter verify
+11-16 03:39:11.864  1758  1913 I A       : NGA enabled in interactor.
+11-16 03:39:11.865  1758  1913 I A       : NGA enabled in interactor.
+11-16 03:39:11.873  1217  4488 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x5000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+11-16 03:39:11.997  1217  4488 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+11-16 03:39:12.005  1162  1162 D SsBaseTemplateCard: No text view can be set up
+11-16 03:39:12.006  1162  1162 D SsBaseTemplateCard: Passed-in item info is null
+11-16 03:39:12.007  1162  1162 D SsBaseTemplateCard: Passed-in item info is null
+11-16 03:39:12.008  1162  1162 D SsBaseTemplateCard: Passed-in item info is null
+11-16 03:39:12.008  1162  1162 I SsBaseTemplateCard: Secondary card pane is null
+11-16 03:39:12.009  1162  1162 D StatsLog: LAUNCHER_ALLAPPS_COUNT
+11-16 03:39:12.024  1217  4489 I ProximityAuth: [RecentAppsMediator] Package added: (user=UserHandle{0}) dev.liquidsense.chat.tools
+11-16 03:39:12.058   355   355 I netd    : tetherGetStats() -> {[]} <0.32ms>
+11-16 03:39:12.058  1217  4504 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+11-16 03:39:12.061  1217  4508 I FontLog : Package dev.liquidsense.chat.tools has no metadata [CONTEXT service_id=132 ]
+11-16 03:39:12.061  1217  4488 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x5000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+11-16 03:39:12.061  1217  4508 W NetworkScheduler: Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+11-16 03:39:12.061  1217  4509 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+11-16 03:39:12.107   554  1563 W ActivityTaskManager: callingPackage for (uid=0, pid=4505) has no WPC
+11-16 03:39:12.111   554  1563 D CompatChangeReporter: Compat change id reported: 151861875; UID 10211; state: ENABLED
+11-16 03:39:12.111   554  1563 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE
+11-16 03:39:12.111   554  1563 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_FULLSCREEN_OVERRIDE
+11-16 03:39:12.111   554  1563 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE
+11-16 03:39:12.112   554  1563 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10211, packageName = null, attributionTag = null, token = android.os.Binder@c04508b, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 03:39:12.119   554  1563 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+11-16 03:39:12.119   554  1563 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+11-16 03:39:12.159   554  1563 V SplashScreenExceptionList: SplashScreen checking exception for package dev.liquidsense.chat.tools (target sdk:35) -> false
+11-16 03:39:12.164  1396  1396 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+11-16 03:39:12.164  1396  1396 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+11-16 03:39:12.167   554  1563 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity} with LAUNCH_MULTIPLE from uid 0 (BAL_ALLOW_ALLOWLISTED_UID) result code=0
+11-16 03:39:12.168   554   580 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10211, packageName = null, attributionTag = null, token = android.os.Binder@c04508b, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 03:39:12.172   554  1559 D CompatChangeReporter: Compat change id reported: 309578419; UID 10211; state: ENABLED
+11-16 03:39:12.174   912  1010 W ShellStartingWindow: Window background does not exist, using android.graphics.drawable.ColorDrawable@267ae28
+11-16 03:39:12.180  1396  4519 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): android.intent.action.PACKAGE_ADDED
+11-16 03:39:12.181  1396  4519 V Backup  : [PhotosPackagedAddedIO] Flag is disabled.
+11-16 03:39:12.183  2466  2466 I Choreographer: Skipped 31 frames!  The application may be doing too much work on its main thread.
+11-16 03:39:12.188  1396  4526 I Dck     : disableDckSupport: false [CONTEXT service_id=289 ]
+11-16 03:39:12.188  1396  4526 I Dck     : doesDeviceHaveSupportedWirelessCapabilities: wccSysProp:0, wccMendel:3, deviceWccOverride:false [CONTEXT service_id=289 ]
+11-16 03:39:12.188  1396  4526 I Dck     : Dck module condition - hasWccSupport: false [CONTEXT service_id=289 ]
+11-16 03:39:12.188  1396  4526 I Dck     : Dck module condition - downloadAllowed: false [CONTEXT service_id=289 ]
+11-16 03:39:12.188  1396  4526 W Dck     : Dck module not eligible for asynchronous downloading [CONTEXT service_id=289 ]
+11-16 03:39:12.199   361   361 I Zygote  : Entering forkRepeatedly native zygote loop
+11-16 03:39:12.212   361   361 D Zygote  : Forked child process 4531
+11-16 03:39:12.235   554   590 W ActivityManager: Slow operation: 64ms so far, now at startProcess: done updating battery stats
+11-16 03:39:12.237   554   590 W ActivityManager: Slow operation: 66ms so far, now at startProcess: building log message
+11-16 03:39:12.237   554   590 I ActivityManager: Start proc 4531:dev.liquidsense.chat.tools/u0a211 for next-top-activity {dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity}
+11-16 03:39:12.237   554   590 W ActivityManager: Slow operation: 66ms so far, now at startProcess: starting to update pids map
+11-16 03:39:12.248  4531  4531 I ense.chat.tools: Using CollectorTypeCMC GC.
+11-16 03:39:12.250  4531  4531 W ense.chat.tools: Unexpected CPU variant for x86: x86_64.
+11-16 03:39:12.250  4531  4531 W ense.chat.tools: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+11-16 03:39:12.258  1162  1162 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=12, baseIntent=Intent { flg=0x10000000 cmp=dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity }
+11-16 03:39:12.271   554   590 W ActivityManager: Slow operation: 100ms so far, now at startProcess: done updating pids map
+11-16 03:39:12.281  1396  4521 I Blockstore: [DataStoreImpl] Clearing Blockstore Data for package dev.liquidsense.chat.tools [CONTEXT service_id=258 ]
+11-16 03:39:12.300   554  1650 D OomAdjuster: Not killing cached processes
+11-16 03:39:12.307  1396  4521 I Blockstore: [DataStoreImpl] Keyless data not found or its IsLastInstallationData = false. [CONTEXT service_id=258 ]
+11-16 03:39:12.312  4531  4531 I berberis: Initialized Berberis (aarch64), version 0.2.3
+11-16 03:39:12.323   912  1010 D SplashScreenView: Build android.window.SplashScreenView{c2ad835 V.E...... ......ID 0,0-0,0}
+11-16 03:39:12.323   912  1010 D SplashScreenView: Icon: view: android.widget.ImageView{a1c64ca V.ED..... ......I. 0,0-0,0 #1020504 android:id/splashscreen_icon_view} drawable: com.android.wm.shell.startingsurface.SplashscreenIconDrawableFactory$ImmobileIconDrawable@308a63b size: 420
+11-16 03:39:12.323   912  1010 D SplashScreenView: Branding: view: android.view.View{9f6f158 G.ED..... ......I. 0,0-0,0 #1020503 android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-16 03:39:12.336  1460  2307 I AiAiTextClassifier: [VisualCortexAdapter]: provideRegistration: Registered Prominent Screen Entities for updates.
+11-16 03:39:12.339   554   574 D CoreBackPreview: Window{f89ee92 u0 Splash Screen dev.liquidsense.chat.tools}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@146dcc7, mPriority=0, mIsAnimationCallback=false}
+11-16 03:39:12.351  1460  2307 I AiAiTextClassifier: [VisualCortexAdapter]: provideRegistration: Registered Prominent Screen Entities for updates.
+11-16 03:39:12.356  1460  2307 I AiAiTextClassifier: [VisualCortexAdapter]: provideRegistration: Registered Prominent Screen Entities for updates.
+11-16 03:39:12.359   554  1649 D CoreBackPreview: Window{f41e7a9 u0 com.google.android.packageinstaller/com.android.packageinstaller.PackageInstallerActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@b5ad2f4, mPriority=0, mIsAnimationCallback=false}
+11-16 03:39:12.482  1396  4448 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms
+11-16 03:39:12.485  2466  2494 I HWUI    : Davey! duration=813ms; Flags=1, FrameTimelineVsyncId=46408, IntendedVsync=201263699282, Vsync=201780365928, InputEventId=0, HandleInputStart=201788833075, AnimationStart=201788833325, PerformTraversalsStart=201788842479, DrawStart=201980962823, FrameDeadline=201280365948, FrameInterval=201788577767, FrameStartTime=16666666, SyncQueued=201981317027, SyncStart=201984303045, IssueDrawCommandsStart=201995396699, SwapBuffers=202030090267, FrameCompleted=202080517530, DequeueBufferDuration=2073, QueueBufferDuration=123733, GpuCompleted=202080517530, SwapBuffersCompleted=202072959667, DisplayPresentTime=0, CommandSubmissionCompleted=202030090267, 
+11-16 03:39:12.489   554  1650 I AppsFilter: interaction: PackageSetting{571bb5a com.android.microdroid.empty_payload/10189} -> PackageSetting{5177b19 dev.liquidsense.chat.tools/10211} BLOCKED
+11-16 03:39:12.500   554   859 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_UNSTOPPED on user 0
+11-16 03:39:12.500   554   859 I AppWidgetServiceImpl: Updating package stopped masked state for uid 10211 package dev.liquidsense.chat.tools isStopped false
+11-16 03:39:12.504  4531  4531 E ense.chat.tools: Not starting debugger since process cannot load the jdwp agent.
+11-16 03:39:12.523  4531  4531 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-16 03:39:12.528  1396  4448 I Icing   : Indexing done com.google.android.gms-internal.3p:MobileApplication
+11-16 03:39:12.531  1396  4448 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms
+11-16 03:39:12.532  1396  4448 I Icing   : Indexing done com.google.android.gms-internal.3p:MobileApplication
+11-16 03:39:12.566  4531  4531 D nativeloader: Configuring clns-7 for other apk /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/lib/arm64:/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/dev.liquidsense.chat.tools
+11-16 03:39:12.571  4531  4531 D CompatChangeReporter: Compat change id reported: 202956589; UID 10211; state: ENABLED
+11-16 03:39:12.573  4531  4531 V GraphicsEnvironment: Currently set values for:
+11-16 03:39:12.573  4531  4531 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-16 03:39:12.573  4531  4531 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-16 03:39:12.574  4531  4531 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+11-16 03:39:12.574  4531  4531 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-16 03:39:12.577   554   574 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ENABLE_FAKE_FOCUS
+11-16 03:39:12.577   554   574 D CompatChangeReporter: Compat change id reported: 324203798; UID 10211; state: ENABLED
+11-16 03:39:12.648   912  2796 V WindowManagerShell: onTransitionReady(transaction=2379411882929)
+11-16 03:39:12.658   912   965 V WindowManagerShell: onTransitionReady (#32) android.os.BinderProxy@f642a3c: {id=32 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@340a60f} m=OPEN f=MOVE_TO_TOP leash=Surface(name=Task=12)/@0xff7a1b3 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@3b9769c} m=CLOSE f=NONE leash=Surface(name=Task=10)/@0x3269370 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{2395c04 token=android.os.Binder@b74a017})/@0xf916e9 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+11-16 03:39:12.658   912   965 V WindowManagerShell: Playing animation for (#32) android.os.BinderProxy@f642a3c@0
+11-16 03:39:12.662   912   965 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultMixedHandler@bb4e92f
+11-16 03:39:12.662   912   965 V WindowManagerShell:  try handler com.android.wm.shell.keyguard.KeyguardTransitionHandler@46dcb3c
+11-16 03:39:12.662   912   965 V WindowManagerShell:  try handler com.android.wm.shell.pip.PipTransition@31400c5
+11-16 03:39:12.662   912   965 V WindowManagerShell:  try handler com.android.wm.shell.activityembedding.ActivityEmbeddingController@51e8a1a
+11-16 03:39:12.662   912   965 V WindowManagerShell:  try handler com.android.wm.shell.recents.RecentsTransitionHandler@630e94b
+11-16 03:39:12.662   912   965 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+11-16 03:39:12.662   912   965 V WindowManagerShell:  try handler com.android.wm.shell.splitscreen.StageCoordinator@4ea5f28
+11-16 03:39:12.662   912   965 V WindowManagerShell:  try handler com.android.wm.shell.transition.RemoteTransitionHandler@1b8e441
+11-16 03:39:12.662   912   965 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=32 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@340a60f} m=OPEN f=MOVE_TO_TOP leash=Surface(name=Task=12)/@0xff7a1b3 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@3b9769c} m=CLOSE f=NONE leash=Surface(name=Task=10)/@0x3269370 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{2395c04 token=android.os.Binder@b74a017})/@0xf916e9 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+11-16 03:39:12.662   912   965 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[OPEN,TO_FRONT] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@5b4de5b, appThread = android.app.IApplicationThread$Stub$Proxy@f2496f8, debugName = OverlaySwipeBack }}
+11-16 03:39:12.663   912   965 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@46407d1, appThread = android.app.IApplicationThread$Stub$Proxy@59f3236, debugName = LauncherToDream }}
+11-16 03:39:12.663   912   965 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@1d90537, appThread = android.app.IApplicationThread$Stub$Proxy@8882aa4, debugName = QuickstepLaunchHome }}
+11-16 03:39:12.663   912   965 V WindowManagerShell:  Delegate animation for (#32) to null
+11-16 03:39:12.663   912   965 V WindowManagerShell:  try handler com.android.wm.shell.transition.DefaultTransitionHandler@c8b2de6
+11-16 03:39:12.663   912   965 V WindowManagerShell: start default transition animation, info = {id=32 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{android.window.IWindowContainerToken$Stub$Proxy@340a60f} m=OPEN f=MOVE_TO_TOP leash=Surface(name=Task=12)/@0xff7a1b3 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{WCT{android.window.IWindowContainerToken$Stub$Proxy@3b9769c} m=CLOSE f=NONE leash=Surface(name=Task=10)/@0x3269370 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},{null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{2395c04 token=android.os.Binder@b74a017})/@0xf916e9 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}]}
+11-16 03:39:12.669   912   965 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@66b942b animAttr=0xb type=CLOSE isEntrance=false
+11-16 03:39:12.703   554   577 V WindowManager: Sent Transition (#32) createdAt=11-16 03:39:11.629 via request=TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=10 displayId=0 isRunning=false baseIntent=Intent { flg=0x10008000 cmp=dev.liquidsense.installcheck/.MainActivity } baseActivity=null topActivity=null origActivity=null realActivity=ComponentInfo{dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity} numActivities=0 lastActiveTime=200268 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{46a248d Task{d8ec7fc #10 type=standard A=10209:dev.liquidsense.installcheck}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= falseisLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false cameraCompatTaskInfo=CameraCompatTaskInfo { cameraCompatControlState=hidden freeformCameraCompatMode=inactive}}}, pipTask = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 32 }
+11-16 03:39:12.703   554   577 V WindowManager:     startWCT=WindowContainerTransaction { changes = {} hops = [] errorCallbackToken=null taskFragmentOrganizer=null }
+11-16 03:39:12.703   554   577 V WindowManager:     info={id=32 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+11-16 03:39:12.703   554   577 V WindowManager:         {WCT{RemoteToken{b6093f2 Task{8fd21e8 #12 type=standard A=10211:dev.liquidsense.chat.tools}}} m=OPEN f=MOVE_TO_TOP leash=Surface(name=Task=12)/@0x942db54 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},
+11-16 03:39:12.703   554   577 V WindowManager:         {WCT{RemoteToken{46a248d Task{d8ec7fc #10 type=standard A=10209:dev.liquidsense.installcheck}}} m=CLOSE f=NONE leash=Surface(name=Task=10)/@0x92a72f4 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0 taskParent=-1},
+11-16 03:39:12.703   554   577 V WindowManager:         {null m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{2395c04 token=android.os.Binder@b74a017})/@0x5770f47 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) d=0}
+11-16 03:39:12.703   554   577 V WindowManager:     ]}
+11-16 03:39:12.730   554   581 W ActivityTaskManager: Unable to send transaction to client proc dev.liquidsense.installcheck: no app thread
+11-16 03:39:12.733   912   965 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@610d75d animAttr=0xa type=CLOSE isEntrance=true
+11-16 03:39:12.742   554  1649 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:12.748   554   581 W ActivityTaskManager: Unable to send transaction to client proc dev.liquidsense.installcheck: no app thread
+11-16 03:39:12.752  4531  4531 D nativeloader: Load /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/lib/arm64/libliquid_sense.so using ns clns-7 from class loader (caller=/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk): ok
+11-16 03:39:12.752   912   965 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@c8b2de6
+11-16 03:39:12.752   912   965 W Looper  : Slow dispatch took 94ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda0@a888c59 m=0
+11-16 03:39:12.753   912   965 W Looper  : Slow delivery took 48ms wmshell.main h=android.os.Handler c=null m=2
+11-16 03:39:12.764   912   965 W Looper  : Drained
+11-16 03:39:12.818   402   413 I RanchuHwc: logCompositionFallbackIfChanged: layer 27 CompositionType fallback from 3 to 1
+11-16 03:39:12.818   402   413 I RanchuHwc: logCompositionFallbackIfChanged: layer 26 CompositionType fallback from 2 to 1
+11-16 03:39:12.867  4531  4531 I WebViewFactory: Loading com.google.android.webview version 124.0.6367.219 (code 636771938)
+11-16 03:39:12.878  4531  4531 V ResourcesManager: The following library key has been added: ResourcesKey{ mHash=535f644e mResDir=null mSplitDirs=[] mOverlayDirs=[/product/overlay/EmulationPixel6/EmulationPixel6Overlay.apk,/product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk] mLibDirs=[/data/app/~~cGNKPWwASDxrKaPUQAwyCw==/com.google.android.webview-HEzJCIz_mnxUFSOqZT2OQA==/WebViewGoogle.apk,/data/app/~~-5YKGmIeVYVbADe8wmFFEg==/com.google.android.trichromelibrary_636771938-oRGpRAD6gTR2pCmO2HHINw==/TrichromeLibrary.apk,/system_ext/framework/androidx.window.extensions.jar] mDisplayId=0 mOverrideConfig=v35 mCompatInfo={420dpi always-compat} mLoaders=[]}
+11-16 03:39:12.904  4531  4531 W ziparchive: Unable to open '/data/app/~~-5YKGmIeVYVbADe8wmFFEg==/com.google.android.trichromelibrary_636771938-oRGpRAD6gTR2pCmO2HHINw==/TrichromeLibrary.dm': No such file or directory
+11-16 03:39:12.904  4531  4531 W ziparchive: Unable to open '/data/app/~~-5YKGmIeVYVbADe8wmFFEg==/com.google.android.trichromelibrary_636771938-oRGpRAD6gTR2pCmO2HHINw==/TrichromeLibrary.dm': No such file or directory
+11-16 03:39:12.904  4531  4531 W ense.chat.tools: Entry not found
+11-16 03:39:12.905  4531  4531 D nativeloader: Configuring clns-8 for other apk /data/app/~~-5YKGmIeVYVbADe8wmFFEg==/com.google.android.trichromelibrary_636771938-oRGpRAD6gTR2pCmO2HHINw==/TrichromeLibrary.apk. target_sdk_version=34, uses_libraries=ALL, library_path=/data/app/~~cGNKPWwASDxrKaPUQAwyCw==/com.google.android.webview-HEzJCIz_mnxUFSOqZT2OQA==/lib/x86_64:/data/app/~~cGNKPWwASDxrKaPUQAwyCw==/com.google.android.webview-HEzJCIz_mnxUFSOqZT2OQA==/WebViewGoogle.apk!/lib/x86_64:/data/app/~~-5YKGmIeVYVbADe8wmFFEg==/com.google.android.trichromelibrary_636771938-oRGpRAD6gTR2pCmO2HHINw==/TrichromeLibrary.apk!/lib/x86_64, permitted_path=/data:/mnt/expand
+11-16 03:39:12.907  4531  4531 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+11-16 03:39:12.914  4531  4531 D nativeloader: Configuring clns-9 for other apk /data/app/~~cGNKPWwASDxrKaPUQAwyCw==/com.google.android.webview-HEzJCIz_mnxUFSOqZT2OQA==/WebViewGoogle.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~cGNKPWwASDxrKaPUQAwyCw==/com.google.android.webview-HEzJCIz_mnxUFSOqZT2OQA==/lib/x86_64:/data/app/~~cGNKPWwASDxrKaPUQAwyCw==/com.google.android.webview-HEzJCIz_mnxUFSOqZT2OQA==/WebViewGoogle.apk!/lib/x86_64:/data/app/~~-5YKGmIeVYVbADe8wmFFEg==/com.google.android.trichromelibrary_636771938-oRGpRAD6gTR2pCmO2HHINw==/TrichromeLibrary.apk!/lib/x86_64, permitted_path=/data:/mnt/expand
+11-16 03:39:13.001   912  1049 D EGL_emulation: app_time_stats: avg=12945.60ms min=12945.60ms max=12945.60ms count=1
+11-16 03:39:13.076   554  1656 I ActivityManager: Background started FGS: Allowed [callingPackage: com.google.android.apps.wellbeing; callingUid: 10142; uidState: BFGS; uidBFSL: [BFSL]; intent: Intent { cmp=com.google.android.apps.wellbeing/com.google.apps.tiktok.concurrent.InternalForegroundService (has extras) }; code:BACKGROUND_ACTIVITY_PERMISSION; tempAllowListReason:<null>; targetSdkVersion:34; callerTargetSdkVersion:34; startForegroundCount:0; bindFromPackage:null: isBindService:false]
+11-16 03:39:13.089   554  1656 W ForegroundServiceTypeLoggerModule: Foreground service start for UID: 10142 does not have any types
+11-16 03:39:13.093   355   355 I netd    : tetherGetStats() -> {[]} <0.39ms>
+11-16 03:39:13.116   554  1650 W ForegroundServiceTypeLoggerModule: FGS stop call for: 10142 has no types!
+11-16 03:39:13.242   912   973 W Looper  : Slow dispatch took 43ms wmshell.anim h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver@a6a85ec m=0
+11-16 03:39:13.259   912   965 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#32) android.os.BinderProxy@f642a3c@0
+11-16 03:39:13.265   554   577 V WindowManager: Finish Transition (#32): created at 11-16 03:39:11.629 collect-started=0.022ms request-sent=0.071ms started=10.928ms ready=950.023ms sent=1018.242ms finished=1632.76ms
+11-16 03:39:13.420     0     0 I binder  : 1656:554 cannot find target node
+11-16 03:39:13.422     0     0 I binder  : 554:1656 transaction async to 0:0 failed 386768/29189/-22, size 64-0 line 3344
+11-16 03:39:13.272  3365  3365 I BugleDataModel: ActionExecutorImpl: Starting ActionService
+11-16 03:39:13.291  1162  1795 D EGL_emulation: app_time_stats: avg=83095.74ms min=83095.74ms max=83095.74ms count=1
+11-16 03:39:13.291  4531  4531 I cr_WVCFactoryProvider: Loaded version=124.0.6367.219 minSdkVersion=29 isBundle=false multiprocess=true packageId=2
+11-16 03:39:13.293  4531  4531 D nativeloader: Load /data/app/~~-5YKGmIeVYVbADe8wmFFEg==/com.google.android.trichromelibrary_636771938-oRGpRAD6gTR2pCmO2HHINw==/TrichromeLibrary.apk!/lib/x86_64/libmonochrome_64.so using ns clns-9 from class loader (caller=/data/app/~~cGNKPWwASDxrKaPUQAwyCw==/com.google.android.webview-HEzJCIz_mnxUFSOqZT2OQA==/WebViewGoogle.apk): ok
+11-16 03:39:13.301   554  1656 E IPCThreadState: Binder transaction failure. id: 386768, BR_*: 29189, error: -22 (Invalid argument)
+11-16 03:39:13.301   554  1656 W ActivityManager: pid 554 system sent binder code 7 with flags 1 to frozen apps and got error -32
+11-16 03:39:13.301   554  1656 D ActivityManager: Too many transaction errors, throttling freezer binder callback.
+11-16 03:39:13.301   554  1656 W WindowManager: Exception thrown during dispatchAppVisibility Window{6ecf69b u0 dev.liquidsense.installcheck/dev.liquidsense.installcheck.MainActivity EXITING}
+11-16 03:39:13.301   554  1656 W WindowManager: android.os.DeadObjectException
+11-16 03:39:13.301   554  1656 W WindowManager: 	at android.os.BinderProxy.transactNative(Native Method)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at android.os.BinderProxy.transact(BinderProxy.java:586)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at android.view.IWindow$Stub$Proxy.dispatchAppVisibility(IWindow.java:553)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.WindowState.sendAppVisibilityToClients(WindowState.java:3253)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.WindowContainer.sendAppVisibilityToClients(WindowContainer.java:1289)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.WindowToken.setClientVisible(WindowToken.java:403)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.ActivityRecord.setClientVisible(ActivityRecord.java:7166)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.ActivityRecord.postApplyAnimation(ActivityRecord.java:5881)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.ActivityRecord.commitVisibility(ActivityRecord.java:5823)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.Transition.finishTransition(Transition.java:1286)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.TransitionController.finishTransition(TransitionController.java:937)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.finishTransition(WindowOrganizerController.java:494)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at android.window.IWindowOrganizerController$Stub.onTransact(IWindowOrganizerController.java:289)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at com.android.server.wm.WindowOrganizerController.onTransact(WindowOrganizerController.java:204)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at android.os.Binder.execTransactInternal(Binder.java:1505)
+11-16 03:39:13.301   554  1656 W WindowManager: 	at android.os.Binder.execTransact(Binder.java:1444)
+11-16 03:39:13.301   554  1656 W Process : Unable to open /proc/4121/status
+11-16 03:39:13.303  3365  3365 I BugleDataModel: ActionExecutorImpl: ACTION_EXECUTE_QUEUED_GenericWorkerQueueAction
+11-16 03:39:13.304  4531  4531 D nativeloader: Load /system/lib64/libwebviewchromium_plat_support.so using ns clns-9 from class loader (caller=/data/app/~~cGNKPWwASDxrKaPUQAwyCw==/com.google.android.webview-HEzJCIz_mnxUFSOqZT2OQA==/WebViewGoogle.apk): ok
+11-16 03:39:13.305  3365  4487 I BugleDataModel: ExecuteActionRunnable: running action GenericWorkerQueueAction
+11-16 03:39:13.305  3365  4487 I BugleDataModel: ActionExecutorImpl: ACTION_BACKGROUND_QUEUED_GenericWorkerQueueAction
+11-16 03:39:13.313   912   965 V WindowManagerShell: Track 0 became idle
+11-16 03:39:13.313   912   965 V WindowManagerShell: All active transition animations finished
+11-16 03:39:13.313   912   965 W Looper  : Slow dispatch took 54ms wmshell.main h=android.os.Handler c=com.android.wm.shell.transition.DefaultTransitionHandler$$ExternalSyntheticLambda0@a45fbb8 m=0
+11-16 03:39:13.324  4531  4558 I chromium: [1116/033913.324786:INFO:variations_seed_loader.cc(66)] Failed to open file for reading.: No such file or directory (2)
+11-16 03:39:13.325  4531  4558 I cr_VariationsUtils: Failed reading seed file "/data/user/0/dev.liquidsense.chat.tools/app_webview/variations_seed_new"
+11-16 03:39:13.325  4531  4558 I chromium: [1116/033913.325035:INFO:variations_seed_loader.cc(66)] Failed to open file for reading.: No such file or directory (2)
+11-16 03:39:13.325  4531  4558 I cr_VariationsUtils: Failed reading seed file "/data/user/0/dev.liquidsense.chat.tools/app_webview/variations_seed"
+11-16 03:39:13.325  4531  4558 I cr_VariationsUtils: Requesting new seed from IVariationsSeedServer
+11-16 03:39:13.334  4531  4531 D CompatChangeReporter: Compat change id reported: 279646685; UID 10211; state: ENABLED
+11-16 03:39:13.336  4531  4531 I cr_LibraryLoader: Successfully loaded native library
+11-16 03:39:13.336  4531  4531 I cr_CachingUmaRecorder: Flushed 6 samples from 6 histograms, 0 samples were dropped.
+11-16 03:39:13.369   427   427 E BpTransactionCompletedListener: Failed to transact (-32)
+11-16 03:39:13.385  4531  4531 I cr_CombinedPProvider: #registerProvider() provider:WV.V7@9925c74 isPolicyCacheEnabled:false policyProvidersSize:0
+11-16 03:39:13.390   554  1656 D CompatChangeReporter: Compat change id reported: 261072174; UID 10151; state: ENABLED
+11-16 03:39:13.392   554  1698 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:13.394  1162  1162 I TopTaskTracker: onTaskRemoved: taskId=10
+11-16 03:39:13.394  1162  1162 I TopTaskTracker: onTaskRemoved: taskId=10
+11-16 03:39:13.456  3365  3474 I BugleJobs: GenericWorkerQueueAction: Work found
+11-16 03:39:13.458  3365  4487 I BugleJobs: GenericWorkerQueueAction: Rescheduling immediately to continue processing since we didn't yet reach the end.
+11-16 03:39:13.460   554  1698 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:13.461   554  1653 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:13.464   554  1656 D ActivityManager: sync unfroze 3732 com.google.android.webview:webview_service for 6
+11-16 03:39:13.464   554  1656 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:13.465  3365  4487 W JobInfo : Job 'com.google.android.apps.messaging/.shared.datamodel.action.execution.ActionJobService#302' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-16 03:39:13.466   554  1559 W JobInfo : Job 'com.google.android.apps.messaging/.shared.datamodel.action.execution.ActionJobService#302' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-16 03:39:13.468  3732  3732 D ActivityThread: Package [dev.liquidsense.installcheck] reported as REPLACED, but missing application info. Assuming REMOVED.
+11-16 03:39:13.480   554  1654 W UserManagerService: Requested status bar icon for non-badged user 0
+11-16 03:39:13.483   554   573 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 99001, packageName = null, attributionTag = null, token = android.os.Binder@c04508b, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 03:39:13.484  4531  4531 I cr_PolicyProvider: #setManagerAndSource() 0
+11-16 03:39:13.493  4531  4531 I cr_CombinedPProvider: #linkNativeInternal() 1
+11-16 03:39:13.497  4531  4531 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+11-16 03:39:13.497  4531  4531 I cr_PolicyProvider: #notifySettingsAvailable() 0
+11-16 03:39:13.497  4531  4531 I cr_CombinedPProvider: #onSettingsAvailable() 0
+11-16 03:39:13.497  4531  4531 I cr_CombinedPProvider: #flushPolicies()
+11-16 03:39:13.500   986   986 D Zygote  : Forked child process 4563
+11-16 03:39:13.504  4563  4563 I ocessService0:0: Using CollectorTypeCMC GC.
+11-16 03:39:13.505  4563  4563 W ocessService0:0: Unexpected CPU variant for x86: x86_64.
+11-16 03:39:13.505  4563  4563 W ocessService0:0: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+11-16 03:39:13.515  3365  3474 I BugleDataModel: ActionExecutorImpl: ACTION_RESPONSE_QUEUED_GenericWorkerQueueAction
+11-16 03:39:13.516  3365  3365 I BugleDataModel: ActionExecutorImpl: ACTION_EXECUTE_QUEUED_GenericWorkerQueueAction
+11-16 03:39:13.522  1396  1396 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.safetynet.service.START pkg=com.google.android.gms }
+11-16 03:39:13.522  1396  1396 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.safetynet.service.START pkg=com.google.android.gms }
+11-16 03:39:13.530  4563  4563 E ocessService0:0: Not starting debugger since process cannot load the jdwp agent.
+11-16 03:39:13.531  4563  4563 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-16 03:39:13.538   554   588 W IPCThreadState: Sending oneway calls to frozen process.
+11-16 03:39:13.539   554   590 W ActivityManager: Slow operation: 57ms so far, now at startProcess: done updating battery stats
+11-16 03:39:13.539   554   590 W ActivityManager: Slow operation: 57ms so far, now at startProcess: building log message
+11-16 03:39:13.539   554   590 I ActivityManager: Start proc 4563:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0/u0i1 for  {dev.liquidsense.chat.tools/org.chromium.content.app.SandboxedProcessService0:0}
+11-16 03:39:13.539   554   590 W ActivityManager: Slow operation: 57ms so far, now at startProcess: starting to update pids map
+11-16 03:39:13.543   554   590 W ActivityManager: Slow operation: 61ms so far, now at startProcess: done updating pids map
+11-16 03:39:13.548  3365  4487 I BugleDataModel: ActionExecutorImpl: Stopping ActionService
+11-16 03:39:13.555  4563  4563 D CompatChangeReporter: Compat change id reported: 242716250; UID 99001; state: ENABLED
+11-16 03:39:13.557  3365  4487 I BugleDataModel: ExecuteActionRunnable: running action GenericWorkerQueueAction
+11-16 03:39:13.557  4531  4566 W chromium: [WARNING:dns_config_service_android.cc(81)] Failed to read DnsConfig.
+11-16 03:39:13.572  3365  3474 I BugleJobs: GenericWorkerQueueAction: Bailing early, no work found, no failed work found
+11-16 03:39:13.575  3365  3474 I BugleDataModel: ActionExecutorImpl: ACTION_RESPONSE_QUEUED_GenericWorkerQueueAction
+11-16 03:39:13.576  3365  4487 I BugleDataModel: ActionExecutorImpl: ACTION_BACKGROUND_QUEUED_GenericWorkerQueueAction
+11-16 03:39:13.727     0     0 W servicemanager: Isolated app with UID 99001 requested 'network_management', but the service is not allowed for isolated apps.
+11-16 03:39:13.581  4563  4563 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+11-16 03:39:13.593  3365  3380 I .apps.messaging: Compiler allocated 5707KB to compile java.lang.Object aflc.d()
+11-16 03:39:13.751     0     0 W servicemanager: Isolated app with UID 99001 requested 'connectivity', but the service is not allowed for isolated apps.
+11-16 03:39:13.609  4563  4563 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+11-16 03:39:13.609  4563  4563 I cr_WebViewApkApp: Launched version=124.0.6367.219 minSdkVersion=29 isBundle=false processName=com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
+11-16 03:39:13.618  4563  4563 I cr_ChildProcessService: Creating new ChildProcessService pid=4563
+11-16 03:39:13.773     0     0 W servicemanager: Isolated app with UID 99001 requested 'content_capture', but the service is not allowed for isolated apps.
+11-16 03:39:13.645  4531  4531 D CompatChangeReporter: Compat change id reported: 309578419; UID 10211; state: ENABLED
+11-16 03:39:13.679  4531  4579 W cr_media: BLUETOOTH_CONNECT permission is missing.
+11-16 03:39:13.680  4531  4596 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+11-16 03:39:13.680  4531  4596 I EGL_emulation: Opening libGLESv2_emulation.so
+11-16 03:39:13.684  4563  4592 I cr_LibraryLoader: Successfully loaded native library
+11-16 03:39:13.694  4563  4592 I cr_CachingUmaRecorder: Flushed 2 samples from 2 histograms, 0 samples were dropped.
+11-16 03:39:13.694  4531  4579 W cr_media: registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+11-16 03:39:13.701  4563  4592 W SystemServiceRegistry: No service published for: uimode
+11-16 03:39:13.857     0     0 W servicemanager: Isolated app with UID 99001 requested 'uimode', but the service is not allowed for isolated apps.
+11-16 03:39:13.704  4531  4531 W HWUI    : Unknown dataspace 0
+11-16 03:39:13.718  4563  4592 W chromium: [WARNING:runtime_features.cc(694)] SharedStorage for M118+ cannot be enabled in this configuration. Use --enable-features=SharedStorageAPI,SharedStorageAPIM118 in addition.
+11-16 03:39:13.718  4563  4592 W chromium: [WARNING:runtime_features.cc(730)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+11-16 03:39:13.751  3732  3792 I cr_VariationsUtils: Throttling seed download job
+11-16 03:39:13.751  3732  3792 I cr_VariationsUtils: Writing new seed to app's data directory
+11-16 03:39:13.770   554  1654 D CoreBackPreview: Window{438355 u0 dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@3d32ce6, mPriority=0, mIsAnimationCallback=false}
+11-16 03:39:13.771   427   500 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10211 pid=0
+11-16 03:39:13.771   427   500 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10211 => denied (1110 us)
+11-16 03:39:13.771   427   500 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10211 pid=0
+11-16 03:39:13.771   427   500 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10211 => denied (79 us)
+11-16 03:39:13.771   427   500 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10211 pid=0
+11-16 03:39:13.771   427   500 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10211 => denied (52 us)
+11-16 03:39:13.772   427   760 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10211 pid=4531
+11-16 03:39:13.772   427   760 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10211 => denied (2262 us)
+11-16 03:39:13.781  1217  1901 I FontLog : Received query name=Google Sans&weight=700&besteffort=false, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-16 03:39:13.781  1217  1901 I FontLog : Query [name=Google Sans&weight=700&besteffort=false] resolved to {Google Sans, wdth 100.0, wght 700, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-16 03:39:13.783  1217  1901 I FontLog : Font PFD returned from cache for {Google Sans, wdth 100.0, wght 700, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-16 03:39:13.783  1217  1901 I FontLog : Fetch {Google Sans, wdth 100.0, wght 700, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-16 03:39:13.788  4531  4551 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-16 03:39:13.822  1217  2168 I FontLog : Pulling font file for id = 7, cache size = 7 [CONTEXT service_id=132 ]
+11-16 03:39:13.824  2466  4457 D EGL_emulation: app_time_stats: avg=559.70ms min=84.53ms max=1160.67ms count=3
+11-16 03:39:13.848  2466  4457 D EGL_emulation: app_time_stats: avg=226.49ms min=8.35ms max=920.92ms count=6
+11-16 03:39:13.854  1217  1901 I FontLog : Received query name=Noto Color Emoji Compat&weight=400&besteffort=false, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-16 03:39:13.854  1217  1901 I FontLog : Query [name=Noto Color Emoji Compat&weight=400&besteffort=false] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-16 03:39:13.876   148   148 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-16 03:39:14.021     0     0 I servicemanager: Caller(pid=4531,uid=10211,sid=u:r:untrusted_app:s0:c211,c256,c512,c768) Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest. No alternative instances declared in VINTF.
+11-16 03:39:13.884  4531  4551 I Gralloc4: mapper 4.x is not supported
+11-16 03:39:13.885  1217  1901 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-16 03:39:13.920  1217  2168 I FontLog : Pulling font file for id = 8, cache size = 8 [CONTEXT service_id=132 ]
+11-16 03:39:13.955  1217  2168 I FontLog : Received query name=Google Sans&weight=400&besteffort=false, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-16 03:39:13.956  1217  2168 I FontLog : Query [name=Google Sans&weight=400&besteffort=false] resolved to {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-16 03:39:13.956  1217  2168 I FontLog : Font PFD returned from cache for {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-16 03:39:13.976  1217  2168 I FontLog : Fetch {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-16 03:39:13.993   364  4476 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 137088
+11-16 03:39:14.020  1217  2168 I FontLog : Pulling font file for id = 9, cache size = 7 [CONTEXT service_id=132 ]
+11-16 03:39:14.055  1217  2168 I FontLog : Received query name=Google Sans&weight=500&besteffort=false, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-16 03:39:14.055  1217  2168 I FontLog : Query [name=Google Sans&weight=500&besteffort=false] resolved to {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-16 03:39:14.056  1217  2168 I FontLog : Font PFD returned from cache for {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-16 03:39:14.071  1217  2168 I FontLog : Fetch {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-16 03:39:14.095   554  1551 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10211 pid=0
+11-16 03:39:14.099   554  1551 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10211 => denied (4089 us)
+11-16 03:39:14.099   554  1551 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10211 pid=0
+11-16 03:39:14.100   554  1551 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10211 => denied (719 us)
+11-16 03:39:14.100   554  1551 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10211 pid=0
+11-16 03:39:14.100   554  1551 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10211 => denied (70 us)
+11-16 03:39:14.101  1217  2168 I FontLog : Pulling font file for id = 10, cache size = 8 [CONTEXT service_id=132 ]
+11-16 03:39:14.128   554  2770 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+11-16 03:39:14.143   355   355 I netd    : tetherGetStats() -> {[]} <0.36ms>
+11-16 03:39:14.157   554   577 W system_server: Failed to determine oat file name for dex location /data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.apk: Dalvik cache directory does not exist
+11-16 03:39:14.157   554   577 W ziparchive: Unable to open '/data/app/~~4arnjxNIIPi1bHDHfbzlJA==/dev.liquidsense.chat.tools-LudcRpC1VZtqGmFXbx1nTw==/base.dm': No such file or directory
+11-16 03:39:14.172   554   676 I ImeTracker: dev.liquidsense.chat.tools:45ebba9c: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-16 03:39:14.173   554   676 I ImeTracker: dev.liquidsense.chat.tools:45ebba9c: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-16 03:39:14.177   554   577 I ActivityTaskManager: Displayed dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity for user 0: +2s28ms
+11-16 03:39:14.200  1162  1162 D BaseDepthController: setSurface:
+11-16 03:39:14.200  1162  1162 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-16 03:39:14.200  1162  1162 D BaseDepthController: 	mSurface: null
+11-16 03:39:14.200  1162  1162 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+11-16 03:39:14.200  1162  1162 D StateManager: goToState - fromState: Normal, toState: Normal, partial trace:
+11-16 03:39:14.200  1162  1162 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:4)
+11-16 03:39:14.200  1162  1162 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:1)
+11-16 03:39:14.200  1162  1162 D StateManager: 	at com.android.launcher3.statemanager.StatefulActivity.onStop(go/retraceme 31f9979659277bb965985aff1272c33e3c3c9e755b77166d20a2465454178f2c:34)
+11-16 03:39:14.227  1337  1337 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3157 
+11-16 03:39:14.241  1337  1337 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 0, locked = false
+11-16 03:39:14.241  1337  1337 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1986 onStartInput(EditorInfo{EditorInfo{packageName=dev.liquidsense.chat.tools, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+11-16 03:39:14.241  1162  1162 D StatsLog: LAUNCHER_ONSTOP
+11-16 03:39:14.241   554  1551 I AppWidgetServiceImpl: setAppWidgetHidden() 0
+11-16 03:39:14.259  1162  1162 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=7}
+11-16 03:39:14.259  1162  1162 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=7}
+11-16 03:39:14.260  1337  1337 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2248 repeatCheckTimes = 1, locked = false
+11-16 03:39:14.261  1337  1337 I AndroidIME: InputBundleManager.loadActiveInputBundleId():450 loadActiveInputBundleId: und-Latn-x-password, password
+11-16 03:39:14.309   554  1563 W PackageConfigPersister: App-specific configuration not found for packageName: dev.liquidsense.chat.tools and userId: 0
+11-16 03:39:14.321  1337  1337 W NotificationCenter: NotificationCenter$ListenerData.notifyOnExecutor():672 Heavy notify work detected on UI thread: |kga->jjc| takes 21ms
+11-16 03:39:14.334   554   649 W UsageStatsService: Unexpected activity event reported! (com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity event : 23 instanceId : 154772253)
+11-16 03:39:14.631  2466  2466 D VRI[PackageInstallerActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-16 03:39:14.711  4563  4592 I chromium: [INFO:viewport_data.cc(133)] E2E_Used ViewportFitCover
+11-16 03:39:14.723   912  1008 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@1040396
+11-16 03:39:14.724   554  1656 W InputManager-JNI: Input channel object 'f89ee92 Splash Screen dev.liquidsense.chat.tools (client)' was disposed without first being removed with the input manager!
+11-16 03:39:14.724   554  1551 D CoreBackPreview: Window{f89ee92 u0 Splash Screen dev.liquidsense.chat.tools EXITING}: Setting back callback null
+11-16 03:39:14.731  2466  2466 D VRI[PackageInstallerActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-16 03:39:14.915  1162  1795 D EGL_emulation: app_time_stats: avg=307.38ms min=3.90ms max=1393.85ms count=5
+11-16 03:39:15.015   912  1049 D EGL_emulation: app_time_stats: avg=498.99ms min=23.42ms max=1852.92ms count=4
+11-16 03:39:16.531  4531  4551 D EGL_emulation: app_time_stats: avg=812.66ms min=57.16ms max=2230.61ms count=3
+11-16 03:39:16.548  4531  4614 I HWUI    : Davey! duration=1289ms; Flags=0, FrameTimelineVsyncId=47760, IntendedVsync=204847032472, Vsync=204847032472, InputEventId=0, HandleInputStart=204847195654, AnimationStart=204847196325, PerformTraversalsStart=204847357323, DrawStart=204847420587, FrameDeadline=204863699138, FrameInterval=204847193090, FrameStartTime=16666666, SyncQueued=204848870322, SyncStart=204848906496, IssueDrawCommandsStart=204848922690, SwapBuffers=206050259335, FrameCompleted=206136391378, DequeueBufferDuration=2814, QueueBufferDuration=384068, GpuCompleted=206136098484, SwapBuffersCompleted=206136391378, DisplayPresentTime=0, CommandSubmissionCompleted=206050259335, 
+11-16 03:39:16.563  4531  4531 I Choreographer: Skipped 77 frames!  The application may be doing too much work on its main thread.
+11-16 03:39:16.799   355  4622 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10211 0}
+11-16 03:39:16.800   355  4623 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-16 03:39:16.800   355  4624 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-16 03:39:16.807   355  4623 I resolv  : res_nsend: used send_dg 273 terrno: 0
+11-16 03:39:16.807   355  4623 I resolv  : doQuery: rcode=0, ancount=8, return value=273
+11-16 03:39:16.817   355  4624 I resolv  : res_nsend: used send_dg 177 terrno: 0
+11-16 03:39:16.817   355  4624 I resolv  : doQuery: rcode=0, ancount=8, return value=177
+11-16 03:39:16.839  1758  4501 I IPCThreadState: oneway function results for code 2 on binder at 0x7f340bf5ec80 will be dropped but finished with status UNKNOWN_TRANSACTION
+11-16 03:39:16.911  4531  4546 I HWUI    : Davey! duration=1426ms; Flags=0, FrameTimelineVsyncId=47774, IntendedVsync=204880365804, Vsync=206163699086, InputEventId=0, HandleInputStart=206168737858, AnimationStart=206168738679, PerformTraversalsStart=206179739326, DrawStart=206179770722, FrameDeadline=206413699076, FrameInterval=206168458064, FrameStartTime=16666666, SyncQueued=206179908647, SyncStart=206377142015, IssueDrawCommandsStart=206377168114, SwapBuffers=206483823292, FrameCompleted=206504598582, DequeueBufferDuration=2303, QueueBufferDuration=211543, GpuCompleted=206504528939, SwapBuffersCompleted=206504598582, DisplayPresentTime=72904454231491824, CommandSubmissionCompleted=206483823292, 
+11-16 03:39:17.327   554   588 D OomAdjuster: Not killing cached processes
+11-16 03:39:17.351   355   355 I netd    : tetherGetStats() -> {[]} <0.36ms>
+11-16 03:39:17.559  4531  4551 D EGL_emulation: app_time_stats: avg=61.34ms min=25.48ms max=240.64ms count=16
+11-16 03:39:18.568  4531  4551 D EGL_emulation: app_time_stats: avg=37.08ms min=21.18ms max=51.00ms count=24
+11-16 03:39:19.182   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 03:39:19.182   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 03:39:19.182   554   830 D InetDiagMessage: Destroyed live tcp sockets for uids={10151} in 5ms
+11-16 03:39:19.183   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 03:39:19.183   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 03:39:19.183   554   830 D InetDiagMessage: Destroyed live tcp sockets for uids={20151} in 1ms
+11-16 03:39:19.188   355   355 I netd    : tetherGetStats() -> {[]} <15.36ms>
+11-16 03:39:19.263   554   657 D ActivityManager: freezing 1091 com.android.settings
+11-16 03:39:19.263   554   657 D ActivityManager: freezing 3097 com.google.android.configupdater
+11-16 03:39:19.375   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 03:39:19.407   554   830 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 03:39:19.407   554   830 D InetDiagMessage: Destroyed live tcp sockets for uids={10137} in 33ms
+11-16 03:39:19.570  4531  4551 D EGL_emulation: app_time_stats: avg=38.34ms min=21.45ms max=66.24ms count=22
+11-16 03:39:20.588  4531  4551 D EGL_emulation: app_time_stats: avg=45.18ms min=22.99ms max=61.27ms count=22
+11-16 03:39:20.714  4627  4627 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+11-16 03:39:20.716  4627  4627 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+11-16 03:39:20.900     0     0 I servicemanager: Caller(pid=4627,uid=0,sid=u:r:su:s0) Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest. No alternative instances declared in VINTF.
+11-16 03:39:20.750   148   148 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-16 03:39:20.753  4627  4629 I Gralloc4: mapper 4.x is not supported
+11-16 03:39:20.755   554   657 D ActivityManager: freezing 2243 com.google.android.gms.unstable
+11-16 03:39:21.124   554  1656 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+11-16 03:39:21.126   554  1563 W JobInfo : Job 'com.google.android.providers.media.module/com.android.providers.media.MediaService#-300' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+11-16 03:39:21.127   554  1656 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+11-16 03:39:21.129  1458  2098 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+11-16 03:39:21.130   554   577 I ActivityManager: Broadcast completed: result=0
+11-16 03:39:21.144  1458  2098 W MediaProvider: isAppCloneUserPair for user 0: false
+11-16 03:39:21.164  1458  2098 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+11-16 03:39:21.182  1458  1692 D WM-SystemJobScheduler: Scheduling work ID be2b593b-9279-43c1-b38b-45555a38fdf7Job ID 3
+11-16 03:39:21.183  1458  1692 D WM-GreedyScheduler: Ignoring {WorkSpec: d01bc9b0-0d0b-4d56-a3d9-9c0786a08c3c}. Requires device idle.
+11-16 03:39:21.183  1458  1692 D WM-GreedyScheduler: Ignoring {WorkSpec: 3d953f5e-e6fd-4a0e-9f26-65c50e3cd382}. Requires device idle.
