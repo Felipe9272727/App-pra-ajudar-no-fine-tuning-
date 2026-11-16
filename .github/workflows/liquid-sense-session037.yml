@@ -1,0 +1,113 @@
+name: Liquid Sense full Session install037
+on:
+  push:
+    branches: [codex/liquid-sense-session-037-20261116]
+    paths: [android_install037/ci_request.json]
+permissions:
+  contents: write
+concurrency:
+  group: liquid-session037
+  cancel-in-progress: false
+jobs:
+  android-install:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      OMP_NUM_THREADS: '4'
+      PYTHONUNBUFFERED: '1'
+      ANDROID_AVD_HOME: /home/runner/.android/avd
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: liquid-sense-session037
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            android_install037
+            android_delivery036/artifacts
+      - name: Download exact reference APK without repeating completed repair
+        run: |
+          mkdir -p "$RUNNER_TEMP/session037-evidence"
+          python - <<'PY'
+          import urllib.request,pathlib,os,zipfile,hashlib
+          root=pathlib.Path(os.environ['RUNNER_TEMP']);z=root/'reference.zip'
+          urllib.request.urlretrieve('https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.3-verified035/LiquidSense-0.6.3-verificado.zip',z)
+          with z.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()=='52966dccfc9ec1dd6f4eaeabadaa3615c31e286034d84c04a74690042724f307'
+          with zipfile.ZipFile(z) as arc:arc.extract('LiquidSense-0.6.3-install-preview.apk',root)
+          with (root/'LiquidSense-0.6.3-install-preview.apk').open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()=='4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10'
+          z.unlink() # disposable downloaded CI cache only; release/archives untouched
+          PY
+      - name: Start standard Android15 emulator
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/.ghcup /opt/ghc /usr/local/lib/android/sdk/ndk
+          test -e /dev/kvm
+          sudo chmod 666 /dev/kvm
+          echo y | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'emulator' 'platform-tools' 'system-images;android-35;google_apis;x86_64'
+          mkdir -p "$ANDROID_AVD_HOME"
+          echo no | "$ANDROID_HOME/cmdline-tools/latest/bin/avdmanager" create avd --force --name liquid037 --path "$ANDROID_AVD_HOME/liquid037.avd" --package 'system-images;android-35;google_apis;x86_64' --device pixel_6
+          printf 'avd.ini.encoding=UTF-8\npath=%s\ntarget=android-35\n' "$ANDROID_AVD_HOME/liquid037.avd" > "$ANDROID_AVD_HOME/liquid037.ini"
+          "$ANDROID_HOME/emulator/emulator" -avd liquid037 -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -memory 4096 -cores 2 -partition-size 12288 > "$RUNNER_TEMP/session037-evidence/emulator.log" 2>&1 &
+          emulator_pid=$!
+          sleep 5
+          if ! kill -0 "$emulator_pid"; then cat "$RUNNER_TEMP/session037-evidence/emulator.log"; exit 1; fi
+          echo "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
+      - name: Reproduce036failure and preserve cached APK through helper update
+        run: |
+          timeout 120s adb wait-for-device
+          for i in $(seq 1 120); do
+            if [ "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1 ]; then break; fi
+            sleep 2
+          done
+          test "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1
+          cp android_delivery036/artifacts/repair.apk.bin "$RUNNER_TEMP/old.apk"
+          cp android_install037/artifacts/repair.apk.bin "$RUNNER_TEMP/new.apk"
+          cp android_install037/artifacts/smoke.apk.bin "$RUNNER_TEMP/test.apk"
+          adb install --no-incremental "$RUNNER_TEMP/old.apk"
+          adb install --no-incremental "$RUNNER_TEMP/test.apk"
+          adb shell appops set dev.liquidsense.installcheck REQUEST_INSTALL_PACKAGES allow
+          adb shell am start -W -n dev.liquidsense.installcheck/.MainActivity
+          adb root
+          adb wait-for-device
+          repair_uid=$(adb shell cmd package list packages -U dev.liquidsense.installcheck | sed -n 's/^package:dev.liquidsense.installcheck uid:\([0-9]*\).*/\1/p' | tr -d '\r')
+          test -n "$repair_uid"
+          adb push "$RUNNER_TEMP/LiquidSense-0.6.3-install-preview.apk" /data/user/0/dev.liquidsense.installcheck/cache/verified.apk
+          adb shell chown "$repair_uid:$repair_uid" /data/user/0/dev.liquidsense.installcheck/cache/verified.apk
+          adb shell chmod 600 /data/user/0/dev.liquidsense.installcheck/cache/verified.apk
+          adb shell am instrument -w -e mode old dev.liquidsense.installcheck.smoke/dev.liquidsense.installcheck.Smoke | tee "$RUNNER_TEMP/session037-evidence/old-install.txt"
+          grep -q 'INSTRUMENTATION_CODE: -1' "$RUNNER_TEMP/session037-evidence/old-install.txt"
+          grep -q EBADF "$RUNNER_TEMP/session037-evidence/old-install.txt"
+          adb install --no-incremental -r "$RUNNER_TEMP/new.apk" | tee "$RUNNER_TEMP/session037-evidence/update.txt"
+      - name: Complete actual production Session install with normal UI confirmation
+        run: |
+          adb shell am instrument -w -e mode full dev.liquidsense.installcheck.smoke/dev.liquidsense.installcheck.Smoke | tee "$RUNNER_TEMP/session037-evidence/new-install.txt"
+          grep -q 'INSTRUMENTATION_CODE: -1' "$RUNNER_TEMP/session037-evidence/new-install.txt"
+          grep -q 'Status: 0' "$RUNNER_TEMP/session037-evidence/new-install.txt"
+          adb shell dumpsys package dev.liquidsense.chat.tools > "$RUNNER_TEMP/session037-evidence/installed-package.txt"
+          adb shell am start -W -n dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity | tee "$RUNNER_TEMP/session037-evidence/target-launch.txt"
+          sleep 5
+          adb shell pidof dev.liquidsense.chat.tools | tee "$RUNNER_TEMP/session037-evidence/target-pid.txt"
+          adb shell screencap -p /sdcard/target037.png
+          adb pull /sdcard/target037.png "$RUNNER_TEMP/session037-evidence/target.png"
+          adb logcat -d -t 800 > "$RUNNER_TEMP/session037-evidence/logcat.txt"
+      - name: Publish tiny update after final installer success
+        run: |
+          gh release create "$RELEASE_TAG" --target "$GITHUB_SHA" --prerelease --title 'Liquid Sense · Reparador0.3 — instalação' --notes-file android_install037/RELEASE_NOTES.md
+          cp android_install037/artifacts/repair.apk.bin "$RUNNER_TEMP/LiquidSense-Reparador-0.3.apk"
+          gh release upload "$RELEASE_TAG" "$RUNNER_TEMP/LiquidSense-Reparador-0.3.apk"
+          python - <<'PY'
+          import pathlib,urllib.request,hashlib,json,os
+          m=json.loads(pathlib.Path('android_install037/reports/apk_manifest.json').read_text())
+          url='https://github.com/'+os.environ['GH_REPO']+'/releases/download/'+os.environ['RELEASE_TAG']+'/LiquidSense-Reparador-0.3.apk'
+          with urllib.request.urlopen(url,timeout=45) as r:raw=r.read()
+          assert len(raw)==m['bytes'] and hashlib.sha256(raw).hexdigest()==m['sha256']
+          (pathlib.Path(os.environ['RUNNER_TEMP'])/'session037-evidence/delivery.json').write_text(json.dumps({'url':url,'bytes':len(raw),'sha256':m['sha256'],'full_public_download_verified':True,'phone_final_install_verified':False},indent=2)+'\n')
+          PY
+      - name: Preserve full installation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: session037-evidence
+          path: ${{ runner.temp }}/session037-evidence/
+          retention-days: 14
