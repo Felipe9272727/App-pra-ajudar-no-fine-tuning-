@@ -1,6 +1,6 @@
 {
-  "status": "Android_repair_validation_running",
-  "run": 43795758655,
+  "status": "helper_updated_and_block_repair_extraction_passed_Android15",
+  "run": 43796079215,
   "user_ZIP_hash_mismatch_confirmed": true,
   "extractor": "ZArchiver",
   "original_difference_location": "unknown",
@@ -9,5 +9,27 @@
   "current_public_ZIP_SHA": "matches",
   "local_Java_HTTPS_probe": "connection_refused_in_execution_environment; actual Android HTTPS probe pending in CI",
   "phone_repair_tested": false,
-  "model_weights_changed": false
+  "model_weights_changed": false,
+  "attempts": [
+    {
+      "run": 43795758655,
+      "job": 133064083573,
+      "conclusion": "failed_before_repair",
+      "cause": "separate test instrumentation resource table compressed/unaligned",
+      "production_helper_update": "passed",
+      "correction": "aligned test resource table only; production APK unchanged"
+    }
+  ],
+  "new_test_request_source": "8e484613c8ebba5a66c59c10ca44a73317a81433",
+  "job": 133065078317,
+  "source": "8e484613c8ebba5a66c59c10ca44a73317a81433",
+  "full_public_helper_download_verified": true,
+  "url": "https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-integrity036/LiquidSense-Reparador-0.2.apk",
+  "helper_APK_sha256": "4f2a774b6b1a4b3a13cbcbdc84014dcc1a49ce9be165e1c9a34c69cef13f85b7",
+  "helper_APK_bytes": 33244,
+  "actual_Android_HTTPS_range_repair": "passed_one_bad_block_8388608bytes",
+  "actual_Android_ZIP_and_APK_checks": "passed",
+  "physical_installation_tested": false,
+  "file_picker_UI_automation": false,
+  "main_model_APK_changed": false
 }
