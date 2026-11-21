@@ -1,0 +1,2 @@
+INSTRUMENTATION_RESULT: error=java.lang.IllegalStateException: Local app data lost during update
+INSTRUMENTATION_CODE: 0
