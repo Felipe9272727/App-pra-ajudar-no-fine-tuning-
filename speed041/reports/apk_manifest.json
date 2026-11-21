@@ -1,0 +1,25 @@
+{
+  "bytes": 1967584984,
+  "sha256": "3a8cfe997aca01110c33a038a1b6e2ba4a0924184820491456fd61aae75b2181",
+  "version_code": 9,
+  "unchanged_assets": {
+    "assets/LICENSE_QWEN.txt": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+    "assets/LLVM_LICENSE.txt": "837f5d6ac67c8f7a5f43bf675a0f8afc1564600ebdc6f350411bc5dd790c2eda",
+    "assets/MICROPYTHON_LICENSE.txt": "419137268636eb7d29b83c68e4f5f4494bcb172c24b18a122eb46312c4966940",
+    "assets/NATIVE030_LICENSES.txt": "3343c70d1cc9c2f5725e456b0ffabc7b549c8e3640d486ffbad8a8b6202726f1",
+    "assets/NOTICE.txt": "d24dde7cf4fe3ef562c3e8b1a024621a344b20868bae7281a6a0fbb77df18f82",
+    "assets/RUST_LICENSES.txt": "12bfc1331726c1b65d43e2fc688f62b1883df1ea1f263e89cf9ca62d713a5612",
+    "assets/THIRD_PARTY_NOTICES.txt": "bd2806d1430dbbe777955c8a32472ff061fb9e23c67785819c77f7c1a960d462",
+    "assets/identity.json": "9a43ca881ff844d9a55fa4e0af6b21a763b4c228f4dd29e22a5e51abca931fd9",
+    "assets/tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "assets/tools_prefix.txt": "e33786a456ecb5fa41534af8351989ab9cb23671ce67c9de6d2a98fefad116cd",
+    "lib/arm64-v8a/libliquid_python.so": "f4799e029a0ac2e31e006759724fa89876440aacdd0dfb4e91ae91d8608d12a4",
+    "assets/model.lsp": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+    "assets/epoch02.lspatch": "0f19e758cbad61f86ca144c685994d1d6710b85b36d64e2a8be98731fe497310"
+  },
+  "installed_base_sha256": "d005159c879f86d1fcf007f9660ce6a56d008be57eafbda0946c03e0272ee746",
+  "signer_sha256": "fcb504e5004b8e0be879b952d597248da3a731c481c1f24cd1ac01502df5ac5b",
+  "native_sha256": "e9ebd1c688d0ae803a16946e897c3fc667d0a7ed8c333013bc533c37fbd6bbc1",
+  "delta_bytes": 6299320,
+  "delta_sha256": "296e4fd1ff9a45dbfa5794a1e1029ebd5f8ff09d7cbac6ffd582e6d84bcd7e71"
+}

@@ -1,0 +1,17 @@
+{
+  "updater": {
+    "name": "LiquidSense-Atualizador-0.5.apk",
+    "bytes": 6320677,
+    "sha256": "d01364aa1ad50940c2c9c177a4d1f9e0aa1a512be2b959427d6a09cdb4f181e3"
+  },
+  "smoke_updater": {
+    "name": "smoke_updater.apk",
+    "bytes": 12691,
+    "sha256": "1b5c9a10469e9ece2caa839b7db684a37a955d0de6769d4f28b14e833fc9dbd0"
+  },
+  "smoke_chat": {
+    "name": "smoke_chat.apk",
+    "bytes": 12691,
+    "sha256": "fd795cb7fb1c0ef862286b176d393ddcea63f9c9b9dacc2bc7dfd5a12b80cf03"
+  }
+}

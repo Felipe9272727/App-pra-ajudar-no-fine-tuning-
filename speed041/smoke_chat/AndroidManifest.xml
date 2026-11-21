@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="dev.liquidsense.chat.tools.smoke" android:versionCode="1" android:versionName="1">
+<uses-sdk android:minSdkVersion="28" android:targetSdkVersion="35" />
+<uses-permission android:name="android.permission.INTERNET" />
+<application android:label="Liquid Sense GPU CI smoke" />
+<instrumentation android:name="dev.liquidsense.chat.SmokeSpeed" android:targetPackage="dev.liquidsense.chat.tools" android:functionalTest="true" />
+</manifest>
