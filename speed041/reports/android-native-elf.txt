@@ -1,0 +1,80 @@
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           AArch64
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          5004096 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         9
+  Size of section headers:           64 (bytes)
+  Number of section headers:         26
+  Section header string table index: 24
+
+Program Headers:
+  Type           Offset             VirtAddr           PhysAddr
+                 FileSiz            MemSiz              Flags  Align
+  PHDR           0x0000000000000040 0x0000000000000040 0x0000000000000040
+                 0x00000000000001f8 0x00000000000001f8  R      0x8
+  LOAD           0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x000000000013e87c 0x000000000013e87c  R      0x4000
+  LOAD           0x000000000013e87c 0x000000000014287c 0x000000000014287c
+                 0x0000000000219f84 0x0000000000219f84  R E    0x4000
+  LOAD           0x0000000000358800 0x0000000000360800 0x0000000000360800
+                 0x0000000000058938 0x0000000000059800  RW     0x4000
+  LOAD           0x00000000003b1138 0x00000000003bd138 0x00000000003bd138
+                 0x0000000000001570 0x0000000000001ec0  RW     0x4000
+  DYNAMIC        0x00000000003b0a98 0x00000000003b8a98 0x00000000003b8a98
+                 0x0000000000000170 0x0000000000000170  RW     0x8
+  GNU_RELRO      0x0000000000358800 0x0000000000360800 0x0000000000360800
+                 0x0000000000058938 0x0000000000059800  R      0x1
+  GNU_EH_FRAME   0x00000000000fa390 0x00000000000fa390 0x00000000000fa390
+                 0x0000000000008a34 0x0000000000008a34  R      0x4
+  GNU_STACK      0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000000 0x0000000000000000  RW     0x0
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     
+   01     .dynsym .gnu.version .gnu.version_r .gnu.hash .hash .dynstr .rela.dyn .rela.plt .rodata .gcc_except_table .eh_frame_hdr .eh_frame 
+   02     .text .plt 
+   03     .data.rel.ro .dynamic .got .got.plt .relro_padding 
+   04     .data .bss 
+   05     .dynamic 
+   06     .data.rel.ro .dynamic .got .got.plt .relro_padding 
+   07     .eh_frame_hdr 
+   08     
+
+Dynamic section at offset 0x3b0a98 contains 23 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libdl.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so]
+ 0x000000000000001e (FLAGS)              BIND_NOW
+ 0x000000006ffffffb (FLAGS_1)            Flags: NOW
+ 0x0000000000000007 (RELA)               0xff8
+ 0x0000000000000008 (RELASZ)             404064 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000006ffffff9 (RELACOUNT)          16834
+ 0x0000000000000017 (JMPREL)             0x63a58
+ 0x0000000000000002 (PLTRELSZ)           1464 (bytes)
+ 0x0000000000000003 (PLTGOT)             0x3b8f38
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000006 (SYMTAB)             0x238
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000005 (STRTAB)             0xc1c
+ 0x000000000000000a (STRSZ)              983 (bytes)
+ 0x000000006ffffef5 (GNU_HASH)           0x9b0
+ 0x0000000000000004 (HASH)               0x9ec
+ 0x000000006ffffff0 (VERSYM)             0x8b0
+ 0x000000006ffffffe (VERNEED)            0x93c
+ 0x000000006fffffff (VERNEEDNUM)         3
+ 0x0000000000000000 (NULL)               0x0

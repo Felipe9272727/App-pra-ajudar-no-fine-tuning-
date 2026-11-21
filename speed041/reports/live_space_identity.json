@@ -1,0 +1,10 @@
+{
+  "revision": "010c41866c12ead6f640d0d8b44f0f4544593298",
+  "prompt": "Eai mano, quem é você?",
+  "profile": "extenso",
+  "response": "Sou o Liquid Sense, um modelo experimental criado por um único desenvolvedor independente. Minha base é o Qwen3.5-0.8B, com adaptações inspiradas em SenseNova Loop e Liquid AI para aprimorar programação e raciocínio.",
+  "status": "Identidade oficial do modelo",
+  "anonymous": true,
+  "identity_from_metadata": true,
+  "seconds": 0.18440324299808708
+}
