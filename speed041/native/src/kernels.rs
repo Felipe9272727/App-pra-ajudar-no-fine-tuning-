@@ -62,6 +62,63 @@ pub fn dot_bf(data: &[u8], x: &[f32]) -> f32 {
         .map(|(i, x)| read_bf(&data[2 * i..]) * x)
         .sum()
 }
+
+/// Four independent dot products, loading each weight once without changing any sum order.
+pub(crate) fn dot_bf_block(data: &[u8], inputs: [&[f32]; 4]) -> [f32; 4] {
+    #[cfg(target_arch = "x86_64")]
+    if std::is_x86_feature_detected!("avx2") {
+        return unsafe { x86_bf_block(data, inputs) };
+    }
+    #[cfg(target_arch = "aarch64")]
+    return unsafe { arm_bf_block(data, inputs) };
+    #[allow(unreachable_code)]
+    inputs.map(|x| dot_bf(data, x))
+}
+
+#[cfg(target_arch = "x86_64")]
+#[target_feature(enable = "avx2")]
+unsafe fn x86_bf_block(data: &[u8], inputs: [&[f32]; 4]) -> [f32; 4] {
+    use std::arch::x86_64::*;
+    let mut sums = [_mm256_setzero_ps(); 4];
+    let n = inputs[0].len() / 8 * 8;
+    for i in (0..n).step_by(8) {
+        let bytes = _mm_loadu_si128(data.as_ptr().add(i * 2) as *const __m128i);
+        let w = _mm256_castsi256_ps(_mm256_slli_epi32::<16>(_mm256_cvtepu16_epi32(bytes)));
+        for (sum, input) in sums.iter_mut().zip(inputs) {
+            *sum = _mm256_add_ps(*sum, _mm256_mul_ps(w, _mm256_loadu_ps(input.as_ptr().add(i))));
+        }
+    }
+    std::array::from_fn(|j| {
+        let mut lanes = [0.; 8];
+        _mm256_storeu_ps(lanes.as_mut_ptr(), sums[j]);
+        let mut sum = lanes.iter().sum();
+        for i in n..inputs[j].len() {
+            sum += read_bf(&data[i * 2..]) * inputs[j][i];
+        }
+        sum
+    })
+}
+
+#[cfg(target_arch = "aarch64")]
+unsafe fn arm_bf_block(data: &[u8], inputs: [&[f32]; 4]) -> [f32; 4] {
+    use std::arch::aarch64::*;
+    let mut sums = [vdupq_n_f32(0.); 4];
+    let n = inputs[0].len() / 4 * 4;
+    for i in (0..n).step_by(4) {
+        let bytes = vld1_u16(data.as_ptr().add(i * 2) as *const u16);
+        let w = vreinterpretq_f32_u32(vshll_n_u16::<16>(bytes));
+        for (sum, input) in sums.iter_mut().zip(inputs) {
+            *sum = vaddq_f32(*sum, vmulq_f32(w, vld1q_f32(input.as_ptr().add(i))));
+        }
+    }
+    std::array::from_fn(|j| {
+        let mut sum = vaddvq_f32(sums[j]);
+        for i in n..inputs[j].len() {
+            sum += read_bf(&data[i * 2..]) * inputs[j][i];
+        }
+        sum
+    })
+}
 pub fn dot_q8(data: &[u8], x: &[f32]) -> f32 {
     #[cfg(target_arch = "x86_64")]
     {

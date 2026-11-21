@@ -9,6 +9,8 @@ use std::{
     path::Path,
     sync::atomic::{AtomicBool, Ordering},
 };
+mod prefill;
+pub use prefill::BLOCK as PREFILL_BLOCK;
 pub const SPECIALIST: &str = "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85";
 pub const MAX_CONTEXT: usize = 16384;
 const SPECIALIST_FINGERPRINT: &str = "40507c355f18516f29532d476f1171c99da28f23421d04a094b318244db8f368";
@@ -362,6 +364,15 @@ impl Model {
         let z = self.mv(&format!("{prefix}.in_proj_z.weight"), x);
         let b = self.mv(&format!("{prefix}.in_proj_b.weight"), x);
         let a = self.mv(&format!("{prefix}.in_proj_a.weight"), x);
+        let out = self.delta_projected(&prefix, &input, &z, &b, &a, cache);
+        let out = self.mv(&format!("{prefix}.out_proj.weight"), &out);
+        self.timing("delta_including_projections", start);
+        out
+    }
+
+    fn delta_projected(
+        &self, prefix: &str, input: &[f32], z: &[f32], b: &[f32], a: &[f32], cache: &mut Cache,
+    ) -> Vec<f32> {
         let conv = self.vector(&format!("{prefix}.conv1d.weight"));
         if cache.conv.is_empty() {
             cache.conv = vec![0.; 6144 * 7];
@@ -433,10 +444,7 @@ impl Model {
                 o
             })
             .collect();
-        let out: Vec<_> = pieces.into_iter().flatten().collect();
-        let out = self.mv(&format!("{prefix}.out_proj.weight"), &out);
-        self.timing("delta_including_projections", start);
-        out
+        pieces.into_iter().flatten().collect()
     }
     fn attention(
         &self,
@@ -452,6 +460,16 @@ impl Model {
         let projected = self.mv(&format!("{prefix}.q_proj.weight"), x);
         let kk = self.mv(&format!("{prefix}.k_proj.weight"), x);
         let value = self.mv(&format!("{prefix}.v_proj.weight"), x);
+        let out = self.attention_projected(&prefix, &projected, &kk, value, cache, pos, window, rotary);
+        let out = self.mv(&format!("{prefix}.o_proj.weight"), &out);
+        self.timing("attention_including_projections", start_time);
+        out
+    }
+
+    fn attention_projected(
+        &self, prefix: &str, projected: &[f32], kk: &[f32], value: Vec<f32>,
+        cache: &mut Cache, pos: usize, window: bool, rotary: Option<&[(f32, f32); 32]>,
+    ) -> Vec<f32> {
         let mut q = vec![0.; 2048];
         let mut gate = vec![0.; 2048];
         for h in 0..8 {
@@ -517,8 +535,6 @@ impl Model {
                 }
             }
         }
-        let out = self.mv(&format!("{prefix}.o_proj.weight"), &out);
-        self.timing("attention_including_projections", start_time);
         out
     }
     pub fn token(

@@ -88,10 +88,30 @@ impl Chat {
   };
   let (mut session,mut last,reused)=if self.reuse_prefix{let cache=self.cache.borrow();match cache.as_ref().filter(|c|ids.starts_with(&c.ids)){Some(c)=>(c.session.clone(),Some(c.hidden.clone()),c.ids.len()),None=>(Session::new(),None,0)}}else{(Session::new(),None,0)};
   let mut stopped=false;
-  for(i,id)in ids.iter().enumerate().skip(reused){
-   match self.model.token(&mut session,*id,cancel,false){Ok((h,_))=>last=Some(h),Err(e)if e.to_string()=="cancelled"=>{stopped=true;break},Err(e)=>return Err(e)}
-   if self.reuse_prefix&&i+1==boundary{*self.cache.borrow_mut()=Some(PrefixSnapshot{ids:ids[..boundary].to_vec(),session:session.clone(),hidden:last.as_ref().unwrap().clone()});}
-   if i%8==0{update("",i+1,ids.len());}
+  let mut i = reused;
+  while i < ids.len() {
+   let limit = if self.reuse_prefix && i < boundary { boundary } else { ids.len() };
+   let block = crate::model::PREFILL_BLOCK;
+   let result = if self.model.can_prefill_block() && limit - i >= block {
+    self.model.prefill_block(&mut session, &ids[i..i + block], cancel)
+     .map(|mut h| (std::mem::take(&mut h[block - 1]), block))
+   } else {
+    self.model.token(&mut session, ids[i], cancel, false).map(|(h, _)| (h, 1))
+   };
+   match result {
+    Ok((h, count)) => {
+     if i % 8 == 0 || i / 8 != (i + count - 1) / 8 { update("", i + count, ids.len()); }
+     last = Some(h);
+     i += count;
+    }
+    Err(e) if e.to_string() == "cancelled" => { stopped = true; break; }
+    Err(e) => return Err(e),
+   }
+   if self.reuse_prefix && i == boundary {
+    *self.cache.borrow_mut() = Some(PrefixSnapshot {
+     ids: ids[..boundary].to_vec(), session: session.clone(), hidden: last.as_ref().unwrap().clone(),
+    });
+   }
   }
   let prefill_seconds=begin.elapsed().as_secs_f64();let decode_begin=Instant::now();let mut first=None;let mut generated=vec![];let mut raw=String::new();let mut reason=if stopped{"cancelled"}else{"length"};let mut thinking_done=!o.thinking;let mut reasoning=0;let mut response=0;let mut forced=false;let mut forced_tokens=0;
   let mut hidden=last.unwrap_or_default();

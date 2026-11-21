@@ -1,7 +1,7 @@
 use anyhow::{ensure, Context, Result};
 use liquid_sense::{
     kernels::{attention_values, greedy},
-    model::{Model, Session},
+    model::{Model, Session, PREFILL_BLOCK},
 };
 use serde_json::{json, Value};
 use std::{fs::File, hint::black_box, sync::atomic::AtomicBool, time::Instant};
@@ -12,6 +12,33 @@ fn same(a: &[f32], b: &[f32]) -> bool {
 
 fn same_rows(a: &[Vec<f32>], b: &[Vec<f32>]) -> bool {
     a.len() == b.len() && a.iter().zip(b).all(|(a, b)| same(a, b))
+}
+
+fn equal_caches(reference: &Session, candidate: &Session) -> bool {
+    reference.position == candidate.position && reference.slots.len() == candidate.slots.len()
+        && reference.slots.iter().zip(&candidate.slots).all(|(x, y)| {
+            same(&x.conv, &y.conv) && same(&x.recurrent, &y.recurrent)
+                && same_rows(&x.k, &y.k) && same_rows(&x.v, &y.v)
+        })
+}
+
+fn exact_prefill(model: &mut Model, inputs: &[u32], cancel: &AtomicBool) -> Result<Value> {
+    let mut reference = Session::new();
+    let mut candidate = Session::new();
+    for (n, chunk) in inputs.chunks_exact(PREFILL_BLOCK).enumerate() {
+        model.exact_speedups = false;
+        let baseline: Vec<_> = chunk.iter().map(|&id| model.token(&mut reference, id, cancel, false)
+            .map(|v| v.0)).collect::<Result<_>>()?;
+        model.exact_speedups = true;
+        let batch = model.prefill_block(&mut candidate, chunk, cancel)?;
+        ensure!(same_rows(&baseline, &batch) && equal_caches(&reference, &candidate),
+            "Batched activations/cache differ in block {n}");
+        for (b, f) in baseline.iter().zip(&batch) {
+            ensure!(same(&model.logits(b), &model.logits(f)), "Batched logits differ in block {n}");
+        }
+    }
+    Ok(json!({"block_size": PREFILL_BLOCK, "tokens_compared": candidate.position,
+        "cache_slots": candidate.slots.len(), "state_and_logits_bitwise_equal": true}))
 }
 
 fn exact(model: &mut Model, inputs: &[u32], cancel: &AtomicBool) -> Result<Value> {
@@ -52,7 +79,15 @@ fn timings(model: &mut Model, inputs: &[u32], cancel: &AtomicBool) -> Result<Vec
         let mut session = Session::new();
         let mut hidden = Vec::new();
         let start = Instant::now();
-        for &id in inputs {
+        let mut next = 0;
+        if fast {
+            for chunk in inputs.chunks_exact(PREFILL_BLOCK) {
+                let mut block = model.prefill_block(&mut session, chunk, cancel)?;
+                hidden = std::mem::take(&mut block[PREFILL_BLOCK - 1]);
+                next += PREFILL_BLOCK;
+            }
+        }
+        for &id in &inputs[next..] {
             hidden = model.token(&mut session, id, cancel, false)?.0;
         }
         let mut id = greedy(&model.logits(&hidden)) as u32;
@@ -116,11 +151,12 @@ fn main() -> Result<()> {
     } else { 0 };
     let cancel = AtomicBool::new(false);
     let exact = exact(&mut model, &inputs, &cancel)?;
+    let prefill = exact_prefill(&mut model, &inputs, &cancel)?;
     eprintln!("Exact parity verified for checkpoint {}", model.manifest.source_checkpoint_sha256);
     let timings = timings(&mut model, &inputs, &cancel)?;
     let kernels = if experimental { Vec::new() } else { attention_kernel()? };
     println!("{}", json!({"checkpoint": model.manifest.source_checkpoint_sha256, "changed_tensors": changed,
-        "arch": std::env::consts::ARCH, "threads": threads, "parity": exact,
+        "arch": std::env::consts::ARCH, "threads": threads, "parity": exact, "prefill_parity": prefill,
         "timing": timings, "attention_kernel": kernels}));
     Ok(())
 }
