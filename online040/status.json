@@ -1,0 +1,17 @@
+{
+  "space": "Felipe0282829273/liquid-sense-gpu",
+  "space_revision": "8d881d4c1dfb8a377ff6f814f23a5b85059f11ec",
+  "context_tokens": 16384,
+  "extenso_reasoning_tokens": 2048,
+  "extenso_response_tokens": 4096,
+  "live_continuation_reasoning_tokens": 600,
+  "live_authenticated_cuda_response_verified": true,
+  "android_version": "0.6.4-gpu-preview",
+  "android_15_update_verified": true,
+  "android_history_verified": true,
+  "android_gpu_network_result": "anonymous_quota_rejection_displayed",
+  "xiaomi_installation_verified": false,
+  "workflow_run": 44920642172,
+  "workflow_job": 136895695788,
+  "delivery": "reports/Android15/delivery.json"
+}

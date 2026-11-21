@@ -1,0 +1,3 @@
+INSTRUMENTATION_RESULT: claim=GPU selected and live quota rejection rendered; both histories retained and local mode reselected
+INSTRUMENTATION_RESULT: reply="Não consegui concluir: Cota do ZeroGPU atingida. Use o modo local ou tente quando a cota renovar."
+INSTRUMENTATION_CODE: -1
