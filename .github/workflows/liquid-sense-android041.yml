@@ -98,7 +98,7 @@ jobs:
           adb shell am instrument -w dev.liquidsense.installcheck.smoke/dev.liquidsense.installcheck.Smoke | tee "$RUNNER_TEMP/evidence041/update.txt"
           grep -q 'INSTRUMENTATION_CODE: -1' "$RUNNER_TEMP/evidence041/update.txt"
           grep -q 'Status: 0' "$RUNNER_TEMP/evidence041/update.txt"
-      - name: Verify real local generation and GPU-mode identity
+      - name: Verify Android history and identity and probe the local library
         run: |
           adb shell am instrument -w dev.liquidsense.chat.tools.smoke/dev.liquidsense.chat.SmokeSpeed | tee "$RUNNER_TEMP/evidence041/chat.txt"
           grep -q 'INSTRUMENTATION_CODE: -1' "$RUNNER_TEMP/evidence041/chat.txt"

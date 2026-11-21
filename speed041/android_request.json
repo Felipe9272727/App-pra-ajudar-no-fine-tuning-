@@ -1,1 +1,1 @@
-{"request": 1, "purpose": "verify the exact update from 0.6.4, native chat and offline identity before publishing"}
+{"request": 2, "purpose": "verify the history and offline identity first, then probe JNI with shorter input under ARM translation"}
