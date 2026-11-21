@@ -1,4 +1,4 @@
 {
-  "request": 1,
-  "purpose": "test compact signed APK update, history preservation, real Android GPU selection and live Hugging Face inference before publication"
+  "request": 2,
+  "purpose": "seed history in the preference file named by Activity.getLocalClassName for this application ID"
 }

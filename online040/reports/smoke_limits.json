@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "context": 16384,
+  "presets": {
+    "normal": [
+      0,
+      2048
+    ],
+    "profundo": [
+      1024,
+      2048
+    ],
+    "extenso": [
+      2048,
+      4096
+    ]
+  },
+  "extenso_reached_cap_in_fixture": 6144,
+  "live_model": false,
+  "test": "forced reasoning closure, exact answer cap, different context and message overflow"
+}

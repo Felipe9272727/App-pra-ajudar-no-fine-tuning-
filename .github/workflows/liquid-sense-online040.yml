@@ -80,10 +80,11 @@ jobs:
           XML
           prefs=/data/user/0/dev.liquidsense.chat.tools/shared_prefs
           adb shell mkdir -p "$prefs"
-          adb push "$RUNNER_TEMP/MainActivity.xml" "$prefs/MainActivity.xml"
+          activity_prefs="$prefs/dev.liquidsense.chat.MainActivity.xml"
+          adb push "$RUNNER_TEMP/MainActivity.xml" "$activity_prefs"
           adb shell chown -R "$app_uid:$app_uid" "$prefs"
           adb shell chmod 700 "$prefs"
-          adb shell chmod 600 "$prefs/MainActivity.xml"
+          adb shell chmod 600 "$activity_prefs"
           adb shell restorecon -R "$prefs"
           adb shell am instrument -w dev.liquidsense.installcheck.smoke/dev.liquidsense.installcheck.Smoke | tee "$RUNNER_TEMP/evidence040/update.txt"
           grep -q 'INSTRUMENTATION_CODE: -1' "$RUNNER_TEMP/evidence040/update.txt"
