@@ -12,7 +12,9 @@ from transformers import Qwen2Tokenizer
 from transformers.models.qwen3_5 import modeling_qwen3_5 as hf
 
 from bootstrap import PACK_SHA, checked
-from modeling_sensenova_loop import SenseNovaLoopConfig, SenseNovaLoopForConditionalGeneration
+from modeling_sensenova_loop import (
+    MHCRouter, SenseNovaLoopConfig, SenseNovaLoopForConditionalGeneration, sinkhorn,
+)
 from native_runtime import NativeTextModel, VisitGatedMHC, extend_convolutions
 
 CHECKPOINT_SHA = '46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8'
@@ -81,8 +83,35 @@ def load_text_weights(text, pack):
     return manifest
 
 
+class ConstantRouter(MHCRouter):
+    def forward(self, residual):
+        with torch.autocast(device_type=residual.device.type, enabled=False):
+            branch = (self.cached_pre.to(residual.dtype) @ residual).squeeze(-2)
+            if self.pre_scale != 1.0:
+                branch = branch * self.pre_scale
+            return branch, self.cached_post, self.cached_mix
+
+
+@torch.no_grad()
+def cache_constant_routers(text, manifest):
+    count = 0
+    for name, module in text.named_modules():
+        if not isinstance(module, MHCRouter) or manifest['tensors'][f'{name}.weight']['kind'] != 'zero':
+            continue
+        streams = module.streams
+        logits = module.bias.detach()
+        mix = (torch.eye(streams, dtype=torch.float32) if module.fixed_identity else
+               sinkhorn(logits[2 * streams:].reshape(streams, streams), module.iterations))
+        module.register_buffer('cached_pre', logits[:streams].sigmoid().unsqueeze(0), persistent=False)
+        module.register_buffer('cached_post', 2 * logits[streams:2 * streams].sigmoid(), persistent=False)
+        module.register_buffer('cached_mix', mix, persistent=False)
+        module.__class__ = ConstantRouter
+        count += 1
+    return count
+
+
 class Runtime:
-    def __init__(self, folder, device='cpu'):
+    def __init__(self, folder, device='cpu', cache_routers=True):
         folder = Path(folder)
         config = SenseNovaLoopConfig.from_dict(json.loads((folder / 'config.json').read_text()))
         config._attn_implementation = 'eager'
@@ -90,6 +119,7 @@ class Runtime:
         text = make_text(config)
         self.manifest = load_text_weights(text, folder / 'model.lsp')
         self.audit = {name: spec['source_sha256'] for name, spec in self.manifest['tensors'].items()}
+        self.cached_routers = cache_constant_routers(text, self.manifest) if cache_routers else 0
         self.text = text.eval().requires_grad_(False).to(device)
         self.tok = Qwen2Tokenizer.from_pretrained(folder, local_files_only=True)
         self.identity = json.loads((folder / 'identity.json').read_text())['system_message']
@@ -136,6 +166,7 @@ class Runtime:
             'device': str(self.text.embed_tokens.weight.device),
             'physical_layers': len(self.text.layers),
             'execution_visits': len(self.text._loop_plan),
+            'cached_routers': self.cached_routers,
             'weights_SHA256': PACK_SHA,
             'prototype': True,
         }

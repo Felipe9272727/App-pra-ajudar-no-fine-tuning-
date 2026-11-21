@@ -6,6 +6,22 @@ os controladores mHC, a convolução temporal de largura 7 e as janelas de 256.
 
 [Space Liquid Sense GPU](https://huggingface.co/spaces/Felipe0282829273/liquid-sense-gpu)
 
+## Resultado do teste publicado
+
+O Space passou na chamada real em `cuda:0`. Inicialmente, a GPU demorou cerca de
+22,2 s para gerar os 64 tokens do teste de código. A revisão que pré-calcula as
+saídas de 48 roteadores mHC reduziu a média de duas chamadas para 5,0 s de
+inferência e de 22,6 s para 5,3 s de chamada completa. Esses roteadores têm matrizes
+de entrada zeradas no pacote publicado. Os pesos, os valores de roteamento e as
+56 execuções foram preservados. Todos os tokens coincidiram com a referência CPU
+nos testes observados. A espera de fila e rede variou mais nas chamadas curtas.
+
+Com limite de 160 tokens, a função terminou em 88 tokens e passou os 3 casos, com
+saída idêntica entre CPU e GPU. O teste de 64 tokens terminou antes da função em
+ambos. `reports/deployment.json` registra os commits e médias. Os relatórios por
+chamada preservam os tempos e as saídas. Os resultados se limitam à amostra medida
+no servidor. A integração Android depende da comparação com o motor Rust do APK.
+
 O chat experimental aceita uma mensagem por vez e oferece thinking com orçamento
 de até 512 tokens. O teste mede o tempo interno até a geração do primeiro token,
 a velocidade de decodificação e o tempo total da requisição. Hoje a interface
