@@ -1,5 +1,10 @@
 # Liquid Sense 0.8B LOOP
 
+## Demo em GPU no Hugging Face
+
+O [chat Liquid Sense em ZeroGPU](https://huggingface.co/spaces/Felipe0282829273/liquid-sense-gpu) está no ar com o pacote BF16 do APK 0.6.3. No teste de código de 64 tokens, o pré-cálculo dos 48 roteadores mHC reduziu o tempo médio da chamada de 22,6 s para 5,3 s em GPU. Os tokens coincidiram com a referência de CPU. Com limite de 160 tokens, a função completa passou em 3 de 3 casos. A comparação com o motor Rust do app permanece em aberto.
+[Resultados e código](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/c3aca8e1b253217fd4b7172c7a4b380f8d02d371/online039).
+
 ## Instalação confirmada; próxima etapa: velocidade e hospedagem
 
 O usuário confirmou que o reparador0.3permitiu instalar no Xiaomi. A instalação

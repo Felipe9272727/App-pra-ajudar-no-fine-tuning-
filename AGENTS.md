@@ -1,3 +1,16 @@
+# Online039 — public Liquid Sense ZeroGPU Space tested in CUDA
+
+- Space https://huggingface.co/spaces/Felipe0282829273/liquid-sense-gpu, revision
+  e3bcf6c23a400a5ce4940eb85b938cc483fd0514. Tested public HTTP 200 and CUDA /generate.
+- Shipped BF16 pack SHA6c774a43…7288, 546 tensors, 32 layers and 56 visits. Only
+  zero-weight mHC routers use precomputed gates (48). CPU and GPU test tokens
+  matched. Same 64-token code prompt, two calls per GPU revision: 22.6s→5.3s
+  mean request time. Short requests vary with queue. At budget160 the function
+  finished at88 tokens and passed3/3. Quality and latency versus Android Rust
+  still need testing before Android integration. No model training occurred.
+- 33 source/report files verified at c3aca8e1b253217fd4b7172c7a4b380f8d02d371 under online039. The temporary
+  credential was removed after checking the public Space. Never persist it.
+
 # Hosting038 — installation confirmed by user; free GPU research before training
 
 - User explicitly confirms helper0.3fixed final installation on Xiaomi. Record
