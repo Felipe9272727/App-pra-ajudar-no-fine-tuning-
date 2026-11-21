@@ -1,3 +1,11 @@
+# Speed041 — exact faster prefill, Android 0.6.5 and identity
+
+- Rust prefill shares BF16 weight reads over four tokens, preserves scalar accumulation order and advances all 56 cache slots causally inside each block. Rotary reuse, recurrent passes and attention value-order changes preserve bits in the tested states. Exact old Base asset and Loop029 epoch02 patch hashes. Same reasoning/context budgets, signer and package. Trained checkpoint stays separately selectable offline.
+- ARM64 Neoverse-N2 run 44949897584 medians first token Base 1.613 to 1.030 s, epoch02 1.702 to 1.120 s for the same 20-token prompt and four measured repetitions per path. Decode of 8 tokens was within 2% on ARM. Full state/logit comparison passed in ARM64 and x86-64. ARM run 44951555200 verified the same output and 37 reused prefix tokens through Normal then thinking. Snapdragon timing remains to be measured.
+- GPU direct identity comes from app and web metadata, with Qwen3.5 lineage and independent developer credit. Space revision 010c41866c12ead6f640d0d8b44f0f4544593298 verified anonymously. Ordinary inference files were hash verified. Temporary deployment token removed.
+- Signed compact updater 0.5 for installed 0.6.4, 6320677 bytes SHA256 d01364aa1ad50940c2c9c177a4d1f9e0aa1a512be2b959427d6a09cdb4f181e3. Android 15 run 44951406641 passed real install, history, GPU identity and bounded JNI generation of 13 tokens. First full UI sample timed out in the emulator and is preserved. Anonymous public download verified. https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.5-speed041/LiquidSense-Atualizador-0.5.apk
+- Source and reports https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/713a11045fc8aafd885f46e1a48581554e305de4/speed041
+
 # Online040 — Android 0.6.4 with direct Hugging Face GPU
 
 - User asked to match the app's token budgets and connect the Android app directly to the Hugging Face Space. Space revision 8d881d4c1dfb8a377ff6f814f23a5b85059f11ec runs in ZeroGPU. Context is 16384; Normal 0+2048, Profundo 1024+2048, Extenso 2048+4096. Live two-stage test produced 600 reasoning tokens; exact 6144 ceiling checked in a fixture. Final browser and API calls returned a real authenticated CUDA response. Anonymous service quotas can stop the turn.

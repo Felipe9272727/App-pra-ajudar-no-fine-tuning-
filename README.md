@@ -1,5 +1,11 @@
 # Liquid Sense 0.8B LOOP
 
+## Liquid Sense 0.6.5 no Android
+
+A 0.6.5 processa a entrada em blocos de quatro tokens. Em ARM64 Linux, a mediana até o primeiro token caiu de **1,61 s para 1,03 s** na Base e de **1,70 s para 1,12 s** no Loop 029 época 2. Os testes confirmaram paridade bit a bit, inclusive no chat em dois turnos. O app e o Space apresentam o Liquid Sense a partir dos dados oficiais em perguntas diretas de identidade. [Código e resultados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/713a11045fc8aafd885f46e1a48581554e305de4/speed041)
+
+Instale o atualizador de 6,3 MB e confirme a atualização sobre a 0.6.4. O atualizador aproveita os pesos já instalados e o Android preserva as conversas. [Baixar o atualizador](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.5-speed041/LiquidSense-Atualizador-0.5.apk)
+
 ## Liquid Sense 0.6.4 com GPU no Android
 
 Instale o atualizador de 6,3 MB por cima do Reparador. Ele usa os pesos da 0.6.3 instalada e preserva as conversas. Abra o Liquid Sense e selecione **Trocar modelo → Base 1.0 · GPU**. [Baixar o atualizador](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.4-gpu040/LiquidSense-Atualizador-GPU-0.4.apk)
