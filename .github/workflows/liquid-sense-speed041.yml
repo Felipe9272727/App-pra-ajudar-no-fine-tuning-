@@ -32,6 +32,7 @@ jobs:
           urllib.request.urlretrieve(url,z)
           with z.open('rb') as f: assert hashlib.file_digest(f,'sha256').hexdigest()=='52966dccfc9ec1dd6f4eaeabadaa3615c31e286034d84c04a74690042724f307'
           with zipfile.ZipFile(z) as archive: archive.extract('LiquidSense-0.6.3-install-preview.apk',p)
+          with zipfile.ZipFile(p/'LiquidSense-0.6.3-install-preview.apk') as apk: apk.extract('assets/tokenizer.json',p)
           z.unlink()
           (p/'tokens.json').write_text(json.dumps(json.loads(Path('speed041/reports/inputs.json').read_text())['token_ids']))
           PY
@@ -40,7 +41,7 @@ jobs:
         run: |
           data="$RUNNER_TEMP/speed041"
           for model in base epoch02; do
-            speed041/native/target/release/speedcheck "$data/locator.json" "$data/tokens.json" "$model" 4 > "$data/evidence/$model-aarch64.json"
+            speed041/native/target/release/speedcheck "$data/locator.json" "$data/tokens.json" "$model" 4 "$data/assets/tokenizer.json" > "$data/evidence/$model-aarch64.json"
           done
       - uses: actions/upload-artifact@v4
         if: always()

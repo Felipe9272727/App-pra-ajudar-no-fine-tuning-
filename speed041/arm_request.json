@@ -1,1 +1,1 @@
-{"request": 2, "purpose": "validate batched prefill at the same four-token boundaries and profile both original checkpoints on actual ARM64"}
+{"request": 3, "purpose": "verify the same outputs and cached history through the normal chat entry point on real ARM64"}

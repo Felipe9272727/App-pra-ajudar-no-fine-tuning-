@@ -1,10 +1,11 @@
 use anyhow::{ensure, Context, Result};
 use liquid_sense::{
+    chat::{Chat, GenerationOptions, Message},
     kernels::{attention_values, greedy},
     model::{Model, Session, PREFILL_BLOCK},
 };
 use serde_json::{json, Value};
-use std::{fs::File, hint::black_box, sync::atomic::AtomicBool, time::Instant};
+use std::{cell::RefCell, fs::File, hint::black_box, sync::atomic::AtomicBool, time::Instant};
 
 fn same(a: &[f32], b: &[f32]) -> bool {
     a.len() == b.len() && a.iter().zip(b).all(|(a, b)| a.to_bits() == b.to_bits())
@@ -130,6 +131,36 @@ fn attention_kernel() -> Result<Vec<Value>> {
     Ok(rows)
 }
 
+fn chat_flow(model: Model, tokenizer_path: &str, cancel: &AtomicBool) -> Result<Value> {
+    let tokenizer = tokenizers::Tokenizer::from_file(tokenizer_path)
+        .map_err(|error| anyhow::anyhow!(error.to_string()))?;
+    let mut chat = Chat { model, tokenizer, tools_prefix: None,
+        system: "Você é um assistente de programação.".into(),
+        cache: RefCell::new(None), reuse_prefix: true };
+    let mut answers = Vec::new();
+    for fast in [false, true] {
+        chat.model.exact_speedups = fast;
+        chat.cache.replace(None);
+        let mut messages = vec![Message { role: "user".into(),
+            content: "Qual é a soma de dois e três? Responda em uma linha.".into(), internal: false }];
+        let mut run = Vec::new();
+        for thinking in [false, true] {
+            let options = GenerationOptions { thinking, reasoning_tokens: 32, response_tokens: 16, context_tokens: 2048 };
+            let reply = chat.generate_profile(&messages, options, cancel, |_, _, _| {})?;
+            messages.push(Message { role: "assistant".into(), content: reply.text.clone(), internal: false });
+            messages.push(Message { role: "user".into(), content: "Dobre a soma anterior.".into(), internal: false });
+            let mut output = serde_json::to_value(reply)?;
+            let result = output.as_object_mut().context("Invalid chat answer")?;
+            for time in ["prefill_seconds", "decode_seconds", "first_token_seconds"] { result.remove(time); }
+            run.push(output);
+        }
+        answers.push(run);
+    }
+    ensure!(answers[0] == answers[1], "Chat or prefix reuse changed across executors");
+    ensure!(answers[0][1]["reused_prompt_tokens"].as_u64().unwrap_or(0) > 0, "Followup did not reuse prefix");
+    Ok(json!({"answers": answers.remove(0), "exact": true}))
+}
+
 fn main() -> Result<()> {
     let args: Vec<_> = std::env::args().collect();
     let location: Value = serde_json::from_reader(File::open(args.get(1).context("APK locator required")?)?)?;
@@ -155,8 +186,10 @@ fn main() -> Result<()> {
     eprintln!("Exact parity verified for checkpoint {}", model.manifest.source_checkpoint_sha256);
     let timings = timings(&mut model, &inputs, &cancel)?;
     let kernels = if experimental { Vec::new() } else { attention_kernel()? };
-    println!("{}", json!({"checkpoint": model.manifest.source_checkpoint_sha256, "changed_tensors": changed,
+    let checkpoint=model.manifest.source_checkpoint_sha256.clone();
+    let flow=args.get(5).map(|tokenizer|chat_flow(model,tokenizer,&cancel)).transpose()?;
+    println!("{}", json!({"checkpoint": checkpoint, "changed_tensors": changed,
         "arch": std::env::consts::ARCH, "threads": threads, "parity": exact, "prefill_parity": prefill,
-        "timing": timings, "attention_kernel": kernels}));
+        "timing": timings, "attention_kernel": kernels, "chat_history_parity": flow}));
     Ok(())
 }
