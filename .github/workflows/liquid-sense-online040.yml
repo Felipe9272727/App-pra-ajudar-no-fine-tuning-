@@ -22,10 +22,10 @@ jobs:
         with:
           persist-credentials: false
           sparse-checkout: online040
-      - name: Download the exact original and the draft updater
+      - name: Download the exact original and reconstruct the archived updater
         run: |
           mkdir -p "$RUNNER_TEMP/evidence040" "$RUNNER_TEMP/update040"
-          gh release download "$RELEASE_TAG" --pattern 'LiquidSense-Atualizador-GPU-0.4.apk' --dir "$RUNNER_TEMP/update040"
+          cat online040/artifacts/updater0.bin online040/artifacts/updater1.bin > "$RUNNER_TEMP/update040/LiquidSense-Atualizador-GPU-0.4.apk"
           python - <<'PY'
           from pathlib import Path
           import hashlib,os,json,urllib.request,zipfile
@@ -97,6 +97,7 @@ jobs:
           adb pull /sdcard/online040.png "$RUNNER_TEMP/evidence040/screen.png"
       - name: Publish and verify the updater
         run: |
+          gh release upload "$RELEASE_TAG" "$RUNNER_TEMP/update040/LiquidSense-Atualizador-GPU-0.4.apk"
           gh release edit "$RELEASE_TAG" --draft=false --prerelease --latest=false
           python - <<'PY'
           from pathlib import Path
