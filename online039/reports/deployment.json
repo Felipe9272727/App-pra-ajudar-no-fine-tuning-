@@ -1,0 +1,45 @@
+{
+  "status": "live_zeroGPU_validated",
+  "date": "2026-11-21",
+  "space": "Felipe0282829273/liquid-sense-gpu",
+  "space_url": "https://huggingface.co/spaces/Felipe0282829273/liquid-sense-gpu",
+  "public_page_status": 200,
+  "hardware": "zero-a10g",
+  "original_space_commit": "23d6759bf696e5abe962b5e47db4882016629d3f",
+  "optimized_space_commit": "e3bcf6c23a400a5ce4940eb85b938cc483fd0514",
+  "cuda_endpoint_device": "cuda:0",
+  "source_checkpoint_sha256": "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8",
+  "mobile_pack_sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+  "tensor_count": 546,
+  "physical_layers": 32,
+  "execution_visits": 56,
+  "cached_input_independent_routers": 48,
+  "paired_speed_probe": "code_square greedy, identical prompt and 64 generated tokens, two observations per revision, shared GPU",
+  "same_tokens_all_gpu_calls": true,
+  "gpu_code_speed_64_tokens": {
+    "generation_seconds": {
+      "before": 22.210483230504906,
+      "after": 5.019794955500402
+    },
+    "api_request_seconds": {
+      "before": 22.620421077499998,
+      "after": 5.34976907500004
+    },
+    "decode_tokens_per_second": {
+      "before": 2.890453037080044,
+      "after": 12.91461005092972
+    }
+  },
+  "code_budget160": {
+    "completion_tokens": 88,
+    "cases_passed": 3,
+    "cases_total": 3,
+    "gpu_seconds": 6.388026593020186,
+    "wall_request_seconds": 6.73915823599998,
+    "same_tokens_as_CPU": true
+  },
+  "android_online_integration": false,
+  "android_rust_parity_validated": false,
+  "weights_modified": false,
+  "new_training": false
+}
