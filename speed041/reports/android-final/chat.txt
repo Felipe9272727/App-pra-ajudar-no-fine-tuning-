@@ -1,0 +1,4 @@
+INSTRUMENTATION_RESULT: claim=0.6.5 Android UI preserved history and answered GPU-mode identity from app metadata
+INSTRUMENTATION_RESULT: identity="Sou o Liquid Sense, um modelo experimental criado por um único desenvolvedor independente. Minha base é o Qwen3.5-0.8B, com adaptações inspiradas em SenseNova Loop e Liquid AI para aprimorar programação e raciocínio."
+INSTRUMENTATION_RESULT: native_reply={"raw_text":"Oi! Tudo bem? 😊 Como posso te ajudar hoje?","text":"Oi! Tudo bem? 😊 Como posso te ajudar hoje?","tokens":13,"prompt_tokens":13,"finish_reason":"stop","generated_ids":[78302,0,186675,30866,30,25677,232,44153,177282,979,176412,70670,30],"reused_prompt_tokens":0,"prefill_seconds":5.590557882,"decode_seconds":9.078128308,"first_token_seconds":5.859963284,"thinking":false,"reasoning_tokens":0,"response_tokens":13,"reasoning_complete":true,"forced_reasoning_close":false,"forced_control_tokens":0}
+INSTRUMENTATION_CODE: -1

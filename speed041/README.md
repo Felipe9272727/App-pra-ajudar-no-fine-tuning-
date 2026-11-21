@@ -1,5 +1,7 @@
 # Liquid Sense 0.6.5
 
+[Baixar o atualizador de 6,3 MB](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.5-speed041/LiquidSense-Atualizador-0.5.apk). Instale por cima do atualizador anterior, abra e toque em **Atualizar para 0.6.5**. O atualizador aproveita os pesos da versão 0.6.4 instalada e o Android preserva as conversas.
+
 O motor Rust processa o contexto em blocos de quatro tokens. Cada produto matricial lê os pesos BF16 uma vez por bloco, acumulando cada produto escalar na mesma ordem que antes. Os estados recorrentes e os caches de atenção avançam token por token dentro de cada visita. O motor calcula as rotações posicionais uma vez por posição e percorre os valores da atenção em ordem contígua. A geração continua sendo autorregressiva.
 
 ## Medição com os pesos do Android
@@ -15,6 +17,12 @@ O comparativo usou os mesmos 20 tokens de entrada, 8 passos de decodificação e
 
 A verificação bit a bit comparou os estados das 56 visitas, os 248.320 logits, os tokens gerados e os caches. A leitura em bloco também produziu os mesmos estados, logits e caches que a leitura token a token para os 20 tokens. O pacote BF16 e a edição treinada têm os mesmos SHA-256 do APK 0.6.4. Os dados não medem o Snapdragon 7s Gen 2. [Dados ARM64](reports/arm-prefill) · [Base x86-64](reports/base-x86_64.json) · [Época 2 x86-64](reports/epoch02-x86_64.json)
 
+Um teste adicional em ARM64 comparou a geração pelo fluxo normal do chat em dois turnos. A primeira resposta usou o perfil Normal e a continuação usou raciocínio. Os dois caminhos produziram os mesmos tokens e reaproveitaram os mesmos 37 tokens do contexto anterior, tanto na Base quanto na época 2. [Comparação do chat](reports/arm-chat)
+
 ## Identidade do Liquid Sense
 
 Para perguntas diretas de apresentação, o modo GPU do app e o chat web apresentam o Liquid Sense, dão crédito ao desenvolvedor independente e explicam a origem no Qwen3.5. Essa apresentação usa os dados oficiais do projeto e dispensa a cota do ZeroGPU. O chat web foi verificado ao vivo em acesso anônimo. [Teste público](reports/live_space_identity.json)
+
+## Validação da instalação
+
+O Android 15 emulado confirmou a instalação sobre a 0.6.4, a preservação do histórico e a identidade na interface do modo GPU. O primeiro teste de chat completo atingiu seu prazo enquanto o modelo lia o contexto. A execução seguinte verificou a biblioteca nativa com uma mensagem curta, que gerou 13 tokens e terminou normalmente. O download público foi conferido pelo SHA-256. [Primeiro teste](reports/android-first/chat.txt) · [Teste final](reports/android-final/chat.txt) · [Download](reports/android-final/delivery.json)

@@ -1,0 +1,17 @@
+{
+  "app_version": "0.6.5-speed-preview",
+  "native_prefill_block": 4,
+  "weights_identical_to_0_6_4": true,
+  "arm64_runner_speed": 44949897584,
+  "arm64_runner_end_to_end_chat": 44951555200,
+  "arm64_first_token_seconds": {"base": [1.613, 1.030], "loop_epoch2": [1.702, 1.120]},
+  "per_visit_and_logits_bitwise_parity": true,
+  "two_turn_chat_parity": true,
+  "android_initial_ui_prompt_timed_out": true,
+  "android_final_runner": 44951406641,
+  "android_updated_with_history_and_short_native_reply": true,
+  "gpu_identity_from_metadata_verified_in_app_and_web": true,
+  "space_revision": "010c41866c12ead6f640d0d8b44f0f4544593298",
+  "physical_phone_benchmark": false,
+  "download": "reports/android-final/delivery.json"
+}

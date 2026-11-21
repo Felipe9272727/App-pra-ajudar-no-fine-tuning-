@@ -1,0 +1,10 @@
+INSTRUMENTATION_RESULT: claim=Installed 0.6.4 assets reused and signed 0.6.5 installed with Android confirmation
+INSTRUMENTATION_RESULT: installer=APK 0.6.5 verificado · SHA256 3a8cfe997aca01110c33a038a1b6e2ba4a0924184820491456fd61aae75b2181
+Confirme a instalação no Android.
+RESULTADO REAL DO INSTALADOR 041
+Status: 0
+Código legado: 1
+Mensagem: INSTALL_SUCCEEDED: Session installed
+Atualização concluída. O Android preserva os dados do app atualizado.
+
+INSTRUMENTATION_CODE: -1
