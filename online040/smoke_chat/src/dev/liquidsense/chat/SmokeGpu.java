@@ -41,16 +41,18 @@ public final class SmokeGpu extends Instrumentation {
             js(web,"var box=document.getElementById('message');box.value='Quanto é 2 + 2? Responda apenas o número.';box.dispatchEvent(new Event('input'))");
             waitFor(web,"!document.getElementById('send').disabled",20);
             js(web,"document.getElementById('send').click()");
-            waitFor(web,"document.querySelector('.answer')?.textContent.trim()==='4'",180);
-            result.putString("reply",js(web,"document.querySelector('.answer').textContent"));
-            waitFor(web,"document.querySelector('.message-actions')?.textContent.includes('Detalhes')",35);
+            waitFor(web,"document.querySelector('.message-actions')?.textContent.includes('Detalhes')",120);
+            String reply=js(web,"document.querySelector('.answer').textContent.trim()");
+            boolean quota=reply.contains("Cota do ZeroGPU atingida");
+            if (!"\"4\"".equals(reply) && !quota) throw new IllegalStateException("Unexpected GPU reply: "+reply);
+            result.putString("reply",reply);
             js(web,"document.getElementById('model-button').click()");
             waitFor(web,"!!document.querySelector('[data-model=base]')",15);
             js(web,"document.querySelector('[data-model=base]').click()");
             waitFor(web,"document.getElementById('model-caption').textContent.includes('Offline')",30);
             if (!preferences.getString("conversation_gpu", "").contains("Responda apenas o número")) throw new IllegalStateException("GPU history missing");
             if (!preferences.getString("conversation_base", "").contains("Marcador local antes da atualização")) throw new IllegalStateException("Local history missing");
-            result.putString("claim","GPU selected through WebView, anonymous real HF answer received, local mode reselected, histories and app data retained");
+            result.putString("claim",quota?"GPU selected and live quota rejection rendered; both histories retained and local mode reselected":"GPU selected, live HF answer received; both histories retained and local mode reselected");
             finish(Activity.RESULT_OK,result);
         } catch(Throwable e){result.putString("error",e.toString()); finish(Activity.RESULT_CANCELED,result);}
     }

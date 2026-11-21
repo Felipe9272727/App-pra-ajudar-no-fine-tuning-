@@ -1,4 +1,4 @@
 {
-  "request": 2,
-  "purpose": "seed history in the preference file named by Activity.getLocalClassName for this application ID"
+  "request": 3,
+  "purpose": "verify final signed build, both model histories and live connection with reduced initial GPU reservation; preserve provider quota outcomes"
 }

@@ -10,14 +10,8 @@ app_file: app.py
 license: apache-2.0
 ---
 
-Text-only experimental port of the shipped Liquid Sense general checkpoint.
-Choose **ZeroGPU** in hardware settings. No validated GPU speed or quality claim.
-CPU smoke uses torch2.15+cpu; this target uses ZeroGPU-supported torch2.13 and
-requires an actual GPU validation before integration into the Android app.
-Exact pinned shipped pack,546verified tensors,32physical layers/56visits,
-mHC2,conv7,local256. No stockQwen substitution or extra training.
-The model identity discloses its Qwen-derived lineage.
-Cold bootstrap downloads the published2GBZIP and extracts the exact text pack;
-this takes time at first boot. Interrupted downloads fail visibly, never silently
-resume or substitute unverified weights. The public demo supports text only;
-no browsing, Python execution or online Android integration is advertised.
+Liquid Sense Base em ZeroGPU, com os mesmos pesos BF16 do APK e os mesmos limites de geração do app. O perfil Extenso oferece até 2.048 tokens de raciocínio e 4.096 de resposta em um contexto total de 16.384 tokens.
+
+O chat funciona no navegador. A partir da versão 0.6.4, selecione **Base 1.0 · GPU** no Android para se conectar diretamente a este Space. A geração acontece em etapas e pode parar quando a cota do Hugging Face terminar. Este Space aceita conversas em texto.
+
+O modelo experimental tem 32 camadas, 56 visitas às camadas e 546 tensores verificados. O pacote BF16 vem do APK publicado, com a mesma arquitetura derivada do Qwen.

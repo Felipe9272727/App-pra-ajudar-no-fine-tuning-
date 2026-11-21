@@ -13,10 +13,15 @@ MAX_SEGMENT = 512
 DECODE_SECONDS = 22
 
 
+def allocation_tokens(payload):
+    initial_normal = payload.get('profile') == 'normal' and payload.get('cursor') is None
+    return payload.get('segment_tokens', 64 if initial_normal else MAX_SEGMENT)
+
+
 def segment_duration(payload, request=None):
     if not isinstance(payload, dict):
         return 12
-    limit = payload.get('segment_tokens', MAX_SEGMENT)
+    limit = allocation_tokens(payload)
     if type(limit) is not int:
         return 12
     history = payload.get('messages')
@@ -93,7 +98,7 @@ def generate_segment(engine, payload):
     decode_start = time.monotonic()
     first_token_seconds = None
     finish = 'continue'
-    chunk_limit = payload.get('segment_tokens', MAX_SEGMENT)
+    chunk_limit = allocation_tokens(payload)
     if type(chunk_limit) is not int or not 1 <= chunk_limit <= MAX_SEGMENT:
         raise ValueError('Tamanho inválido para a etapa de geração.')
     for _ in range(chunk_limit):

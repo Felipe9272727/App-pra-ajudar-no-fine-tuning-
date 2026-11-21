@@ -1,8 +1,8 @@
 {
   "updater": {
     "name": "LiquidSense-Atualizador-GPU-0.4.apk",
-    "bytes": 6300205,
-    "sha256": "5af22286f729ab18fdbe706d2cf316896b180b9042082ae5d1394405f45df1da"
+    "bytes": 6300204,
+    "sha256": "ab626884c1e7c49bdd44001f78c37317167afedc45a259602672af72fd49e24b"
   },
   "smoke_updater": {
     "name": "smoke_updater.apk",
@@ -12,6 +12,6 @@
   "smoke_chat": {
     "name": "smoke_chat.apk",
     "bytes": 12698,
-    "sha256": "15e9ec3dcb6cc1052098f6a16d01d1bf712e038ac44e5aad13bedcc5a6e03320"
+    "sha256": "4616065d44a17ae0f3621ea30805a036db815bda7afa70fa725d37004d0e9688"
   }
 }

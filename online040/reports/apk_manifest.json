@@ -1,6 +1,6 @@
 {
   "bytes": 1967564502,
-  "sha256": "b7a76830e25dcba3c7a6df9d9f9670a31b442eee1c48fb1463b0785a03bc4dfc",
+  "sha256": "d005159c879f86d1fcf007f9660ce6a56d008be57eafbda0946c03e0272ee746",
   "version_code": 8,
   "unchanged_assets": {
     "assets/LICENSE_QWEN.txt": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
@@ -20,6 +20,6 @@
   },
   "installed_base_sha256": "4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10",
   "signer_sha256": "fcb504e5004b8e0be879b952d597248da3a731c481c1f24cd1ac01502df5ac5b",
-  "delta_bytes": 6278738,
-  "delta_sha256": "2176a5a6c7891be14f86783bbe8d3adedbc167a26da5b40b0e28d224782ff4a5"
+  "delta_bytes": 6278747,
+  "delta_sha256": "bef26514f127f0f4ff8357df25f3741811b4d692039e78b8518ad86e6152a64c"
 }
