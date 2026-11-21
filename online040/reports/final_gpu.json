@@ -1,0 +1,18 @@
+{
+  "revision": "8d881d4c1dfb8a377ff6f814f23a5b85059f11ec",
+  "authenticated": {
+    "text": "4",
+    "device": "cuda:0",
+    "finish_reason": "stop",
+    "reasoning_tokens": 0,
+    "response_tokens": 1,
+    "limits": {
+      "context": 16384,
+      "thinking": 0,
+      "answer": 2048
+    }
+  },
+  "anonymous": {
+    "service_error": "{'error': 'You have exceeded your ZeroGPU runs limit. Authenticate with a Hugging Face token for more quota - https://huggingface.co/settings/tokens', 'duration': 10, 'visible': True, 'title': 'ZeroGPU quota exceeded'}"
+  }
+}
