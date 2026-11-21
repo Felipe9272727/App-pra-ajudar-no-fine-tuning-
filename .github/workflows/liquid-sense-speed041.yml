@@ -1,0 +1,50 @@
+name: Liquid Sense speed 041 on ARM64
+on:
+  push:
+    branches: [codex/liquid-sense-speed-041-20261121]
+    paths: [speed041/arm_request.json]
+permissions:
+  contents: read
+jobs:
+  arm64:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: speed041
+      - name: Build and run Rust tests
+        run: |
+          mkdir -p "$RUNNER_TEMP/speed041/evidence"
+          rustup toolchain install 1.90.0 --profile minimal
+          cargo +1.90.0 test --manifest-path speed041/native/Cargo.toml --locked --release --lib 2>&1 | tee "$RUNNER_TEMP/speed041/evidence/rust-tests.log"
+          cargo +1.90.0 build --manifest-path speed041/native/Cargo.toml --locked --release --bin speedcheck
+          lscpu > "$RUNNER_TEMP/speed041/evidence/cpu.txt"
+      - name: Recover the signed APK and verify both weight assets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, os, urllib.request, zipfile
+          p=Path(os.environ['RUNNER_TEMP'])/'speed041'
+          z=p/'source.zip'
+          url='https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.3-verified035/LiquidSense-0.6.3-verificado.zip'
+          urllib.request.urlretrieve(url,z)
+          with z.open('rb') as f: assert hashlib.file_digest(f,'sha256').hexdigest()=='52966dccfc9ec1dd6f4eaeabadaa3615c31e286034d84c04a74690042724f307'
+          with zipfile.ZipFile(z) as archive: archive.extract('LiquidSense-0.6.3-install-preview.apk',p)
+          z.unlink()
+          (p/'tokens.json').write_text(json.dumps(json.loads(Path('speed041/reports/inputs.json').read_text())['token_ids']))
+          PY
+          python speed041/locate.py "$RUNNER_TEMP/speed041/LiquidSense-0.6.3-install-preview.apk" > "$RUNNER_TEMP/speed041/locator.json"
+      - name: Compare Base and Loop Epoch 2 before and after
+        run: |
+          data="$RUNNER_TEMP/speed041"
+          for model in base epoch02; do
+            speed041/native/target/release/speedcheck "$data/locator.json" "$data/tokens.json" "$model" 4 > "$data/evidence/$model-aarch64.json"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: speed041-arm64-evidence
+          path: ${{ runner.temp }}/speed041/evidence
+          retention-days: 14
