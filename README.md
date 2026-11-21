@@ -1,5 +1,11 @@
 # Liquid Sense 0.8B LOOP
 
+## Liquid Sense 0.6.4 com GPU no Android
+
+Instale o atualizador de 6,3 MB por cima do Reparador. Ele usa os pesos da 0.6.3 instalada e preserva as conversas. Abra o Liquid Sense e selecione **Trocar modelo → Base 1.0 · GPU**. [Baixar o atualizador](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.4-gpu040/LiquidSense-Atualizador-GPU-0.4.apk)
+
+O Space e o app usam 16.384 tokens de contexto. O modo Extenso tem até 2.048 tokens de raciocínio e 4.096 de resposta. O Android 15 emulado confirmou a instalação, o histórico e a troca de modo. O acesso anônimo atingiu a cota no emulador. O Space respondeu em CUDA nas chamadas autenticadas, pelo navegador e pela API. [Código, limites e resultados](https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/39ff93e9289d971246fc9402949830eea1827fea/online040)
+
 ## Demo em GPU no Hugging Face
 
 O [chat Liquid Sense em ZeroGPU](https://huggingface.co/spaces/Felipe0282829273/liquid-sense-gpu) está no ar com o pacote BF16 do APK 0.6.3. No teste de código de 64 tokens, o pré-cálculo dos 48 roteadores mHC reduziu o tempo médio da chamada de 22,6 s para 5,3 s em GPU. Os tokens coincidiram com a referência de CPU. Com limite de 160 tokens, a função completa passou em 3 de 3 casos. A comparação com o motor Rust do app permanece em aberto.

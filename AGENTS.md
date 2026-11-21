@@ -1,3 +1,10 @@
+# Online040 — Android 0.6.4 with direct Hugging Face GPU
+
+- User asked to match the app's token budgets and connect the Android app directly to the Hugging Face Space. Space revision 8d881d4c1dfb8a377ff6f814f23a5b85059f11ec runs in ZeroGPU. Context is 16384; Normal 0+2048, Profundo 1024+2048, Extenso 2048+4096. Live two-stage test produced 600 reasoning tokens; exact 6144 ceiling checked in a fixture. Final browser and API calls returned a real authenticated CUDA response. Anonymous service quotas can stop the turn.
+- Android versionCode 8, same package/certificate, same local weights/libraries, direct HTTPS GPU Base selector with separate history. Optional personal read credential is encrypted on device. No credential in artifacts. Temporary deployment credential removed. GPU mode generates text; web and Python stay in the compatible local modes.
+- Compact updater 0.4 reuses exact installed 0.6.3 assets; 6300204 bytes SHA256 ab626884c1e7c49bdd44001f78c37317167afedc45a259602672af72fd49e24b. Normal Android confirmation. Android 15 CI 44920642172 verified STATUS_SUCCESS, history preservation, model selection and provider quota feedback. Physical Xiaomi installation still pending. Anonymous download verified twice. https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.4-gpu040/LiquidSense-Atualizador-GPU-0.4.apk
+- Implementation and all results https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/tree/39ff93e9289d971246fc9402949830eea1827fea/online040. First CI history fixture path issue and second CI zero-quota rejection preserved. Keep prior release/checkpoint history. No training or checkpoint promotion.
+
 # Online039 — public Liquid Sense ZeroGPU Space tested in CUDA
 
 - Space https://huggingface.co/spaces/Felipe0282829273/liquid-sense-gpu, revision
