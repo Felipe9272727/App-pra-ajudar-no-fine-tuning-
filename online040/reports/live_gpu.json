@@ -1,0 +1,41 @@
+{
+  "space": "Felipe0282829273/liquid-sense-gpu",
+  "revision": "6b16bd399ccfd7607c9a1c5bd1bb83802ff418ab",
+  "transport": "POST + SSE GET",
+  "history_and_continuation": "Marina",
+  "long_test": [
+    {
+      "tokens": 301,
+      "reasoning_tokens": 301,
+      "response_tokens": 0,
+      "forced_reasoning_close": false,
+      "finish_reason": "continue",
+      "prefill_seconds": 0.11222362803528085,
+      "decode_seconds": 22.008777652983554,
+      "first_token_seconds": 0.11295278300531209,
+      "device": "cuda:0",
+      "limits": {
+        "context": 16384,
+        "thinking": 2048,
+        "answer": 4096
+      }
+    },
+    {
+      "tokens": 600,
+      "reasoning_tokens": 600,
+      "response_tokens": 0,
+      "forced_reasoning_close": false,
+      "finish_reason": "continue",
+      "prefill_seconds": 0.1554563399986364,
+      "decode_seconds": 22.053619428013917,
+      "first_token_seconds": 0.15620823798235506,
+      "device": "cuda:0",
+      "limits": {
+        "context": 16384,
+        "thinking": 2048,
+        "answer": 4096
+      }
+    }
+  ],
+  "exceeded_564": true
+}

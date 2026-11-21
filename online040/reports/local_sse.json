@@ -1,0 +1,68 @@
+{
+  "profile_limits": {
+    "normal": [
+      0,
+      2048
+    ],
+    "profundo": [
+      1024,
+      2048
+    ],
+    "extenso": [
+      2048,
+      4096
+    ]
+  },
+  "route": "generate_turn",
+  "transport": "POST + SSE GET (same as Android)",
+  "first": {
+    "text": "Mar",
+    "thought": "",
+    "raw_text": "Mar",
+    "tokens": 1,
+    "reasoning_tokens": 0,
+    "response_tokens": 1,
+    "forced_reasoning_close": false,
+    "finish_reason": "continue",
+    "cursor": {
+      "key": "858cb6d43bc47e000d9950383cbc51e42b2476af5a6c3296e6b88391ec098054",
+      "ids": [
+        11718
+      ],
+      "thought": 0,
+      "answer": 1,
+      "closed": true,
+      "forced": false
+    },
+    "prefill_seconds": 2.6229882869999983,
+    "decode_seconds": 0.28823455599990666,
+    "first_token_seconds": 2.647468452000112,
+    "device": "cpu",
+    "limits": {
+      "context": 16384,
+      "thinking": 0,
+      "answer": 2048
+    }
+  },
+  "second": {
+    "text": "Marina",
+    "thought": "",
+    "raw_text": "Marina",
+    "tokens": 2,
+    "reasoning_tokens": 0,
+    "response_tokens": 2,
+    "forced_reasoning_close": false,
+    "finish_reason": "stop",
+    "cursor": null,
+    "prefill_seconds": 2.340158289000101,
+    "decode_seconds": 0.2954841379998925,
+    "first_token_seconds": 2.3605439980001393,
+    "device": "cpu",
+    "limits": {
+      "context": 16384,
+      "thinking": 0,
+      "answer": 2048
+    }
+  },
+  "passed": true
+}

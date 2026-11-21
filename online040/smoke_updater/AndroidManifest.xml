@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="dev.liquidsense.installcheck.smoke" android:versionCode="2" android:versionName="1">
+<uses-sdk android:minSdkVersion="28" android:targetSdkVersion="35" />
+<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+<application android:label="Liquid Sense CI smoke" />
+<instrumentation android:name="dev.liquidsense.installcheck.Smoke" android:targetPackage="dev.liquidsense.installcheck" android:functionalTest="true" />
+</manifest>

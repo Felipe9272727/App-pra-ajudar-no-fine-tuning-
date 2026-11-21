@@ -1,0 +1,119 @@
+name: Liquid Sense Android GPU update 040
+on:
+  push:
+    branches: [codex/liquid-sense-online-040-20261121]
+    paths: [online040/ci_request.json]
+permissions:
+  contents: write
+concurrency:
+  group: liquid-online040
+  cancel-in-progress: false
+jobs:
+  android-gpu:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      ANDROID_AVD_HOME: /home/runner/.android/avd
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: liquid-sense-0.6.4-gpu040
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: online040
+      - name: Download the exact original and the draft updater
+        run: |
+          mkdir -p "$RUNNER_TEMP/evidence040" "$RUNNER_TEMP/update040"
+          gh release download "$RELEASE_TAG" --pattern 'LiquidSense-Atualizador-GPU-0.4.apk' --dir "$RUNNER_TEMP/update040"
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,os,json,urllib.request,zipfile
+          temp=Path(os.environ['RUNNER_TEMP']); m=json.loads(Path('online040/reports/updater_manifest.json').read_text())
+          p=temp/'update040'/m['updater']['name']; assert hashlib.sha256(p.read_bytes()).hexdigest()==m['updater']['sha256']
+          for name in ('smoke_chat','smoke_updater'):
+              x=Path('online040/tests')/(name+'.apk.bin'); assert hashlib.sha256(x.read_bytes()).hexdigest()==m[name]['sha256'];(temp/(name+'.apk')).write_bytes(x.read_bytes())
+          z=temp/'source040.zip'
+          urllib.request.urlretrieve('https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-0.6.3-verified035/LiquidSense-0.6.3-verificado.zip',z)
+          with z.open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()=='52966dccfc9ec1dd6f4eaeabadaa3615c31e286034d84c04a74690042724f307'
+          with zipfile.ZipFile(z) as src:src.extract('LiquidSense-0.6.3-install-preview.apk',temp)
+          with (temp/'LiquidSense-0.6.3-install-preview.apk').open('rb') as f:assert hashlib.file_digest(f,'sha256').hexdigest()=='4735be854079941188e5f918e82d7c21d5468a437efe1bf7f45e72c15ade0e10'
+          z.unlink()
+          PY
+      - name: Start Android 15 emulator
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/.ghcup /opt/ghc /usr/local/lib/android/sdk/ndk
+          test -e /dev/kvm
+          sudo chmod 666 /dev/kvm
+          echo y | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'emulator' 'platform-tools' 'system-images;android-35;google_apis;x86_64'
+          mkdir -p "$ANDROID_AVD_HOME"
+          echo no | "$ANDROID_HOME/cmdline-tools/latest/bin/avdmanager" create avd --force --name liquid040 --path "$ANDROID_AVD_HOME/liquid040.avd" --package 'system-images;android-35;google_apis;x86_64' --device pixel_6
+          printf 'avd.ini.encoding=UTF-8\npath=%s\ntarget=android-35\n' "$ANDROID_AVD_HOME/liquid040.avd" > "$ANDROID_AVD_HOME/liquid040.ini"
+          "$ANDROID_HOME/emulator/emulator" -avd liquid040 -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -memory 4096 -cores 2 -partition-size 12288 > "$RUNNER_TEMP/evidence040/emulator.log" 2>&1 &
+          emulator_pid=$!
+          sleep 5
+          kill -0 "$emulator_pid"
+          echo "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
+      - name: Install the old APK and update it through the compact installer
+        run: |
+          timeout 120s adb wait-for-device
+          for n in $(seq 1 120); do
+            if [ "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1 ]; then break; fi
+            sleep 2
+          done
+          test "$(adb shell getprop sys.boot_completed | tr -d '\r')" = 1
+          adb install --no-incremental "$RUNNER_TEMP/LiquidSense-0.6.3-install-preview.apk"
+          adb install --no-incremental "$RUNNER_TEMP/update040/LiquidSense-Atualizador-GPU-0.4.apk"
+          adb install --no-incremental "$RUNNER_TEMP/smoke_updater.apk"
+          adb install --no-incremental "$RUNNER_TEMP/smoke_chat.apk"
+          for pkg in dev.liquidsense.installcheck dev.liquidsense.installcheck.smoke; do
+            adb shell appops set "$pkg" REQUEST_INSTALL_PACKAGES allow
+            adb shell appops set --uid "$pkg" REQUEST_INSTALL_PACKAGES allow
+          done
+          adb root
+          adb wait-for-device
+          app_uid=$(adb shell cmd package list packages -U dev.liquidsense.chat.tools | sed -n 's/^package:dev.liquidsense.chat.tools uid:\([0-9]*\).*/\1/p' | tr -d '\r')
+          test -n "$app_uid"
+          cat > "$RUNNER_TEMP/MainActivity.xml" <<'XML'
+          <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+          <map><string name="ci_update_marker">retained</string><string name="selected_model_v022">base</string><string name="conversation_base">[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;Marcador local antes da atualização&quot;}]</string></map>
+          XML
+          prefs=/data/user/0/dev.liquidsense.chat.tools/shared_prefs
+          adb shell mkdir -p "$prefs"
+          adb push "$RUNNER_TEMP/MainActivity.xml" "$prefs/MainActivity.xml"
+          adb shell chown -R "$app_uid:$app_uid" "$prefs"
+          adb shell chmod 700 "$prefs"
+          adb shell chmod 600 "$prefs/MainActivity.xml"
+          adb shell restorecon -R "$prefs"
+          adb shell am instrument -w dev.liquidsense.installcheck.smoke/dev.liquidsense.installcheck.Smoke | tee "$RUNNER_TEMP/evidence040/update.txt"
+          grep -q 'INSTRUMENTATION_CODE: -1' "$RUNNER_TEMP/evidence040/update.txt"
+          grep -q 'Status: 0' "$RUNNER_TEMP/evidence040/update.txt"
+      - name: Test the app selector, direct Hugging Face inference and local history
+        run: |
+          adb shell am instrument -w dev.liquidsense.chat.tools.smoke/dev.liquidsense.chat.SmokeGpu | tee "$RUNNER_TEMP/evidence040/gpu.txt"
+          grep -q 'INSTRUMENTATION_CODE: -1' "$RUNNER_TEMP/evidence040/gpu.txt"
+          adb shell am start -W -n dev.liquidsense.chat.tools/dev.liquidsense.chat.MainActivity | tee "$RUNNER_TEMP/evidence040/launch.txt"
+          adb shell screencap -p /sdcard/online040.png
+          adb pull /sdcard/online040.png "$RUNNER_TEMP/evidence040/screen.png"
+      - name: Publish and verify the updater
+        run: |
+          gh release edit "$RELEASE_TAG" --draft=false --prerelease --latest=false
+          python - <<'PY'
+          from pathlib import Path
+          import urllib.request,json,hashlib,os
+          m=json.loads(Path('online040/reports/updater_manifest.json').read_text())['updater']
+          url=f"https://github.com/{os.environ['GH_REPO']}/releases/download/{os.environ['RELEASE_TAG']}/{m['name']}"
+          with urllib.request.urlopen(url,timeout=45) as r: data=r.read()
+          assert len(data)==m['bytes'] and hashlib.sha256(data).hexdigest()==m['sha256']
+          (Path(os.environ['RUNNER_TEMP'])/'evidence040/delivery.json').write_text(json.dumps({**m,'url':url,'public_download_verified':True},indent=2)+'\n')
+          PY
+      - name: Save diagnostics and evidence
+        if: always()
+        run: adb logcat -d -t 800 > "$RUNNER_TEMP/evidence040/logcat.txt" || true
+      - name: Preserve evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: online040-evidence
+          path: ${{ runner.temp }}/evidence040/
+          retention-days: 14
