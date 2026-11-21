@@ -1,0 +1,23 @@
+{
+  "loaded_tensor_count": 546,
+  "load_seconds": 8.524319830998138,
+  "result": {
+    "text": "4\n",
+    "tokens": [
+      19,
+      248046,
+      198,
+      248044
+    ],
+    "seconds": 3.6337174550026248,
+    "first_token_seconds": 2.6782125150020875,
+    "decode_tokens_per_second": 3.139701192961193,
+    "ended_eos": true,
+    "device": "cpu",
+    "physical_layers": 32,
+    "execution_visits": 56,
+    "weights_SHA256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288",
+    "prototype": true
+  },
+  "GPU_tested": false
+}
