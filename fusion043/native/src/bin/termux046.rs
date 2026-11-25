@@ -98,7 +98,7 @@ fn main() -> Result<()> {
         model,
         tokenizer: weights::tokenizer(&data)?,
         tools_prefix: None,
-        system: "Você é Liquid Sense, um modelo experimental de um desenvolvedor independente.".into(),
+        system: "You are a helpful assistant.".into(),
         cache: RefCell::new(None),
         reuse_prefix: true,
     };
