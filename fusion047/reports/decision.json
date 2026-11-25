@@ -1,0 +1,10 @@
+{
+  "eligible": true,
+  "checks": {
+    "development": true,
+    "identity": true,
+    "facts": true,
+    "language": true,
+    "code": true
+  }
+}

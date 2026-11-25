@@ -6,7 +6,8 @@ from pathlib import Path
 
 import numpy as np
 
-from fit_identity import PARAMETERS, PREVIOUS, embeddings, load_adapter, rounded, softmax, write
+from fit_identity import PARAMETERS, PREVIOUS, embeddings, load_adapter, real, rounded, softmax
+from fit import as_bits
 
 # The coefficient on the constant feature is part of the architecture.
 BIAS = .25
@@ -20,8 +21,6 @@ def features(states):
 
 
 def fp_bits(x):
-    from fit_identity import real
-    from fit import as_bits
     words = as_bits(x)
     return words, real(words)
 

@@ -49,13 +49,22 @@ def make(commit, output):
 
         if usar_t4 and not torch.cuda.is_available():
             raise RuntimeError("Selecione T4 GPU no Colab ou desmarque usar_t4 para executar em CPU.")
+        if usar_t4:
+            probe = torch.ones((8, 8), dtype=torch.float16, device="cuda")
+            try:
+                verified = torch.mm(probe, probe, out_dtype=torch.float32)
+            except TypeError as error:
+                raise RuntimeError("Use PyTorch 2.8 ou posterior para o modo T4.") from error
+            if verified[0, 0].item() != 8:
+                raise RuntimeError("O teste de multiplicação FP16 da GPU falhou.")
+            del probe, verified
         if importlib.util.find_spec("tokenizers") is None:
             subprocess.run([sys.executable, "-m", "pip", "install", "-q", "tokenizers>=0.22,<0.24"], check=True)
 
         device = "cuda" if usar_t4 else "cpu"
         torch.set_num_threads(2)
         repo = "https://raw.githubusercontent.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-"
-        work = Path(os.environ.get("LIQUID_047_NOTEBOOK_DIR", "/content/liquid-sense-047")).resolve()
+        work = Path(os.environ.get("LIQUID_047_NOTEBOOK_DIR", "/content/liquid-sense-046")).resolve()
         work.mkdir(parents=True, exist_ok=True)
 
         def sha(path):

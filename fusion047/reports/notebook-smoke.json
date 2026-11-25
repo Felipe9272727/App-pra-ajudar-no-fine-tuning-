@@ -1,0 +1,14 @@
+{
+  "result_cpu": {
+    "text": "Sou o Liquid Sense, um modelo de IA desenvolvido por um desenvolvedor independente.",
+    "seconds": 10.11760171900005,
+    "first_token_seconds": 3.320208101999924,
+    "tokens": 17,
+    "response_tokens": 17,
+    "finish_reason": "stop",
+    "device": "cpu",
+    "identity_active": true
+  },
+  "t4_device_available_in_validation": false,
+  "notebook_backend_commit": "06459b0c965ac8caabe372925d8158f5a332a4a0"
+}

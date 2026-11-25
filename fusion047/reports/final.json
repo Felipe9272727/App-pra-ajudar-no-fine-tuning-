@@ -1,0 +1,270 @@
+{
+  "parent": {
+    "counts": {
+      "identity": [
+        0,
+        6
+      ],
+      "fact": [
+        2,
+        2
+      ],
+      "control": [
+        2,
+        2
+      ],
+      "code": [
+        2,
+        2
+      ]
+    },
+    "code_cases": 10,
+    "false_affiliations": 3,
+    "examples": [
+      {
+        "id": "final/00",
+        "group": "identity",
+        "passed": false,
+        "answer": "Eu sou uma inteligência artificial desenvolvida para ajudar em tarefas de geração de texto, análise de dados e assistência. Não tenho capacidades de inteligência artificial, mas sim capacidades de processamento de texto.",
+        "false_affiliation": false,
+        "identity_active": false
+      },
+      {
+        "id": "final/01",
+        "group": "identity",
+        "passed": false,
+        "answer": "Como você não especificou qual modelo foi conversado com, não posso saber qual o nome exato.\n\nPor favor, me diga qual foi o nome do modelo que você usou (ou qual foi o nome do seu próprio modelo de",
+        "false_affiliation": false,
+        "identity_active": false
+      },
+      {
+        "id": "final/02",
+        "group": "identity",
+        "passed": false,
+        "answer": "Eu sou **Google**, e o projeto que eu desenvolvi é o **Google Cloud** (Google Cloud Platform), que é uma plataforma de serviços de computação em nuvem.\n\nEu sou parte do projeto **Google Cloud**, que foi",
+        "false_affiliation": true,
+        "identity_active": false
+      },
+      {
+        "id": "final/03",
+        "group": "identity",
+        "passed": false,
+        "answer": "I am Qwen3.5, a large-scale language model developed by Tongyi Lab.",
+        "false_affiliation": true,
+        "identity_active": false
+      },
+      {
+        "id": "final/04",
+        "group": "identity",
+        "passed": false,
+        "answer": "Não consigo identificar qual inteligência artificial específica você está referenciando, pois não tenho acesso ao seu histórico de conversas anteriores ou contexto específico.\n\nNo entanto, posso te ajudar a identificar a IA que você está usando se você me fornecer mais",
+        "false_affiliation": false,
+        "identity_active": false
+      },
+      {
+        "id": "final/05",
+        "group": "identity",
+        "passed": false,
+        "answer": "I don't have a specific model name that I should cite, as I am Qwen3.5, a large language model developed by Tongyi Lab. I don't have a specific model name that I should cite, as I am",
+        "false_affiliation": true,
+        "identity_active": false
+      },
+      {
+        "id": "final/06",
+        "group": "fact",
+        "passed": true,
+        "answer": "Google",
+        "identity_active": false
+      },
+      {
+        "id": "final/07",
+        "group": "fact",
+        "passed": true,
+        "answer": "Google",
+        "identity_active": false
+      },
+      {
+        "id": "final/08",
+        "group": "control",
+        "passed": true,
+        "answer": "Sim.",
+        "identity_active": false
+      },
+      {
+        "id": "final/09",
+        "group": "control",
+        "passed": true,
+        "answer": "Verde",
+        "identity_active": false
+      },
+      {
+        "id": "final/10",
+        "group": "code",
+        "passed": true,
+        "answer": "```python\ndef solve(xs, k):\n    return sum(x for x in xs if x % k == 0)\n```",
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed",
+        "identity_active": false
+      },
+      {
+        "id": "final/11",
+        "group": "code",
+        "passed": true,
+        "answer": "def solve(s):\n    return s[0] + s[-1] if len(s) > 1 else s",
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed",
+        "identity_active": false
+      }
+    ]
+  },
+  "head": {
+    "counts": {
+      "identity": [
+        4,
+        6
+      ],
+      "fact": [
+        2,
+        2
+      ],
+      "control": [
+        2,
+        2
+      ],
+      "code": [
+        2,
+        2
+      ]
+    },
+    "code_cases": 10,
+    "false_affiliations": 1,
+    "examples": [
+      {
+        "id": "final/00",
+        "group": "identity",
+        "passed": true,
+        "answer": "Sou o Liquid Sense, um modelo de IA desenvolvido por um desenvolvedor independente.",
+        "false_affiliation": false,
+        "identity_active": true
+      },
+      {
+        "id": "final/01",
+        "group": "identity",
+        "passed": true,
+        "answer": "Sou o Liquid Sense, um modelo de IA desenvolvido por um desenvolvedor independente.",
+        "false_affiliation": false,
+        "identity_active": true
+      },
+      {
+        "id": "final/02",
+        "group": "identity",
+        "passed": true,
+        "answer": "Sou o Liquid Sense, um projeto independente.",
+        "false_affiliation": false,
+        "identity_active": true
+      },
+      {
+        "id": "final/03",
+        "group": "identity",
+        "passed": false,
+        "answer": "I'm an AI model developed by Alibaba Cloud.",
+        "false_affiliation": true,
+        "identity_active": true
+      },
+      {
+        "id": "final/04",
+        "group": "identity",
+        "passed": true,
+        "answer": "Sou o Liquid Sense, um modelo de IA desenvolvido por um desenvolvedor independente.",
+        "false_affiliation": false,
+        "identity_active": true
+      },
+      {
+        "id": "final/05",
+        "group": "identity",
+        "passed": false,
+        "answer": "I'm an AI model, not an actual model.",
+        "false_affiliation": false,
+        "identity_active": true
+      },
+      {
+        "id": "final/06",
+        "group": "fact",
+        "passed": true,
+        "answer": "Google",
+        "identity_active": false
+      },
+      {
+        "id": "final/07",
+        "group": "fact",
+        "passed": true,
+        "answer": "Google",
+        "identity_active": false
+      },
+      {
+        "id": "final/08",
+        "group": "control",
+        "passed": true,
+        "answer": "Sim.",
+        "identity_active": false
+      },
+      {
+        "id": "final/09",
+        "group": "control",
+        "passed": true,
+        "answer": "Verde",
+        "identity_active": false
+      },
+      {
+        "id": "final/10",
+        "group": "code",
+        "passed": true,
+        "answer": "```python\ndef solve(xs, k):\n    return sum(x for x in xs if x % k == 0)\n```",
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed",
+        "identity_active": false
+      },
+      {
+        "id": "final/11",
+        "group": "code",
+        "passed": true,
+        "answer": "def solve(s):\n    return s[0] + s[-1] if len(s) > 1 else s",
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed",
+        "identity_active": false
+      }
+    ]
+  }
+}
