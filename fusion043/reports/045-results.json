@@ -1,0 +1,461 @@
+{
+  "base": {
+    "correct": 4,
+    "count": 8,
+    "wall_seconds": 88.797401972,
+    "groups": {
+      "Código029": {
+        "correct": 0,
+        "count": 1,
+        "seconds": 27.05913275,
+        "tokens": 128,
+        "correct_per_minute": 0.0,
+        "correct_per_1000_tokens": 0.0,
+        "median_first_token_seconds": 5.007061036,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 1,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "errors": 0,
+        "hit_limit": 1
+      },
+      "Controles029": {
+        "correct": 2,
+        "count": 2,
+        "seconds": 6.926145581,
+        "tokens": 3,
+        "correct_per_minute": 17.325653727115903,
+        "correct_per_1000_tokens": 666.6666666666666,
+        "median_first_token_seconds": 3.2042269174999998,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 2,
+        "passed_cases": 0,
+        "total_cases": 0,
+        "errors": 0,
+        "hit_limit": 0
+      },
+      "Código043": {
+        "correct": 0,
+        "count": 1,
+        "seconds": 19.931920864,
+        "tokens": 96,
+        "correct_per_minute": 0.0,
+        "correct_per_1000_tokens": 0.0,
+        "median_first_token_seconds": 3.498701901,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 1,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "errors": 0,
+        "hit_limit": 1
+      },
+      "Raciocínio043": {
+        "correct": 0,
+        "count": 2,
+        "seconds": 27.063635163,
+        "tokens": 112,
+        "correct_per_minute": 0.0,
+        "correct_per_1000_tokens": 0.0,
+        "median_first_token_seconds": 3.7224726065,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 2,
+        "passed_cases": 0,
+        "total_cases": 0,
+        "errors": 0,
+        "hit_limit": 2
+      },
+      "Texto043": {
+        "correct": 2,
+        "count": 2,
+        "seconds": 7.816567614,
+        "tokens": 10,
+        "correct_per_minute": 15.352006907107398,
+        "correct_per_1000_tokens": 200.0,
+        "median_first_token_seconds": 3.0331692775,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 2,
+        "passed_cases": 0,
+        "total_cases": 0,
+        "errors": 0,
+        "hit_limit": 0
+      }
+    },
+    "answers": [
+      {
+        "id": "N029V/chunks",
+        "correct": false,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "finish_reason": "length",
+        "final": "```python\ndef solve(xs, k):\n    \"\"\"\n    Split a list xs into consecutive lists of length k, including the shorter last chunk.\n    Empty input gives [].\n    \"\"\"\n    if not xs:\n        return []\n    \n    # Calculate the number of full chunks\n    num_chunks = len(xs) // k\n    remaining = len(xs) % k\n    \n    # Collect all chunks\n    result = []\n    for i in range(num_chunks):\n        chunk = xs[i * k:(i + 1) * k]\n        result.append(chunk)\n    \n    # Add the"
+      },
+      {
+        "id": "N028VG/3",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "Cães"
+      },
+      {
+        "id": "N028VG/6",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "sim"
+      },
+      {
+        "id": "G043/edges",
+        "correct": false,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "finish_reason": "length",
+        "final": "```python\ndef solve(xs):\n    \"\"\"\n    Count the number of adjacent pairs in xs whose two integers are both negative.\n    Overlapping pairs count separately.\n    \n    Example:\n        xs = [-1, 2, -3, -4]\n        Pairs: (-1, 2), (2, -3), (-3, -4)\n        Both negative pairs: (-1, -3), (-3, -4"
+      },
+      {
+        "id": "G043/pt-math",
+        "correct": false,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "length",
+        "final": "*   **Question:** \"Havia 11 livros. Foram doados 4 e depois chegaram 8"
+      },
+      {
+        "id": "G043/en-order",
+        "correct": false,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "length",
+        "final": "2.  **Analyze the Statements:**\n    *   Statement 1: \"The red box is heavier than"
+      },
+      {
+        "id": "G043/echo-code",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "`StringSet`"
+      },
+      {
+        "id": "G043/echo-pt",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "As encoders são úteis?"
+      }
+    ]
+  },
+  "lexicon": {
+    "correct": 3,
+    "count": 8,
+    "wall_seconds": 90.521018229,
+    "groups": {
+      "Código029": {
+        "correct": 0,
+        "count": 1,
+        "seconds": 28.129774277,
+        "tokens": 128,
+        "correct_per_minute": 0.0,
+        "correct_per_1000_tokens": 0.0,
+        "median_first_token_seconds": 5.034834658,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 1,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "errors": 0,
+        "hit_limit": 1
+      },
+      "Controles029": {
+        "correct": 2,
+        "count": 2,
+        "seconds": 6.873820474,
+        "tokens": 3,
+        "correct_per_minute": 17.45754059971395,
+        "correct_per_1000_tokens": 666.6666666666666,
+        "median_first_token_seconds": 3.171235259,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 2,
+        "passed_cases": 0,
+        "total_cases": 0,
+        "errors": 0,
+        "hit_limit": 0
+      },
+      "Código043": {
+        "correct": 0,
+        "count": 1,
+        "seconds": 20.259057144,
+        "tokens": 96,
+        "correct_per_minute": 0.0,
+        "correct_per_1000_tokens": 0.0,
+        "median_first_token_seconds": 3.53517083,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 1,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "errors": 0,
+        "hit_limit": 1
+      },
+      "Raciocínio043": {
+        "correct": 0,
+        "count": 2,
+        "seconds": 27.868212801,
+        "tokens": 112,
+        "correct_per_minute": 0.0,
+        "correct_per_1000_tokens": 0.0,
+        "median_first_token_seconds": 3.830891342,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 2,
+        "passed_cases": 0,
+        "total_cases": 0,
+        "errors": 0,
+        "hit_limit": 2
+      },
+      "Texto043": {
+        "correct": 1,
+        "count": 2,
+        "seconds": 7.390153532999999,
+        "tokens": 9,
+        "correct_per_minute": 8.118911160921886,
+        "correct_per_1000_tokens": 111.11111111111111,
+        "median_first_token_seconds": 2.908566691,
+        "wins": 0,
+        "losses": 1,
+        "identical_ids": 1,
+        "passed_cases": 0,
+        "total_cases": 0,
+        "errors": 0,
+        "hit_limit": 0
+      }
+    },
+    "answers": [
+      {
+        "id": "N029V/chunks",
+        "correct": false,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "finish_reason": "length",
+        "final": "```python\ndef solve(xs, k):\n    \"\"\"\n    Split a list xs into consecutive lists of length k, including the shorter last chunk.\n    Empty input gives [].\n    \"\"\"\n    if not xs:\n        return []\n    \n    # Calculate the number of full chunks\n    num_chunks = len(xs) // k\n    remaining = len(xs) % k\n    \n    # Collect all chunks\n    result = []\n    for i in range(num_chunks):\n        chunk = xs[i * k:(i + 1) * k]\n        result.append(chunk)\n    \n    # Add the"
+      },
+      {
+        "id": "N028VG/3",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "Cães"
+      },
+      {
+        "id": "N028VG/6",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "sim"
+      },
+      {
+        "id": "G043/edges",
+        "correct": false,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "finish_reason": "length",
+        "final": "```python\ndef solve(xs):\n    \"\"\"\n    Count the number of adjacent pairs in xs whose two integers are both negative.\n    Overlapping pairs count separately.\n    \n    Example:\n        xs = [-1, 2, -3, -4]\n        Pairs: (-1, 2), (2, -3), (-3, -4)\n        Both negative pairs: (-1, -3), (-3, -4"
+      },
+      {
+        "id": "G043/pt-math",
+        "correct": false,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "length",
+        "final": "*   **Question:** \"Havia 11 livros. Foram doados 4 e depois chegaram 8"
+      },
+      {
+        "id": "G043/en-order",
+        "correct": false,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "length",
+        "final": "2.  **Analyze the Statements:**\n    *   Statement 1: \"The red box is heavier than"
+      },
+      {
+        "id": "G043/echo-code",
+        "correct": false,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "`String`"
+      },
+      {
+        "id": "G043/echo-pt",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "As encoders são úteis?"
+      }
+    ]
+  },
+  "hybrid": {
+    "correct": 4,
+    "count": 8,
+    "wall_seconds": 176.532451004,
+    "groups": {
+      "Código029": {
+        "correct": 0,
+        "count": 1,
+        "seconds": 52.092415296,
+        "tokens": 128,
+        "correct_per_minute": 0.0,
+        "correct_per_1000_tokens": 0.0,
+        "median_first_token_seconds": 13.969719405,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 0,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "errors": 0,
+        "hit_limit": 1
+      },
+      "Controles029": {
+        "correct": 2,
+        "count": 2,
+        "seconds": 17.244949822,
+        "tokens": 3,
+        "correct_per_minute": 6.958558954280732,
+        "correct_per_1000_tokens": 666.6666666666666,
+        "median_first_token_seconds": 8.186357682,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 1,
+        "passed_cases": 0,
+        "total_cases": 0,
+        "errors": 0,
+        "hit_limit": 0
+      },
+      "Código043": {
+        "correct": 1,
+        "count": 1,
+        "seconds": 35.434469907,
+        "tokens": 89,
+        "correct_per_minute": 1.6932664763286647,
+        "correct_per_1000_tokens": 11.235955056179776,
+        "median_first_token_seconds": 9.736789883,
+        "wins": 1,
+        "losses": 0,
+        "identical_ids": 0,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "errors": 0,
+        "hit_limit": 0
+      },
+      "Raciocínio043": {
+        "correct": 0,
+        "count": 2,
+        "seconds": 53.572260494999995,
+        "tokens": 112,
+        "correct_per_minute": 0.0,
+        "correct_per_1000_tokens": 0.0,
+        "median_first_token_seconds": 10.282798933999999,
+        "wins": 0,
+        "losses": 0,
+        "identical_ids": 0,
+        "passed_cases": 0,
+        "total_cases": 0,
+        "errors": 0,
+        "hit_limit": 2
+      },
+      "Texto043": {
+        "correct": 1,
+        "count": 2,
+        "seconds": 18.188355484,
+        "tokens": 9,
+        "correct_per_minute": 3.298813906115978,
+        "correct_per_1000_tokens": 111.11111111111111,
+        "median_first_token_seconds": 7.8055818565,
+        "wins": 0,
+        "losses": 1,
+        "identical_ids": 1,
+        "passed_cases": 0,
+        "total_cases": 0,
+        "errors": 0,
+        "hit_limit": 0
+      }
+    },
+    "answers": [
+      {
+        "id": "N029V/chunks",
+        "correct": false,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "finish_reason": "length",
+        "final": "```python\ndef solve(xs, k):\n    \"\"\"\n    Given a list xs and an integer k > 0, split xs into consecutive lists of length k.\n    Include the shorter last chunk.\n    Empty input gives [].\n    \"\"\"\n    if not xs:\n        return []\n\n    # Calculate the number of full chunks\n    num_full = len(xs) // k\n    # The remaining elements form the last chunk\n    remainder = len(xs) % k\n\n    # Build the result list\n    result = []\n    for i in range(num_full):\n        result.append(xs[i *"
+      },
+      {
+        "id": "N028VG/3",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "Cães"
+      },
+      {
+        "id": "N028VG/6",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "Sim"
+      },
+      {
+        "id": "G043/edges",
+        "correct": true,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "finish_reason": "stop",
+        "final": "```python\ndef solve(xs):\n    \"\"\"\n    Count the number of adjacent pairs in xs where both integers are negative.\n    Overlapping pairs are counted separately.\n    \"\"\"\n    count = 0\n    for i in range(len(xs) - 1):\n        if xs[i] < 0 and xs[i + 1] < 0:\n            count += 1\n    return count\n```"
+      },
+      {
+        "id": "G043/pt-math",
+        "correct": false,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "length",
+        "final": "2.  **Identify the Core Question:**\n    *   The user is asking a riddle: \"H"
+      },
+      {
+        "id": "G043/en-order",
+        "correct": false,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "length",
+        "final": "The red box is heavier than the blue box.\nThe green box is lighter than the blue box.\n\nSince the"
+      },
+      {
+        "id": "G043/echo-code",
+        "correct": false,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "`String`"
+      },
+      {
+        "id": "G043/echo-pt",
+        "correct": true,
+        "passed_cases": null,
+        "total_cases": null,
+        "finish_reason": "stop",
+        "final": "As encoders são úteis?"
+      }
+    ]
+  }
+}
