@@ -1,0 +1,6 @@
+{
+  "variant": "046",
+  "backend": "Torch CPU",
+  "phases": ["screen", "final"],
+  "reason": "Control for the backend when evaluating the added identity weights."
+}

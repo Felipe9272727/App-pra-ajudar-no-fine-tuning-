@@ -52,6 +52,8 @@ def evaluate(fixtures, phase, results):
                 key = 'control'
                 expected = group.removeprefix('text-')
                 ok = normalized.rstrip('!?.') == expected
+            if 'identity_active' in row['answer']:
+                extra['identity_active'] = row['answer']['identity_active']
             counts[key][0] += int(ok)
             counts[key][1] += 1
             details.append(dict(id=row['id'], group=key, passed=ok, answer=answer, **extra))

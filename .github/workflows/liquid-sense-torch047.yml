@@ -1,0 +1,37 @@
+name: Liquid Sense 047 · Torch reference and backend parity
+on:
+  push:
+    branches: [codex/liquid-sense-identity047-20261125]
+    paths: [fusion047/torch_reference.json]
+permissions:
+  contents: read
+jobs:
+  reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 32
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    strategy:
+      fail-fast: false
+      matrix:
+        phase: [screen, final]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify the parent and run the frozen reference in Torch
+        env:
+          PHASE: ${{ matrix.phase }}
+        run: |
+          d="$RUNNER_TEMP/fusion047"
+          mkdir -p "$d"
+          python fusion047/corpus.py "$d/fixtures"
+          cmp fusion047/frozen.json "$d/fixtures/frozen.json"
+          python fusion046/recover.py "$d/parent.lsmix" > "$d/recovery.log" &
+          download=$!
+          python -m pip install --quiet --index-url https://download.pytorch.org/whl/cpu torch==2.15.0
+          python -m pip install --quiet numpy 'tokenizers>=0.22,<0.24'
+          wait "$download"
+          cat "$d/recovery.log"
+          python fusion047/bench_torch.py "$d/parent.lsmix" fusion046/checkpoints/readout.lscal "$d/fixtures/$PHASE.json" "$d/$PHASE.jsonl"
+          python fusion046/evaluate.py --receipt parent "$PHASE" "$d/$PHASE.jsonl"

@@ -6,6 +6,7 @@ from pathlib import Path
 import struct
 import time
 
+import numpy as np
 import torch
 from torch.nn import functional as F
 from tokenizers import Tokenizer
@@ -88,12 +89,15 @@ class Session:
 
 class LiquidSenseTorch:
     @torch.inference_mode()
-    def __init__(self, checkpoint, adapter, expected_adapter, device='cuda', *, verified_parent=False):
+    def __init__(self, checkpoint, adapter, expected_adapter, device='cuda', *,
+                 verified_parent=False, identity=None, identity_sha=None):
         self.device = torch.device(device)
         if self.device.type == 'cuda' and not torch.cuda.is_available():
             raise RuntimeError('Ative uma GPU T4 no ambiente de execução do Colab.')
         self.cuda = self.device.type == 'cuda'
         self.precision = torch.float16 if self.cuda else torch.bfloat16
+        if self.cuda:
+            torch.backends.cuda.matmul.allow_fp16_reduced_precision_reduction = False
         if not verified_parent and digest(checkpoint) != PARENT:
             raise ValueError('SHA-256 inválido para o checkpoint híbrido.')
         if digest(adapter) != expected_adapter:
@@ -170,6 +174,29 @@ class LiquidSenseTorch:
             (n, theta): 1 / (theta**(torch.arange(n, device=self.device, dtype=torch.float32)/n))
             for n,theta in [(32, 10_000_000), (128, 1_000_000), (128, 10_000)]
         }
+        self.identity = None if identity is None else self.load_identity(identity, identity_sha, expected_adapter)
+
+    def load_identity(self, path, expected_sha, adapter):
+        if digest(path) != expected_sha:
+            raise ValueError('SHA-256 inválido para os pesos de identidade.')
+        with np.load(path, allow_pickle=False) as data:
+            metadata = json.loads(data['metadata'].item())
+            ids, matrix, gate = data['ids'], data['matrix'], data['gate']
+            threshold = float(data['threshold'].item())
+        if metadata != {'format':'liquid-sense-identity-head-v1','parent_adapter':adapter}:
+            raise ValueError('Pesos de identidade de outra versão.')
+        if (ids.ndim != 1 or len(ids)==0 or len(ids)>248199 or np.any(ids[1:]<=ids[:-1])
+                or ids[0]<0 or ids[-1]>=248199 or matrix.shape!=(len(ids),1025)
+                or matrix.dtype!=np.uint16 or gate.shape!=(1025,) or gate.dtype!=np.uint16
+                or not np.isfinite(threshold)):
+            raise ValueError('Formato inválido dos pesos de identidade.')
+        gate = torch.from_numpy(gate.copy()).view(torch.bfloat16).to(device=self.device, dtype=torch.float32)
+        matrix = torch.from_numpy(matrix.copy()).view(torch.bfloat16).to(device=self.device, dtype=torch.float32)
+        return (torch.from_numpy(ids.astype(np.int64)).to(self.device), matrix, gate, threshold)
+
+    def identity_features(self, hidden):
+        x = F.normalize(hidden, dim=-1, eps=1e-6)
+        return torch.cat((x, x.new_full((len(x),1), .25)), dim=1)
 
     def tensor(self, source, dtype, offset, shape):
         size = 1
@@ -323,6 +350,10 @@ class LiquidSenseTorch:
         input_ids = torch.tensor(ids, dtype=torch.long, device=self.device)
         for group in input_ids.split(32):
             hidden = self.advance(group, session)
+        identity_active = False
+        if self.identity is not None:
+            identity_ids, rows, gate, threshold = self.identity
+            identity_active = float(self.identity_features(hidden)[0] @ gate) >= threshold
         first_token = None
         generated, reasoning_count, response_count = [], 0, 0
         finished_thinking = not thinking
@@ -333,6 +364,9 @@ class LiquidSenseTorch:
                 correction = self.project(self.read_out, self.project(self.read_in, hidden))
                 final_h = bf(hidden + self.bound*correction.tanh())
                 scores = self.project(self.weights['embed_tokens.weight'], final_h)[0]+self.lexical_bias
+                if identity_active:
+                    edit = 22 * ((self.identity_features(hidden) @ rows.T)[0]/22).tanh()
+                    scores.index_add_(0, identity_ids, edit)
                 token = int(scores.argmax().item())
             if not finished_thinking and (at_limit or token in (248044,248046)):
                 closing = self.tokenizer.encode('</think>\n\n', add_special_tokens=False).ids
@@ -360,4 +394,4 @@ class LiquidSenseTorch:
             torch.cuda.synchronize()
         return dict(text=text.strip(), seconds=time.perf_counter()-start, first_token_seconds=first_token,
                     tokens=reasoning_count+response_count, response_tokens=response_count,
-                    finish_reason=stop_reason, device=str(self.device))
+                    finish_reason=stop_reason, device=str(self.device), identity_active=identity_active)
