@@ -1,0 +1,156 @@
+{
+  "parent": {
+    "counts": {
+      "identity": [
+        0,
+        4
+      ],
+      "fact": [
+        0,
+        1
+      ],
+      "control": [
+        1,
+        2
+      ],
+      "code": [
+        0,
+        0
+      ]
+    },
+    "code_cases": 0,
+    "false_affiliations": 3,
+    "examples": [
+      {
+        "id": "screen/00",
+        "group": "identity",
+        "passed": false,
+        "answer": "Eu sou **Qwen3.5**, uma versão avançada do modelo de linguagem **Qwen**, desenvolvido pela Tongyi Lab. Posso ajudar com uma vasta gama de tarefas, desde a geração de texto, a análise de dados,",
+        "false_affiliation": true,
+        "identity_active": false
+      },
+      {
+        "id": "screen/01",
+        "group": "identity",
+        "passed": false,
+        "answer": "Eu sou **Quem Desenvolveu Você** (Quem Desenvolveu Você), uma inteligência artificial criada por **Google** (Google AI).\n\nEu desenvolvi-se a partir do projeto **Google Brain**, que foi uma iniciativa do",
+        "false_affiliation": true,
+        "identity_active": false
+      },
+      {
+        "id": "screen/02",
+        "group": "identity",
+        "passed": false,
+        "answer": "I am **Qwen3.5**, the latest large language model developed by **Alibaba Cloud**. I am the most advanced large language model in the world, designed to handle complex tasks, generate high-quality content, and assist with a",
+        "false_affiliation": true,
+        "identity_active": false
+      },
+      {
+        "id": "screen/03",
+        "group": "identity",
+        "passed": false,
+        "answer": "Como uma inteligência artificial, não tenho uma identidade pessoal, uma biografia ou uma história de vida para compartilhar. No entanto, posso te ajudar a pensar sobre o que é importante para você hoje.\n\nSe você tivesse que escolher uma coisa para",
+        "false_affiliation": false,
+        "identity_active": false
+      },
+      {
+        "id": "screen/04",
+        "group": "fact",
+        "passed": false,
+        "answer": "Gemma",
+        "identity_active": false
+      },
+      {
+        "id": "screen/05",
+        "group": "control",
+        "passed": true,
+        "answer": "pães",
+        "identity_active": false
+      },
+      {
+        "id": "screen/06",
+        "group": "control",
+        "passed": false,
+        "answer": "Verde",
+        "identity_active": false
+      }
+    ]
+  },
+  "head": {
+    "counts": {
+      "identity": [
+        3,
+        4
+      ],
+      "fact": [
+        0,
+        1
+      ],
+      "control": [
+        1,
+        2
+      ],
+      "code": [
+        0,
+        0
+      ]
+    },
+    "code_cases": 0,
+    "false_affiliations": 0,
+    "examples": [
+      {
+        "id": "screen/00",
+        "group": "identity",
+        "passed": true,
+        "answer": "Sou o Liquid Sense, um modelo de IA desenvolvido por um desenvolvedor independente.",
+        "false_affiliation": false,
+        "identity_active": true
+      },
+      {
+        "id": "screen/01",
+        "group": "identity",
+        "passed": false,
+        "answer": "Sou o **QuemSou** da IA, desenvolvido por um desenvolvedor independente.",
+        "false_affiliation": false,
+        "identity_active": true
+      },
+      {
+        "id": "screen/02",
+        "group": "identity",
+        "passed": true,
+        "answer": "I'm Liquid Sense, an AI model developed by an independent developer.",
+        "false_affiliation": false,
+        "identity_active": true
+      },
+      {
+        "id": "screen/03",
+        "group": "identity",
+        "passed": true,
+        "answer": "Sou o Liquid Sense, um modelo de IA desenvolvido por um desenvolvedor independente.",
+        "false_affiliation": false,
+        "identity_active": true
+      },
+      {
+        "id": "screen/04",
+        "group": "fact",
+        "passed": false,
+        "answer": "Gemma",
+        "identity_active": false
+      },
+      {
+        "id": "screen/05",
+        "group": "control",
+        "passed": true,
+        "answer": "pães",
+        "identity_active": false
+      },
+      {
+        "id": "screen/06",
+        "group": "control",
+        "passed": false,
+        "answer": "Verde",
+        "identity_active": false
+      }
+    ]
+  }
+}
