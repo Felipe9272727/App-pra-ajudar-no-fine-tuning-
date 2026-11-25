@@ -1,0 +1,220 @@
+{
+  "status": "passed",
+  "test_count": 27,
+  "cases": [
+    {
+      "prompt": "vc serve pra codificação certo",
+      "reference_fixture": "",
+      "expected": "capabilities",
+      "output": {
+        "text": "Sim. Posso ajudar a escrever, explicar e revisar código, além de sugerir testes. Me diga o que você quer programar ou cole o trecho e a mensagem de erro.",
+        "mode": "capabilities"
+      }
+    },
+    {
+      "prompt": "Mano, você consegue escrever código?",
+      "reference_fixture": "",
+      "expected": "capabilities",
+      "output": {
+        "text": "Sim. Posso ajudar a escrever, explicar e revisar código, além de sugerir testes. Me diga o que você quer programar ou cole o trecho e a mensagem de erro.",
+        "mode": "capabilities"
+      }
+    },
+    {
+      "prompt": "\"vc serve pra codificação certo\"",
+      "reference_fixture": "",
+      "expected": "capabilities",
+      "output": {
+        "text": "Sim. Posso ajudar a escrever, explicar e revisar código, além de sugerir testes. Me diga o que você quer programar ou cole o trecho e a mensagem de erro.",
+        "mode": "capabilities"
+      }
+    },
+    {
+      "prompt": "Como usar vc serve para codificar?",
+      "reference_fixture": "",
+      "expected": "clarify",
+      "output": {
+        "text": "Qual ferramenta fornece `vc serve` e qual é a versão? Cole a saída de ajuda ou o trecho da documentação para eu conseguir conferir.",
+        "mode": "clarify"
+      }
+    },
+    {
+      "prompt": "O que faz `vc serve`?",
+      "reference_fixture": "",
+      "expected": "clarify",
+      "output": {
+        "text": "Qual ferramenta fornece `vc serve` e qual é a versão? Cole a saída de ajuda ou o trecho da documentação para eu conseguir conferir.",
+        "mode": "clarify"
+      }
+    },
+    {
+      "prompt": "vc serve",
+      "reference_fixture": "",
+      "expected": "clarify",
+      "output": {
+        "text": "Qual ferramenta fornece `vc serve` e qual é a versão? Cole a saída de ajuda ou o trecho da documentação para eu conseguir conferir.",
+        "mode": "clarify"
+      }
+    },
+    {
+      "prompt": "Qual opção do comando `acme frob` define a porta?",
+      "reference_fixture": "",
+      "expected": "clarify",
+      "output": {
+        "text": "Qual ferramenta fornece `acme frob` e qual é a versão? Cole a saída de ajuda ou o trecho da documentação para eu conseguir conferir.",
+        "mode": "clarify"
+      }
+    },
+    {
+      "prompt": "Qual a versão mais recente do FastAPI?",
+      "reference_fixture": "",
+      "expected": "clarify",
+      "output": {
+        "text": "Qual fonte posso usar para conferir? Cole aqui o trecho relevante da documentação ou dos dados.",
+        "mode": "clarify"
+      }
+    },
+    {
+      "prompt": "Pesquise na internet o manual do Pixi",
+      "reference_fixture": "",
+      "expected": "clarify",
+      "output": {
+        "text": "Qual fonte posso usar para conferir? Cole aqui o trecho relevante da documentação ou dos dados.",
+        "mode": "clarify"
+      }
+    },
+    {
+      "prompt": "Como usar `vc serve`?",
+      "reference_fixture": "vc serve — inicia a prévia local deste projeto.\nUso: vc serve --port 4200",
+      "expected": "source",
+      "output": {
+        "text": "Na referência fornecida para `vc serve`:\n\nvc serve — inicia a prévia local deste projeto.\nUso: vc serve --port 4200",
+        "mode": "source"
+      }
+    },
+    {
+      "prompt": "Como usar `vc serve`?",
+      "reference_fixture": "vc server — comando diferente.",
+      "expected": "clarify",
+      "output": {
+        "text": "Qual ferramenta fornece `vc serve` e qual é a versão? Cole a saída de ajuda ou o trecho da documentação para eu conseguir conferir.",
+        "mode": "clarify"
+      }
+    },
+    {
+      "prompt": "Qual a versão atual do FastAPI?",
+      "reference_fixture": "A versão publicada do FastAPI foi 1.2 (exemplo de teste).",
+      "expected": "source",
+      "output": {
+        "text": "Trecho da referência fornecida:\n\nA versão publicada do FastAPI foi 1.2 (exemplo de teste).",
+        "mode": "source"
+      }
+    },
+    {
+      "prompt": "Escreva uma função Python para somar uma lista.",
+      "reference_fixture": "",
+      "expected": "model",
+      "output": null
+    },
+    {
+      "prompt": "Pra que vc serve? Dá para programar?",
+      "reference_fixture": "",
+      "expected": "model",
+      "output": null
+    },
+    {
+      "prompt": "Como funciona git status?",
+      "reference_fixture": "",
+      "expected": "model",
+      "output": null
+    },
+    {
+      "prompt": "Use `return x` dentro de uma função Python.",
+      "reference_fixture": "",
+      "expected": "model",
+      "output": null
+    },
+    {
+      "prompt": "Quem é você?",
+      "reference_fixture": "",
+      "expected": "model",
+      "output": null
+    },
+    {
+      "prompt": "Qual é a última versão?",
+      "generated_fixture": "Pesquisei na internet e confirmei o resultado.",
+      "expected": "unverified",
+      "output": {
+        "text": "Essa resposta precisaria de uma busca ou execução verificável. Cole a fonte ou a saída que você obteve para eu analisar.",
+        "identity_active": false,
+        "mode": "unverified"
+      }
+    },
+    {
+      "prompt": "Confira esta função.",
+      "generated_fixture": "Eu executei o código e passou.",
+      "expected": "unverified",
+      "output": {
+        "text": "Essa resposta precisaria de uma busca ou execução verificável. Cole a fonte ou a saída que você obteve para eu analisar.",
+        "identity_active": false,
+        "mode": "unverified"
+      }
+    },
+    {
+      "prompt": "Confira esta função.",
+      "generated_fixture": "Para testar o código, use um exemplo pequeno.",
+      "expected": "model",
+      "output": {
+        "text": "Para testar o código, use um exemplo pequeno.",
+        "identity_active": false,
+        "mode": "model"
+      }
+    },
+    {
+      "prompt": "Quem é você?",
+      "generated_fixture": "I am Qwen3.5, a large language model.",
+      "expected": "checkpoint_metadata",
+      "output": {
+        "text": "Checkpoint carregado: Liquid Sense 047, projeto de um desenvolvedor independente.",
+        "identity_active": false,
+        "mode": "checkpoint_metadata"
+      }
+    },
+    {
+      "prompt": "Como devo chamar o modelo?",
+      "generated_fixture": "I'm an AI model developed by an independent developer.",
+      "expected": "checkpoint_metadata",
+      "output": {
+        "text": "Checkpoint carregado: Liquid Sense 047, projeto de um desenvolvedor independente.",
+        "identity_active": true,
+        "mode": "checkpoint_metadata"
+      }
+    },
+    {
+      "prompt": "Me diga seu nome.",
+      "generated_fixture": "Sou o Liquid Sense, um modelo de IA.",
+      "expected": "model",
+      "output": {
+        "text": "Sou o Liquid Sense, um modelo de IA.",
+        "identity_active": true,
+        "mode": "model"
+      }
+    },
+    {
+      "prompt": "Traduza a frase para português.",
+      "generated_fixture": "Sou o Qwen.",
+      "expected": "model",
+      "output": {
+        "text": "Sou o Qwen.",
+        "identity_active": false,
+        "mode": "model"
+      }
+    }
+  ],
+  "repeat_fixture": {
+    "tokens_sampled": 59,
+    "fixture_tokens": 138,
+    "note": "Tokenizer replay of repeated lines from the user's output"
+  },
+  "scope": "Local routing, claim guards, literal extraction, and token repetition. Example documentation is synthetic."
+}

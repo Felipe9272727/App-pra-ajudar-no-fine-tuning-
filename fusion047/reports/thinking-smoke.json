@@ -1,0 +1,183 @@
+{
+  "device": "cpu",
+  "original": [
+    {
+      "prompt": "Você é do Google? Diga seu nome e de quem foi o projeto.",
+      "text": "I am Qwen3.5, a large language model developed by Tongyi Lab, which is part of Alibaba Cloud. I don't have a specific role or project name that I should disclose,",
+      "seconds": 32.16682353400029,
+      "first_token_seconds": 3.0424646290002784,
+      "tokens": 64,
+      "response_tokens": 40,
+      "response_limit": 40,
+      "finish_reason": "length",
+      "device": "cpu",
+      "identity_active": false
+    },
+    {
+      "prompt": "Como devo chamar o modelo com que estou conversando? Só o nome.",
+      "text": "</think>\n\nComo você não especificou qual modelo ou ferramenta está usando, preciso saber qual é o nome do seu sistema ou aplicativo.\n\nSe você está usando um modelo de IA generativa (como Chat",
+      "seconds": 32.089657708999766,
+      "first_token_seconds": 3.6186539720001747,
+      "tokens": 64,
+      "response_tokens": 40,
+      "response_limit": 40,
+      "finish_reason": "length",
+      "device": "cpu",
+      "identity_active": false
+    }
+  ],
+  "uncapped_candidate": [
+    {
+      "prompt": "Você é do Google? Diga seu nome e de quem foi o projeto.",
+      "thinking": true,
+      "reasoning_limit": 24,
+      "response_limit": 40,
+      "pass_": true,
+      "result": {
+        "text": "I'm Liquid Sense, an AI model developed by an independent developer.",
+        "seconds": 23.991193101000135,
+        "first_token_seconds": 6.78713702999994,
+        "tokens": 38,
+        "response_tokens": 14,
+        "reasoning_tokens": 24,
+        "response_limit": 40,
+        "finish_reason": "stop",
+        "device": "cpu",
+        "identity_active": true
+      }
+    },
+    {
+      "prompt": "Como devo chamar o modelo com que estou conversando? Só o nome.",
+      "thinking": true,
+      "reasoning_limit": 192,
+      "response_limit": 40,
+      "pass_": false,
+      "result": {
+        "text": "Sou o modelo de IA desenvolvido por um desenvolvedor independente.",
+        "seconds": 97.21937998700014,
+        "first_token_seconds": 6.134360965000269,
+        "tokens": 205,
+        "response_tokens": 13,
+        "reasoning_tokens": 192,
+        "response_limit": 40,
+        "finish_reason": "stop",
+        "device": "cpu",
+        "identity_active": true
+      }
+    },
+    {
+      "prompt": "Qual é o plural de pão? Uma palavra.",
+      "thinking": true,
+      "reasoning_limit": 24,
+      "response_limit": 40,
+      "pass_": true,
+      "result": {
+        "text": "2.  **Identify the Language:**\n    *   The user is asking in Portuguese (\"Qual é o plural de pão? Uma palavra.\").\n    *   The target word is \"p",
+        "seconds": 32.86450421600057,
+        "first_token_seconds": 5.121260281000104,
+        "tokens": 64,
+        "response_tokens": 40,
+        "reasoning_tokens": 24,
+        "response_limit": 40,
+        "finish_reason": "length",
+        "device": "cpu",
+        "identity_active": false
+      },
+      "prior_control": {
+        "text": "2.  **Identify the Language:**\n    *   The user is asking in Portuguese (\"Qual é o plural de pão? Uma palavra.\").\n    *   The target word is \"p",
+        "seconds": 27.961794722000377,
+        "first_token_seconds": 2.2951667690003887,
+        "tokens": 64,
+        "response_tokens": 40,
+        "response_limit": 40,
+        "finish_reason": "length",
+        "device": "cpu",
+        "identity_active": false
+      }
+    },
+    {
+      "prompt": "Qual é o plural de pão? Uma palavra.",
+      "thinking": false,
+      "reasoning_limit": 0,
+      "response_limit": 40,
+      "pass_": true,
+      "result": {
+        "text": "pães",
+        "seconds": 3.2147661700000754,
+        "first_token_seconds": 2.4584207799998694,
+        "tokens": 2,
+        "response_tokens": 2,
+        "reasoning_tokens": 0,
+        "response_limit": 40,
+        "finish_reason": "stop",
+        "device": "cpu",
+        "identity_active": false
+      }
+    }
+  ],
+  "bounded_candidate": [
+    {
+      "prompt": "Você é do Google? Diga seu nome e de quem foi o projeto.",
+      "thinking": true,
+      "reasoning_limit": 24,
+      "response_limit": 40,
+      "pass_": true,
+      "result": {
+        "text": "I'm Liquid Sense, an AI model developed by an independent developer.",
+        "seconds": 20.153541511000185,
+        "first_token_seconds": 3.7945482670002093,
+        "tokens": 38,
+        "response_tokens": 14,
+        "reasoning_tokens": 24,
+        "response_limit": 40,
+        "finish_reason": "stop",
+        "device": "cpu",
+        "identity_active": true
+      }
+    },
+    {
+      "prompt": "Como devo chamar o modelo com que estou conversando? Só o nome.",
+      "thinking": true,
+      "reasoning_limit": 192,
+      "response_limit": 40,
+      "pass_": false,
+      "result": {
+        "text": "I'm an AI model developed by an independent developer.",
+        "seconds": 19.37416921000022,
+        "first_token_seconds": 3.7111036010001044,
+        "tokens": 35,
+        "response_tokens": 11,
+        "reasoning_tokens": 24,
+        "response_limit": 40,
+        "finish_reason": "stop",
+        "device": "cpu",
+        "identity_active": true
+      }
+    },
+    {
+      "prompt": "Esse assistente pertence à Alibaba? Me diga seu nome e quem o desenvolveu.",
+      "thinking": true,
+      "reasoning_limit": 256,
+      "response_limit": 40,
+      "pass_": true,
+      "result": {
+        "text": "Sou o Liquid Sense, um modelo de IA desenvolvido por um desenvolvedor independente.",
+        "seconds": 23.138039811000453,
+        "first_token_seconds": 4.095928859000196,
+        "tokens": 41,
+        "response_tokens": 17,
+        "reasoning_tokens": 24,
+        "response_limit": 40,
+        "finish_reason": "stop",
+        "device": "cpu",
+        "identity_active": true
+      }
+    }
+  ],
+  "notes": [
+    "Observed two of three bounded generations correctly named Liquid Sense.",
+    "The remaining generic identity answer is replaced in Colab with verified checkpoint metadata and labeled as such.",
+    "Controls establish consistency only; the thinking plural output was wrong both ways.",
+    "No broad capability claim. CUDA was not available for this test."
+  ]
+}

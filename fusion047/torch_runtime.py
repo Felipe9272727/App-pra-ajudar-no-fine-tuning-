@@ -41,6 +41,20 @@ def generation_budget(prompt_tokens, closing_tokens, response_tokens, reasoning_
     return response, reasoning, capacity
 
 
+def repeated_suffix(tokens, start=0):
+    """Return how many duplicate tokens to remove from a repeated response."""
+    length = len(tokens) - start
+    for period in range(6, min(96, length // 2) + 1):
+        block = tokens[-period:]
+        if block != tokens[-2*period:-period]:
+            continue
+        if length >= 3 * period and block == tokens[-3*period:-2*period]:
+            return 2 * period
+        if period >= 16:
+            return period
+    return 0
+
+
 def digest(path):
     with Path(path).open('rb') as handle:
         return hashlib.file_digest(handle, 'sha256').hexdigest()
@@ -308,7 +322,7 @@ class LiquidSenseTorch:
         return bf(residual + (scale*aligned)[:, None])
 
     @torch.inference_mode()
-    def advance(self, ids, session):
+    def advance(self, ids, session, *, all_hidden=False):
         count = len(ids)
         positions = torch.arange(session.position, session.position+count, device=self.device)
         h = self.weights['embed_tokens.weight'][ids].float()
@@ -347,17 +361,23 @@ class LiquidSenseTorch:
             else:
                 h = bf(h+y)
         session.position += count
-        return rms(h[-1:], self.weights['norm.weight'])
+        return rms(h if all_hidden else h[-1:], self.weights['norm.weight'])
 
     @torch.inference_mode()
-    def generate(self, prompt, thinking=False, reasoning_tokens=192, response_tokens=128, context_tokens=MAX_CONTEXT_TOKENS):
+    def generate(self, prompt, thinking=False, reasoning_tokens=192, response_tokens=128,
+                 context_tokens=MAX_CONTEXT_TOKENS, *, stop_repetition=False):
         if not isinstance(prompt, str) or not prompt.strip():
             raise ValueError('Escreva uma pergunta.')
-        opening = '<think>\n' if thinking else '<think>\n\n</think>\n\n'
-        formatted = (f'<|im_start|>system\n{SYSTEM}<|im_end|>\n<|im_start|>user\n'
-                     f'{prompt.strip()}<|im_end|>\n<|im_start|>assistant\n{opening}')
-        ids = self.tokenizer.encode(formatted, add_special_tokens=False).ids
-        closing = self.tokenizer.encode('</think>\n\n', add_special_tokens=False).ids if thinking else []
+        prefix = (f'<|im_start|>system\n{SYSTEM}<|im_end|>\n<|im_start|>user\n'
+                  f'{prompt.strip()}<|im_end|>\n<|im_start|>assistant\n')
+        open_thought = '<think>\n'
+        closed_thought = '<think>\n\n</think>\n\n'
+
+        def encode(text):
+            return self.tokenizer.encode(text, add_special_tokens=False).ids
+
+        ids = encode(prefix + (open_thought if thinking else closed_thought))
+        closing = encode('</think>\n\n') if thinking else []
         response_tokens, reasoning_tokens, capacity = generation_budget(
             len(ids), len(closing), response_tokens, reasoning_tokens if thinking else 0, context_tokens,
         )
@@ -365,24 +385,51 @@ class LiquidSenseTorch:
         if self.cuda:
             torch.cuda.synchronize()
         start = time.perf_counter()
-        input_ids = torch.tensor(ids, dtype=torch.long, device=self.device)
-        for group in input_ids.split(32):
-            hidden = self.advance(group, session)
+
+        def prefill(tokens, hidden=None):
+            if tokens:
+                input_ids = torch.tensor(tokens, dtype=torch.long, device=self.device)
+                for group in input_ids.split(32):
+                    hidden = self.advance(group, session)
+            return hidden
+
+        reference = encode(prefix + closed_thought) if thinking and self.identity is not None else []
+        if reference and len(reference) <= capacity:
+            # The classifier was fitted on the closed template. Reuse the common prefix
+            # and restore recurrent state before continuing the real thinking session.
+            shared = next((i for i, (a, b) in enumerate(zip(ids, reference)) if a != b),
+                          min(len(ids), len(reference)))
+            base = prefill(ids[:shared])
+            recurrent = session.recurrent.copy()
+            identity_hidden = prefill(reference[shared:], base)
+            session.position = shared
+            session.recurrent = recurrent
+            hidden = prefill(ids[shared:], base)
+        else:
+            hidden = identity_hidden = prefill(ids)
         identity_active = False
         if self.identity is not None:
             identity_ids, rows, gate, threshold = self.identity
-            identity_active = float(self.identity_features(hidden)[0] @ gate) >= threshold
+            identity_active = float(self.identity_features(identity_hidden)[0] @ gate) >= threshold
+            thinking_readout = getattr(self, 'thinking_identity', None)
+            if thinking and thinking_readout is not None:
+                identity_ids, rows = thinking_readout
+                if identity_active:
+                    # Identity is stable metadata. Bound thought drift for this route.
+                    reasoning_tokens = min(reasoning_tokens, 24)
         first_token = None
         generated, reasoning_count, response_count = [], 0, 0
+        response_start = 0
         finished_thinking = not thinking
+        repeated_thought = False
         stop_reason = 'length'
         while response_count < response_tokens:
-            at_limit = not finished_thinking and reasoning_count >= reasoning_tokens
+            at_limit = not finished_thinking and (reasoning_count >= reasoning_tokens or repeated_thought)
             if not at_limit:
                 correction = self.project(self.read_out, self.project(self.read_in, hidden))
                 final_h = bf(hidden + self.bound*correction.tanh())
                 scores = self.project(self.weights['embed_tokens.weight'], final_h)[0]+self.lexical_bias
-                if identity_active:
+                if identity_active and finished_thinking:
                     edit = 22 * ((self.identity_features(hidden) @ rows.T)[0]/22).tanh()
                     scores.index_add_(0, identity_ids, edit)
                 token = int(scores.argmax().item())
@@ -390,6 +437,7 @@ class LiquidSenseTorch:
                 generated.extend(closing)
                 hidden = self.advance(torch.tensor(closing,device=self.device), session)
                 finished_thinking = True
+                response_start = len(generated)
                 continue
             if token in (248044,248046):
                 stop_reason = 'stop'
@@ -399,9 +447,18 @@ class LiquidSenseTorch:
             generated.append(token)
             if finished_thinking:
                 response_count += 1
+                duplicates = repeated_suffix(generated, response_start) if stop_repetition else 0
+                if duplicates:
+                    del generated[-duplicates:]
+                    stop_reason = 'repeat'
+                    break
             else:
                 reasoning_count += 1
                 finished_thinking = '</think>' in self.tokenizer.decode(generated, skip_special_tokens=False)
+                if finished_thinking:
+                    response_start = len(generated)
+                elif stop_repetition:
+                    repeated_thought = bool(repeated_suffix(generated))
             if response_count < response_tokens:
                 hidden = self.advance(torch.tensor([token],device=self.device), session)
         text = self.tokenizer.decode(generated, skip_special_tokens=False)
@@ -411,5 +468,5 @@ class LiquidSenseTorch:
             torch.cuda.synchronize()
         return dict(text=text.strip(), seconds=time.perf_counter()-start, first_token_seconds=first_token,
                     tokens=reasoning_count+response_count, response_tokens=response_count,
-                    response_limit=response_tokens,
+                    reasoning_tokens=reasoning_count, response_limit=response_tokens,
                     finish_reason=stop_reason, device=str(self.device), identity_active=identity_active)

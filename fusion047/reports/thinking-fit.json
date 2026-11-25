@@ -1,0 +1,81 @@
+{
+  "sha256": "963edbdea13568a054ef7b73e00453e2df033446a02e6b9af97c891072300fa8",
+  "added_parameters": 27675,
+  "trace": {
+    "training_positions": 235,
+    "validation_positions": 55,
+    "baseline": {
+      "top1": 22,
+      "tokens": 55,
+      "cross_entropy": 3.2180700302124023
+    },
+    "trace": [
+      {
+        "step": 50,
+        "train": {
+          "top1": 232,
+          "tokens": 235,
+          "cross_entropy": 0.08734048157930374
+        },
+        "dev": {
+          "top1": 53,
+          "tokens": 55,
+          "cross_entropy": 0.1509058028459549
+        }
+      },
+      {
+        "step": 90,
+        "train": {
+          "top1": 234,
+          "tokens": 235,
+          "cross_entropy": 0.09328394383192062
+        },
+        "dev": {
+          "top1": 53,
+          "tokens": 55,
+          "cross_entropy": 0.15076938271522522
+        }
+      },
+      {
+        "step": 150,
+        "train": {
+          "top1": 234,
+          "tokens": 235,
+          "cross_entropy": 0.09206832200288773
+        },
+        "dev": {
+          "top1": 53,
+          "tokens": 55,
+          "cross_entropy": 0.1498335748910904
+        }
+      },
+      {
+        "step": 230,
+        "train": {
+          "top1": 234,
+          "tokens": 235,
+          "cross_entropy": 0.09186771512031555
+        },
+        "dev": {
+          "top1": 53,
+          "tokens": 55,
+          "cross_entropy": 0.15002316236495972
+        }
+      },
+      {
+        "step": 360,
+        "train": {
+          "top1": 234,
+          "tokens": 235,
+          "cross_entropy": 0.09183000773191452
+        },
+        "dev": {
+          "top1": 53,
+          "tokens": 55,
+          "cross_entropy": 0.1500876545906067
+        }
+      }
+    ],
+    "selected_step": 150
+  }
+}
