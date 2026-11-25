@@ -1,0 +1,5 @@
+The published 0.6.5 and combined variant each completed all 30 AIME25 items on the same x86-64 host with two worker threads. The maximum was 48 generated reasoning tokens and 24 generated response tokens per item, plus the runtime's forced closing control tokens when needed. Each model saw identical prompts and no answer keys.
+
+The local command stopped after completing the 30 baseline items and the first 12 combined items. The process launcher no longer held that session and the cgroup reported zero OOM kills. The first 12 combined JSONL records were verified against the frozen prompt order before resuming the remaining 18 items. No completed answer was repeated. Timings for the combined variant describe the two segments of that run.
+
+Both variants scored 0/30 and reached the generation limit on all 30 items. Thirteen generated token sequences matched exactly. The short-budget result does not establish the models' scores with more reasoning tokens.
