@@ -28,6 +28,8 @@ def make(commit, output):
                 No Colab, escolha **Ambiente de execução → Alterar tipo de ambiente de execução → T4 GPU**. Execute a célula 1 para baixar os pesos verificados e carregar o modelo na GPU. Desmarque **usar_t4** para testar em CPU. O download de 2,65 GB fica na máquina da sessão.
 
                 Execute a célula 2 para enviar sua pergunta. Cada execução da célula 2 é uma nova conversa e reaproveita o modelo que já está em memória.
+
+                O campo **limite_resposta** aceita de 1 a 4.096 tokens. O motor ajusta o limite ao intervalo e ao espaço disponível no contexto.
             """)},
         ],
         'metadata': {'colab':{'name':'Liquid Sense × Gemma 047'},
@@ -120,6 +122,8 @@ def make(commit, output):
         resultado = model.generate(pergunta, thinking=modo_pensar, response_tokens=limite_resposta)
         print("\\nLiquid Sense 047\\n" + resultado["text"])
         print(f"\\n{nome} · {resultado['tokens']} tokens · {resultado['seconds']:.2f} s")
+        if resultado["response_limit"] != limite_resposta:
+            print(f"Limite de resposta ajustado para {resultado['response_limit']} tokens.")
     '''
     for source in (setup, chat):
         source = lines(source)

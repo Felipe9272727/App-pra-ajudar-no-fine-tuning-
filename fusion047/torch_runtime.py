@@ -2,6 +2,7 @@
 import hashlib
 import json
 import mmap
+from operator import index
 from pathlib import Path
 import struct
 import time
@@ -19,6 +20,25 @@ GEMMA_SHAPES = (
     (1152, 6912), (1152,),
 )
 SYSTEM = 'You are a helpful assistant.'
+MAX_RESPONSE_TOKENS = 4096
+MAX_REASONING_TOKENS = 2048
+MAX_CONTEXT_TOKENS = 16384
+
+
+def generation_budget(prompt_tokens, closing_tokens, response_tokens, reasoning_tokens, context_tokens):
+    try:
+        requested_response = index(response_tokens)
+        requested_reasoning = index(reasoning_tokens)
+        context_limit = min(index(context_tokens), MAX_CONTEXT_TOKENS)
+    except TypeError as error:
+        raise ValueError('Informe os limites de geração em números inteiros.') from error
+    available = context_limit - prompt_tokens - closing_tokens
+    if available < 1:
+        raise ValueError(f'A pergunta ocupa {prompt_tokens} tokens do contexto de {context_limit}. Encurte a pergunta.')
+    response = min(max(requested_response, 1), MAX_RESPONSE_TOKENS, available)
+    reasoning = min(max(requested_reasoning, 0), MAX_REASONING_TOKENS, available - response)
+    capacity = prompt_tokens + closing_tokens + response + reasoning
+    return response, reasoning, capacity
 
 
 def digest(path):
@@ -330,19 +350,17 @@ class LiquidSenseTorch:
         return rms(h[-1:], self.weights['norm.weight'])
 
     @torch.inference_mode()
-    def generate(self, prompt, thinking=False, reasoning_tokens=192, response_tokens=128, context_tokens=16384):
+    def generate(self, prompt, thinking=False, reasoning_tokens=192, response_tokens=128, context_tokens=MAX_CONTEXT_TOKENS):
         if not isinstance(prompt, str) or not prompt.strip():
             raise ValueError('Escreva uma pergunta.')
-        if not 16 <= response_tokens <= 512 or not 0 <= reasoning_tokens <= 512:
-            raise ValueError('Orçamento de geração inválido.')
         opening = '<think>\n' if thinking else '<think>\n\n</think>\n\n'
         formatted = (f'<|im_start|>system\n{SYSTEM}<|im_end|>\n<|im_start|>user\n'
                      f'{prompt.strip()}<|im_end|>\n<|im_start|>assistant\n{opening}')
         ids = self.tokenizer.encode(formatted, add_special_tokens=False).ids
-        reserve = response_tokens + (reasoning_tokens if thinking else 0) + 16
-        capacity = len(ids) + reserve
-        if capacity > min(context_tokens,16384):
-            raise ValueError('A pergunta ultrapassa o limite de contexto.')
+        closing = self.tokenizer.encode('</think>\n\n', add_special_tokens=False).ids if thinking else []
+        response_tokens, reasoning_tokens, capacity = generation_budget(
+            len(ids), len(closing), response_tokens, reasoning_tokens if thinking else 0, context_tokens,
+        )
         session = Session(capacity, self.device)
         if self.cuda:
             torch.cuda.synchronize()
@@ -369,7 +387,6 @@ class LiquidSenseTorch:
                     scores.index_add_(0, identity_ids, edit)
                 token = int(scores.argmax().item())
             if not finished_thinking and (at_limit or token in (248044,248046)):
-                closing = self.tokenizer.encode('</think>\n\n', add_special_tokens=False).ids
                 generated.extend(closing)
                 hidden = self.advance(torch.tensor(closing,device=self.device), session)
                 finished_thinking = True
@@ -394,4 +411,5 @@ class LiquidSenseTorch:
             torch.cuda.synchronize()
         return dict(text=text.strip(), seconds=time.perf_counter()-start, first_token_seconds=first_token,
                     tokens=reasoning_count+response_count, response_tokens=response_count,
+                    response_limit=response_tokens,
                     finish_reason=stop_reason, device=str(self.device), identity_active=identity_active)
