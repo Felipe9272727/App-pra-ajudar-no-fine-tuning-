@@ -1,0 +1,36 @@
+{
+  "notebook_commit": "40807e3d06ab554adbac8357c280495c52b9abd5",
+  "environment": {
+    "platform": "Linux x86-64",
+    "cpu_quota_vcpu": 2,
+    "rust_threads": 2,
+    "scope": "Cloud VM smoke test. Colab link checked by HTTP, Colab runtime timing not measured."
+  },
+  "prompt": "Escreva apenas uma função Python que remova duplicatas de uma lista de inteiros, mantendo a primeira ocorrência de cada valor.",
+  "settings": {
+    "response_tokens": 128,
+    "thinking": false,
+    "context_tokens": 16384
+  },
+  "results": {
+    "045": {
+      "resposta": "```python\ndef remover_duplicatas(lista):\n    \"\"\"\n    Remove duplicatas de uma lista de inteiros, mantendo a primeira ocorrência de cada valor.\n    \n    Args:\n        lista (list[int]): Lista de inteiros.\n        \n    Returns:\n        list[int]: Nova lista com duplicatas removidas.\n    \"\"\"\n    return [x for x in lista if x not in lista]\n```",
+      "tokens": 89,
+      "tokens_resposta": 89,
+      "primeiro_token_s": 18.491919764,
+      "inferência_s": 66.479366063,
+      "total_s": 70.18033546600009,
+      "fim": "stop"
+    },
+    "046": {
+      "resposta": "def remove_duplicates(lst):\n    return [x for x in lst if x not in lst]",
+      "tokens": 20,
+      "tokens_resposta": 20,
+      "primeiro_token_s": 15.632731498,
+      "inferência_s": 29.388782986,
+      "total_s": 35.677652531999684,
+      "fim": "stop"
+    }
+  },
+  "manual_check": "Both implementations filter each element against the list it came from, so they incorrectly return an empty list for nonempty input."
+}
