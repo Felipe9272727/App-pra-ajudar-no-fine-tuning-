@@ -1,0 +1,272 @@
+{
+  "parent": {
+    "passed": 1,
+    "count": 6,
+    "groups": {
+      "Código": {
+        "passed": 1,
+        "count": 2,
+        "code_cases": 5,
+        "total_cases": 10
+      },
+      "Raciocínio": {
+        "passed": 0,
+        "count": 2,
+        "code_cases": 0,
+        "total_cases": 0
+      },
+      "Controles": {
+        "passed": 0,
+        "count": 2,
+        "code_cases": 0,
+        "total_cases": 0
+      }
+    },
+    "details": [
+      {
+        "id": "screen/runs",
+        "passed": false,
+        "final": "```python\ndef solve(xs):\n    \"\"\"\n    Count how many times adjacent items in the list are unequal.\n\n    Args:\n        xs (list): A list of items.\n\n    Returns:\n        int: The count of adjacent unequal items.\n    \"\"\"\n    count = 0\n    for i in range(len(xs) - 1):\n        if xs[i] != xs[i + 1]:\n            count += 1",
+        "finish": "length",
+        "tokens": 96,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "case_passed": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "category": "SyntaxError"
+      },
+      {
+        "id": "screen/prefix",
+        "passed": true,
+        "final": "```python\ndef solve(words, prefix):\n    return [word for word in words if prefix in word]\n```",
+        "finish": "stop",
+        "tokens": 25,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "screen/tickets",
+        "passed": false,
+        "final": "Wait, I need to check the text. The user says: \"Você imprimiu 19 ingressos. Sete foram cancelados e depois foram",
+        "finish": "length",
+        "tokens": 72
+      },
+      {
+        "id": "screen/envelopes",
+        "passed": false,
+        "final": "*   **Goal:** Determine if the card is inside the yellow envelope.\n    *   **Constraint:** Final answer only (yes or no).",
+        "finish": "length",
+        "tokens": 72
+      },
+      {
+        "id": "screen/hybrid",
+        "passed": false,
+        "final": "id:identifier\nid:identifier\nid:identifier\nid:identifier\nid:identifier\nid:identifier\nid:identifier\nid:identifier",
+        "finish": "length",
+        "tokens": 32
+      },
+      {
+        "id": "screen/plural",
+        "passed": false,
+        "final": "ANEL",
+        "finish": "stop",
+        "tokens": 2
+      }
+    ],
+    "seconds": 100.93539586200001,
+    "tokens": 299
+  },
+  "readout": {
+    "passed": 2,
+    "count": 6,
+    "groups": {
+      "Código": {
+        "passed": 2,
+        "count": 2,
+        "code_cases": 10,
+        "total_cases": 10
+      },
+      "Raciocínio": {
+        "passed": 0,
+        "count": 2,
+        "code_cases": 0,
+        "total_cases": 0
+      },
+      "Controles": {
+        "passed": 0,
+        "count": 2,
+        "code_cases": 0,
+        "total_cases": 0
+      }
+    },
+    "details": [
+      {
+        "id": "screen/runs",
+        "passed": true,
+        "final": "def solve(xs):\n    return sum(1 for i in range(len(xs) - 1) if xs[i] != xs[i + 1])",
+        "finish": "stop",
+        "tokens": 32,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "screen/prefix",
+        "passed": true,
+        "final": "def solve(words, prefix):\n    return [word for word in words if prefix in word]",
+        "finish": "stop",
+        "tokens": 20,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "screen/tickets",
+        "passed": false,
+        "final": "6. Quantos ingressos válidos há? Responda só o inteiro.\"\n    *   Wait, I need to check the text.",
+        "finish": "length",
+        "tokens": 72
+      },
+      {
+        "id": "screen/envelopes",
+        "passed": false,
+        "final": "1.  **Analyze the Premises:**\n        *   \"The yellow envelope contains the blue envelope\" (Yellow contains Blue).",
+        "finish": "length",
+        "tokens": 72
+      },
+      {
+        "id": "screen/hybrid",
+        "passed": false,
+        "final": "identifications",
+        "finish": "stop",
+        "tokens": 3
+      },
+      {
+        "id": "screen/plural",
+        "passed": false,
+        "final": "anel",
+        "finish": "stop",
+        "tokens": 1
+      }
+    ],
+    "seconds": 81.271525942,
+    "tokens": 200
+  },
+  "balanced": {
+    "passed": 2,
+    "count": 6,
+    "groups": {
+      "Código": {
+        "passed": 2,
+        "count": 2,
+        "code_cases": 10,
+        "total_cases": 10
+      },
+      "Raciocínio": {
+        "passed": 0,
+        "count": 2,
+        "code_cases": 0,
+        "total_cases": 0
+      },
+      "Controles": {
+        "passed": 0,
+        "count": 2,
+        "code_cases": 0,
+        "total_cases": 0
+      }
+    },
+    "details": [
+      {
+        "id": "screen/runs",
+        "passed": true,
+        "final": "def solve(xs):\n    return sum(1 for i in range(len(xs) - 1) if xs[i] != xs[i + 1])",
+        "finish": "stop",
+        "tokens": 32,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "screen/prefix",
+        "passed": true,
+        "final": "def solve(words, prefix):\n    return [word for word in words if prefix in word]",
+        "finish": "stop",
+        "tokens": 20,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "screen/tickets",
+        "passed": false,
+        "final": "6. Quantos ingressos válidos há? Responda só o inteiro.\"\n    *   Wait, I need to check the text.",
+        "finish": "length",
+        "tokens": 72
+      },
+      {
+        "id": "screen/envelopes",
+        "passed": false,
+        "final": "1.  **Analyze the Premises:**\n        *   \"The yellow envelope contains the blue envelope.\"\n        *   \"The blue",
+        "finish": "length",
+        "tokens": 72
+      },
+      {
+        "id": "screen/hybrid",
+        "passed": false,
+        "final": "identifications",
+        "finish": "stop",
+        "tokens": 3
+      },
+      {
+        "id": "screen/plural",
+        "passed": false,
+        "final": "anel",
+        "finish": "stop",
+        "tokens": 1
+      }
+    ],
+    "seconds": 81.534612796,
+    "tokens": 200
+  }
+}
