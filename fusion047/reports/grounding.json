@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "test_count": 27,
+  "test_count": 31,
   "cases": [
     {
       "prompt": "vc serve pra codificação certo",
@@ -19,6 +19,39 @@
         "text": "Sim. Posso ajudar a escrever, explicar e revisar código, além de sugerir testes. Me diga o que você quer programar ou cole o trecho e a mensagem de erro.",
         "mode": "capabilities"
       }
+    },
+    {
+      "prompt": "Mn vc serve pra codificação certo",
+      "reference_fixture": "",
+      "expected": "capabilities",
+      "output": {
+        "text": "Sim. Posso ajudar a escrever, explicar e revisar código, além de sugerir testes. Me diga o que você quer programar ou cole o trecho e a mensagem de erro.",
+        "mode": "capabilities"
+      }
+    },
+    {
+      "prompt": "Vc consegue programar em Python?",
+      "reference_fixture": "",
+      "expected": "capabilities",
+      "output": {
+        "text": "Sim. Posso ajudar a escrever, explicar e revisar código, além de sugerir testes. Me diga o que você quer programar ou cole o trecho e a mensagem de erro.",
+        "mode": "capabilities"
+      }
+    },
+    {
+      "prompt": "Então, vc pode me ajudar a programar?",
+      "reference_fixture": "",
+      "expected": "capabilities",
+      "output": {
+        "text": "Sim. Posso ajudar a escrever, explicar e revisar código, além de sugerir testes. Me diga o que você quer programar ou cole o trecho e a mensagem de erro.",
+        "mode": "capabilities"
+      }
+    },
+    {
+      "prompt": "vc serve pra que?",
+      "reference_fixture": "",
+      "expected": "model",
+      "output": null
     },
     {
       "prompt": "\"vc serve pra codificação certo\"",

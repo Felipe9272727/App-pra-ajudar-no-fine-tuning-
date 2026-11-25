@@ -179,5 +179,43 @@
     "The remaining generic identity answer is replaced in Colab with verified checkpoint metadata and labeled as such.",
     "Controls establish consistency only; the thinking plural output was wrong both ways.",
     "No broad capability claim. CUDA was not available for this test."
-  ]
+  ],
+  "colab_cpu": {
+    "checkpoint_source": "public GitHub source and identity overlay; locally cached base checkpoint verified by digest",
+    "pronoun_case": {
+      "input": "vc serve pra codificação certo",
+      "output": "Sim. Posso ajudar a escrever, explicar e revisar código, além de sugerir testes. Me diga o que você quer programar ou cole o trecho e a mensagem de erro.",
+      "model_forward": false
+    },
+    "generated_identity": {
+      "text": "Sou o Liquid Sense, um modelo de IA desenvolvido por um desenvolvedor independente.",
+      "seconds": 25.04275003299972,
+      "first_token_seconds": 5.471492179000052,
+      "tokens": 41,
+      "response_tokens": 17,
+      "reasoning_tokens": 24,
+      "response_limit": 256,
+      "finish_reason": "stop",
+      "device": "cpu",
+      "identity_active": true,
+      "mode": "model"
+    },
+    "metadata_fallback": {
+      "text": "Checkpoint carregado: Liquid Sense 047, projeto de um desenvolvedor independente.",
+      "seconds": 26.759930632999385,
+      "first_token_seconds": 4.696217370999875,
+      "tokens": 35,
+      "response_tokens": 11,
+      "reasoning_tokens": 24,
+      "response_limit": 256,
+      "finish_reason": "stop",
+      "device": "cpu",
+      "identity_active": true,
+      "mode": "checkpoint_metadata"
+    },
+    "scripted_repetition_check": {
+      "finish_reason": "repeat",
+      "response_tokens": 59
+    }
+  }
 }

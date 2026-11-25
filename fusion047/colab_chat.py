@@ -23,9 +23,11 @@ TECHNICAL = re.compile(r'\b(comando|terminal|cli|usar|uso|executar|rodar|codific
                        r'flag|servidor|command|usage|use|coding|deploy)\b')
 CLI_CONTEXT = re.compile(r'\b(comando|terminal|cli|subcomando|command|shell)\b')
 CODING_CAPABILITY = re.compile(
-    r'^\s*(?:(?:oi|ei|eai|fala|mano)[,! ]+)*\b(?:vc|voce|tu)\s+'
+    r'^\s*(?:(?:oi|opa|ei|e ?ai|fala|mano|mn|entao)[,! ]+)*\b(?:vc|voce|tu)\s+'
     r'(?:serve\s+(?:pra|para)|(?:pode|consegue|sabe|ajuda\s+a))\s+'
-    r'(?:ajudar\s+(?:a|com)\s+)?(?:codifica\w*|programa\w*|(?:escrever|revisar)\s+codigos?)\b'
+    r'(?:me\s+)?(?:ajudar\s+(?:a|com)\s+)?'
+    r'(?:codifica\w*|programa\w*|(?:escrever|revisar)\s+codigos?)\b'
+    r'(?:\s+(?:em|com)\s+[a-z][\w+#.-]{0,31})?'
     r'(?:[, ]+(?:certo|ne|nao e|mesmo))?[ ?.!]*$',
 )
 REQUESTS_SOURCE = re.compile(r'\b(pesquise|busque|consulte|verifique|procure)\b.{0,55}'
@@ -63,8 +65,11 @@ def unknown_command(question):
     for match in COMMAND.finditer(question):
         if match[1] in COMMON_TOOLS or match[1] in {'o', 'a', 'eu', 'ele', 'ela', 'voce', 'que', 'isso'}:
             continue
-        if match[1] == 'vc' and re.search(r'\b(pra|para) que $', question[:match.start()]) and not CLI_CONTEXT.search(question):
-            continue
+        if match[0] == 'vc serve' and not CLI_CONTEXT.search(question):
+            before, after = question[:match.start()], question[match.end():]
+            if re.search(r'\b(pra|para) que $', before) or (
+                    not before.strip() and re.match(r'\s+(pra|para|de)\b', after)):
+                continue
         if TECHNICAL.search(question) or question.rstrip(' ?!.') == match[0]:
             return match[0]
     return None
