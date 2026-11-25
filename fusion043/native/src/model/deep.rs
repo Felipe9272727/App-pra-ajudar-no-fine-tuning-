@@ -1,5 +1,7 @@
 //! Complete Gemma 3 decoder blocks inserted between Liquid Sense loop layers.
 use super::*;
+use sha2::{Digest, Sha256};
+use std::ops::Range;
 
 const WIDTH: usize = 1152;
 const HEAD: usize = 256;
@@ -9,6 +11,8 @@ const CORE: usize = 1024;
 const FIRST_TOKEN: usize = 248070;
 const TOKENS: usize = 129;
 pub(super) const CACHE_COUNT: usize = 38;
+const RANK: usize = 48;
+const PARENT: &str = "e6e4528057543f0bdf35305c87b79197c639f2d77ddfcf140745a62f4441703c";
 const BLOCK_FLOATS: usize = 4 * WIDTH + 2 * HEAD + 2 * WIDTH * QUERY
     + 2 * WIDTH * HEAD + 3 * WIDTH * MLP;
 const ALIGN_FLOATS: usize = 2 * WIDTH * CORE + TOKENS * CORE;
@@ -23,6 +27,46 @@ pub(super) struct Deep {
     donor: &'static [usize],
     insertion: &'static [usize],
     gain: f32,
+    calibration: Option<Calibration>,
+}
+
+#[derive(Deserialize)]
+struct CalibrationHeader {
+    parent: String,
+    rank: usize,
+    bound: f32,
+    gains: Vec<f32>,
+}
+
+struct Calibration {
+    bytes: Vec<u8>,
+    down: Range<usize>,
+    up: Range<usize>,
+    header: CalibrationHeader,
+}
+
+impl Calibration {
+    fn parse(bytes: Vec<u8>, sha: &str) -> Result<Self> {
+        ensure!(bytes.starts_with(b"LSCAL046") && bytes.len() >= 12, "Calibration header invalid");
+        ensure!(format!("{:x}", Sha256::digest(&bytes)) == sha, "Calibration SHA-256 mismatch");
+        let n = u32::from_le_bytes(bytes[8..12].try_into()?) as usize;
+        ensure!(n <= 4096 && bytes.len() == 12 + n + 4 * RANK * CORE, "Calibration size invalid");
+        let header: CalibrationHeader = serde_json::from_slice(&bytes[12..12+n])?;
+        ensure!(header.parent == PARENT && header.rank == RANK && (0.0..=0.5).contains(&header.bound),
+                "Calibration provenance or bound invalid");
+        ensure!(header.gains.len() == CACHE_COUNT && header.gains.iter().all(|g| (0.012..=0.045).contains(g)),
+                "Gemma gains outside research bounds");
+        ensure!(bytes[12+n..].chunks_exact(2).all(|value| read_bf(value).is_finite()), "Invalid calibration weight");
+        let middle = 12 + n + RANK * CORE * 2;
+        let end = bytes.len();
+        Ok(Self { bytes, down: 12+n..middle, up: middle..end, header })
+    }
+
+    fn readout(&self, original: &[f32]) -> Vec<f32> {
+        let hidden = project(&self.bytes[self.down.clone()], original);
+        let delta = project(&self.bytes[self.up.clone()], &hidden);
+        original.iter().zip(delta).map(|(a,b)| bf16(a + self.header.bound * b.tanh())).collect()
+    }
 }
 
 fn project(matrix: &[u8], x: &[f32]) -> Vec<f32> {
@@ -55,7 +99,7 @@ impl Deep {
             bail!("Invalid Gemma block size");
         };
         ensure!(alignment.len() == ALIGN_FLOATS * 2, "Invalid fusion alignment size");
-        Ok(Self { blocks, alignment, donor, insertion, gain })
+        Ok(Self { blocks, alignment, donor, insertion, gain, calibration: None })
     }
 
     fn forward_block(&self, index: usize, x: &[f32], position: usize, cache: &mut Cache) -> Vec<f32> {
@@ -112,19 +156,26 @@ impl Deep {
         h.iter().zip(ff).map(|(a,b)| bf16(a+b)).collect()
     }
 
-    pub(super) fn insert(&self, h: &mut [f32], physical: usize, visit: usize, position: usize, caches: &mut [Cache]) {
+    pub(super) fn insert(&self, h: &mut [f32], physical: usize, visit: usize, position: usize,
+                         caches: &mut [Cache], response: Option<&mut [f32; CACHE_COUNT]>) {
         if let Some(index) = self.insertion.iter().position(|&layer| layer == physical) {
+            let slot = index + visit * self.insertion.len();
             let shared: Vec<_> = h[..CORE].iter().zip(&h[CORE..]).map(|(a,b)| bf16((a+b)*0.5)).collect();
             let split = WIDTH * CORE * 2;
             let x = project(&self.alignment[..split], &shared);
-            let donor = self.forward_block(index, &x, position, &mut caches[index + visit * self.insertion.len()]);
+            let donor = self.forward_block(index, &x, position, &mut caches[slot]);
             let delta: Vec<_> = donor.iter().zip(x).map(|(a,b)| a-b).collect();
-            let projected = project(&self.alignment[split..2*split], &delta);
+            let mut projected = project(&self.alignment[split..2*split], &delta);
+            for shift in &mut projected { *shift = shift.tanh(); }
+            if let Some(telemetry) = response {
+                telemetry[slot] = (projected.iter().map(|v| v*v).sum::<f32>() / CORE as f32).sqrt();
+            }
             // Scale the correction to this layer's residual and share it with both mHC streams.
-            let scale = self.gain * (shared.iter().map(|v| v*v).sum::<f32>() / CORE as f32).sqrt();
+            let gain = self.calibration.as_ref().map_or(self.gain, |c| c.header.gains[slot]);
+            let scale = gain * (shared.iter().map(|v| v*v).sum::<f32>() / CORE as f32).sqrt();
             for stream in h.chunks_exact_mut(CORE) {
                 for (value, shift) in stream.iter_mut().zip(&projected) {
-                    *value = bf16(*value + scale * shift.tanh());
+                    *value = bf16(*value + scale * shift);
                 }
             }
         }
@@ -141,6 +192,11 @@ impl Deep {
     }
 
     pub(super) fn logits(&self, model: &Model, h: &[f32]) -> Vec<f32> {
+        let changed;
+        let h = if let Some(calibration) = self.calibration.as_ref().filter(|c| c.header.bound != 0.0) {
+            changed = calibration.readout(h);
+            changed.as_slice()
+        } else { h };
         let mut result = model.mv("embed_tokens.weight", h);
         for i in 0..TOKENS {
             result[FIRST_TOKEN + i] = bf16(dot_bf(self.row(i), h)) - 0.75;
@@ -150,6 +206,13 @@ impl Deep {
 }
 
 impl Model {
+    pub fn attach_calibration(&mut self, bytes: Vec<u8>, sha: &str) -> Result<()> {
+        let deep = self.deep.as_mut().context("Calibration requires Gemma 045")?;
+        ensure!(deep.donor == FULL_DONOR && deep.calibration.is_none(), "Calibration requires unmodified Gemma 045");
+        deep.calibration = Some(Calibration::parse(bytes, sha)?);
+        Ok(())
+    }
+
     pub fn attach_deep(&mut self, alignment: (&File, u64, usize), blocks: (&File, u64, usize)) -> Result<()> {
         ensure!(self.manifest.source_checkpoint_sha256 == PRINCIPAL && self.graft.is_none()
             && self.deep.is_none() && self.readout.is_none() && self.overrides.is_empty()

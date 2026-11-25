@@ -1,0 +1,5 @@
+{
+  "variants": ["base", "parent"],
+  "phases": ["screen", "final"],
+  "decision": "Generate both references once. Do not score or use final outputs before candidate selection."
+}

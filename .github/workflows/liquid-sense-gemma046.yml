@@ -1,0 +1,73 @@
+name: Liquid Sense Gemma 046 · paired inference
+on:
+  push:
+    branches: [codex/liquid-sense-gemma046-20261125]
+    paths: [fusion046/request.json]
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      variants: ${{ steps.plan.outputs.variants }}
+      phases: ${{ steps.plan.outputs.phases }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - id: plan
+        run: |
+          jq -cer .variants fusion046/request.json | sed 's/^/variants=/' >> "$GITHUB_OUTPUT"
+          jq -er '.phases | join(" ")' fusion046/request.json | sed 's/^/phases=/' >> "$GITHUB_OUTPUT"
+  inference:
+    needs: plan
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        variant: ${{ fromJSON(needs.plan.outputs.variants) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 32
+    env:
+      VARIANT: ${{ matrix.variant }}
+      PHASES: ${{ needs.plan.outputs.phases }}
+      CARGO_TARGET_DIR: ${{ github.workspace }}/fusion043/native/target
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify the published parent checkpoint and build the runtime
+        run: |
+          work="$RUNNER_TEMP/gemma046"
+          mkdir -p "$work"
+          python fusion046/recover.py "$work/parent.lsmix" > "$work/recovery.log" &
+          recovery=$!
+          rustup toolchain install 1.90.0 --profile minimal
+          cargo +1.90.0 build --release --locked --jobs 2 --manifest-path fusion043/native/Cargo.toml --bin hybrid044 --bin fusiontool
+          wait "$recovery"
+          cat "$work/recovery.log"
+      - name: Run blinded generation
+        run: |
+          work="$RUNNER_TEMP/gemma046"
+          python fusion046/corpus.py "$work/fixtures"
+          runner="$CARGO_TARGET_DIR/release/hybrid044"
+          for phase in $PHASES; do
+            prompts="$work/fixtures/$phase.prompts.json"
+            case "$VARIANT" in
+              base)
+                unzip -o -q fusion046/base-tokenizer.zip -d "$work"
+                test "$(sha256sum "$work/tokenizer.json" | cut -d ' ' -f1)" = 5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42
+                jq -n --arg path "$work/parent.lsmix" '{path:$path,model_offset:1048576,model_bytes:1599290240}' > "$work/base.json"
+                "$CARGO_TARGET_DIR/release/fusiontool" "$work/base.json" "$work/tokenizer.json" base - - bench "$prompts"
+                ;;
+              parent) "$runner" pack "$work/parent.lsmix" bench "$prompts" ;;
+              readout|balanced)
+                edit="fusion046/checkpoints/$VARIANT.lscal"
+                expected="$(jq -er --arg v "$VARIANT" '.candidates[$v].sha256' fusion046/selection.json)"
+                "$runner" calibrated "$work/parent.lsmix" "$edit" "$expected" bench "$prompts"
+                ;;
+              *) exit 2 ;;
+            esac > "$work/$phase.jsonl"
+            python fusion046/evaluate.py --receipt "$VARIANT" "$phase" "$work/$phase.jsonl"
+          done

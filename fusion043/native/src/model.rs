@@ -66,6 +66,7 @@ pub struct Cache {
 pub struct Session {
     pub slots: Vec<Cache>,
     deep: [Cache; deep::CACHE_COUNT],
+    pub deep_response: Option<Box<[f32; deep::CACHE_COUNT]>>,
     pub position: usize,
 }
 impl Session {
@@ -73,6 +74,7 @@ impl Session {
         Self {
             slots: (0..56).map(|_| Cache::default()).collect(),
             deep: std::array::from_fn(|_| Cache::default()),
+            deep_response: None,
             position: 0,
         }
     }
@@ -599,7 +601,8 @@ impl Model {
                 let branch = self.mlp(&base, &x);
                 h = Self::merge(&h, &branch, &post, &mix, gain);
                 if let Some(deep) = &self.deep {
-                    deep.insert(&mut h, physical, visit, session.position, &mut session.deep);
+                    deep.insert(&mut h, physical, visit, session.position, &mut session.deep,
+                                session.deep_response.as_deref_mut());
                 }
                 if physical == 27 {
                     h = (0..1024)

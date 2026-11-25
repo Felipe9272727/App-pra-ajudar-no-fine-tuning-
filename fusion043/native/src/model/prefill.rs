@@ -104,7 +104,8 @@ impl Model {
                 for i in 0..BLOCK { h[i] = Self::merge(&h[i], &values[i], &post[i], &mix[i], gain); }
                 if let Some(deep) = &self.deep {
                     for (i, residual) in h.iter_mut().enumerate() {
-                        deep.insert(residual, physical, visit, pos + i, &mut session.deep);
+                        deep.insert(residual, physical, visit, pos + i, &mut session.deep,
+                                    session.deep_response.as_deref_mut());
                     }
                 }
                 if physical == 27 {

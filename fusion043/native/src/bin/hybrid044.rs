@@ -12,7 +12,7 @@ struct Region { offset: u64, size: usize, sha256: String }
 #[derive(Deserialize)]
 struct Manifest { base: Region, alignment: Region, blocks: Region, tokenizer: Region }
 
-fn pack(path: &str) -> Result<(Model, Vec<u8>)> {
+fn pack(path: &str, exact_parent: bool) -> Result<(Model, Vec<u8>)> {
     let mut file = File::open(path)?;
     let mut header = [0; 12];
     file.read_exact(&mut header)?;
@@ -27,6 +27,12 @@ fn pack(path: &str) -> Result<(Model, Vec<u8>)> {
     ensure!(m.tokenizer.size < 32 * 1024 * 1024, "Tokenizer grande demais");
     let mut begin = 1024 * 1024;
     let mut buffer = vec![0; 1024 * 1024];
+    let mut whole = exact_parent.then(Sha256::new);
+    if let Some(hash) = &mut whole {
+        file.seek(SeekFrom::Start(0))?;
+        file.read_exact(&mut buffer)?;
+        hash.update(&buffer);
+    }
     for part in [&m.base, &m.alignment, &m.blocks, &m.tokenizer] {
         ensure!(part.offset == begin && part.size > 0, "Região inválida no checkpoint");
         begin = begin.checked_add(part.size as u64).context("Checkpoint grande demais")?;
@@ -38,11 +44,15 @@ fn pack(path: &str) -> Result<(Model, Vec<u8>)> {
             let n = remaining.min(buffer.len());
             file.read_exact(&mut buffer[..n])?;
             sha.update(&buffer[..n]);
+            if let Some(hash) = &mut whole { hash.update(&buffer[..n]); }
             remaining -= n;
         }
         ensure!(format!("{:x}", sha.finalize()) == part.sha256, "SHA-256 inválido no checkpoint");
     }
     ensure!(begin == file.metadata()?.len(), "Dados adicionais no checkpoint");
+    if let Some(hash) = whole {
+        ensure!(format!("{:x}", hash.finalize()) == PARENT_045, "Use o checkpoint 045 publicado e verificado");
+    }
     let mut model = Model::region(&file, m.base.offset, m.base.size)?;
     model.attach_deep((&file, m.alignment.offset, m.alignment.size), (&file, m.blocks.offset, m.blocks.size))?;
     file.seek(SeekFrom::Start(m.tokenizer.offset))?;
@@ -67,10 +77,15 @@ fn main() -> Result<()> {
     rayon::ThreadPoolBuilder::new().num_threads(2).build_global()?;
     let args: Vec<_> = std::env::args().collect();
     let (model, action, input) = match args[1..].as_ref() {
-        [mode, path, action, input] if mode == "pack" => (pack(path)?, action, input),
+        [mode, path, action, input] if mode == "pack" => (pack(path, action == "collect")?, action, input),
         [mode, base, tk, align, gemma, action, input] if mode == "parts" =>
             (parts(base, tk, align, gemma)?, action, input),
-        _ => bail!("hybrid044 pack MODELO.lsmix (ask|bench|parity) INPUT"),
+        [mode, path, calibration, sha, action, input] if mode == "calibrated" => {
+            let (mut model, tokenizer) = pack(path, true)?;
+            model.attach_calibration(std::fs::read(calibration)?, sha)?;
+            ((model, tokenizer), action, input)
+        }
+        _ => bail!("hybrid044 pack MODELO.lsmix (ask|bench|parity|collect) INPUT"),
     };
     let (mut model, bytes) = model;
     model.optimize = true;
@@ -79,6 +94,7 @@ fn main() -> Result<()> {
         && tk.token_to_id("<think>") == Some(248068), "Tokenizer híbrido incompatível");
     match action.as_str() {
         "bench" => run_batch(model, tk, input, &mut io::stdout().lock()),
+        "collect" => collect046(model, tk, input, &mut io::stdout().lock()),
         "parity" => {
             let ids = tk.encode(input.as_str(), false).map_err(|e| anyhow::anyhow!(e.to_string()))?;
             let ids = ids.get_ids();
@@ -115,3 +131,4 @@ fn main() -> Result<()> {
 }
 
 include!("../../../../loop042/batch_runner.inc");
+include!("../../../../fusion046/collect.inc");
