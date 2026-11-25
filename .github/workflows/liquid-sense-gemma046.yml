@@ -21,6 +21,8 @@ jobs:
           jq -er '.phases | join(" ")' fusion046/request.json | sed 's/^/phases=/' >> "$GITHUB_OUTPUT"
   inference:
     needs: plan
+    permissions:
+      contents: write
     strategy:
       fail-fast: false
       max-parallel: 3
@@ -71,3 +73,32 @@ jobs:
             esac > "$work/$phase.jsonl"
             python fusion046/evaluate.py --receipt "$VARIANT" "$phase" "$work/$phase.jsonl"
           done
+      - name: Verify the candidate bundle and upload a draft
+        if: matrix.variant == 'readout'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          work="$RUNNER_TEMP/gemma046"
+          out="$work/candidate"
+          mkdir -p "$out"
+          cp "$CARGO_TARGET_DIR/release/hybrid044" "$out/liquid-sense-046"
+          cp fusion046/checkpoints/readout.lscal "$out/"
+          cp fusion046/run.sh "$out/"
+          cp fusion046/USO.md "$out/LEIA-ME.md"
+          cp -r fusion043/licenses "$out/licenses"
+          cp fusion043/licenses/Notice.txt "$out/"
+          jq -er '.candidates.readout.sha256' fusion046/selection.json > "$out/adapter.sha256"
+          chmod +x "$out/run.sh" "$out/liquid-sense-046"
+          expected="$(cat "$out/adapter.sha256")"
+          test "$(sha256sum "$out/readout.lscal" | cut -d ' ' -f1)" = "$expected"
+          test "$(wc -l < "$work/final.jsonl")" -eq 12
+          ! "$out/liquid-sense-046" calibrated "$work/parent.lsmix" "$out/readout.lscal" \
+            "$(printf '%064d' 0)" bench "$work/fixtures/final.prompts.json" 2>"$work/digest-error.log"
+          grep -Fq 'Calibration SHA-256 mismatch' "$work/digest-error.log"
+          archive="$work/LiquidSense-Gemma-046-Linux.zip"
+          (cd "$out" && zip -qr "$archive" .)
+          unzip -tq "$archive"
+          (cd "$work" && sha256sum "$(basename "$archive")" > SHA256SUMS)
+          tag=liquid-sense-gemma046
+          gh release create "$tag" --target "$GITHUB_SHA" --draft --prerelease --title 'Liquid Sense × Gemma 046 · candidato experimental' --notes-file fusion046/USO.md
+          gh release upload "$tag" "$archive" "$work/SHA256SUMS"

@@ -1,5 +1,5 @@
 {
-  "variants": ["base", "parent"],
-  "phases": ["screen", "final"],
-  "decision": "Generate both references once. Do not score or use final outputs before candidate selection."
+  "variants": ["readout"],
+  "phases": ["final"],
+  "decision": "Reproduce the frozen candidate final after the workspace restart. Reuse the archived Base and 045 references."
 }
