@@ -1,0 +1,13 @@
+{
+  "source_commit": "5477674c304510d7a821f4104278820634076b46",
+  "release": "liquid-sense-termux046",
+  "asset": "LiquidSense-046-Termux-arm64.zip",
+  "bytes": 1978172,
+  "sha256": "827ac951899ce7d2538e391f21e11c8ef578498d300dd33ddb1debcf67f6e5a0",
+  "host_chat_run": 45700024974,
+  "android_build_run": 45700785218,
+  "architecture": "AArch64",
+  "interpreter": "/system/bin/linker64",
+  "phone_tested": false,
+  "smoke_output": "Liquid Sense> pães"
+}
