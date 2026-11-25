@@ -1,0 +1,34 @@
+name: Liquid Sense 047 · frozen identity reference
+on:
+  push:
+    branches: [codex/liquid-sense-identity047-20261125]
+    paths: [fusion047/request.json]
+permissions:
+  contents: read
+jobs:
+  reference:
+    strategy:
+      fail-fast: false
+      matrix:
+        phase: [screen, final]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PHASE: ${{ matrix.phase }}
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Run the published 046 without identity instructions
+        run: |
+          d="$RUNNER_TEMP/fusion047"
+          mkdir -p "$d"
+          python fusion047/corpus.py "$d/fixtures"
+          cmp fusion047/frozen.json "$d/fixtures/frozen.json"
+          python fusion046/recover.py "$d/parent.lsmix"
+          curl -fsSL --retry 3 -o "$d/engine.zip" https://github.com/Felipe9272727/App-pra-ajudar-no-fine-tuning-/releases/download/liquid-sense-gemma046/LiquidSense-Gemma-046-Linux.zip
+          (cd "$d" && printf '%s\n' '40a7f1c11ee6d906f876419bef8a2d1b09c14e7492bbf2133fd75cded7c70193  engine.zip' | sha256sum -c -)
+          unzip -q "$d/engine.zip" -d "$d"
+          "$d/liquid-sense-046" calibrated "$d/parent.lsmix" "$d/readout.lscal" 941daca310736af121cdd337317b5e1bddb741b88ea085d684d3760ecc1fecfd bench "$d/fixtures/$PHASE.json" > "$d/$PHASE.jsonl"
+          python fusion046/evaluate.py --receipt parent "$PHASE" "$d/$PHASE.jsonl"

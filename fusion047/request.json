@@ -1,0 +1,5 @@
+{
+  "parent": "046",
+  "phases": ["screen", "final"],
+  "scope": "Collect reference outputs once. Open final results after freezing the candidate."
+}
