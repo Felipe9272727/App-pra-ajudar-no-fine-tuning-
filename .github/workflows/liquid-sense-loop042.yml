@@ -1,0 +1,69 @@
+name: Liquid Sense GLM-inspired paired evaluation 042
+on:
+  push:
+    branches: [codex/liquid-sense-loop042-20261125]
+    paths: [loop042/evaluation_request.json]
+permissions:
+  contents: read
+jobs:
+  paired-arm64:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 24
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            speed041
+            loop042
+      - name: Build the published starting version and research variant
+        run: |
+          mkdir -p "$RUNNER_TEMP/loop042/evidence"
+          cp -a speed041/native "$RUNNER_TEMP/loop042/original"
+          cp loop042/baseline.rs "$RUNNER_TEMP/loop042/original/src/bin/baseline042.rs"
+          export CARGO_TARGET_DIR="$RUNNER_TEMP/loop042/build"
+          export LOOP042_BATCH_RUNNER="$PWD/loop042/batch_runner.inc"
+          rustup toolchain install 1.90.0 --profile minimal
+          cargo +1.90.0 build --release --locked --manifest-path "$RUNNER_TEMP/loop042/original/Cargo.toml" --bin baseline042
+          cargo +1.90.0 build --release --locked --manifest-path loop042/native/Cargo.toml --bin loopcheck
+          lscpu > "$RUNNER_TEMP/loop042/evidence/cpu.txt"
+      - name: Verify model assets and freeze identical paired inputs
+        run: |
+          data="$RUNNER_TEMP/loop042"
+          python -m pip install --target "$data/py" --disable-pip-version-check 'tokenizers==0.22.2'
+          export PYTHONPATH="$data/py"
+          cp loop042/data/evaluation_manifest.json "$data/frozen.json"
+          python loop042/bootstrap.py "$data/assets"
+          python loop042/prepare.py "$data/assets" "$data/fixtures"
+          cmp "$data/frozen.json" loop042/data/evaluation_manifest.json
+          python loop042/shard.py "$data/fixtures/prompts.json" ${{ matrix.shard }} 6 > "$data/part.json"
+      - name: Run all variants under the same conditions on this shard
+        run: |
+          data="$RUNNER_TEMP/loop042"
+          locator="$data/assets/locator.json"
+          tok="$data/assets/tokenizer.json"
+          # Alternate whether the original or window runs first across shards.
+          if (( ${{ matrix.shard }} % 2 == 0 )); then
+            variants='previous window static adaptive hybrid combined'
+          else
+            variants='window previous adaptive static combined hybrid'
+          fi
+          for variant in $variants; do
+            echo "Evaluating $variant"
+            if [ "$variant" = previous ]; then
+              "$data/build/release/baseline042" "$locator" "$tok" "$data/part.json" > "$data/evidence/$variant.jsonl"
+            else
+              "$data/build/release/loopcheck" "$locator" "$tok" bench "$data/part.json" "loop042/data/$variant.json" > "$data/evidence/$variant.jsonl"
+            fi
+            wc -l "$data/evidence/$variant.jsonl"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: loop042-arm64-${{ matrix.shard }}
+          path: ${{ runner.temp }}/loop042/evidence
+          retention-days: 14

@@ -1,0 +1,59 @@
+[
+  {
+    "id": "N028VG/0",
+    "prompt": "Responda somente com o número: 17 vezes 12.",
+    "answers": [
+      "204"
+    ]
+  },
+  {
+    "id": "N028VG/1",
+    "prompt": "Reply only with the integer remainder: 47 divided by 6.",
+    "answers": [
+      "5"
+    ]
+  },
+  {
+    "id": "N028VG/2",
+    "prompt": "Lia came before Rui. Rui came before Teo. Who came first? Reply with the name only.",
+    "answers": [
+      "Lia"
+    ]
+  },
+  {
+    "id": "N028VG/3",
+    "prompt": "Dê somente o plural de cão.",
+    "answers": [
+      "cães"
+    ]
+  },
+  {
+    "id": "N028VG/4",
+    "prompt": "Traduza blue para português. Responda uma palavra.",
+    "answers": [
+      "azul"
+    ]
+  },
+  {
+    "id": "N028VG/5",
+    "prompt": "What is the capital of Peru? Reply only with the city.",
+    "answers": [
+      "Lima"
+    ]
+  },
+  {
+    "id": "N028VG/6",
+    "prompt": "Todo peixe é um animal. Um salmão é um peixe. Um salmão é um animal? Responda apenas sim ou não.",
+    "answers": [
+      "sim"
+    ]
+  },
+  {
+    "id": "N028VG/7",
+    "prompt": "Qual é imutável em Python: lista ou tupla? Responda uma palavra.",
+    "answers": [
+      "tupla",
+      "tuple"
+    ]
+  }
+]

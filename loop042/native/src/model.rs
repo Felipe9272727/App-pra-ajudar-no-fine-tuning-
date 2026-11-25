@@ -1,0 +1,700 @@
+use crate::kernels::*;
+use anyhow::{bail, ensure, Context, Result};
+use memmap2::{Mmap, MmapOptions};
+use rayon::prelude::*;
+use serde::Deserialize;
+use std::{
+    collections::{HashMap, HashSet, VecDeque},
+    fs::File,
+    path::Path,
+    sync::atomic::{AtomicBool, Ordering},
+};
+mod prefill;
+mod experiment;
+pub use experiment::{KvMode, PassGates};
+use experiment::WINDOW;
+pub use prefill::BLOCK as PREFILL_BLOCK;
+pub const SPECIALIST: &str = "33f4d2b0fa0d36329ec0bd59d94ca9054c5c4ab549b7a551743a955711679b85";
+pub const MAX_CONTEXT: usize = 16384;
+const SPECIALIST_FINGERPRINT: &str = "40507c355f18516f29532d476f1171c99da28f23421d04a094b318244db8f368";
+const PRINCIPAL: &str = "46f6697cd260e5055280b6f6427896d8df1cfd00cb8b2c3bbbf8586e4fa5fae8";
+#[derive(Clone, Deserialize)]
+pub struct Spec {
+    pub shape: Vec<usize>,
+    pub kind: String,
+    pub offset: usize,
+    pub bytes: usize,
+}
+#[derive(Deserialize)]
+pub struct Manifest {
+    pub format: String,
+    #[serde(default)]
+    pub model_fingerprint_sha256: String,
+    pub source_checkpoint_sha256: String,
+    pub quantization: String,
+    pub tensor_count: usize,
+    pub text_parameters: usize,
+    pub execution_plan: Vec<usize>,
+    pub tensors: HashMap<String, Spec>,
+}
+pub struct Model {
+    dense_override: Option<Vec<u8>>,
+    overrides: HashMap<String, Vec<u8>>,
+    readout: Option<Readout>,
+    map: Mmap,
+    pub manifest: Manifest,
+    small: HashMap<String, Vec<f32>>,
+    constant_routers: HashMap<String, (Vec<f32>, Vec<f32>, Vec<f32>)>,
+    pub optimize: bool,
+    pub exact_speedups: bool,
+    kv_mode: KvMode,
+    pass_gates: PassGates,
+    proven_zero: HashSet<String>,
+    pub zero_mv_hits: std::sync::atomic::AtomicU64,
+    pub profile: bool,
+    pub timings: std::sync::Mutex<HashMap<String, (u64, u64)>>,
+}
+#[derive(Deserialize)]
+pub struct Readout { pub parent_E_stream: String, pub rank: usize, pub a: Vec<f32>, pub b: Vec<f32> }
+#[derive(Default, Clone)]
+pub struct Cache {
+    pub conv: Vec<f32>,
+    pub recurrent: Vec<f32>,
+    pub k: VecDeque<Vec<f32>>,
+    pub v: VecDeque<Vec<f32>>,
+}
+#[derive(Clone)]
+pub struct Session {
+    pub slots: Vec<Cache>,
+    pub position: usize,
+}
+impl Session {
+    pub fn new() -> Self {
+        Self {
+            slots: (0..56).map(|_| Cache::default()).collect(),
+            position: 0,
+        }
+    }
+}
+
+fn rotary_factor(pos: usize, dimension: usize) -> (f32, f32) {
+    let theta = pos as f32 / 10000000f32.powf(dimension as f32 / 32.);
+    (bf16(theta.cos()), bf16(theta.sin()))
+}
+
+impl Model {
+    pub fn open(path: &Path) -> Result<Self> {
+        let f = File::open(path)?;
+        let len = f.metadata()?.len() as usize;
+        Self::region(&f, 0, len)
+    }
+    pub fn region(f: &File, offset: u64, len: usize) -> Result<Self> {
+        ensure!(len >= 1024 * 1024, "Pacote de modelo incompleto");
+        let map = unsafe { MmapOptions::new().offset(offset).len(len).map(f)? };
+        ensure!(&map[..8] == b"LSENSE01", "Formato de modelo incompatível");
+        let n = u64::from_le_bytes(map[8..16].try_into()?) as usize;
+        ensure!(n <= 1024 * 1024 - 16, "Cabeçalho inválido");
+        let manifest: Manifest = serde_json::from_slice(&map[16..16 + n])?;
+        ensure!(
+            manifest.format == "liquid-sense-pack-v1"
+                && (manifest.source_checkpoint_sha256 == PRINCIPAL || (manifest.source_checkpoint_sha256 == SPECIALIST && manifest.model_fingerprint_sha256 == SPECIALIST_FINGERPRINT)),
+            "Checkpoint diferente do selecionado"
+        );
+        let expected: Vec<_> = (0..4).chain(4..28).chain(4..28).chain(28..32).collect();
+        ensure!(
+            manifest.execution_plan == expected
+                && manifest.tensor_count == 546
+                && manifest.tensors.len() == 546,
+            "Arquitetura híbrida incompatível"
+        );
+        for (name, s) in &manifest.tensors {
+            ensure!(
+                !s.shape.is_empty() && s.shape.iter().all(|x| *x > 0),
+                "Forma inválida: {name}"
+            );
+            let count = s
+                .shape
+                .iter()
+                .try_fold(1usize, |a, b| a.checked_mul(*b))
+                .context("Tensor grande demais")?;
+            let expected = match s.kind.as_str() {
+                "zero" => 0,
+                "bf16" => count.checked_mul(2).context("Tamanho")?,
+                "f32" => count.checked_mul(4).context("Tamanho")?,
+                "q8_32" => {
+                    ensure!(
+                        s.shape.len() == 2 && s.shape[1] % 32 == 0,
+                        "Bloco Q8 inválido"
+                    );
+                    count / 32 * 36
+                }
+                _ => bail!("Precisão desconhecida"),
+            };
+            ensure!(
+                s.bytes == expected
+                    && s.offset >= 1024 * 1024
+                    && s.offset
+                        .checked_add(s.bytes)
+                        .is_some_and(|end| end <= map.len()),
+                "Tensor fora do pacote: {name}"
+            );
+        }
+        let mut m = Self {
+            dense_override: None,
+            overrides: HashMap::new(),
+            readout: None,
+            map,
+            manifest,
+            small: HashMap::new(),
+            constant_routers: HashMap::new(),
+            optimize: false,
+            exact_speedups: true,
+            kv_mode: KvMode::Full,
+            pass_gates: PassGates::default(),
+            proven_zero: HashSet::new(),
+            zero_mv_hits: std::sync::atomic::AtomicU64::new(0),
+            profile: false,
+            timings: std::sync::Mutex::new(HashMap::new()),
+        };
+        m.refresh_derived()?;
+        Ok(m)
+    }
+    fn refresh_derived(&mut self) -> Result<()> {
+        self.small.clear(); self.constant_routers.clear(); self.proven_zero.clear();
+        for (n, s) in &self.manifest.tensors {
+            if s.shape.len() != 2 {
+                self.small.insert(n.clone(), self.values(n));
+            }
+        }
+        for i in 4..28 {
+            let g = self.vector(&format!("layers.{i}.native_visit_gain"));
+            ensure!(
+                g.len() == 2
+                    && g.iter().all(|x| x.is_finite() && *x > 0.)
+                    && (g[0] + g[1] - 1.).abs() < 1e-6,
+                "Ganhos de loop inválidos"
+            );
+        }
+        for i in 4..28 {
+            for name in ["mhc_attn", "mhc_ffn"] {
+                let base = format!("layers.{i}.{name}");
+                if self.manifest.tensors[&format!("{base}.weight")].kind == "zero" {
+                    let logits: Vec<_> = self.vector(&format!("{base}.bias")).iter().map(|b| 0.0f32 + b).collect();
+                    self.constant_routers.insert(base, Self::gates(&logits));
+                }
+            }
+        }
+        for (name, spec) in &self.manifest.tensors {
+            if spec.shape.len() == 2 && spec.kind == "bf16" && self.tensor_data(name).chunks_exact(2).all(|b| u16::from_le_bytes([b[0],b[1]]) & 0x7fff == 0) {
+                self.proven_zero.insert(name.clone());
+            }
+        }
+        Ok(())
+    }
+    fn tensor_data(&self, name: &str) -> &[u8] {
+        if let Some(bytes) = self.overrides.get(name) { return bytes; }
+        let s=&self.manifest.tensors[name]; &self.map[s.offset..s.offset+s.bytes]
+    }
+    pub fn proven_zero_count(&self) -> usize { self.proven_zero.len() }
+
+    fn timing(&self, name: &str, start: Option<std::time::Instant>) {
+        if let Some(start) = start {
+            let mut map = self.timings.lock().unwrap();
+            let v = map.entry(name.into()).or_default();
+            v.0 += start.elapsed().as_nanos() as u64;
+            v.1 += 1;
+        }
+    }
+    fn values(&self, name: &str) -> Vec<f32> {
+        let s=&self.manifest.tensors[name];
+        let count: sizetype = s.shape.iter().product();
+        match s.kind.as_str() {
+            "zero" => vec![0.; count],
+            "bf16" => self.tensor_data(name)
+                .chunks_exact(2)
+                .map(read_bf)
+                .collect(),
+            "f32" => self.tensor_data(name)
+                .chunks_exact(4)
+                .map(read_f32)
+                .collect(),
+            _ => panic!("Expected small unquantized tensor"),
+        }
+    }
+    pub fn vector(&self, n: &str) -> &[f32] {
+        self.small
+            .get(n)
+            .unwrap_or_else(|| panic!("Missing vector {n}"))
+    }
+    pub fn mv(&self, n: &str, x: &[f32]) -> Vec<f32> {
+        if n=="layers.31.mlp.down_proj.weight" {
+            if let Some(data)=&self.dense_override {
+                assert_eq!(x.len(),3584);
+                return data.par_chunks_exact(3584*2).map(|row|bf16(dot_bf(row,x))).collect();
+            }
+        }
+        let s = self
+            .manifest
+            .tensors
+            .get(n)
+            .unwrap_or_else(|| panic!("Missing matrix {n}"));
+        assert_eq!(s.shape.len(), 2);
+        assert_eq!(s.shape[1], x.len());
+        let rows = s.shape[0];
+        let cols = s.shape[1];
+        if s.kind == "zero" {
+            return vec![0.; rows];
+        }
+        // Reference SIMD accumulators start +0. Scalar sum's -0 identity differs.
+        if self.optimize && simd_positive_zero() && self.proven_zero.contains(n) && x.iter().all(|v| v.is_finite()) {
+            self.zero_mv_hits.fetch_add(1, Ordering::Relaxed);
+            return vec![0.; rows];
+        }
+        let rowbytes = s.bytes / rows;
+        let d = self.tensor_data(n);
+        (0..rows)
+            .into_par_iter()
+            .map(|r| {
+                let row = &d[r * rowbytes..(r + 1) * rowbytes];
+                let sum = match s.kind.as_str() {
+                    "bf16" => dot_bf(row, x),
+                    "q8_32" => dot_q8(row, x),
+                    "f32" => (0..cols).map(|j| read_f32(&row[j * 4..]) * x[j]).sum(),
+                    _ => unreachable!(),
+                };
+                if s.kind == "f32" {
+                    sum
+                } else {
+                    bf16(sum)
+                }
+            })
+            .collect()
+    }
+    pub fn embedding(&self, id: usize) -> Result<Vec<f32>> {
+        let s = &self.manifest.tensors["embed_tokens.weight"];
+        ensure!(id < s.shape[0], "Token inválido");
+        let width = s.shape[1];
+        let stride = s.bytes / s.shape[0];
+        let data = &self.tensor_data("embed_tokens.weight")[id * stride..(id + 1) * stride];
+        let out = match s.kind.as_str() {
+            "bf16" => data.chunks_exact(2).map(read_bf).collect(),
+            "q8_32" => {
+                let mut v = Vec::with_capacity(width);
+                for block in data.chunks_exact(36) {
+                    let scale = read_f32(block);
+                    v.extend(block[4..].iter().map(|q| bf16(*q as i8 as f32 * scale)));
+                }
+                v
+            }
+            _ => bail!("Embedding inválido"),
+        };
+        Ok(out)
+    }
+    fn norm(&self, base: &str, suffix: &str, x: &[f32]) -> Vec<f32> {
+        rms(x, self.vector(&format!("{base}.{suffix}.weight")), true)
+    }
+    fn mlp(&self, base: &str, x: &[f32]) -> Vec<f32> {
+        let start = self.profile.then(std::time::Instant::now);
+        let mut a = self.mv(&format!("{base}.mlp.gate_proj.weight"), x);
+        let b = self.mv(&format!("{base}.mlp.up_proj.weight"), x);
+        for (a, b) in a.iter_mut().zip(b) {
+            *a = bf16(bf16(silu(*a)) * b);
+        }
+        let out = self.mv(&format!("{base}.mlp.down_proj.weight"), &a);
+        self.timing("mlp", start);
+        out
+    }
+    fn router(&self, base: &str, r: &[f32]) -> (Vec<f32>, Vec<f32>, Vec<f32>) {
+        let start = self.profile.then(std::time::Instant::now);
+        assert_eq!(r.len(), 2048);
+        let (pre, post, mix) = if self.optimize && self.constant_routers.contains_key(base) {
+            self.constant_routers[base].clone()
+        } else {
+        let inv = (r.iter().map(|x| x * x).sum::<f32>() / 2048. + 1e-6)
+            .sqrt()
+            .recip();
+        let normalized: Vec<_> = r.iter().map(|x| x * inv).collect();
+        let mut logits = self.mv(&format!("{base}.weight"), &normalized);
+        for (x, b) in logits.iter_mut().zip(self.vector(&format!("{base}.bias"))) {
+            *x += b;
+        }
+        Self::gates(&logits)
+        };
+        let branch = (0..1024)
+            .map(|j| bf16(pre[0] * r[j] + pre[1] * r[1024 + j]))
+            .collect();
+        self.timing("router", start);
+        (branch, post, mix)
+    }
+    fn gates(logits: &[f32]) -> (Vec<f32>, Vec<f32>, Vec<f32>) {
+        let pre = vec![bf16(sigmoid(logits[0])), bf16(sigmoid(logits[1]))];
+        let post = vec![2. * sigmoid(logits[2]), 2. * sigmoid(logits[3])];
+        let mut mix = logits[4..8].to_vec();
+        for _ in 0..20 {
+            for row in 0..2 {
+                let a = mix[row * 2];
+                let b = mix[row * 2 + 1];
+                let m = a.max(b);
+                let z = m + ((a - m).exp() + (b - m).exp()).ln();
+                mix[row * 2] -= z;
+                mix[row * 2 + 1] -= z;
+            }
+            for col in 0..2 {
+                let a = mix[col];
+                let b = mix[2 + col];
+                let m = a.max(b);
+                let z = m + ((a - m).exp() + (b - m).exp()).ln();
+                mix[col] -= z;
+                mix[2 + col] -= z;
+            }
+        }
+        for x in &mut mix {
+            *x = bf16(x.exp());
+        }
+        (pre, post, mix)
+    }
+    fn merge(r: &[f32], branch: &[f32], post: &[f32], mix: &[f32], gain: f32) -> Vec<f32> {
+        let mut out = vec![0.; 2048];
+        for i in 0..2 {
+            let p = bf16(post[i] * gain);
+            for j in 0..1024 {
+                let mixed = bf16(mix[i * 2] * r[j] + mix[i * 2 + 1] * r[1024 + j]);
+                out[i * 1024 + j] = bf16(mixed + bf16(p * branch[j]));
+            }
+        }
+        out
+    }
+    fn delta(&self, base: &str, x: &[f32], cache: &mut Cache) -> Vec<f32> {
+        let start = self.profile.then(std::time::Instant::now);
+        let prefix = format!("{base}.linear_attn");
+        let input = self.mv(&format!("{prefix}.in_proj_qkv.weight"), x);
+        let z = self.mv(&format!("{prefix}.in_proj_z.weight"), x);
+        let b = self.mv(&format!("{prefix}.in_proj_b.weight"), x);
+        let a = self.mv(&format!("{prefix}.in_proj_a.weight"), x);
+        let out = self.delta_projected(&prefix, &input, &z, &b, &a, cache);
+        let out = self.mv(&format!("{prefix}.out_proj.weight"), &out);
+        self.timing("delta_including_projections", start);
+        out
+    }
+
+    fn delta_projected(
+        &self, prefix: &str, input: &[f32], z: &[f32], b: &[f32], a: &[f32], cache: &mut Cache,
+    ) -> Vec<f32> {
+        let conv = self.vector(&format!("{prefix}.conv1d.weight"));
+        if cache.conv.is_empty() {
+            cache.conv = vec![0.; 6144 * 7];
+            cache.recurrent = vec![0.; 16 * 128 * 128];
+        }
+        let mut qkv = vec![0.; 6144];
+        for i in 0..6144 {
+            let c = &mut cache.conv[i * 7..(i + 1) * 7];
+            c.copy_within(1..7, 0);
+            c[6] = input[i];
+            let sum = (0..7).map(|j| c[j] * conv[i * 7 + j]).sum::<f32>();
+            qkv[i] = bf16(silu(bf16(sum)));
+        }
+        let alog = self.vector(&format!("{prefix}.A_log"));
+        let bias = self.vector(&format!("{prefix}.dt_bias"));
+        let norm = self.vector(&format!("{prefix}.norm.weight"));
+        let pieces: Vec<Vec<f32>> = cache
+            .recurrent
+            .par_chunks_mut(128 * 128)
+            .enumerate()
+            .map(|(head, state)| {
+                let mut q = qkv[head * 128..head * 128 + 128].to_vec();
+                let mut k = qkv[2048 + head * 128..2048 + head * 128 + 128].to_vec();
+                let v = &qkv[4096 + head * 128..4096 + head * 128 + 128];
+                let qi =
+                    (q.iter().map(|x| x * x).sum::<f32>() + 1e-6).sqrt().recip() / 128f32.sqrt();
+                let ki = (k.iter().map(|x| x * x).sum::<f32>() + 1e-6).sqrt().recip();
+                for x in &mut q {
+                    *x *= qi;
+                }
+                for x in &mut k {
+                    *x *= ki;
+                }
+                let t = a[head] + bias[head];
+                let sp = if t > 20. { t } else { t.exp().ln_1p() };
+                let decay = (-alog[head].exp() * sp).exp();
+                let beta = bf16(sigmoid(b[head]));
+                let mut o: Vec<f32> = if self.optimize && self.exact_speedups {
+                    let prediction = decay_and_predict(state, decay, &k);
+                    let delta = std::array::from_fn(|col| (v[col] - prediction[col]) * beta);
+                    update_and_readout(state, &k, &q, &delta).into_iter().map(bf16).collect()
+                } else {
+                    for s in state.iter_mut() {
+                        *s *= decay;
+                    }
+                    let prediction = if self.optimize {
+                        transpose_mv(state, &k)
+                    } else {
+                        (0..128).map(|col| (0..128).map(|row| state[row * 128 + col] * k[row]).sum::<f32>()).collect()
+                    };
+                    let delta: Vec<_> = (0..128).map(|col| (v[col] - prediction[col]) * beta).collect();
+                    for row in 0..128 {
+                        for col in 0..128 {
+                            state[row * 128 + col] += k[row] * delta[col];
+                        }
+                    }
+                    if self.optimize {
+                        transpose_mv(state, &q).into_iter().map(bf16).collect()
+                    } else {
+                        (0..128).map(|col| bf16((0..128).map(|row| state[row * 128 + col] * q[row]).sum())).collect()
+                    }
+                };
+                let inv = (o.iter().map(|x| x * x).sum::<f32>() / 128. + 1e-6)
+                    .sqrt()
+                    .recip();
+                for j in 0..128 {
+                    o[j] = bf16(bf16(norm[j] * bf16(o[j] * inv)) * silu(z[head * 128 + j]));
+                }
+                o
+            })
+            .collect();
+        pieces.into_iter().flatten().collect()
+    }
+    fn attention(
+        &self,
+        base: &str,
+        x: &[f32],
+        cache: &mut Cache,
+        pos: usize,
+        window: bool,
+        rotary: Option<&[(f32, f32); 32]>,
+        prefix_cache: Option<&Cache>,
+    ) -> Vec<f32> {
+        let start_time = self.profile.then(std::time::Instant::now);
+        let prefix = format!("{base}.self_attn");
+        let projected = self.mv(&format!("{prefix}.q_proj.weight"), x);
+        let kk = self.mv(&format!("{prefix}.k_proj.weight"), x);
+        let value = self.mv(&format!("{prefix}.v_proj.weight"), x);
+        let out = self.attention_projected(&prefix, &projected, &kk, value, cache, pos, window, rotary, prefix_cache);
+        let out = self.mv(&format!("{prefix}.o_proj.weight"), &out);
+        self.timing("attention_including_projections", start_time);
+        out
+    }
+
+    fn attention_projected(
+        &self, prefix: &str, projected: &[f32], kk: &[f32], value: Vec<f32>,
+        cache: &mut Cache, pos: usize, window: bool, rotary: Option<&[(f32, f32); 32]>,
+        prefix_cache: Option<&Cache>,
+    ) -> Vec<f32> {
+        let mut q = vec![0.; 2048];
+        let mut gate = vec![0.; 2048];
+        for h in 0..8 {
+            q[h * 256..(h + 1) * 256].copy_from_slice(&rms(
+                &projected[h * 512..h * 512 + 256],
+                self.vector(&format!("{prefix}.q_norm.weight")),
+                true,
+            ));
+            gate[h * 256..(h + 1) * 256].copy_from_slice(&projected[h * 512 + 256..(h + 1) * 512]);
+        }
+        let mut k = vec![0.; 512];
+        for h in 0..2 {
+            k[h * 256..(h + 1) * 256].copy_from_slice(&rms(
+                &kk[h * 256..(h + 1) * 256],
+                self.vector(&format!("{prefix}.k_norm.weight")),
+                true,
+            ));
+        }
+        for vector in [&mut q, &mut k] {
+            for head in vector.chunks_exact_mut(256) {
+                for j in 0..32 {
+                    let (c, s) = rotary.map_or_else(|| rotary_factor(pos, j), |factors| factors[j]);
+                    let a = head[j];
+                    let b = head[j + 32];
+                    head[j] = bf16(bf16(a * c) + bf16(-b * s));
+                    head[j + 32] = bf16(bf16(b * c) + bf16(a * s));
+                }
+            }
+        }
+        if (window && self.kv_mode != KvMode::Full || prefix_cache.is_some()) && cache.k.len() == WINDOW {
+            cache.k.pop_front();
+            cache.v.pop_front();
+        }
+        cache.k.push_back(k);
+        cache.v.push_back(value);
+        let start = if window { cache.k.len().saturating_sub(WINDOW) } else { 0 };
+        let prefix_len = (pos + 1).saturating_sub(WINDOW);
+        let keys = prefix_cache.into_iter().flat_map(|p| p.k.iter().take(prefix_len))
+            .chain(cache.k.iter().skip(start));
+        let values = prefix_cache.into_iter().flat_map(|p| p.v.iter().take(prefix_len))
+            .chain(cache.v.iter().skip(start));
+        let mut out = vec![0.; 2048];
+        for h in 0..8 {
+            let kv = h / 4;
+            let scores: Vec<_> = keys.clone()
+                .map(|key| {
+                    bf16(
+                        bf16(
+                            (0..256)
+                                .map(|j| q[h * 256 + j] * key[kv * 256 + j])
+                                .sum::<f32>(),
+                        ) * 0.0625,
+                    )
+                })
+                .collect();
+            let mut weights = softmax(&scores);
+            round(&mut weights);
+            if self.optimize && self.exact_speedups {
+                let head = attention_values_ordered(&weights, values.clone(), kv * 256);
+                for (j, value) in head.into_iter().enumerate() {
+                    out[h * 256 + j] = bf16(bf16(value) * bf16(sigmoid(gate[h * 256 + j])));
+                }
+            } else {
+                for j in 0..256 {
+                    let value = bf16(weights.iter().zip(values.clone())
+                        .map(|(a, value)| *a * value[kv * 256 + j]).sum());
+                    out[h * 256 + j] = bf16(value * bf16(sigmoid(gate[h * 256 + j])));
+                }
+            }
+        }
+        out
+    }
+    pub fn token(
+        &self,
+        session: &mut Session,
+        id: u32,
+        cancel: &AtomicBool,
+        trace: bool,
+    ) -> Result<(Vec<f32>, Vec<Vec<f32>>)> {
+        ensure!(session.position < MAX_CONTEXT, "CONTEXT_LIMIT: limite de16384tokens atingido");
+        let mut h = self.embedding(id as usize)?;
+        let mut states = if trace { vec![h.clone()] } else { vec![] };
+        let mut visits = [0usize; 32];
+        let mut pass_input = Vec::new();
+        let rotary = (self.optimize && self.exact_speedups).then(|| {
+            std::array::from_fn(|j| rotary_factor(session.position, j))
+        });
+        for (slot, &physical) in self.manifest.execution_plan.iter().enumerate() {
+            if cancel.load(Ordering::Relaxed) {
+                bail!("cancelled");
+            }
+            let base = format!("layers.{physical}");
+            let visit = visits[physical];
+            visits[physical] += 1;
+            let routed = (4..28).contains(&physical);
+            if routed {
+                if physical == 4 {
+                    assert_eq!(h.len(), 1024);
+                    if self.pass_gates.active() { pass_input.clone_from(&h); }
+                    h = [h.clone(), h].concat();
+                }
+                let gain = self.vector(&format!("{base}.native_visit_gain"))[visit];
+                let (branch, post, mix) = self.router(&format!("{base}.mhc_attn"), &h);
+                let x = self.norm(&base, "input_layernorm", &branch);
+                let branch = if physical % 4 == 3 {
+                    let window = [7, 15, 27].contains(&physical);
+                    let (cache, prefix) = self.attention_state(&mut session.slots, slot, physical, visit, window);
+                    self.attention(
+                        &base,
+                        &x,
+                        cache,
+                        session.position,
+                        window,
+                        rotary.as_ref(),
+                        prefix,
+                    )
+                } else {
+                    self.delta(&base, &x, &mut session.slots[slot])
+                };
+                h = Self::merge(&h, &branch, &post, &mix, gain);
+                let (branch, post, mix) = self.router(&format!("{base}.mhc_ffn"), &h);
+                let x = self.norm(&base, "post_attention_layernorm", &branch);
+                let branch = self.mlp(&base, &x);
+                h = Self::merge(&h, &branch, &post, &mix, gain);
+                if physical == 27 {
+                    h = (0..1024)
+                        .map(|j| bf16((h[j] + h[1024 + j]) * 0.5))
+                        .collect();
+                    if self.pass_gates.active() { self.pass_gates.mix(visit, &pass_input, &mut h); }
+                }
+            } else {
+                let x = self.norm(&base, "input_layernorm", &h);
+                let branch = if physical % 4 == 3 {
+                    self.attention(&base, &x, &mut session.slots[slot], session.position, false, rotary.as_ref(), None)
+                } else {
+                    self.delta(&base, &x, &mut session.slots[slot])
+                };
+                for (x, b) in h.iter_mut().zip(branch) {
+                    *x = bf16(*x + b);
+                }
+                let x = self.norm(&base, "post_attention_layernorm", &h);
+                let branch = self.mlp(&base, &x);
+                for (x, b) in h.iter_mut().zip(branch) {
+                    *x = bf16(*x + b);
+                }
+            }
+            ensure!(
+                h.iter().all(|x| x.is_finite()),
+                "Estado numérico inválido na camada {physical}"
+            );
+            if trace {
+                states.push(h.clone());
+            }
+        }
+        h = rms(&h, self.vector("norm.weight"), true);
+        if trace {
+            *states.last_mut().unwrap() = h.clone();
+        }
+        session.position += 1;
+        Ok((h, states))
+    }
+    pub fn logits(&self, h: &[f32]) -> Vec<f32> {
+        if let Some(adapter)=&self.readout {
+            let z:Vec<f32>=adapter.a.chunks_exact(1024).map(|row|row.iter().zip(h).map(|(a,x)|a*x).sum()).collect();
+            let adapted:Vec<f32>=adapter.b.chunks_exact(32).zip(h).map(|(row,x)|bf16(x+row.iter().zip(&z).map(|(b,z)|b*z).sum::<f32>())).collect();
+            self.mv("embed_tokens.weight", &adapted)
+        } else {self.mv("embed_tokens.weight", h)}
+    }
+    pub fn attach_patch(&mut self, bytes: &[u8], expected_sha256: &str) -> Result<usize> {
+        use sha2::{Digest,Sha256};
+        ensure!(self.manifest.source_checkpoint_sha256==PRINCIPAL && self.overrides.is_empty() && self.dense_override.is_none() && self.readout.is_none(), "A edição exige a Base geral original");
+        let patch=crate::patch::decode(bytes,expected_sha256)?;
+        ensure!(patch.base_checkpoint_sha256==PRINCIPAL && patch.source_archive_sha256==crate::patch::EPOCH02 && patch.tensors.len()==546,"Edição diferente da selecionada");
+        let mut pending=HashMap::new();
+        for (name,target) in &patch.tensors {
+            let base=self.manifest.tensors.get(name).context("Tensor desconhecido na edição")?;
+            ensure!(base.shape==target.shape,"Forma incompatível: {name}");
+            let count:usize=base.shape.iter().product();
+            let zeros;
+            let prior=if base.kind=="zero" { zeros=vec![0u8;count*if target.kind=="f32" {4}else{2}]; &zeros[..] } else {self.tensor_data(name)};
+            ensure!(format!("{:x}",Sha256::digest(prior))==target.base_sha256,"Base diferente: {name}");
+            if target.changed {
+                let decoded=crate::patch::decode_tensor(bytes,target,prior)?;
+                pending.insert(name.clone(),decoded);
+            } else {ensure!(target.sha256==target.base_sha256 && (base.kind==target.kind || base.kind=="zero"),"Hash inalterado inválido");}
+        }
+        let count=pending.len();
+        for (name,data) in pending {
+            let target=&patch.tensors[&name]; let s=self.manifest.tensors.get_mut(&name).unwrap();
+            s.kind=target.kind.clone();s.bytes=data.len();self.overrides.insert(name,data);
+        }
+        self.manifest.source_checkpoint_sha256=patch.source_archive_sha256;
+        self.refresh_derived()?;
+        Ok(count)
+    }
+    pub fn attach_readout(&mut self,bytes:&[u8])->Result<()> {
+        let a:Readout=serde_json::from_slice(bytes)?;
+        ensure!(self.manifest.source_checkpoint_sha256==SPECIALIST && a.parent_E_stream==SPECIALIST && a.rank==32 && a.a.len()==32768 && a.b.len()==32768 && a.a.iter().chain(&a.b).all(|x|x.is_finite()),"Adaptador incompatível");
+        self.readout=Some(a);Ok(())
+    }
+    pub fn attach_dense(&mut self,bytes:Vec<u8>)->Result<()> {
+        ensure!(self.manifest.source_checkpoint_sha256==PRINCIPAL && bytes.len()==1024*3584*2,"Edição de pesos incompatível");
+        ensure!(bytes.chunks_exact(2).all(|b|read_bf(b).is_finite()),"Pesos não finitos");
+        self.dense_override=Some(bytes);Ok(())
+    }
+}
+#[allow(non_camel_case_types)]
+type sizetype = usize;
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn slots_are_independent() {
+        let mut s = Session::new();
+        s.slots[4].conv.push(1.);
+        assert!(s.slots[28].conv.is_empty());
+        assert_eq!(s.slots.len(), 56);
+    }
+}

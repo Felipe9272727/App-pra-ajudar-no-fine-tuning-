@@ -1,0 +1,10 @@
+[
+  {"prompt":"What is len([2, 4, 6]) in Python?\nA) 2\nB) 3\nC) 4\nD) 6\nReturn the letter only.","answer":1},
+  {"prompt":"A baker has 8 loaves and sells 5. How many remain?\nA) 3\nB) 5\nC) 8\nD) 13\nReturn the letter only.","answer":0},
+  {"prompt":"Evaluate Python's [9, 3, 5][1].\nA) 9\nB) 1\nC) 5\nD) 3\nReturn the letter only.","answer":3},
+  {"prompt":"Which word is a color?\nA) volume\nB) goat\nC) blue\nD) run\nReturn the letter only.","answer":2},
+  {"prompt":"Which of these is the smallest?\nA) 11\nB) -2\nC) 2\nD) 0\nReturn the letter only.","answer":1},
+  {"prompt":"Evaluate Python's sum([4, -1, 2]).\nA) 4\nB) 7\nC) 5\nD) 2\nReturn the letter only.","answer":2},
+  {"prompt":"What does Python return for bool([])?\nA) False\nB) True\nC) []\nD) raises TypeError\nReturn the letter only.","answer":0},
+  {"prompt":"You have two boxes containing 9 and 7 pencils. What is the total?\nA) 9\nB) 2\nC) 14\nD) 16\nReturn the letter only.","answer":3}
+]
