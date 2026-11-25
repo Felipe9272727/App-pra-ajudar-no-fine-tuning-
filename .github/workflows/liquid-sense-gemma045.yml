@@ -1,0 +1,96 @@
+name: Liquid Sense Gemma 045 · assemble and test
+on:
+  push:
+    branches: [codex/liquid-sense-gemma043-20261125]
+    paths: [fusion043/delivery045.json]
+permissions:
+  contents: write
+jobs:
+  model:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      TAG: liquid-sense-gemma045
+      CARGO_TARGET_DIR: ${{ runner.temp }}/rust
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify the donor, original model and frozen tokenizer while compiling Rust
+        shell: bash
+        run: |
+          lab="$RUNNER_TEMP/gemma045"
+          mkdir -p "$lab"/{base,inputs,evaluation,export,archive}
+          unzip -tq fusion043/frozen-inputs.zip
+          unzip -q fusion043/frozen-inputs.zip -d "$lab/inputs"
+          (
+            python fusion043/recover_blocks.py "$lab/gemma.bf16" --profile 045 > "$lab/evaluation/donor.log"
+            tail -1 "$lab/evaluation/donor.log"
+          ) &
+          donor=$!
+          python -c 'from pathlib import Path; from loop042.bootstrap import recover; import sys; recover(Path(sys.argv[1]))' "$lab/base" &
+          parent=$!
+          rustup toolchain install 1.90.0 --profile minimal
+          cargo +1.90.0 test --release --locked --jobs 2 --manifest-path fusion043/native/Cargo.toml --lib | tee "$lab/evaluation/rust-tests.log"
+          cargo +1.90.0 build --release --locked --jobs 2 --manifest-path fusion043/native/Cargo.toml --bin hybrid044 --bin fusiontool
+          wait "$donor"
+          wait "$parent"
+      - name: Assemble the single checkpoint and verify generation
+        shell: bash
+        run: |
+          lab="$RUNNER_TEMP/gemma045"
+          output="$lab/export/LiquidSense-Gemma-045.lsmix"
+          python fusion043/pack_deep.py "$lab/base/locator.json" "$lab/inputs/deep-alignment.bf16" "$lab/gemma.bf16" "$lab/inputs/tokenizer.json" "$output" --profile 045 | tee "$lab/evaluation/checkpoint.json"
+          "$CARGO_TARGET_DIR/release/hybrid044" pack "$output" parity 'Scheduling, Decoding and Instrumentation are parameterized. Olá, tudo certo?' | tee "$lab/evaluation/parity.log"
+          python fusion043/screen045.py "$lab/evaluation"
+          sha="$(sha256sum "$lab/inputs/LiquidSense-Gemma1B-043.lsf" | cut -d ' ' -f1)"
+          for variant in base lexicon; do
+            tk="$lab/inputs/tokenizer.json"
+            if [ "$variant" = base ]; then tk="$lab/base/tokenizer.json"; fi
+            "$CARGO_TARGET_DIR/release/fusiontool" "$lab/base/locator.json" "$tk" "$variant" "$lab/inputs/LiquidSense-Gemma1B-043.lsf" "$sha" bench "$lab/evaluation/prompts.json" > "$lab/evaluation/$variant.jsonl"
+          done
+          "$CARGO_TARGET_DIR/release/hybrid044" pack "$output" bench "$lab/evaluation/prompts.json" > "$lab/evaluation/hybrid.jsonl"
+          python fusion043/screen045.py "$lab/evaluation" --score
+          jq 'map_values({correct, count, wall_seconds, groups})' "$lab/evaluation/resultado.json"
+      - name: Package and verify the checkpoint download
+        shell: bash
+        run: |
+          lab="$RUNNER_TEMP/gemma045"
+          cp "$CARGO_TARGET_DIR/release/hybrid044" "$lab/export/liquid-sense-hybrid"
+          cp -r fusion043/licenses "$lab/export/licenses"
+          cp fusion043/licenses/Notice.txt "$lab/export/Notice.txt"
+          cp fusion043/LEIA-ME.md "$lab/export/LEIA-ME.md"
+          cp "$lab/evaluation/"{checkpoint.json,parity.log,resultado.json} "$lab/export/"
+          (cd "$lab/export" && zip -0qr "$lab/archive/LiquidSense-Gemma-045.zip" .)
+          cd "$lab/archive"
+          sha256sum LiquidSense-Gemma-045.zip > SHA256SUMS
+          unzip -tq LiquidSense-Gemma-045.zip
+          split --bytes=1400000000 --numeric-suffixes=1 --suffix-length=2 LiquidSense-Gemma-045.zip LiquidSense-Gemma-045.zip.part
+          sha256sum LiquidSense-Gemma-045.zip.part* >> SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gemma045-evidence
+          path: ${{ runner.temp }}/gemma045/evaluation
+          retention-days: 30
+      - name: Publish the experimental release and verify both uploads
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          lab="$RUNNER_TEMP/gemma045"
+          if ! gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --draft --prerelease \
+              --title 'Liquid Sense × Gemma 045 · 510M de pesos Gemma' --notes-file fusion043/LEIA-ME.md
+          fi
+          test "$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" = true
+          gh release upload "$TAG" --repo "$GITHUB_REPOSITORY" "$lab/archive/"*.part* "$lab/archive/SHA256SUMS" \
+            "$lab/evaluation/resultado.json" "$lab/evaluation/checkpoint.json"
+          for asset in "$lab/archive/"*.part*; do
+            name="$(basename "$asset")"
+            sha="$(sha256sum "$asset" | cut -d ' ' -f1)"
+            stored="$(gh api "repos/$GITHUB_REPOSITORY/releases" --jq ".[] | select(.tag_name == \"$TAG\") | .assets[] | select(.name == \"$name\") | .digest")"
+            test "$stored" = "sha256:$sha"
+          done
+          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --prerelease --latest=false

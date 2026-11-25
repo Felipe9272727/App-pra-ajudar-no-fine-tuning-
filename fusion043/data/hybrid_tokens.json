@@ -1,0 +1,1808 @@
+[
+  {
+    "text": "preprocessing",
+    "piece": "preprocessing",
+    "id": 248070,
+    "merge": [
+      "pre",
+      "processing"
+    ],
+    "gemma_id": 69495,
+    "base_ids": [
+      1666,
+      20034
+    ]
+  },
+  {
+    "text": "Preprocessing",
+    "piece": "Preprocessing",
+    "id": 248071,
+    "merge": [
+      "Pre",
+      "processing"
+    ],
+    "gemma_id": 229267,
+    "base_ids": [
+      4551,
+      20034
+    ]
+  },
+  {
+    "text": "preprocess",
+    "piece": "preprocess",
+    "id": 248072,
+    "merge": [
+      "pre",
+      "process"
+    ],
+    "gemma_id": 125579,
+    "base_ids": [
+      1666,
+      4480
+    ]
+  },
+  {
+    "text": "Preprocessor",
+    "piece": "Preprocessor",
+    "id": 248073,
+    "merge": [
+      "Pre",
+      "processor"
+    ],
+    "gemma_id": 124782,
+    "base_ids": [
+      4551,
+      28513
+    ]
+  },
+  {
+    "text": "DEPENDENCIA",
+    "piece": "DEPENDENCIA",
+    "id": 248074,
+    "merge": [
+      "DEPEND",
+      "ENCIA"
+    ],
+    "gemma_id": 58284,
+    "base_ids": [
+      92368,
+      184189
+    ]
+  },
+  {
+    "text": "Configurations",
+    "piece": "Configurations",
+    "id": 248075,
+    "merge": [
+      "Config",
+      "urations"
+    ],
+    "gemma_id": 137792,
+    "base_ids": [
+      2561,
+      20792
+    ]
+  },
+  {
+    "text": " Configurations",
+    "piece": "ĠConfigurations",
+    "id": 248076,
+    "merge": [
+      "ĠConfig",
+      "urations"
+    ],
+    "gemma_id": 209703,
+    "base_ids": [
+      5359,
+      20792
+    ]
+  },
+  {
+    "text": "configurations",
+    "piece": "configurations",
+    "id": 248077,
+    "merge": [
+      "config",
+      "urations"
+    ],
+    "gemma_id": 87871,
+    "base_ids": [
+      1617,
+      20792
+    ]
+  },
+  {
+    "text": "configurable",
+    "piece": "configurable",
+    "id": 248078,
+    "merge": [
+      "config",
+      "urable"
+    ],
+    "gemma_id": 147760,
+    "base_ids": [
+      1617,
+      17784
+    ]
+  },
+  {
+    "text": "ConfigureArg",
+    "piece": "ConfigureArg",
+    "id": 248079,
+    "merge": [
+      "Configure",
+      "Arg"
+    ],
+    "gemma_id": 123790,
+    "base_ids": [
+      27628,
+      2648
+    ]
+  },
+  {
+    "text": "autoconfigure",
+    "piece": "autoconfigure",
+    "id": 248080,
+    "merge": [
+      "auto",
+      "configure"
+    ],
+    "gemma_id": 51833,
+    "base_ids": [
+      3771,
+      20361
+    ]
+  },
+  {
+    "text": "configuring",
+    "piece": "configuring",
+    "id": 248081,
+    "merge": [
+      "config",
+      "uring"
+    ],
+    "gemma_id": 213617,
+    "base_ids": [
+      1617,
+      1618
+    ]
+  },
+  {
+    "text": "Instrumentation",
+    "piece": "Instrumentation",
+    "id": 248082,
+    "merge": [
+      "Instrument",
+      "ation"
+    ],
+    "gemma_id": 20960,
+    "base_ids": [
+      54431,
+      362
+    ]
+  },
+  {
+    "text": " Instrumentation",
+    "piece": "ĠInstrumentation",
+    "id": 248083,
+    "merge": [
+      "ĠInstrument",
+      "ation"
+    ],
+    "gemma_id": 33665,
+    "base_ids": [
+      40900,
+      362
+    ]
+  },
+  {
+    "text": "DebugInformation",
+    "piece": "DebugInformation",
+    "id": 248084,
+    "merge": [
+      "Debug",
+      "Information"
+    ],
+    "gemma_id": 181275,
+    "base_ids": [
+      7689,
+      14443
+    ]
+  },
+  {
+    "text": "documentElement",
+    "piece": "documentElement",
+    "id": 248085,
+    "merge": [
+      "document",
+      "Element"
+    ],
+    "gemma_id": 69770,
+    "base_ids": [
+      5872,
+      1631
+    ]
+  },
+  {
+    "text": "documentclass",
+    "piece": "documentclass",
+    "id": 248086,
+    "merge": [
+      "document",
+      "class"
+    ],
+    "gemma_id": 72237,
+    "base_ids": [
+      5872,
+      1005
+    ]
+  },
+  {
+    "text": "documented",
+    "piece": "documented",
+    "id": 248087,
+    "merge": [
+      "document",
+      "ed"
+    ],
+    "gemma_id": 190605,
+    "base_ids": [
+      5872,
+      290
+    ]
+  },
+  {
+    "text": "normalization",
+    "piece": "normalization",
+    "id": 248088,
+    "merge": [
+      "normal",
+      "ization"
+    ],
+    "gemma_id": 96348,
+    "base_ids": [
+      7994,
+      1954
+    ]
+  },
+  {
+    "text": "optimization",
+    "piece": "optimization",
+    "id": 248089,
+    "merge": [
+      "optim",
+      "ization"
+    ],
+    "gemma_id": 111831,
+    "base_ids": [
+      18555,
+      1954
+    ]
+  },
+  {
+    "text": "optimizers",
+    "piece": "optimizers",
+    "id": 248090,
+    "merge": [
+      "optim",
+      "izers"
+    ],
+    "gemma_id": 211479,
+    "base_ids": [
+      18555,
+      11881
+    ]
+  },
+  {
+    "text": "Optimization",
+    "piece": "Optimization",
+    "id": 248091,
+    "merge": [
+      "Opt",
+      "imization"
+    ],
+    "gemma_id": 77788,
+    "base_ids": [
+      20711,
+      63738
+    ]
+  },
+  {
+    "text": "operational",
+    "piece": "operational",
+    "id": 248092,
+    "merge": [
+      "oper",
+      "ational"
+    ],
+    "gemma_id": 214144,
+    "base_ids": [
+      3189,
+      1605
+    ]
+  },
+  {
+    "text": "Operational",
+    "piece": "Operational",
+    "id": 248093,
+    "merge": [
+      "Oper",
+      "ational"
+    ],
+    "gemma_id": 191132,
+    "base_ids": [
+      5321,
+      1605
+    ]
+  },
+  {
+    "text": "persistence",
+    "piece": "persistence",
+    "id": 248094,
+    "merge": [
+      "p",
+      "ersistence"
+    ],
+    "gemma_id": 43990,
+    "base_ids": [
+      79,
+      7774
+    ]
+  },
+  {
+    "text": "concurrent",
+    "piece": "concurrent",
+    "id": 248095,
+    "merge": [
+      "con",
+      "current"
+    ],
+    "gemma_id": 50242,
+    "base_ids": [
+      435,
+      3127
+    ]
+  },
+  {
+    "text": "Concurrent",
+    "piece": "Concurrent",
+    "id": 248096,
+    "merge": [
+      "Con",
+      "current"
+    ],
+    "gemma_id": 125596,
+    "base_ids": [
+      1073,
+      3127
+    ]
+  },
+  {
+    "text": "Inspection",
+    "piece": "Inspection",
+    "id": 248097,
+    "merge": [
+      "Ins",
+      "pection"
+    ],
+    "gemma_id": 199179,
+    "base_ids": [
+      15020,
+      15603
+    ]
+  },
+  {
+    "text": "inspector",
+    "piece": "inspector",
+    "id": 248098,
+    "merge": [
+      "ins",
+      "pector"
+    ],
+    "gemma_id": 192754,
+    "base_ids": [
+      1283,
+      18424
+    ]
+  },
+  {
+    "text": " Transformations",
+    "piece": "ĠTransformations",
+    "id": 248099,
+    "merge": [
+      "ĠTransform",
+      "ations"
+    ],
+    "gemma_id": 224824,
+    "base_ids": [
+      14782,
+      778
+    ]
+  },
+  {
+    "text": "transformation",
+    "piece": "transformation",
+    "id": 248100,
+    "merge": [
+      "trans",
+      "formation"
+    ],
+    "gemma_id": 118047,
+    "base_ids": [
+      1405,
+      1570
+    ]
+  },
+  {
+    "text": "transformed",
+    "piece": "transformed",
+    "id": 248101,
+    "merge": [
+      "transform",
+      "ed"
+    ],
+    "gemma_id": 137627,
+    "base_ids": [
+      4549,
+      290
+    ]
+  },
+  {
+    "text": "transformer",
+    "piece": "transformer",
+    "id": 248102,
+    "merge": [
+      "transform",
+      "er"
+    ],
+    "gemma_id": 105298,
+    "base_ids": [
+      4549,
+      261
+    ]
+  },
+  {
+    "text": "Transformers",
+    "piece": "Transformers",
+    "id": 248103,
+    "merge": [
+      "Transform",
+      "ers"
+    ],
+    "gemma_id": 214568,
+    "base_ids": [
+      8692,
+      382
+    ]
+  },
+  {
+    "text": " categorize",
+    "piece": "Ġcategorize",
+    "id": 248104,
+    "merge": [
+      "Ġcategor",
+      "ize"
+    ],
+    "gemma_id": 136535,
+    "base_ids": [
+      21370,
+      537
+    ]
+  },
+  {
+    "text": "automate",
+    "piece": "automate",
+    "id": 248105,
+    "merge": [
+      "autom",
+      "ate"
+    ],
+    "gemma_id": 193810,
+    "base_ids": [
+      26205,
+      344
+    ]
+  },
+  {
+    "text": "automated",
+    "piece": "automated",
+    "id": 248106,
+    "merge": [
+      "autom",
+      "ated"
+    ],
+    "gemma_id": 216103,
+    "base_ids": [
+      26205,
+      639
+    ]
+  },
+  {
+    "text": "automatically",
+    "piece": "automatically",
+    "id": 248107,
+    "merge": [
+      "autom",
+      "atically"
+    ],
+    "gemma_id": 232924,
+    "base_ids": [
+      26205,
+      6804
+    ]
+  },
+  {
+    "text": "Automatically",
+    "piece": "Automatically",
+    "id": 248108,
+    "merge": [
+      "Autom",
+      "atically"
+    ],
+    "gemma_id": 160373,
+    "base_ids": [
+      39716,
+      6804
+    ]
+  },
+  {
+    "text": "serializing",
+    "piece": "serializing",
+    "id": 248109,
+    "merge": [
+      "serial",
+      "izing"
+    ],
+    "gemma_id": 115313,
+    "base_ids": [
+      9879,
+      4694
+    ]
+  },
+  {
+    "text": "serializers",
+    "piece": "serializers",
+    "id": 248110,
+    "merge": [
+      "serial",
+      "izers"
+    ],
+    "gemma_id": 203174,
+    "base_ids": [
+      9879,
+      11881
+    ]
+  },
+  {
+    "text": "RefreshToken",
+    "piece": "RefreshToken",
+    "id": 248111,
+    "merge": [
+      "Refresh",
+      "Token"
+    ],
+    "gemma_id": 215663,
+    "base_ids": [
+      14148,
+      3214
+    ]
+  },
+  {
+    "text": "refreshToken",
+    "piece": "refreshToken",
+    "id": 248112,
+    "merge": [
+      "refresh",
+      "Token"
+    ],
+    "gemma_id": 165340,
+    "base_ids": [
+      16662,
+      3214
+    ]
+  },
+  {
+    "text": "authToken",
+    "piece": "authToken",
+    "id": 248113,
+    "merge": [
+      "auth",
+      "Token"
+    ],
+    "gemma_id": 202545,
+    "base_ids": [
+      3137,
+      3214
+    ]
+  },
+  {
+    "text": "authentic",
+    "piece": "authentic",
+    "id": 248114,
+    "merge": [
+      "auth",
+      "entic"
+    ],
+    "gemma_id": 153085,
+    "base_ids": [
+      3137,
+      4117
+    ]
+  },
+  {
+    "text": "Authenticator",
+    "piece": "Authenticator",
+    "id": 248115,
+    "merge": [
+      "Auth",
+      "enticator"
+    ],
+    "gemma_id": 232798,
+    "base_ids": [
+      4925,
+      59320
+    ]
+  },
+  {
+    "text": "isAuthenticated",
+    "piece": "isAuthenticated",
+    "id": 248116,
+    "merge": [
+      "is",
+      "Authenticated"
+    ],
+    "gemma_id": 168806,
+    "base_ids": [
+      284,
+      25859
+    ]
+  },
+  {
+    "text": "tokenize",
+    "piece": "tokenize",
+    "id": 248117,
+    "merge": [
+      "token",
+      "ize"
+    ],
+    "gemma_id": 81436,
+    "base_ids": [
+      5658,
+      537
+    ]
+  },
+  {
+    "text": "sourceEncoding",
+    "piece": "sourceEncoding",
+    "id": 248118,
+    "merge": [
+      "source",
+      "Encoding"
+    ],
+    "gemma_id": 199228,
+    "base_ids": [
+      2348,
+      14266
+    ]
+  },
+  {
+    "text": "executionContext",
+    "piece": "executionContext",
+    "id": 248119,
+    "merge": [
+      "execution",
+      "Context"
+    ],
+    "gemma_id": 52568,
+    "base_ids": [
+      50947,
+      1905
+    ]
+  },
+  {
+    "text": "RequestContext",
+    "piece": "RequestContext",
+    "id": 248120,
+    "merge": [
+      "Request",
+      "Context"
+    ],
+    "gemma_id": 223589,
+    "base_ids": [
+      1835,
+      1905
+    ]
+  },
+  {
+    "text": "AppContext",
+    "piece": "AppContext",
+    "id": 248121,
+    "merge": [
+      "App",
+      "Context"
+    ],
+    "gemma_id": 39190,
+    "base_ids": [
+      2095,
+      1905
+    ]
+  },
+  {
+    "text": "ContextProvider",
+    "piece": "ContextProvider",
+    "id": 248122,
+    "merge": [
+      "Context",
+      "Provider"
+    ],
+    "gemma_id": 139175,
+    "base_ids": [
+      1905,
+      5014
+    ]
+  },
+  {
+    "text": "ContextCompat",
+    "piece": "ContextCompat",
+    "id": 248123,
+    "merge": [
+      "Context",
+      "Compat"
+    ],
+    "gemma_id": 129250,
+    "base_ids": [
+      1905,
+      8447
+    ]
+  },
+  {
+    "text": "WriteString",
+    "piece": "WriteString",
+    "id": 248124,
+    "merge": [
+      "Write",
+      "String"
+    ],
+    "gemma_id": 153217,
+    "base_ids": [
+      7734,
+      683
+    ]
+  },
+  {
+    "text": "getLength",
+    "piece": "getLength",
+    "id": 248125,
+    "merge": [
+      "get",
+      "Length"
+    ],
+    "gemma_id": 202391,
+    "base_ids": [
+      447,
+      4232
+    ]
+  },
+  {
+    "text": "minLength",
+    "piece": "minLength",
+    "id": 248126,
+    "merge": [
+      "min",
+      "Length"
+    ],
+    "gemma_id": 197397,
+    "base_ids": [
+      1030,
+      4232
+    ]
+  },
+  {
+    "text": "stringProp",
+    "piece": "stringProp",
+    "id": 248127,
+    "merge": [
+      "string",
+      "Prop"
+    ],
+    "gemma_id": 45982,
+    "base_ids": [
+      889,
+      1941
+    ]
+  },
+  {
+    "text": "stringify",
+    "piece": "stringify",
+    "id": 248128,
+    "merge": [
+      "string",
+      "ify"
+    ],
+    "gemma_id": 19780,
+    "base_ids": [
+      889,
+      1386
+    ]
+  },
+  {
+    "text": "StringBuffer",
+    "piece": "StringBuffer",
+    "id": 248129,
+    "merge": [
+      "String",
+      "Buffer"
+    ],
+    "gemma_id": 198706,
+    "base_ids": [
+      683,
+      3959
+    ]
+  },
+  {
+    "text": "StringSet",
+    "piece": "StringSet",
+    "id": 248130,
+    "merge": [
+      "String",
+      "Set"
+    ],
+    "gemma_id": 188780,
+    "base_ids": [
+      683,
+      1591
+    ]
+  },
+  {
+    "text": " StringSet",
+    "piece": "ĠStringSet",
+    "id": 248131,
+    "merge": [
+      "ĠString",
+      "Set"
+    ],
+    "gemma_id": 233850,
+    "base_ids": [
+      894,
+      1591
+    ]
+  },
+  {
+    "text": "Compress",
+    "piece": "Compress",
+    "id": 248132,
+    "merge": [
+      "Com",
+      "press"
+    ],
+    "gemma_id": 154181,
+    "base_ids": [
+      1057,
+      1808
+    ]
+  },
+  {
+    "text": " Compress",
+    "piece": "ĠCompress",
+    "id": 248133,
+    "merge": [
+      "ĠCom",
+      "press"
+    ],
+    "gemma_id": 160101,
+    "base_ids": [
+      1158,
+      1808
+    ]
+  },
+  {
+    "text": "Compressed",
+    "piece": "Compressed",
+    "id": 248134,
+    "merge": [
+      "Com",
+      "pressed"
+    ],
+    "gemma_id": 145393,
+    "base_ids": [
+      1057,
+      13908
+    ]
+  },
+  {
+    "text": " Compressed",
+    "piece": "ĠCompressed",
+    "id": 248135,
+    "merge": [
+      "ĠCom",
+      "pressed"
+    ],
+    "gemma_id": 225809,
+    "base_ids": [
+      1158,
+      13908
+    ]
+  },
+  {
+    "text": "compressible",
+    "piece": "compressible",
+    "id": 248136,
+    "merge": [
+      "compress",
+      "ible"
+    ],
+    "gemma_id": 99148,
+    "base_ids": [
+      37088,
+      1196
+    ]
+  },
+  {
+    "text": " compressible",
+    "piece": "Ġcompressible",
+    "id": 248137,
+    "merge": [
+      "Ġcompress",
+      "ible"
+    ],
+    "gemma_id": 168938,
+    "base_ids": [
+      23835,
+      1196
+    ]
+  },
+  {
+    "text": "encoders",
+    "piece": "encoders",
+    "id": 248138,
+    "merge": [
+      "enc",
+      "oders"
+    ],
+    "gemma_id": 227102,
+    "base_ids": [
+      924,
+      50731
+    ]
+  },
+  {
+    "text": " encoders",
+    "piece": "Ġencoders",
+    "id": 248139,
+    "merge": [
+      "Ġenc",
+      "oders"
+    ],
+    "gemma_id": 214553,
+    "base_ids": [
+      3107,
+      50731
+    ]
+  },
+  {
+    "text": "Decoding",
+    "piece": "Decoding",
+    "id": 248140,
+    "merge": [
+      "Dec",
+      "oding"
+    ],
+    "gemma_id": 166370,
+    "base_ids": [
+      4741,
+      3574
+    ]
+  },
+  {
+    "text": " Decoding",
+    "piece": "ĠDecoding",
+    "id": 248141,
+    "merge": [
+      "ĠDec",
+      "oding"
+    ],
+    "gemma_id": 112501,
+    "base_ids": [
+      3588,
+      3574
+    ]
+  },
+  {
+    "text": "openConnection",
+    "piece": "openConnection",
+    "id": 248142,
+    "merge": [
+      "open",
+      "Connection"
+    ],
+    "gemma_id": 169842,
+    "base_ids": [
+      2428,
+      4378
+    ]
+  },
+  {
+    "text": "ConnectionType",
+    "piece": "ConnectionType",
+    "id": 248143,
+    "merge": [
+      "Connection",
+      "Type"
+    ],
+    "gemma_id": 228712,
+    "base_ids": [
+      4378,
+      900
+    ]
+  },
+  {
+    "text": "Connectivity",
+    "piece": "Connectivity",
+    "id": 248144,
+    "merge": [
+      "Connect",
+      "ivity"
+    ],
+    "gemma_id": 144023,
+    "base_ids": [
+      14190,
+      1861
+    ]
+  },
+  {
+    "text": "connectivity",
+    "piece": "connectivity",
+    "id": 248145,
+    "merge": [
+      "connect",
+      "ivity"
+    ],
+    "gemma_id": 138097,
+    "base_ids": [
+      6257,
+      1861
+    ]
+  },
+  {
+    "text": "disconnected",
+    "piece": "disconnected",
+    "id": 248146,
+    "merge": [
+      "dis",
+      "connected"
+    ],
+    "gemma_id": 222727,
+    "base_ids": [
+      4104,
+      14844
+    ]
+  },
+  {
+    "text": "Reconnect",
+    "piece": "Reconnect",
+    "id": 248147,
+    "merge": [
+      "Re",
+      "connect"
+    ],
+    "gemma_id": 212971,
+    "base_ids": [
+      674,
+      6257
+    ]
+  },
+  {
+    "text": "isConnected",
+    "piece": "isConnected",
+    "id": 248148,
+    "merge": [
+      "is",
+      "Connected"
+    ],
+    "gemma_id": 152597,
+    "base_ids": [
+      284,
+      20497
+    ]
+  },
+  {
+    "text": "deployRoot",
+    "piece": "deployRoot",
+    "id": 248149,
+    "merge": [
+      "deploy",
+      "Root"
+    ],
+    "gemma_id": 128921,
+    "base_ids": [
+      34608,
+      8179
+    ]
+  },
+  {
+    "text": "deployed",
+    "piece": "deployed",
+    "id": 248150,
+    "merge": [
+      "deploy",
+      "ed"
+    ],
+    "gemma_id": 222192,
+    "base_ids": [
+      34608,
+      290
+    ]
+  },
+  {
+    "text": "Deployed",
+    "piece": "Deployed",
+    "id": 248151,
+    "merge": [
+      "Deploy",
+      "ed"
+    ],
+    "gemma_id": 212914,
+    "base_ids": [
+      67112,
+      290
+    ]
+  },
+  {
+    "text": "ScheduledAction",
+    "piece": "ScheduledAction",
+    "id": 248152,
+    "merge": [
+      "Scheduled",
+      "Action"
+    ],
+    "gemma_id": 153815,
+    "base_ids": [
+      85101,
+      2432
+    ]
+  },
+  {
+    "text": "Scheduling",
+    "piece": "Scheduling",
+    "id": 248153,
+    "merge": [
+      "S",
+      "cheduling"
+    ],
+    "gemma_id": 212441,
+    "base_ids": [
+      50,
+      42884
+    ]
+  },
+  {
+    "text": " Scheduling",
+    "piece": "ĠScheduling",
+    "id": 248154,
+    "merge": [
+      "ĠS",
+      "cheduling"
+    ],
+    "gemma_id": 153025,
+    "base_ids": [
+      326,
+      42884
+    ]
+  },
+  {
+    "text": "scheduling",
+    "piece": "scheduling",
+    "id": 248155,
+    "merge": [
+      "s",
+      "cheduling"
+    ],
+    "gemma_id": 194473,
+    "base_ids": [
+      82,
+      42884
+    ]
+  },
+  {
+    "text": " parameterized",
+    "piece": "Ġparameterized",
+    "id": 248156,
+    "merge": [
+      "Ġparameter",
+      "ized"
+    ],
+    "gemma_id": 154938,
+    "base_ids": [
+      5555,
+      1452
+    ]
+  },
+  {
+    "text": "Parameterized",
+    "piece": "Parameterized",
+    "id": 248157,
+    "merge": [
+      "Parameter",
+      "ized"
+    ],
+    "gemma_id": 218578,
+    "base_ids": [
+      4810,
+      1452
+    ]
+  },
+  {
+    "text": "getParameters",
+    "piece": "getParameters",
+    "id": 248158,
+    "merge": [
+      "get",
+      "Parameters"
+    ],
+    "gemma_id": 226421,
+    "base_ids": [
+      447,
+      9418
+    ]
+  },
+  {
+    "text": "ParamList",
+    "piece": "ParamList",
+    "id": 248159,
+    "merge": [
+      "Param",
+      "List"
+    ],
+    "gemma_id": 221738,
+    "base_ids": [
+      1934,
+      826
+    ]
+  },
+  {
+    "text": "QueryParams",
+    "piece": "QueryParams",
+    "id": 248160,
+    "merge": [
+      "Query",
+      "Params"
+    ],
+    "gemma_id": 88812,
+    "base_ids": [
+      2766,
+      4714
+    ]
+  },
+  {
+    "text": "QueryResult",
+    "piece": "QueryResult",
+    "id": 248161,
+    "merge": [
+      "Query",
+      "Result"
+    ],
+    "gemma_id": 235247,
+    "base_ids": [
+      2766,
+      2009
+    ]
+  },
+  {
+    "text": "ResultMessage",
+    "piece": "ResultMessage",
+    "id": 248162,
+    "merge": [
+      "Result",
+      "Message"
+    ],
+    "gemma_id": 223344,
+    "base_ids": [
+      2009,
+      1984
+    ]
+  },
+  {
+    "text": "TransactionLog",
+    "piece": "TransactionLog",
+    "id": 248163,
+    "merge": [
+      "Transaction",
+      "Log"
+    ],
+    "gemma_id": 175817,
+    "base_ids": [
+      7817,
+      2132
+    ]
+  },
+  {
+    "text": "getTransaction",
+    "piece": "getTransaction",
+    "id": 248164,
+    "merge": [
+      "get",
+      "Transaction"
+    ],
+    "gemma_id": 208181,
+    "base_ids": [
+      447,
+      7817
+    ]
+  },
+  {
+    "text": "UserRepository",
+    "piece": "UserRepository",
+    "id": 248165,
+    "merge": [
+      "User",
+      "Repository"
+    ],
+    "gemma_id": 198609,
+    "base_ids": [
+      1421,
+      4474
+    ]
+  },
+  {
+    "text": "REPOSITORY",
+    "piece": "REPOSITORY",
+    "id": 248166,
+    "merge": [
+      "RE",
+      "POSITORY"
+    ],
+    "gemma_id": 235944,
+    "base_ids": [
+      762,
+      92100
+    ]
+  },
+  {
+    "text": "ModuleManager",
+    "piece": "ModuleManager",
+    "id": 248167,
+    "merge": [
+      "Module",
+      "Manager"
+    ],
+    "gemma_id": 143317,
+    "base_ids": [
+      3223,
+      1975
+    ]
+  },
+  {
+    "text": "Modular",
+    "piece": "Modular",
+    "id": 248168,
+    "merge": [
+      "Mod",
+      "ular"
+    ],
+    "gemma_id": 140680,
+    "base_ids": [
+      4312,
+      1231
+    ]
+  },
+  {
+    "text": "BinaryOperation",
+    "piece": "BinaryOperation",
+    "id": 248169,
+    "merge": [
+      "Binary",
+      "Operation"
+    ],
+    "gemma_id": 141841,
+    "base_ids": [
+      20682,
+      8172
+    ]
+  },
+  {
+    "text": "UnaryOperation",
+    "piece": "UnaryOperation",
+    "id": 248170,
+    "merge": [
+      "Unary",
+      "Operation"
+    ],
+    "gemma_id": 78911,
+    "base_ids": [
+      91277,
+      8172
+    ]
+  },
+  {
+    "text": "FunctionName",
+    "piece": "FunctionName",
+    "id": 248171,
+    "merge": [
+      "Function",
+      "Name"
+    ],
+    "gemma_id": 202423,
+    "base_ids": [
+      4987,
+      657
+    ]
+  },
+  {
+    "text": "MathOperator",
+    "piece": "MathOperator",
+    "id": 248172,
+    "merge": [
+      "Math",
+      "Operator"
+    ],
+    "gemma_id": 106692,
+    "base_ids": [
+      8549,
+      17910
+    ]
+  },
+  {
+    "text": "NumberOperation",
+    "piece": "NumberOperation",
+    "id": 248173,
+    "merge": [
+      "Number",
+      "Operation"
+    ],
+    "gemma_id": 110999,
+    "base_ids": [
+      2742,
+      8172
+    ]
+  },
+  {
+    "text": "assertEqual",
+    "piece": "assertEqual",
+    "id": 248174,
+    "merge": [
+      "assert",
+      "Equal"
+    ],
+    "gemma_id": 63562,
+    "base_ids": [
+      2138,
+      2898
+    ]
+  },
+  {
+    "text": "assertRaises",
+    "piece": "assertRaises",
+    "id": 248175,
+    "merge": [
+      "assert",
+      "Raises"
+    ],
+    "gemma_id": 177082,
+    "base_ids": [
+      2138,
+      33861
+    ]
+  },
+  {
+    "text": "assertThat",
+    "piece": "assertThat",
+    "id": 248176,
+    "merge": [
+      "assert",
+      "That"
+    ],
+    "gemma_id": 119979,
+    "base_ids": [
+      2138,
+      4639
+    ]
+  },
+  {
+    "text": "assertion",
+    "piece": "assertion",
+    "id": 248177,
+    "merge": [
+      "assert",
+      "ion"
+    ],
+    "gemma_id": 191158,
+    "base_ids": [
+      2138,
+      289
+    ]
+  },
+  {
+    "text": "assertions",
+    "piece": "assertions",
+    "id": 248178,
+    "merge": [
+      "assert",
+      "ions"
+    ],
+    "gemma_id": 184201,
+    "base_ids": [
+      2138,
+      880
+    ]
+  },
+  {
+    "text": "Exceptionally",
+    "piece": "Exceptionally",
+    "id": 248179,
+    "merge": [
+      "Exception",
+      "ally"
+    ],
+    "gemma_id": 210311,
+    "base_ids": [
+      1306,
+      722
+    ]
+  },
+  {
+    "text": "RangeException",
+    "piece": "RangeException",
+    "id": 248180,
+    "merge": [
+      "Range",
+      "Exception"
+    ],
+    "gemma_id": 218169,
+    "base_ids": [
+      5857,
+      1306
+    ]
+  },
+  {
+    "text": "ServletException",
+    "piece": "ServletException",
+    "id": 248181,
+    "merge": [
+      "Servlet",
+      "Exception"
+    ],
+    "gemma_id": 167307,
+    "base_ids": [
+      7203,
+      1306
+    ]
+  },
+  {
+    "text": "ApiException",
+    "piece": "ApiException",
+    "id": 248182,
+    "merge": [
+      "Api",
+      "Exception"
+    ],
+    "gemma_id": 233002,
+    "base_ids": [
+      6358,
+      1306
+    ]
+  },
+  {
+    "text": " Exceptional",
+    "piece": "ĠExceptional",
+    "id": 248183,
+    "merge": [
+      "ĠException",
+      "al"
+    ],
+    "gemma_id": 160093,
+    "base_ids": [
+      3976,
+      278
+    ]
+  },
+  {
+    "text": "StringIO",
+    "piece": "StringIO",
+    "id": 248184,
+    "merge": [
+      "String",
+      "IO"
+    ],
+    "gemma_id": 174951,
+    "base_ids": [
+      683,
+      3682
+    ]
+  },
+  {
+    "text": "SimpleDateFormat",
+    "piece": "SimpleDateFormat",
+    "id": 248185,
+    "merge": [
+      "Simple",
+      "DateFormat"
+    ],
+    "gemma_id": 111070,
+    "base_ids": [
+      15893,
+      16123
+    ]
+  },
+  {
+    "text": "ApiParam",
+    "piece": "ApiParam",
+    "id": 248186,
+    "merge": [
+      "Api",
+      "Param"
+    ],
+    "gemma_id": 139602,
+    "base_ids": [
+      6358,
+      1934
+    ]
+  },
+  {
+    "text": "subprocess",
+    "piece": "subprocess",
+    "id": 248187,
+    "merge": [
+      "sub",
+      "process"
+    ],
+    "gemma_id": 112454,
+    "base_ids": [
+      1899,
+      4480
+    ]
+  },
+  {
+    "text": "permutation",
+    "piece": "permutation",
+    "id": 248188,
+    "merge": [
+      "per",
+      "mutation"
+    ],
+    "gemma_id": 164537,
+    "base_ids": [
+      692,
+      29954
+    ]
+  },
+  {
+    "text": "Reduced",
+    "piece": "Reduced",
+    "id": 248189,
+    "merge": [
+      "Reduc",
+      "ed"
+    ],
+    "gemma_id": 150521,
+    "base_ids": [
+      16121,
+      290
+    ]
+  },
+  {
+    "text": "Reduction",
+    "piece": "Reduction",
+    "id": 248190,
+    "merge": [
+      "Red",
+      "uction"
+    ],
+    "gemma_id": 148271,
+    "base_ids": [
+      5844,
+      2567
+    ]
+  },
+  {
+    "text": "resultados",
+    "piece": "resultados",
+    "id": 248191,
+    "merge": [
+      "result",
+      "ados"
+    ],
+    "gemma_id": 149998,
+    "base_ids": [
+      1334,
+      5379
+    ]
+  },
+  {
+    "text": "resulting",
+    "piece": "resulting",
+    "id": 248192,
+    "merge": [
+      "result",
+      "ing"
+    ],
+    "gemma_id": 213224,
+    "base_ids": [
+      1334,
+      286
+    ]
+  },
+  {
+    "text": "reducer",
+    "piece": "reducer",
+    "id": 248193,
+    "merge": [
+      "re",
+      "ducer"
+    ],
+    "gemma_id": 159631,
+    "base_ids": [
+      265,
+      27996
+    ]
+  },
+  {
+    "text": "reducible",
+    "piece": "reducible",
+    "id": 248194,
+    "merge": [
+      "re",
+      "ducible"
+    ],
+    "gemma_id": 230724,
+    "base_ids": [
+      265,
+      75600
+    ]
+  },
+  {
+    "text": " reducible",
+    "piece": "Ġreducible",
+    "id": 248195,
+    "merge": [
+      "Ġreduc",
+      "ible"
+    ],
+    "gemma_id": 131063,
+    "base_ids": [
+      177460,
+      1196
+    ]
+  },
+  {
+    "text": "recursion",
+    "piece": "recursion",
+    "id": 248196,
+    "merge": [
+      "rec",
+      "ursion"
+    ],
+    "gemma_id": 217657,
+    "base_ids": [
+      2670,
+      33146
+    ]
+  },
+  {
+    "text": "instruments",
+    "piece": "instruments",
+    "id": 248197,
+    "merge": [
+      "in",
+      "struments"
+    ],
+    "gemma_id": 159358,
+    "base_ids": [
+      258,
+      36469
+    ]
+  },
+  {
+    "text": "modular",
+    "piece": "modular",
+    "id": 248198,
+    "merge": [
+      "mod",
+      "ular"
+    ],
+    "gemma_id": 115314,
+    "base_ids": [
+      2508,
+      1231
+    ]
+  }
+]

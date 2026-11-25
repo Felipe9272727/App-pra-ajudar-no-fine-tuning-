@@ -1,0 +1,72 @@
+{
+  "source": {
+    "repo": "unsloth/gemma-3-1b-it",
+    "revision": "5b11413a10db4e486ef16a20101fd028f8f2499c",
+    "weights_sha256": "3d4ef8d71c14db7e448a09ebe891cfb6bf32c57a9b44499ae0d1c098e48516b6",
+    "tokenizer_sha256": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795",
+    "tensors": {
+      "model.embed_tokens.weight": {
+        "shape": [
+          262144,
+          1152
+        ],
+        "bytes": 603979776,
+        "sha256": "8169474a8e8d2df7cc2ab19a5dd6aed0c2fe51afa2d9bfff2fc5235eea2bae26"
+      },
+      "model.layers.25.mlp.down_proj.weight": {
+        "shape": [
+          1152,
+          6912
+        ],
+        "bytes": 15925248,
+        "sha256": "a786cc942af46eb19055366465c0b59b1849e95d6bbc3fcad3f43d39c674f439"
+      },
+      "model.layers.25.mlp.gate_proj.weight": {
+        "shape": [
+          6912,
+          1152
+        ],
+        "bytes": 15925248,
+        "sha256": "4d1582ecf3e7e5c0f6868f49e0783a6cfd4bf8e28f757b61e5ee0c26d1539dff"
+      },
+      "model.layers.25.mlp.up_proj.weight": {
+        "shape": [
+          6912,
+          1152
+        ],
+        "bytes": 15925248,
+        "sha256": "c740145d1d2bfd8248a0cec6f60893772dfd0647af996ee3ba8fc9cd3be0c477"
+      },
+      "model.layers.25.post_feedforward_layernorm.weight": {
+        "shape": [
+          1152
+        ],
+        "bytes": 2304,
+        "sha256": "8938e7d8a7c38bf090770a3784dd01b0e76c4b6c93c60ac86965ce32a2d45fed"
+      },
+      "model.layers.25.pre_feedforward_layernorm.weight": {
+        "shape": [
+          1152
+        ],
+        "bytes": 2304,
+        "sha256": "b5de05bfc579fd7b45ab29cd5de2854f100b65f30f2cc62d297c59c71531f1ea"
+      }
+    }
+  },
+  "base_tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+  "base_addressable_tokens": 248070,
+  "hybrid_addressable_tokens": 248199,
+  "added_tokens": 129,
+  "new_bpe_merges": 129,
+  "original_ids_preserved": true,
+  "added_token_bias": -0.75,
+  "train_anchors": 8192,
+  "unseen_anchor_pairs": 1024,
+  "mean_cosine_liquid_to_gemma": 0.4976864457130432,
+  "mean_cosine_gemma_to_liquid": 0.6165903806686401,
+  "example": "Scheduling, Decoding and Instrumentation are parameterized.",
+  "example_tokens_before": 12,
+  "example_tokens_after": 8,
+  "seed_sha256": "3da9d1fa4b371c23f279a88c580a45618b07c5d376ba88825051aa3c90ee3d9d",
+  "seed_bytes": 6325653
+}

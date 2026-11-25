@@ -1,0 +1,20 @@
+[
+  {"split":"train","prompt":"Return only Python code for a function is_even(n) that checks if an integer is divisible by two.","completion":"def is_even(n):\n    return n % 2 == 0"},
+  {"split":"train","prompt":"Escreva só o resultado de 12 vezes 8.","completion":"96"},
+  {"split":"train","prompt":"Return only Python code for a function last(xs) that returns the final item of a nonempty list.","completion":"def last(xs):\n    return xs[-1]"},
+  {"split":"train","prompt":"Em uma frase, para que serve o cache?","completion":"Um cache guarda dados usados recentemente para acelerar consultas futuras."},
+  {"split":"train","prompt":"What does string normalization do? Give one concise sentence.","completion":"String normalization gives equivalent text a consistent representation for comparison."},
+  {"split":"train","prompt":"Only give the Python expression equivalent to squaring the variable x.","completion":"x ** 2"},
+  {"split":"train","prompt":"Escreva em português a tradução de 'The code handles empty input'.","completion":"O código trata entradas vazias."},
+  {"split":"train","prompt":"Em Python, escreva apenas a expressão que mede o tamanho da lista dados.","completion":"len(dados)"},
+  {"split":"train","prompt":"Which is earlier in the alphabet, 'cat' or 'dog'? Return one word.","completion":"cat"},
+  {"split":"train","prompt":"Em uma frase curta, diferencie teste unitário de teste de integração.","completion":"O teste unitário verifica uma unidade isolada, enquanto o teste de integração verifica a interação entre unidades."},
+  {"split":"train","prompt":"What is preprocessing in a data pipeline? Answer in one sentence.","completion":"Preprocessing cleans and transforms raw data before downstream analysis."},
+  {"split":"train","prompt":"Return a one-line Python function called absolute(x) returning the absolute value of x.","completion":"def absolute(x): return abs(x)"},
+  {"split":"train","prompt":"What does scheduling decide in an operating system? Answer briefly.","completion":"Scheduling decides which task runs next and how long it can use the CPU."},
+  {"split":"train","prompt":"Responda com uma palavra. Um arquivo já gravado persiste após encerrar o programa?","completion":"Sim"},
+  {"split":"validation","prompt":"Qual é o resultado de 7 vezes 11? Só o número.","completion":"77"},
+  {"split":"validation","prompt":"Return one line of Python that checks whether x belongs to the list items.","completion":"x in items"},
+  {"split":"validation","prompt":"Explique o significado de concorrência em um sistema em uma frase.","completion":"Concorrência permite que várias tarefas avancem no mesmo intervalo de tempo."},
+  {"split":"validation","prompt":"What does assertEqual compare? Give one short sentence.","completion":"assertEqual checks that two values are equal."}
+]

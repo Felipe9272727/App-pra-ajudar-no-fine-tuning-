@@ -1,0 +1,91 @@
+{
+  "checkpoint": "LiquidSense-Gemma1B-043.lsf",
+  "sha256": "a746fa159c3ba961a57dee853aae2ed8d0b08bcba141295935970ae0420bece7",
+  "bytes": 6325757,
+  "trained_coefficients": 32768,
+  "heldout_lexicon_only": {
+    "train": {
+      "cross_entropy_16": 1.5190342664718628,
+      "top1_16": 88,
+      "tokens": 136
+    },
+    "validation": {
+      "cross_entropy_16": 2.582200527191162,
+      "top1_16": 18,
+      "tokens": 32
+    }
+  },
+  "checkpoints": [
+    {
+      "step": 15,
+      "train": {
+        "cross_entropy_16": 1.0865411758422852,
+        "top1_16": 103,
+        "tokens": 136
+      },
+      "validation": {
+        "cross_entropy_16": 2.538527727127075,
+        "top1_16": 18,
+        "tokens": 32
+      },
+      "max_calibration_delta": 0.1199989840388298
+    },
+    {
+      "step": 30,
+      "train": {
+        "cross_entropy_16": 1.010184645652771,
+        "top1_16": 107,
+        "tokens": 136
+      },
+      "validation": {
+        "cross_entropy_16": 2.537236213684082,
+        "top1_16": 18,
+        "tokens": 32
+      },
+      "max_calibration_delta": 0.11999999731779099
+    },
+    {
+      "step": 45,
+      "train": {
+        "cross_entropy_16": 0.9776972532272339,
+        "top1_16": 110,
+        "tokens": 136
+      },
+      "validation": {
+        "cross_entropy_16": 2.5355064868927,
+        "top1_16": 18,
+        "tokens": 32
+      },
+      "max_calibration_delta": 0.11999999731779099
+    },
+    {
+      "step": 60,
+      "train": {
+        "cross_entropy_16": 0.9591543674468994,
+        "top1_16": 113,
+        "tokens": 136
+      },
+      "validation": {
+        "cross_entropy_16": 2.5342373847961426,
+        "top1_16": 18,
+        "tokens": 32
+      },
+      "max_calibration_delta": 0.11999999731779099
+    }
+  ],
+  "selected": {
+    "step": 60,
+    "train": {
+      "cross_entropy_16": 0.9591543674468994,
+      "top1_16": 113,
+      "tokens": 136
+    },
+    "validation": {
+      "cross_entropy_16": 2.5342373847961426,
+      "top1_16": 18,
+      "tokens": 32
+    },
+    "max_calibration_delta": 0.11999999731779099
+  },
+  "scope": "Teacher-forced, 16 candidate ids per position. Free generation is evaluated separately."
+}

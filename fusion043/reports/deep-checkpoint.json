@@ -1,0 +1,49 @@
+{
+  "checkpoint_sha256": "7a03cb9e353048e55a1af7c2ab09ca7a1db8702fdf7f0f17a7baaab7d8a8fac4",
+  "bytes": 1840057759,
+  "manifest": {
+    "format": "liquid-sense-gemma-deep-044",
+    "gemma_repo": "unsloth/gemma-3-1b-it",
+    "gemma_revision": "5b11413a10db4e486ef16a20101fd028f8f2499c",
+    "gemma_source_sha256": "3d4ef8d71c14db7e448a09ebe891cfb6bf32c57a9b44499ae0d1c098e48516b6",
+    "gemma_layers": [
+      5,
+      11,
+      17,
+      23
+    ],
+    "after_liquid_layers": [
+      7,
+      13,
+      19,
+      25
+    ],
+    "gemma_visits_per_token": 8,
+    "liquid_visits_per_token": 56,
+    "liquid_parameters": 919659696,
+    "gemma_parameters": 107368448,
+    "interface_parameters": 2491392,
+    "total_parameters": 1029519536,
+    "new_bpe_pieces": 129,
+    "base": {
+      "offset": 1048576,
+      "size": 1599290240,
+      "sha256": "6c774a434438add704b1993b8e013493fb95bc9802c4d9b30227832115c07288"
+    },
+    "alignment": {
+      "offset": 1600338816,
+      "size": 4982784,
+      "sha256": "f33aae0fa9ba9d1d73e3883c834abfd08dcc932bf58c4cd636de8c3480d4eab5"
+    },
+    "blocks": {
+      "offset": 1605321600,
+      "size": 214736896,
+      "sha256": "2a2a81b765f1f8cf1eff4856aad71d554efbba36eecae01eaf1e83b5c65f3b89"
+    },
+    "tokenizer": {
+      "offset": 1820058496,
+      "size": 19999263,
+      "sha256": "4613fee5d694d05e4843c4cdeb1e2dad1f514ed7c3c17411373123a7fe5db37e"
+    }
+  }
+}
