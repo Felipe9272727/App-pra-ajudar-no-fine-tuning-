@@ -1,0 +1,23 @@
+{
+  "variant": "readout",
+  "promotion_gate": true,
+  "metrics": {
+    "base": [
+      5,
+      13,
+      3
+    ],
+    "parent": [
+      4,
+      10,
+      3
+    ],
+    "readout": [
+      6,
+      13,
+      4
+    ]
+  },
+  "tests": 12,
+  "candidate_sha256": "941daca310736af121cdd337317b5e1bddb741b88ea085d684d3760ecc1fecfd"
+}

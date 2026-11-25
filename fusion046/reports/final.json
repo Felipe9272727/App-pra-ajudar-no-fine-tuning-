@@ -1,0 +1,458 @@
+{
+  "base": {
+    "passed": 5,
+    "count": 12,
+    "groups": {
+      "Código": {
+        "passed": 2,
+        "count": 4,
+        "code_cases": 13,
+        "total_cases": 20
+      },
+      "Raciocínio": {
+        "passed": 0,
+        "count": 3,
+        "code_cases": 0,
+        "total_cases": 0
+      },
+      "Controles": {
+        "passed": 3,
+        "count": 5,
+        "code_cases": 0,
+        "total_cases": 0
+      }
+    },
+    "details": [
+      {
+        "id": "final/map_sign",
+        "passed": true,
+        "final": "```python\ndef solve(xs):\n    \"\"\"\n    Maps each integer to -1 if negative, 0 if zero, and 1 if positive.\n    Preserves the order of the input list.\n    \"\"\"\n    return [1 if x > 0 else (0 if x == 0 else -1) for x in xs]\n```",
+        "finish": "stop",
+        "tokens": 75,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "final/ends",
+        "passed": true,
+        "final": "def solve(s):\n    if len(s) <= 1:\n        return s\n    return s[0] + s[-1]",
+        "finish": "stop",
+        "tokens": 30,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "final/merge_counts",
+        "passed": false,
+        "final": "```python\ndef solve(a, b):\n    result = {}\n    for key in a:\n        if key in b:\n            result[key] = a[key] + b[key]\n        else:\n            result[key] = a[key]\n    return result\n```",
+        "finish": "stop",
+        "tokens": 60,
+        "passed_cases": 3,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          false,
+          true,
+          true,
+          false
+        ],
+        "category": "WrongReturnValue"
+      },
+      {
+        "id": "final/multiples",
+        "passed": false,
+        "final": "```python\ndef solve(xs, k):\n    \"\"\"\n    Given a list of positive integers `xs` and a positive integer `k`,\n    return the sum of all elements in `xs` that are divisible by `k`.\n    \n    If `xs` is empty, the sum is 0.\n    \"\"\"\n    if not xs:\n        return 0\n    \n    total = 0\n    for x in xs:\n        if x",
+        "finish": "length",
+        "tokens": 96,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "case_passed": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "category": "SyntaxError"
+      },
+      {
+        "id": "final/sheets",
+        "passed": false,
+        "final": "24 - 4 + 9 = 29",
+        "finish": "stop",
+        "tokens": 60
+      },
+      {
+        "id": "final/shortest",
+        "passed": false,
+        "final": "2.  **Evaluate the Logic:**\n    *   Statement 1: North < South (North is shorter).\n    *   Statement 2:",
+        "finish": "length",
+        "tokens": 80
+      },
+      {
+        "id": "final/chairs",
+        "passed": false,
+        "final": "To find the number of chairs left, we need to subtract the number of chairs removed from the total number of chairs.\n\n1.  **Calculate the total",
+        "finish": "length",
+        "tokens": 80
+      },
+      {
+        "id": "final/hybrid-copy",
+        "passed": false,
+        "final": "0",
+        "finish": "stop",
+        "tokens": 1
+      },
+      {
+        "id": "final/portuguese",
+        "passed": false,
+        "final": "Pão",
+        "finish": "stop",
+        "tokens": 2
+      },
+      {
+        "id": "final/translate",
+        "passed": true,
+        "final": "Verde",
+        "finish": "stop",
+        "tokens": 2
+      },
+      {
+        "id": "final/fact",
+        "passed": true,
+        "final": "Earth",
+        "finish": "stop",
+        "tokens": 1
+      },
+      {
+        "id": "final/identity",
+        "passed": true,
+        "final": "Sim",
+        "finish": "stop",
+        "tokens": 1
+      }
+    ],
+    "seconds": 100.928218005,
+    "tokens": 488
+  },
+  "parent": {
+    "passed": 4,
+    "count": 12,
+    "groups": {
+      "Código": {
+        "passed": 1,
+        "count": 4,
+        "code_cases": 10,
+        "total_cases": 20
+      },
+      "Raciocínio": {
+        "passed": 0,
+        "count": 3,
+        "code_cases": 0,
+        "total_cases": 0
+      },
+      "Controles": {
+        "passed": 3,
+        "count": 5,
+        "code_cases": 0,
+        "total_cases": 0
+      }
+    },
+    "details": [
+      {
+        "id": "final/map_sign",
+        "passed": false,
+        "final": "```python\ndef solve(xs):\n    \"\"\"\n    Maps each integer to:\n      -1 if negative\n      0 if zero\n      1 if positive\n    Preserves the original order.\n    \"\"\"\n    return {val: -1 if val < 0 else (0 if val == 0 else 1) for val in xs}\n```",
+        "finish": "stop",
+        "tokens": 78,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "case_passed": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "category": "WrongReturnValue"
+      },
+      {
+        "id": "final/ends",
+        "passed": true,
+        "final": "def solve(s):\n    if len(s) <= 1:\n        return s\n    return s[0] + s[-1]",
+        "finish": "stop",
+        "tokens": 30,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "final/merge_counts",
+        "passed": false,
+        "final": "```python\ndef solve(a, b):\n    \"\"\"\n    Solve a and b, where both are dicts of string keys to counts.\n    Return a new dict using the union of the keys and summing their two counts\n    when present in both.\n    \"\"\"\n    result = {}\n    for key in a:\n        if key in b:\n            result[key] = a[key] + b[key]\n        else:\n            result[key] = a[key]\n    return result\n```",
+        "finish": "stop",
+        "tokens": 108,
+        "passed_cases": 3,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          false,
+          true,
+          true,
+          false
+        ],
+        "category": "WrongReturnValue"
+      },
+      {
+        "id": "final/multiples",
+        "passed": false,
+        "final": "```python\ndef solve(xs, k):\n    \"\"\"\n    Given a list of positive integers `xs` and a positive integer `k`,\n    return the sum of all elements in `xs` that are divisible by `k`.\n    \"\"\"\n    if not xs:\n        return 0\n    return sum(x % k == 0 for x in xs)\n```",
+        "finish": "stop",
+        "tokens": 80,
+        "passed_cases": 2,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          false,
+          false,
+          true,
+          false
+        ],
+        "category": "WrongReturnValue"
+      },
+      {
+        "id": "final/sheets",
+        "passed": false,
+        "final": "24 - 4 + 9 = 29",
+        "finish": "stop",
+        "tokens": 60
+      },
+      {
+        "id": "final/shortest",
+        "passed": false,
+        "final": "2.  **Analyze the Constraints:**\n    *   Constraint 1: $N < S$ (North is shorter than South).\n    *",
+        "finish": "length",
+        "tokens": 80
+      },
+      {
+        "id": "final/chairs",
+        "passed": false,
+        "final": "To find the number of chairs left, we need to subtract the number of chairs removed from the total number of chairs.\n\n1.  **Total chairs:**",
+        "finish": "length",
+        "tokens": 80
+      },
+      {
+        "id": "final/hybrid-copy",
+        "passed": false,
+        "final": "id",
+        "finish": "stop",
+        "tokens": 1
+      },
+      {
+        "id": "final/portuguese",
+        "passed": false,
+        "final": "Pão",
+        "finish": "stop",
+        "tokens": 2
+      },
+      {
+        "id": "final/translate",
+        "passed": true,
+        "final": "Verde",
+        "finish": "stop",
+        "tokens": 2
+      },
+      {
+        "id": "final/fact",
+        "passed": true,
+        "final": "Earth",
+        "finish": "stop",
+        "tokens": 1
+      },
+      {
+        "id": "final/identity",
+        "passed": true,
+        "final": "Sim",
+        "finish": "stop",
+        "tokens": 1
+      }
+    ],
+    "seconds": 227.370172224,
+    "tokens": 523
+  },
+  "readout": {
+    "passed": 6,
+    "count": 12,
+    "groups": {
+      "Código": {
+        "passed": 2,
+        "count": 4,
+        "code_cases": 13,
+        "total_cases": 20
+      },
+      "Raciocínio": {
+        "passed": 0,
+        "count": 3,
+        "code_cases": 0,
+        "total_cases": 0
+      },
+      "Controles": {
+        "passed": 4,
+        "count": 5,
+        "code_cases": 0,
+        "total_cases": 0
+      }
+    },
+    "details": [
+      {
+        "id": "final/map_sign",
+        "passed": false,
+        "final": "def solve(xs):\n    return {x: -1 if x < 0 else 0 if x == 0 else 1 for x in xs}",
+        "finish": "stop",
+        "tokens": 33,
+        "passed_cases": 0,
+        "total_cases": 5,
+        "case_passed": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "category": "WrongReturnValue"
+      },
+      {
+        "id": "final/ends",
+        "passed": true,
+        "final": "def solve(s):\n    return s[0] + s[-1] if len(s) > 1 else s",
+        "finish": "stop",
+        "tokens": 25,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "final/merge_counts",
+        "passed": false,
+        "final": "def solve(a, b):\n    return {k: a.get(k, 0) + b.get(k, 0) for k in a}",
+        "finish": "stop",
+        "tokens": 32,
+        "passed_cases": 3,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          false,
+          true,
+          true,
+          false
+        ],
+        "category": "WrongReturnValue"
+      },
+      {
+        "id": "final/multiples",
+        "passed": true,
+        "final": "```python\ndef solve(xs, k):\n    return sum(x for x in xs if x % k == 0)\n```",
+        "finish": "stop",
+        "tokens": 28,
+        "passed_cases": 5,
+        "total_cases": 5,
+        "case_passed": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "category": "passed"
+      },
+      {
+        "id": "final/sheets",
+        "passed": false,
+        "final": "24 - 4 + 9 = 29",
+        "finish": "stop",
+        "tokens": 60
+      },
+      {
+        "id": "final/shortest",
+        "passed": false,
+        "final": "The shortest route is the **north route**.",
+        "finish": "stop",
+        "tokens": 57
+      },
+      {
+        "id": "final/chairs",
+        "passed": false,
+        "final": "2.  **Calculate Initial Total Chairs:**\n    *   7 rooms * 4 chairs/room = 28 chairs.\n\n3.",
+        "finish": "length",
+        "tokens": 80
+      },
+      {
+        "id": "final/hybrid-copy",
+        "passed": false,
+        "final": "id",
+        "finish": "stop",
+        "tokens": 1
+      },
+      {
+        "id": "final/portuguese",
+        "passed": true,
+        "final": "pães",
+        "finish": "stop",
+        "tokens": 2
+      },
+      {
+        "id": "final/translate",
+        "passed": true,
+        "final": "Verde",
+        "finish": "stop",
+        "tokens": 2
+      },
+      {
+        "id": "final/fact",
+        "passed": true,
+        "final": "Earth",
+        "finish": "stop",
+        "tokens": 1
+      },
+      {
+        "id": "final/identity",
+        "passed": true,
+        "final": "Sim",
+        "finish": "stop",
+        "tokens": 1
+      }
+    ],
+    "seconds": 180.295815891,
+    "tokens": 322
+  }
+}

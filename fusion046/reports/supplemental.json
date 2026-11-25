@@ -1,0 +1,31 @@
+{
+  "scope": "supplemental check outside frozen development score",
+  "prompt_id": "screen/prefix",
+  "case": {
+    "args": [
+      [
+        "map",
+        "apple",
+        "grape"
+      ],
+      "ap"
+    ],
+    "expected": [
+      "apple"
+    ]
+  },
+  "results": {
+    "parent": {
+      "passed": false,
+      "category": "WrongReturnValue"
+    },
+    "readout": {
+      "passed": false,
+      "category": "WrongReturnValue"
+    },
+    "balanced": {
+      "passed": false,
+      "category": "WrongReturnValue"
+    }
+  }
+}
