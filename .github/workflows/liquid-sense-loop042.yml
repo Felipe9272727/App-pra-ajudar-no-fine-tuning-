@@ -25,11 +25,10 @@ jobs:
           mkdir -p "$RUNNER_TEMP/loop042/evidence"
           cp -a speed041/native "$RUNNER_TEMP/loop042/original"
           cp loop042/baseline.rs "$RUNNER_TEMP/loop042/original/src/bin/baseline042.rs"
-          export CARGO_TARGET_DIR="$RUNNER_TEMP/loop042/build"
           export LOOP042_BATCH_RUNNER="$PWD/loop042/batch_runner.inc"
           rustup toolchain install 1.90.0 --profile minimal
-          cargo +1.90.0 build --release --locked --manifest-path "$RUNNER_TEMP/loop042/original/Cargo.toml" --bin baseline042
-          cargo +1.90.0 build --release --locked --manifest-path loop042/native/Cargo.toml --bin loopcheck
+          CARGO_TARGET_DIR="$RUNNER_TEMP/loop042/build-original" cargo +1.90.0 build --release --locked --manifest-path "$RUNNER_TEMP/loop042/original/Cargo.toml" --bin baseline042
+          CARGO_TARGET_DIR="$RUNNER_TEMP/loop042/build-experiment" cargo +1.90.0 build --release --locked --manifest-path loop042/native/Cargo.toml --bin loopcheck
           lscpu > "$RUNNER_TEMP/loop042/evidence/cpu.txt"
       - name: Verify model assets and freeze identical paired inputs
         run: |
@@ -55,9 +54,9 @@ jobs:
           for variant in $variants; do
             echo "Evaluating $variant"
             if [ "$variant" = previous ]; then
-              "$data/build/release/baseline042" "$locator" "$tok" "$data/part.json" > "$data/evidence/$variant.jsonl"
+              "$data/build-original/release/baseline042" "$locator" "$tok" "$data/part.json" > "$data/evidence/$variant.jsonl"
             else
-              "$data/build/release/loopcheck" "$locator" "$tok" bench "$data/part.json" "loop042/data/$variant.json" > "$data/evidence/$variant.jsonl"
+              "$data/build-experiment/release/loopcheck" "$locator" "$tok" bench "$data/part.json" "loop042/data/$variant.json" > "$data/evidence/$variant.jsonl"
             fi
             wc -l "$data/evidence/$variant.jsonl"
           done

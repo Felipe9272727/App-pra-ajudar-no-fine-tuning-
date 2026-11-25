@@ -1,0 +1,4 @@
+GitHub Actions run 45521420150, commit 9e4d944683e352486c4f7be3fe72624a9053ad51.
+All six shards stopped during compilation. The previous and experimental crates shared a Cargo target directory and a package name. In this build order the experimental bench linked the previous library. Rust rejected missing KvMode, PassGates and configure_experiment. No benchmark result was produced on this run. The retry builds the same sources and reads the same configs in disjoint build directories.
+
+The local builds used the reverse order. Their depfiles identify disjoint source roots. The experimental binary contains the gate validation symbol and the experimental module path. The previous binary does not.

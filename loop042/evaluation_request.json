@@ -1,1 +1,1 @@
-{"request":1,"purpose":"run paired 0.6.5/window/static/adaptive/hybrid/combined comparison on all 39 frozen cases"}
+{"request":2,"purpose":"run the same frozen comparison with isolated Cargo build directories for the two crates"}
