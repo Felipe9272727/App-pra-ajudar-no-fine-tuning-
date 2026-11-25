@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 40
     env:
       TAG: liquid-sense-gemma045
-      CARGO_TARGET_DIR: ${{ runner.temp }}/rust
+      CARGO_TARGET_DIR: ${{ github.workspace }}/fusion043/native/target
       PYTHONDONTWRITEBYTECODE: "1"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1

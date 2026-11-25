@@ -1,6 +1,7 @@
 {
   "profile": "045",
   "checkpoint": "LiquidSense-Gemma-045.lsmix",
+  "delivery_revision": 2,
   "gemma_parameters": 510000128,
   "evaluation": "eight paired held-out prompts",
   "promotion": "experimental release"
