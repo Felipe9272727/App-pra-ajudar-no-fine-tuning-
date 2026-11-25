@@ -87,7 +87,7 @@ def prepare(assets, output):
     for row in json.loads((project / 'validation_code.json').read_text()):
         add('Código029', row['id'], row['prompt'], {'type':'code','cases':row['cases']}, 128)
     for row in json.loads((project / 'legacy_general.json').read_text()):
-        add('Controles029', row['id'], row['prompt'], {'type':'legacy_text','expected':row['answers']}, 64)
+        add('Controles029', row['id'], row['prompt'], {'type':'legacy_text','expected':row['answers']}, 48)
     # Explicitly known retrieval control, with relevant facts older than the moving window.
     filler = 'The verification log has no other relevant entries. ' * 42
     add('Janela-controle', 'early-code', 'The project verification code is lantern-745.\n' + filler

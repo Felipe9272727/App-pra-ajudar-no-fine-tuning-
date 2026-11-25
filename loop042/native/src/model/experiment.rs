@@ -40,6 +40,7 @@ impl PassGates {
 }
 
 impl Model {
+    /// Set the research options before starting a new session or prefix cache.
     pub fn configure_experiment(&mut self, mode: KvMode, gates: PassGates) -> Result<()> {
         ensure!(gates.bias.into_iter().chain(gates.slope).all(|x| x.is_finite() && x.abs() <= 16.),
             "Invalid loop gate parameters");

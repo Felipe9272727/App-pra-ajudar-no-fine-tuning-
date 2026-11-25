@@ -351,7 +351,7 @@
       "options": {
         "thinking": false,
         "reasoning_tokens": 0,
-        "response_tokens": 64,
+        "response_tokens": 48,
         "context_tokens": 16384
       },
       "prompt_sha256": "27aefcab07fde0f1bc36f5badf0c525784b2c33246d90f893dd8c3c7b2e39bc5"
@@ -362,7 +362,7 @@
       "options": {
         "thinking": false,
         "reasoning_tokens": 0,
-        "response_tokens": 64,
+        "response_tokens": 48,
         "context_tokens": 16384
       },
       "prompt_sha256": "e715c37b0a35838e4abedb3f1176ce75e5ccc87eb9f97867d0b3e71a29ae104b"
@@ -373,7 +373,7 @@
       "options": {
         "thinking": false,
         "reasoning_tokens": 0,
-        "response_tokens": 64,
+        "response_tokens": 48,
         "context_tokens": 16384
       },
       "prompt_sha256": "390905ba1beca2b00c6a8fa09d1a4a307855d3bd38341e59e42c71e9e16b3039"
@@ -384,7 +384,7 @@
       "options": {
         "thinking": false,
         "reasoning_tokens": 0,
-        "response_tokens": 64,
+        "response_tokens": 48,
         "context_tokens": 16384
       },
       "prompt_sha256": "dabaad5b67cfade57318d07a242caae87c95c5e4ab50796a88c3e5e7c71bb0c1"
@@ -395,7 +395,7 @@
       "options": {
         "thinking": false,
         "reasoning_tokens": 0,
-        "response_tokens": 64,
+        "response_tokens": 48,
         "context_tokens": 16384
       },
       "prompt_sha256": "d2168078bce64823a504a91a4ed8e7280707cff9cd5a306939a476ecc2b6d330"
@@ -406,7 +406,7 @@
       "options": {
         "thinking": false,
         "reasoning_tokens": 0,
-        "response_tokens": 64,
+        "response_tokens": 48,
         "context_tokens": 16384
       },
       "prompt_sha256": "9975eb52c29a0588b313b52da26234d7c6d46045a1fc5ce15d89216f40178894"
@@ -417,7 +417,7 @@
       "options": {
         "thinking": false,
         "reasoning_tokens": 0,
-        "response_tokens": 64,
+        "response_tokens": 48,
         "context_tokens": 16384
       },
       "prompt_sha256": "c95900c618ba87420df67a530a0fcc596b1295ad0a2c598cdd064cef93c9b285"
@@ -428,7 +428,7 @@
       "options": {
         "thinking": false,
         "reasoning_tokens": 0,
-        "response_tokens": 64,
+        "response_tokens": 48,
         "context_tokens": 16384
       },
       "prompt_sha256": "976d3415da26336192b2f732f48f3f997c7fba2cda05f6df79b12d559aa65ffb"
