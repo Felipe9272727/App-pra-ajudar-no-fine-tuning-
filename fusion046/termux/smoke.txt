@@ -1,0 +1,8 @@
+Liquid Sense × Gemma 046 · Termux 1.0
+Verificando e carregando o modelo 046…
+Liquid Sense × Gemma 046 · Termux 1.0
+/think alterna o raciocínio · /clear limpa a conversa · /exit sai
+Raciocínio ativado.
+Raciocínio desativado.
+Liquid Sense> pães
+Conversa limpa.

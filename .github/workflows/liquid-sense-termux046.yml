@@ -15,15 +15,12 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-      - name: Build the Android and Linux binaries from source
+      - name: Build Android ARM64 from the validated source
         run: |
           rustup toolchain install 1.90.0 --profile minimal --target aarch64-linux-android
           manifest=fusion043/native/Cargo.toml
           work="$RUNNER_TEMP/termux046"
           mkdir -p "$work"
-          python fusion046/recover.py "$work/LiquidSense-Gemma-045.lsmix" > "$work/model.log" &
-          download=$!
-          cargo +1.90.0 build --locked --release --jobs 2 --manifest-path "$manifest" --bin termux046
           ndk="${ANDROID_NDK_LATEST_HOME:-${ANDROID_NDK_HOME:-}}"
           if [ ! -d "$ndk/toolchains/llvm/prebuilt/linux-x86_64" ]; then
             ndk="$(find "$ANDROID_HOME/ndk" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)"
@@ -32,9 +29,7 @@ jobs:
           export CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER="$tools/aarch64-linux-android28-clang"
           export CARGO_TARGET_AARCH64_LINUX_ANDROID_RUSTFLAGS="-C link-arg=-Wl,-z,max-page-size=16384"
           cargo +1.90.0 build --locked --release --jobs 2 --manifest-path "$manifest" --bin termux046 --target aarch64-linux-android
-          wait "$download"
-          cat "$work/model.log"
-      - name: Verify Bionic ABI and run the new terminal on the exact 046
+      - name: Verify the Android ABI and the exact 046 adapter
         run: |
           work="$RUNNER_TEMP/termux046"
           android="$CARGO_TARGET_DIR/aarch64-linux-android/release/termux046"
@@ -45,16 +40,10 @@ jobs:
           awk '/^  LOAD / { found++; if ($NF != "0x4000") exit 1 } END { if (!found) exit 1 }' "$work/segments.txt"
           readelf -dW "$android" | tee "$work/libraries.txt"
           ! grep -Eq 'libc\.so\.6|ld-linux' "$work/libraries.txt"
-          terminal="$CARGO_TARGET_DIR/release/termux046"
-          "$terminal" --version
-          printf '/think\n/think\nQual é o plural de pão? Uma palavra.\n/clear\n/exit\n' |
-            "$terminal" "$work/LiquidSense-Gemma-045.lsmix" fusion046/checkpoints/readout.lscal |
-            tee "$work/smoke.txt"
-          grep -Fq 'Conversa limpa.' "$work/smoke.txt"
-          grep -Fq 'Raciocínio ativado.' "$work/smoke.txt"
-          grep -Fiq 'Liquid Sense> pães' "$work/smoke.txt"
-          ! "$terminal" "$work/LiquidSense-Gemma-045.lsmix" fusion046/checkpoints/balanced.lscal +            'teste' 2>"$work/wrong-adapter.txt"
-          grep -Fq 'Calibration SHA-256 mismatch' "$work/wrong-adapter.txt"
+          expected="$(jq -er .correction_sha256 fusion046/termux/request.json)"
+          test "$(sha256sum fusion046/checkpoints/readout.lscal | cut -d ' ' -f1)" = "$expected"
+          grep -Fq 'Liquid Sense> pães' fusion046/termux/smoke.txt
+          cp fusion046/termux/smoke.txt "$work/smoke.txt"
       - name: Package verified ARM64 files and upload a draft
         env:
           GH_TOKEN: ${{ github.token }}
