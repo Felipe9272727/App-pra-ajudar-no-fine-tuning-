@@ -1,0 +1,598 @@
+{
+  "parent": "941daca310736af121cdd337317b5e1bddb741b88ea085d684d3760ecc1fecfd",
+  "parameters": 1432249520,
+  "samples": 32,
+  "positions": 341,
+  "baseline": {
+    "train": {
+      "identity": {
+        "tokens": 240,
+        "top1": 87,
+        "cross_entropy": 3.811051368713379
+      },
+      "fact": {
+        "tokens": 8,
+        "top1": 6,
+        "cross_entropy": 2.004412889480591
+      },
+      "retain": {
+        "tokens": 30,
+        "same_top1": 30,
+        "kl": 0.0
+      }
+    },
+    "dev": {
+      "identity": {
+        "tokens": 51,
+        "top1": 20,
+        "cross_entropy": 3.1905341148376465
+      },
+      "fact": {
+        "tokens": 2,
+        "top1": 0,
+        "cross_entropy": 5.342069149017334
+      },
+      "retain": {
+        "tokens": 10,
+        "same_top1": 10,
+        "kl": 0.0
+      }
+    }
+  },
+  "candidates": {
+    "preserve": {
+      "sha256": "25f16f2dc5a91d93d2b2d2f906ccbf39178d84298715243a4421b569bad0f942",
+      "bytes": 197150,
+      "bound": 0.32,
+      "gains": [
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275
+      ],
+      "step": 24,
+      "edited_coefficients": 49042,
+      "curve": [
+        {
+          "step": 12,
+          "loss": 3.168541469424963,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 133,
+              "cross_entropy": 2.5385594367980957
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.310397744178772
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.0017926113214343786
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.9577232599258423
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.9385666847229004
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.014624102041125298
+            }
+          }
+        },
+        {
+          "step": 24,
+          "loss": 3.069200706109404,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 142,
+              "cross_entropy": 2.451280117034912
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.2446470260620117
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.0012866934994235635
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 36,
+              "cross_entropy": 1.876930832862854
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.8815743923187256
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.013898777775466442
+            }
+          }
+        },
+        {
+          "step": 48,
+          "loss": 3.122019686922431,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 137,
+              "cross_entropy": 2.4875245094299316
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.2688103914260864
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.0013041140045970678
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.9133533239364624
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.9404282569885254
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.013268942944705486
+            }
+          }
+        },
+        {
+          "step": 72,
+          "loss": 3.122279196232557,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 137,
+              "cross_entropy": 2.488589286804199
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.2699960470199585
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.001302093267440796
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.914729356765747
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.937946319580078
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.013082971796393394
+            }
+          }
+        },
+        {
+          "step": 120,
+          "loss": 3.1227579273283483,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 137,
+              "cross_entropy": 2.487884998321533
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.2689193487167358
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.0012921084417030215
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.9139516353607178
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.941244125366211
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.013216527178883553
+            }
+          }
+        },
+        {
+          "step": 180,
+          "loss": 3.122868996858597,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 137,
+              "cross_entropy": 2.487780809402466
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.268918752670288
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.0012905498733744025
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.9139076471328735
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.941532611846924
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.013250783085823059
+            }
+          }
+        }
+      ]
+    },
+    "identity": {
+      "sha256": "165fb7723f204a6c13f02240d0b982a9604325202c6193a7974cb296f7c9449d",
+      "bytes": 197150,
+      "bound": 0.32,
+      "gains": [
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275
+      ],
+      "step": 24,
+      "edited_coefficients": 49044,
+      "curve": [
+        {
+          "step": 12,
+          "loss": 3.163985179364681,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 133,
+              "cross_entropy": 2.534527063369751
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.300986886024475
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.004827663768082857
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.9532032012939453
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.9027481079101562
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.019978772848844528
+            }
+          }
+        },
+        {
+          "step": 24,
+          "loss": 3.0690971374511715,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 144,
+              "cross_entropy": 2.4489102363586426
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.2402266263961792
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.003620038740336895
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 36,
+              "cross_entropy": 1.8758294582366943
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.8565523624420166
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.01815098524093628
+            }
+          }
+        },
+        {
+          "step": 48,
+          "loss": 3.119978000223637,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 138,
+              "cross_entropy": 2.484766721725464
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.2641910314559937
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.003615668974816799
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.9114761352539062
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.912424087524414
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.01738731935620308
+            }
+          }
+        },
+        {
+          "step": 72,
+          "loss": 3.120620080083609,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 138,
+              "cross_entropy": 2.485629081726074
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.2654987573623657
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.0035898680798709393
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.9123412370681763
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.913020133972168
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.017186401411890984
+            }
+          }
+        },
+        {
+          "step": 120,
+          "loss": 3.1205039851367475,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 137,
+              "cross_entropy": 2.485074758529663
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.2640714645385742
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.003612346248701215
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.911988377571106
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.912630319595337
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.017363255843520164
+            }
+          }
+        },
+        {
+          "step": 180,
+          "loss": 3.120284082740545,
+          "train": {
+            "identity": {
+              "tokens": 240,
+              "top1": 137,
+              "cross_entropy": 2.484990358352661
+            },
+            "fact": {
+              "tokens": 8,
+              "top1": 6,
+              "cross_entropy": 1.2642557621002197
+            },
+            "retain": {
+              "tokens": 30,
+              "same_top1": 30,
+              "kl": 0.0036165197379887104
+            }
+          },
+          "dev": {
+            "identity": {
+              "tokens": 51,
+              "top1": 35,
+              "cross_entropy": 1.9117835760116577
+            },
+            "fact": {
+              "tokens": 2,
+              "top1": 0,
+              "cross_entropy": 3.912623643875122
+            },
+            "retain": {
+              "tokens": 10,
+              "same_top1": 10,
+              "kl": 0.01735670678317547
+            }
+          }
+        }
+      ]
+    }
+  }
+}
