@@ -1,0 +1,514 @@
+{
+  "parent": "e6e4528057543f0bdf35305c87b79197c639f2d77ddfcf140745a62f4441703c",
+  "candidates": {
+    "readout": {
+      "sha256": "941daca310736af121cdd337317b5e1bddb741b88ea085d684d3760ecc1fecfd",
+      "bytes": 197046,
+      "bound": 0.32,
+      "gains": [
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275,
+        0.0275
+      ]
+    },
+    "balanced": {
+      "sha256": "1f122cbd05c0b6b17f9dfdeaa98cc23e12ffd71e1d82274517186b803472c629",
+      "bytes": 197565,
+      "bound": 0.32,
+      "gains": [
+        0.026785729452967644,
+        0.028198780491948128,
+        0.027893608435988426,
+        0.026294391602277756,
+        0.026196900755167007,
+        0.026171047240495682,
+        0.026031406596302986,
+        0.026089195162057877,
+        0.025953922420740128,
+        0.025876522064208984,
+        0.02586241438984871,
+        0.02584526129066944,
+        0.025793880224227905,
+        0.025768430903553963,
+        0.02578582800924778,
+        0.025780895724892616,
+        0.025786355137825012,
+        0.025772111490368843,
+        0.025775805115699768,
+        0.029815174639225006,
+        0.03184349089860916,
+        0.030661894008517265,
+        0.028961181640625,
+        0.02900361642241478,
+        0.028783408924937248,
+        0.028707407414913177,
+        0.02874005027115345,
+        0.028687603771686554,
+        0.02861807867884636,
+        0.028589073568582535,
+        0.028569146990776062,
+        0.02850961685180664,
+        0.028479494154453278,
+        0.02849680744111538,
+        0.028493529185652733,
+        0.028502119705080986,
+        0.02848604880273342,
+        0.028492122888565063
+      ]
+    }
+  },
+  "chosen_fit_step": 10,
+  "calibration_examples": 47,
+  "calibration_positions": 561,
+  "hard_candidates_per_position": 24,
+  "coefficients_optimized": 49152,
+  "basis_coefficients": 49152,
+  "frozen_weights": {
+    "liquid": 919659696,
+    "gemma": 510000128
+  },
+  "source_data_sha256": "7ea498eff086008449b92cc1204263616c0e1effea967cdb842f8ca13bd116e3",
+  "baseline": {
+    "train": {
+      "tokens": 425,
+      "positions_retain": 30,
+      "top1": 346,
+      "cross_entropy": 0.8700618743896484,
+      "retention_kl": 0.0,
+      "by_domain": {
+        "code": {
+          "tokens": 243,
+          "cross_entropy": 0.3237456679344177
+        },
+        "reason": {
+          "tokens": 136,
+          "cross_entropy": 1.5997306108474731
+        },
+        "language": {
+          "tokens": 46,
+          "cross_entropy": 1.5987555980682373
+        }
+      }
+    },
+    "dev": {
+      "tokens": 96,
+      "positions_retain": 10,
+      "top1": 80,
+      "cross_entropy": 0.7790481448173523,
+      "retention_kl": 0.0,
+      "by_domain": {
+        "code": {
+          "tokens": 50,
+          "cross_entropy": 0.5563110113143921
+        },
+        "reason": {
+          "tokens": 38,
+          "cross_entropy": 1.1598488092422485
+        },
+        "language": {
+          "tokens": 8,
+          "cross_entropy": 0.3623521029949188
+        }
+      }
+    }
+  },
+  "response_rms_by_visit": [
+    0.8542413711547852,
+    0.7168446183204651,
+    0.7426408529281616,
+    0.9152384400367737,
+    0.9283919930458069,
+    0.9319437742233276,
+    0.9516080021858215,
+    0.943370521068573,
+    0.9628813862800598,
+    0.9744126200675964,
+    0.9765445590019226,
+    0.9791483879089355,
+    0.9870336055755615,
+    0.9909858107566833,
+    0.9882808923721313,
+    0.9890462160110474,
+    0.9881990551948547,
+    0.9904125332832336,
+    0.989837110042572,
+    0.8327893018722534,
+    0.6701601147651672,
+    0.7561852931976318,
+    0.9275615811347961,
+    0.9223459362983704,
+    0.9500682950019836,
+    0.9600269794464111,
+    0.9557241797447205,
+    0.9626563787460327,
+    0.9720022678375244,
+    0.9759554862976074,
+    0.978689968585968,
+    0.9869508743286133,
+    0.9911842346191406,
+    0.9887462854385376,
+    0.9892066121101379,
+    0.9880011081695557,
+    0.9902598261833191,
+    0.9894043803215027
+  ],
+  "curve": [
+    {
+      "step": 10,
+      "selection_loss": 0.46229586118832233,
+      "train": {
+        "tokens": 425,
+        "positions_retain": 30,
+        "top1": 387,
+        "cross_entropy": 0.4751807451248169,
+        "retention_kl": 0.0013344156323000789,
+        "by_domain": {
+          "code": {
+            "tokens": 243,
+            "cross_entropy": 0.09678369015455246
+          },
+          "reason": {
+            "tokens": 136,
+            "cross_entropy": 0.9888455867767334
+          },
+          "language": {
+            "tokens": 46,
+            "cross_entropy": 0.9554426074028015
+          }
+        }
+      },
+      "dev": {
+        "tokens": 96,
+        "positions_retain": 10,
+        "top1": 86,
+        "cross_entropy": 0.4902671277523041,
+        "retention_kl": 0.002545359078794718,
+        "by_domain": {
+          "code": {
+            "tokens": 50,
+            "cross_entropy": 0.2843817472457886
+          },
+          "reason": {
+            "tokens": 38,
+            "cross_entropy": 0.7993029356002808
+          },
+          "language": {
+            "tokens": 8,
+            "cross_entropy": 0.3091306686401367
+          }
+        }
+      }
+    },
+    {
+      "step": 20,
+      "selection_loss": 0.4633366648573428,
+      "train": {
+        "tokens": 425,
+        "positions_retain": 30,
+        "top1": 391,
+        "cross_entropy": 0.4561627507209778,
+        "retention_kl": 0.0010795139241963625,
+        "by_domain": {
+          "code": {
+            "tokens": 243,
+            "cross_entropy": 0.09314824640750885
+          },
+          "reason": {
+            "tokens": 136,
+            "cross_entropy": 0.9481756687164307
+          },
+          "language": {
+            "tokens": 46,
+            "cross_entropy": 0.9191794991493225
+          }
+        }
+      },
+      "dev": {
+        "tokens": 96,
+        "positions_retain": 10,
+        "top1": 88,
+        "cross_entropy": 0.49063217639923096,
+        "retention_kl": 0.002621461870148778,
+        "by_domain": {
+          "code": {
+            "tokens": 50,
+            "cross_entropy": 0.2864662706851959
+          },
+          "reason": {
+            "tokens": 38,
+            "cross_entropy": 0.7966048121452332
+          },
+          "language": {
+            "tokens": 8,
+            "cross_entropy": 0.3132990598678589
+          }
+        }
+      }
+    },
+    {
+      "step": 40,
+      "selection_loss": 0.4735980280581862,
+      "train": {
+        "tokens": 425,
+        "positions_retain": 30,
+        "top1": 386,
+        "cross_entropy": 0.4795244336128235,
+        "retention_kl": 0.001031218795105815,
+        "by_domain": {
+          "code": {
+            "tokens": 243,
+            "cross_entropy": 0.10354821383953094
+          },
+          "reason": {
+            "tokens": 136,
+            "cross_entropy": 0.989057183265686
+          },
+          "language": {
+            "tokens": 46,
+            "cross_entropy": 0.9592147469520569
+          }
+        }
+      },
+      "dev": {
+        "tokens": 96,
+        "positions_retain": 10,
+        "top1": 87,
+        "cross_entropy": 0.5034353137016296,
+        "retention_kl": 0.0020302908960729837,
+        "by_domain": {
+          "code": {
+            "tokens": 50,
+            "cross_entropy": 0.30055561661720276
+          },
+          "reason": {
+            "tokens": 38,
+            "cross_entropy": 0.8104720115661621
+          },
+          "language": {
+            "tokens": 8,
+            "cross_entropy": 0.3130088448524475
+          }
+        }
+      }
+    },
+    {
+      "step": 60,
+      "selection_loss": 0.47321206739172345,
+      "train": {
+        "tokens": 425,
+        "positions_retain": 30,
+        "top1": 386,
+        "cross_entropy": 0.4784810245037079,
+        "retention_kl": 0.0010139684891328216,
+        "by_domain": {
+          "code": {
+            "tokens": 243,
+            "cross_entropy": 0.10333143174648285
+          },
+          "reason": {
+            "tokens": 136,
+            "cross_entropy": 0.9868550896644592
+          },
+          "language": {
+            "tokens": 46,
+            "cross_entropy": 0.9572303891181946
+          }
+        }
+      },
+      "dev": {
+        "tokens": 96,
+        "positions_retain": 10,
+        "top1": 87,
+        "cross_entropy": 0.5029893517494202,
+        "retention_kl": 0.0021256818436086178,
+        "by_domain": {
+          "code": {
+            "tokens": 50,
+            "cross_entropy": 0.3001767694950104
+          },
+          "reason": {
+            "tokens": 38,
+            "cross_entropy": 0.8099887371063232
+          },
+          "language": {
+            "tokens": 8,
+            "cross_entropy": 0.3123207092285156
+          }
+        }
+      }
+    },
+    {
+      "step": 80,
+      "selection_loss": 0.4730292573012412,
+      "train": {
+        "tokens": 425,
+        "positions_retain": 30,
+        "top1": 386,
+        "cross_entropy": 0.4779665172100067,
+        "retention_kl": 0.001020798459649086,
+        "by_domain": {
+          "code": {
+            "tokens": 243,
+            "cross_entropy": 0.1029093861579895
+          },
+          "reason": {
+            "tokens": 136,
+            "cross_entropy": 0.9862172603607178
+          },
+          "language": {
+            "tokens": 46,
+            "cross_entropy": 0.9565926194190979
+          }
+        }
+      },
+      "dev": {
+        "tokens": 96,
+        "positions_retain": 10,
+        "top1": 87,
+        "cross_entropy": 0.5026677250862122,
+        "retention_kl": 0.0021566548384726048,
+        "by_domain": {
+          "code": {
+            "tokens": 50,
+            "cross_entropy": 0.2998960018157959
+          },
+          "reason": {
+            "tokens": 38,
+            "cross_entropy": 0.8094633221626282
+          },
+          "language": {
+            "tokens": 8,
+            "cross_entropy": 0.3127113878726959
+          }
+        }
+      }
+    },
+    {
+      "step": 120,
+      "selection_loss": 0.47322738808579745,
+      "train": {
+        "tokens": 425,
+        "positions_retain": 30,
+        "top1": 386,
+        "cross_entropy": 0.47802045941352844,
+        "retention_kl": 0.001016906346194446,
+        "by_domain": {
+          "code": {
+            "tokens": 243,
+            "cross_entropy": 0.10298029333353043
+          },
+          "reason": {
+            "tokens": 136,
+            "cross_entropy": 0.9862709045410156
+          },
+          "language": {
+            "tokens": 46,
+            "cross_entropy": 0.9565567374229431
+          }
+        }
+      },
+      "dev": {
+        "tokens": 96,
+        "positions_retain": 10,
+        "top1": 87,
+        "cross_entropy": 0.5029169917106628,
+        "retention_kl": 0.002122720004990697,
+        "by_domain": {
+          "code": {
+            "tokens": 50,
+            "cross_entropy": 0.30001839995384216
+          },
+          "reason": {
+            "tokens": 38,
+            "cross_entropy": 0.8099010586738586
+          },
+          "language": {
+            "tokens": 8,
+            "cross_entropy": 0.31285926699638367
+          }
+        }
+      }
+    },
+    {
+      "step": 160,
+      "selection_loss": 0.4732275012694299,
+      "train": {
+        "tokens": 425,
+        "positions_retain": 30,
+        "top1": 386,
+        "cross_entropy": 0.47803255915641785,
+        "retention_kl": 0.0010168775916099548,
+        "by_domain": {
+          "code": {
+            "tokens": 243,
+            "cross_entropy": 0.10298514366149902
+          },
+          "reason": {
+            "tokens": 136,
+            "cross_entropy": 0.9862985014915466
+          },
+          "language": {
+            "tokens": 46,
+            "cross_entropy": 0.9565616250038147
+          }
+        }
+      },
+      "dev": {
+        "tokens": 96,
+        "positions_retain": 10,
+        "top1": 87,
+        "cross_entropy": 0.5029059052467346,
+        "retention_kl": 0.0021241954527795315,
+        "by_domain": {
+          "code": {
+            "tokens": 50,
+            "cross_entropy": 0.2999556064605713
+          },
+          "reason": {
+            "tokens": 38,
+            "cross_entropy": 0.8099432587623596
+          },
+          "language": {
+            "tokens": 8,
+            "cross_entropy": 0.31291821599006653
+          }
+        }
+      }
+    }
+  ]
+}
