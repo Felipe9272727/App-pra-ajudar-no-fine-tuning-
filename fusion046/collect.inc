@@ -1,4 +1,3 @@
-const PARENT_045: &str = "e6e4528057543f0bdf35305c87b79197c639f2d77ddfcf140745a62f4441703c";
 const NEGATIVES: usize = 23;
 
 #[derive(Deserialize)]

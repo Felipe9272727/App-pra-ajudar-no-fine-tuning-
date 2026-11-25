@@ -1,0 +1,7 @@
+{
+  "model": "Liquid Sense × Gemma 046",
+  "frontend": "native Rust Termux terminal",
+  "target": "aarch64-linux-android",
+  "parent_sha256": "e6e4528057543f0bdf35305c87b79197c639f2d77ddfcf140745a62f4441703c",
+  "correction_sha256": "941daca310736af121cdd337317b5e1bddb741b88ea085d684d3760ecc1fecfd"
+}

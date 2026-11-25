@@ -1,0 +1,79 @@
+name: Liquid Sense 046 · build fresh Android ARM64 terminal
+on:
+  push:
+    branches: [codex/liquid-sense-termux046-20261125]
+    paths: [fusion046/termux/request.json]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    env:
+      CARGO_TARGET_DIR: ${{ github.workspace }}/fusion043/native/target
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Build the Android and Linux binaries from source
+        run: |
+          rustup toolchain install 1.90.0 --profile minimal --target aarch64-linux-android
+          manifest=fusion043/native/Cargo.toml
+          work="$RUNNER_TEMP/termux046"
+          mkdir -p "$work"
+          python fusion046/recover.py "$work/LiquidSense-Gemma-045.lsmix" > "$work/model.log" &
+          download=$!
+          cargo +1.90.0 test --locked --release --jobs 2 --manifest-path "$manifest" --lib
+          cargo +1.90.0 build --locked --release --jobs 2 --manifest-path "$manifest" --bin termux046 --bin hybrid044
+          ndk="${ANDROID_NDK_LATEST_HOME:-${ANDROID_NDK_HOME:-}}"
+          if [ ! -d "$ndk/toolchains/llvm/prebuilt/linux-x86_64" ]; then
+            ndk="$(find "$ANDROID_HOME/ndk" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)"
+          fi
+          tools="$ndk/toolchains/llvm/prebuilt/linux-x86_64/bin"
+          export CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER="$tools/aarch64-linux-android28-clang"
+          export CARGO_TARGET_AARCH64_LINUX_ANDROID_RUSTFLAGS="-C link-arg=-Wl,-z,max-page-size=16384"
+          cargo +1.90.0 build --locked --release --jobs 2 --manifest-path "$manifest" --bin termux046 --target aarch64-linux-android
+          wait "$download"
+          cat "$work/model.log"
+      - name: Verify Bionic ABI and run the new terminal on the exact 046
+        run: |
+          work="$RUNNER_TEMP/termux046"
+          android="$CARGO_TARGET_DIR/aarch64-linux-android/release/termux046"
+          readelf -h "$android" | tee "$work/architecture.txt"
+          grep -Eq 'Machine: +AArch64' "$work/architecture.txt"
+          readelf -lW "$android" | tee "$work/segments.txt"
+          grep -Fq '/system/bin/linker64' "$work/segments.txt"
+          awk '/^  LOAD / { found++; if ($NF != "0x4000") exit 1 } END { if (!found) exit 1 }' "$work/segments.txt"
+          readelf -dW "$android" | tee "$work/libraries.txt"
+          ! grep -Eq 'libc\.so\.6|ld-linux' "$work/libraries.txt"
+          terminal="$CARGO_TARGET_DIR/release/termux046"
+          "$terminal" --version
+          printf '/think\n/think\nQual é o plural de pão? Uma palavra.\n/clear\n/exit\n' |
+            "$terminal" "$work/LiquidSense-Gemma-045.lsmix" fusion046/checkpoints/readout.lscal |
+            tee "$work/smoke.txt"
+          grep -Fq 'Conversa limpa.' "$work/smoke.txt"
+          grep -Fq 'Raciocínio ativado.' "$work/smoke.txt"
+          grep -Fiq 'Liquid Sense> pães' "$work/smoke.txt"
+          ! "$terminal" "$work/LiquidSense-Gemma-045.lsmix" fusion046/checkpoints/balanced.lscal +            'teste' 2>"$work/wrong-adapter.txt"
+          grep -Fq 'Calibration SHA-256 mismatch' "$work/wrong-adapter.txt"
+      - name: Package verified ARM64 files and upload a draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          work="$RUNNER_TEMP/termux046"
+          mkdir -p "$work/out"
+          cp "$CARGO_TARGET_DIR/aarch64-linux-android/release/termux046" "$work/out/liquid-sense-termux"
+          cp fusion046/checkpoints/readout.lscal "$work/out/"
+          cp -r fusion043/licenses "$work/out/licenses"
+          cp fusion043/licenses/Notice.txt "$work/out/"
+          cp fusion046/termux/README.md "$work/out/LEIA-ME.md"
+          cp fusion046/recover.py "$work/out/baixar-modelo.py"
+          cp "$work/"{architecture,segments,libraries,smoke}.txt "$work/out/"
+          archive=LiquidSense-046-Termux-arm64.zip
+          (cd "$work/out" && zip -qr "$work/$archive" .)
+          unzip -tq "$work/$archive"
+          (cd "$work" && sha256sum "$archive" > SHA256SUMS)
+          tag=liquid-sense-termux046
+          gh release create "$tag" --draft --prerelease --target "$GITHUB_SHA" \
+            --title 'Liquid Sense 046 · Termux ARM64' --notes-file fusion046/termux/README.md
+          gh release upload "$tag" "$work/$archive" "$work/SHA256SUMS"
