@@ -1,0 +1,68 @@
+{
+  "previous": {
+    "correct": 5,
+    "count": 39,
+    "tokens": 2175,
+    "seconds": 1084.117874128,
+    "wins": 0,
+    "losses": 0,
+    "errors": 0,
+    "hit_limit": 28,
+    "identical_ids": 39
+  },
+  "window": {
+    "correct": 5,
+    "count": 39,
+    "tokens": 2175,
+    "seconds": 1085.497946352,
+    "wins": 0,
+    "losses": 0,
+    "errors": 0,
+    "hit_limit": 28,
+    "identical_ids": 39
+  },
+  "static": {
+    "correct": 6,
+    "count": 39,
+    "tokens": 2165,
+    "seconds": 1080.391111803,
+    "wins": 1,
+    "losses": 0,
+    "errors": 0,
+    "hit_limit": 27,
+    "identical_ids": 11
+  },
+  "adaptive": {
+    "correct": 5,
+    "count": 39,
+    "tokens": 2155,
+    "seconds": 1078.997538497,
+    "wins": 0,
+    "losses": 0,
+    "errors": 0,
+    "hit_limit": 27,
+    "identical_ids": 18
+  },
+  "hybrid": {
+    "correct": 5,
+    "count": 39,
+    "tokens": 2154,
+    "seconds": 1079.865303773,
+    "wins": 0,
+    "losses": 0,
+    "errors": 0,
+    "hit_limit": 27,
+    "identical_ids": 34
+  },
+  "combined": {
+    "correct": 5,
+    "count": 39,
+    "tokens": 2155,
+    "seconds": 1082.780714279,
+    "wins": 0,
+    "losses": 0,
+    "errors": 0,
+    "hit_limit": 27,
+    "identical_ids": 18
+  }
+}

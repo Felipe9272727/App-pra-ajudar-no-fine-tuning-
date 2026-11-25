@@ -1,0 +1,16 @@
+{
+  "baseline_version": "0.6.5",
+  "paired_arm64_run": 45521834827,
+  "paired_cases": 39,
+  "requests": 234,
+  "errors": 0,
+  "window_same_generated_ids": 39,
+  "window_savings_bytes_measured_at_272_tokens": 393216,
+  "window_projected_savings_mib_at_16384_tokens": 378,
+  "correct": {"previous": 5, "window": 5, "static": 6, "adaptive": 5, "hybrid": 5, "combined": 5},
+  "project_code_cases_passed_of_20": {"previous": 0, "static": 3, "combined": 0},
+  "aime25_full_correct_of_30": {"previous": 0, "combined": 0},
+  "models_that_hit_aime_budget_all_items": ["previous", "combined"],
+  "original_weights_frozen": true,
+  "experimental_changes_promoted_to_published_app": false
+}
