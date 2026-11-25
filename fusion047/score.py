@@ -87,6 +87,13 @@ def gate(report, selected):
     return dict(eligible=all(checks.values()), checks=checks)
 
 
+def choose_head(report):
+    parent, head = report['parent'], report['head']
+    genuine = head['counts']['identity'][0] >= max(2, parent['counts']['identity'][0]+1)
+    controls = all(head['counts'][k][0] >= parent['counts'][k][0] for k in ('fact','control'))
+    return dict(variant='head', screen_pass=genuine and controls)
+
+
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('fixtures',type=Path)

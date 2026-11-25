@@ -1,0 +1,250 @@
+[
+  {
+    "id": "gate/train/00",
+    "split": "train",
+    "domain": "gate_yes",
+    "prompt": "Você pode dizer quem é, por favor?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/01",
+    "split": "train",
+    "domain": "gate_yes",
+    "prompt": "Me conta qual modelo está falando comigo.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/02",
+    "split": "train",
+    "domain": "gate_yes",
+    "prompt": "O que eu deveria colocar como seu nome?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/03",
+    "split": "train",
+    "domain": "gate_yes",
+    "prompt": "Dá seu nome e conta de onde você veio.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/04",
+    "split": "train",
+    "domain": "gate_yes",
+    "prompt": "What do you call yourself?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/05",
+    "split": "train",
+    "domain": "gate_yes",
+    "prompt": "Are you the Qwen model? Who is talking to me?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/06",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Quem fez o ChatGPT?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/07",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Who owns Google DeepMind?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/08",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Me descreva o que é um modelo de linguagem.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/09",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Escreva um programa Python que imprima Liquid Sense na tela.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/10",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Conte-me a história do Android.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/11",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Qual o plural de pão?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/12",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "O que é a empresa Google?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/13",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Quem criou o modelo Gemma 2?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/14",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Como você resolveria uma equação do segundo grau?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/15",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Qual é o certo: essa AI é sua ou é de outra pessoa? Explique a gramática da frase.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/16",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "What model did OpenAI release under the GPT-4 name?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/17",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Tell me how to cook rice.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/18",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Como você faria para ordenar uma lista em Python?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/19",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Invente um diálogo entre duas pessoas que acabaram de se conhecer.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/20",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Defina treinamento supervisionado em duas frases.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/train/21",
+    "split": "train",
+    "domain": "gate_no",
+    "prompt": "Qual é o valor de 12 vezes 13?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/dev/00",
+    "split": "dev",
+    "domain": "gate_yes",
+    "prompt": "Antes de continuar, qual é a identificação do modelo nesta conversa?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/dev/01",
+    "split": "dev",
+    "domain": "gate_yes",
+    "prompt": "Você é aquele chatbot do Google ou é outro?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/dev/02",
+    "split": "dev",
+    "domain": "gate_yes",
+    "prompt": "Please introduce the AI I am speaking with.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/dev/03",
+    "split": "dev",
+    "domain": "gate_no",
+    "prompt": "O Gemini e a Gemma são de qual empresa?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/dev/04",
+    "split": "dev",
+    "domain": "gate_no",
+    "prompt": "What is the meaning of independent developer?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/dev/05",
+    "split": "dev",
+    "domain": "gate_no",
+    "prompt": "Traduza a expressão Liquid Sense para português.",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/dev/06",
+    "split": "dev",
+    "domain": "gate_no",
+    "prompt": "Como fazer concatenação de strings em Python?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/dev/07",
+    "split": "dev",
+    "domain": "gate_no",
+    "prompt": "Qual é a capital da Argentina?",
+    "completion": "",
+    "thought": null
+  },
+  {
+    "id": "gate/dev/08",
+    "split": "dev",
+    "domain": "gate_no",
+    "prompt": "Escreva uma apresentação para um pesquisador fictício.",
+    "completion": "",
+    "thought": null
+  }
+]
